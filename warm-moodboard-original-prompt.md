@@ -1,3 +1,5 @@
+> Current use, October 15, 2026: the user has authorized implementation from the selected 42-image set, parallel React work, and a genuinely textured WebGL area. Earlier collection gates below are preserved as historical wording and are now satisfied. Use the current structured brief and the execution addendum at the end.
+
 # Warm Moodboard — Original Source Prompt
 
 This file preserves the original request and subsequent instructions verbatim. Formatting artifacts from the original message are intentionally retained inside the text blocks. A cleaned, casual addendum captures the evolving direction, followed by a section for incoming references.
@@ -131,7 +133,7 @@ For each incoming reference, record its ID, source link or asset path, the user'
 
 ### Generated imagery from the parallel chat
 
-[Download the image ZIP](./warm-moodboard-images.zip). The archive contains 36 PNG files: six websites, six UI components, six mobile screens, six texture studies, six individual 3D objects, and six geometric arrangements. Files preserve their original pixels and transparency. The first 30 come from the current review set; the final six are the geometric studies.
+[Download the image ZIP](./warm-moodboard-images.zip). The archive contains 42 PNG files: six websites, six UI components, six mobile screens, twelve texture studies, six individual 3D objects, and six geometric arrangements. Files preserve their original pixels and transparency. REF-001–030 retain the first review set; REF-031–036 are the geometric studies; REF-037–042 are the six additional texture studies.
 
 The paths below are relative to the repository after extracting the ZIP. Each image becomes the indicated standalone React example, then connects to the shared theme state, knobs, swatches, orientation modes, and focused view. Reference IDs match between the two prompt documents.
 
@@ -173,3 +175,62 @@ The paths below are relative to the repository after extracting the ZIP. Each im
 | REF-034 | Honey translucence | Geometric 3D specimen | `images/geometric-studies/04-honey-translucence.png` |
 | REF-035 | Clay triad | Geometric 3D specimen | `images/geometric-studies/05-clay-triad.png` |
 | REF-036 | Quiet monument | Geometric 3D specimen | `images/geometric-studies/06-quiet-monument.png` |
+| REF-037 | Sienna silk | Texture / material specimen | `images/texture-studies/07-sienna-silk.png` |
+| REF-038 | Moss linen | Texture / material specimen | `images/texture-studies/08-moss-linen.png` |
+| REF-039 | Peach travertine | Texture / material specimen | `images/texture-studies/09-peach-travertine.png` |
+| REF-040 | Honey caustics | Texture / material specimen | `images/texture-studies/10-honey-caustics.png` |
+| REF-041 | Coral paper | Texture / material specimen | `images/texture-studies/11-coral-paper.png` |
+| REF-042 | Cream glaze | Texture / material specimen | `images/texture-studies/12-cream-glaze.png` |
+
+## Latest execution addendum — October 15, 2026
+
+```text
+Just go ahead and look into the other ones here and start to build these prompts with the structured brief and the imagery. You should have enough details to construct everything.
+
+Remember you're looking to take this from image to React in a very simplistic way. The end result is going to be this moodboard arrangement of all the elements on the page, on an off-white page with the knobs and everything above it.
+
+Just look through all the details and all the final imagery that was selected and zipped up, and move forward with the solution.
+```
+
+```text
+You can kick off subagents for each of the React areas that you need to build and then bring it back into one afterwards to speed things up.
+```
+
+```text
+And one of the React areas is going to be the 3D. Most of them are components and layouts but one of them is actually a 3D with heavy texturing, which would be WebGL.
+```
+
+### Resolved build direction
+
+Proceed with all 42 selected images. Keep the experience simple: persistent knobs and live swatches above an off-white moodboard; the original floating headline; ten distinct warm directions; horizontal/vertical layouts; one focused view per reference. Website/interface content is actual working React. Textures and transparent rendered objects remain selected image specimens. The geometric studies become a real Three.js area with textured meshes, lighting, orbit/zoom, and material choices. A source thumbnail is used on the board for performance; the focused view runs WebGL.
+
+The implementation is in `warm-explorer/`. Shared Hue, Warmth, and Depth offsets preserve each authored palette's identity. Natural photography stays ungraded. The same components and local demonstration state are used in the board and focus. All interaction is local, including example bags, reservations, and form states. Reference captions open focus without blocking the controls inside a component.
+
+The structured brief now contains the complete inventory, per-reference reconstruction prompts, layer choices, behavior, theme bindings, and limitations. The individual area briefs are also kept in `warm-explorer/briefs/` for reuse. `original-image-prompt.md` provides a concise execution prompt. Clean photographic layers needed to remove baked UI text are saved as separate derivatives; originals are preserved in the image ZIP.
+
+## Header typography follow-up
+
+```text
+We need to utilize Google's Sans PLex font for the jigg up top header
+```
+
+Implemented interpretation: IBM Plex Sans, served through Google Fonts, for the top control bar, knob labels, swatch labels, and header actions. Individual example typography stays reference-led.
+
+
+### Latest implementation correction — October 15, 2026
+
+The requested font is **Google Sans Flex**, correcting the earlier interpretation of “Sans Plex.” The header now uses simple flat sliders and one direction dropdown, with actual UI/material/artwork palette ranges. The user requested removal of scale, download, and footer extras; an upright mosaic without tilted board items; correct proportions and complete elements; and direct hover interaction on the moodboard, including live WebGL. These later instructions supersede older decorative-dial and layout-switching descriptions.
+
+
+### Latest chrome, typography, and color correction — October 15, 2026
+
+Use a very simple rounded jig with Tonal range, Directions, and On/Off. Direction palettes must be clickable. Strip the moodboard to the actual objects, without “07 / mobile / Afterglow →” captions. Make “Build me a warm landing page” very large, in Google Sans Flex with a gradient. Permit image grading and live-font changes, but hue adjustments must preserve the warm premise. Image-baked typography cannot change font without being rebuilt.
+
+
+### Floating controls and larger headline correction — October 15, 2026
+
+The latest request removes the enclosing rounded header panel: the controls and color ranges should float directly on the off-white page. Bake many real color values into each direction. Enlarge “Build me a warm landing page” again, strengthen the gradient toward warm white, and never clip the bottoms of the letters. These instructions supersede the earlier rounded-jig request.
+
+### Deployment and simplified control correction — October 15, 2026
+
+Remove the global On/Off toggle; retain Tonal range, Directions, and the palette strips. Changes are always active. Organize the app under `warm/moodboard/` in WDA and deploy directly to the personal Vercel workspace without a Git check-in.
