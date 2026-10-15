@@ -1,0 +1,590 @@
+[
+  {
+    "id": "REF-001",
+    "title": "Avela \u2014 The Arc bag",
+    "image": "/assets/websites/01-avela-arc-bag.png",
+    "kind": "website",
+    "width": 900,
+    "height": 501,
+    "theme": 7,
+    "dimensions": [
+      1681,
+      936
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-002",
+    "title": "Rill & Rye \u2014 Orchard bakery",
+    "image": "/assets/websites/02-rill-and-rye-bakery.png",
+    "kind": "website",
+    "width": 900,
+    "height": 501,
+    "theme": 1,
+    "dimensions": [
+      1681,
+      936
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-003",
+    "title": "Room & Ritual \u2014 The courtyard house",
+    "image": "/assets/websites/03-room-and-ritual-interiors.png",
+    "kind": "website",
+    "width": 900,
+    "height": 563,
+    "theme": 2,
+    "dimensions": [
+      1586,
+      992
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-004",
+    "title": "Oriel \u2014 Spaces for gathering",
+    "image": "/assets/websites/04-oriel-spatial-practice.png",
+    "kind": "website",
+    "width": 900,
+    "height": 501,
+    "theme": 0,
+    "dimensions": [
+      1681,
+      936
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-005",
+    "title": "Sundrop \u2014 Apricot aperitif",
+    "image": "/assets/websites/05-sundrop-aperitif.png",
+    "kind": "website",
+    "width": 900,
+    "height": 563,
+    "theme": 6,
+    "dimensions": [
+      1586,
+      992
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-006",
+    "title": "Serein \u2014 Daily botanical care",
+    "image": "/assets/websites/06-serein-botanical-care.png",
+    "kind": "website",
+    "width": 900,
+    "height": 563,
+    "theme": 7,
+    "dimensions": [
+      1586,
+      992
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-007",
+    "title": "Sol \u2014 Weather card",
+    "image": "/assets/ui-components/07-sol-weather-clean.png",
+    "kind": "component",
+    "width": 400,
+    "height": 420,
+    "theme": 4,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-008",
+    "title": "Gather \u2014 Team picker",
+    "image": "/assets/ui-components/08-gather-team-clean.png",
+    "kind": "component",
+    "width": 400,
+    "height": 485,
+    "theme": 2,
+    "dimensions": [
+      1122,
+      1402
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-009",
+    "title": "Courtyard \u2014 Material palette picker",
+    "image": "/assets/ui-components/09-courtyard-palette-clean.png",
+    "kind": "component",
+    "width": 460,
+    "height": 180,
+    "theme": 3,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-010",
+    "title": "Roam \u2014 Membership panel",
+    "image": "/assets/ui-components/10-roam-membership-clean.png",
+    "kind": "component",
+    "width": 400,
+    "height": 680,
+    "theme": 6,
+    "dimensions": [
+      1122,
+      1402
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-011",
+    "title": "Kiln \u2014 Usage dashboard",
+    "image": "/assets/ui-components/11-kiln-usage-clean.png",
+    "kind": "component",
+    "width": 460,
+    "height": 410,
+    "theme": 8,
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-012",
+    "title": "Folio \u2014 Navigation dock",
+    "image": "/assets/ui-components/12-folio-navigation-dock.png",
+    "kind": "component",
+    "width": 460,
+    "height": 180,
+    "theme": 5,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-013",
+    "title": "Home Note \u2014 Family handover",
+    "image": "/assets/mobile-screens/13-home-note-onboarding.png",
+    "kind": "mobile",
+    "width": 320,
+    "height": 650,
+    "theme": 3,
+    "dimensions": [
+      928,
+      1695
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-014",
+    "title": "Afterglow \u2014 Evening rhythm",
+    "image": "/assets/mobile-screens/14-afterglow-bedtime.png",
+    "kind": "mobile",
+    "width": 320,
+    "height": 650,
+    "theme": 7,
+    "dimensions": [
+      928,
+      1695
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-015",
+    "title": "Pocket Garden \u2014 Early access",
+    "image": "/assets/mobile-screens/15-pocket-garden-waitlist.png",
+    "kind": "mobile",
+    "width": 320,
+    "height": 650,
+    "theme": 3,
+    "dimensions": [
+      928,
+      1695
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-016",
+    "title": "Petal \u2014 Botanical puzzle",
+    "image": "/assets/mobile-screens/16-petal-puzzle.png",
+    "kind": "mobile",
+    "width": 320,
+    "height": 650,
+    "theme": 2,
+    "dimensions": [
+      941,
+      1672
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-017",
+    "title": "Sol \u2014 Hourly forecast",
+    "image": "/assets/mobile-screens/17-sol-forecast.png",
+    "kind": "mobile",
+    "width": 320,
+    "height": 650,
+    "theme": 4,
+    "dimensions": [
+      966,
+      1629
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-018",
+    "title": "Daybook \u2014 Daylight planner",
+    "image": "/assets/mobile-screens/18-daybook-daylight.png",
+    "kind": "mobile",
+    "width": 320,
+    "height": 650,
+    "theme": 5,
+    "dimensions": [
+      965,
+      1629
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-019",
+    "title": "Apricot and citron \u2014 Soft light field",
+    "image": "/assets/textures/19-apricot-citron-light.png",
+    "kind": "texture",
+    "width": 500,
+    "height": 624.777183600713,
+    "theme": 6,
+    "dimensions": [
+      1122,
+      1402
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-020",
+    "title": "Canyon lines \u2014 Handcrafted surface",
+    "image": "/assets/textures/20-canyon-lines-craft.png",
+    "kind": "texture",
+    "width": 500,
+    "height": 888.4165781083954,
+    "theme": 0,
+    "dimensions": [
+      941,
+      1672
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-021",
+    "title": "Rosette and moss \u2014 Grain field",
+    "image": "/assets/textures/21-rosette-moss-grain.png",
+    "kind": "texture",
+    "width": 500,
+    "height": 888.4165781083954,
+    "theme": 2,
+    "dimensions": [
+      941,
+      1672
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-022",
+    "title": "Courtyard light \u2014 Optical texture",
+    "image": "/assets/textures/22-courtyard-light-bokeh.png",
+    "kind": "texture",
+    "width": 500,
+    "height": 748.2926829268292,
+    "theme": 4,
+    "dimensions": [
+      1025,
+      1534
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-023",
+    "title": "Woven light \u2014 Translucent fabric",
+    "image": "/assets/textures/23-woven-light.png",
+    "kind": "texture",
+    "width": 500,
+    "height": 624.777183600713,
+    "theme": 0,
+    "dimensions": [
+      1122,
+      1402
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-024",
+    "title": "Mineral impressions \u2014 Clay relief",
+    "image": "/assets/textures/24-mineral-impressions.png",
+    "kind": "texture",
+    "width": 500,
+    "height": 624.777183600713,
+    "theme": 6,
+    "dimensions": [
+      1122,
+      1402
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-025",
+    "title": "Amber arc",
+    "image": "/assets/3d-objects/25-amber-arc.png",
+    "kind": "object",
+    "width": 600,
+    "height": 600,
+    "theme": 4,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": true
+  },
+  {
+    "id": "REF-026",
+    "title": "Moss glazed sphere",
+    "image": "/assets/3d-objects/26-moss-sphere.png",
+    "kind": "object",
+    "width": 600,
+    "height": 600,
+    "theme": 3,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": true
+  },
+  {
+    "id": "REF-027",
+    "title": "Citron folded ribbon",
+    "image": "/assets/3d-objects/27-citron-fold.png",
+    "kind": "object",
+    "width": 600,
+    "height": 600,
+    "theme": 5,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": true
+  },
+  {
+    "id": "REF-028",
+    "title": "Rosette ceramic discs",
+    "image": "/assets/3d-objects/28-rosette-discs.png",
+    "kind": "object",
+    "width": 600,
+    "height": 600,
+    "theme": 2,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": true
+  },
+  {
+    "id": "REF-029",
+    "title": "Coral translucent ribbon",
+    "image": "/assets/3d-objects/29-coral-ribbon.png",
+    "kind": "object",
+    "width": 600,
+    "height": 600,
+    "theme": 9,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": true
+  },
+  {
+    "id": "REF-030",
+    "title": "Amber sun disc",
+    "image": "/assets/3d-objects/30-amber-sun.png",
+    "kind": "object",
+    "width": 600,
+    "height": 600,
+    "theme": 4,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": true
+  },
+  {
+    "id": "REF-031",
+    "title": "Apricot balance",
+    "image": "/assets/geometric-studies/01-apricot-balance.png",
+    "kind": "webgl",
+    "width": 660,
+    "height": 660,
+    "theme": 6,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-032",
+    "title": "Citron courtyard",
+    "image": "/assets/geometric-studies/02-citron-courtyard.png",
+    "kind": "webgl",
+    "width": 660,
+    "height": 660,
+    "theme": 5,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-033",
+    "title": "Rosette tilt",
+    "image": "/assets/geometric-studies/03-rosette-tilt.png",
+    "kind": "webgl",
+    "width": 660,
+    "height": 660,
+    "theme": 2,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-034",
+    "title": "Honey translucence",
+    "image": "/assets/geometric-studies/04-honey-translucence.png",
+    "kind": "webgl",
+    "width": 660,
+    "height": 660,
+    "theme": 4,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-035",
+    "title": "Clay triad",
+    "image": "/assets/geometric-studies/05-clay-triad.png",
+    "kind": "webgl",
+    "width": 660,
+    "height": 660,
+    "theme": 0,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-036",
+    "title": "Quiet monument",
+    "image": "/assets/geometric-studies/06-quiet-monument.png",
+    "kind": "webgl",
+    "width": 660,
+    "height": 660,
+    "theme": 8,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-037",
+    "title": "Sienna silk",
+    "image": "/assets/textures/07-sienna-silk.png",
+    "kind": "texture",
+    "width": 500,
+    "height": 500.0,
+    "theme": 0,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-038",
+    "title": "Moss linen",
+    "image": "/assets/textures/08-moss-linen.png",
+    "kind": "texture",
+    "width": 500,
+    "height": 500.0,
+    "theme": 3,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-039",
+    "title": "Peach travertine",
+    "image": "/assets/textures/09-peach-travertine.png",
+    "kind": "texture",
+    "width": 500,
+    "height": 500.0,
+    "theme": 6,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-040",
+    "title": "Honey caustics",
+    "image": "/assets/textures/10-honey-caustics.png",
+    "kind": "texture",
+    "width": 500,
+    "height": 500.0,
+    "theme": 4,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-041",
+    "title": "Coral paper",
+    "image": "/assets/textures/11-coral-paper.png",
+    "kind": "texture",
+    "width": 500,
+    "height": 500.0,
+    "theme": 9,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": false
+  },
+  {
+    "id": "REF-042",
+    "title": "Cream glaze",
+    "image": "/assets/textures/12-cream-glaze.png",
+    "kind": "texture",
+    "width": 500,
+    "height": 500.0,
+    "theme": 8,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "transparent": false
+  }
+]

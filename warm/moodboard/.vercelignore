@@ -1,0 +1,8 @@
+node_modules
+dist
+*.tsbuildinfo
+.env*
+briefs
+scripts
+README.md
+public/build-brief.md
