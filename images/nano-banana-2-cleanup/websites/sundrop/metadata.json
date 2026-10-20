@@ -1,0 +1,42 @@
+{
+  "title": "Sundrop",
+  "category": "websites",
+  "maintainer": "Jason Festa",
+  "design_count": 5,
+  "grid": {
+    "columns": 5,
+    "rows": 1,
+    "source_cell_dimensions": [
+      1586,
+      4758
+    ]
+  },
+  "generation": {
+    "provider": "fal.ai",
+    "model": "fal-ai/nano-banana-2/edit",
+    "resolution": "4K",
+    "aspect_ratio": "auto",
+    "num_images": 1,
+    "output_format": "png",
+    "limit_generations": true,
+    "enable_web_search": false,
+    "thinking_level": "omitted"
+  },
+  "input": "input.png",
+  "prompt": "prompt.md",
+  "output": "output.png",
+  "preview": "output-preview.jpg",
+  "input_dimensions": [
+    4096,
+    2458
+  ],
+  "output_dimensions": [
+    5332,
+    3200
+  ],
+  "input_sha256": "8a39479c0595a3dc413092555009d760df58a541f83aa1ff38e171adbf7956eb",
+  "output_sha256": "1eb20bcf2d50ba0414d487ede1ce2ea1b137db26069322ad1fb66c295615dc08",
+  "aspect_ratio_difference_percent": 0.008728027343751776,
+  "output_postprocessing": "None. Original downloaded FAL bytes.",
+  "review_note": "Overall ratio retained, but pack descriptions, pricing text and several headings are visibly corrupted. Packaging/count/price accuracy is not approved."
+}

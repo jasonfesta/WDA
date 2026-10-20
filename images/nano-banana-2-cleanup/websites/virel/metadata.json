@@ -1,0 +1,42 @@
+{
+  "title": "Virel",
+  "category": "websites",
+  "maintainer": "Jason Festa",
+  "design_count": 5,
+  "grid": {
+    "columns": 5,
+    "rows": 1,
+    "source_cell_dimensions": [
+      1600,
+      4800
+    ]
+  },
+  "generation": {
+    "provider": "fal.ai",
+    "model": "fal-ai/nano-banana-2/edit",
+    "resolution": "4K",
+    "aspect_ratio": "auto",
+    "num_images": 1,
+    "output_format": "png",
+    "limit_generations": true,
+    "enable_web_search": false,
+    "thinking_level": "omitted"
+  },
+  "input": "input.png",
+  "prompt": "prompt.md",
+  "output": "output.png",
+  "preview": "output-preview.jpg",
+  "input_dimensions": [
+    4096,
+    2458
+  ],
+  "output_dimensions": [
+    4096,
+    4096
+  ],
+  "input_sha256": "0389efefc66c9896e87f5c57f6ab8c45578f298cb0a47351e0cde906c9c8a4f4",
+  "output_sha256": "29ad4d4cf8f814aa75150115e813a77fc4361b90aea5cddd9fb1141ffdceccc5",
+  "aspect_ratio_difference_percent": 39.990234375,
+  "output_postprocessing": "None. Original downloaded FAL bytes.",
+  "review_note": "Geometry failure: FAL returned a square sheet instead of the supplied 5:3 sheet. Page proportions changed substantially; copy and product consistency also remain incorrect. Unaltered raw result retained for review."
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Weather",
+  "category": "components",
+  "maintainer": "Jason Festa",
+  "design_count": 5,
+  "grid": {
+    "columns": 5,
+    "rows": 1,
+    "source_cell_dimensions": [
+      1000,
+      1000
+    ]
+  },
+  "generation": {
+    "provider": "fal.ai",
+    "model": "fal-ai/nano-banana-2/edit",
+    "resolution": "4K",
+    "aspect_ratio": "auto",
+    "num_images": 1,
+    "output_format": "png",
+    "limit_generations": true,
+    "enable_web_search": false,
+    "thinking_level": "omitted"
+  },
+  "input": "input.png",
+  "prompt": "prompt.md",
+  "output": "output.png",
+  "preview": "output-preview.jpg",
+  "input_dimensions": [
+    4096,
+    819
+  ],
+  "output_dimensions": [
+    9280,
+    1856
+  ],
+  "input_sha256": "10436e526642a95527e660ee0a7b304a42e80c8184ad32ebdfc8b8d2ac222f29",
+  "output_sha256": "70c28092f63ca9d6af20fd2db4f3ef27ed21949e3625fcdfaee43bd5b31f262d",
+  "aspect_ratio_difference_percent": 0.0244140625,
+  "output_postprocessing": "None. Original downloaded FAL bytes.",
+  "review_note": "Five cards retain the overall proportions. Weekendly has visibly smeared brand/date lettering and partial temperature occlusion. Several artwork details changed beyond a cleanup."
+}

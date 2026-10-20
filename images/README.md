@@ -2,6 +2,14 @@
 
 A collection of website layouts, mobile screens, components, and color references maintained by Jason Festa.
 
+## Latest: Nano Banana 2 Cleanup
+
+[Open the complete 21-sheet collection](nano-banana-2-cleanup/): 9 website sheets, 6 mobile app sheets, and 6 component sheets, covering 135 designs. Each folder includes the original input, the Nano Banana 2 output, the cleanup prompt, and generation metadata.
+
+The outputs use FAL's 4K setting per sheet. [Review notes](nano-banana-2-cleanup/review-notes.md) document remaining text, state, and proportion issues.
+
+## Original library
+
 | Folder | Images | Contents |
 | --- | ---: | --- |
 | [Colors](colors/) | 54 | 12 generated textures and 42 original color/material references |

@@ -1,0 +1,42 @@
+{
+  "title": "Oriel",
+  "category": "websites",
+  "maintainer": "Jason Festa",
+  "design_count": 5,
+  "grid": {
+    "columns": 5,
+    "rows": 1,
+    "source_cell_dimensions": [
+      1681,
+      5043
+    ]
+  },
+  "generation": {
+    "provider": "fal.ai",
+    "model": "fal-ai/nano-banana-2/edit",
+    "resolution": "4K",
+    "aspect_ratio": "auto",
+    "num_images": 1,
+    "output_format": "png",
+    "limit_generations": true,
+    "enable_web_search": false,
+    "thinking_level": "omitted"
+  },
+  "input": "input.png",
+  "prompt": "prompt.md",
+  "output": "output.png",
+  "preview": "output-preview.jpg",
+  "input_dimensions": [
+    4096,
+    2458
+  ],
+  "output_dimensions": [
+    5312,
+    3200
+  ],
+  "input_sha256": "9618c6995f59d1ac5f43a1254aa2558b3c36c130c9e95fcd396f793298e52e9a",
+  "output_sha256": "37334c706959e7cda3c83a84e5d06dcd9d0c12be20f047ba56f2e47deef04feb",
+  "aspect_ratio_difference_percent": 0.3837890625000062,
+  "output_postprocessing": "None. Original downloaded FAL bytes.",
+  "review_note": "Five complete pages retained within 0.39% of source ratio. Several project labels and section headings are still wrong or garbled; requested name corrections were not reliably applied."
+}

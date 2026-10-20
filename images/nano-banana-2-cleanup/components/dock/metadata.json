@@ -1,0 +1,42 @@
+{
+  "title": "Dock",
+  "category": "components",
+  "maintainer": "Jason Festa",
+  "design_count": 5,
+  "grid": {
+    "columns": 1,
+    "rows": 5,
+    "source_cell_dimensions": [
+      1400,
+      360
+    ]
+  },
+  "generation": {
+    "provider": "fal.ai",
+    "model": "fal-ai/nano-banana-2/edit",
+    "resolution": "4K",
+    "aspect_ratio": "auto",
+    "num_images": 1,
+    "output_format": "png",
+    "limit_generations": true,
+    "enable_web_search": false,
+    "thinking_level": "omitted"
+  },
+  "input": "input.png",
+  "prompt": "prompt.md",
+  "output": "output.png",
+  "preview": "output-preview.jpg",
+  "input_dimensions": [
+    1400,
+    1800
+  ],
+  "output_dimensions": [
+    3648,
+    4692
+  ],
+  "input_sha256": "b339414d7b103efbb13aad49e332d6a52654627f32798dab07eeb015b5b9f0d4",
+  "output_sha256": "c23573662f6241c86b1412a6b4c74b58e4d520c1b6a3c66d8d57f2d80e64e715",
+  "aspect_ratio_difference_percent": 0.0365363536719121,
+  "output_postprocessing": "None. Original downloaded FAL bytes.",
+  "review_note": "Five docks retain their natural proportions. Reviewed four destinations per dock, correct order, unique brands and single active destination. This is one of the cleanest results."
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Spriglet",
+  "category": "mobile",
+  "maintainer": "Jason Festa",
+  "design_count": 10,
+  "grid": {
+    "columns": 5,
+    "rows": 2,
+    "source_cell_dimensions": [
+      756,
+      1559
+    ]
+  },
+  "generation": {
+    "provider": "fal.ai",
+    "model": "fal-ai/nano-banana-2/edit",
+    "resolution": "4K",
+    "aspect_ratio": "auto",
+    "num_images": 1,
+    "output_format": "png",
+    "limit_generations": true,
+    "enable_web_search": false,
+    "thinking_level": "omitted"
+  },
+  "input": "input.png",
+  "prompt": "prompt.md",
+  "output": "output.png",
+  "preview": "output-preview.jpg",
+  "input_dimensions": [
+    3780,
+    3118
+  ],
+  "output_dimensions": [
+    4544,
+    3776
+  ],
+  "input_sha256": "b0435cc8f1d78114db5630ddbc74bc7a8ec64d3e4a48f248793bbdce5e335367",
+  "output_sha256": "1bef4c65ca54b7173a471685ac7bb8b8c4f118ec224619df05d5479e8d62a54c",
+  "aspect_ratio_difference_percent": 0.7362568379517542,
+  "output_postprocessing": "None. Original downloaded FAL bytes.",
+  "review_note": "Authorized retry returned ten screens at 4544 × 3776; overall ratio differs by 0.7363%. The botanical aesthetic and main screen structure remain. Onboarding labels, several supporting lines, the 18 Jun note date (now 12 Jun), and navigation icons are still inaccurate. Not approved for final copy or state accuracy."
+}

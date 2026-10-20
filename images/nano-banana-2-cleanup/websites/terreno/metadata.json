@@ -1,0 +1,42 @@
+{
+  "title": "Terreno",
+  "category": "websites",
+  "maintainer": "Jason Festa",
+  "design_count": 5,
+  "grid": {
+    "columns": 5,
+    "rows": 1,
+    "source_cell_dimensions": [
+      1600,
+      4800
+    ]
+  },
+  "generation": {
+    "provider": "fal.ai",
+    "model": "fal-ai/nano-banana-2/edit",
+    "resolution": "4K",
+    "aspect_ratio": "auto",
+    "num_images": 1,
+    "output_format": "png",
+    "limit_generations": true,
+    "enable_web_search": false,
+    "thinking_level": "omitted"
+  },
+  "input": "input.png",
+  "prompt": "prompt.md",
+  "output": "output.png",
+  "preview": "output-preview.jpg",
+  "input_dimensions": [
+    4096,
+    2458
+  ],
+  "output_dimensions": [
+    5332,
+    3200
+  ],
+  "input_sha256": "cb35d90e81d9c3def15a508bebaa118ccd48b2211b3c03cb1620c31da7313b12",
+  "output_sha256": "79084b112e4d5a909adb1f917c31e25325d44668b7a049c16fe5f7ec17ae8b81",
+  "aspect_ratio_difference_percent": 0.008728027343751776,
+  "output_postprocessing": "None. Original downloaded FAL bytes.",
+  "review_note": "Overall geometry retained. Multiple brand/body labels are misspelled and the cart thumbnail still differs from the woven product. Context corrections incomplete."
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Dayglint",
+  "category": "mobile",
+  "maintainer": "Jason Festa",
+  "design_count": 10,
+  "grid": {
+    "columns": 5,
+    "rows": 2,
+    "source_cell_dimensions": [
+      756,
+      1559
+    ]
+  },
+  "generation": {
+    "provider": "fal.ai",
+    "model": "fal-ai/nano-banana-2/edit",
+    "resolution": "4K",
+    "aspect_ratio": "auto",
+    "num_images": 1,
+    "output_format": "png",
+    "limit_generations": true,
+    "enable_web_search": false,
+    "thinking_level": "omitted"
+  },
+  "input": "input.png",
+  "prompt": "prompt.md",
+  "output": "output.png",
+  "preview": "output-preview.jpg",
+  "input_dimensions": [
+    3780,
+    3118
+  ],
+  "output_dimensions": [
+    4544,
+    3748
+  ],
+  "input_sha256": "9639e5f3c4ec34933b2f7e132a5d4ede2d9c0eb155bdaa0d6d5db0b0a67b5bdb",
+  "output_sha256": "9ba49a2991c4a5d32e138f408f3cd6d2e320f6d6db8d77019a4e134fbf7af755",
+  "aspect_ratio_difference_percent": 0.005307945542742942,
+  "output_postprocessing": "None. Original downloaded FAL bytes.",
+  "review_note": "Ten screens retained. Onboarding step 2 is labeled 3/4; sunset values disagree, and the hourly screen adds inconsistent duplicate metric rows. Not state-accurate."
+}

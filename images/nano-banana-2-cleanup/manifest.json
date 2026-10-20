@@ -1,0 +1,912 @@
+{
+  "collection": "Nano Banana 2 Cleanup",
+  "maintainer": "Jason Festa",
+  "date": "2026-10-20",
+  "sheet_count": 21,
+  "design_count": 135,
+  "sheets": [
+    {
+      "folder": "websites/avela",
+      "title": "Avela",
+      "category": "websites",
+      "maintainer": "Jason Festa",
+      "design_count": 5,
+      "grid": {
+        "columns": 5,
+        "rows": 1,
+        "source_cell_dimensions": [
+          1681,
+          5043
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        4096,
+        2458
+      ],
+      "output_dimensions": [
+        5504,
+        3072
+      ],
+      "input_sha256": "8a0398924d1144fc6238008f27cdcad2dbc84f44c5e3088d7d1dfd6fb637fc2b",
+      "output_sha256": "882fa2136409558204ebd455a9b049bcde6c806dfa16f35ecf4ae788d315c371",
+      "aspect_ratio_difference_percent": 7.517496744791674,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Needs correction: sheet ratio changed by 7.52%; product title became “Aoda / Arc,” and multiple labels/prices are garbled. Not approved as final."
+    },
+    {
+      "folder": "websites/stillhaven",
+      "title": "Stillhaven",
+      "category": "websites",
+      "maintainer": "Jason Festa",
+      "design_count": 5,
+      "grid": {
+        "columns": 5,
+        "rows": 1,
+        "source_cell_dimensions": [
+          1586,
+          4758
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        4096,
+        2458
+      ],
+      "output_dimensions": [
+        5312,
+        3200
+      ],
+      "input_sha256": "bc99be284d1db8beea1a3b0b761fd93301520978ccc6e6cfa3909334e521854a",
+      "output_sha256": "7792aaed3f1225c03ccbf21d1d8284f07b83695996390ac34401120350a034ad",
+      "aspect_ratio_difference_percent": 0.3837890625000062,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Five full pages and overall proportions retained within 0.39%, but headings, supporting copy and testimonials contain malformed text. Not approved for final copy."
+    },
+    {
+      "folder": "websites/oriel",
+      "title": "Oriel",
+      "category": "websites",
+      "maintainer": "Jason Festa",
+      "design_count": 5,
+      "grid": {
+        "columns": 5,
+        "rows": 1,
+        "source_cell_dimensions": [
+          1681,
+          5043
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        4096,
+        2458
+      ],
+      "output_dimensions": [
+        5312,
+        3200
+      ],
+      "input_sha256": "9618c6995f59d1ac5f43a1254aa2558b3c36c130c9e95fcd396f793298e52e9a",
+      "output_sha256": "37334c706959e7cda3c83a84e5d06dcd9d0c12be20f047ba56f2e47deef04feb",
+      "aspect_ratio_difference_percent": 0.3837890625000062,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Five complete pages retained within 0.39% of source ratio. Several project labels and section headings are still wrong or garbled; requested name corrections were not reliably applied."
+    },
+    {
+      "folder": "websites/sundrop",
+      "title": "Sundrop",
+      "category": "websites",
+      "maintainer": "Jason Festa",
+      "design_count": 5,
+      "grid": {
+        "columns": 5,
+        "rows": 1,
+        "source_cell_dimensions": [
+          1586,
+          4758
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        4096,
+        2458
+      ],
+      "output_dimensions": [
+        5332,
+        3200
+      ],
+      "input_sha256": "8a39479c0595a3dc413092555009d760df58a541f83aa1ff38e171adbf7956eb",
+      "output_sha256": "1eb20bcf2d50ba0414d487ede1ce2ea1b137db26069322ad1fb66c295615dc08",
+      "aspect_ratio_difference_percent": 0.008728027343751776,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Overall ratio retained, but pack descriptions, pricing text and several headings are visibly corrupted. Packaging/count/price accuracy is not approved."
+    },
+    {
+      "folder": "websites/serein",
+      "title": "Serein",
+      "category": "websites",
+      "maintainer": "Jason Festa",
+      "design_count": 5,
+      "grid": {
+        "columns": 5,
+        "rows": 1,
+        "source_cell_dimensions": [
+          1586,
+          4758
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        4096,
+        2458
+      ],
+      "output_dimensions": [
+        5312,
+        3200
+      ],
+      "input_sha256": "82997f067cf694ce8c22cd2c70f26958834ee39582eb9ca0a424e8db795686c4",
+      "output_sha256": "66b0f67bf567721e6455f4985086dbfa5abffe121df238dca2c7c3eed15d50cb",
+      "aspect_ratio_difference_percent": 0.3837890625000062,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Brand imagery and five-page structure largely retained. Product details, labels and supporting copy remain malformed; canonical product volume/price consistency is not verified."
+    },
+    {
+      "folder": "websites/vellune",
+      "title": "Vellune",
+      "category": "websites",
+      "maintainer": "Jason Festa",
+      "design_count": 5,
+      "grid": {
+        "columns": 5,
+        "rows": 1,
+        "source_cell_dimensions": [
+          1600,
+          4800
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        4096,
+        2458
+      ],
+      "output_dimensions": [
+        5312,
+        3200
+      ],
+      "input_sha256": "293864ad225f8da01f893927c1a1c935034c6d8c01a570bf596751d9cf8ca4ed",
+      "output_sha256": "cb67f0a104825765a94de39dd6794e0a5a73265dc6cfb3aa2eed23a80a74d13a",
+      "aspect_ratio_difference_percent": 0.3837890625000062,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Five pages retained with near-matching ratio. Product measurements, shopping-bag amounts and smaller text still conflict or are malformed. Not final copy."
+    },
+    {
+      "folder": "websites/terreno",
+      "title": "Terreno",
+      "category": "websites",
+      "maintainer": "Jason Festa",
+      "design_count": 5,
+      "grid": {
+        "columns": 5,
+        "rows": 1,
+        "source_cell_dimensions": [
+          1600,
+          4800
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        4096,
+        2458
+      ],
+      "output_dimensions": [
+        5332,
+        3200
+      ],
+      "input_sha256": "cb35d90e81d9c3def15a508bebaa118ccd48b2211b3c03cb1620c31da7313b12",
+      "output_sha256": "79084b112e4d5a909adb1f917c31e25325d44668b7a049c16fe5f7ec17ae8b81",
+      "aspect_ratio_difference_percent": 0.008728027343751776,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Overall geometry retained. Multiple brand/body labels are misspelled and the cart thumbnail still differs from the woven product. Context corrections incomplete."
+    },
+    {
+      "folder": "websites/mellore",
+      "title": "Mellore",
+      "category": "websites",
+      "maintainer": "Jason Festa",
+      "design_count": 5,
+      "grid": {
+        "columns": 5,
+        "rows": 1,
+        "source_cell_dimensions": [
+          1600,
+          4800
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        4096,
+        2458
+      ],
+      "output_dimensions": [
+        5312,
+        3200
+      ],
+      "input_sha256": "aa8422791c3371b91905c65922aaf256062642f731808ff6d5c970ae5dd0bc91",
+      "output_sha256": "ee8fad91149d997be164bac915f4b5225d66439e13de906565e3612304b9cd37",
+      "aspect_ratio_difference_percent": 0.3837890625000062,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Overall geometry retained within 0.39%. Several product labels, captions and supporting lines remain malformed; requested care-copy correction not reliably applied."
+    },
+    {
+      "folder": "websites/virel",
+      "title": "Virel",
+      "category": "websites",
+      "maintainer": "Jason Festa",
+      "design_count": 5,
+      "grid": {
+        "columns": 5,
+        "rows": 1,
+        "source_cell_dimensions": [
+          1600,
+          4800
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        4096,
+        2458
+      ],
+      "output_dimensions": [
+        4096,
+        4096
+      ],
+      "input_sha256": "0389efefc66c9896e87f5c57f6ab8c45578f298cb0a47351e0cde906c9c8a4f4",
+      "output_sha256": "29ad4d4cf8f814aa75150115e813a77fc4361b90aea5cddd9fb1141ffdceccc5",
+      "aspect_ratio_difference_percent": 39.990234375,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Geometry failure: FAL returned a square sheet instead of the supplied 5:3 sheet. Page proportions changed substantially; copy and product consistency also remain incorrect. Unaltered raw result retained for review."
+    },
+    {
+      "folder": "mobile/kindrednote",
+      "title": "KindredNote",
+      "category": "mobile",
+      "maintainer": "Jason Festa",
+      "design_count": 10,
+      "grid": {
+        "columns": 5,
+        "rows": 2,
+        "source_cell_dimensions": [
+          756,
+          1559
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        3780,
+        3118
+      ],
+      "output_dimensions": [
+        4544,
+        3748
+      ],
+      "input_sha256": "9ac5024ad0d6c640b8222fff0a0a86ec04e9aaf01723770a0ebdf577e8db37b1",
+      "output_sha256": "92a823dd7f085c38cb8e3ba3d663195ec88a44b9802e31120ea52fb1fe3d9780",
+      "aspect_ratio_difference_percent": 0.005307945542742942,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Ten equal screens retained. Morgan still changes from adult to child; onboarding step 3 is mislabeled, and schedule times/copy changed incorrectly. Not state-accurate."
+    },
+    {
+      "folder": "mobile/emberrest",
+      "title": "Emberrest",
+      "category": "mobile",
+      "maintainer": "Jason Festa",
+      "design_count": 10,
+      "grid": {
+        "columns": 5,
+        "rows": 2,
+        "source_cell_dimensions": [
+          756,
+          1559
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        3780,
+        3118
+      ],
+      "output_dimensions": [
+        4544,
+        3748
+      ],
+      "input_sha256": "5d95a22e7e2ba18c96ffdb1e5f70819ecde2ab998188ecbd2243725c86fa23f3",
+      "output_sha256": "43cb1a98615d9c22de5877353aa13c860c161dacb65035e66e1f49aacd13c72a",
+      "aspect_ratio_difference_percent": 0.005307945542742942,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Ten screens retained. Onboarding step 2 is mislabeled; the Tonight breathing duration conflicts with the 15-minute total; audio progress remains short of the requested 25%. Tab icons also vary."
+    },
+    {
+      "folder": "mobile/spriglet",
+      "title": "Spriglet",
+      "category": "mobile",
+      "maintainer": "Jason Festa",
+      "design_count": 10,
+      "grid": {
+        "columns": 5,
+        "rows": 2,
+        "source_cell_dimensions": [
+          756,
+          1559
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        3780,
+        3118
+      ],
+      "output_dimensions": [
+        4544,
+        3776
+      ],
+      "input_sha256": "b0435cc8f1d78114db5630ddbc74bc7a8ec64d3e4a48f248793bbdce5e335367",
+      "output_sha256": "1bef4c65ca54b7173a471685ac7bb8b8c4f118ec224619df05d5479e8d62a54c",
+      "aspect_ratio_difference_percent": 0.7362568379517542,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Authorized retry returned ten screens at 4544 × 3776; overall ratio differs by 0.7363%. The botanical aesthetic and main screen structure remain. Onboarding labels, several supporting lines, the 18 Jun note date (now 12 Jun), and navigation icons are still inaccurate. Not approved for final copy or state accuracy."
+    },
+    {
+      "folder": "mobile/florivo",
+      "title": "Florivo",
+      "category": "mobile",
+      "maintainer": "Jason Festa",
+      "design_count": 10,
+      "grid": {
+        "columns": 5,
+        "rows": 2,
+        "source_cell_dimensions": [
+          756,
+          1559
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        3780,
+        3118
+      ],
+      "output_dimensions": [
+        4544,
+        3748
+      ],
+      "input_sha256": "cfaca45c14de32905663ee5ffa72f1e62e3866e195e4f4119133214f963c1d39",
+      "output_sha256": "3c8138c61b8d56cae713b026061c51085d06e73087f391d3bbf449dc080a0af9",
+      "aspect_ratio_difference_percent": 0.005307945542742942,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Ten screens retained, but the completed puzzle still has only four physical strips while saying “5 of 5 placed.” Tab icons and collection labels remain inconsistent."
+    },
+    {
+      "folder": "mobile/dayglint",
+      "title": "Dayglint",
+      "category": "mobile",
+      "maintainer": "Jason Festa",
+      "design_count": 10,
+      "grid": {
+        "columns": 5,
+        "rows": 2,
+        "source_cell_dimensions": [
+          756,
+          1559
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        3780,
+        3118
+      ],
+      "output_dimensions": [
+        4544,
+        3748
+      ],
+      "input_sha256": "9639e5f3c4ec34933b2f7e132a5d4ede2d9c0eb155bdaa0d6d5db0b0a67b5bdb",
+      "output_sha256": "9ba49a2991c4a5d32e138f408f3cd6d2e320f6d6db8d77019a4e134fbf7af755",
+      "aspect_ratio_difference_percent": 0.005307945542742942,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Ten screens retained. Onboarding step 2 is labeled 3/4; sunset values disagree, and the hourly screen adds inconsistent duplicate metric rows. Not state-accurate."
+    },
+    {
+      "folder": "mobile/evenfall",
+      "title": "Evenfall",
+      "category": "mobile",
+      "maintainer": "Jason Festa",
+      "design_count": 10,
+      "grid": {
+        "columns": 5,
+        "rows": 2,
+        "source_cell_dimensions": [
+          756,
+          1559
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        3780,
+        3118
+      ],
+      "output_dimensions": [
+        4544,
+        3748
+      ],
+      "input_sha256": "6bb2cec37db4fa75513920c788260e6e2bc8f6ce33a256c1d148f7b59f85e5ef",
+      "output_sha256": "ca6ce13451c1aa0c1e4c819dca68f84d5df2110c5591086fb77b0241de00bfa6",
+      "aspect_ratio_difference_percent": 0.005307945542742942,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Ten screens retained. Daylight times/duration and the walking interval became contradictory; onboarding progress and place labels remain inaccurate."
+    },
+    {
+      "folder": "components/weather",
+      "title": "Weather",
+      "category": "components",
+      "maintainer": "Jason Festa",
+      "design_count": 5,
+      "grid": {
+        "columns": 5,
+        "rows": 1,
+        "source_cell_dimensions": [
+          1000,
+          1000
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        4096,
+        819
+      ],
+      "output_dimensions": [
+        9280,
+        1856
+      ],
+      "input_sha256": "10436e526642a95527e660ee0a7b304a42e80c8184ad32ebdfc8b8d2ac222f29",
+      "output_sha256": "70c28092f63ca9d6af20fd2db4f3ef27ed21949e3625fcdfaee43bd5b31f262d",
+      "aspect_ratio_difference_percent": 0.0244140625,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Five cards retain the overall proportions. Weekendly has visibly smeared brand/date lettering and partial temperature occlusion. Several artwork details changed beyond a cleanup."
+    },
+    {
+      "folder": "components/people",
+      "title": "People",
+      "category": "components",
+      "maintainer": "Jason Festa",
+      "design_count": 5,
+      "grid": {
+        "columns": 5,
+        "rows": 1,
+        "source_cell_dimensions": [
+          1000,
+          1250
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        4096,
+        1024
+      ],
+      "output_dimensions": [
+        8192,
+        2048
+      ],
+      "input_sha256": "3c644c10ba1abf698d8996446fcc86a6fe9bfdd1cf363aba04a257e2735e1ec4",
+      "output_sha256": "af74ef290e71eebbf86b7f6767144ad222df2d62cca0fb945db5153a9035daa9",
+      "aspect_ratio_difference_percent": 0.0,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Five contexts and displayed selection totals are preserved. Tablemate's inactive selection controls became faint/missing; Storycircle's trigger still depicts three avatars for two selected readers."
+    },
+    {
+      "folder": "components/palette",
+      "title": "Palette",
+      "category": "components",
+      "maintainer": "Jason Festa",
+      "design_count": 5,
+      "grid": {
+        "columns": 1,
+        "rows": 5,
+        "source_cell_dimensions": [
+          1400,
+          400
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        1400,
+        2000
+      ],
+      "output_dimensions": [
+        3456,
+        4936
+      ],
+      "input_sha256": "8420da4c687f096b6eb818fdffa9ada00abdad59c6981c09bddf309ab471f568",
+      "output_sha256": "0949f0a0a92dbf7f759fe03a3e3a60832566104a888a875d57a7fb29233fd7ea",
+      "aspect_ratio_difference_percent": 0.023153507756434877,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Five trays retain their natural proportions. Reviewed names, five spheres per tray, selected rings and shuffle labels are consistent. This is one of the cleanest results."
+    },
+    {
+      "folder": "components/membership",
+      "title": "Membership",
+      "category": "components",
+      "maintainer": "Jason Festa",
+      "design_count": 5,
+      "grid": {
+        "columns": 5,
+        "rows": 1,
+        "source_cell_dimensions": [
+          900,
+          1500
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        4096,
+        1365
+      ],
+      "output_dimensions": [
+        7104,
+        2368
+      ],
+      "input_sha256": "89cc4dc60d1c794667ef3a13d468f6128e2ce44b503097f6940381ffd4290479",
+      "output_sha256": "0ae4e531be8602d7787858a2d16eea9db0719defa2e38f21262b97ca1bd76a73",
+      "aspect_ratio_difference_percent": 0.0244140625,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Five plan cards, selected plans, prices and CTA names are readable. AtelierPass changed from a cream surface to strong orange; palette intent was restored but this is a visible change from the supplied input."
+    },
+    {
+      "folder": "components/usage",
+      "title": "Usage",
+      "category": "components",
+      "maintainer": "Jason Festa",
+      "design_count": 5,
+      "grid": {
+        "columns": 5,
+        "rows": 1,
+        "source_cell_dimensions": [
+          1250,
+          1000
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        4096,
+        655
+      ],
+      "output_dimensions": [
+        8256,
+        2048
+      ],
+      "input_sha256": "5968a8f20a512bf992acdd6fd8682fcfe6436a63083a6d8fafe3b2bcdf8aea29",
+      "output_sha256": "3b88cb5e130a2a47d972c2828b9831baa8ad21053aa2c565bcab9d0a8cf21081",
+      "aspect_ratio_difference_percent": 35.535430908203125,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Geometry failure: overall ratio changed from about 6.25:1 to 4.03:1. New percentage labels were added, units and some counts changed incorrectly, and several labels are corrupted."
+    },
+    {
+      "folder": "components/dock",
+      "title": "Dock",
+      "category": "components",
+      "maintainer": "Jason Festa",
+      "design_count": 5,
+      "grid": {
+        "columns": 1,
+        "rows": 5,
+        "source_cell_dimensions": [
+          1400,
+          360
+        ]
+      },
+      "generation": {
+        "provider": "fal.ai",
+        "model": "fal-ai/nano-banana-2/edit",
+        "resolution": "4K",
+        "aspect_ratio": "auto",
+        "num_images": 1,
+        "output_format": "png",
+        "limit_generations": true,
+        "enable_web_search": false,
+        "thinking_level": "omitted"
+      },
+      "input": "input.png",
+      "prompt": "prompt.md",
+      "output": "output.png",
+      "preview": "output-preview.jpg",
+      "input_dimensions": [
+        1400,
+        1800
+      ],
+      "output_dimensions": [
+        3648,
+        4692
+      ],
+      "input_sha256": "b339414d7b103efbb13aad49e332d6a52654627f32798dab07eeb015b5b9f0d4",
+      "output_sha256": "c23573662f6241c86b1412a6b4c74b58e4d520c1b6a3c66d8d57f2d80e64e715",
+      "aspect_ratio_difference_percent": 0.0365363536719121,
+      "output_postprocessing": "None. Original downloaded FAL bytes.",
+      "review_note": "Five docks retain their natural proportions. Reviewed four destinations per dock, correct order, unique brands and single active destination. This is one of the cleanest results."
+    }
+  ]
+}

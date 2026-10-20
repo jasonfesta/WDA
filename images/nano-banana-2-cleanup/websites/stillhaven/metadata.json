@@ -1,0 +1,42 @@
+{
+  "title": "Stillhaven",
+  "category": "websites",
+  "maintainer": "Jason Festa",
+  "design_count": 5,
+  "grid": {
+    "columns": 5,
+    "rows": 1,
+    "source_cell_dimensions": [
+      1586,
+      4758
+    ]
+  },
+  "generation": {
+    "provider": "fal.ai",
+    "model": "fal-ai/nano-banana-2/edit",
+    "resolution": "4K",
+    "aspect_ratio": "auto",
+    "num_images": 1,
+    "output_format": "png",
+    "limit_generations": true,
+    "enable_web_search": false,
+    "thinking_level": "omitted"
+  },
+  "input": "input.png",
+  "prompt": "prompt.md",
+  "output": "output.png",
+  "preview": "output-preview.jpg",
+  "input_dimensions": [
+    4096,
+    2458
+  ],
+  "output_dimensions": [
+    5312,
+    3200
+  ],
+  "input_sha256": "bc99be284d1db8beea1a3b0b761fd93301520978ccc6e6cfa3909334e521854a",
+  "output_sha256": "7792aaed3f1225c03ccbf21d1d8284f07b83695996390ac34401120350a034ad",
+  "aspect_ratio_difference_percent": 0.3837890625000062,
+  "output_postprocessing": "None. Original downloaded FAL bytes.",
+  "review_note": "Five full pages and overall proportions retained within 0.39%, but headings, supporting copy and testimonials contain malformed text. Not approved for final copy."
+}

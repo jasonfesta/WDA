@@ -1,0 +1,42 @@
+{
+  "title": "Palette",
+  "category": "components",
+  "maintainer": "Jason Festa",
+  "design_count": 5,
+  "grid": {
+    "columns": 1,
+    "rows": 5,
+    "source_cell_dimensions": [
+      1400,
+      400
+    ]
+  },
+  "generation": {
+    "provider": "fal.ai",
+    "model": "fal-ai/nano-banana-2/edit",
+    "resolution": "4K",
+    "aspect_ratio": "auto",
+    "num_images": 1,
+    "output_format": "png",
+    "limit_generations": true,
+    "enable_web_search": false,
+    "thinking_level": "omitted"
+  },
+  "input": "input.png",
+  "prompt": "prompt.md",
+  "output": "output.png",
+  "preview": "output-preview.jpg",
+  "input_dimensions": [
+    1400,
+    2000
+  ],
+  "output_dimensions": [
+    3456,
+    4936
+  ],
+  "input_sha256": "8420da4c687f096b6eb818fdffa9ada00abdad59c6981c09bddf309ab471f568",
+  "output_sha256": "0949f0a0a92dbf7f759fe03a3e3a60832566104a888a875d57a7fb29233fd7ea",
+  "aspect_ratio_difference_percent": 0.023153507756434877,
+  "output_postprocessing": "None. Original downloaded FAL bytes.",
+  "review_note": "Five trays retain their natural proportions. Reviewed names, five spheres per tray, selected rings and shuffle labels are consistent. This is one of the cleanest results."
+}

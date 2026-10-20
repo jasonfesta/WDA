@@ -1,0 +1,42 @@
+{
+  "title": "Emberrest",
+  "category": "mobile",
+  "maintainer": "Jason Festa",
+  "design_count": 10,
+  "grid": {
+    "columns": 5,
+    "rows": 2,
+    "source_cell_dimensions": [
+      756,
+      1559
+    ]
+  },
+  "generation": {
+    "provider": "fal.ai",
+    "model": "fal-ai/nano-banana-2/edit",
+    "resolution": "4K",
+    "aspect_ratio": "auto",
+    "num_images": 1,
+    "output_format": "png",
+    "limit_generations": true,
+    "enable_web_search": false,
+    "thinking_level": "omitted"
+  },
+  "input": "input.png",
+  "prompt": "prompt.md",
+  "output": "output.png",
+  "preview": "output-preview.jpg",
+  "input_dimensions": [
+    3780,
+    3118
+  ],
+  "output_dimensions": [
+    4544,
+    3748
+  ],
+  "input_sha256": "5d95a22e7e2ba18c96ffdb1e5f70819ecde2ab998188ecbd2243725c86fa23f3",
+  "output_sha256": "43cb1a98615d9c22de5877353aa13c860c161dacb65035e66e1f49aacd13c72a",
+  "aspect_ratio_difference_percent": 0.005307945542742942,
+  "output_postprocessing": "None. Original downloaded FAL bytes.",
+  "review_note": "Ten screens retained. Onboarding step 2 is mislabeled; the Tonight breathing duration conflicts with the 15-minute total; audio progress remains short of the requested 25%. Tab icons also vary."
+}

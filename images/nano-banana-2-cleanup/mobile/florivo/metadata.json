@@ -1,0 +1,42 @@
+{
+  "title": "Florivo",
+  "category": "mobile",
+  "maintainer": "Jason Festa",
+  "design_count": 10,
+  "grid": {
+    "columns": 5,
+    "rows": 2,
+    "source_cell_dimensions": [
+      756,
+      1559
+    ]
+  },
+  "generation": {
+    "provider": "fal.ai",
+    "model": "fal-ai/nano-banana-2/edit",
+    "resolution": "4K",
+    "aspect_ratio": "auto",
+    "num_images": 1,
+    "output_format": "png",
+    "limit_generations": true,
+    "enable_web_search": false,
+    "thinking_level": "omitted"
+  },
+  "input": "input.png",
+  "prompt": "prompt.md",
+  "output": "output.png",
+  "preview": "output-preview.jpg",
+  "input_dimensions": [
+    3780,
+    3118
+  ],
+  "output_dimensions": [
+    4544,
+    3748
+  ],
+  "input_sha256": "cfaca45c14de32905663ee5ffa72f1e62e3866e195e4f4119133214f963c1d39",
+  "output_sha256": "3c8138c61b8d56cae713b026061c51085d06e73087f391d3bbf449dc080a0af9",
+  "aspect_ratio_difference_percent": 0.005307945542742942,
+  "output_postprocessing": "None. Original downloaded FAL bytes.",
+  "review_note": "Ten screens retained, but the completed puzzle still has only four physical strips while saying “5 of 5 placed.” Tab icons and collection labels remain inconsistent."
+}

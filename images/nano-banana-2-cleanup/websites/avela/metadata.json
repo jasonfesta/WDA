@@ -1,0 +1,42 @@
+{
+  "title": "Avela",
+  "category": "websites",
+  "maintainer": "Jason Festa",
+  "design_count": 5,
+  "grid": {
+    "columns": 5,
+    "rows": 1,
+    "source_cell_dimensions": [
+      1681,
+      5043
+    ]
+  },
+  "generation": {
+    "provider": "fal.ai",
+    "model": "fal-ai/nano-banana-2/edit",
+    "resolution": "4K",
+    "aspect_ratio": "auto",
+    "num_images": 1,
+    "output_format": "png",
+    "limit_generations": true,
+    "enable_web_search": false,
+    "thinking_level": "omitted"
+  },
+  "input": "input.png",
+  "prompt": "prompt.md",
+  "output": "output.png",
+  "preview": "output-preview.jpg",
+  "input_dimensions": [
+    4096,
+    2458
+  ],
+  "output_dimensions": [
+    5504,
+    3072
+  ],
+  "input_sha256": "8a0398924d1144fc6238008f27cdcad2dbc84f44c5e3088d7d1dfd6fb637fc2b",
+  "output_sha256": "882fa2136409558204ebd455a9b049bcde6c806dfa16f35ecf4ae788d315c371",
+  "aspect_ratio_difference_percent": 7.517496744791674,
+  "output_postprocessing": "None. Original downloaded FAL bytes.",
+  "review_note": "Needs correction: sheet ratio changed by 7.52%; product title became “Aoda / Arc,” and multiple labels/prices are garbled. Not approved as final."
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Serein",
+  "category": "websites",
+  "maintainer": "Jason Festa",
+  "design_count": 5,
+  "grid": {
+    "columns": 5,
+    "rows": 1,
+    "source_cell_dimensions": [
+      1586,
+      4758
+    ]
+  },
+  "generation": {
+    "provider": "fal.ai",
+    "model": "fal-ai/nano-banana-2/edit",
+    "resolution": "4K",
+    "aspect_ratio": "auto",
+    "num_images": 1,
+    "output_format": "png",
+    "limit_generations": true,
+    "enable_web_search": false,
+    "thinking_level": "omitted"
+  },
+  "input": "input.png",
+  "prompt": "prompt.md",
+  "output": "output.png",
+  "preview": "output-preview.jpg",
+  "input_dimensions": [
+    4096,
+    2458
+  ],
+  "output_dimensions": [
+    5312,
+    3200
+  ],
+  "input_sha256": "82997f067cf694ce8c22cd2c70f26958834ee39582eb9ca0a424e8db795686c4",
+  "output_sha256": "66b0f67bf567721e6455f4985086dbfa5abffe121df238dca2c7c3eed15d50cb",
+  "aspect_ratio_difference_percent": 0.3837890625000062,
+  "output_postprocessing": "None. Original downloaded FAL bytes.",
+  "review_note": "Brand imagery and five-page structure largely retained. Product details, labels and supporting copy remain malformed; canonical product volume/price consistency is not verified."
+}

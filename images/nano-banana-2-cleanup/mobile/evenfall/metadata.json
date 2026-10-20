@@ -1,0 +1,42 @@
+{
+  "title": "Evenfall",
+  "category": "mobile",
+  "maintainer": "Jason Festa",
+  "design_count": 10,
+  "grid": {
+    "columns": 5,
+    "rows": 2,
+    "source_cell_dimensions": [
+      756,
+      1559
+    ]
+  },
+  "generation": {
+    "provider": "fal.ai",
+    "model": "fal-ai/nano-banana-2/edit",
+    "resolution": "4K",
+    "aspect_ratio": "auto",
+    "num_images": 1,
+    "output_format": "png",
+    "limit_generations": true,
+    "enable_web_search": false,
+    "thinking_level": "omitted"
+  },
+  "input": "input.png",
+  "prompt": "prompt.md",
+  "output": "output.png",
+  "preview": "output-preview.jpg",
+  "input_dimensions": [
+    3780,
+    3118
+  ],
+  "output_dimensions": [
+    4544,
+    3748
+  ],
+  "input_sha256": "6bb2cec37db4fa75513920c788260e6e2bc8f6ce33a256c1d148f7b59f85e5ef",
+  "output_sha256": "ca6ce13451c1aa0c1e4c819dca68f84d5df2110c5591086fb77b0241de00bfa6",
+  "aspect_ratio_difference_percent": 0.005307945542742942,
+  "output_postprocessing": "None. Original downloaded FAL bytes.",
+  "review_note": "Ten screens retained. Daylight times/duration and the walking interval became contradictory; onboarding progress and place labels remain inaccurate."
+}
