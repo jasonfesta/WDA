@@ -1,0 +1,86 @@
+{
+  "title": "Components",
+  "count": 10,
+  "images": [
+    {
+      "file": "components/07-sol-weather-clean.png",
+      "title": "Sol — Weather card",
+      "folder": "components",
+      "section": "Edited components",
+      "kind": "generated output",
+      "sha256": "02074e5f607a0f207597b0a89c7c8af53caebb6a0baebd345c2cd24c4bf88283"
+    },
+    {
+      "file": "components/08-gather-team-clean.png",
+      "title": "Gather — Team picker",
+      "folder": "components",
+      "section": "Edited components",
+      "kind": "generated output",
+      "sha256": "0476140b8f09d93757a0e21d743dfc9a625f770c9cecade753b87243f7d7b601"
+    },
+    {
+      "file": "components/09-courtyard-palette-clean.png",
+      "title": "Courtyard — Material palette picker",
+      "folder": "components",
+      "section": "Edited components",
+      "kind": "generated output",
+      "sha256": "6b80b6fa4d6244730a2e7b885d5e377e54c5e284b129620ecf7ce0a8391f58d8"
+    },
+    {
+      "file": "components/10-roam-membership-clean.png",
+      "title": "Roam — Membership panel",
+      "folder": "components",
+      "section": "Edited components",
+      "kind": "generated output",
+      "sha256": "b9845b71388a2b4794c9102e3057c671eea9b99a863acf7d7f9a56fec916d32d"
+    },
+    {
+      "file": "components/11-kiln-usage-clean.png",
+      "title": "Kiln — Usage dashboard",
+      "folder": "components",
+      "section": "Edited components",
+      "kind": "generated output",
+      "sha256": "4f017579d8df349758376d00bd7de724c0ce420f072890d191d1c8b3ccea509c"
+    },
+    {
+      "file": "components/12-folio-navigation-dock.png",
+      "title": "Folio — Navigation dock",
+      "folder": "components",
+      "section": "Edited components",
+      "kind": "generated output",
+      "sha256": "bbb20ae0409352d5188b90f1bab1ff5642681c6bb99d12a48f7bc0e72e37466e"
+    },
+    {
+      "file": "components/earlier-versions/04-sol-weather-widget.png",
+      "title": "Sol — Warm-weather card",
+      "folder": "components",
+      "section": "Earlier component versions",
+      "kind": "earlier generated output",
+      "sha256": "4f9cffbd0d8b4722336a6b3525706b54ea1cd3e82bc20ecd489b1a59495c019b"
+    },
+    {
+      "file": "components/earlier-versions/05-gather-creative-team.png",
+      "title": "Gather — Team and palette controls",
+      "folder": "components",
+      "section": "Earlier component versions",
+      "kind": "earlier generated output",
+      "sha256": "9673956d4d4887896c92837e1a27081fd10651b578521cbaa846411ff588dac0"
+    },
+    {
+      "file": "components/earlier-versions/06-roam-membership.png",
+      "title": "Roam — Membership with material studies",
+      "folder": "components",
+      "section": "Earlier component versions",
+      "kind": "earlier generated output",
+      "sha256": "eee4a10608e4a4dd1873eb3b63c05985bf14409c789479b74c2eb0c3a79b16e1"
+    },
+    {
+      "file": "components/earlier-versions/07-kiln-studio-usage.png",
+      "title": "Kiln — Creative workspace usage",
+      "folder": "components",
+      "section": "Earlier component versions",
+      "kind": "earlier generated output",
+      "sha256": "7e0848a79195927854eb73339f170dc7a5f242b24894780f8f989a15b756237c"
+    }
+  ]
+}

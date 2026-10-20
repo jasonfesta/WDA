@@ -1,0 +1,54 @@
+{
+  "title": "Mobile",
+  "count": 6,
+  "images": [
+    {
+      "file": "mobile/13-home-note-onboarding.png",
+      "title": "Home Note — Family handover",
+      "folder": "mobile",
+      "section": "Mobile screens",
+      "kind": "generated output",
+      "sha256": "f28ba6d613d66d90e220dc820a7badfd056b933d2264c324496fb369108342a5"
+    },
+    {
+      "file": "mobile/14-afterglow-bedtime.png",
+      "title": "Afterglow — Evening rhythm",
+      "folder": "mobile",
+      "section": "Mobile screens",
+      "kind": "generated output",
+      "sha256": "4b7bde5e051ca50b9da0ecfd92587c41f22ff92b460d3f92e7699288a441f333"
+    },
+    {
+      "file": "mobile/15-pocket-garden-waitlist.png",
+      "title": "Pocket Garden — Early access",
+      "folder": "mobile",
+      "section": "Mobile screens",
+      "kind": "generated output",
+      "sha256": "579fd652677440058d3ec8698b8afb1fa363d8d7f471ca366fb70454a3f11acb"
+    },
+    {
+      "file": "mobile/16-petal-puzzle.png",
+      "title": "Petal — Botanical puzzle",
+      "folder": "mobile",
+      "section": "Mobile screens",
+      "kind": "generated output",
+      "sha256": "cc31258e3888f6cde832a9795ab1c8e271f580eb636cd3070d092b735cba462e"
+    },
+    {
+      "file": "mobile/17-sol-forecast.png",
+      "title": "Sol — Hourly forecast",
+      "folder": "mobile",
+      "section": "Mobile screens",
+      "kind": "generated output",
+      "sha256": "db557b558102f1666f9e9c082a76f266bcf483706c5381452d373edb6043ad93"
+    },
+    {
+      "file": "mobile/18-daybook-daylight.png",
+      "title": "Daybook — Daylight planner",
+      "folder": "mobile",
+      "section": "Mobile screens",
+      "kind": "generated output",
+      "sha256": "d0a074bd48f519255a09bcd6b332592c6cde343a9dab066f053973a7dff7d378"
+    }
+  ]
+}

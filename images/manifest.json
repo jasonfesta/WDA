@@ -1,0 +1,621 @@
+{
+  "owner": "Jason Festa",
+  "repository": "https://github.com/jasonfesta/WDA",
+  "counts": {
+    "website": 6,
+    "components": 10,
+    "mobile": 6,
+    "colors": 54
+  },
+  "totalImages": 76,
+  "images": [
+    {
+      "file": "website/01-avela-arc-bag.png",
+      "title": "Avela — The Arc bag",
+      "folder": "website",
+      "section": "Website layouts",
+      "kind": "generated output",
+      "sha256": "1f33c33193c44127748892dcbc2570cea33352d70319c7501d4d588872bb613c"
+    },
+    {
+      "file": "website/02-rill-and-rye-bakery.png",
+      "title": "Rill & Rye — Orchard bakery",
+      "folder": "website",
+      "section": "Website layouts",
+      "kind": "generated output",
+      "sha256": "33759129a3c67537986ce940be2f3da3bd333b08f0e324b30a6cdd2eb6f330af"
+    },
+    {
+      "file": "website/03-room-and-ritual-interiors.png",
+      "title": "Room & Ritual — The courtyard house",
+      "folder": "website",
+      "section": "Website layouts",
+      "kind": "generated output",
+      "sha256": "6f93ca09788964c1f8211a4050d52af3f7db17e488022994a6a2ca68b4dae28b"
+    },
+    {
+      "file": "website/04-oriel-spatial-practice.png",
+      "title": "Oriel — Spaces for gathering",
+      "folder": "website",
+      "section": "Website layouts",
+      "kind": "generated output",
+      "sha256": "77e56ea821f6c19d672ba9a312d6b28c0a23bbb73b06b050e463d5484f8deada"
+    },
+    {
+      "file": "website/05-sundrop-aperitif.png",
+      "title": "Sundrop — Apricot aperitif",
+      "folder": "website",
+      "section": "Website layouts",
+      "kind": "generated output",
+      "sha256": "0e64fd066e5d133db8fbc8b5791dc1ef042bdd420accea4e5c079f820c5dfc4d"
+    },
+    {
+      "file": "website/06-serein-botanical-care.png",
+      "title": "Serein — Daily botanical care",
+      "folder": "website",
+      "section": "Website layouts",
+      "kind": "generated output",
+      "sha256": "28be9ff030e46e3461e41674cbe049b19baf80ee79ef2d7dabb8b5b0259b36f7"
+    },
+    {
+      "file": "components/07-sol-weather-clean.png",
+      "title": "Sol — Weather card",
+      "folder": "components",
+      "section": "Edited components",
+      "kind": "generated output",
+      "sha256": "02074e5f607a0f207597b0a89c7c8af53caebb6a0baebd345c2cd24c4bf88283"
+    },
+    {
+      "file": "components/08-gather-team-clean.png",
+      "title": "Gather — Team picker",
+      "folder": "components",
+      "section": "Edited components",
+      "kind": "generated output",
+      "sha256": "0476140b8f09d93757a0e21d743dfc9a625f770c9cecade753b87243f7d7b601"
+    },
+    {
+      "file": "components/09-courtyard-palette-clean.png",
+      "title": "Courtyard — Material palette picker",
+      "folder": "components",
+      "section": "Edited components",
+      "kind": "generated output",
+      "sha256": "6b80b6fa4d6244730a2e7b885d5e377e54c5e284b129620ecf7ce0a8391f58d8"
+    },
+    {
+      "file": "components/10-roam-membership-clean.png",
+      "title": "Roam — Membership panel",
+      "folder": "components",
+      "section": "Edited components",
+      "kind": "generated output",
+      "sha256": "b9845b71388a2b4794c9102e3057c671eea9b99a863acf7d7f9a56fec916d32d"
+    },
+    {
+      "file": "components/11-kiln-usage-clean.png",
+      "title": "Kiln — Usage dashboard",
+      "folder": "components",
+      "section": "Edited components",
+      "kind": "generated output",
+      "sha256": "4f017579d8df349758376d00bd7de724c0ce420f072890d191d1c8b3ccea509c"
+    },
+    {
+      "file": "components/12-folio-navigation-dock.png",
+      "title": "Folio — Navigation dock",
+      "folder": "components",
+      "section": "Edited components",
+      "kind": "generated output",
+      "sha256": "bbb20ae0409352d5188b90f1bab1ff5642681c6bb99d12a48f7bc0e72e37466e"
+    },
+    {
+      "file": "mobile/13-home-note-onboarding.png",
+      "title": "Home Note — Family handover",
+      "folder": "mobile",
+      "section": "Mobile screens",
+      "kind": "generated output",
+      "sha256": "f28ba6d613d66d90e220dc820a7badfd056b933d2264c324496fb369108342a5"
+    },
+    {
+      "file": "mobile/14-afterglow-bedtime.png",
+      "title": "Afterglow — Evening rhythm",
+      "folder": "mobile",
+      "section": "Mobile screens",
+      "kind": "generated output",
+      "sha256": "4b7bde5e051ca50b9da0ecfd92587c41f22ff92b460d3f92e7699288a441f333"
+    },
+    {
+      "file": "mobile/15-pocket-garden-waitlist.png",
+      "title": "Pocket Garden — Early access",
+      "folder": "mobile",
+      "section": "Mobile screens",
+      "kind": "generated output",
+      "sha256": "579fd652677440058d3ec8698b8afb1fa363d8d7f471ca366fb70454a3f11acb"
+    },
+    {
+      "file": "mobile/16-petal-puzzle.png",
+      "title": "Petal — Botanical puzzle",
+      "folder": "mobile",
+      "section": "Mobile screens",
+      "kind": "generated output",
+      "sha256": "cc31258e3888f6cde832a9795ab1c8e271f580eb636cd3070d092b735cba462e"
+    },
+    {
+      "file": "mobile/17-sol-forecast.png",
+      "title": "Sol — Hourly forecast",
+      "folder": "mobile",
+      "section": "Mobile screens",
+      "kind": "generated output",
+      "sha256": "db557b558102f1666f9e9c082a76f266bcf483706c5381452d373edb6043ad93"
+    },
+    {
+      "file": "mobile/18-daybook-daylight.png",
+      "title": "Daybook — Daylight planner",
+      "folder": "mobile",
+      "section": "Mobile screens",
+      "kind": "generated output",
+      "sha256": "d0a074bd48f519255a09bcd6b332592c6cde343a9dab066f053973a7dff7d378"
+    },
+    {
+      "file": "colors/generated-textures/19-apricot-citron-light.png",
+      "title": "Apricot and citron — Soft light field",
+      "folder": "colors",
+      "section": "Generated textures",
+      "kind": "generated output",
+      "sha256": "54d798a0901986ab61f7f0b604f6ec3eb5b1c2d7d448e3f67175dcc783638da1"
+    },
+    {
+      "file": "colors/generated-textures/20-canyon-lines-craft.png",
+      "title": "Canyon lines — Handcrafted surface",
+      "folder": "colors",
+      "section": "Generated textures",
+      "kind": "generated output",
+      "sha256": "f1e8495ae58a30cb185fcb7153889101dc742bebccfa72693824b6ec38c5d068"
+    },
+    {
+      "file": "colors/generated-textures/21-rosette-moss-grain.png",
+      "title": "Rosette and moss — Grain field",
+      "folder": "colors",
+      "section": "Generated textures",
+      "kind": "generated output",
+      "sha256": "8a49454008ad44930dd95d288654ce67923389ea4e7f810dafe868a53edc4357"
+    },
+    {
+      "file": "colors/generated-textures/22-courtyard-light-bokeh.png",
+      "title": "Courtyard light — Optical texture",
+      "folder": "colors",
+      "section": "Generated textures",
+      "kind": "generated output",
+      "sha256": "11be59e118ca3134c0cad859c456c603e1ea8c372313737542e1516cdf2de199"
+    },
+    {
+      "file": "colors/generated-textures/23-woven-light.png",
+      "title": "Woven light — Translucent fabric",
+      "folder": "colors",
+      "section": "Generated textures",
+      "kind": "generated output",
+      "sha256": "0e54240fdd8d0e55651ef912b78df502730fa5ae406d5018c40f80d4446e2e0d"
+    },
+    {
+      "file": "colors/generated-textures/24-mineral-impressions.png",
+      "title": "Mineral impressions — Clay relief",
+      "folder": "colors",
+      "section": "Generated textures",
+      "kind": "generated output",
+      "sha256": "8e9e0dcc48143b2e00f2f7a8155e322d1037a73151a6ece86244271e306aeecc"
+    },
+    {
+      "file": "colors/generated-textures/07-sienna-silk.png",
+      "title": "Sienna silk",
+      "folder": "colors",
+      "section": "Generated textures",
+      "kind": "generated output",
+      "sha256": "d9d7302c809b2b3c618018c26b907e3553adff84d7b75f86fa6d0061ee3b6146"
+    },
+    {
+      "file": "colors/generated-textures/08-moss-linen.png",
+      "title": "Moss linen",
+      "folder": "colors",
+      "section": "Generated textures",
+      "kind": "generated output",
+      "sha256": "c207805222632783873b9f6325e177291b8e12a026263d7fd28b92f7b3b354bc"
+    },
+    {
+      "file": "colors/generated-textures/09-peach-travertine.png",
+      "title": "Peach travertine",
+      "folder": "colors",
+      "section": "Generated textures",
+      "kind": "generated output",
+      "sha256": "d8b903b9b42abb4e3a32a3345dfb32ab15c591828adb6c0e733cee595421be97"
+    },
+    {
+      "file": "colors/generated-textures/10-honey-caustics.png",
+      "title": "Honey caustics",
+      "folder": "colors",
+      "section": "Generated textures",
+      "kind": "generated output",
+      "sha256": "5aa4eac39978bd54592b8c41606f80f4dc95e034625f71a142705b613d0feb0e"
+    },
+    {
+      "file": "colors/generated-textures/11-coral-paper.png",
+      "title": "Coral paper",
+      "folder": "colors",
+      "section": "Generated textures",
+      "kind": "generated output",
+      "sha256": "674dac194457e15a9b7ac9a926ce05391e968b64bdc6b4879cba562dc3abb0e0"
+    },
+    {
+      "file": "colors/generated-textures/12-cream-glaze.png",
+      "title": "Cream glaze",
+      "folder": "colors",
+      "section": "Generated textures",
+      "kind": "generated output",
+      "sha256": "0d5689f9abf5fa64c13c8202de3f22ef9e6a5e04f7f0e7a3a17d6f082268f8bf"
+    },
+    {
+      "file": "colors/original-references/01-vivid-warm-palette.png",
+      "title": "Vivid warm palette",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "47cdcefcd0ca7abfe9761a563511e1aa06ce5b6d39a50da99984ca814cb21d87"
+    },
+    {
+      "file": "colors/original-references/02-coral-honey-and-moss-palettes.png",
+      "title": "Coral, honey and moss palettes",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "61f40ec591c65d7c071bca88a8b88a14b39e4e82062f5ecf7798ed0088719f3e"
+    },
+    {
+      "file": "colors/original-references/03-coral-and-citron-grain.png",
+      "title": "Coral and citron grain",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "8fff1f1185d6a1b19c4ab6316a82b4c32e77bf827c495aaa5109c47c928bba85"
+    },
+    {
+      "file": "colors/original-references/04-moss-citron-and-rosette-swatches.png",
+      "title": "Moss, citron and rosette swatches",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "aaa6610f6224018ef5d8fe4639466fc3412ac7f279a8b533a1f60c3cca4b4269"
+    },
+    {
+      "file": "colors/original-references/05-backlit-amber-fabric.png",
+      "title": "Backlit amber fabric",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "659f147b97772d3f609764ee1de2b90fda82e6ae6e6d15fe4053ad6b94c7472c"
+    },
+    {
+      "file": "colors/original-references/06-translucent-curtains-and-foliage.png",
+      "title": "Translucent curtains and foliage",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "3ee81addc158c7069151700cd098fabd8246216f6b1aaefcdc799586f155a622"
+    },
+    {
+      "file": "colors/original-references/07-terracotta-plaster-and-shadow.png",
+      "title": "Terracotta plaster and shadow",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "b4f067772860c9c49004d3f326b389db408dfacf212e66a684bccefd461bfdbf"
+    },
+    {
+      "file": "colors/original-references/08-apricot-window-light.png",
+      "title": "Apricot window light",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "b1c3c681d02b7682d25069728aeab654350837572a7334fb3a7ddc028bbbd439"
+    },
+    {
+      "file": "colors/original-references/09-natural-material-bands.png",
+      "title": "Natural material bands",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "72f9820a48e994e4c6caed5bfdb5669bb41bff470b7252f510924219c3e2e152"
+    },
+    {
+      "file": "colors/original-references/10-earth-and-foliage-palette.png",
+      "title": "Earth and foliage palette",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "4ebe4d532d0c93ed31dcb10c6a471c3789891f27d05df36373395a59cd3b1836"
+    },
+    {
+      "file": "colors/original-references/11-natural-texture-collection.png",
+      "title": "Natural texture collection",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "3b5ab68f2c00de3192c35022c5f28e57c891f7f0e1afb1f55736ba62cf5799f5"
+    },
+    {
+      "file": "colors/original-references/12-layered-material-samples.png",
+      "title": "Layered material samples",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "0cbbb0c3fbbd8be4ed85665eb93b3aeef5163066c36eb293edf1bacf3cca1aa5"
+    },
+    {
+      "file": "colors/original-references/13-burgundy-orange-and-sea-palette.png",
+      "title": "Burgundy, orange and sea palette",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "c936ec374e9dda9b2e766aaa89555b90e0bd23eb4f21a6fbcc83fbfdff36bc54"
+    },
+    {
+      "file": "colors/original-references/14-velvet-and-wood-palette.png",
+      "title": "Velvet and wood palette",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "5aed7caee4e7c1ba69a849b1b7349b1d8aef81d9be195bc0a10cf1c86ce522ca"
+    },
+    {
+      "file": "colors/original-references/15-dimensional-material-samples.png",
+      "title": "Dimensional material samples",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "52be96fcfa4d1fcbbe96b165cfd839af94bcd9a2d239ce79680ae83b7aba2c13"
+    },
+    {
+      "file": "colors/original-references/16-leather-cork-and-terrazzo.png",
+      "title": "Leather, cork and terrazzo",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "a6d87c2096db37c452b1e17b446b541e18f56f26ccec150e6edfe313c7691735"
+    },
+    {
+      "file": "colors/original-references/17-curled-warm-paint-swatches.png",
+      "title": "Curled warm paint swatches",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "d16e764c34002c66f0d721b8ef081800d2706f875ce780165e5ba3490c3b7a2e"
+    },
+    {
+      "file": "colors/original-references/18-peach-sage-and-navy-paper.png",
+      "title": "Peach, sage and navy paper",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "2cd8c25ab9684c0e36ff3d0de657cc1a46400f2ade2d1436da0143c38d0b56f5"
+    },
+    {
+      "file": "colors/original-references/19-ceramic-glaze-samples.png",
+      "title": "Ceramic glaze samples",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "70305eda27254c028d43f5f7fee1779f09eaf9625ebfa6cfbfc48a0422364fa9"
+    },
+    {
+      "file": "colors/original-references/20-warm-architectural-materials.png",
+      "title": "Warm architectural materials",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "a150ae48f0043f1a8f1f2fccbbe097a5e55713f4d3b207f7ee48b051dec521eb"
+    },
+    {
+      "file": "colors/original-references/21-orange-tactile-surface.png",
+      "title": "Orange tactile surface",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "3685e669ba76e19d79aa749341f5d0f41abfd55d9ed79155384af8f532b3e2a1"
+    },
+    {
+      "file": "colors/original-references/22-peach-mineral-powder.png",
+      "title": "Peach mineral powder",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "838939fb6d9943fd48128971c38cc471f7c7cdbc05f2d001b91d764a29d8a70b"
+    },
+    {
+      "file": "colors/original-references/23-amber-liquid-and-bubbles.png",
+      "title": "Amber liquid and bubbles",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "8188e4b63e2eafaa09fa4f2dbb0e4eeb8f87bafc176470cdbe4027e150b70311"
+    },
+    {
+      "file": "colors/original-references/24-golden-hour-portrait.png",
+      "title": "Golden-hour portrait",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "53340b0754369ca6658fa89b89ed505cafb72b51c39040cb5af1358e7fdb9ce2"
+    },
+    {
+      "file": "colors/original-references/25-warm-interior-and-light.png",
+      "title": "Warm interior and light",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "00c66b7dcf72e63892b218cbb4820330176d6bd6ffdbee334b41acd5dabcd3be"
+    },
+    {
+      "file": "colors/original-references/26-pearlescent-warm-folds.png",
+      "title": "Pearlescent warm folds",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "356310d8d569feeb051088230df818fa6e13656c94de689d19e2c5c14f0b3db2"
+    },
+    {
+      "file": "colors/original-references/27-luminous-coral-gradient.png",
+      "title": "Luminous coral gradient",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "8f8f3457acae3c19d8fb3bf65c61eb6c9c3ea8f6408064fa2e7b2eac9ca3403d"
+    },
+    {
+      "file": "colors/original-references/28-blurred-amber-butter-and-moss.png",
+      "title": "Blurred amber, butter and moss",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "c9731b7c69f03b84517dfb01a45a2a4437d9d1f52bfe6cc60445cc38a22618ea"
+    },
+    {
+      "file": "colors/original-references/29-ochre-wall-and-botanical-shadows.png",
+      "title": "Ochre wall and botanical shadows",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "b237bee104f53355a372b00a9b6a5a6b3271f17790031da331d757e333875651"
+    },
+    {
+      "file": "colors/original-references/30-amber-product-color-and-finish.png",
+      "title": "Amber product color and finish",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "39753c29d7d0dd71b9ea03ac55bb32529941440da4a5760713c962445fbc5bb9"
+    },
+    {
+      "file": "colors/original-references/31-coral-product-color-and-finish.png",
+      "title": "Coral product color and finish",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "1f4fc0610fe6c436d4959f4354de67e86e38d1c60619c8809744589385e18355"
+    },
+    {
+      "file": "colors/original-references/32-red-product-color-and-finish.png",
+      "title": "Red product color and finish",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "e9c137a1f51bbdc35b4498559095b57b20264a7f475d99acd1419c1b4b894dd6"
+    },
+    {
+      "file": "colors/original-references/33-apricot-and-citron-light.png",
+      "title": "Apricot and citron light",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "4fa914c998381c742d532b956d9ef027556a6f0e2f5b7f33cc7631f6a20c06e9"
+    },
+    {
+      "file": "colors/original-references/34-canyon-texture.png",
+      "title": "Canyon texture",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "bcef72b33e47539e0113f32659015fc7700f860845812d3bac2884991c0f8bf8"
+    },
+    {
+      "file": "colors/original-references/35-rosette-and-moss-grain.png",
+      "title": "Rosette and moss grain",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "c09c9c2d84b7821fb1424542cc981fc674fde2bf1ee1986cf6078cbac0467e2b"
+    },
+    {
+      "file": "colors/original-references/36-courtyard-optical-light.png",
+      "title": "Courtyard optical light",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "78a675b4447e40858a77eff36e471893c8600d0d2e38fc03c487b4e25a31963e"
+    },
+    {
+      "file": "colors/original-references/37-3d-color-and-material-composition-1.png",
+      "title": "3D color and material composition 1",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "f5b46395c170bb4b0ddcde47ab25f4e007c1a4708aff26ab955b59e642673ff3"
+    },
+    {
+      "file": "colors/original-references/38-3d-color-and-material-composition-2.png",
+      "title": "3D color and material composition 2",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "faf506966075c3a062a1ec0d4c888600536b8fbc14123c081b878dbf16b6e5f8"
+    },
+    {
+      "file": "colors/original-references/39-3d-color-and-material-composition-3.png",
+      "title": "3D color and material composition 3",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "67e96c2852c65555832285484348f1835ac5cb72cffd4c6a1648e41442e3276a"
+    },
+    {
+      "file": "colors/original-references/40-3d-color-and-material-composition-4.png",
+      "title": "3D color and material composition 4",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "aee16630572065f1419ec46a1b230ccea6cea534d0992f7da8d52e4cfc196ce3"
+    },
+    {
+      "file": "colors/original-references/41-3d-color-and-material-composition-5.png",
+      "title": "3D color and material composition 5",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "d877a4bc6c590bd352f9f19ed6d193f8afad6ef40991d000a6307eca84f7bf64"
+    },
+    {
+      "file": "colors/original-references/42-3d-color-and-material-composition-6.png",
+      "title": "3D color and material composition 6",
+      "folder": "colors",
+      "section": "Original color references",
+      "kind": "original input",
+      "sha256": "4b48d7565c8b36b55ecfdd49e1c8253989f0efaac0c066c78e282b5d198f89d5"
+    },
+    {
+      "file": "components/earlier-versions/04-sol-weather-widget.png",
+      "title": "Sol — Warm-weather card",
+      "folder": "components",
+      "section": "Earlier component versions",
+      "kind": "earlier generated output",
+      "sha256": "4f9cffbd0d8b4722336a6b3525706b54ea1cd3e82bc20ecd489b1a59495c019b"
+    },
+    {
+      "file": "components/earlier-versions/05-gather-creative-team.png",
+      "title": "Gather — Team and palette controls",
+      "folder": "components",
+      "section": "Earlier component versions",
+      "kind": "earlier generated output",
+      "sha256": "9673956d4d4887896c92837e1a27081fd10651b578521cbaa846411ff588dac0"
+    },
+    {
+      "file": "components/earlier-versions/06-roam-membership.png",
+      "title": "Roam — Membership with material studies",
+      "folder": "components",
+      "section": "Earlier component versions",
+      "kind": "earlier generated output",
+      "sha256": "eee4a10608e4a4dd1873eb3b63c05985bf14409c789479b74c2eb0c3a79b16e1"
+    },
+    {
+      "file": "components/earlier-versions/07-kiln-studio-usage.png",
+      "title": "Kiln — Creative workspace usage",
+      "folder": "components",
+      "section": "Earlier component versions",
+      "kind": "earlier generated output",
+      "sha256": "7e0848a79195927854eb73339f170dc7a5f242b24894780f8f989a15b756237c"
+    }
+  ]
+}

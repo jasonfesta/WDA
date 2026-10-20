@@ -1,0 +1,54 @@
+{
+  "title": "Website",
+  "count": 6,
+  "images": [
+    {
+      "file": "website/01-avela-arc-bag.png",
+      "title": "Avela — The Arc bag",
+      "folder": "website",
+      "section": "Website layouts",
+      "kind": "generated output",
+      "sha256": "1f33c33193c44127748892dcbc2570cea33352d70319c7501d4d588872bb613c"
+    },
+    {
+      "file": "website/02-rill-and-rye-bakery.png",
+      "title": "Rill & Rye — Orchard bakery",
+      "folder": "website",
+      "section": "Website layouts",
+      "kind": "generated output",
+      "sha256": "33759129a3c67537986ce940be2f3da3bd333b08f0e324b30a6cdd2eb6f330af"
+    },
+    {
+      "file": "website/03-room-and-ritual-interiors.png",
+      "title": "Room & Ritual — The courtyard house",
+      "folder": "website",
+      "section": "Website layouts",
+      "kind": "generated output",
+      "sha256": "6f93ca09788964c1f8211a4050d52af3f7db17e488022994a6a2ca68b4dae28b"
+    },
+    {
+      "file": "website/04-oriel-spatial-practice.png",
+      "title": "Oriel — Spaces for gathering",
+      "folder": "website",
+      "section": "Website layouts",
+      "kind": "generated output",
+      "sha256": "77e56ea821f6c19d672ba9a312d6b28c0a23bbb73b06b050e463d5484f8deada"
+    },
+    {
+      "file": "website/05-sundrop-aperitif.png",
+      "title": "Sundrop — Apricot aperitif",
+      "folder": "website",
+      "section": "Website layouts",
+      "kind": "generated output",
+      "sha256": "0e64fd066e5d133db8fbc8b5791dc1ef042bdd420accea4e5c079f820c5dfc4d"
+    },
+    {
+      "file": "website/06-serein-botanical-care.png",
+      "title": "Serein — Daily botanical care",
+      "folder": "website",
+      "section": "Website layouts",
+      "kind": "generated output",
+      "sha256": "28be9ff030e46e3461e41674cbe049b19baf80ee79ef2d7dabb8b5b0259b36f7"
+    }
+  ]
+}
