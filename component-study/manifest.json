@@ -1,0 +1,390 @@
+{
+  "title": "WDA / Component study",
+  "maintainer": "Jason Festa",
+  "date": "2026-10-21",
+  "repository": "https://github.com/jasonfesta/WDA/tree/main/component-study",
+  "status": "thirty designed states ready for review; production behavior specified",
+  "assets": [
+    {
+      "file": "references/originals/sol.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "02074e5f607a0f207597b0a89c7c8af53caebb6a0baebd345c2cd24c4bf88283",
+      "bytes": 1264887
+    },
+    {
+      "file": "references/screenshots/01-weather-card.png",
+      "dimensions": [
+        2330,
+        1306
+      ],
+      "sha256": "999b797d253e5fb0a5517d30e287e2e2bc9c9c3742f6e66a80ab5d2d4b060559",
+      "bytes": 374485
+    },
+    {
+      "file": "images/states/sol/01-today.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "1125086c7ee5da6315c4f788764df7060fc01fdcd878cca4d536bef63fd17047",
+      "bytes": 1566908
+    },
+    {
+      "file": "images/states/sol/02-fahrenheit.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "4c3c09e3a5ba5ba5079f878ee7e57c4a98123c2f86100e9e12ee072dcaf9188a",
+      "bytes": 1533155
+    },
+    {
+      "file": "images/states/sol/03-friday.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "f6c3a376b18ecc1c59dd760ad7b30d489639bdc1d1c2bdc4bf14a5beb743d1c4",
+      "bytes": 1547526
+    },
+    {
+      "file": "images/states/sol/04-options.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "6baf41f3846baea324ad2353298ac54ea74a603ff02569fdae55fb61a6ec2c84",
+      "bytes": 1562464
+    },
+    {
+      "file": "images/states/sol/05-retry.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "808952d632eab199697e1dd5b9761facf3a73b39a58b8c16c87f5df5e39974d3",
+      "bytes": 1697161
+    },
+    {
+      "file": "references/originals/gather.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sha256": "0476140b8f09d93757a0e21d743dfc9a625f770c9cecade753b87243f7d7b601",
+      "bytes": 1380981
+    },
+    {
+      "file": "references/screenshots/02-team-picker-and-palette-controls.png",
+      "dimensions": [
+        772,
+        1410
+      ],
+      "sha256": "d4875f87e05522d04c942b90de1d36fb873bbe1084e07d8689b4b69abf33d05b",
+      "bytes": 105475
+    },
+    {
+      "file": "images/states/gather/01-three-selected.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sha256": "e1046f80409cfe0a98a333ccf4a520cc6f00abd5ce950980db7b09a8ebf68ef4",
+      "bytes": 1423642
+    },
+    {
+      "file": "images/states/gather/02-closed.png",
+      "dimensions": [
+        2079,
+        756
+      ],
+      "sha256": "ba5cb69e00de2f985f458845657d187b171ed466d3f106e3931e51ee614c6fae",
+      "bytes": 1207383
+    },
+    {
+      "file": "images/states/gather/03-four-selected.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sha256": "a5b4357171b4511bed76a3a8b40e0b358ede603d5a4ce029ae5e18333292fda0",
+      "bytes": 1525780
+    },
+    {
+      "file": "images/states/gather/04-empty.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sha256": "fbf4b57def8fad02351ae546bfbc917875b1b47d5474d70a75f61363a9721288",
+      "bytes": 1569988
+    },
+    {
+      "file": "images/states/gather/05-save-error.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sha256": "21f828fc19e25e035ef73012f0b349fcc0b38855200f1153e529b88b00245854",
+      "bytes": 1572154
+    },
+    {
+      "file": "references/originals/courtyard.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "6b80b6fa4d6244730a2e7b885d5e377e54c5e284b129620ecf7ce0a8391f58d8",
+      "bytes": 1290001
+    },
+    {
+      "file": "images/states/courtyard/01-apricot.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "sha256": "f6e9d0d26c5c88f74137de98b271fcb8928340e61a27e297915a1aa6782ab2f1",
+      "bytes": 1666611
+    },
+    {
+      "file": "images/states/courtyard/02-moss.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "sha256": "8a3eff9175c90fcc7a47bd7ddf0be7d91ec5737fadabe309bfd80e46eaf158b7",
+      "bytes": 1685795
+    },
+    {
+      "file": "images/states/courtyard/03-focus.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "sha256": "e04011c2836b95e7410cdb69a11b9f76ad419e82a3262d3ba0bcb0b4a2d795a2",
+      "bytes": 1722748
+    },
+    {
+      "file": "images/states/courtyard/04-shuffled.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "sha256": "1f3aeff0b0a1f7a56c5cc6f3593db90ab1d98f040541d8f8ac7869a34ff38bdf",
+      "bytes": 1750460
+    },
+    {
+      "file": "images/states/courtyard/05-restored.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "sha256": "bc68e1d098299f1b207a73dab29055fb4c0b9a11529ea8090af70d75a6f93866",
+      "bytes": 1674059
+    },
+    {
+      "file": "references/originals/roam.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sha256": "b9845b71388a2b4794c9102e3057c671eea9b99a863acf7d7f9a56fec916d32d",
+      "bytes": 1402662
+    },
+    {
+      "file": "references/screenshots/03-membership-panel.png",
+      "dimensions": [
+        2490,
+        1942
+      ],
+      "sha256": "78ed7af50ab8725f0949460b4b0954519fe72780286cb66c71fd1c8cd4f711ca",
+      "bytes": 850917
+    },
+    {
+      "file": "images/states/roam/01-everyday.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sha256": "38f1e3f6100edcf695e2fbc59e1fda8171fb5d627d8c42bd2f9937afbad74364",
+      "bytes": 1431627
+    },
+    {
+      "file": "images/states/roam/02-weekender.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sha256": "3374c59892fac903427c36946d7d62dc17c5a874dbb642c715d415834d1a2f91",
+      "bytes": 1645853
+    },
+    {
+      "file": "images/states/roam/03-worldwide.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sha256": "ac90f7687f8c2953efbb6d18af970683408dec32092686b9fccc520d1cb679d6",
+      "bytes": 1642650
+    },
+    {
+      "file": "images/states/roam/04-review.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sha256": "9c38a9da6db5c418c706377822ae21646f7bd448075d9ed4aa4d5f9756d6d83e",
+      "bytes": 1562524
+    },
+    {
+      "file": "images/states/roam/05-confirmed.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sha256": "7e56db93ab123ed8b5b70f4ddf5d87069f2b43603b9516709c3bced7dced73f0",
+      "bytes": 1500636
+    },
+    {
+      "file": "references/originals/kiln.png",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "sha256": "4f017579d8df349758376d00bd7de724c0ce420f072890d191d1c8b3ccea509c",
+      "bytes": 1300538
+    },
+    {
+      "file": "references/screenshots/04-usage-dashboard.png",
+      "dimensions": [
+        1928,
+        1390
+      ],
+      "sha256": "d6dbe6722da68ebc28c07b8f75c4b8c82f81f4608b4f313aa8eb1ed0019adccf",
+      "bytes": 257621
+    },
+    {
+      "file": "images/states/kiln/01-cycle.png",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "sha256": "b41431b9c73b8cb927cf9b4515c0633aff4348f3c6ea6e45c05b3e9a5b3c73ad",
+      "bytes": 1388104
+    },
+    {
+      "file": "images/states/kiln/02-previous.png",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "sha256": "e9e4a31022f944fe56de6c7af14a46069bf59bbd958fce38905819dd9b6f063d",
+      "bytes": 1523014
+    },
+    {
+      "file": "images/states/kiln/03-week.png",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "sha256": "a1aa57e5d1451242d82d223010533b703c3d2481e625412f8053eb5d64bf824a",
+      "bytes": 1539944
+    },
+    {
+      "file": "images/states/kiln/04-detail.png",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "sha256": "eb2ebb04752d91694fe33c9acde892b666cbd29f1b6f2276bff1c9c28da286cf",
+      "bytes": 1487137
+    },
+    {
+      "file": "images/states/kiln/05-manage.png",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "sha256": "e8174cf5e2b035ef32562faa38477bebd278b0182effa0103145b9deb13c960b",
+      "bytes": 1499989
+    },
+    {
+      "file": "references/originals/folio.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "bbb20ae0409352d5188b90f1bab1ff5642681c6bb99d12a48f7bc0e72e37466e",
+      "bytes": 1083337
+    },
+    {
+      "file": "references/screenshots/05-navigation-dock.png",
+      "dimensions": [
+        834,
+        458
+      ],
+      "sha256": "f689f641db250e7eee2dcd7ad3cc60f936e84617517e848bb46a4c4e8377f0f1",
+      "bytes": 16479
+    },
+    {
+      "file": "images/states/folio/01-studio.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "sha256": "519249f36f6cc96c75a6e872f7b79de73256b4b2a3789509b7307698f85f019e",
+      "bytes": 1225040
+    },
+    {
+      "file": "images/states/folio/02-explore.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "sha256": "812e7f32c308afd551ac1acb13d20208b01c8a5ed39f326f8052550ced884529",
+      "bytes": 1354556
+    },
+    {
+      "file": "images/states/folio/03-saved.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "sha256": "a90e4e161f020419695cd0e313271d74d18b92124c480ad935c7cf7cc88a2b8e",
+      "bytes": 1437870
+    },
+    {
+      "file": "images/states/folio/04-profile.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "sha256": "9c245a2696699305603837b0338aa5a6b58d160c6d6b0cf6aecdb71c2f89e6d9",
+      "bytes": 1352869
+    },
+    {
+      "file": "images/states/folio/05-keyboard-focus.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "sha256": "c771d1c47a10192a486210b7975f8fef7163c77c1d378bb14c2dd4c7fc7a9784",
+      "bytes": 1354882
+    },
+    {
+      "file": "references/corrections/kiln-week-before.png",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "sha256": "bcd6ac781763b4f8853c3716093bfb7e1ee379adbf6d688c0d49fc49ce733cf2",
+      "bytes": 1436599
+    }
+  ],
+  "render_ledger": "data/state-render-plan.json",
+  "validation": "validation.json",
+  "browser_checks": "browser-checks.json"
+}

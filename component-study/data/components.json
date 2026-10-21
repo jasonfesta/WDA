@@ -1,0 +1,2209 @@
+[
+  {
+    "slug": "sol",
+    "name": "Sol",
+    "type": "Weather card",
+    "tagline": "A little more daylight.",
+    "intro": "A warm, compact forecast built around a satin sun and a frosted horizon. Keep the weather legible while the atmosphere stays quiet.",
+    "direction": "Ivory shell, orange satin disc, frosted lower plane, citron selected controls and charcoal type. The disc stays behind the data; labels never become part of a shader.",
+    "palette": [
+      "#faf9f6",
+      "#fb7a23",
+      "#ffedb6",
+      "#352b25"
+    ],
+    "font": "Inter for data and controls. Preserve the source’s generous temperature scale.",
+    "baseline": "Lisbon · Thu, Jun 18 · 28°C · Sunset 20:58 · Today selected.",
+    "observations": [
+      "The source has seven interactive targets: More, two unit choices and four day tabs. City, date, temperature, condition and sunset are read-only content.",
+      "The warm sun is decorative. Its position must not imply a measured sun altitude without a defined data mapping.",
+      "New dates and temperatures in state specifications are fixed review fixtures, not a live forecast."
+    ],
+    "sources": [
+      "weather",
+      "tabs",
+      "popover",
+      "react",
+      "motion"
+    ],
+    "states": [
+      {
+        "id": "01-today",
+        "title": "Today · Celsius",
+        "entry": "Initial successful forecast for Lisbon.",
+        "visible": "28°C, Today active, Thu Jun 18 and sunset 20:58.",
+        "exit": "Change unit, select a day or open More.",
+        "image": {
+          "file": "images/states/sol/01-today.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "1125086c7ee5da6315c4f788764df7060fc01fdcd878cca4d536bef63fd17047",
+          "bytes": 1566908
+        },
+        "prompt": "prompts/states/sol/01-today.md",
+        "reference": "references/originals/sol.png",
+        "actions": [
+          {
+            "label": "Use Fahrenheit",
+            "target": "02-fahrenheit",
+            "note": "Client-side conversion."
+          },
+          {
+            "label": "Friday forecast",
+            "target": "03-friday",
+            "note": "Update all date-specific fields."
+          },
+          {
+            "label": "Open options",
+            "target": "04-options",
+            "note": "Focus the first action."
+          }
+        ]
+      },
+      {
+        "id": "02-fahrenheit",
+        "title": "Today · Fahrenheit",
+        "entry": "Activate F from Today.",
+        "visible": "82°F, F active; date, day and sunset unchanged.",
+        "exit": "C returns to 28°C with no request.",
+        "image": {
+          "file": "images/states/sol/02-fahrenheit.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "4c3c09e3a5ba5ba5079f878ee7e57c4a98123c2f86100e9e12ee072dcaf9188a",
+          "bytes": 1533155
+        },
+        "prompt": "prompts/states/sol/02-fahrenheit.md",
+        "reference": "images/states/sol/01-today.png",
+        "actions": [
+          {
+            "label": "Use Celsius",
+            "target": "01-today",
+            "note": "No network request."
+          }
+        ]
+      },
+      {
+        "id": "03-friday",
+        "title": "Friday forecast",
+        "entry": "Activate Fri 19 from the Celsius baseline.",
+        "visible": "29°C; Fri Jun 19 and Fri 19 active; sunset 20:59.",
+        "exit": "Today restores its date, temperature and sunset.",
+        "image": {
+          "file": "images/states/sol/03-friday.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "f6c3a376b18ecc1c59dd760ad7b30d489639bdc1d1c2bdc4bf14a5beb743d1c4",
+          "bytes": 1547526
+        },
+        "prompt": "prompts/states/sol/03-friday.md",
+        "reference": "images/states/sol/01-today.png",
+        "actions": [
+          {
+            "label": "Return to Today",
+            "target": "01-today",
+            "note": "Restore Today data."
+          }
+        ]
+      },
+      {
+        "id": "04-options",
+        "title": "Options open",
+        "entry": "Activate the three-dot More button.",
+        "visible": "Weather options popover: Change location, Refresh forecast and Close.",
+        "exit": "Close/Escape restores focus; Refresh either succeeds or enters the retry state.",
+        "image": {
+          "file": "images/states/sol/04-options.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "6baf41f3846baea324ad2353298ac54ea74a603ff02569fdae55fb61a6ec2c84",
+          "bytes": 1562464
+        },
+        "prompt": "prompts/states/sol/04-options.md",
+        "reference": "images/states/sol/01-today.png",
+        "actions": [
+          {
+            "label": "Close options",
+            "target": "01-today",
+            "note": "Return focus to More."
+          },
+          {
+            "label": "Refresh fails",
+            "target": "05-retry",
+            "note": "Simulated failure with cached data."
+          }
+        ]
+      },
+      {
+        "id": "05-retry",
+        "title": "Stale forecast · Retry",
+        "entry": "Refresh fails with a cached forecast.",
+        "visible": "Retain Today 28°C; Couldn’t refresh; Last updated 18:00; Retry.",
+        "exit": "Retry success restores Today; repeated failure keeps a usable retry action.",
+        "image": {
+          "file": "images/states/sol/05-retry.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "808952d632eab199697e1dd5b9761facf3a73b39a58b8c16c87f5df5e39974d3",
+          "bytes": 1697161
+        },
+        "prompt": "prompts/states/sol/05-retry.md",
+        "reference": "images/states/sol/01-today.png",
+        "actions": [
+          {
+            "label": "Retry succeeds",
+            "target": "01-today",
+            "note": "Replace cache only after success."
+          },
+          {
+            "label": "Retry fails",
+            "target": "05-retry",
+            "note": "Keep timestamp and error."
+          }
+        ]
+      }
+    ],
+    "controls": [
+      {
+        "id": "more",
+        "label": "More options",
+        "action": "Open or close the location/refresh popover.",
+        "rollover": "Lighten the circular hit area; do not animate the sun.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Enter/Space opens; Escape closes and returns focus.",
+        "result": "Options → location search or refresh; cancel preserves current location.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "04-options"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "unit-c",
+        "label": "Celsius",
+        "action": "Set unit to C; derive numbers from the canonical Celsius value.",
+        "rollover": "Tint the unit capsule; active C stays selected until activation.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Radio-group arrows or Space; selection has an accessible label.",
+        "result": "28°C for Today.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "01-today"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "unit-f",
+        "label": "Fahrenheit",
+        "action": "Set unit to F using round(C × 9/5 + 32).",
+        "rollover": "Tint the unit capsule without previewing false values.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Radio-group arrows or Space.",
+        "result": "82°F for Today; 84°F for Fri 19.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "02-fahrenheit"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "days",
+        "label": "Today / Fri 19 / Sat 20 / Sun 21",
+        "action": "Select a day and update date, condition, temperature and sunset together.",
+        "rollover": "Subtle citron hover; selected fill remains distinct.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Tab into active tab; arrows move focus, Enter/Space selects.",
+        "result": "Selected day and rendered forecast agree.",
+        "scope": "original",
+        "instances": 4,
+        "states": [
+          "01-today",
+          "03-friday"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "location",
+        "label": "Location search",
+        "action": "Search and choose an explicit result; keep old forecast until the new request resolves.",
+        "rollover": "Highlight results; do not request geolocation on hover.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Label the field; arrows browse results; Escape cancels.",
+        "result": "A new location or unchanged Lisbon on cancel.",
+        "scope": "proposed supporting control",
+        "instances": 1,
+        "states": [
+          "04-options"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "retry",
+        "label": "Retry / Refresh",
+        "action": "Retry the forecast request with current location and unit.",
+        "rollover": "Raise contrast; suppress duplicate activation while pending.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Enter/Space; announce loading and final status politely.",
+        "result": "Success restores data; failure retains a retry action.",
+        "scope": "proposed supporting control",
+        "instances": 1,
+        "states": [
+          "04-options",
+          "05-retry"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "close",
+        "label": "Close weather options",
+        "action": "Dismiss the popover without changing location, day or unit.",
+        "result": "Focus returns to the More button.",
+        "scope": "state control",
+        "instances": 1,
+        "rollover": "Increase contrast without committing a value. Use the same visible affordance for keyboard focus.",
+        "press": "Tap performs the same action. Show brief press feedback; prevent duplicate in-flight actions.",
+        "keyboard": "Enter/Space activates. Escape dismisses an open overlay and restores focus to its trigger.",
+        "states": [
+          "01-today",
+          "04-options"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      }
+    ],
+    "motion": "On a committed day change, crossfade the condition illustration in 180 ms. A future satin sun shader may shift its highlight by at most 2% over a slow 12-second cycle while visible. It is decorative, paused offscreen, and completely static for reduced motion. No temperature count-up.",
+    "assets": "Extract or recreate the orange sun disc, a separate frosted plane and a static fallback. Deliver transparent artwork without any text, tabs, icon labels or shadows that cross the component edge. Keep one stable camera and lighting direction. A bitmap cannot yield a true 3D mesh; reconstruct if a 3D material is required.",
+    "react": "WeatherCard receives location, forecastByDate, selectedDate, unit, status and onDateChange/onUnitChange/onLocationChange. Canonical temperatures stay in Celsius; formatted labels are derived. Cache is keyed by location and date, not by rendered unit.",
+    "invariants": [
+      "28°C → 82°F; 29°C → 84°F.",
+      "Exactly one day and one unit are selected.",
+      "A stale forecast is labelled with its actual update time."
+    ],
+    "alternative": "Compact horizontal forecast: move the sun to a narrow leading area, keep four dates visible and preserve all unit/location controls. This is a layout proposal, not an additional exported screen.",
+    "archive_note": "The five saved variations cover everyday forecast, weekend planning, golden-hour planning, garden rain and cooler-hour planning. Their controls need context-specific data; a golden-hour window is not a generic temperature tab.",
+    "family": "weather",
+    "title": "Sol — Weather card",
+    "asset_id": "ASSET-007",
+    "original": {
+      "file": "references/originals/sol.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "02074e5f607a0f207597b0a89c7c8af53caebb6a0baebd345c2cd24c4bf88283",
+      "bytes": 1264887
+    },
+    "prompt": "prompts/originals/sol.md",
+    "source_prompt_sha256": "709d6306fd1ff30717ccc17f21459b37787fd2f1d256715628db7fae691f59f7",
+    "source_image": {
+      "file": "references/screenshots/01-weather-card.png",
+      "dimensions": [
+        2330,
+        1306
+      ],
+      "sha256": "999b797d253e5fb0a5517d30e287e2e2bc9c9c3742f6e66a80ab5d2d4b060559",
+      "bytes": 374485
+    },
+    "common": {
+      "responsive": "Let text reflow at 200% zoom. Keep every control operable by touch and keyboard, with a minimum 44 × 44 CSS-pixel hit area as a WDA design target. Preserve the component’s natural aspect ratio in raster review; the implementation reflows content rather than scaling text to fit.",
+      "focus": "Use a visible 2px high-contrast focus ring with 3px offset. Never make hover the only way to discover or activate a control.",
+      "reduced_motion": "Remove translation, rotation, parallax and looping animation. Selection, loading labels and focus remain visible; use an instant swap or an opacity change of at most 100 ms.",
+      "scroll": "Keep the component in normal document flow. Do not hijack scrolling or drive selected values from scroll position. Pause optional decorative motion while offscreen.",
+      "persistence": "The review explorer describes behavior; it does not send requests or store user data. Production persistence belongs to the host application and must reconcile pending/error states."
+    },
+    "archive_brands": [
+      "Sunward",
+      "Weekendly",
+      "Goldenfold",
+      "Rainroot",
+      "Breezeway"
+    ],
+    "archive_url": "https://github.com/jasonfesta/WDA/raw/refs/heads/main/component-study/downloads/component-context-archive.zip",
+    "branches": [
+      "Sat 20 and Sun 21 follow the same day-selection contract as Friday; their fixture values are 27°C/81°F at 21:00 and 26°C/79°F at 21:01. In Fahrenheit, selecting Friday shows 84°F. Do not reset unit on a date change.",
+      "Change location opens a labelled search field. Empty input shows no results; pending search exposes loading; zero results offers edit; Arrow keys select and Enter commits a result. Escape/cancel keeps Lisbon. New-location failure retains labelled old data and Retry. This supporting host search is documented rather than a sixth image.",
+      "First-load failure has no cached forecast: show an error and Retry, never 0°. Refreshing labels the current data as updating and prevents duplicate requests. Close uses the × control, Escape or outside click."
+    ],
+    "state_note": "Five designed state images. Review actions are labelled simulations; host integrations and extra data combinations are specified below.",
+    "descriptive": "Title, helper copy, count, price, divider and artwork are descriptive unless the control inventory assigns an action. Decorative layers use pointer-events:none and aria-hidden. Read-only regions have no hover lift, pointer cursor or tab stop."
+  },
+  {
+    "slug": "gather",
+    "name": "Gather",
+    "type": "Team picker",
+    "tagline": "Make room for good work.",
+    "intro": "A small selection tool with a rich material personality. Its warmth comes from four tactile avatars and a dark cocoa surface, with clear selection feedback.",
+    "direction": "Cocoa panel, cream checkmarks and rose, amber, moss and burgundy objects. Keep the floating trigger connected to the list and preserve generous row spacing.",
+    "palette": [
+      "#30251c",
+      "#fff1de",
+      "#c98579",
+      "#b17b27",
+      "#81825c"
+    ],
+    "font": "Inter for names, roles and count. Names lead; roles remain secondary but readable.",
+    "baseline": "Lena Ortiz, Noah Bell and Amara Chen selected; Eli Brooks unselected. Trigger and footer both show 3.",
+    "observations": [
+      "The original trigger plus four person rows are interactive. Avatars, headings, roles and count are descriptive; tapping an avatar activates its row, not a separate profile.",
+      "Selection takes effect immediately in this compact picker. Closing is dismissal, not undo; the UI must never suggest an unimplemented Apply step.",
+      "Storycircle’s older trigger shows three spheres although two readers are selected. Plotcrew shows three for four helpers without a +1 label. These are recorded archive issues."
+    ],
+    "sources": [
+      "checkbox",
+      "disclosure",
+      "popover",
+      "react",
+      "motion"
+    ],
+    "states": [
+      {
+        "id": "01-three-selected",
+        "title": "Three selected",
+        "entry": "Open the picker with the saved three-person set.",
+        "visible": "Lena, Noah and Amara checked; three corresponding avatars and a count of 3.",
+        "exit": "Toggle any checkbox or close.",
+        "image": {
+          "file": "images/states/gather/01-three-selected.png",
+          "dimensions": [
+            1122,
+            1402
+          ],
+          "sha256": "e1046f80409cfe0a98a333ccf4a520cc6f00abd5ce950980db7b09a8ebf68ef4",
+          "bytes": 1423642
+        },
+        "prompt": "prompts/states/gather/01-three-selected.md",
+        "reference": "references/originals/gather.png",
+        "actions": [
+          {
+            "label": "Close picker",
+            "target": "02-closed",
+            "note": "Selected IDs persist."
+          },
+          {
+            "label": "Select Eli",
+            "target": "03-four-selected",
+            "note": "Count and all avatars derive from IDs."
+          }
+        ]
+      },
+      {
+        "id": "02-closed",
+        "title": "Closed picker",
+        "entry": "Close the three-person picker using trigger, Escape or outside click.",
+        "visible": "Only the trigger remains; three avatars, Gather · 3 people and a down chevron.",
+        "exit": "Reopen restores the same selected IDs.",
+        "image": {
+          "file": "images/states/gather/02-closed.png",
+          "dimensions": [
+            2079,
+            756
+          ],
+          "sha256": "ba5cb69e00de2f985f458845657d187b171ed466d3f106e3931e51ee614c6fae",
+          "bytes": 1207383
+        },
+        "prompt": "prompts/states/gather/02-closed.md",
+        "reference": "images/states/gather/01-three-selected.png",
+        "actions": [
+          {
+            "label": "Open picker",
+            "target": "01-three-selected",
+            "note": "Restore three checked rows."
+          }
+        ]
+      },
+      {
+        "id": "03-four-selected",
+        "title": "Four selected",
+        "entry": "Select Eli from the three-person set.",
+        "visible": "All four rows checked; four matching avatars; both summaries say 4.",
+        "exit": "Deselect rows, close or handle save failure.",
+        "image": {
+          "file": "images/states/gather/03-four-selected.png",
+          "dimensions": [
+            1122,
+            1402
+          ],
+          "sha256": "a5b4357171b4511bed76a3a8b40e0b358ede603d5a4ce029ae5e18333292fda0",
+          "bytes": 1525780
+        },
+        "prompt": "prompts/states/gather/03-four-selected.md",
+        "reference": "images/states/gather/01-three-selected.png",
+        "actions": [
+          {
+            "label": "Deselect Eli",
+            "target": "01-three-selected",
+            "note": "Return to the saved three-person set."
+          },
+          {
+            "label": "Deselect all four",
+            "target": "04-empty",
+            "note": "Review shortcut for four individual checkbox actions; no Clear all button is drawn."
+          },
+          {
+            "label": "Save fails",
+            "target": "05-save-error",
+            "note": "Keep attempted four-person selection."
+          }
+        ]
+      },
+      {
+        "id": "04-empty",
+        "title": "Zero selected",
+        "entry": "Deselect all four people.",
+        "visible": "All checkboxes empty; no trigger avatars; both summaries say 0.",
+        "exit": "Select any row; the count and avatars return from the selected IDs.",
+        "image": {
+          "file": "images/states/gather/04-empty.png",
+          "dimensions": [
+            1122,
+            1402
+          ],
+          "sha256": "fbf4b57def8fad02351ae546bfbc917875b1b47d5474d70a75f61363a9721288",
+          "bytes": 1569988
+        },
+        "prompt": "prompts/states/gather/04-empty.md",
+        "reference": "images/states/gather/01-three-selected.png",
+        "actions": [
+          {
+            "label": "Select Lena, Noah and Amara",
+            "target": "01-three-selected",
+            "note": "Review shortcut for three individual toggles; not one hidden UI action."
+          }
+        ]
+      },
+      {
+        "id": "05-save-error",
+        "title": "Selection save error",
+        "entry": "Saving the attempted four-person set fails.",
+        "visible": "Four remain checked; Changes not saved, Retry and Revert appear beneath the summary.",
+        "exit": "Retry success reaches the four-person state; Revert restores the saved three-person set.",
+        "image": {
+          "file": "images/states/gather/05-save-error.png",
+          "dimensions": [
+            1122,
+            1402
+          ],
+          "sha256": "21f828fc19e25e035ef73012f0b349fcc0b38855200f1153e529b88b00245854",
+          "bytes": 1572154
+        },
+        "prompt": "prompts/states/gather/05-save-error.md",
+        "reference": "images/states/gather/01-three-selected.png",
+        "actions": [
+          {
+            "label": "Retry succeeds",
+            "target": "03-four-selected",
+            "note": "Confirm the attempted four IDs."
+          },
+          {
+            "label": "Revert",
+            "target": "01-three-selected",
+            "note": "Restore last-confirmed IDs."
+          },
+          {
+            "label": "Retry fails",
+            "target": "05-save-error",
+            "note": "Retain the error."
+          }
+        ]
+      }
+    ],
+    "controls": [
+      {
+        "id": "trigger",
+        "label": "Gather · selected count",
+        "action": "Toggle the connected popover without changing selection.",
+        "rollover": "A subtle cream border highlight; chevron rotation only when open changes.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Enter/Space toggles; Escape closes; return focus to trigger.",
+        "result": "Open ↔ closed with unchanged IDs.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "01-three-selected",
+          "02-closed"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "person-lena",
+        "label": "Lena Ortiz · Visual direction",
+        "action": "Toggle this person ID in selectedIds.",
+        "rollover": "Lighten the entire row; avatar lifts 1px at most; checked state stays clear.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native checkbox, labelled with name and role; Space toggles.",
+        "result": "Derive count, checkmarks, trigger avatars and summary from the same selectedIds.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "01-three-selected",
+          "03-four-selected",
+          "04-empty"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "person-noah",
+        "label": "Noah Bell · Material studies",
+        "action": "Toggle this person ID in selectedIds.",
+        "rollover": "Lighten the entire row; avatar lifts 1px at most; checked state stays clear.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native checkbox, labelled with name and role; Space toggles.",
+        "result": "Derive count, checkmarks, trigger avatars and summary from the same selectedIds.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "01-three-selected",
+          "03-four-selected",
+          "04-empty"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "person-amara",
+        "label": "Amara Chen · Digital craft",
+        "action": "Toggle this person ID in selectedIds.",
+        "rollover": "Lighten the entire row; avatar lifts 1px at most; checked state stays clear.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native checkbox, labelled with name and role; Space toggles.",
+        "result": "Derive count, checkmarks, trigger avatars and summary from the same selectedIds.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "01-three-selected",
+          "03-four-selected",
+          "04-empty"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "person-eli",
+        "label": "Eli Brooks · Photography",
+        "action": "Toggle this person ID in selectedIds.",
+        "rollover": "Lighten the entire row; avatar lifts 1px at most; checked state stays clear.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native checkbox, labelled with name and role; Space toggles.",
+        "result": "Derive count, checkmarks, trigger avatars and summary from the same selectedIds.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "01-three-selected",
+          "03-four-selected"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "retry",
+        "label": "Retry save",
+        "action": "Resubmit attempted selection; disable duplicate submissions while pending.",
+        "rollover": "High-contrast text and underline.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native button; status announced once.",
+        "result": "Saved state or continued inline error.",
+        "scope": "proposed supporting control",
+        "instances": 1,
+        "states": [
+          "05-save-error",
+          "03-four-selected"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "revert",
+        "label": "Revert selection",
+        "action": "Restore lastConfirmedIds after a failed save.",
+        "rollover": "Show a clear text action with focus ring.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Enter/Space; keep focus in the list.",
+        "result": "Checked state, count and trigger all roll back together.",
+        "scope": "proposed supporting control",
+        "instances": 1,
+        "states": [
+          "05-save-error",
+          "01-three-selected"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      }
+    ],
+    "motion": "Open with a 140 ms opacity change and a 4px vertical offset. Checkmarks settle in 100 ms; avatars move only when the selected set changes. Do not continuously spin or float people. Preserve list height while an error appears beneath the footer.",
+    "assets": "Prepare four separate material spheres: rose ceramic, amber glass, moss stone and burgundy ribbed wood. Reuse the identical sphere for a person in the row and trigger. Export transparent assets with matched camera, light and baseline. No portrait replacements or names baked into pixels.",
+    "react": "TeamPicker receives people, selectedIds, open, saveStatus and onSelectionChange. Use a controlled Popover plus native checkboxes. Count is selectedIds.length; displayed avatars are selectedIds for the four-person study; use a labelled overflow count only when the layout actually requires it. Store attempted and last-confirmed sets for save errors.",
+    "invariants": [
+      "0 selected gives zero avatars and a zero count.",
+      "All four selected shows four or a truthful three-plus-one summary.",
+      "Closing preserves current selection; failed save never claims success."
+    ],
+    "alternative": "For a long directory, add a labelled search field and a scrollable list with a fixed summary. Selection remains by stable person ID across filters. This is a future layout option; the original four-person picker remains primary.",
+    "archive_note": "Dinner guests, garden helpers, book-club readers and a recording crew apply the same selection behavior. Invitation copy in Tablemate does not prove invitations were sent; production must distinguish selected from invited.",
+    "family": "people",
+    "title": "Gather — Team picker",
+    "asset_id": "ASSET-008",
+    "original": {
+      "file": "references/originals/gather.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sha256": "0476140b8f09d93757a0e21d743dfc9a625f770c9cecade753b87243f7d7b601",
+      "bytes": 1380981
+    },
+    "prompt": "prompts/originals/gather.md",
+    "source_prompt_sha256": "373733d83e71f487a873d34cb26037cf0b4f0824d14496cb5d32ebd5620fe00f",
+    "source_image": {
+      "file": "references/screenshots/02-team-picker-and-palette-controls.png",
+      "dimensions": [
+        772,
+        1410
+      ],
+      "sha256": "d4875f87e05522d04c942b90de1d36fb873bbe1084e07d8689b4b69abf33d05b",
+      "bytes": 105475
+    },
+    "common": {
+      "responsive": "Let text reflow at 200% zoom. Keep every control operable by touch and keyboard, with a minimum 44 × 44 CSS-pixel hit area as a WDA design target. Preserve the component’s natural aspect ratio in raster review; the implementation reflows content rather than scaling text to fit.",
+      "focus": "Use a visible 2px high-contrast focus ring with 3px offset. Never make hover the only way to discover or activate a control.",
+      "reduced_motion": "Remove translation, rotation, parallax and looping animation. Selection, loading labels and focus remain visible; use an instant swap or an opacity change of at most 100 ms.",
+      "scroll": "Keep the component in normal document flow. Do not hijack scrolling or drive selected values from scroll position. Pause optional decorative motion while offscreen.",
+      "persistence": "The review explorer describes behavior; it does not send requests or store user data. Production persistence belongs to the host application and must reconcile pending/error states."
+    },
+    "archive_brands": [
+      "Gatherwell",
+      "Tablemate",
+      "Plotcrew",
+      "Storycircle",
+      "Soundharbor"
+    ],
+    "archive_url": "https://github.com/jasonfesta/WDA/raw/refs/heads/main/component-study/downloads/component-context-archive.zip",
+    "branches": [
+      "Each row supports selection independently; the one-, two- and alternate three-person sets reuse the illustrated row grammar. Closed state preserves whatever current set exists, even though image 02 illustrates three.",
+      "Save pending keeps attempted values with a Saving… status. Failure never displays a success toast. Retry resubmits the same set with request versioning; stale responses cannot overwrite newer selections. Revert is available only after failure and restores the last confirmed snapshot.",
+      "Close/Escape/outside click dismisses the popover without undoing selection. The zero state is valid. Roles and heading are descriptive; avatar click activates its checkbox row, not a profile route."
+    ],
+    "state_note": "Five designed state images. Review actions are labelled simulations; host integrations and extra data combinations are specified below.",
+    "descriptive": "Title, helper copy, count, price, divider and artwork are descriptive unless the control inventory assigns an action. Decorative layers use pointer-events:none and aria-hidden. Read-only regions have no hover lift, pointer cursor or tab stop."
+  },
+  {
+    "slug": "courtyard",
+    "name": "Courtyard",
+    "type": "Material palette picker",
+    "tagline": "Colour you can almost touch.",
+    "intro": "Five material swatches and a quiet shuffle action. Make the chosen material unmistakable without turning the tray into a row of animated toys.",
+    "direction": "Long ivory porcelain tray, evenly spaced tactile spheres, one coral selection ring and small text labels. Preserve the wide, shallow footprint.",
+    "palette": [
+      "#f5efe6",
+      "#c98579",
+      "#e6ab79",
+      "#edcf69",
+      "#85805c",
+      "#59282c"
+    ],
+    "font": "Inter for the small uppercase title, material names and action label.",
+    "baseline": "Rose, Apricot, Citron, Moss and Burgundy; Apricot selected; one Shuffle palette button.",
+    "observations": [
+      "The five swatches form one selection group. The shuffle control creates a new proposed material set; it is a separate action.",
+      "The selected ring is visible around Apricot. Text labels are required because texture or colour alone cannot carry the choice.",
+      "The title and separator are static. Empty exterior canvas belongs to the original presentation image, not a live hit target."
+    ],
+    "sources": [
+      "radio",
+      "toggle",
+      "react",
+      "motion"
+    ],
+    "states": [
+      {
+        "id": "01-apricot",
+        "title": "Apricot selected",
+        "entry": "Initial palette.",
+        "visible": "Rose, Apricot, Citron, Moss and Burgundy; only Apricot has the selection ring.",
+        "exit": "Choose any material or focus Shuffle.",
+        "image": {
+          "file": "images/states/courtyard/01-apricot.png",
+          "dimensions": [
+            2172,
+            724
+          ],
+          "sha256": "f6e9d0d26c5c88f74137de98b271fcb8928340e61a27e297915a1aa6782ab2f1",
+          "bytes": 1666611
+        },
+        "prompt": "prompts/states/courtyard/01-apricot.md",
+        "reference": "references/originals/courtyard.png",
+        "actions": [
+          {
+            "label": "Choose Moss",
+            "target": "02-moss",
+            "note": "Selection commits."
+          },
+          {
+            "label": "Focus Shuffle",
+            "target": "03-focus",
+            "note": "Focus only, no palette change."
+          }
+        ]
+      },
+      {
+        "id": "02-moss",
+        "title": "Moss selected",
+        "entry": "Choose Moss.",
+        "visible": "The original five materials remain; only Moss is selected.",
+        "exit": "Shuffle captures this complete palette and Moss selection.",
+        "image": {
+          "file": "images/states/courtyard/02-moss.png",
+          "dimensions": [
+            2172,
+            724
+          ],
+          "sha256": "8a3eff9175c90fcc7a47bd7ddf0be7d91ec5737fadabe309bfd80e46eaf158b7",
+          "bytes": 1685795
+        },
+        "prompt": "prompts/states/courtyard/02-moss.md",
+        "reference": "images/states/courtyard/01-apricot.png",
+        "actions": [
+          {
+            "label": "Shuffle palette",
+            "target": "04-shuffled",
+            "note": "Store original set and Moss."
+          }
+        ]
+      },
+      {
+        "id": "03-focus",
+        "title": "Shuffle focused",
+        "entry": "Tab to Shuffle from the Apricot baseline without activating.",
+        "visible": "Apricot remains selected; a separate high-contrast outline surrounds Shuffle.",
+        "exit": "Tab away removes only focus; Enter shuffles the currently selected palette.",
+        "image": {
+          "file": "images/states/courtyard/03-focus.png",
+          "dimensions": [
+            2172,
+            724
+          ],
+          "sha256": "e04011c2836b95e7410cdb69a11b9f76ad419e82a3262d3ba0bcb0b4a2d795a2",
+          "bytes": 1722748
+        },
+        "prompt": "prompts/states/courtyard/03-focus.md",
+        "reference": "images/states/courtyard/01-apricot.png",
+        "actions": [
+          {
+            "label": "Return to Apricot",
+            "target": "01-apricot",
+            "note": "Blur only."
+          },
+          {
+            "label": "Choose Moss before shuffle",
+            "target": "02-moss",
+            "note": "Makes the illustrated undo path explicit."
+          }
+        ]
+      },
+      {
+        "id": "04-shuffled",
+        "title": "New palette",
+        "entry": "Activate Shuffle after choosing Moss for the illustrated undo path.",
+        "visible": "Clay, Peel, Brick, Plum and Ash replace the original set; Clay selected; Palette shuffled · Undo.",
+        "exit": "Undo restores the complete prior set and Moss, not an arbitrary default.",
+        "image": {
+          "file": "images/states/courtyard/04-shuffled.png",
+          "dimensions": [
+            2172,
+            724
+          ],
+          "sha256": "1f3aeff0b0a1f7a56c5cc6f3593db90ab1d98f040541d8f8ac7869a34ff38bdf",
+          "bytes": 1750460
+        },
+        "prompt": "prompts/states/courtyard/04-shuffled.md",
+        "reference": "images/states/courtyard/01-apricot.png",
+        "actions": [
+          {
+            "label": "Undo shuffle",
+            "target": "05-restored",
+            "note": "Restore original set plus Moss."
+          }
+        ]
+      },
+      {
+        "id": "05-restored",
+        "title": "Undo restores selection",
+        "entry": "Activate Undo on the shuffled set.",
+        "visible": "Original materials return with Moss selected; Previous palette restored.",
+        "exit": "Shuffle again stores a new single-level snapshot.",
+        "image": {
+          "file": "images/states/courtyard/05-restored.png",
+          "dimensions": [
+            2172,
+            724
+          ],
+          "sha256": "bc68e1d098299f1b207a73dab29055fb4c0b9a11529ea8090af70d75a6f93866",
+          "bytes": 1674059
+        },
+        "prompt": "prompts/states/courtyard/05-restored.md",
+        "reference": "images/states/courtyard/01-apricot.png",
+        "actions": [
+          {
+            "label": "Shuffle again",
+            "target": "04-shuffled",
+            "note": "Replace previous snapshot."
+          }
+        ]
+      }
+    ],
+    "controls": [
+      {
+        "id": "swatch-rose",
+        "label": "Rose",
+        "action": "Set selectedMaterialId to this swatch ID.",
+        "rollover": "Lift the sphere 2px on fine pointers; reveal a subtle ring preview without changing selection.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native labelled radio; arrows change selection, Space selects.",
+        "result": "Exactly one selected material; label and preview derive from that ID.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "01-apricot",
+          "04-shuffled"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "swatch-apricot",
+        "label": "Apricot",
+        "action": "Set selectedMaterialId to this swatch ID.",
+        "rollover": "Lift the sphere 2px on fine pointers; reveal a subtle ring preview without changing selection.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native labelled radio; arrows change selection, Space selects.",
+        "result": "Exactly one selected material; label and preview derive from that ID.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "01-apricot"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "swatch-citron",
+        "label": "Citron",
+        "action": "Set selectedMaterialId to this swatch ID.",
+        "rollover": "Lift the sphere 2px on fine pointers; reveal a subtle ring preview without changing selection.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native labelled radio; arrows change selection, Space selects.",
+        "result": "Exactly one selected material; label and preview derive from that ID.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "01-apricot",
+          "04-shuffled"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "swatch-moss",
+        "label": "Moss",
+        "action": "Set selectedMaterialId to this swatch ID.",
+        "rollover": "Lift the sphere 2px on fine pointers; reveal a subtle ring preview without changing selection.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native labelled radio; arrows change selection, Space selects.",
+        "result": "Exactly one selected material; label and preview derive from that ID.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "02-moss",
+          "05-restored"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "swatch-burgundy",
+        "label": "Burgundy",
+        "action": "Set selectedMaterialId to this swatch ID.",
+        "rollover": "Lift the sphere 2px on fine pointers; reveal a subtle ring preview without changing selection.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native labelled radio; arrows change selection, Space selects.",
+        "result": "Exactly one selected material; label and preview derive from that ID.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "01-apricot",
+          "04-shuffled"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "shuffle",
+        "label": "Shuffle palette",
+        "action": "Save current set and selection to history, then apply a new valid material set.",
+        "rollover": "Shuffle icon rotates 15° on hover; complete one 180 ms turn on activation.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Enter/Space; retain focus on the button; announce changed set.",
+        "result": "Five new swatches, one selection and an available Undo.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "03-focus",
+          "04-shuffled"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "undo",
+        "label": "Undo shuffle",
+        "action": "Restore the preceding set and selectedMaterialId.",
+        "rollover": "Underline and contrast change only.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Enter/Space; announce restored palette.",
+        "result": "The prior material set and selected ring return.",
+        "scope": "proposed supporting control",
+        "instances": 1,
+        "states": [
+          "04-shuffled",
+          "05-restored"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "new-materials",
+        "label": "Clay / Peel / Brick / Plum / Ash",
+        "action": "Select one material in the shuffled set using stable IDs.",
+        "result": "One selected ring; Undo restores the prior set and selection.",
+        "scope": "state control",
+        "instances": 5,
+        "rollover": "Increase contrast without committing a value. Use the same visible affordance for keyboard focus.",
+        "press": "Tap performs the same action. Show brief press feedback; prevent duplicate in-flight actions.",
+        "keyboard": "Native radio group; arrows select, Home/End select first/last.",
+        "states": [
+          "04-shuffled"
+        ]
+      }
+    ],
+    "motion": "Only the hovered material lifts 2px; on selection the ring crossfades in 120 ms. Shuffle crossfades the set over 180 ms with no mixing of old labels and new artwork. There is no ambient rotation. Under reduced motion, update the entire set immediately.",
+    "assets": "Prepare five independent transparent material spheres plus a common shadow. Name files by stable material ID. Keep shape, camera, size and light fixed across every set. Do not extract labels or selected rings into the assets: those are DOM/CSS layers.",
+    "react": "MaterialPalette receives materials, selectedMaterialId and onSelect/onShuffle/onUndo. Store a full previous snapshot for undo; never derive identity from current array position. Use a fieldset of labelled radios, keeping shuffle outside the group.",
+    "invariants": [
+      "Exactly five named materials and one selected ring.",
+      "Shuffle updates names, assets and IDs together.",
+      "Undo restores both palette and selection."
+    ],
+    "alternative": "On narrow surfaces, reflow to three swatches then two with the shuffle action below. Do not make the swatches too small to tap or force a long horizontal drag for core choices.",
+    "archive_note": "The five contexts are a courtyard study, fired ceramics, garden materials, golden pigments and coastal ceramics. The material names and selected ID must travel with the asset set.",
+    "family": "palette",
+    "title": "Courtyard — Material palette picker",
+    "asset_id": "ASSET-009",
+    "original": {
+      "file": "references/originals/courtyard.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "6b80b6fa4d6244730a2e7b885d5e377e54c5e284b129620ecf7ce0a8391f58d8",
+      "bytes": 1290001
+    },
+    "prompt": "prompts/originals/courtyard.md",
+    "source_prompt_sha256": "5e87cfbd51cb2912f70d8e76930953ba79d791a724f2007505e8b78448ee4d0b",
+    "source_image": {
+      "file": "references/screenshots/02-team-picker-and-palette-controls.png",
+      "dimensions": [
+        772,
+        1410
+      ],
+      "sha256": "d4875f87e05522d04c942b90de1d36fb873bbe1084e07d8689b4b69abf33d05b",
+      "bytes": 105475
+    },
+    "common": {
+      "responsive": "Let text reflow at 200% zoom. Keep every control operable by touch and keyboard, with a minimum 44 × 44 CSS-pixel hit area as a WDA design target. Preserve the component’s natural aspect ratio in raster review; the implementation reflows content rather than scaling text to fit.",
+      "focus": "Use a visible 2px high-contrast focus ring with 3px offset. Never make hover the only way to discover or activate a control.",
+      "reduced_motion": "Remove translation, rotation, parallax and looping animation. Selection, loading labels and focus remain visible; use an instant swap or an opacity change of at most 100 ms.",
+      "scroll": "Keep the component in normal document flow. Do not hijack scrolling or drive selected values from scroll position. Pause optional decorative motion while offscreen.",
+      "persistence": "The review explorer describes behavior; it does not send requests or store user data. Production persistence belongs to the host application and must reconcile pending/error states."
+    },
+    "archive_brands": [
+      "Pigmenta",
+      "Embermix",
+      "Leafcast",
+      "Ochrelab",
+      "Tideglaze"
+    ],
+    "archive_url": "https://github.com/jasonfesta/WDA/raw/refs/heads/main/component-study/downloads/component-context-archive.zip",
+    "branches": [
+      "Every original and shuffled sphere is a labelled radio. Left/Right changes the selected ID within the current set; Home/End select first/last. The selected ring and focus outline remain separate. Shuffle retains focus on the Shuffle button.",
+      "Image 03 shows keyboard focus with Apricot selected. Enter here would save Apricot for Undo. Images 04–05 deliberately follow the Moss branch from image 02; restoring Moss is not a universal hardcoded default.",
+      "Undo is one level. On restoration remove Undo and announce Previous palette restored. A library-loading failure keeps the existing palette, shows Couldn’t load palette and Retry; no empty set or mismatched names/assets."
+    ],
+    "state_note": "Five designed state images. Review actions are labelled simulations; host integrations and extra data combinations are specified below.",
+    "descriptive": "Title, helper copy, count, price, divider and artwork are descriptive unless the control inventory assigns an action. Decorative layers use pointer-events:none and aria-hidden. Read-only regions have no hover lift, pointer cursor or tab stop."
+  },
+  {
+    "slug": "roam",
+    "name": "Roam",
+    "type": "Membership panel",
+    "tagline": "Room to roam.",
+    "intro": "An editorial membership card with a clear decision at its centre. Keep the ribbon and sculptural feature objects expressive while the plan and price remain authoritative.",
+    "direction": "Tall ivory panel, serif headline, coral ribbon, warm feature cells and a burgundy CTA. Give plan changes space; the whole panel should not jump in height.",
+    "palette": [
+      "#faf7ef",
+      "#f2e6d4",
+      "#f58c69",
+      "#652826"
+    ],
+    "font": "DM Serif Display for editorial headings; Inter for prices, tabs, features and buttons. These are proposed implementation mappings, not verified raster font identities.",
+    "baseline": "Everyday selected; $24 / month; CTA Choose Everyday; four feature tiles.",
+    "observations": [
+      "Weekender, Everyday, Worldwide and the primary CTA are controls. Feature tiles are informational in the original; detail disclosure is a proposed extension.",
+      "Weekender $12 and Worldwide $48 with their new benefit copy are proposed design fixtures. Everyday $24 is inherited from the original. None is a verified purchasable product. Production must inject a verified catalogue, currency, availability and tax treatment."
+    ],
+    "sources": [
+      "tabs",
+      "stripe",
+      "dialog",
+      "react",
+      "motion"
+    ],
+    "states": [
+      {
+        "id": "01-everyday",
+        "title": "Everyday plan",
+        "entry": "Initial plan preview.",
+        "visible": "Everyday selected; $24/month and its four original benefits.",
+        "exit": "Choose another plan or review Everyday.",
+        "image": {
+          "file": "images/states/roam/01-everyday.png",
+          "dimensions": [
+            1122,
+            1402
+          ],
+          "sha256": "38f1e3f6100edcf695e2fbc59e1fda8171fb5d627d8c42bd2f9937afbad74364",
+          "bytes": 1431627
+        },
+        "prompt": "prompts/states/roam/01-everyday.md",
+        "reference": "references/originals/roam.png",
+        "actions": [
+          {
+            "label": "Preview Weekender",
+            "target": "02-weekender",
+            "note": "Proposed $12 fixture."
+          },
+          {
+            "label": "Preview Worldwide",
+            "target": "03-worldwide",
+            "note": "Proposed $48 fixture."
+          },
+          {
+            "label": "Choose Everyday",
+            "target": "04-review",
+            "note": "Opens review; no charge."
+          }
+        ]
+      },
+      {
+        "id": "02-weekender",
+        "title": "Weekender plan",
+        "entry": "Activate Weekender.",
+        "visible": "Weekender, $12/month; Weekend travel data, One local number, Your personal plan, A private connection; matching CTA.",
+        "exit": "Switch plans or review this plan using its own fixture data.",
+        "image": {
+          "file": "images/states/roam/02-weekender.png",
+          "dimensions": [
+            1122,
+            1402
+          ],
+          "sha256": "3374c59892fac903427c36946d7d62dc17c5a874dbb642c715d415834d1a2f91",
+          "bytes": 1645853
+        },
+        "prompt": "prompts/states/roam/02-weekender.md",
+        "reference": "images/states/roam/01-everyday.png",
+        "actions": [
+          {
+            "label": "Preview Everyday",
+            "target": "01-everyday",
+            "note": "Restore $24 fixture."
+          },
+          {
+            "label": "Preview Worldwide",
+            "target": "03-worldwide",
+            "note": "Plan fields change together."
+          }
+        ]
+      },
+      {
+        "id": "03-worldwide",
+        "title": "Worldwide plan",
+        "entry": "Activate Worldwide.",
+        "visible": "Worldwide, $48/month; Data across borders, Local-number options, Share with four people, A private connection; matching CTA.",
+        "exit": "Switch plans or review the selected plan.",
+        "image": {
+          "file": "images/states/roam/03-worldwide.png",
+          "dimensions": [
+            1122,
+            1402
+          ],
+          "sha256": "ac90f7687f8c2953efbb6d18af970683408dec32092686b9fccc520d1cb679d6",
+          "bytes": 1642650
+        },
+        "prompt": "prompts/states/roam/03-worldwide.md",
+        "reference": "images/states/roam/01-everyday.png",
+        "actions": [
+          {
+            "label": "Preview Everyday",
+            "target": "01-everyday",
+            "note": "Restore $24 fixture."
+          },
+          {
+            "label": "Preview Weekender",
+            "target": "02-weekender",
+            "note": "Plan fields change together."
+          }
+        ]
+      },
+      {
+        "id": "04-review",
+        "title": "Review chosen plan",
+        "entry": "Choose Everyday from its preview.",
+        "visible": "Review your plan dialog; Everyday, $24/month, Billed monthly; Continue to checkout, Back to plans, Close.",
+        "exit": "Back/Close cancels; Continue requests a checkout session. Confirmation requires verified completion.",
+        "image": {
+          "file": "images/states/roam/04-review.png",
+          "dimensions": [
+            1122,
+            1402
+          ],
+          "sha256": "9c38a9da6db5c418c706377822ae21646f7bd448075d9ed4aa4d5f9756d6d83e",
+          "bytes": 1562524
+        },
+        "prompt": "prompts/states/roam/04-review.md",
+        "reference": "images/states/roam/01-everyday.png",
+        "actions": [
+          {
+            "label": "Back to plans",
+            "target": "01-everyday",
+            "note": "No purchase."
+          },
+          {
+            "label": "Verified checkout completes",
+            "target": "05-confirmed",
+            "note": "Review simulation: host checkout must finish before showing this screen."
+          }
+        ]
+      },
+      {
+        "id": "05-confirmed",
+        "title": "Confirmation",
+        "entry": "The host reports verified Everyday checkout completion.",
+        "visible": "You’re ready to roam; Everyday $24/month; Manage membership and Back to plans.",
+        "exit": "Manage opens the membership account; Back returns to plan comparison without cancelling membership.",
+        "image": {
+          "file": "images/states/roam/05-confirmed.png",
+          "dimensions": [
+            1122,
+            1402
+          ],
+          "sha256": "7e56db93ab123ed8b5b70f4ddf5d87069f2b43603b9516709c3bced7dced73f0",
+          "bytes": 1500636
+        },
+        "prompt": "prompts/states/roam/05-confirmed.md",
+        "reference": "images/states/roam/01-everyday.png",
+        "actions": [
+          {
+            "label": "Back to plans",
+            "target": "01-everyday",
+            "note": "Keeps the completed membership."
+          }
+        ]
+      }
+    ],
+    "controls": [
+      {
+        "id": "plans",
+        "label": "Weekender / Everyday / Worldwide",
+        "action": "Select a plan preview from canonical plan data.",
+        "rollover": "Warm raised pill; never change price on hover.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Manual-activation tabs; arrows move focus and Enter/Space selects.",
+        "result": "Plan heading, price, benefits and CTA update together.",
+        "scope": "original",
+        "instances": 3,
+        "states": [
+          "01-everyday",
+          "02-weekender",
+          "03-worldwide"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "choose",
+        "label": "Choose selected plan",
+        "action": "Validate availability then open a review of the selected plan.",
+        "rollover": "Burgundy CTA brightens subtly; arrow moves 2px without moving text.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Enter/Space; focus moves into review dialog.",
+        "result": "Plan review; no purchase is made from selection alone.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "04-review"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "features",
+        "label": "Four feature tiles",
+        "action": "Read the four benefits for the selected plan. These tiles are static information.",
+        "rollover": "No pointer cursor, hover lift or hidden action.",
+        "press": "No action on tap.",
+        "keyboard": "Not focusable; read in document order.",
+        "result": "Benefits remain tied to the selected plan.",
+        "scope": "original information; optional extension",
+        "instances": 4,
+        "states": [
+          "01-everyday",
+          "02-weekender",
+          "03-worldwide"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "continue",
+        "label": "Continue to checkout",
+        "action": "Create checkout for the reviewed plan ID and confirmed price.",
+        "rollover": "Clear pending state; disable duplicate submission.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native button; label progress, then navigate on success.",
+        "result": "Checkout destination or inline error; server verifies all prices.",
+        "scope": "proposed supporting control",
+        "instances": 1,
+        "states": [
+          "04-review",
+          "05-confirmed"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "cancel",
+        "label": "Cancel / Back to plans",
+        "action": "Close review or error without changing the selected plan.",
+        "rollover": "Secondary text action, visible focus.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Escape or button; restore focus to Choose.",
+        "result": "Original plan panel preserved.",
+        "scope": "proposed supporting control",
+        "instances": 1,
+        "states": [
+          "01-everyday",
+          "04-review"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "retry",
+        "label": "Retry checkout",
+        "action": "Retry only the failed session-creation request.",
+        "rollover": "Button feedback without celebratory animation.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Enter/Space; announce success/failure.",
+        "result": "Checkout or actionable error.",
+        "scope": "proposed supporting control",
+        "instances": 1,
+        "states": [
+          "04-review"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "manage-membership",
+        "label": "Manage membership",
+        "action": "Open the authenticated host membership account.",
+        "result": "Membership account or sign-in with a return destination; Back returns to confirmation.",
+        "scope": "state control",
+        "instances": 1,
+        "rollover": "Increase contrast without committing a value. Use the same visible affordance for keyboard focus.",
+        "press": "Tap performs the same action. Show brief press feedback; prevent duplicate in-flight actions.",
+        "keyboard": "Enter/Space activates. Escape dismisses an open overlay and restores focus to its trigger.",
+        "states": [
+          "05-confirmed"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "close",
+        "label": "Close review ×",
+        "action": "Dismiss review without starting checkout.",
+        "result": "Return to the selected plan and focus Choose.",
+        "scope": "state control",
+        "instances": 1,
+        "rollover": "Increase contrast without committing a value. Use the same visible affordance for keyboard focus.",
+        "press": "Tap performs the same action. Show brief press feedback; prevent duplicate in-flight actions.",
+        "keyboard": "Enter/Space activates. Escape dismisses an open overlay and restores focus to its trigger.",
+        "states": [
+          "01-everyday",
+          "04-review"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      }
+    ],
+    "motion": "Crossfade plan copy and artwork in 180 ms after activation; reserve the maximum content height to prevent jumps. The hero ribbon may have a single subtle 3° turn on entry, never continuous movement near price text. Feature objects remain still until a detail interaction.",
+    "assets": "Extract/recreate the coral ribbon, amber arc, moss sphere, citron fold and rose discs as separate transparent assets. Use the same lighting and camera as the reference. Preserve cream cells as CSS backgrounds. A 3D version requires mesh reconstruction, with a static image fallback; do not pretend a flattened screenshot contains reusable geometry.",
+    "react": "MembershipPanel receives plansById, selectedPlanId, checkoutStatus and onPlanChange/onReview/onCheckout. Plan objects own price, billing interval, benefits and availability. Keep the displayed price and server checkout price linked to the same plan version. Review and error are explicit states.",
+    "invariants": [
+      "Everyday $24, Weekender $12 and Worldwide $48 are review fixtures, not live offers.",
+      "Plan heading, price, benefits, review and confirmation derive from the same plan ID.",
+      "A repeated click cannot create duplicate checkout requests.",
+      "Confirmation follows verified completion, never merely a Continue click."
+    ],
+    "alternative": "A compact comparison mode can reveal three side-by-side text summaries before returning to this selected-plan card. It requires confirmed prices and limits; do not fabricate the missing business rules.",
+    "archive_note": "The archive explores travel connection, creative desks, writing membership, audio library and local discovery. Its fictional prices belong to those distinct contexts and must not be copied into Roam.",
+    "family": "membership",
+    "title": "Roam — Membership panel",
+    "asset_id": "ASSET-010",
+    "original": {
+      "file": "references/originals/roam.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sha256": "b9845b71388a2b4794c9102e3057c671eea9b99a863acf7d7f9a56fec916d32d",
+      "bytes": 1402662
+    },
+    "prompt": "prompts/originals/roam.md",
+    "source_prompt_sha256": "6d9d2ad9a1cab7e02967b08421c210286060d17cd98e6212bd624ffa980530a7",
+    "source_image": {
+      "file": "references/screenshots/03-membership-panel.png",
+      "dimensions": [
+        2490,
+        1942
+      ],
+      "sha256": "78ed7af50ab8725f0949460b4b0954519fe72780286cb66c71fd1c8cd4f711ca",
+      "bytes": 850917
+    },
+    "common": {
+      "responsive": "Let text reflow at 200% zoom. Keep every control operable by touch and keyboard, with a minimum 44 × 44 CSS-pixel hit area as a WDA design target. Preserve the component’s natural aspect ratio in raster review; the implementation reflows content rather than scaling text to fit.",
+      "focus": "Use a visible 2px high-contrast focus ring with 3px offset. Never make hover the only way to discover or activate a control.",
+      "reduced_motion": "Remove translation, rotation, parallax and looping animation. Selection, loading labels and focus remain visible; use an instant swap or an opacity change of at most 100 ms.",
+      "scroll": "Keep the component in normal document flow. Do not hijack scrolling or drive selected values from scroll position. Pause optional decorative motion while offscreen.",
+      "persistence": "The review explorer describes behavior; it does not send requests or store user data. Production persistence belongs to the host application and must reconcile pending/error states."
+    },
+    "archive_brands": [
+      "Wayfare",
+      "AtelierPass",
+      "Marginclub",
+      "Audioloft",
+      "Daytriplet"
+    ],
+    "archive_url": "https://github.com/jasonfesta/WDA/raw/refs/heads/main/component-study/downloads/component-context-archive.zip",
+    "branches": [
+      "Weekender $12 and Worldwide $48 with their new benefit copy are proposed design fixtures. Everyday $24 is inherited from the original. None is a verified purchasable product. Production must inject a verified catalogue, currency, availability and tax treatment.",
+      "Choosing Weekender or Worldwide uses the same review-dialog layout as image 04, populated with that plan’s ID, price and benefits. Confirmation uses image 05’s grammar with the verified purchased plan. Do not silently switch their checkout to Everyday.",
+      "Continue enters pending, disables repeat submission and asks the host for a checkout session. Failure remains in review with Checkout could not start, Retry and Back. Closing or checkout cancellation returns to the selected plan. Only verified host completion shows confirmation; URL parameters alone cannot confirm payment.",
+      "Manage membership opens the authenticated account route. Unauthorized access opens sign-in with a return destination; unavailable account data shows Retry and Back. Feature tiles are read-only; no hover-only hidden feature interactions."
+    ],
+    "state_note": "Five designed state images. Review actions are labelled simulations; host integrations and extra data combinations are specified below.",
+    "descriptive": "Title, helper copy, count, price, divider and artwork are descriptive unless the control inventory assigns an action. Decorative layers use pointer-events:none and aria-hidden. Read-only regions have no hover lift, pointer cursor or tab stop."
+  },
+  {
+    "slug": "kiln",
+    "name": "Kiln",
+    "type": "Usage dashboard",
+    "tagline": "Your creative workspace.",
+    "intro": "A calm account overview where warm colour helps explain capacity. Data should lead every bar, count and interaction, with a readable path to detail.",
+    "direction": "Wide cream panel, cocoa labels, orange/rose/burgundy category segments, a simple daily rhythm and a compact resource footer. Keep bars mathematically honest.",
+    "palette": [
+      "#faf7ef",
+      "#f77920",
+      "#c68767",
+      "#f5a6b7",
+      "#7f2833"
+    ],
+    "font": "Inter with tabular numerals for values; readable period labels and units.",
+    "baseline": "6,240 of 8,000 credits (78%); 1,760 remaining. Render 3,200; Explore 1,600; Compose 960; Export 480. Average 208/day over 30 days.",
+    "observations": [
+      "The category percentages use used credits as denominator: 51%, 26%, 15%, 8% after rounding. The capacity bar uses the 8,000-credit limit: 40%, 20%, 12%, 6%, then 22% remaining.",
+      "The screenshot’s Daily rhythm is illustrative. Its individual daily values are not recoverable as trustworthy data; production must load a reconciled series.",
+      "Collaborators 6/8 and Library 2.4/4 GB have defined limits. Collections says 18 active without a limit; render it as a count, not an invented capacity percentage."
+    ],
+    "sources": [
+      "usage",
+      "chart",
+      "tabs",
+      "dialog",
+      "react"
+    ],
+    "states": [
+      {
+        "id": "01-cycle",
+        "title": "This cycle",
+        "entry": "Load the confirmed current 30-day cycle.",
+        "visible": "6,240/8,000 (78%), categories 3,200/1,600/960/480, average 208/day; 1,760 available.",
+        "exit": "Switch period, inspect a category or manage the plan.",
+        "image": {
+          "file": "images/states/kiln/01-cycle.png",
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "sha256": "b41431b9c73b8cb927cf9b4515c0633aff4348f3c6ea6e45c05b3e9a5b3c73ad",
+          "bytes": 1388104
+        },
+        "prompt": "prompts/states/kiln/01-cycle.md",
+        "reference": "references/originals/kiln.png",
+        "actions": [
+          {
+            "label": "Previous cycle",
+            "target": "02-previous",
+            "note": "Load a coherent dataset."
+          },
+          {
+            "label": "This week",
+            "target": "03-week",
+            "note": "Load seven-day fixture."
+          },
+          {
+            "label": "Inspect Render",
+            "target": "04-detail",
+            "note": "Keep cycle totals visible."
+          },
+          {
+            "label": "Manage plan",
+            "target": "05-manage",
+            "note": "No charge."
+          }
+        ]
+      },
+      {
+        "id": "02-previous",
+        "title": "Previous cycle",
+        "entry": "Activate Previous and resolve its whole dataset.",
+        "visible": "4,800/8,000 (60%); categories 2,400/1,200/720/480; average 160/day; 3,200 available.",
+        "exit": "Return to This cycle or choose Week.",
+        "image": {
+          "file": "images/states/kiln/02-previous.png",
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "sha256": "e9e4a31022f944fe56de6c7af14a46069bf59bbd958fce38905819dd9b6f063d",
+          "bytes": 1523014
+        },
+        "prompt": "prompts/states/kiln/02-previous.md",
+        "reference": "images/states/kiln/01-cycle.png",
+        "actions": [
+          {
+            "label": "This cycle",
+            "target": "01-cycle",
+            "note": "Restore the current cycle."
+          },
+          {
+            "label": "This week",
+            "target": "03-week",
+            "note": "Load seven-day fixture."
+          }
+        ]
+      },
+      {
+        "id": "03-week",
+        "title": "This week",
+        "entry": "Activate Week and resolve its seven-day dataset.",
+        "visible": "1,400/8,000 (17.5%); 700/350/210/140; average 200/day; seven weekday bars. The 6,600 difference is against the allowance, not remaining balance this cycle.",
+        "exit": "Switch period or inspect a day; the resource snapshots remain account-wide.",
+        "image": {
+          "file": "images/states/kiln/03-week.png",
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "sha256": "a1aa57e5d1451242d82d223010533b703c3d2481e625412f8053eb5d64bf824a",
+          "bytes": 1539944
+        },
+        "prompt": "prompts/states/kiln/03-week.md",
+        "reference": "images/states/kiln/01-cycle.png",
+        "actions": [
+          {
+            "label": "This cycle",
+            "target": "01-cycle",
+            "note": "Return to actual remaining cycle balance."
+          },
+          {
+            "label": "Previous cycle",
+            "target": "02-previous",
+            "note": "Switch whole dataset."
+          }
+        ]
+      },
+      {
+        "id": "04-detail",
+        "title": "Inspect Render usage",
+        "entry": "Activate Render from This cycle.",
+        "visible": "Render popover: 3,200 credits; 51% of used credits; 40% of cycle allowance; View render activity and Close.",
+        "exit": "Close returns focus to Render; View render activity opens a filtered host detail view.",
+        "image": {
+          "file": "images/states/kiln/04-detail.png",
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "sha256": "eb2ebb04752d91694fe33c9acde892b666cbd29f1b6f2276bff1c9c28da286cf",
+          "bytes": 1487137
+        },
+        "prompt": "prompts/states/kiln/04-detail.md",
+        "reference": "images/states/kiln/01-cycle.png",
+        "actions": [
+          {
+            "label": "Close detail",
+            "target": "01-cycle",
+            "note": "Restore focus to Render."
+          }
+        ]
+      },
+      {
+        "id": "05-manage",
+        "title": "Manage plan",
+        "entry": "Activate Manage plan from This cycle.",
+        "visible": "Current plan dialog: 8,000 allowance, 6,240 used, 1,760 available, 6/8 seats and 2.4/4 GB; Compare plans, Back to usage, Close.",
+        "exit": "Back/Close returns to the same cycle; Compare plans opens the host’s verified catalogue.",
+        "image": {
+          "file": "images/states/kiln/05-manage.png",
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "sha256": "e8174cf5e2b035ef32562faa38477bebd278b0182effa0103145b9deb13c960b",
+          "bytes": 1499989
+        },
+        "prompt": "prompts/states/kiln/05-manage.md",
+        "reference": "images/states/kiln/01-cycle.png",
+        "actions": [
+          {
+            "label": "Back to usage",
+            "target": "01-cycle",
+            "note": "Restore focus to Manage plan."
+          }
+        ]
+      }
+    ],
+    "controls": [
+      {
+        "id": "periods",
+        "label": "This cycle / Previous / Week",
+        "action": "Choose one reporting range and fetch its aggregate and series as a unit.",
+        "rollover": "Warm tab highlight; no data changes on hover.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Manual activation tabs with labelled panels.",
+        "result": "Every label and chart refers to the same reporting range.",
+        "scope": "original",
+        "instances": 3,
+        "states": [
+          "01-cycle",
+          "02-previous",
+          "03-week"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "categories",
+        "label": "Render / Explore / Compose / Export",
+        "action": "Open category details or a labelled transaction filter.",
+        "rollover": "Highlight the segment and matching legend; show exact value and denominator.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Focusable category buttons; Enter/Space opens details.",
+        "result": "Filtered details; the overall capacity summary remains explicitly unfiltered.",
+        "scope": "original",
+        "instances": 4,
+        "states": [
+          "04-detail"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "daily",
+        "label": "Daily rhythm bars",
+        "action": "Reveal date and credits for the focused/hovered day; click opens that day’s detail.",
+        "rollover": "Single highlighted bar with anchored tooltip; no expanding bar that changes apparent value.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "One chart tab stop with arrow-key traversal, plus a complete data table. Escape dismisses tooltip.",
+        "result": "Date-specific detail with Back and persistent period selection.",
+        "scope": "original",
+        "instances": 30,
+        "states": [
+          "01-cycle",
+          "02-previous",
+          "03-week"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "collaborators",
+        "label": "Collaborators · 6 of 8",
+        "action": "Open collaborator management.",
+        "rollover": "Underline the label and lighten its resource region.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native link; accessible label includes 6 of 8 seats.",
+        "result": "Host members route, returning to the same period.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "01-cycle",
+          "05-manage"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "library",
+        "label": "Library · 2.4 of 4 GB",
+        "action": "Open storage details.",
+        "rollover": "Underline the label and preserve bar width.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native link; units in accessible name.",
+        "result": "Host storage route; 60% usage derived from 2.4/4.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "01-cycle",
+          "05-manage"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "collections",
+        "label": "Collections · 18 active",
+        "action": "Open the collections list.",
+        "rollover": "Underline the label; do not suggest an undefined limit.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native link; announce active count.",
+        "result": "Collections route; no fabricated utilization percentage.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "01-cycle"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "manage",
+        "label": "Manage plan",
+        "action": "Open a labelled billing overview with current plan and verified options.",
+        "rollover": "Burgundy button brightens without looping motion.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native link or dialog trigger; restore focus on return.",
+        "result": "Host billing route; this control does not charge the user.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "05-manage"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "table",
+        "label": "View data table / Clear filter",
+        "action": "Provide textual chart values and remove a detail filter.",
+        "rollover": "Underline the explicit action.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native disclosure/button; table headers name units and dates.",
+        "result": "Accessible series and consistent totals.",
+        "scope": "proposed supporting control",
+        "instances": 1,
+        "states": [
+          "04-detail"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "retry",
+        "label": "Retry range",
+        "action": "Retry the chosen period request.",
+        "rollover": "Loading label and duplicate-click protection.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Enter/Space; announce result.",
+        "result": "Confirmed data or a continued unavailable state.",
+        "scope": "proposed supporting control",
+        "instances": 1,
+        "states": [
+          "01-cycle",
+          "02-previous",
+          "03-week"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "close",
+        "label": "Close detail / Back to usage",
+        "action": "Dismiss the category popover or plan dialog.",
+        "result": "Restore focus to the corresponding trigger without resetting range.",
+        "scope": "state control",
+        "instances": 1,
+        "rollover": "Increase contrast without committing a value. Use the same visible affordance for keyboard focus.",
+        "press": "Tap performs the same action. Show brief press feedback; prevent duplicate in-flight actions.",
+        "keyboard": "Enter/Space activates. Escape dismisses an open overlay and restores focus to its trigger.",
+        "states": [
+          "01-cycle",
+          "04-detail",
+          "05-manage"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "compare",
+        "label": "Compare plans",
+        "action": "Open the host verified plan catalogue.",
+        "result": "Plan comparison with its own loading, retry and Back paths; no automatic upgrade.",
+        "scope": "state control",
+        "instances": 1,
+        "rollover": "Increase contrast without committing a value. Use the same visible affordance for keyboard focus.",
+        "press": "Tap performs the same action. Show brief press feedback; prevent duplicate in-flight actions.",
+        "keyboard": "Enter/Space activates. Escape dismisses an open overlay and restores focus to its trigger.",
+        "states": [
+          "05-manage"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "activity",
+        "label": "View render activity",
+        "action": "Open the host category transaction table for Render and the active range.",
+        "result": "Filtered activity; Back restores the same range and category.",
+        "scope": "state control",
+        "instances": 1,
+        "rollover": "Increase contrast without committing a value. Use the same visible affordance for keyboard focus.",
+        "press": "Tap performs the same action. Show brief press feedback; prevent duplicate in-flight actions.",
+        "keyboard": "Enter/Space activates. Escape dismisses an open overlay and restores focus to its trigger.",
+        "states": [
+          "04-detail"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      }
+    ],
+    "motion": "Animate bars from their previous validated value to the next over 220 ms, only after successful data loading. Never animate from zero on every scroll. Tooltip fades over 80 ms. Under reduced motion, values and widths update immediately. Chart motion is programmatic, not rendered video.",
+    "assets": "Rebuild bars, labels, legends and counters as HTML/SVG from real data. Keep the leaf mark as a separate decorative vector if desired. Do not extract an animated chart from the screenshot or turn data into a looping video.",
+    "react": "UsagePanel receives range, totals, categories, dailySeries, resources and requestStatus. Derive used = sum(categories), percent = used / limit and remaining = limit - used. Category ratios explicitly state their denominator. Keep range-filtered detail separate from the capacity summary.",
+    "invariants": [
+      "3,200 + 1,600 + 960 + 480 = 6,240.",
+      "6,240 / 8,000 = 78%; remaining = 1,760.",
+      "6,240 / 30 = 208 per day.",
+      "Capacity widths: 40 + 20 + 12 + 6 + 22 = 100%.",
+      "Collections has no defined capacity limit."
+    ],
+    "alternative": "A narrow stacked layout puts the capacity total first, the category table second, daily rhythm third and resources last. Keep the graph available without making it the only way to read values.",
+    "archive_note": "The archive applies this structure to render credits, video minutes, cloud storage, writing words and energy use. Denominators differ: Cloudgrove labels are percentages of capacity, while most other legends show percentages of use. Label this explicitly.",
+    "family": "usage",
+    "title": "Kiln — Usage dashboard",
+    "asset_id": "ASSET-011",
+    "original": {
+      "file": "references/originals/kiln.png",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "sha256": "4f017579d8df349758376d00bd7de724c0ce420f072890d191d1c8b3ccea509c",
+      "bytes": 1300538
+    },
+    "prompt": "prompts/originals/kiln.md",
+    "source_prompt_sha256": "da84aa3ba51776b41924613cf9151c16aaf7773805a71178828a4dafbd6f87c9",
+    "source_image": {
+      "file": "references/screenshots/04-usage-dashboard.png",
+      "dimensions": [
+        1928,
+        1390
+      ],
+      "sha256": "d6dbe6722da68ebc28c07b8f75c4b8c82f81f4608b4f313aa8eb1ed0019adccf",
+      "bytes": 257621
+    },
+    "common": {
+      "responsive": "Let text reflow at 200% zoom. Keep every control operable by touch and keyboard, with a minimum 44 × 44 CSS-pixel hit area as a WDA design target. Preserve the component’s natural aspect ratio in raster review; the implementation reflows content rather than scaling text to fit.",
+      "focus": "Use a visible 2px high-contrast focus ring with 3px offset. Never make hover the only way to discover or activate a control.",
+      "reduced_motion": "Remove translation, rotation, parallax and looping animation. Selection, loading labels and focus remain visible; use an instant swap or an opacity change of at most 100 ms.",
+      "scroll": "Keep the component in normal document flow. Do not hijack scrolling or drive selected values from scroll position. Pause optional decorative motion while offscreen.",
+      "persistence": "The review explorer describes behavior; it does not send requests or store user data. Production persistence belongs to the host application and must reconcile pending/error states."
+    },
+    "archive_brands": [
+      "Renderwell",
+      "Frameflow",
+      "Cloudgrove",
+      "Pageledger",
+      "Kilowattly"
+    ],
+    "archive_url": "https://github.com/jasonfesta/WDA/raw/refs/heads/main/component-study/downloads/component-context-archive.zip",
+    "branches": [
+      "Explore, Compose and Export reuse Render’s popover with their own totals and explicit used-versus-allowance percentages. Close/Escape/outside click restores focus. View activity opens a host filtered table; Back restores the originating range and filter.",
+      "Daily bars expose exact date and credits on hover or focus. Touch toggles the same tooltip; Escape closes. One chart tab stop supports arrow traversal; a View data table action exposes all values. Daily arrays in fixtures.json are proposed build data; raster bar heights are illustrative, not a data source.",
+      "Period loading keeps the prior range clearly labelled until success; failure shows Couldn’t load this range, timestamp and Retry. No-data and true-zero datasets are distinct. Near capacity, add a textual warning at 95% without forcing an upgrade.",
+      "Collaborators, Library and Collections link to host members, storage and collection routes. Preserve period on return. Collections is a count with no fabricated limit. Compare plans opens a verified host catalogue, with loading, retry and Back paths. The 6,600 weekly difference is not spendable remaining credit."
+    ],
+    "state_note": "Five designed state images. Review actions are labelled simulations; host integrations and extra data combinations are specified below.",
+    "descriptive": "Title, helper copy, count, price, divider and artwork are descriptive unless the control inventory assigns an action. Decorative layers use pointer-events:none and aria-hidden. Read-only regions have no hover lift, pointer cursor or tab stop."
+  },
+  {
+    "slug": "folio",
+    "name": "Folio",
+    "type": "Navigation dock",
+    "tagline": "A quiet place to move from.",
+    "intro": "A porcelain dock with one tactile accent and four clear destinations. Keep it predictable: current route, visible content and active treatment always agree.",
+    "direction": "Wide shallow ivory dock, pale citron active capsule, coral studio house, cocoa line icons and a burgundy current-state dot. Keep every destination labelled.",
+    "palette": [
+      "#faf7ef",
+      "#ffeeb5",
+      "#f3956a",
+      "#4f3c2e",
+      "#9c1530"
+    ],
+    "font": "Inter for four consistently sized navigation labels.",
+    "baseline": "Studio selected; Explore, Saved and Profile inactive; one active dot.",
+    "observations": [
+      "The four destinations are navigation controls. The divider, house artwork and dot are decorative; they are not extra focus targets.",
+      "For route navigation use links and aria-current. If embedded as an in-page tab switcher, use tab semantics instead, with associated content panels.",
+      "The original has a house only for Studio. Do not invent a different 3D object for each selection without an explicit asset pass."
+    ],
+    "sources": [
+      "current",
+      "tabs",
+      "react",
+      "motion"
+    ],
+    "states": [
+      {
+        "id": "01-studio",
+        "title": "Studio",
+        "entry": "The host route commits /studio.",
+        "visible": "Studio alone has the citron active capsule and burgundy dot.",
+        "exit": "Follow Explore, Saved or Profile.",
+        "image": {
+          "file": "images/states/folio/01-studio.png",
+          "dimensions": [
+            2172,
+            724
+          ],
+          "sha256": "519249f36f6cc96c75a6e872f7b79de73256b4b2a3789509b7307698f85f019e",
+          "bytes": 1225040
+        },
+        "prompt": "prompts/states/folio/01-studio.md",
+        "reference": "references/originals/folio.png",
+        "actions": [
+          {
+            "label": "Explore",
+            "target": "02-explore",
+            "note": "Commit /explore."
+          },
+          {
+            "label": "Saved",
+            "target": "03-saved",
+            "note": "Commit /saved."
+          },
+          {
+            "label": "Profile",
+            "target": "04-profile",
+            "note": "Commit /profile."
+          },
+          {
+            "label": "Focus Profile only",
+            "target": "05-keyboard-focus",
+            "note": "Tab without Enter."
+          }
+        ]
+      },
+      {
+        "id": "02-explore",
+        "title": "Explore",
+        "entry": "The host route commits /explore.",
+        "visible": "Explore alone has the active capsule and dot; icon order and dock geometry stay fixed.",
+        "exit": "Another link changes route; browser Back restores Studio.",
+        "image": {
+          "file": "images/states/folio/02-explore.png",
+          "dimensions": [
+            2172,
+            724
+          ],
+          "sha256": "812e7f32c308afd551ac1acb13d20208b01c8a5ed39f326f8052550ced884529",
+          "bytes": 1354556
+        },
+        "prompt": "prompts/states/folio/02-explore.md",
+        "reference": "images/states/folio/01-studio.png",
+        "actions": [
+          {
+            "label": "Studio",
+            "target": "01-studio",
+            "note": "Commit /studio."
+          },
+          {
+            "label": "Saved",
+            "target": "03-saved",
+            "note": "Commit /saved."
+          },
+          {
+            "label": "Profile",
+            "target": "04-profile",
+            "note": "Commit /profile."
+          }
+        ]
+      },
+      {
+        "id": "03-saved",
+        "title": "Saved",
+        "entry": "The host route commits /saved.",
+        "visible": "Saved alone is current. The host content may show saved items or an empty collection.",
+        "exit": "Choose another destination; Browse Explore from empty content opens Explore.",
+        "image": {
+          "file": "images/states/folio/03-saved.png",
+          "dimensions": [
+            2172,
+            724
+          ],
+          "sha256": "a90e4e161f020419695cd0e313271d74d18b92124c480ad935c7cf7cc88a2b8e",
+          "bytes": 1437870
+        },
+        "prompt": "prompts/states/folio/03-saved.md",
+        "reference": "images/states/folio/01-studio.png",
+        "actions": [
+          {
+            "label": "Studio",
+            "target": "01-studio",
+            "note": "Commit /studio."
+          },
+          {
+            "label": "Explore",
+            "target": "02-explore",
+            "note": "Includes empty-state Browse Explore."
+          },
+          {
+            "label": "Profile",
+            "target": "04-profile",
+            "note": "Commit /profile."
+          }
+        ]
+      },
+      {
+        "id": "04-profile",
+        "title": "Profile",
+        "entry": "The host route commits /profile.",
+        "visible": "Profile alone is current. Account/sign-in content is owned by the host.",
+        "exit": "Navigate away or finish/cancel sign-in while preserving returnTo=/profile.",
+        "image": {
+          "file": "images/states/folio/04-profile.png",
+          "dimensions": [
+            2172,
+            724
+          ],
+          "sha256": "9c245a2696699305603837b0338aa5a6b58d160c6d6b0cf6aecdb71c2f89e6d9",
+          "bytes": 1352869
+        },
+        "prompt": "prompts/states/folio/04-profile.md",
+        "reference": "images/states/folio/01-studio.png",
+        "actions": [
+          {
+            "label": "Studio",
+            "target": "01-studio",
+            "note": "Commit /studio."
+          },
+          {
+            "label": "Explore",
+            "target": "02-explore",
+            "note": "Commit /explore."
+          },
+          {
+            "label": "Saved",
+            "target": "03-saved",
+            "note": "Commit /saved."
+          }
+        ]
+      },
+      {
+        "id": "05-keyboard-focus",
+        "title": "Focus without navigation",
+        "entry": "While Studio is current, Tab through the links until Profile has focus.",
+        "visible": "Studio keeps the only active capsule and dot; Profile has an outline only.",
+        "exit": "Enter follows Profile; Tab away moves focus without navigation.",
+        "image": {
+          "file": "images/states/folio/05-keyboard-focus.png",
+          "dimensions": [
+            2172,
+            724
+          ],
+          "sha256": "c771d1c47a10192a486210b7975f8fef7163c77c1d378bb14c2dd4c7fc7a9784",
+          "bytes": 1354882
+        },
+        "prompt": "prompts/states/folio/05-keyboard-focus.md",
+        "reference": "images/states/folio/01-studio.png",
+        "actions": [
+          {
+            "label": "Enter follows Profile",
+            "target": "04-profile",
+            "note": "Commit before moving current marker."
+          },
+          {
+            "label": "Blur without navigating",
+            "target": "01-studio",
+            "note": "Studio stays current."
+          }
+        ]
+      }
+    ],
+    "controls": [
+      {
+        "id": "studio",
+        "label": "Studio",
+        "action": "Navigate to /studio; update active treatment only when the route commits.",
+        "rollover": "Soft surface tint and at most a 2px icon lift. Hover never marks a route current.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native links; Tab visits each, Enter follows. Preserve browser Back and modified clicks.",
+        "result": "Exactly one aria-current link and matching route content.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "01-studio"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "explore",
+        "label": "Explore",
+        "action": "Navigate to /explore; update active treatment only when the route commits.",
+        "rollover": "Soft surface tint and at most a 2px icon lift. Hover never marks a route current.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native links; Tab visits each, Enter follows. Preserve browser Back and modified clicks.",
+        "result": "Exactly one aria-current link and matching route content.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "02-explore"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "saved",
+        "label": "Saved",
+        "action": "Navigate to /saved; update active treatment only when the route commits.",
+        "rollover": "Soft surface tint and at most a 2px icon lift. Hover never marks a route current.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native links; Tab visits each, Enter follows. Preserve browser Back and modified clicks.",
+        "result": "Exactly one aria-current link and matching route content.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "03-saved"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "profile",
+        "label": "Profile",
+        "action": "Navigate to /profile; update active treatment only when the route commits.",
+        "rollover": "Soft surface tint and at most a 2px icon lift. Hover never marks a route current.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native links; Tab visits each, Enter follows. Preserve browser Back and modified clicks.",
+        "result": "Exactly one aria-current link and matching route content.",
+        "scope": "original",
+        "instances": 1,
+        "states": [
+          "04-profile"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "browse",
+        "label": "Browse Explore from empty Saved",
+        "action": "Navigate to Explore from a clearly labelled empty state.",
+        "rollover": "Underline and contrast feedback.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native link; Enter follows.",
+        "result": "Explore selected; Back returns to Saved.",
+        "scope": "proposed supporting control",
+        "instances": 1,
+        "states": [
+          "03-saved",
+          "02-explore"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "signin",
+        "label": "Sign in / Cancel",
+        "action": "Open sign-in with returnTo=/profile; preserve intent.",
+        "rollover": "Standard button/link feedback without icon motion.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Use a labelled dialog or route with an explicit cancel/back path.",
+        "result": "Return to Profile after completion or cancellation.",
+        "scope": "proposed supporting control",
+        "instances": 1,
+        "states": [
+          "04-profile"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      },
+      {
+        "id": "retry",
+        "label": "Retry destination",
+        "action": "Retry a failed route while preserving the last successful route.",
+        "rollover": "Visible error text and a labelled Retry button.",
+        "press": "Use the same action on tap; no hover prerequisite. Press feedback lasts 90 ms and never delays the state update.",
+        "keyboard": "Native button; maintain focus until success.",
+        "result": "Successful destination becomes the only current item.",
+        "scope": "proposed supporting control",
+        "instances": 1,
+        "states": [
+          "05-keyboard-focus"
+        ],
+        "state_relation": "Related design references; data-dependent variants follow the control contract and are not additional rendered images."
+      }
+    ],
+    "motion": "Move the active capsule between equal-width destination slots over 180 ms after a route commit. The coral house may settle by 2px once on Studio entry; other line icons do not morph into invented objects. Under reduced motion, swap the active treatment instantly.",
+    "assets": "Prepare a separate coral house asset with transparent background and one consistent line-icon set for compass, bookmark and profile. Rebuild pill, dot, labels and divider in CSS/SVG. A 3D house should use a stable camera and a lightweight mesh only if interactive tilt is approved.",
+    "react": "NavigationDock receives items with stable IDs/hrefs and currentPath. Derive current item from router state, not independent button state. Preserve query parameters and route history. The host owns auth and async route loading; dock reflects their results.",
+    "invariants": [
+      "Exactly four destinations in fixed order.",
+      "One current item, one active dot and matching content.",
+      "Hover/focus never change the current route.",
+      "Browser Back restores the prior active item."
+    ],
+    "alternative": "A compact bottom navigation can retain all four visible labels and a smaller active capsule. Add safe-area padding in the host shell. Do not reproduce an OS home indicator or hide labels behind tooltips.",
+    "archive_note": "Recipe planning, trail discovery, focus tasks and listening libraries use the same dock structure but different route names. Preserve each variation’s order and selected destination; they are separate contexts, not extra Folio routes.",
+    "family": "dock",
+    "title": "Folio — Navigation dock",
+    "asset_id": "ASSET-012",
+    "original": {
+      "file": "references/originals/folio.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "bbb20ae0409352d5188b90f1bab1ff5642681c6bb99d12a48f7bc0e72e37466e",
+      "bytes": 1083337
+    },
+    "prompt": "prompts/originals/folio.md",
+    "source_prompt_sha256": "82691fe8a54ff990249ed1b5b8405da5b8f733fd738e580f92b9eb89dd28dedc",
+    "source_image": {
+      "file": "references/screenshots/05-navigation-dock.png",
+      "dimensions": [
+        834,
+        458
+      ],
+      "sha256": "f689f641db250e7eee2dcd7ad3cc60f936e84617517e848bb46a4c4e8377f0f1",
+      "bytes": 16479
+    },
+    "common": {
+      "responsive": "Let text reflow at 200% zoom. Keep every control operable by touch and keyboard, with a minimum 44 × 44 CSS-pixel hit area as a WDA design target. Preserve the component’s natural aspect ratio in raster review; the implementation reflows content rather than scaling text to fit.",
+      "focus": "Use a visible 2px high-contrast focus ring with 3px offset. Never make hover the only way to discover or activate a control.",
+      "reduced_motion": "Remove translation, rotation, parallax and looping animation. Selection, loading labels and focus remain visible; use an instant swap or an opacity change of at most 100 ms.",
+      "scroll": "Keep the component in normal document flow. Do not hijack scrolling or drive selected values from scroll position. Pause optional decorative motion while offscreen.",
+      "persistence": "The review explorer describes behavior; it does not send requests or store user data. Production persistence belongs to the host application and must reconcile pending/error states."
+    },
+    "archive_brands": [
+      "Deskline",
+      "Recipebank",
+      "Trailnest",
+      "Focusbay",
+      "Listenwell"
+    ],
+    "archive_url": "https://github.com/jasonfesta/WDA/raw/refs/heads/main/component-study/downloads/component-context-archive.zip",
+    "branches": [
+      "Native links preserve browser Back/Forward, modified clicks and deep links. Active state derives from committed route; nested saved-item routes remain under Saved. The dock does not replace route content in the host.",
+      "Saved empty content offers Browse Explore. Profile signed out offers sign-in with returnTo=/profile; cancel and completion both return there. Loading and error feedback live in the host content without changing item order.",
+      "During pending navigation retain the last committed active marker and show an accessible loading label in host content. A failed route leaves the old marker and Retry; successful commit moves the marker and focuses the new page heading. Hover and focus never commit navigation.",
+      "All four icons and labels activate their enclosing link; divider, shell and active dot are decorative. On mobile reserve dock space so it cannot obscure page content; use safe-area padding in implementation without adding OS chrome to artwork."
+    ],
+    "state_note": "Five designed state images. Review actions are labelled simulations; host integrations and extra data combinations are specified below.",
+    "descriptive": "Title, helper copy, count, price, divider and artwork are descriptive unless the control inventory assigns an action. Decorative layers use pointer-events:none and aria-hidden. Read-only regions have no hover lift, pointer cursor or tab stop."
+  }
+]

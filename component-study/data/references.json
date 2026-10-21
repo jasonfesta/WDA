@@ -1,0 +1,128 @@
+[
+  {
+    "id": "tabs",
+    "title": "W3C \u2014 tabs pattern",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+    "observed": "A selected tab is connected to its visible panel. Horizontal tab lists use Left/Right arrows; manual activation uses Enter or Space.",
+    "application": "Sol day selection, Roam plan previews and Kiln reporting periods use one active panel. Focus and selection are tracked separately.",
+    "accessed": "2026-10-21",
+    "kind": "official documentation; read, not a live product audit"
+  },
+  {
+    "id": "checkbox",
+    "title": "W3C \u2014 checkbox pattern",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/",
+    "observed": "A checkbox exposes its checked state and a readable label; Space toggles it.",
+    "application": "Gather uses one native checkbox per person, with count and avatar summary derived from selected IDs.",
+    "accessed": "2026-10-21",
+    "kind": "official documentation; read, not a live product audit"
+  },
+  {
+    "id": "radio",
+    "title": "W3C \u2014 radio group pattern",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/radio/",
+    "observed": "Radio groups express a single choice. Arrow keys move between options and Space selects.",
+    "application": "Courtyard keeps exactly one active material, with a visible ring and its text name.",
+    "accessed": "2026-10-21",
+    "kind": "official documentation; read, not a live product audit"
+  },
+  {
+    "id": "dialog",
+    "title": "W3C \u2014 modal dialog pattern",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+    "observed": "A modal moves focus inside, contains keyboard focus, closes on Escape and returns focus appropriately.",
+    "application": "Roam review and Kiln plan details need explicit close/cancel paths with trigger focus restoration.",
+    "accessed": "2026-10-21",
+    "kind": "official documentation; read, not a live product audit"
+  },
+  {
+    "id": "disclosure",
+    "title": "W3C \u2014 disclosure pattern",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+    "observed": "A disclosure button exposes its expanded state and toggles a connected content region.",
+    "application": "Gather opens by activation, not hover; its trigger communicates open or closed.",
+    "accessed": "2026-10-21",
+    "kind": "official documentation; read, not a live product audit"
+  },
+  {
+    "id": "popover",
+    "title": "Radix \u2014 Popover build example",
+    "url": "https://www.radix-ui.com/primitives/docs/components/popover",
+    "observed": "The documented primitive includes controlled state, placement and collision handling, focus management and dismissal options.",
+    "application": "Use a tested popover primitive for Gather and Sol options, retaining the existing material art and layout.",
+    "accessed": "2026-10-21",
+    "kind": "official documentation; read, not a live product audit"
+  },
+  {
+    "id": "toggle",
+    "title": "Radix \u2014 Toggle Group build example",
+    "url": "https://www.radix-ui.com/primitives/docs/components/toggle-group",
+    "observed": "The example supports controlled state, single or multiple toggles, orientation and keyboard navigation.",
+    "application": "A useful implementation reference for compact controls. Courtyard still uses radio semantics because it requires a choice.",
+    "accessed": "2026-10-21",
+    "kind": "official documentation; read, not a live product audit"
+  },
+  {
+    "id": "stripe",
+    "title": "Stripe \u2014 subscription pricing table",
+    "url": "https://docs.stripe.com/payments/checkout/pricing-table",
+    "observed": "The pricing table displays plans and takes a chosen option into Checkout. Completion is a separate step.",
+    "application": "Roam previews and compares plans, then explicitly reviews the chosen price. Selection alone does not subscribe.",
+    "accessed": "2026-10-21",
+    "kind": "official documentation; read, not a live product audit"
+  },
+  {
+    "id": "usage",
+    "title": "Supabase \u2014 usage documentation",
+    "url": "https://supabase.com/docs/guides/platform/manage-your-usage",
+    "observed": "Usage documentation separates resource categories and explains what is measured and how it is calculated.",
+    "application": "Kiln needs explicit units, denominator labels and category details. This is a structure reference, not a copied pricing model.",
+    "accessed": "2026-10-21",
+    "kind": "official documentation; read, not a live product audit"
+  },
+  {
+    "id": "chart",
+    "title": "W3C \u2014 complex images and charts",
+    "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+    "observed": "Complex graphics need a short description plus a longer textual equivalent of their essential information.",
+    "application": "Kiln exposes a data table and values in text; hover tooltips are supplemental.",
+    "accessed": "2026-10-21",
+    "kind": "official documentation; read, not a live product audit"
+  },
+  {
+    "id": "current",
+    "title": "MDN \u2014 aria-current",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current",
+    "observed": "aria-current identifies the current item within a related set, including the current page.",
+    "application": "Folio uses navigation links and aria-current=\"page\" for routes. Use tabs only if switching local panels.",
+    "accessed": "2026-10-21",
+    "kind": "official documentation; read, not a live product audit"
+  },
+  {
+    "id": "weather",
+    "title": "Apple \u2014 Weather guide",
+    "url": "https://support.apple.com/guide/iphone/check-the-weather-iph1ac0b35f/ios",
+    "observed": "The guide shows current conditions, forecast exploration, location selection and configurable weather units.",
+    "application": "Sol retains a compact four-day surface, with unit conversion and a separately opened location control.",
+    "accessed": "2026-10-21",
+    "kind": "official documentation; read, not a live product audit"
+  },
+  {
+    "id": "react",
+    "title": "React \u2014 choosing state structure",
+    "url": "https://react.dev/learn/choosing-the-state-structure",
+    "observed": "React recommends avoiding contradictory, redundant and duplicated state.",
+    "application": "Derive selected counts, button labels, usage totals and visible panels from stable IDs and shared data.",
+    "accessed": "2026-10-21",
+    "kind": "official documentation; read, not a live product audit"
+  },
+  {
+    "id": "motion",
+    "title": "Motion \u2014 accessible animation",
+    "url": "https://motion.dev/docs/react-accessibility",
+    "observed": "Motion supports system reduced-motion preferences and replacing substantial movement with simpler feedback.",
+    "application": "Disable object drift, parallax and transform flourishes under reduced motion; keep selection and focus feedback.",
+    "accessed": "2026-10-21",
+    "kind": "official documentation; read, not a live product audit"
+  }
+]

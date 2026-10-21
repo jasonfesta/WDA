@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "date": "2026-10-21",
+  "components": 6,
+  "state_images": 30,
+  "exact_state_prompts": 30,
+  "applied_correction_prompts": 1,
+  "originals": 6,
+  "historical_screenshots": 5,
+  "asset_hashes_checked": 42,
+  "directed_review_actions": 61,
+  "ledger_control_groups": 49,
+  "documented_element_instances": 95,
+  "primary_references": 14,
+  "local_links_checked": 743,
+  "fixture_totals": "pass",
+  "errors": []
+}

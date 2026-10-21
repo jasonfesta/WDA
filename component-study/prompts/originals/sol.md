@@ -1,0 +1,7 @@
+# Sol — Weather card — original saved prompt
+
+The instruction body below is preserved from the original WDA handoff. It describes the existing concept image. The original call’s attachment list is not retained in that handoff; the historical screenshot is a supporting source, not a claimed exact generation attachment.
+
+```text
+Produce ONE finished high-resolution raster asset. A single complete UI component centered both vertically and horizontally on a perfectly uniform off-white #FAF9F6 canvas. Even comfortable margins, frontal screen-space view, no perspective skew. Outside the component: absolutely no scenery, surfaces, wall, floor, horizon, woodgrain, fabric, foliage, sunlight patterns, color wash, vignettes, typography or props. Only a very subtle short contact shadow directly under the component. Keep all content sharp and readable. The intended UI itself may use its specified warm colors and materials. Do not duplicate components or make a sheet of variants. No source brands or watermarks. Edit the attached weather card. Preserve its card proportions, orange satin sun disc behind frosted glass, rounded shape, exact typography hierarchy and all text: Lisbon; Thu, Jun 18; 28°; C; F; A little more daylight.; Sunset 20:58; Today; Fri 19; Sat 20; Sun 21. Enlarge the single card to occupy about 68% of square canvas width, perfectly centered. Make outer field absolutely flat off-white. The orange disc stays inside the card. Reduce long ambient shadow to a subtle contact edge.
+```

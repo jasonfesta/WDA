@@ -1,0 +1,169 @@
+{
+  "kind": "proposed study fixtures; not production service data",
+  "weather": {
+    "location": "Lisbon",
+    "days": [
+      {
+        "id": "today",
+        "date": "2026-06-18",
+        "celsius": 28,
+        "sunset": "20:58"
+      },
+      {
+        "id": "friday",
+        "date": "2026-06-19",
+        "celsius": 29,
+        "sunset": "20:59"
+      },
+      {
+        "id": "saturday",
+        "date": "2026-06-20",
+        "celsius": 27,
+        "sunset": "21:00"
+      },
+      {
+        "id": "sunday",
+        "date": "2026-06-21",
+        "celsius": 26,
+        "sunset": "21:01"
+      }
+    ]
+  },
+  "plans": [
+    {
+      "id": "everyday",
+      "monthly": 24,
+      "currency": "USD",
+      "source": "original artwork"
+    },
+    {
+      "id": "weekender",
+      "monthly": 12,
+      "currency": "USD",
+      "source": "proposed design fixture"
+    },
+    {
+      "id": "worldwide",
+      "monthly": 48,
+      "currency": "USD",
+      "source": "proposed design fixture"
+    }
+  ],
+  "usage": {
+    "cycle": {
+      "limit": 8000,
+      "used": 6240,
+      "categories": {
+        "render": 3200,
+        "explore": 1600,
+        "compose": 960,
+        "export": 480
+      },
+      "days": 30,
+      "daily": [
+        160,
+        200,
+        120,
+        160,
+        260,
+        170,
+        190,
+        220,
+        240,
+        180,
+        260,
+        160,
+        220,
+        210,
+        260,
+        190,
+        130,
+        130,
+        220,
+        170,
+        230,
+        290,
+        340,
+        220,
+        150,
+        230,
+        270,
+        180,
+        160,
+        320
+      ],
+      "average": 208.0,
+      "difference_from_allowance": 1760,
+      "capacity_percent": 78.0
+    },
+    "previous": {
+      "limit": 8000,
+      "used": 4800,
+      "categories": {
+        "render": 2400,
+        "explore": 1200,
+        "compose": 720,
+        "export": 480
+      },
+      "days": 30,
+      "daily": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "average": 160.0,
+      "difference_from_allowance": 3200,
+      "capacity_percent": 60.0
+    },
+    "week": {
+      "limit": 8000,
+      "used": 1400,
+      "categories": {
+        "render": 700,
+        "explore": 350,
+        "compose": 210,
+        "export": 140
+      },
+      "days": 7,
+      "daily": [
+        180,
+        220,
+        300,
+        200,
+        180,
+        150,
+        170
+      ],
+      "average": 200.0,
+      "difference_from_allowance": 6600,
+      "capacity_percent": 17.5
+    }
+  }
+}
