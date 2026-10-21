@@ -1,0 +1,228 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="author" content="Jason Festa"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WDA — 05-serein</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f7f4eb;color:#332b27;font:15px/1.5 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}a{color:inherit;text-underline-offset:4px}button,select{font:inherit;color:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,select:focus-visible{outline:2px solid #78252e;outline-offset:4px}header{padding:32px 3vw 28px;border-bottom:1px solid #dcd4c5}.top{display:flex;justify-content:space-between;gap:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}nav{display:flex;gap:22px;letter-spacing:0;text-transform:none;font-size:13px}h1{font:clamp(42px,6vw,82px)/1.02 Georgia,serif;letter-spacing:-.045em;color:#78252e;margin:45px 0 18px}.intro{max-width:680px;font-size:16px;color:#665b54}.toolbar{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin-top:28px}.segment{display:flex;border:1px solid #cbbfb0;border-radius:24px;padding:3px}.segment button{border:0;background:transparent;border-radius:20px;padding:8px 14px;font-size:13px}.segment [aria-pressed=true]{background:#78252e;color:#fffbea}.muted{color:#76685f;font-size:12px}.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px;padding:32px 3vw 48px;align-items:start}.card h2{font:23px/1.15 Georgia,serif;margin:5px 0 16px;letter-spacing:-.035em}.kicker{font-size:10px;letter-spacing:.06em;color:#79685c;text-transform:uppercase;min-height:30px}.preview{display:block;width:100%;padding:0;border:0;background:#e7dfd1;line-height:0;box-shadow:0 5px 20px #3d241318}.preview img{display:block;width:100%;height:auto}.cardnav{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12px;margin:16px 0 6px}.meta{font-size:11px;color:#776c62}.guide{padding:40px 3vw 60px;background:#eae6dc;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}.guide h2{font:34px/1.1 Georgia,serif;margin:0 0 14px;color:#78252e}.guide h3{font-size:14px}.guide p{max-width:650px;color:#62574e}.guide ul{padding-left:18px;line-height:2}.guide a{font-size:14px}footer{padding:25px 3vw;font-size:12px;color:#786d64}dialog{border:0;padding:0;width:min(1100px,96vw);max-width:none;height:94vh;max-height:none;border-radius:3px;background:#eee9df;color:#332b27}dialog::backdrop{background:#1e1617d9}.bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:14px 20px;background:#faf7ef;border-bottom:1px solid #cfc6b9}.bar select{max-width:240px;padding:8px;background:#faf7ef;border:1px solid #cfc6b9}.close{margin-left:auto;border:0;background:none;font-size:24px;padding:0 8px}.bar a{font-size:12px}.scroll{height:calc(100% - 122px);overflow:auto;padding:24px}.scroll img{display:block;width:min(100%,850px);height:auto;margin:auto;box-shadow:0 8px 30px #44302033}.note{padding:8px 20px;background:#faf7ef;font-size:12px;color:#75685e}.doc{max-width:1000px;margin:auto;padding:32px 28px 80px}.doc h1{font-size:48px;margin:32px 0}.doc h2{font:30px/1.2 Georgia,serif;margin:48px 0 18px;color:#78252e}.doc h3{font:23px/1.2 Georgia,serif;margin:40px 0 16px}.doc p,.doc li{line-height:1.8}.doc img{display:block;max-width:100%;height:auto;margin:20px 0;border:1px solid #ded5c8}.doc pre{overflow:auto;background:#eee9df;padding:20px;font:13px/1.6 ui-monospace,monospace}.doc code{font-size:.9em}.doc table{border-collapse:collapse;width:100%;font-size:13px}.doc td{padding:12px;border:1px solid #d4c9bb;vertical-align:top}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.guide{grid-template-columns:1fr 1fr}.guide>div:first-child{grid-column:1/-1}}@media(max-width:720px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding:24px 18px}.top{display:block}nav{margin-top:16px;flex-wrap:wrap}header{padding:24px 18px}.guide{display:block;padding:32px 20px}.guide>div{margin-bottom:28px}.card h2{font-size:20px}.doc{padding:24px 18px}.doc h1{font-size:36px}.scroll{height:calc(100% - 170px);padding:10px}}@media(max-width:420px){.grid{grid-template-columns:1fr}}
+
+.device-comparison{margin:28px 0 42px}.device-comparison h2{margin:0 0 12px!important}.device-comparison .comparison-intro{max-width:780px;color:#6c5e54;line-height:1.7}.device-pair{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:36px;align-items:start;margin-top:24px}.device-pair figure{margin:0;min-width:0}.device-pair figcaption{font:12px/1.5 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;letter-spacing:.03em;margin:0 0 14px;color:#776354;display:flex;gap:10px;justify-content:space-between;align-items:center}.device-pair img{display:block;width:100%;height:auto;border:0;margin:0;box-shadow:0 5px 22px #42291917}.device-pair a{min-width:0}.device-pair .phone-image{max-width:390px;margin:auto}.mobile-note{border-top:1px solid #d7cbbd;margin-top:28px;padding-top:24px}.mobile-note p{line-height:1.8}.mobile-evidence{display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px;align-items:start}.mobile-evidence img{width:100%;height:auto}.mobile-evidence p{line-height:1.7}.review .hero-review{display:block!important}.review .hero-review aside{padding:20px 0;max-width:900px}.doc.has-mobile{max-width:1300px}.doc.has-mobile>.doc-copy{max-width:960px;margin:auto}.device-pair figure.mobile-device{max-width:390px}.device-comparison .comparison-links{display:flex;gap:18px;flex-wrap:wrap;margin:16px 0;font-size:13px}.review .refs .ref img{max-height:500px;object-fit:contain;object-position:top left}.doc table{overflow-wrap:anywhere}@media(max-width:760px){.device-pair{grid-template-columns:minmax(0,1fr);gap:32px}.device-pair figure.mobile-device{width:100%;max-width:390px;margin:auto}.device-pair figure.desktop-device{width:100%}.mobile-evidence{grid-template-columns:minmax(0,1fr)}.mobile-evidence img{max-width:240px}.device-comparison .comparison-intro{font-size:14px}.device-pair figcaption{font-size:11px}}
+</style><main class="doc has-mobile"><nav><a href="../index.html">← Five homepages</a><a href="05-serein.md" download>Download Markdown ↓</a></nav><h1>Serein — tout and interaction specification</h1><section class="device-comparison" id="desktop-mobile"><h2>One homepage. Two layouts.</h2><p class="comparison-intro">The same Serein homepage, from hero to footer. Desktop stays on the left; its continuous mobile adaptation is on the right. Each image keeps its natural proportions.</p><div class="comparison-links"><a href="../images/desktop/05-serein.png">Open desktop image ↗</a><a href="../previews/05-serein-mobile.html">Open full mobile page ↗</a><a href="../images/mobile/05-serein.jpg" download>Mobile image ↓</a><a href="mobile-05-serein.html">Mobile research & behavior →</a></div><div class="device-pair"><figure class="desktop-device"><figcaption><span>DESKTOP · ROUND 2</span><span>Unchanged long concept</span></figcaption><a href="../images/desktop/05-serein.png"><img src="../images/desktop/05-serein.png" alt="Serein complete desktop homepage"></a></figure><figure class="mobile-device"><figcaption><span>MOBILE · 390 PX</span><span>One continuous homepage</span></figcaption><a href="../previews/05-serein-mobile.html"><img class="phone-image" src="../images/mobile/05-serein.jpg" alt="Serein complete mobile homepage"></a></figure></div><div class="mobile-note"><strong>What changes on mobile</strong><p>The desktop split hero becomes copy then portrait, with the Daily Oil inset retained. Product details stay visible. Routine selection becomes three tap buttons above one stable panel; help becomes a vertical disclosure list.</p><p class="caption">Static design concepts. The mobile layout reflows the same content and uses generated adaptations of its imagery. Exact text, crops, spacing and tap targets should follow the Markdown when built.</p></div></section><div class="doc-copy">
+<p>Round 2 · 21 October 2026 · <a href="react-interaction-contract.md">Shared React contract</a> · <a href="../research/live-reference-register.md">Live reference evidence</a></p>
+<h2>Desktop and mobile preview</h2>
+<p><a href="../reviews/05-serein.html">Side-by-side review</a> · <a href="../images/desktop/05-serein.png">Desktop long image</a> · <a href="../images/mobile/05-serein.jpg">One continuous mobile homepage</a></p>
+<p><a href="mobile-05-serein.md">Mobile research and exact prompts</a> · <a href="react-mobile-contract.md">Mobile React contract</a></p>
+<h2>Critique and revised composition</h2>
+<p>The color direction works; remove the sequence of repetitive three-image strips. Give Daily Oil a generous hero-like lower section. Botanical source material becomes one image with annotations; routine becomes a calm stateful scene.</p>
+<p>Desktop chapter gaps 144–192 px. Peach and blue used as large calm fields; 5–7% gutters. Product bottles float on cream; no enclosing tiles.</p>
+<h2>Page sequence</h2>
+<ul>
+<li>Approved SEREIN hero: peach copy, botanical center strip, brown-skinned adult model on blue, Daily Oil 30 ml amber squat bottle with sculptural coral pump.</li>
+<li>Your everyday essentials: three bottles/jar on one continuous cream ground with generous space, no rectangles. Dew Cleanser 150 ml $32 / Daily Oil 30 ml $48 / Cloud Cream 50 ml $42. Do not label cleanser as oil.</li>
+<li>Daily Oil. A softer finish.: large faithful Daily Oil bottle and one tiny oil texture on expansive peach ground; much more blank space, short serif copy left. Preserve 30 ml, squat amber glass, sculptural coral pump.</li>
+<li>Close to the source: one large sunlit botanical macro photograph and one little drop-of-oil detail offset, minimal Leaves / Petals / Texture notes. No ingredient-card triptych.</li>
+<li>Cleanse. Nourish. Pause.: powder blue area with ONE large warm portrait and three elegant selectable step labels. Description and Daily Oil reference sit quietly beside portrait. No three thumbnail row.</li>
+<li>A quieter moment at the sink: large warm sink scene, with a smaller candid portrait offset below-right and two community captions. The care journal becomes two airy text links and ONE texture detail. No repeated card grid.</li>
+<li>Make a little room for yourself: calm peach signup with proper email and button; complete cream footer, optional slender blue ritual baseline.</li>
+</ul>
+<h2>Tout register</h2>
+<p>Every former section is accounted for, including those embedded in larger compositions. Destinations are planned routes, not deployed pages. Scroll, hover and React details are WDA proposals.</p>
+<h3>S00 — A little care, every day / hero</h3>
+<p><strong>Content:</strong> Approved Serein, Daily Oil 30 ml, peach/blue/cream, existing hero copy.</p>
+<p><strong>Real build reference:</strong> <a href="https://vintnersdaughter.com/">Vintner’s Daughter — Products and stories</a> · <a href="../research/live-reference-register.md#vintner">Primary-page content</a></p>
+<p><strong>Layout:</strong> Original 1586:992 ratio; do not rename oil Petal Oil.</p>
+<p><strong>Scroll:</strong> Normal document flow; no hero parallax, crop change or scroll-scrubbed lettering. Header becomes a solid 64 px surface only after the hero exits. Preserve its footprint.</p>
+<p><strong>Hover and focus:</strong> Underline actionable text over 180 ms. Photo and brand wordmark stay still.</p>
+<p><strong>Activation:</strong> Use real navigation links. Menu is a button with aria-expanded; Escape closes and focus returns.</p>
+<p><strong>Touch / small screen:</strong> Same visible actions; menu button at 44 × 44 px minimum. Approved desktop composition gets a separately art-directed mobile crop later.</p>
+<p><strong>React:</strong> Hero + SiteHeader; IntersectionObserver sentinel owns header mode. Hero content has no React animation state.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Build your daily ritual → /serein/daily-ritual</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Peach copy block above the portrait. Retain botanical accent, blue background and Daily Oil 30 ml inset. The blue ritual strip points to the routine section.</p>
+<p><strong>Mobile scroll:</strong> Normal document scroll. Reserve hero height to avoid layout shift; never force a full viewport if copy needs more room.</p>
+<p><strong>Mobile tap / focus:</strong> Menu opens a labelled dialog; Escape/close returns focus. Primary CTA navigates or scrolls to its named section.</p>
+<p><strong>Mobile React:</strong> Header owns menuOpen; real links retain keyboard access. Picture sources and CSS object-position adapt crops. No viewport-dependent duplicate content.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-05-serein.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>S01 — Everyday essentials / product tiles</h3>
+<p><strong>Content:</strong> Dew Cleanser 150 ml $32; Daily Oil 30 ml $48; Cloud Cream 50 ml $42. Secondary products/prices are concepts.</p>
+<p><strong>Real build reference:</strong> <a href="https://www.botniaskincare.com/">Botnia — Homepage</a> · <a href="../research/live-reference-register.md#botnia">Browser category click + DOM + screenshot</a></p>
+<p><strong>Layout:</strong> Three floating products with no separate image cards; labels stay visible.</p>
+<p><strong>Scroll:</strong> Enter as one composition at 15% visibility: translateY 12→0 px over 600 ms, once. Do not animate each label separately.</p>
+<p><strong>Hover and focus:</strong> Only on fine pointers, crossfade primary to on-body/texture image over 240 ms. Name, price and action remain visible. Focus outlines the link without swapping image.</p>
+<p><strong>Activation:</strong> Image and product name form one product-detail link. No homepage variants are proposed; do not add unapproved swatches or quick-add.</p>
+<p><strong>Touch / small screen:</strong> No hover dependency. Show stable primary image and explicit color names. Two columns at tablet, one at narrow phone.</p>
+<p><strong>React:</strong> Static ProductTout[] in ProductRange. Each record owns title, image pair, optional approved price and href. CSS handles hover; no selection state.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Dew Cleanser → /serein/products/dew-cleanser</li>
+<li>Daily Oil → /serein/products/daily-oil</li>
+<li>Cloud Cream → /serein/products/cloud-cream</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Daily Oil is the lead product; Dew Cleanser and Cloud Cream follow. Preserve names, volumes and concept prices. At 320px, stack secondary products.</p>
+<p><strong>Mobile scroll:</strong> Products remain readable without animation or a swipe. Any entrance is optional and disabled for reduced motion.</p>
+<p><strong>Mobile tap / focus:</strong> One tap on the product link opens its detail route. Approved variant swatches, if implemented, use separate 44px buttons; first tap never merely reveals a hover CTA.</p>
+<p><strong>Mobile React:</strong> One ProductRange data array and CSS grid. Variant state is per product only when approved; keep links separate from buttons.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-05-serein.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>S02 — Daily Oil / signature story</h3>
+<p><strong>Content:</strong> A softer finish; amber bottle and coral pump remain consistent. No efficacy metrics.</p>
+<p><strong>Real build reference:</strong> <a href="https://vintnersdaughter.com/">Vintner’s Daughter — Products and stories</a> · <a href="../research/live-reference-register.md#vintner">Primary-page content</a></p>
+<p><strong>Layout:</strong> Large peach still life with small texture inset and concise text.</p>
+<p><strong>Scroll:</strong> Large image enters naturally; supporting text reveals once with a 12 px/600 ms settle. No section pinning or content swapping caused by scrolling.</p>
+<p><strong>Hover and focus:</strong> Only the text action underlines; editorial photo stays still unless it is itself the linked tout.</p>
+<p><strong>Activation:</strong> A descriptive story link opens its route. Noninteractive material photographs remain figure/figcaption.</p>
+<p><strong>Touch / small screen:</strong> Image then copy in the same DOM order; remove desktop overlaps; keep 48–72 px between chapters.</p>
+<p><strong>React:</strong> EditorialTout with eyebrow, title, body, image, imageSide and optional href. Static content props; CSS grid does the composition.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Meet Daily Oil → /serein/products/daily-oil</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Keep Daily Oil bottle fully visible and its 30 ml label consistent. Text and image stack whenever the content width cannot support readable type.</p>
+<p><strong>Mobile scroll:</strong> Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.</p>
+<p><strong>Mobile tap / focus:</strong> Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.</p>
+<p><strong>Mobile React:</strong> EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-05-serein.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>S03 — Close to the source</h3>
+<p><strong>Content:</strong> Leaves / Petals / Texture are visual notes; do not fabricate an INCI list or source farm.</p>
+<p><strong>Real build reference:</strong> <a href="https://www.botniaskincare.com/blogs/key-ingredients">Botnia — Key ingredients</a> · <a href="../research/live-reference-register.md#ingredients">Primary-page content</a></p>
+<p><strong>Layout:</strong> One botanical photograph and an offset oil detail, no three cards.</p>
+<p><strong>Scroll:</strong> Large image enters naturally; supporting text reveals once with a 12 px/600 ms settle. No section pinning or content swapping caused by scrolling.</p>
+<p><strong>Hover and focus:</strong> Only the text action underlines; editorial photo stays still unless it is itself the linked tout.</p>
+<p><strong>Activation:</strong> A descriptive story link opens its route. Noninteractive material photographs remain figure/figcaption.</p>
+<p><strong>Touch / small screen:</strong> Image then copy in the same DOM order; remove desktop overlaps; keep 48–72 px between chapters.</p>
+<p><strong>React:</strong> EditorialTout with eyebrow, title, body, image, imageSide and optional href. Static content props; CSS grid does the composition.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Ingredient notes → /serein/ingredients</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Botanical photo is followed by vertical Leaves / Petals / Texture notes. These are explanatory content, not filters.</p>
+<p><strong>Mobile scroll:</strong> Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.</p>
+<p><strong>Mobile tap / focus:</strong> Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.</p>
+<p><strong>Mobile React:</strong> EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-05-serein.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>S04 — Cleanse / Nourish / Pause</h3>
+<p><strong>Content:</strong> Dew Cleanser / Daily Oil / quiet moment. Actual application and suitability copy require formulation guidance.</p>
+<p><strong>Real build reference:</strong> <a href="https://www.botniaskincare.com/pages/find-your-skincare-routine">Botnia — Find your skincare routine</a> · <a href="../research/live-reference-register.md#routine">Primary-page content; no form submission</a></p>
+<p><strong>Layout:</strong> One image per selected step, fixed media height, blue ground.</p>
+<p><strong>Scroll:</strong> Natural reading order. Scroll never changes the selected step. One large active photograph gives the sequence space.</p>
+<p><strong>Hover and focus:</strong> Step button underline brightens over 160 ms; no automatic selection on hover or focus.</p>
+<p><strong>Activation:</strong> Click/Enter chooses step and crossfades fixed-ratio media over 220 ms. aria-pressed buttons control a labelled region. No autoplay.</p>
+<p><strong>Touch / small screen:</strong> Three full-width or wrapping buttons remain visible; active description is below. Keyboard Tab/Enter works without a custom tab algorithm.</p>
+<p><strong>React:</strong> RitualSteps or ServeSteps; selectedStepId in parent; image and description derived from steps data. CSS fade; respect reduced motion.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Cleanse → local step cleanse</li>
+<li>Nourish → local step nourish</li>
+<li>Pause → local step pause</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Three tap buttons above one routine panel. Cleanse is the initial selected step; changing it updates the image and text together. No automatic selection while scrolling.</p>
+<p><strong>Mobile scroll:</strong> Selection changes only on activation, never on scroll position. Keep the selected region stable in height where practical.</p>
+<p><strong>Mobile tap / focus:</strong> Tap one of three labelled buttons. Focus alone does not select. The selected button is visibly marked and exposes aria-pressed.</p>
+<p><strong>Mobile React:</strong> RitualSteps/ServeSteps owns selectedStepId. One record supplies image and copy. No incomplete ARIA tab implementation; do not duplicate state for mobile.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-05-serein.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>S05 — A quieter moment at the sink</h3>
+<p><strong>Content:</strong> Contextual adult morning scene, no clinical before/after comparison.</p>
+<p><strong>Real build reference:</strong> <a href="https://vintnersdaughter.com/">Vintner’s Daughter — Products and stories</a> · <a href="../research/live-reference-register.md#vintner">Primary-page content</a></p>
+<p><strong>Layout:</strong> Large natural-light image; caption in cream outside.</p>
+<p><strong>Scroll:</strong> Large image enters naturally; supporting text reveals once with a 12 px/600 ms settle. No section pinning or content swapping caused by scrolling.</p>
+<p><strong>Hover and focus:</strong> Only the text action underlines; editorial photo stays still unless it is itself the linked tout.</p>
+<p><strong>Activation:</strong> A descriptive story link opens its route. Noninteractive material photographs remain figure/figcaption.</p>
+<p><strong>Touch / small screen:</strong> Image then copy in the same DOM order; remove desktop overlaps; keep 48–72 px between chapters.</p>
+<p><strong>React:</strong> EditorialTout with eyebrow, title, body, image, imageSide and optional href. Static content props; CSS grid does the composition.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Our approach → /serein/our-approach</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Sink photo and short narrative stack; The daily ritual is a normal descriptive link. Keep the bottle and tap in the crop.</p>
+<p><strong>Mobile scroll:</strong> Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.</p>
+<p><strong>Mobile tap / focus:</strong> Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.</p>
+<p><strong>Mobile React:</strong> EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-05-serein.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>S06 — Everyday rituals / embedded community</h3>
+<p><strong>Content:</strong> Before the day / A moment of care / When the day slows are editorial concepts.</p>
+<p><strong>Real build reference:</strong> <a href="https://www.botniaskincare.com/">Botnia — Homepage</a> · <a href="../research/live-reference-register.md#botnia">Browser category click + DOM + screenshot</a></p>
+<p><strong>Layout:</strong> One smaller portrait embedded with S05; no stand-alone tile strip.</p>
+<p><strong>Scroll:</strong> Two stories with different image proportions form one quiet composition. Reveal once per story, 80 ms maximum stagger.</p>
+<p><strong>Hover and focus:</strong> Title underline and arrow translate 4 px. Optional image scale limited to 1.018; no hidden excerpt.</p>
+<p><strong>Activation:</strong> One link per story with a specific article title. Community captions only link when an actual owned story exists; decorative images have no pointer cursor.</p>
+<p><strong>Touch / small screen:</strong> Stack stories. Headline and short summary remain visible; no carousel required.</p>
+<p><strong>React:</strong> StoryLink[] from journal content; each owns image, title, excerpt and href. State-free unless editorial pagination is added later.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Everyday rituals → /serein/journal/everyday-rituals</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> A single portrait supports the sink story. Additional ritual stories are linked from the journal; no customer testimonial is implied.</p>
+<p><strong>Mobile scroll:</strong> Entries remain in document order; no autoplay or compulsory horizontal dragging.</p>
+<p><strong>Mobile tap / focus:</strong> One tap on the visible title/CTA navigates. Help rows use independent native disclosures.</p>
+<p><strong>Mobile React:</strong> Reuse StoryLink data; CSS changes the layout. Optional thumbnail never becomes the only accessible name.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-05-serein.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>S07 — Care journal and practical help</h3>
+<p><strong>Content:</strong> Finding your daily rhythm / A guide to texture. Help rows use shared disclosure behavior.</p>
+<p><strong>Real build reference:</strong> <a href="https://www.botniaskincare.com/">Botnia — Homepage</a> · <a href="../research/live-reference-register.md#botnia">Browser category click + DOM + screenshot</a></p>
+<p><strong>Layout:</strong> Text-led stories plus one texture; FAQs have generous line spacing.</p>
+<p><strong>Scroll:</strong> Two stories with different image proportions form one quiet composition. Reveal once per story, 80 ms maximum stagger.</p>
+<p><strong>Hover and focus:</strong> Title underline and arrow translate 4 px. Optional image scale limited to 1.018; no hidden excerpt.</p>
+<p><strong>Activation:</strong> One link per story with a specific article title. Community captions only link when an actual owned story exists; decorative images have no pointer cursor.</p>
+<p><strong>Touch / small screen:</strong> Stack stories. Headline and short summary remain visible; no carousel required.</p>
+<p><strong>React:</strong> StoryLink[] from journal content; each owns image, title, excerpt and href. State-free unless editorial pagination is added later.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Finding your rhythm → /serein/journal/daily-rhythm</li>
+<li>Guide to texture → /serein/journal/texture</li>
+<li>Using Daily Oil / Your routine / Shipping → disclosures</li>
+</ul>
+<p><strong>Help-row behavior:</strong> Enter/Space or click toggles native details/summary. Multiple answers may remain open. Expanded copy includes the relevant detail-page link. Summary text darkens and the plus rotates 90° over 160 ms. No photo animation. Entire summary is a minimum 48 px row; no hover requirement. Reduced motion opens immediately.</p>
+<p><strong>Mobile reflow — this same tout:</strong> Two journal text rows followed by Using Daily Oil, Your routine and Shipping disclosures. Entire summary row is the tap target.</p>
+<p><strong>Mobile scroll:</strong> Entries remain in document order; no autoplay or compulsory horizontal dragging.</p>
+<p><strong>Mobile tap / focus:</strong> One tap on the visible title/CTA navigates. Help rows use independent native disclosures.</p>
+<p><strong>Mobile React:</strong> Reuse StoryLink data; CSS changes the layout. Optional thumbnail never becomes the only accessible name.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-05-serein.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>S08 — Letters from Serein</h3>
+<p><strong>Content:</strong> Optional email updates; no diagnostic quiz data collected on homepage.</p>
+<p><strong>Real build reference:</strong> <a href="https://www.botniaskincare.com/">Botnia — Homepage</a> · <a href="../research/live-reference-register.md#botnia">Browser category click + DOM + screenshot</a></p>
+<p><strong>Layout:</strong> Peach signup, visible label, one button.</p>
+<p><strong>Scroll:</strong> Static closing composition. Form never follows the user or opens an unsolicited modal.</p>
+<p><strong>Hover and focus:</strong> Button changes fill/foreground over 160 ms; input retains a stable border. Focus ring is always explicit.</p>
+<p><strong>Activation:</strong> Real form submit uses idle/submitting/success/error. Validate email, prevent duplicate requests, announce status and preserve input on failure. Until endpoint exists label demo as not connected.</p>
+<p><strong>Touch / small screen:</strong> Visible label plus autocomplete=email; 44 px button. Success stays in place without redirect.</p>
+<p><strong>React:</strong> NewsletterForm owns status and error; server action/API owns persistence. Keep inquiry CTA separate from marketing opt-in.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Join us → newsletter endpoint, pending</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Letters from Serein, field and Join us stack on peach. Use 16px minimum input text, a persistent label and an inline status region.</p>
+<p><strong>Mobile scroll:</strong> Form stays in normal flow above the footer and is not covered by a sticky bar or keyboard overlay.</p>
+<p><strong>Mobile tap / focus:</strong> Tap input opens the email keyboard. Explicit submit shows inline validation, pending, server-confirmed success or retryable failure.</p>
+<p><strong>Mobile React:</strong> NewsletterForm owns status; server owns success. type=email, autocomplete=email, visible label, aria-describedby and polite status region. No submission is implemented in this concept.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-05-serein.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>S09 — Serein footer</h3>
+<p><strong>Content:</strong> Daily ritual / Daily Oil / Ingredients / Approach / Contact / Privacy / Terms.</p>
+<p><strong>Real build reference:</strong> <a href="https://vintnersdaughter.com/">Vintner’s Daughter — Products and stories</a> · <a href="../research/live-reference-register.md#vintner">Primary-page content</a></p>
+<p><strong>Layout:</strong> Open cream footer with restrained blue baseline.</p>
+<p><strong>Scroll:</strong> Static footer in document flow with adequate bottom padding.</p>
+<p><strong>Hover and focus:</strong> Simple underline only; logo remains still.</p>
+<p><strong>Activation:</strong> Real anchors to existing routes; future routes are documented as planned, not fake working links.</p>
+<p><strong>Touch / small screen:</strong> Groups stack and remain expanded; maintain clear reading order.</p>
+<p><strong>React:</strong> SiteFooter from route groups and contact data. No animation state.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Daily ritual → /serein/daily-ritual</li>
+<li>Ingredients → /serein/ingredients</li>
+<li>Approach → /serein/our-approach</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Two readable footer columns with comfortable line height. Ingredients and approach may be one editorial destination; final routing must retain all approved pages.</p>
+<p><strong>Mobile scroll:</strong> Footer follows the newsletter with no fixed positioning.</p>
+<p><strong>Mobile tap / focus:</strong> Links remain visible with generous row targets; do not require a first tap to reveal a link.</p>
+<p><strong>Mobile React:</strong> Reuse SiteFooter nav data. CSS grid becomes two columns then one at large text; preserve DOM order and legal destinations.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-05-serein.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h2>Content and asset handoff</h2>
+<p>Use the approved hero from research/approved. The long image is a composition reference; rebuild type and controls as HTML. Individual product, on-body, process and editorial assets are needed for implementation; do not slice UI text into photographs. Preserve approved silhouettes and packaging. Below-fold scenes, secondary products and stories remain design proposals.</p>
+<h2>Image generation</h2>
+<p><a href="../prompts/desktop/05-serein.txt">Exact round-two prompt</a> · <a href="../manifest.json">Manifest</a> · </p></div></main></html>

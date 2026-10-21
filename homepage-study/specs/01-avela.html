@@ -1,0 +1,228 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="author" content="Jason Festa"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WDA — 01-avela</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f7f4eb;color:#332b27;font:15px/1.5 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}a{color:inherit;text-underline-offset:4px}button,select{font:inherit;color:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,select:focus-visible{outline:2px solid #78252e;outline-offset:4px}header{padding:32px 3vw 28px;border-bottom:1px solid #dcd4c5}.top{display:flex;justify-content:space-between;gap:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}nav{display:flex;gap:22px;letter-spacing:0;text-transform:none;font-size:13px}h1{font:clamp(42px,6vw,82px)/1.02 Georgia,serif;letter-spacing:-.045em;color:#78252e;margin:45px 0 18px}.intro{max-width:680px;font-size:16px;color:#665b54}.toolbar{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin-top:28px}.segment{display:flex;border:1px solid #cbbfb0;border-radius:24px;padding:3px}.segment button{border:0;background:transparent;border-radius:20px;padding:8px 14px;font-size:13px}.segment [aria-pressed=true]{background:#78252e;color:#fffbea}.muted{color:#76685f;font-size:12px}.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px;padding:32px 3vw 48px;align-items:start}.card h2{font:23px/1.15 Georgia,serif;margin:5px 0 16px;letter-spacing:-.035em}.kicker{font-size:10px;letter-spacing:.06em;color:#79685c;text-transform:uppercase;min-height:30px}.preview{display:block;width:100%;padding:0;border:0;background:#e7dfd1;line-height:0;box-shadow:0 5px 20px #3d241318}.preview img{display:block;width:100%;height:auto}.cardnav{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12px;margin:16px 0 6px}.meta{font-size:11px;color:#776c62}.guide{padding:40px 3vw 60px;background:#eae6dc;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}.guide h2{font:34px/1.1 Georgia,serif;margin:0 0 14px;color:#78252e}.guide h3{font-size:14px}.guide p{max-width:650px;color:#62574e}.guide ul{padding-left:18px;line-height:2}.guide a{font-size:14px}footer{padding:25px 3vw;font-size:12px;color:#786d64}dialog{border:0;padding:0;width:min(1100px,96vw);max-width:none;height:94vh;max-height:none;border-radius:3px;background:#eee9df;color:#332b27}dialog::backdrop{background:#1e1617d9}.bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:14px 20px;background:#faf7ef;border-bottom:1px solid #cfc6b9}.bar select{max-width:240px;padding:8px;background:#faf7ef;border:1px solid #cfc6b9}.close{margin-left:auto;border:0;background:none;font-size:24px;padding:0 8px}.bar a{font-size:12px}.scroll{height:calc(100% - 122px);overflow:auto;padding:24px}.scroll img{display:block;width:min(100%,850px);height:auto;margin:auto;box-shadow:0 8px 30px #44302033}.note{padding:8px 20px;background:#faf7ef;font-size:12px;color:#75685e}.doc{max-width:1000px;margin:auto;padding:32px 28px 80px}.doc h1{font-size:48px;margin:32px 0}.doc h2{font:30px/1.2 Georgia,serif;margin:48px 0 18px;color:#78252e}.doc h3{font:23px/1.2 Georgia,serif;margin:40px 0 16px}.doc p,.doc li{line-height:1.8}.doc img{display:block;max-width:100%;height:auto;margin:20px 0;border:1px solid #ded5c8}.doc pre{overflow:auto;background:#eee9df;padding:20px;font:13px/1.6 ui-monospace,monospace}.doc code{font-size:.9em}.doc table{border-collapse:collapse;width:100%;font-size:13px}.doc td{padding:12px;border:1px solid #d4c9bb;vertical-align:top}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.guide{grid-template-columns:1fr 1fr}.guide>div:first-child{grid-column:1/-1}}@media(max-width:720px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding:24px 18px}.top{display:block}nav{margin-top:16px;flex-wrap:wrap}header{padding:24px 18px}.guide{display:block;padding:32px 20px}.guide>div{margin-bottom:28px}.card h2{font-size:20px}.doc{padding:24px 18px}.doc h1{font-size:36px}.scroll{height:calc(100% - 170px);padding:10px}}@media(max-width:420px){.grid{grid-template-columns:1fr}}
+
+.device-comparison{margin:28px 0 42px}.device-comparison h2{margin:0 0 12px!important}.device-comparison .comparison-intro{max-width:780px;color:#6c5e54;line-height:1.7}.device-pair{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:36px;align-items:start;margin-top:24px}.device-pair figure{margin:0;min-width:0}.device-pair figcaption{font:12px/1.5 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;letter-spacing:.03em;margin:0 0 14px;color:#776354;display:flex;gap:10px;justify-content:space-between;align-items:center}.device-pair img{display:block;width:100%;height:auto;border:0;margin:0;box-shadow:0 5px 22px #42291917}.device-pair a{min-width:0}.device-pair .phone-image{max-width:390px;margin:auto}.mobile-note{border-top:1px solid #d7cbbd;margin-top:28px;padding-top:24px}.mobile-note p{line-height:1.8}.mobile-evidence{display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px;align-items:start}.mobile-evidence img{width:100%;height:auto}.mobile-evidence p{line-height:1.7}.review .hero-review{display:block!important}.review .hero-review aside{padding:20px 0;max-width:900px}.doc.has-mobile{max-width:1300px}.doc.has-mobile>.doc-copy{max-width:960px;margin:auto}.device-pair figure.mobile-device{max-width:390px}.device-comparison .comparison-links{display:flex;gap:18px;flex-wrap:wrap;margin:16px 0;font-size:13px}.review .refs .ref img{max-height:500px;object-fit:contain;object-position:top left}.doc table{overflow-wrap:anywhere}@media(max-width:760px){.device-pair{grid-template-columns:minmax(0,1fr);gap:32px}.device-pair figure.mobile-device{width:100%;max-width:390px;margin:auto}.device-pair figure.desktop-device{width:100%}.mobile-evidence{grid-template-columns:minmax(0,1fr)}.mobile-evidence img{max-width:240px}.device-comparison .comparison-intro{font-size:14px}.device-pair figcaption{font-size:11px}}
+</style><main class="doc has-mobile"><nav><a href="../index.html">← Five homepages</a><a href="01-avela.md" download>Download Markdown ↓</a></nav><h1>Avela / Soft Form — tout and interaction specification</h1><section class="device-comparison" id="desktop-mobile"><h2>One homepage. Two layouts.</h2><p class="comparison-intro">The same Avela / Soft Form homepage, from hero to footer. Desktop stays on the left; its continuous mobile adaptation is on the right. Each image keeps its natural proportions.</p><div class="comparison-links"><a href="../images/desktop/01-avela.png">Open desktop image ↗</a><a href="../previews/01-avela-mobile.html">Open full mobile page ↗</a><a href="../images/mobile/01-avela.jpg" download>Mobile image ↓</a><a href="mobile-01-avela.html">Mobile research & behavior →</a></div><div class="device-pair"><figure class="desktop-device"><figcaption><span>DESKTOP · ROUND 2</span><span>Unchanged long concept</span></figcaption><a href="../images/desktop/01-avela.png"><img src="../images/desktop/01-avela.png" alt="Avela / Soft Form complete desktop homepage"></a></figure><figure class="mobile-device"><figcaption><span>MOBILE · 390 PX</span><span>One continuous homepage</span></figcaption><a href="../previews/01-avela-mobile.html"><img class="phone-image" src="../images/mobile/01-avela.jpg" alt="Avela / Soft Form complete mobile homepage"></a></figure></div><div class="mobile-note"><strong>What changes on mobile</strong><p>Lead with the Arc; use a two-up row only for the two secondary bags. Flat-lay, making and coastal stories become separate full-width reading moments. Care stays in full-width disclosure rows.</p><p class="caption">Static design concepts. The mobile layout reflows the same content and uses generated adaptations of its imagery. Exact text, crops, spacing and tap targets should follow the Markdown when built.</p></div></section><div class="doc-copy">
+<p>Round 2 · 21 October 2026 · <a href="react-interaction-contract.md">Shared React contract</a> · <a href="../research/live-reference-register.md">Live reference evidence</a></p>
+<h2>Desktop and mobile preview</h2>
+<p><a href="../reviews/01-avela.html">Side-by-side review</a> · <a href="../images/desktop/01-avela.png">Desktop long image</a> · <a href="../images/mobile/01-avela.jpg">One continuous mobile homepage</a></p>
+<p><a href="mobile-01-avela.md">Mobile research and exact prompts</a> · <a href="react-mobile-contract.md">Mobile React contract</a></p>
+<h2>Critique and revised composition</h2>
+<p>Keep the campaign strength, remove repetitive triptychs. Products float on cream; the Arc story, craft and coastal story become large, unequal compositions. Workshop notes sit inside craft; community imagery sits inside the coastal story.</p>
+<p>Desktop chapters 144–192 px apart, side gutters clamp(24px,6vw,96px), 32–48 px internal gaps. Product grounds blend into the cream; no card outlines.</p>
+<h2>Page sequence</h2>
+<ul>
+<li>Approved SOFT FORM hero exactly as supplied.</li>
+<li>After a generous cream pause, Forms for every day: three freestanding bags with subtle baseline labels; Arc $420, Fold $360, Day $480. No three background rectangles. Leave space around every silhouette.</li>
+<li>Large pale-blue Arc flat lay on left occupying 55%; smaller serif copy floated on cream at right, separated by negative space. One short heading: Soft structure. Room for the everyday.</li>
+<li>Shaped by hand: one substantial terracotta-toned handwork photograph on right and a smaller close-up offset below-left. Use a quiet cream field, not a solid stripe. A single workshop story link replaces a second journal grid.</li>
+<li>Carried through the day: one large coastal campaign photo and a smaller on-body photograph offset like a magazine spread. Two tiny community captions share this composition, not another row.</li>
+<li>Made to stay with you: calm wide cream pause, three fine accordion lines left, one small tactile leather detail right.</li>
+<li>Blue newsletter breathing room; full oxblood footer with useful link columns.</li>
+</ul>
+<h2>Tout register</h2>
+<p>Every former section is accounted for, including those embedded in larger compositions. Destinations are planned routes, not deployed pages. Scroll, hover and React details are WDA proposals.</p>
+<h3>A00 — Campaign / SOFT FORM</h3>
+<p><strong>Content:</strong> Approved AVELA campaign and Arc bag; retain original copy, not Polène’s product names.</p>
+<p><strong>Real build reference:</strong> <a href="https://eng.polene-paris.com/">Polène — homepage</a> · <a href="../research/live-reference-register.md#polene">Browser scroll + DOM</a></p>
+<p><strong>Layout:</strong> Original 1681:936 ratio; no added tile boxes.</p>
+<p><strong>Scroll:</strong> Normal document flow; no hero parallax, crop change or scroll-scrubbed lettering. Header becomes a solid 64 px surface only after the hero exits. Preserve its footprint.</p>
+<p><strong>Hover and focus:</strong> Underline actionable text over 180 ms. Photo and brand wordmark stay still.</p>
+<p><strong>Activation:</strong> Use real navigation links. Menu is a button with aria-expanded; Escape closes and focus returns.</p>
+<p><strong>Touch / small screen:</strong> Same visible actions; menu button at 44 × 44 px minimum. Approved desktop composition gets a separately art-directed mobile crop later.</p>
+<p><strong>React:</strong> Hero + SiteHeader; IntersectionObserver sentinel owns header mode. Hero content has no React animation state.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>The bags → /avela/bags</li>
+<li>Meet the Arc → /avela/bags/the-arc</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Portrait campaign crop keeps the whole Arc bag visible; SOFT FORM wraps into two lines. Compact Menu / Bag header. Copy and image retain the approved campaign.</p>
+<p><strong>Mobile scroll:</strong> Normal document scroll. Reserve hero height to avoid layout shift; never force a full viewport if copy needs more room.</p>
+<p><strong>Mobile tap / focus:</strong> Menu opens a labelled dialog; Escape/close returns focus. Primary CTA navigates or scrolls to its named section.</p>
+<p><strong>Mobile React:</strong> Header owns menuOpen; real links retain keyboard access. Picture sources and CSS object-position adapt crops. No viewport-dependent duplicate content.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-01-avela.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>A01 — Forms for every day / 3 product tiles</h3>
+<p><strong>Content:</strong> The Arc $420 / Oxblood; The Fold $360 / Tan; The Day $480 / Olive. Arc price from prior WDA registry; others provisional.</p>
+<p><strong>Real build reference:</strong> <a href="https://eng.polene-paris.com/">Polène — homepage</a> · <a href="../research/live-reference-register.md#polene">Browser scroll + DOM</a></p>
+<p><strong>Layout:</strong> Unboxed 3-column silhouettes with 48 px gaps; smaller metadata beneath.</p>
+<p><strong>Scroll:</strong> Enter as one composition at 15% visibility: translateY 12→0 px over 600 ms, once. Do not animate each label separately.</p>
+<p><strong>Hover and focus:</strong> Only on fine pointers, crossfade primary to on-body/texture image over 240 ms. Name, price and action remain visible. Focus outlines the link without swapping image.</p>
+<p><strong>Activation:</strong> Image/name link opens the correct product route. Color selection is a sibling button group, never nested in the link; click updates selected color, image and route.</p>
+<p><strong>Touch / small screen:</strong> No hover dependency. Show stable primary image and explicit color names. Two columns at tablet, one at narrow phone.</p>
+<p><strong>React:</strong> ProductTout[] in ProductRange. ProductRange owns selectedVariantByProduct; product data owns image pairs, price and href. CSS handles hover; React handles selection.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>The Arc → /avela/bags/the-arc</li>
+<li>The Fold → /avela/bags/the-fold</li>
+<li>The Day → /avela/bags/the-day</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> The Arc leads on its own; The Fold and The Day form the secondary pair. At 320px, stack the pair if labels wrap badly. Product names and prices remain visible. Swatches shown in the concept require approved variants before implementation.</p>
+<p><strong>Mobile scroll:</strong> Products remain readable without animation or a swipe. Any entrance is optional and disabled for reduced motion.</p>
+<p><strong>Mobile tap / focus:</strong> One tap on the product link opens its detail route. Approved variant swatches, if implemented, use separate 44px buttons; first tap never merely reveals a hover CTA.</p>
+<p><strong>Mobile React:</strong> One ProductRange data array and CSS grid. Variant state is per product only when approved; keep links separate from buttons.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-01-avela.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>A02 — The Arc / capacity story</h3>
+<p><strong>Content:</strong> Phone, notebook and keys convey use. Avoid an unverified liters/capacity specification.</p>
+<p><strong>Real build reference:</strong> <a href="https://eng.polene-paris.com/blogs/bags/materials">Polène — Materials</a> · <a href="../research/live-reference-register.md#leather">Primary-page content</a></p>
+<p><strong>Layout:</strong> 7-column image, 3-column copy, 2-column breathing gap; blue only behind still life.</p>
+<p><strong>Scroll:</strong> Large image enters naturally; supporting text reveals once with a 12 px/600 ms settle. No section pinning or content swapping caused by scrolling.</p>
+<p><strong>Hover and focus:</strong> Only the text action underlines; editorial photo stays still unless it is itself the linked tout.</p>
+<p><strong>Activation:</strong> A descriptive story link opens its route. Noninteractive material photographs remain figure/figcaption.</p>
+<p><strong>Touch / small screen:</strong> Image then copy in the same DOM order; remove desktop overlaps; keep 48–72 px between chapters.</p>
+<p><strong>React:</strong> EditorialTout with eyebrow, title, body, image, imageSide and optional href. Static content props; CSS grid does the composition.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Discover the Arc → /avela/bags/the-arc#details</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Blue flat-lay spans the content width, followed by heading, short copy and Discover the Arc. No copy column beside the image.</p>
+<p><strong>Mobile scroll:</strong> Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.</p>
+<p><strong>Mobile tap / focus:</strong> Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.</p>
+<p><strong>Mobile React:</strong> EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-01-avela.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>A03 — Shaped by hand / making</h3>
+<p><strong>Content:</strong> Cut, Fold, Finish remain simple process captions. No invented factory location, certification or warranty.</p>
+<p><strong>Real build reference:</strong> <a href="https://hereustudio.com/pages/craftmanship">Hereu — Craftsmanship</a> · <a href="../research/live-reference-register.md#hereu">Primary-page content</a></p>
+<p><strong>Layout:</strong> One main photograph and one offset detail; no equal triptych.</p>
+<p><strong>Scroll:</strong> Large image enters naturally; supporting text reveals once with a 12 px/600 ms settle. No section pinning or content swapping caused by scrolling.</p>
+<p><strong>Hover and focus:</strong> Only the text action underlines; editorial photo stays still unless it is itself the linked tout.</p>
+<p><strong>Activation:</strong> A descriptive story link opens its route. Noninteractive material photographs remain figure/figcaption.</p>
+<p><strong>Touch / small screen:</strong> Image then copy in the same DOM order; remove desktop overlaps; keep 48–72 px between chapters.</p>
+<p><strong>React:</strong> EditorialTout with eyebrow, title, body, image, imageSide and optional href. Static content props; CSS grid does the composition.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Inside the workshop → /avela/workshop</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Making photograph and stitch detail stack vertically. Process remains readable copy; Read the workshop story is a normal link.</p>
+<p><strong>Mobile scroll:</strong> Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.</p>
+<p><strong>Mobile tap / focus:</strong> Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.</p>
+<p><strong>Mobile React:</strong> EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-01-avela.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>A04 — Carried through the day</h3>
+<p><strong>Content:</strong> Coastal carry campaign; the same oxblood crescent Arc and cream linen wardrobe.</p>
+<p><strong>Real build reference:</strong> <a href="https://eng.polene-paris.com/">Polène — homepage</a> · <a href="../research/live-reference-register.md#polene">Browser scroll + DOM</a></p>
+<p><strong>Layout:</strong> Large portrait plus smaller landscape image separated by cream.</p>
+<p><strong>Scroll:</strong> Large image enters naturally; supporting text reveals once with a 12 px/600 ms settle. No section pinning or content swapping caused by scrolling.</p>
+<p><strong>Hover and focus:</strong> Only the text action underlines; editorial photo stays still unless it is itself the linked tout.</p>
+<p><strong>Activation:</strong> A descriptive story link opens its route. Noninteractive material photographs remain figure/figcaption.</p>
+<p><strong>Touch / small screen:</strong> Image then copy in the same DOM order; remove desktop overlaps; keep 48–72 px between chapters.</p>
+<p><strong>React:</strong> EditorialTout with eyebrow, title, body, image, imageSide and optional href. Static content props; CSS grid does the composition.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Explore the story → /avela/journal/carried-through-the-day</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Coastal carry image becomes a portrait composition. Retain the same bag and campaign wardrobe. The CTA is outside any ambiguous image-only target.</p>
+<p><strong>Mobile scroll:</strong> Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.</p>
+<p><strong>Mobile tap / focus:</strong> Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.</p>
+<p><strong>Mobile React:</strong> EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-01-avela.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>A05 — Made to stay with you / care rows</h3>
+<p><strong>Content:</strong> What fits / Leather care / Repairs. Final care instructions and repair policy require brand input.</p>
+<p><strong>Real build reference:</strong> <a href="https://eng.polene-paris.com/blogs/bags/materials">Polène — Materials</a> · <a href="../research/live-reference-register.md#leather">Primary-page content</a></p>
+<p><strong>Layout:</strong> Three hairline rows, adjacent small leather detail, 144 px clear space.</p>
+<p><strong>Scroll:</strong> In normal flow. Opening increases document height without moving the trigger; reserve image space beside the questions.</p>
+<p><strong>Hover and focus:</strong> Summary text darkens and the plus rotates 90° over 160 ms. No photo animation.</p>
+<p><strong>Activation:</strong> Enter/Space or click toggles native details/summary. Multiple answers may remain open. Expanded copy includes the relevant detail-page link.</p>
+<p><strong>Touch / small screen:</strong> Entire summary is a minimum 48 px row; no hover requirement. Reduced motion opens immediately.</p>
+<p><strong>React:</strong> CareDisclosure using native details/summary. No duplicated React open state unless a future URL-deep-link requirement needs it.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>What fits → /avela/bags/the-arc#details</li>
+<li>Leather care → /avela/care</li>
+<li>Repairs → /avela/care#repairs</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> What fits, Leather care and Repairs are three full-width independent disclosure rows. Open answers increase document height.</p>
+<p><strong>Mobile scroll:</strong> Expanding an answer changes page height naturally and retains focus on its summary.</p>
+<p><strong>Mobile tap / focus:</strong> Tap anywhere in the full-width summary row to toggle. Multiple answers may stay open.</p>
+<p><strong>Mobile React:</strong> Use native details/summary, preserve content in DOM, and style the focus ring. Do not animate measured height under reduced motion.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-01-avela.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>A06 — In good company / embedded community</h3>
+<p><strong>Content:</strong> Everyday carry and weekend imagery are editorial proposals, not customer testimonials.</p>
+<p><strong>Real build reference:</strong> <a href="https://eng.polene-paris.com/">Polène — homepage</a> · <a href="../research/live-reference-register.md#polene">Browser scroll + DOM</a></p>
+<p><strong>Layout:</strong> Two small captions in A04; eliminate separate three-card band.</p>
+<p><strong>Scroll:</strong> Two stories with different image proportions form one quiet composition. Reveal once per story, 80 ms maximum stagger.</p>
+<p><strong>Hover and focus:</strong> Title underline and arrow translate 4 px. Optional image scale limited to 1.018; no hidden excerpt.</p>
+<p><strong>Activation:</strong> One link per story with a specific article title. Community captions only link when an actual owned story exists; decorative images have no pointer cursor.</p>
+<p><strong>Touch / small screen:</strong> Stack stories. Headline and short summary remain visible; no carousel required.</p>
+<p><strong>React:</strong> StoryLink[] from journal content; each owns image, title, excerpt and href. State-free unless editorial pagination is added later.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Everyday carry → /avela/journal/carried-through-the-day</li>
+<li>Weekend away → /avela/journal/weekend-away</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> The two supporting carry stories follow the main coastal story. At 390px they can be a two-up pair; use one column at 320px or large text.</p>
+<p><strong>Mobile scroll:</strong> Entries remain in document order; no autoplay or compulsory horizontal dragging.</p>
+<p><strong>Mobile tap / focus:</strong> One tap on the visible title/CTA navigates. Help rows use independent native disclosures.</p>
+<p><strong>Mobile React:</strong> Reuse StoryLink data; CSS changes the layout. Optional thumbnail never becomes the only accessible name.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-01-avela.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>A07 — Notes from the workshop / embedded journal</h3>
+<p><strong>Content:</strong> The making of a curve; a leather that keeps its story.</p>
+<p><strong>Real build reference:</strong> <a href="https://eng.polene-paris.com/blogs/bags/manufacturing">Polène — Manufacturing</a> · <a href="../research/live-reference-register.md#manufacturing">Primary-page content</a></p>
+<p><strong>Layout:</strong> Two text links and one detail already within A03; no duplicate photo grid.</p>
+<p><strong>Scroll:</strong> Two stories with different image proportions form one quiet composition. Reveal once per story, 80 ms maximum stagger.</p>
+<p><strong>Hover and focus:</strong> Title underline and arrow translate 4 px. Optional image scale limited to 1.018; no hidden excerpt.</p>
+<p><strong>Activation:</strong> One link per story with a specific article title. Community captions only link when an actual owned story exists; decorative images have no pointer cursor.</p>
+<p><strong>Touch / small screen:</strong> Stack stories. Headline and short summary remain visible; no carousel required.</p>
+<p><strong>React:</strong> StoryLink[] from journal content; each owns image, title, excerpt and href. State-free unless editorial pagination is added later.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>The making of a curve → /avela/workshop#shape</li>
+<li>A leather that keeps its story → /avela/care</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Notes from the workshop becomes one compact editorial link and optional supporting image within the care chapter; the journal archive holds the longer story list.</p>
+<p><strong>Mobile scroll:</strong> Entries remain in document order; no autoplay or compulsory horizontal dragging.</p>
+<p><strong>Mobile tap / focus:</strong> One tap on the visible title/CTA navigates. Help rows use independent native disclosures.</p>
+<p><strong>Mobile React:</strong> Reuse StoryLink data; CSS changes the layout. Optional thumbnail never becomes the only accessible name.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-01-avela.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>A08 — A longer story, in your inbox</h3>
+<p><strong>Content:</strong> One newsletter signup; no unsolicited overlay.</p>
+<p><strong>Real build reference:</strong> <a href="https://eng.polene-paris.com/">Polène — homepage</a> · <a href="../research/live-reference-register.md#polene">Browser scroll + DOM</a></p>
+<p><strong>Layout:</strong> Pale blue field, generous open area around label and email field.</p>
+<p><strong>Scroll:</strong> Static closing composition. Form never follows the user or opens an unsolicited modal.</p>
+<p><strong>Hover and focus:</strong> Button changes fill/foreground over 160 ms; input retains a stable border. Focus ring is always explicit.</p>
+<p><strong>Activation:</strong> Real form submit uses idle/submitting/success/error. Validate email, prevent duplicate requests, announce status and preserve input on failure. Until endpoint exists label demo as not connected.</p>
+<p><strong>Touch / small screen:</strong> Visible label plus autocomplete=email; 44 px button. Success stays in place without redirect.</p>
+<p><strong>React:</strong> NewsletterForm owns status and error; server action/API owns persistence. Keep inquiry CTA separate from marketing opt-in.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Join the atelier → newsletter endpoint, pending</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Newsletter heading, labelled email input and Join the atelier button stack in that order. The button spans the available width.</p>
+<p><strong>Mobile scroll:</strong> Form stays in normal flow above the footer and is not covered by a sticky bar or keyboard overlay.</p>
+<p><strong>Mobile tap / focus:</strong> Tap input opens the email keyboard. Explicit submit shows inline validation, pending, server-confirmed success or retryable failure.</p>
+<p><strong>Mobile React:</strong> NewsletterForm owns status; server owns success. type=email, autocomplete=email, visible label, aria-describedby and polite status region. No submission is implemented in this concept.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-01-avela.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>A09 — Avela footer</h3>
+<p><strong>Content:</strong> Bags, Workshop, Care, Contact, Shipping, Returns, Privacy, Terms.</p>
+<p><strong>Real build reference:</strong> <a href="https://eng.polene-paris.com/">Polène — homepage</a> · <a href="../research/live-reference-register.md#polene">Browser scroll + DOM</a></p>
+<p><strong>Layout:</strong> Dark oxblood close with broad gutters.</p>
+<p><strong>Scroll:</strong> Static footer in document flow with adequate bottom padding.</p>
+<p><strong>Hover and focus:</strong> Simple underline only; logo remains still.</p>
+<p><strong>Activation:</strong> Real anchors to existing routes; future routes are documented as planned, not fake working links.</p>
+<p><strong>Touch / small screen:</strong> Groups stack and remain expanded; maintain clear reading order.</p>
+<p><strong>React:</strong> SiteFooter from route groups and contact data. No animation state.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Bags → /avela/bags</li>
+<li>Workshop → /avela/workshop</li>
+<li>Care → /avela/care</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Keep AVELA and two short link groups. Use 16px text and 44px minimum row height in the build; legal links remain discoverable.</p>
+<p><strong>Mobile scroll:</strong> Footer follows the newsletter with no fixed positioning.</p>
+<p><strong>Mobile tap / focus:</strong> Links remain visible with generous row targets; do not require a first tap to reveal a link.</p>
+<p><strong>Mobile React:</strong> Reuse SiteFooter nav data. CSS grid becomes two columns then one at large text; preserve DOM order and legal destinations.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-01-avela.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h2>Content and asset handoff</h2>
+<p>Use the approved hero from research/approved. The long image is a composition reference; rebuild type and controls as HTML. Individual product, on-body, process and editorial assets are needed for implementation; do not slice UI text into photographs. Preserve approved silhouettes and packaging. Below-fold scenes, secondary products and stories remain design proposals.</p>
+<h2>Image generation</h2>
+<p><a href="../prompts/desktop/01-avela.txt">Exact round-two prompt</a> · <a href="../manifest.json">Manifest</a> · </p></div></main></html>

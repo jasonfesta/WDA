@@ -1,0 +1,33 @@
+Use case: ui-mockup / art-directed revision of a complete long desktop homepage.
+
+Make ONE single long, complete desktop website screenshot at width:height 1:3, target 1536 x 4608 or maximum useful native resolution. No presentation frame, browser chrome, multiple pages, labels or annotations. Make it look like a serious designed desktop website with several columns, not a narrow mobile site.
+
+REFERENCE 1 is the ORIGINAL APPROVED HERO. It is the strict visual authority. Preserve its brand, photograph, product shape, lettering, art direction, colors and geometry at the top in the original aspect ratio (~19–21% of this long page). Do not reinterpret or rename it.
+REFERENCE 2 is the FIRST LONG HOMEPAGE, supplied to show the current direction. Retain its brand world but REBUILD THE BELOW-FOLD LAYOUT. Its flaw is excessive stacked bands, equal-size grids and crowded boxy sections. The new image must visibly correct that flaw, not reproduce it.
+
+The user likes the themes and requests more breathing room, organic pacing, and a stronger continuation of the open approved hero. Organic means natural light, material detail, unequal image scale, offset editorial compositions and generous negative space. It does NOT mean adding wavy borders, bubble cards, cutout blob masks or decorative curves. Keep photographs rectangular, objects and architecture undistorted. Do not bend architecture or stretch images. Do not shrink body copy to fit.
+
+Reduce the visible modules by combining related stories. Seven major compositions including hero/close are specified below. These contain the needed product/project discovery, deeper story, material/process context, human editorial, help/journal and a complete newsletter/footer. Show real working-looking interactive affordances: persistent descriptive links, clear selected controls, restrained underline links, genuine email field. Never print a hover-state diagram or development annotation. Default selected state only. No every-section identical left title rail. No repeated three-column photo strips. No tightly stacked touching colored bands. At least two substantial spans of uninterrupted warm ivory negative space between major image compositions.
+
+Text: short, confident headings and concise real English. Exact brand and product names. No invented awards, reviews, metrics, certification or clinical promises. Prices if specified are concept prices. Full newsletter and footer visible. No clipped page bottom.
+
+BRAND: Oriel
+REVISION PRIORITY: The hero is open and monumental; the first lower page reduced it to a dense catalog. Restore long ivory pauses, photographs of different sizes and a single quiet material composition. Keep architectural geometry true: organic means rhythm, daylight and irregular spacing, not decorative blob masks.
+SPACING DIRECTION: Largest pauses in the set: 192–240 px between chapters at 1440 desktop; 96 px offsets; 7% side gutters. No adjacent full-width color bands. 70%+ of non-hero ground stays light ivory. Only one dark footer.
+
+PAGE COMPOSITIONS IN ORDER:
+1. Approved oriel hero unchanged: huge cream lowercase wordmark, rammed earth wall, oval opening, oak and brass.
+
+2. Long luminous ivory pause with Places with a second life and short fine-type filters All / Culture / Living. One large Willow Hall landscape at left, ONE smaller River Rooms portrait offset far lower at right, with huge blank space around both. Foundry Commons is a small text link, never a third card.
+
+3. Willow Hall, reopened: enormous architectural photograph, about 75% page width, offset right. Quiet 2-line serif heading and tiny caption outside; one very small plan drawing in margin below. Do not make a 50/50 boxed split.
+
+4. Matter. Light. Belonging.: an open cream editorial still life of irregular earth sample, oak joinery block and brass offcut on a studio table in sunlight, one photograph only. Small Listen / Reuse / Make / Inhabit process notes run nearby, not in four bordered panels.
+
+5. A place becomes itself through people: one large photographic panorama of the hall in use. Let it breathe with cream before and after. No text overlay rectangle. One small workshop-detail photo offset below can support Shared perspectives.
+
+6. Practice notes: mostly typography and negative space, two links Working with what is here / Drawing with daylight, one small daylight detail. No two-by-two photo grid.
+
+7. What could this place become? Huge airy ivory invitation with small Start a conversation action and separate email line. Finish with simple cocoa footer.
+
+Final visual check: faithful approved hero, much more open below the fold than reference 2, no repeated boxes, meaningful contextual photography, cohesive typography, full usable-looking footer. Do not add a page title outside the website.

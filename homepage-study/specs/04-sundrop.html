@@ -1,0 +1,228 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="author" content="Jason Festa"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WDA — 04-sundrop</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f7f4eb;color:#332b27;font:15px/1.5 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}a{color:inherit;text-underline-offset:4px}button,select{font:inherit;color:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,select:focus-visible{outline:2px solid #78252e;outline-offset:4px}header{padding:32px 3vw 28px;border-bottom:1px solid #dcd4c5}.top{display:flex;justify-content:space-between;gap:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}nav{display:flex;gap:22px;letter-spacing:0;text-transform:none;font-size:13px}h1{font:clamp(42px,6vw,82px)/1.02 Georgia,serif;letter-spacing:-.045em;color:#78252e;margin:45px 0 18px}.intro{max-width:680px;font-size:16px;color:#665b54}.toolbar{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin-top:28px}.segment{display:flex;border:1px solid #cbbfb0;border-radius:24px;padding:3px}.segment button{border:0;background:transparent;border-radius:20px;padding:8px 14px;font-size:13px}.segment [aria-pressed=true]{background:#78252e;color:#fffbea}.muted{color:#76685f;font-size:12px}.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px;padding:32px 3vw 48px;align-items:start}.card h2{font:23px/1.15 Georgia,serif;margin:5px 0 16px;letter-spacing:-.035em}.kicker{font-size:10px;letter-spacing:.06em;color:#79685c;text-transform:uppercase;min-height:30px}.preview{display:block;width:100%;padding:0;border:0;background:#e7dfd1;line-height:0;box-shadow:0 5px 20px #3d241318}.preview img{display:block;width:100%;height:auto}.cardnav{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12px;margin:16px 0 6px}.meta{font-size:11px;color:#776c62}.guide{padding:40px 3vw 60px;background:#eae6dc;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}.guide h2{font:34px/1.1 Georgia,serif;margin:0 0 14px;color:#78252e}.guide h3{font-size:14px}.guide p{max-width:650px;color:#62574e}.guide ul{padding-left:18px;line-height:2}.guide a{font-size:14px}footer{padding:25px 3vw;font-size:12px;color:#786d64}dialog{border:0;padding:0;width:min(1100px,96vw);max-width:none;height:94vh;max-height:none;border-radius:3px;background:#eee9df;color:#332b27}dialog::backdrop{background:#1e1617d9}.bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:14px 20px;background:#faf7ef;border-bottom:1px solid #cfc6b9}.bar select{max-width:240px;padding:8px;background:#faf7ef;border:1px solid #cfc6b9}.close{margin-left:auto;border:0;background:none;font-size:24px;padding:0 8px}.bar a{font-size:12px}.scroll{height:calc(100% - 122px);overflow:auto;padding:24px}.scroll img{display:block;width:min(100%,850px);height:auto;margin:auto;box-shadow:0 8px 30px #44302033}.note{padding:8px 20px;background:#faf7ef;font-size:12px;color:#75685e}.doc{max-width:1000px;margin:auto;padding:32px 28px 80px}.doc h1{font-size:48px;margin:32px 0}.doc h2{font:30px/1.2 Georgia,serif;margin:48px 0 18px;color:#78252e}.doc h3{font:23px/1.2 Georgia,serif;margin:40px 0 16px}.doc p,.doc li{line-height:1.8}.doc img{display:block;max-width:100%;height:auto;margin:20px 0;border:1px solid #ded5c8}.doc pre{overflow:auto;background:#eee9df;padding:20px;font:13px/1.6 ui-monospace,monospace}.doc code{font-size:.9em}.doc table{border-collapse:collapse;width:100%;font-size:13px}.doc td{padding:12px;border:1px solid #d4c9bb;vertical-align:top}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.guide{grid-template-columns:1fr 1fr}.guide>div:first-child{grid-column:1/-1}}@media(max-width:720px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding:24px 18px}.top{display:block}nav{margin-top:16px;flex-wrap:wrap}header{padding:24px 18px}.guide{display:block;padding:32px 20px}.guide>div{margin-bottom:28px}.card h2{font-size:20px}.doc{padding:24px 18px}.doc h1{font-size:36px}.scroll{height:calc(100% - 170px);padding:10px}}@media(max-width:420px){.grid{grid-template-columns:1fr}}
+
+.device-comparison{margin:28px 0 42px}.device-comparison h2{margin:0 0 12px!important}.device-comparison .comparison-intro{max-width:780px;color:#6c5e54;line-height:1.7}.device-pair{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:36px;align-items:start;margin-top:24px}.device-pair figure{margin:0;min-width:0}.device-pair figcaption{font:12px/1.5 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;letter-spacing:.03em;margin:0 0 14px;color:#776354;display:flex;gap:10px;justify-content:space-between;align-items:center}.device-pair img{display:block;width:100%;height:auto;border:0;margin:0;box-shadow:0 5px 22px #42291917}.device-pair a{min-width:0}.device-pair .phone-image{max-width:390px;margin:auto}.mobile-note{border-top:1px solid #d7cbbd;margin-top:28px;padding-top:24px}.mobile-note p{line-height:1.8}.mobile-evidence{display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px;align-items:start}.mobile-evidence img{width:100%;height:auto}.mobile-evidence p{line-height:1.7}.review .hero-review{display:block!important}.review .hero-review aside{padding:20px 0;max-width:900px}.doc.has-mobile{max-width:1300px}.doc.has-mobile>.doc-copy{max-width:960px;margin:auto}.device-pair figure.mobile-device{max-width:390px}.device-comparison .comparison-links{display:flex;gap:18px;flex-wrap:wrap;margin:16px 0;font-size:13px}.review .refs .ref img{max-height:500px;object-fit:contain;object-position:top left}.doc table{overflow-wrap:anywhere}@media(max-width:760px){.device-pair{grid-template-columns:minmax(0,1fr);gap:32px}.device-pair figure.mobile-device{width:100%;max-width:390px;margin:auto}.device-pair figure.desktop-device{width:100%}.mobile-evidence{grid-template-columns:minmax(0,1fr)}.mobile-evidence img{max-width:240px}.device-comparison .comparison-intro{font-size:14px}.device-pair figcaption{font-size:11px}}
+</style><main class="doc has-mobile"><nav><a href="../index.html">← Five homepages</a><a href="04-sundrop.md" download>Download Markdown ↓</a></nav><h1>Sundrop — tout and interaction specification</h1><section class="device-comparison" id="desktop-mobile"><h2>One homepage. Two layouts.</h2><p class="comparison-intro">The same Sundrop homepage, from hero to footer. Desktop stays on the left; its continuous mobile adaptation is on the right. Each image keeps its natural proportions.</p><div class="comparison-links"><a href="../images/desktop/04-sundrop.png">Open desktop image ↗</a><a href="../previews/04-sundrop-mobile.html">Open full mobile page ↗</a><a href="../images/mobile/04-sundrop.jpg" download>Mobile image ↓</a><a href="mobile-04-sundrop.html">Mobile research & behavior →</a></div><div class="device-pair"><figure class="desktop-device"><figcaption><span>DESKTOP · ROUND 2</span><span>Unchanged long concept</span></figcaption><a href="../images/desktop/04-sundrop.png"><img src="../images/desktop/04-sundrop.png" alt="Sundrop complete desktop homepage"></a></figure><figure class="mobile-device"><figcaption><span>MOBILE · 390 PX</span><span>One continuous homepage</span></figcaption><a href="../previews/04-sundrop-mobile.html"><img class="phone-image" src="../images/mobile/04-sundrop.jpg" alt="Sundrop complete mobile homepage"></a></figure></div><div class="mobile-note"><strong>What changes on mobile</strong><p>Place the portrait drink scene above the pack chooser. Pack options become full-width radio rows with a single clear selected state. Serving steps remain visible tap buttons; no fixed checkout bar.</p><p class="caption">Static design concepts. The mobile layout reflows the same content and uses generated adaptations of its imagery. Exact text, crops, spacing and tap targets should follow the Markdown when built.</p></div></section><div class="doc-copy">
+<p>Round 2 · 21 October 2026 · <a href="react-interaction-contract.md">Shared React contract</a> · <a href="../research/live-reference-register.md">Live reference evidence</a></p>
+<h2>Desktop and mobile preview</h2>
+<p><a href="../reviews/04-sundrop.html">Side-by-side review</a> · <a href="../images/desktop/04-sundrop.png">Desktop long image</a> · <a href="../images/mobile/04-sundrop.jpg">One continuous mobile homepage</a></p>
+<p><a href="mobile-04-sundrop.md">Mobile research and exact prompts</a> · <a href="react-mobile-contract.md">Mobile React contract</a></p>
+<h2>Critique and revised composition</h2>
+<p>Keep the sunlit product world and narrow wine-red display type. Replace the three boxed packs with one configurable still life. Merge flavor and ingredient panels; show serving as one dominant image and three explicit steps.</p>
+<p>Chapter gaps 128–176 px. Cream surrounds citrus and pack objects; orange used once for the flavor scene. Three equal grids never appear back-to-back.</p>
+<h2>Page sequence</h2>
+<ul>
+<li>Approved Sundrop hero with apricot spritz, ribbed coupe, coral 200 ml can and 8% ALC/VOL.</li>
+<li>Find your first pour: very spacious ivory area with one carton and one coral can on the left, elegant 4 cans / 8 cans / 12 cans radio-style labels on right. Selected 4 cans $24; other values $44 and $60. One Choose your pack button. No three cards.</li>
+<li>Apricot. Bitter orange. A little sparkle.: one beautifully composed large orange/coral still life with can and naturally scattered real fruit, not three ingredient tiles. Three small external labels under image, no icons.</li>
+<li>Chill. Pour. Take your time.: one large pouring photograph with wide cream margins. Three textual step selectors beneath, 01 Chill / 02 Pour / 03 Settle in. No three equal thumbnails.</li>
+<li>There&#x27;s room at our table: one warm full-width editorial gathering image. Under it one small offset detail of a table and a few lines; no stacked community grids.</li>
+<li>The afternoon journal: two unequal photo-and-caption stories The orange-twist pour / A table for four, separated by substantial space. Three tiny FAQ rows nearby: How to serve / Pack sizes / Delivery.</li>
+<li>A little sunshine in your inbox: open apricot signup area; full burgundy footer and Enjoy responsibly.</li>
+</ul>
+<h2>Tout register</h2>
+<p>Every former section is accounted for, including those embedded in larger compositions. Destinations are planned routes, not deployed pages. Scroll, hover and React details are WDA proposals.</p>
+<h3>D00 — A slower sip / hero</h3>
+<p><strong>Content:</strong> Approved alcoholic aperitif: Apricot, bitter orange, 200 ml, 8% ALC/VOL. Do not import nonalcoholic claims.</p>
+<p><strong>Real build reference:</strong> <a href="https://drinkghia.com/">Ghia — Homepage shop module</a> · <a href="../research/live-reference-register.md#ghia">Browser click + selected panel + screenshot</a></p>
+<p><strong>Layout:</strong> Original 1586:992 ratio.</p>
+<p><strong>Scroll:</strong> Normal document flow; no hero parallax, crop change or scroll-scrubbed lettering. Header becomes a solid 64 px surface only after the hero exits. Preserve its footprint.</p>
+<p><strong>Hover and focus:</strong> Underline actionable text over 180 ms. Photo and brand wordmark stay still.</p>
+<p><strong>Activation:</strong> Use real navigation links. Menu is a button with aria-expanded; Escape closes and focus returns.</p>
+<p><strong>Touch / small screen:</strong> Same visible actions; menu button at 44 × 44 px minimum. Approved desktop composition gets a separately art-directed mobile crop later.</p>
+<p><strong>React:</strong> Hero + SiteHeader; IntersectionObserver sentinel owns header mode. Hero content has no React animation state.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Find your first pour → /sundrop/aperitifs</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Headline wraps above a portrait can/coupe composition. Preserve 200 ml and 8% ALC/VOL. Find your first pour goes to the pack chooser in the same document.</p>
+<p><strong>Mobile scroll:</strong> Normal document scroll. Reserve hero height to avoid layout shift; never force a full viewport if copy needs more room.</p>
+<p><strong>Mobile tap / focus:</strong> Menu opens a labelled dialog; Escape/close returns focus. Primary CTA navigates or scrolls to its named section.</p>
+<p><strong>Mobile React:</strong> Header owns menuOpen; real links retain keyboard access. Picture sources and CSS object-position adapt crops. No viewport-dependent duplicate content.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-04-sundrop.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>D01 — Find your first pour / pack chooser</h3>
+<p><strong>Content:</strong> 4 cans $24 / 8 cans $44 / 12 cans $60 are WDA concept values, pending commerce data.</p>
+<p><strong>Real build reference:</strong> <a href="https://drinkghia.com/">Ghia — Homepage shop module</a> · <a href="../research/live-reference-register.md#ghia">Browser click + selected panel + screenshot</a></p>
+<p><strong>Layout:</strong> One product scene with radio options; no three repeated product boxes.</p>
+<p><strong>Scroll:</strong> One stable product scene; section reveals as a unit. Changing selection never scrolls the page or changes section height.</p>
+<p><strong>Hover and focus:</strong> Only selector outline/text responds over 160 ms. Do not rotate cans or move purchase controls.</p>
+<p><strong>Activation:</strong> Native radio group selects 4, 8 or 12 cans; selected pack, total price and product URL update together. Continue button navigates to the configured pack; no cart write in the reference gallery.</p>
+<p><strong>Touch / small screen:</strong> Use visible radio labels and 44 px targets; stack selector under product photo. Screen readers hear group legend and selected pack.</p>
+<p><strong>React:</strong> PackSelector; parent owns selectedPackId. Compute price/units/href from one packs map rather than separate state variables.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>4 cans → /sundrop/aperitifs/apricot?pack=4</li>
+<li>8 cans → /sundrop/aperitifs/apricot?pack=8</li>
+<li>12 cans → /sundrop/aperitifs/apricot?pack=12</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Product scene precedes three full-width radio labels: 4 / 8 / 12 cans. One selected row, one derived price, one Choose your pack action. No fixed purchase bar.</p>
+<p><strong>Mobile scroll:</strong> Chooser remains in flow. Reserve image space so a pack change does not move the CTA unexpectedly.</p>
+<p><strong>Mobile tap / focus:</strong> Tap the complete radio label to select 4, 8 or 12. Count, price, image and destination derive together; activation does not add to cart.</p>
+<p><strong>Mobile React:</strong> PackSelector uses one selectedPackId. Native fieldset/legend/radios; polite price update. Same commerce data and state contract at every width.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-04-sundrop.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>D02 — Flavor story</h3>
+<p><strong>Content:</strong> Apricot / Bitter orange / A little sparkle. Sensory copy, no wellness claims.</p>
+<p><strong>Real build reference:</strong> <a href="https://drinkghia.com/">Ghia — Homepage shop module</a> · <a href="../research/live-reference-register.md#ghia">Browser click + selected panel + screenshot</a></p>
+<p><strong>Layout:</strong> One substantial still life, short copy outside.</p>
+<p><strong>Scroll:</strong> Large image enters naturally; supporting text reveals once with a 12 px/600 ms settle. No section pinning or content swapping caused by scrolling.</p>
+<p><strong>Hover and focus:</strong> Only the text action underlines; editorial photo stays still unless it is itself the linked tout.</p>
+<p><strong>Activation:</strong> A descriptive story link opens its route. Noninteractive material photographs remain figure/figcaption.</p>
+<p><strong>Touch / small screen:</strong> Image then copy in the same DOM order; remove desktop overlaps; keep 48–72 px between chapters.</p>
+<p><strong>React:</strong> EditorialTout with eyebrow, title, body, image, imageSide and optional href. Static content props; CSS grid does the composition.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Meet the aperitif → /sundrop/aperitifs/apricot</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Flavor heading and ingredient scene stack vertically. The can stays readable and proportionate.</p>
+<p><strong>Mobile scroll:</strong> Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.</p>
+<p><strong>Mobile tap / focus:</strong> Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.</p>
+<p><strong>Mobile React:</strong> EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-04-sundrop.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>D03 — What goes into a slower afternoon</h3>
+<p><strong>Content:</strong> Apricots, bitter orange, botanicals are approved/proposed narrative cues; full ingredient declaration requires formulation data.</p>
+<p><strong>Real build reference:</strong> <a href="https://pentiredrinks.com/blogs/serves">Pentire — Serves</a> · <a href="../research/live-reference-register.md#pentire">Primary-page content</a></p>
+<p><strong>Layout:</strong> Captions integrated into D02, not a second ingredient grid.</p>
+<p><strong>Scroll:</strong> Large image enters naturally; supporting text reveals once with a 12 px/600 ms settle. No section pinning or content swapping caused by scrolling.</p>
+<p><strong>Hover and focus:</strong> Only the text action underlines; editorial photo stays still unless it is itself the linked tout.</p>
+<p><strong>Activation:</strong> A descriptive story link opens its route. Noninteractive material photographs remain figure/figcaption.</p>
+<p><strong>Touch / small screen:</strong> Image then copy in the same DOM order; remove desktop overlaps; keep 48–72 px between chapters.</p>
+<p><strong>React:</strong> EditorialTout with eyebrow, title, body, image, imageSide and optional href. Static content props; CSS grid does the composition.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Ingredients → /sundrop/aperitifs/apricot#ingredients</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Ingredient labels can form a short three-up list at 390px; switch to one column at 320px or enlarged text. No ingredient claims beyond approved copy.</p>
+<p><strong>Mobile scroll:</strong> Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.</p>
+<p><strong>Mobile tap / focus:</strong> Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.</p>
+<p><strong>Mobile React:</strong> EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-04-sundrop.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>D04 — Chill / Pour / Settle in</h3>
+<p><strong>Content:</strong> Three serving stages; final serving instructions need product sign-off.</p>
+<p><strong>Real build reference:</strong> <a href="https://pentiredrinks.com/blogs/serves">Pentire — Serves</a> · <a href="../research/live-reference-register.md#pentire">Primary-page content</a></p>
+<p><strong>Layout:</strong> Single large media area; explicit controls below.</p>
+<p><strong>Scroll:</strong> Natural reading order. Scroll never changes the selected step. One large active photograph gives the sequence space.</p>
+<p><strong>Hover and focus:</strong> Step button underline brightens over 160 ms; no automatic selection on hover or focus.</p>
+<p><strong>Activation:</strong> Click/Enter chooses step and crossfades fixed-ratio media over 220 ms. aria-pressed buttons control a labelled region. No autoplay.</p>
+<p><strong>Touch / small screen:</strong> Three full-width or wrapping buttons remain visible; active description is below. Keyboard Tab/Enter works without a custom tab algorithm.</p>
+<p><strong>React:</strong> RitualSteps or ServeSteps; selectedStepId in parent; image and description derived from steps data. CSS fade; respect reduced motion.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Chill → local step chill</li>
+<li>Pour → local step pour</li>
+<li>Settle in → local step settle</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Chill / Pour / Settle in are three visible buttons. Selection changes one instruction region and its approved image; it never advances with scroll or a timer.</p>
+<p><strong>Mobile scroll:</strong> Selection changes only on activation, never on scroll position. Keep the selected region stable in height where practical.</p>
+<p><strong>Mobile tap / focus:</strong> Tap one of three labelled buttons. Focus alone does not select. The selected button is visibly marked and exposes aria-pressed.</p>
+<p><strong>Mobile React:</strong> RitualSteps/ServeSteps owns selectedStepId. One record supplies image and copy. No incomplete ARIA tab implementation; do not duplicate state for mobile.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-04-sundrop.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>D05 — There’s room at our table</h3>
+<p><strong>Content:</strong> Adult gathering scene; no customer names or endorsements.</p>
+<p><strong>Real build reference:</strong> <a href="https://pentiredrinks.com/blogs/news">Pentire — Community</a> · <a href="../research/live-reference-register.md#community">Primary-page content</a></p>
+<p><strong>Layout:</strong> Cinematic image and small outside caption.</p>
+<p><strong>Scroll:</strong> Large image enters naturally; supporting text reveals once with a 12 px/600 ms settle. No section pinning or content swapping caused by scrolling.</p>
+<p><strong>Hover and focus:</strong> Only the text action underlines; editorial photo stays still unless it is itself the linked tout.</p>
+<p><strong>Activation:</strong> A descriptive story link opens its route. Noninteractive material photographs remain figure/figcaption.</p>
+<p><strong>Touch / small screen:</strong> Image then copy in the same DOM order; remove desktop overlaps; keep 48–72 px between chapters.</p>
+<p><strong>React:</strong> EditorialTout with eyebrow, title, body, image, imageSide and optional href. Static content props; CSS grid does the composition.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Pull up another chair → /sundrop/our-table</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Adult gathering photo is a full-width story with an explicit Pull up another chair link. Keep adequate contrast if copy overlays the crop.</p>
+<p><strong>Mobile scroll:</strong> Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.</p>
+<p><strong>Mobile tap / focus:</strong> Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.</p>
+<p><strong>Mobile React:</strong> EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-04-sundrop.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>D06 — Good company, unhurried</h3>
+<p><strong>Content:</strong> Sunlit sips / Simple pleasures / Made for the moment become contextual notes.</p>
+<p><strong>Real build reference:</strong> <a href="https://pentiredrinks.com/blogs/news">Pentire — Community</a> · <a href="../research/live-reference-register.md#community">Primary-page content</a></p>
+<p><strong>Layout:</strong> Embedded with D05; one smaller detail, not another three-card row.</p>
+<p><strong>Scroll:</strong> Two stories with different image proportions form one quiet composition. Reveal once per story, 80 ms maximum stagger.</p>
+<p><strong>Hover and focus:</strong> Title underline and arrow translate 4 px. Optional image scale limited to 1.018; no hidden excerpt.</p>
+<p><strong>Activation:</strong> One link per story with a specific article title. Community captions only link when an actual owned story exists; decorative images have no pointer cursor.</p>
+<p><strong>Touch / small screen:</strong> Stack stories. Headline and short summary remain visible; no carousel required.</p>
+<p><strong>React:</strong> StoryLink[] from journal content; each owns image, title, excerpt and href. State-free unless editorial pagination is added later.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>More moments → /sundrop/our-table#stories</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Supporting community notes remain inside the table story rather than three repeated photo cards. Route links retain descriptive labels.</p>
+<p><strong>Mobile scroll:</strong> Entries remain in document order; no autoplay or compulsory horizontal dragging.</p>
+<p><strong>Mobile tap / focus:</strong> One tap on the visible title/CTA navigates. Help rows use independent native disclosures.</p>
+<p><strong>Mobile React:</strong> Reuse StoryLink data; CSS changes the layout. Optional thumbnail never becomes the only accessible name.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-04-sundrop.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>D07 — Afternoon journal and practical FAQ</h3>
+<p><strong>Content:</strong> The orange-twist pour / A table for four. FAQ uses shared disclosure behavior, not links that open empty drawers.</p>
+<p><strong>Real build reference:</strong> <a href="https://pentiredrinks.com/blogs/serves">Pentire — Serves</a> · <a href="../research/live-reference-register.md#pentire">Primary-page content</a></p>
+<p><strong>Layout:</strong> Two unequal story images; three quiet details/summary rows.</p>
+<p><strong>Scroll:</strong> Two stories with different image proportions form one quiet composition. Reveal once per story, 80 ms maximum stagger.</p>
+<p><strong>Hover and focus:</strong> Title underline and arrow translate 4 px. Optional image scale limited to 1.018; no hidden excerpt.</p>
+<p><strong>Activation:</strong> One link per story with a specific article title. Community captions only link when an actual owned story exists; decorative images have no pointer cursor.</p>
+<p><strong>Touch / small screen:</strong> Stack stories. Headline and short summary remain visible; no carousel required.</p>
+<p><strong>React:</strong> StoryLink[] from journal content; each owns image, title, excerpt and href. State-free unless editorial pagination is added later.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Orange-twist pour → /sundrop/how-we-pour/orange-twist</li>
+<li>A table for four → /sundrop/our-table/table-for-four</li>
+<li>How to serve / Pack sizes / Delivery → disclosures</li>
+</ul>
+<p><strong>Help-row behavior:</strong> Enter/Space or click toggles native details/summary. Multiple answers may remain open. Expanded copy includes the relevant detail-page link. Summary text darkens and the plus rotates 90° over 160 ms. No photo animation. Entire summary is a minimum 48 px row; no hover requirement. Reduced motion opens immediately.</p>
+<p><strong>Mobile reflow — this same tout:</strong> Two journal entries stack with visible text; How to serve, Pack sizes and Delivery follow as separate full-width help disclosures.</p>
+<p><strong>Mobile scroll:</strong> Entries remain in document order; no autoplay or compulsory horizontal dragging.</p>
+<p><strong>Mobile tap / focus:</strong> One tap on the visible title/CTA navigates. Help rows use independent native disclosures.</p>
+<p><strong>Mobile React:</strong> Reuse StoryLink data; CSS changes the layout. Optional thumbnail never becomes the only accessible name.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-04-sundrop.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>D08 — A little sunshine in your inbox</h3>
+<p><strong>Content:</strong> Recipe and hosting newsletter with an explicit opt-in.</p>
+<p><strong>Real build reference:</strong> <a href="https://drinkghia.com/">Ghia — Homepage shop module</a> · <a href="../research/live-reference-register.md#ghia">Browser click + selected panel + screenshot</a></p>
+<p><strong>Layout:</strong> Apricot closing field with generous padding.</p>
+<p><strong>Scroll:</strong> Static closing composition. Form never follows the user or opens an unsolicited modal.</p>
+<p><strong>Hover and focus:</strong> Button changes fill/foreground over 160 ms; input retains a stable border. Focus ring is always explicit.</p>
+<p><strong>Activation:</strong> Real form submit uses idle/submitting/success/error. Validate email, prevent duplicate requests, announce status and preserve input on failure. Until endpoint exists label demo as not connected.</p>
+<p><strong>Touch / small screen:</strong> Visible label plus autocomplete=email; 44 px button. Success stays in place without redirect.</p>
+<p><strong>React:</strong> NewsletterForm owns status and error; server action/API owns persistence. Keep inquiry CTA separate from marketing opt-in.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Join our table → newsletter endpoint, pending</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Peach newsletter uses a full-width field and a full-width button on the next row. Keep consent and error text in the same flow.</p>
+<p><strong>Mobile scroll:</strong> Form stays in normal flow above the footer and is not covered by a sticky bar or keyboard overlay.</p>
+<p><strong>Mobile tap / focus:</strong> Tap input opens the email keyboard. Explicit submit shows inline validation, pending, server-confirmed success or retryable failure.</p>
+<p><strong>Mobile React:</strong> NewsletterForm owns status; server owns success. type=email, autocomplete=email, visible label, aria-describedby and polite status region. No submission is implemented in this concept.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-04-sundrop.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h3>D09 — Sundrop footer</h3>
+<p><strong>Content:</strong> Aperitifs / How we pour / Our table / Contact / Shipping / Privacy / Terms; Enjoy responsibly.</p>
+<p><strong>Real build reference:</strong> <a href="https://pentiredrinks.com/blogs/serves">Pentire — Serves</a> · <a href="../research/live-reference-register.md#pentire">Primary-page content</a></p>
+<p><strong>Layout:</strong> Deep wine close with spacious columns.</p>
+<p><strong>Scroll:</strong> Static footer in document flow with adequate bottom padding.</p>
+<p><strong>Hover and focus:</strong> Simple underline only; logo remains still.</p>
+<p><strong>Activation:</strong> Real anchors to existing routes; future routes are documented as planned, not fake working links.</p>
+<p><strong>Touch / small screen:</strong> Groups stack and remain expanded; maintain clear reading order.</p>
+<p><strong>React:</strong> SiteFooter from route groups and contact data. No animation state.</p>
+<p><strong>Individual tiles / destinations:</strong></p>
+<ul>
+<li>Aperitifs → /sundrop/aperitifs</li>
+<li>How we pour → /sundrop/how-we-pour</li>
+<li>Our table → /sundrop/our-table</li>
+</ul>
+<p><strong>Mobile reflow — this same tout:</strong> Two readable footer groups and Enjoy responsibly. The product category and ABV remain consistent with the desktop concept.</p>
+<p><strong>Mobile scroll:</strong> Footer follows the newsletter with no fixed positioning.</p>
+<p><strong>Mobile tap / focus:</strong> Links remain visible with generous row targets; do not require a first tap to reveal a link.</p>
+<p><strong>Mobile React:</strong> Reuse SiteFooter nav data. CSS grid becomes two columns then one at large text; preserve DOM order and legal destinations.</p>
+<p><a href="../research/mobile.md">Phone-width source evidence</a> · <a href="mobile-04-sundrop.md">Complete mobile adaptation</a></p>
+<p><strong>Reduced motion:</strong> immediate state changes; no transforms, zoom or scroll smoothing. Preserve focus, selection and content.</p>
+<h2>Content and asset handoff</h2>
+<p>Use the approved hero from research/approved. The long image is a composition reference; rebuild type and controls as HTML. Individual product, on-body, process and editorial assets are needed for implementation; do not slice UI text into photographs. Preserve approved silhouettes and packaging. Below-fold scenes, secondary products and stories remain design proposals.</p>
+<h2>Image generation</h2>
+<p><a href="../prompts/desktop/04-sundrop.txt">Exact round-two prompt</a> · <a href="../manifest.json">Manifest</a> · </p></div></main></html>

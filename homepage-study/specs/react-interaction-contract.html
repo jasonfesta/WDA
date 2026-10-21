@@ -1,0 +1,121 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="author" content="Jason Festa"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WDA — react-interaction-contract</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f7f4eb;color:#332b27;font:15px/1.5 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}a{color:inherit;text-underline-offset:4px}button,select{font:inherit;color:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,select:focus-visible{outline:2px solid #78252e;outline-offset:4px}header{padding:32px 3vw 28px;border-bottom:1px solid #dcd4c5}.top{display:flex;justify-content:space-between;gap:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}nav{display:flex;gap:22px;letter-spacing:0;text-transform:none;font-size:13px}h1{font:clamp(42px,6vw,82px)/1.02 Georgia,serif;letter-spacing:-.045em;color:#78252e;margin:45px 0 18px}.intro{max-width:680px;font-size:16px;color:#665b54}.toolbar{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin-top:28px}.segment{display:flex;border:1px solid #cbbfb0;border-radius:24px;padding:3px}.segment button{border:0;background:transparent;border-radius:20px;padding:8px 14px;font-size:13px}.segment [aria-pressed=true]{background:#78252e;color:#fffbea}.muted{color:#76685f;font-size:12px}.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px;padding:32px 3vw 48px;align-items:start}.card h2{font:23px/1.15 Georgia,serif;margin:5px 0 16px;letter-spacing:-.035em}.kicker{font-size:10px;letter-spacing:.06em;color:#79685c;text-transform:uppercase;min-height:30px}.preview{display:block;width:100%;padding:0;border:0;background:#e7dfd1;line-height:0;box-shadow:0 5px 20px #3d241318}.preview img{display:block;width:100%;height:auto}.cardnav{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12px;margin:16px 0 6px}.meta{font-size:11px;color:#776c62}.guide{padding:40px 3vw 60px;background:#eae6dc;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}.guide h2{font:34px/1.1 Georgia,serif;margin:0 0 14px;color:#78252e}.guide h3{font-size:14px}.guide p{max-width:650px;color:#62574e}.guide ul{padding-left:18px;line-height:2}.guide a{font-size:14px}footer{padding:25px 3vw;font-size:12px;color:#786d64}dialog{border:0;padding:0;width:min(1100px,96vw);max-width:none;height:94vh;max-height:none;border-radius:3px;background:#eee9df;color:#332b27}dialog::backdrop{background:#1e1617d9}.bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:14px 20px;background:#faf7ef;border-bottom:1px solid #cfc6b9}.bar select{max-width:240px;padding:8px;background:#faf7ef;border:1px solid #cfc6b9}.close{margin-left:auto;border:0;background:none;font-size:24px;padding:0 8px}.bar a{font-size:12px}.scroll{height:calc(100% - 122px);overflow:auto;padding:24px}.scroll img{display:block;width:min(100%,850px);height:auto;margin:auto;box-shadow:0 8px 30px #44302033}.note{padding:8px 20px;background:#faf7ef;font-size:12px;color:#75685e}.doc{max-width:1000px;margin:auto;padding:32px 28px 80px}.doc h1{font-size:48px;margin:32px 0}.doc h2{font:30px/1.2 Georgia,serif;margin:48px 0 18px;color:#78252e}.doc h3{font:23px/1.2 Georgia,serif;margin:40px 0 16px}.doc p,.doc li{line-height:1.8}.doc img{display:block;max-width:100%;height:auto;margin:20px 0;border:1px solid #ded5c8}.doc pre{overflow:auto;background:#eee9df;padding:20px;font:13px/1.6 ui-monospace,monospace}.doc code{font-size:.9em}.doc table{border-collapse:collapse;width:100%;font-size:13px}.doc td{padding:12px;border:1px solid #d4c9bb;vertical-align:top}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.guide{grid-template-columns:1fr 1fr}.guide>div:first-child{grid-column:1/-1}}@media(max-width:720px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding:24px 18px}.top{display:block}nav{margin-top:16px;flex-wrap:wrap}header{padding:24px 18px}.guide{display:block;padding:32px 20px}.guide>div{margin-bottom:28px}.card h2{font-size:20px}.doc{padding:24px 18px}.doc h1{font-size:36px}.scroll{height:calc(100% - 170px);padding:10px}}@media(max-width:420px){.grid{grid-template-columns:1fr}}
+
+.device-comparison{margin:28px 0 42px}.device-comparison h2{margin:0 0 12px!important}.device-comparison .comparison-intro{max-width:780px;color:#6c5e54;line-height:1.7}.device-pair{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:36px;align-items:start;margin-top:24px}.device-pair figure{margin:0;min-width:0}.device-pair figcaption{font:12px/1.5 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;letter-spacing:.03em;margin:0 0 14px;color:#776354;display:flex;gap:10px;justify-content:space-between;align-items:center}.device-pair img{display:block;width:100%;height:auto;border:0;margin:0;box-shadow:0 5px 22px #42291917}.device-pair a{min-width:0}.device-pair .phone-image{max-width:390px;margin:auto}.mobile-note{border-top:1px solid #d7cbbd;margin-top:28px;padding-top:24px}.mobile-note p{line-height:1.8}.mobile-evidence{display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px;align-items:start}.mobile-evidence img{width:100%;height:auto}.mobile-evidence p{line-height:1.7}.review .hero-review{display:block!important}.review .hero-review aside{padding:20px 0;max-width:900px}.doc.has-mobile{max-width:1300px}.doc.has-mobile>.doc-copy{max-width:960px;margin:auto}.device-pair figure.mobile-device{max-width:390px}.device-comparison .comparison-links{display:flex;gap:18px;flex-wrap:wrap;margin:16px 0;font-size:13px}.review .refs .ref img{max-height:500px;object-fit:contain;object-position:top left}.doc table{overflow-wrap:anywhere}@media(max-width:760px){.device-pair{grid-template-columns:minmax(0,1fr);gap:32px}.device-pair figure.mobile-device{width:100%;max-width:390px;margin:auto}.device-pair figure.desktop-device{width:100%}.mobile-evidence{grid-template-columns:minmax(0,1fr)}.mobile-evidence img{max-width:240px}.device-comparison .comparison-intro{font-size:14px}.device-pair figcaption{font-size:11px}}
+</style><main class="doc"><nav><a href="../index.html">← Five homepages</a><a href="react-interaction-contract.md" download>Download Markdown ↓</a></nav><h1>WDA — homepage interaction and React contract</h1>
+<p>Round 2 · 21 October 2026</p>
+<h2>Scope and evidence</h2>
+<p>This pass refines the five existing homepages. It does not generate additional routes or claim that the raster images are functioning React pages. The approved source headers remain available in research/approved. The generated images approximate those headers; the production build should use the approved originals with real HTML type and controls.</p>
+<p>The 25-site category research remains in the research directory. This pass adds a deeper 17-page evidence register, six browser screenshots, 50 contextual tout specifications and a shared React contract. “Observed” in the register means exactly the inspection described there. Scroll timing, hover scale, easing, spacing and component architecture below are proposed WDA behavior. Pointer-hover behavior was not directly exercised on the reference sites.</p>
+<p>Existing WDA product/project names are retained. Prices for new products, new stories, service details and routes remain concept content until supplied by the brand. Reference-site facts and claims do not become WDA facts.</p>
+<h2>Visual rhythm</h2>
+<ul>
+<li>Keep the original hero composition and aspect ratio. Do not stretch it to make a taller page.</li>
+<li>Use seven major compositions instead of ten equal stacked bands. Related touts remain separately addressable in content but share visual space.</li>
+<li>At 1440 px desktop, use 144–192 px between most chapters; Oriel uses 192–240 px. Within a chapter use 32–64 px gaps. Phone chapter gaps are 48–72 px, Oriel 72–96 px.</li>
+<li>A 12-column grid is a placement system, not a requirement for visible cards. Use 7/4, 8/3 and 9/2 compositions with an empty column.</li>
+<li>Use three unboxed product choices, or two unequal project photographs followed by a text-only third entry.</li>
+<li>Organic pacing comes from light, material and unequal image scale. Keep architecture and product silhouettes true. Avoid decorative blob masks and repeated colored stripes.</li>
+<li>Consolidate material/process, editorial/community and journal/help. Leave negative space empty.</li>
+<li>Raster spacing is illustrative. Use the CSS values as the implementation source of truth.</li>
+</ul>
+<h2>Shared interaction rules</h2>
+<p>All timing and motion below is proposed WDA behavior, not reverse-engineered source-site timing.</p>
+<ul>
+<li>Scroll normally: no hijacking, forced horizontal sections, scroll-triggered selection, pinned multi-screen scenes or automatic carousels.</li>
+<li>Secondary image/copy groups settle by 12 px over 600 ms once at 15% visibility. Hero, navigation, forms and essential reading content are visible immediately. Never hide content behind a failed animation.</li>
+<li>Fine-pointer hover only: product alternate images crossfade in 240 ms; project images scale to 1.018 in 500 ms; arrows travel 4 px in 180 ms. Essential information is always visible.</li>
+<li>Focus uses a visible 2 px outline with 4 px offset. Focus does not select a product, step or filter; activation does.</li>
+<li>Reduced motion disables translate, scale, parallax and scroll smoothing. State changes immediately; focus and selection remain clear.</li>
+<li>Touch uses the same labels/actions, 44 px targets and DOM reading order. Desktop offsets disappear.</li>
+<li>Links navigate; buttons change local state; radios choose one option. Never nest buttons in linked tiles.</li>
+<li>Independent accordions use native details/summary. Three-step selectors use aria-pressed buttons and a labelled region, not incomplete ARIA tab roles.</li>
+<li>No hero video is planned. A later video needs a poster and explicit play/pause.</li>
+<li>Planned routes are contracts for later builds, not fake working links.</li>
+</ul>
+<h2>Data and state ownership</h2>
+<p>Static content owns stable IDs, headlines, image pairs, image dimensions, alt text, captions and destinations. Prices/availability must come from commerce once connected. Provenance, ingredient lists and service promises need approved brand data.</p>
+<p>ProductRange owns selected variants only where variants exist. PackSelector owns one selectedPackId; price, unit count, image and href derive from that record. RitualSteps/ServeSteps owns selectedStepId and derives image and copy. ProjectIndex reads router search parameters; the URL is its single source of truth. NewsletterForm owns submission status; the server owns persistence. EditorialTout, ProjectTout, StoryLink and SiteFooter are state-free.</p>
+<p>Namespace prototypes beneath brand slugs. Separate production sites can remove the prefix in the routing adapter.</p>
+<h2>React mapping</h2>
+<p>The React plan uses shared components and responsive CSS. This study does not install dependencies or implement the depicted applications.</p>
+<p>Suggested structure:</p>
+<p>src/features/landing/</p>
+<p>  data/{avela,room-and-ritual,oriel,sundrop,serein}.ts</p>
+<p>  components/{Hero,ProductRange,ProjectTout,EditorialTout,StoryLink}.tsx</p>
+<p>  components/{PackSelector,RitualSteps,CareDisclosure,NewsletterForm}.tsx</p>
+<p>  hooks/useSectionEntrance.ts</p>
+<p>  styles/{tokens,composition,interaction}.css</p>
+<p>  routes/&lt;brand&gt;/index.tsx</p>
+<p>Build semantic content first, then grids and exact assets, then stateful controls, then restrained motion. The PNG is a reference, not the background of a working page.</p>
+<h2>Example state contract</h2>
+<p>Proposed implementation sketch; not a tested application. All displayed pack values derive from one record. Replace concept values with approved commerce data.</p>
+<pre><code>import { useState } from &quot;react&quot;;
+type PackId = &quot;4&quot; | &quot;8&quot; | &quot;12&quot;;
+const packs = {
+  &quot;4&quot;: { label: &quot;4 cans&quot;, price: 24, href: &quot;/sundrop/aperitifs/apricot?pack=4&quot; },
+  &quot;8&quot;: { label: &quot;8 cans&quot;, price: 44, href: &quot;/sundrop/aperitifs/apricot?pack=8&quot; },
+  &quot;12&quot;: { label: &quot;12 cans&quot;, price: 60, href: &quot;/sundrop/aperitifs/apricot?pack=12&quot; },
+};
+function PackSelector() {
+  const [selectedPackId, setSelectedPackId] = useState&lt;PackId&gt;(&quot;4&quot;);
+  const selected = packs[selectedPackId];
+  return (
+    &lt;section aria-labelledby=&quot;pack-title&quot;&gt;
+      &lt;h2 id=&quot;pack-title&quot;&gt;Find your first pour&lt;/h2&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Choose your pack&lt;/legend&gt;
+        {(Object.keys(packs) as PackId[]).map(id =&gt; (
+          &lt;label key={id}&gt;
+            &lt;input type=&quot;radio&quot; name=&quot;pack&quot; value={id}
+              checked={id === selectedPackId}
+              onChange={() =&gt; setSelectedPackId(id)} /&gt;
+            {packs[id].label}
+          &lt;/label&gt;
+        ))}
+      &lt;/fieldset&gt;
+      &lt;p aria-live=&quot;polite&quot;&gt;{selected.label} · USD {selected.price}&lt;/p&gt;
+      &lt;a href={selected.href}&gt;Choose your pack&lt;/a&gt;
+    &lt;/section&gt;
+  );
+}</code></pre>
+<h2>Motion and CSS contract</h2>
+<p>Use Motion for a small reveal wrapper with useInView once, amount 0.15, and useReducedMotion. Keep CSS-only hover out of React state. The SSR/no-JavaScript default stays readable. Failed images preserve aspect ratio and descriptive links.</p>
+<pre><code>:root {
+  --chapter-gap: clamp(3rem, 10vw, 12rem);
+  --page-gutter: clamp(1.5rem, 6vw, 6rem);
+  --ease-editorial: cubic-bezier(.22, 1, .36, 1);
+}
+[data-brand=&quot;oriel&quot;] { --chapter-gap: clamp(4.5rem, 14vw, 15rem); }
+.chapter + .chapter { margin-block-start: var(--chapter-gap); }
+.tout__media { overflow: hidden; }
+.tout__image { display: block; width: 100%; height: auto; }
+.tout:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+@media (hover: hover) and (pointer: fine) {
+  .project-tout .tout__image { transition: transform 500ms var(--ease-editorial); }
+  .project-tout:hover .tout__image { transform: scale(1.018); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tout__image, .tout__arrow { transition: none !important; transform: none !important; }
+}</code></pre>
+<h2>States and future implementation checks</h2>
+<table>
+<tr><td>Component</td><td>States</td><td>Meaningful acceptance check</td></tr>
+<tr><td>ProductTout</td><td>Default, alternate hover, focus; variant if offered</td><td>Labels stay visible; variant changes image and route together</td></tr>
+<tr><td>ProjectIndex</td><td>All, category, empty, browser Back</td><td>URL restores category without moving focus</td></tr>
+<tr><td>PackSelector</td><td>4 / 8 / 12; unavailable if reported by commerce</td><td>Count, price and destination agree</td></tr>
+<tr><td>RitualSteps / ServeSteps</td><td>Three selected steps, keyboard activation</td><td>Focus alone does not select; button and region agree</td></tr>
+<tr><td>Disclosure</td><td>Closed, open, multiple open</td><td>Keyboard toggles; focus remains on summary</td></tr>
+<tr><td>NewsletterForm</td><td>Idle, invalid, submitting, success, server failure</td><td>Prevent duplicates; server-confirmed success; retain input on failure</td></tr>
+<tr><td>SiteHeader</td><td>Hero overlay, solid after hero, menu open/closed</td><td>No layout shift; Escape restores focus</td></tr>
+<tr><td>All</td><td>1440 / 768 / 390 px; reduced motion</td><td>No overlap or essential hover-only content</td></tr>
+</table>
+<p>These are future implementation criteria, not tests executed during this documentation pass.</p>
+<h2>Primary implementation documentation</h2>
+<ul>
+<li><a href="https://react.dev/learn/sharing-state-between-components">React — sharing state</a>: keep coupled state in a common parent.</li>
+<li><a href="https://motion.dev/docs/react-scroll-animations">Motion — scroll animations</a>: distinguish entrances from continuous scroll linkage.</li>
+<li><a href="https://motion.dev/docs/react-accessibility">Motion — accessibility</a>: honor motion preferences.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/hover">MDN — hover media feature</a>: gate pointer enhancements.</li>
+</ul></main></html>

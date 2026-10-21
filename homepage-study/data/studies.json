@@ -1,0 +1,1269 @@
+{
+  "date": "2026-10-21",
+  "refs": {
+    "polene": {
+      "name": "Polène — homepage",
+      "url": "https://eng.polene-paris.com/",
+      "evidence": "Browser scroll + DOM",
+      "note": "Product silhouettes sit above a wide pause and paired editorial photographs. Product links and separate quick-add controls are present. Hover animation was not tested.",
+      "image": "research/captures/desktop/polene-products-editorial.jpg"
+    },
+    "hereu": {
+      "name": "Hereu — Craftsmanship",
+      "url": "https://hereustudio.com/pages/craftmanship",
+      "evidence": "Primary-page content",
+      "note": "Craft narrative provides a dedicated destination for maker and material stories; interaction timing was not observed."
+    },
+    "leather": {
+      "name": "Polène — Materials",
+      "url": "https://eng.polene-paris.com/blogs/bags/materials",
+      "evidence": "Primary-page content",
+      "note": "A dedicated material story is distinct from the product index."
+    },
+    "manufacturing": {
+      "name": "Polène — Manufacturing",
+      "url": "https://eng.polene-paris.com/blogs/bags/manufacturing",
+      "evidence": "Primary-page content",
+      "note": "Making has a separate editorial destination."
+    },
+    "ashby": {
+      "name": "Studio Ashby — Projects",
+      "url": "https://studioashby.com/projects/",
+      "evidence": "Browser scroll, screenshot and click",
+      "note": "Unboxed photographs carry small project captions. The Tamodi tile navigated to a dedicated full-image case study.",
+      "image": "research/captures/desktop/studio-ashby-projects.jpg"
+    },
+    "tamodi": {
+      "name": "Studio Ashby — Tamodi Estate",
+      "url": "https://studioashby.com/project/tamodi-estate/",
+      "evidence": "Browser navigation + DOM",
+      "note": "Full-viewport photograph leads into image pairs, a narrative, linked furniture and a next-project control.",
+      "image": "research/captures/desktop/studio-ashby-open-project.jpg"
+    },
+    "workstead": {
+      "name": "Workstead — Studio and lighting",
+      "url": "https://workstead.com/",
+      "evidence": "Primary-page content",
+      "note": "Interiors and lighting have distinct paths; finish samples and studio inquiry support the design offering."
+    },
+    "inquiry": {
+      "name": "Workstead — Project inquiry",
+      "url": "https://workstead.com/project-inquiry/",
+      "evidence": "Primary-page content; no submission",
+      "note": "Inquiry asks for project type, location, timeline and description. Newsletter interests are separately represented."
+    },
+    "snohetta": {
+      "name": "Snøhetta — Project index",
+      "url": "https://www.snohetta.com/projects?view=list&sortBy=last-updated",
+      "evidence": "Browser click + URL + DOM",
+      "note": "Selecting List changed the grid to a table and reflected view/list and sort state in the URL. Rows expose discipline, year and location.",
+      "image": "research/captures/desktop/snohetta-list-view.jpg"
+    },
+    "olson": {
+      "name": "Olson Kundig — Design approach",
+      "url": "https://olsonkundig.com/design-approach/",
+      "evidence": "Primary-page content",
+      "note": "People/place, making and field stories connect practice to built work. A motion preference control exists; its animation behavior was not tested."
+    },
+    "ghia": {
+      "name": "Ghia — Homepage shop module",
+      "url": "https://drinkghia.com/",
+      "evidence": "Browser click + selected panel + screenshot",
+      "note": "After dismissing a signup overlay, selecting Fizz replaced the Popular panel with five Fizz entries. Product detail links, previous/next controls and editorial commerce modules are present.",
+      "image": "research/captures/desktop/ghia-fizz-selected.jpg"
+    },
+    "pentire": {
+      "name": "Pentire — Serves",
+      "url": "https://pentiredrinks.com/blogs/serves",
+      "evidence": "Primary-page content",
+      "note": "Named serving articles lead from recipe discovery to individual serves."
+    },
+    "community": {
+      "name": "Pentire — Community",
+      "url": "https://pentiredrinks.com/blogs/news",
+      "evidence": "Primary-page content",
+      "note": "Hosting, food, people and place are treated as individual editorial stories."
+    },
+    "botnia": {
+      "name": "Botnia — Homepage",
+      "url": "https://www.botniaskincare.com/",
+      "evidence": "Browser category click + DOM + screenshot",
+      "note": "Selecting Product type replaced the bestseller items with body, cream and wash categories. A batch lookup, product routes, journal, ingredient routes and newsletter are also present.",
+      "image": "research/captures/desktop/botnia-product-type-open.jpg"
+    },
+    "ingredients": {
+      "name": "Botnia — Key ingredients",
+      "url": "https://www.botniaskincare.com/blogs/key-ingredients",
+      "evidence": "Primary-page content",
+      "note": "Botanical information is organized as a browsable ingredient journal."
+    },
+    "routine": {
+      "name": "Botnia — Find your skincare routine",
+      "url": "https://www.botniaskincare.com/pages/find-your-skincare-routine",
+      "evidence": "Primary-page content; no form submission",
+      "note": "The routine has a dedicated advice pathway. Do not borrow clinical or personalized-advice claims for Serein."
+    },
+    "vintner": {
+      "name": "Vintner’s Daughter — Products and stories",
+      "url": "https://vintnersdaughter.com/",
+      "evidence": "Primary-page content",
+      "note": "A focused range assigns routine roles to products and links to source and philosophy stories."
+    }
+  },
+  "behaviors": {
+    "hero": {
+      "scroll": "Normal document flow; no hero parallax, crop change or scroll-scrubbed lettering. Header becomes a solid 64 px surface only after the hero exits. Preserve its footprint.",
+      "hover": "Underline actionable text over 180 ms. Photo and brand wordmark stay still.",
+      "activate": "Use real navigation links. Menu is a button with aria-expanded; Escape closes and focus returns.",
+      "touch": "Same visible actions; menu button at 44 × 44 px minimum. Approved desktop composition gets a separately art-directed mobile crop later.",
+      "react": "Hero + SiteHeader; IntersectionObserver sentinel owns header mode. Hero content has no React animation state."
+    },
+    "product": {
+      "scroll": "Enter as one composition at 15% visibility: translateY 12→0 px over 600 ms, once. Do not animate each label separately.",
+      "hover": "Only on fine pointers, crossfade primary to on-body/texture image over 240 ms. Name, price and action remain visible. Focus outlines the link without swapping image.",
+      "activate": "Image/name link opens the correct product route. Color selection is a sibling button group, never nested in the link; click updates selected color, image and route.",
+      "touch": "No hover dependency. Show stable primary image and explicit color names. Two columns at tablet, one at narrow phone.",
+      "react": "ProductTout[] in ProductRange. ProductRange owns selectedVariantByProduct; product data owns image pairs, price and href. CSS handles hover; React handles selection."
+    },
+    "project": {
+      "scroll": "Preserve asymmetric grid offsets. Each large photograph settles 12→0 px once; captions remain steady. No sticky panels or forced horizontal scrolling.",
+      "hover": "Image scale 1→1.018 over 500 ms inside its crop; arrow moves 4 px over 180 ms. Title remains visible. Keyboard uses a 2 px focus outline.",
+      "activate": "Whole image/caption is one descriptive link to the project page. Do not put a nested button inside it.",
+      "touch": "One column in reading order, remove offsets; image and caption remain one 44 px+ target.",
+      "react": "ProjectTout with project, size, offset and href props. CSS Grid places items; no hover state in React."
+    },
+    "story": {
+      "scroll": "Large image enters naturally; supporting text reveals once with a 12 px/600 ms settle. No section pinning or content swapping caused by scrolling.",
+      "hover": "Only the text action underlines; editorial photo stays still unless it is itself the linked tout.",
+      "activate": "A descriptive story link opens its route. Noninteractive material photographs remain figure/figcaption.",
+      "touch": "Image then copy in the same DOM order; remove desktop overlaps; keep 48–72 px between chapters.",
+      "react": "EditorialTout with eyebrow, title, body, image, imageSide and optional href. Static content props; CSS grid does the composition."
+    },
+    "disclosure": {
+      "scroll": "In normal flow. Opening increases document height without moving the trigger; reserve image space beside the questions.",
+      "hover": "Summary text darkens and the plus rotates 90° over 160 ms. No photo animation.",
+      "activate": "Enter/Space or click toggles native details/summary. Multiple answers may remain open. Expanded copy includes the relevant detail-page link.",
+      "touch": "Entire summary is a minimum 48 px row; no hover requirement. Reduced motion opens immediately.",
+      "react": "CareDisclosure using native details/summary. No duplicated React open state unless a future URL-deep-link requirement needs it."
+    },
+    "selector": {
+      "scroll": "One stable product scene; section reveals as a unit. Changing selection never scrolls the page or changes section height.",
+      "hover": "Only selector outline/text responds over 160 ms. Do not rotate cans or move purchase controls.",
+      "activate": "Native radio group selects 4, 8 or 12 cans; selected pack, total price and product URL update together. Continue button navigates to the configured pack; no cart write in the reference gallery.",
+      "touch": "Use visible radio labels and 44 px targets; stack selector under product photo. Screen readers hear group legend and selected pack.",
+      "react": "PackSelector; parent owns selectedPackId. Compute price/units/href from one packs map rather than separate state variables."
+    },
+    "steps": {
+      "scroll": "Natural reading order. Scroll never changes the selected step. One large active photograph gives the sequence space.",
+      "hover": "Step button underline brightens over 160 ms; no automatic selection on hover or focus.",
+      "activate": "Click/Enter chooses step and crossfades fixed-ratio media over 220 ms. aria-pressed buttons control a labelled region. No autoplay.",
+      "touch": "Three full-width or wrapping buttons remain visible; active description is below. Keyboard Tab/Enter works without a custom tab algorithm.",
+      "react": "RitualSteps or ServeSteps; selectedStepId in parent; image and description derived from steps data. CSS fade; respect reduced motion."
+    },
+    "filter": {
+      "scroll": "Changing filter preserves the control’s position and uses normal document flow. No masonry reordering.",
+      "hover": "Underline category label over 160 ms; image behavior follows ProjectTout.",
+      "activate": "All/Culture/Living are ordinary filter links carrying ?type=. Selected state is aria-current; browser Back restores it. Show result count and empty state.",
+      "touch": "Labels wrap naturally. No horizontal drag required; 44 px targets.",
+      "react": "ProjectIndex receives type from router/searchParams; filters project data. CSS handles layout. No duplicated URL and component selection state."
+    },
+    "journal": {
+      "scroll": "Two stories with different image proportions form one quiet composition. Reveal once per story, 80 ms maximum stagger.",
+      "hover": "Title underline and arrow translate 4 px. Optional image scale limited to 1.018; no hidden excerpt.",
+      "activate": "One link per story with a specific article title. Community captions only link when an actual owned story exists; decorative images have no pointer cursor.",
+      "touch": "Stack stories. Headline and short summary remain visible; no carousel required.",
+      "react": "StoryLink[] from journal content; each owns image, title, excerpt and href. State-free unless editorial pagination is added later."
+    },
+    "signup": {
+      "scroll": "Static closing composition. Form never follows the user or opens an unsolicited modal.",
+      "hover": "Button changes fill/foreground over 160 ms; input retains a stable border. Focus ring is always explicit.",
+      "activate": "Real form submit uses idle/submitting/success/error. Validate email, prevent duplicate requests, announce status and preserve input on failure. Until endpoint exists label demo as not connected.",
+      "touch": "Visible label plus autocomplete=email; 44 px button. Success stays in place without redirect.",
+      "react": "NewsletterForm owns status and error; server action/API owns persistence. Keep inquiry CTA separate from marketing opt-in."
+    },
+    "footer": {
+      "scroll": "Static footer in document flow with adequate bottom padding.",
+      "hover": "Simple underline only; logo remains still.",
+      "activate": "Real anchors to existing routes; future routes are documented as planned, not fake working links.",
+      "touch": "Groups stack and remain expanded; maintain clear reading order.",
+      "react": "SiteFooter from route groups and contact data. No animation state."
+    }
+  },
+  "sites": [
+    {
+      "id": "01-avela",
+      "name": "Avela / Soft Form",
+      "short": "Avela",
+      "slug": "avela",
+      "critique": "Keep the campaign strength, remove repetitive triptychs. Products float on cream; the Arc story, craft and coastal story become large, unequal compositions. Workshop notes sit inside craft; community imagery sits inside the coastal story.",
+      "spacing": "Desktop chapters 144–192 px apart, side gutters clamp(24px,6vw,96px), 32–48 px internal gaps. Product grounds blend into the cream; no card outlines.",
+      "chapters": [
+        "Approved SOFT FORM hero exactly as supplied.",
+        "After a generous cream pause, Forms for every day: three freestanding bags with subtle baseline labels; Arc $420, Fold $360, Day $480. No three background rectangles. Leave space around every silhouette.",
+        "Large pale-blue Arc flat lay on left occupying 55%; smaller serif copy floated on cream at right, separated by negative space. One short heading: Soft structure. Room for the everyday.",
+        "Shaped by hand: one substantial terracotta-toned handwork photograph on right and a smaller close-up offset below-left. Use a quiet cream field, not a solid stripe. A single workshop story link replaces a second journal grid.",
+        "Carried through the day: one large coastal campaign photo and a smaller on-body photograph offset like a magazine spread. Two tiny community captions share this composition, not another row.",
+        "Made to stay with you: calm wide cream pause, three fine accordion lines left, one small tactile leather detail right.",
+        "Blue newsletter breathing room; full oxblood footer with useful link columns."
+      ],
+      "touts": [
+        {
+          "id": "A00",
+          "title": "Campaign / SOFT FORM",
+          "ref": "polene",
+          "behavior": "hero",
+          "content": "Approved AVELA campaign and Arc bag; retain original copy, not Polène’s product names.",
+          "layout": "Original 1681:936 ratio; no added tile boxes.",
+          "targets": [
+            "The bags → /avela/bags",
+            "Meet the Arc → /avela/bags/the-arc"
+          ],
+          "mobile": {
+            "layout": "Portrait campaign crop keeps the whole Arc bag visible; SOFT FORM wraps into two lines. Compact Menu / Bag header. Copy and image retain the approved campaign.",
+            "scroll": "Normal document scroll. Reserve hero height to avoid layout shift; never force a full viewport if copy needs more room.",
+            "tap": "Menu opens a labelled dialog; Escape/close returns focus. Primary CTA navigates or scrolls to its named section.",
+            "react": "Header owns menuOpen; real links retain keyboard access. Picture sources and CSS object-position adapt crops. No viewport-dependent duplicate content.",
+            "source": "polene"
+          }
+        },
+        {
+          "id": "A01",
+          "title": "Forms for every day / 3 product tiles",
+          "ref": "polene",
+          "behavior": "product",
+          "content": "The Arc $420 / Oxblood; The Fold $360 / Tan; The Day $480 / Olive. Arc price from prior WDA registry; others provisional.",
+          "layout": "Unboxed 3-column silhouettes with 48 px gaps; smaller metadata beneath.",
+          "targets": [
+            "The Arc → /avela/bags/the-arc",
+            "The Fold → /avela/bags/the-fold",
+            "The Day → /avela/bags/the-day"
+          ],
+          "mobile": {
+            "layout": "The Arc leads on its own; The Fold and The Day form the secondary pair. At 320px, stack the pair if labels wrap badly. Product names and prices remain visible. Swatches shown in the concept require approved variants before implementation.",
+            "scroll": "Products remain readable without animation or a swipe. Any entrance is optional and disabled for reduced motion.",
+            "tap": "One tap on the product link opens its detail route. Approved variant swatches, if implemented, use separate 44px buttons; first tap never merely reveals a hover CTA.",
+            "react": "One ProductRange data array and CSS grid. Variant state is per product only when approved; keep links separate from buttons.",
+            "source": "polene"
+          }
+        },
+        {
+          "id": "A02",
+          "title": "The Arc / capacity story",
+          "ref": "leather",
+          "behavior": "story",
+          "content": "Phone, notebook and keys convey use. Avoid an unverified liters/capacity specification.",
+          "layout": "7-column image, 3-column copy, 2-column breathing gap; blue only behind still life.",
+          "targets": [
+            "Discover the Arc → /avela/bags/the-arc#details"
+          ],
+          "mobile": {
+            "layout": "Blue flat-lay spans the content width, followed by heading, short copy and Discover the Arc. No copy column beside the image.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "polene"
+          }
+        },
+        {
+          "id": "A03",
+          "title": "Shaped by hand / making",
+          "ref": "hereu",
+          "behavior": "story",
+          "content": "Cut, Fold, Finish remain simple process captions. No invented factory location, certification or warranty.",
+          "layout": "One main photograph and one offset detail; no equal triptych.",
+          "targets": [
+            "Inside the workshop → /avela/workshop"
+          ],
+          "mobile": {
+            "layout": "Making photograph and stitch detail stack vertically. Process remains readable copy; Read the workshop story is a normal link.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "polene"
+          }
+        },
+        {
+          "id": "A04",
+          "title": "Carried through the day",
+          "ref": "polene",
+          "behavior": "story",
+          "content": "Coastal carry campaign; the same oxblood crescent Arc and cream linen wardrobe.",
+          "layout": "Large portrait plus smaller landscape image separated by cream.",
+          "targets": [
+            "Explore the story → /avela/journal/carried-through-the-day"
+          ],
+          "mobile": {
+            "layout": "Coastal carry image becomes a portrait composition. Retain the same bag and campaign wardrobe. The CTA is outside any ambiguous image-only target.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "polene"
+          }
+        },
+        {
+          "id": "A05",
+          "title": "Made to stay with you / care rows",
+          "ref": "leather",
+          "behavior": "disclosure",
+          "content": "What fits / Leather care / Repairs. Final care instructions and repair policy require brand input.",
+          "layout": "Three hairline rows, adjacent small leather detail, 144 px clear space.",
+          "targets": [
+            "What fits → /avela/bags/the-arc#details",
+            "Leather care → /avela/care",
+            "Repairs → /avela/care#repairs"
+          ],
+          "mobile": {
+            "layout": "What fits, Leather care and Repairs are three full-width independent disclosure rows. Open answers increase document height.",
+            "scroll": "Expanding an answer changes page height naturally and retains focus on its summary.",
+            "tap": "Tap anywhere in the full-width summary row to toggle. Multiple answers may stay open.",
+            "react": "Use native details/summary, preserve content in DOM, and style the focus ring. Do not animate measured height under reduced motion.",
+            "source": "polene"
+          }
+        },
+        {
+          "id": "A06",
+          "title": "In good company / embedded community",
+          "ref": "polene",
+          "behavior": "journal",
+          "content": "Everyday carry and weekend imagery are editorial proposals, not customer testimonials.",
+          "layout": "Two small captions in A04; eliminate separate three-card band.",
+          "targets": [
+            "Everyday carry → /avela/journal/carried-through-the-day",
+            "Weekend away → /avela/journal/weekend-away"
+          ],
+          "mobile": {
+            "layout": "The two supporting carry stories follow the main coastal story. At 390px they can be a two-up pair; use one column at 320px or large text.",
+            "scroll": "Entries remain in document order; no autoplay or compulsory horizontal dragging.",
+            "tap": "One tap on the visible title/CTA navigates. Help rows use independent native disclosures.",
+            "react": "Reuse StoryLink data; CSS changes the layout. Optional thumbnail never becomes the only accessible name.",
+            "source": "polene"
+          }
+        },
+        {
+          "id": "A07",
+          "title": "Notes from the workshop / embedded journal",
+          "ref": "manufacturing",
+          "behavior": "journal",
+          "content": "The making of a curve; a leather that keeps its story.",
+          "layout": "Two text links and one detail already within A03; no duplicate photo grid.",
+          "targets": [
+            "The making of a curve → /avela/workshop#shape",
+            "A leather that keeps its story → /avela/care"
+          ],
+          "mobile": {
+            "layout": "Notes from the workshop becomes one compact editorial link and optional supporting image within the care chapter; the journal archive holds the longer story list.",
+            "scroll": "Entries remain in document order; no autoplay or compulsory horizontal dragging.",
+            "tap": "One tap on the visible title/CTA navigates. Help rows use independent native disclosures.",
+            "react": "Reuse StoryLink data; CSS changes the layout. Optional thumbnail never becomes the only accessible name.",
+            "source": "polene"
+          }
+        },
+        {
+          "id": "A08",
+          "title": "A longer story, in your inbox",
+          "ref": "polene",
+          "behavior": "signup",
+          "content": "One newsletter signup; no unsolicited overlay.",
+          "layout": "Pale blue field, generous open area around label and email field.",
+          "targets": [
+            "Join the atelier → newsletter endpoint, pending"
+          ],
+          "mobile": {
+            "layout": "Newsletter heading, labelled email input and Join the atelier button stack in that order. The button spans the available width.",
+            "scroll": "Form stays in normal flow above the footer and is not covered by a sticky bar or keyboard overlay.",
+            "tap": "Tap input opens the email keyboard. Explicit submit shows inline validation, pending, server-confirmed success or retryable failure.",
+            "react": "NewsletterForm owns status; server owns success. type=email, autocomplete=email, visible label, aria-describedby and polite status region. No submission is implemented in this concept.",
+            "source": "polene"
+          }
+        },
+        {
+          "id": "A09",
+          "title": "Avela footer",
+          "ref": "polene",
+          "behavior": "footer",
+          "content": "Bags, Workshop, Care, Contact, Shipping, Returns, Privacy, Terms.",
+          "layout": "Dark oxblood close with broad gutters.",
+          "targets": [
+            "Bags → /avela/bags",
+            "Workshop → /avela/workshop",
+            "Care → /avela/care"
+          ],
+          "mobile": {
+            "layout": "Keep AVELA and two short link groups. Use 16px text and 44px minimum row height in the build; legal links remain discoverable.",
+            "scroll": "Footer follows the newsletter with no fixed positioning.",
+            "tap": "Links remain visible with generous row targets; do not require a first tap to reveal a link.",
+            "react": "Reuse SiteFooter nav data. CSS grid becomes two columns then one at large text; preserve DOM order and legal destinations.",
+            "source": "polene"
+          }
+        }
+      ]
+    },
+    {
+      "id": "02-room-and-ritual",
+      "name": "Room & Ritual",
+      "short": "Room & Ritual",
+      "slug": "room-and-ritual",
+      "critique": "Retain the expressive pink masthead. Replace the small repeated interior grids with two offset homes, a substantial house tour and a few isolated objects. Materials become annotations within the house story; process becomes a restrained text sequence.",
+      "spacing": "Desktop chapter gaps 144–192 px; 6% side gutters. Project offset 96 px, disabled below 768 px. Pink appears at the masthead and closing invitation, not between every section.",
+      "chapters": [
+        "Approved ROOM & RITUAL pink masthead and entire arched-window interior hero.",
+        "Generous warm ivory pause. Rooms for living: large Courtyard House photograph left; smaller Cedar Rooms portrait offset lower at right; Olive Terrace a text link beneath. Avoid equal three-card strip.",
+        "Inside the Courtyard House: one immersive dining-room image with one narrow prose block next to it. An offset small walnut/wool detail with minimal captions continues below; no four-tile material row.",
+        "From first conversation to final layer: four elegant text labels Listen, Shape, Gather, Settle in plenty of white space; a single small studio drawing, no boxes.",
+        "Objects with a place in your story: freestanding orange mushroom lamp and dark ceramic vessel on cream, one modest still life of walnut table. Unequal scales with air, not three product cards. Omit prices in image.",
+        "Life, once the room is finished: a large warm courtyard gathering photograph. Field notes become two quiet text links with a single offset vignette below, not multiple thumbnail rails.",
+        "Soft pink generous inquiry and newsletter, followed by full dark burgundy footer."
+      ],
+      "touts": [
+        {
+          "id": "R00",
+          "title": "Masthead and Courtyard House hero",
+          "ref": "ashby",
+          "behavior": "hero",
+          "content": "ROOM & RITUAL; A home should hold more than furniture. Existing approved room palette.",
+          "layout": "Original 1586:992 ratio, pink masthead retained.",
+          "targets": [
+            "Homes → /room-and-ritual/homes",
+            "Discuss a space → /room-and-ritual/studio#inquiry"
+          ],
+          "mobile": {
+            "layout": "ROOM & RITUAL wraps across two lines on blush. Preserve the calligraphic ampersand. The room image uses a portrait-friendly crop that retains the arched window and olive sofa.",
+            "scroll": "Normal document scroll. Reserve hero height to avoid layout shift; never force a full viewport if copy needs more room.",
+            "tap": "Menu opens a labelled dialog; Escape/close returns focus. Primary CTA navigates or scrolls to its named section.",
+            "react": "Header owns menuOpen; real links retain keyboard access. Picture sources and CSS object-position adapt crops. No viewport-dependent duplicate content.",
+            "source": "ashby"
+          }
+        },
+        {
+          "id": "R01",
+          "title": "Rooms for living / home tiles",
+          "ref": "ashby",
+          "behavior": "project",
+          "content": "Courtyard House / Cedar Rooms / Olive Terrace are existing WDA concepts.",
+          "layout": "7/4-column staggered images; third as text link; no uniform cards.",
+          "targets": [
+            "Courtyard House → /room-and-ritual/homes/courtyard-house",
+            "Cedar Rooms → /room-and-ritual/homes/cedar-rooms",
+            "Olive Terrace → /room-and-ritual/homes/olive-terrace"
+          ],
+          "mobile": {
+            "layout": "Courtyard House comes first, Cedar Rooms second, Olive Terrace as a text link third. Captions sit below images; desktop offsets are removed.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "ashby"
+          }
+        },
+        {
+          "id": "R02",
+          "title": "Inside the Courtyard House",
+          "ref": "tamodi",
+          "behavior": "story",
+          "content": "Dining, gathering and daylight; describe human use without fabricated client facts.",
+          "layout": "One large image, short prose, one smaller detail.",
+          "targets": [
+            "Take the house tour → /room-and-ritual/homes/courtyard-house"
+          ],
+          "mobile": {
+            "layout": "Dining image, house-tour heading, copy and link form one vertical story. Do not pin the photo while the text scrolls.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "ashby"
+          }
+        },
+        {
+          "id": "R03",
+          "title": "Walnut, wool, afternoon light / materials",
+          "ref": "workstead",
+          "behavior": "story",
+          "content": "Walnut / Wool / Plaster / Stone are palette notes; they are not purchase controls.",
+          "layout": "Small supporting details nested in the house story, no row of four tiles.",
+          "targets": [
+            "See the palette → /room-and-ritual/homes/courtyard-house#materials"
+          ],
+          "mobile": {
+            "layout": "Walnut-and-wool material detail follows the tour with a visible caption. Material names are editorial labels, not selectable options.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "ashby"
+          }
+        },
+        {
+          "id": "R04",
+          "title": "Listen / Shape / Gather / Settle",
+          "ref": "inquiry",
+          "behavior": "story",
+          "content": "A proposed four-stage studio approach; no delivery timeline promise.",
+          "layout": "Four text steps, ample line spacing, at most one studio sketch.",
+          "targets": [
+            "Our approach → /room-and-ritual/studio#process"
+          ],
+          "mobile": {
+            "layout": "Sketch followed by four numbered text rows: Listen, Shape, Gather, Settle. All four are visible; no step selection or hover dependency.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "ashby"
+          }
+        },
+        {
+          "id": "R05",
+          "title": "Objects with a place in your story",
+          "ref": "tamodi",
+          "behavior": "product",
+          "content": "Sculptural light / Walnut coffee table / Ceramic vessel. Omit unvalidated prices and designer attribution.",
+          "layout": "Freestanding objects at varying scales; generous cream ground.",
+          "targets": [
+            "Sculptural light → /room-and-ritual/objects/sculptural-light",
+            "Walnut table → /room-and-ritual/objects/walnut-table",
+            "Ceramic vessel → /room-and-ritual/objects/ceramic-vessel"
+          ],
+          "mobile": {
+            "layout": "One room/object still life introduces the collection. Specific object links live in the accessible text list or on the collection route, not invisible hotspots on the raster.",
+            "scroll": "Products remain readable without animation or a swipe. Any entrance is optional and disabled for reduced motion.",
+            "tap": "One tap on the product link opens its detail route. Approved variant swatches, if implemented, use separate 44px buttons; first tap never merely reveals a hover CTA.",
+            "react": "One ProductRange data array and CSS grid. Variant state is per product only when approved; keep links separate from buttons.",
+            "source": "ashby"
+          }
+        },
+        {
+          "id": "R06",
+          "title": "Life, once the room is finished",
+          "ref": "tamodi",
+          "behavior": "story",
+          "content": "Adult friends at the courtyard table; demonstration editorial scene.",
+          "layout": "Large panorama with caption outside image; no overlaid card.",
+          "targets": [
+            "Life at home → /room-and-ritual/notes/life-at-home"
+          ],
+          "mobile": {
+            "layout": "Gathering image and its narrative stack. Keep adults and the table in the crop; avoid clipping faces with a fixed background.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "ashby"
+          }
+        },
+        {
+          "id": "R07",
+          "title": "Field notes",
+          "ref": "ashby",
+          "behavior": "journal",
+          "content": "Collected over time / Following the afternoon light.",
+          "layout": "Two text-led article entries and one offset detail, embedded after R06.",
+          "targets": [
+            "Collected over time → /room-and-ritual/notes/collected-over-time",
+            "Following the light → /room-and-ritual/notes/afternoon-light"
+          ],
+          "mobile": {
+            "layout": "Two editorial rows remain visible. Thumbnail and text can sit side by side at 390px; stack at 320px or 200% text size.",
+            "scroll": "Entries remain in document order; no autoplay or compulsory horizontal dragging.",
+            "tap": "One tap on the visible title/CTA navigates. Help rows use independent native disclosures.",
+            "react": "Reuse StoryLink data; CSS changes the layout. Optional thumbnail never becomes the only accessible name.",
+            "source": "ashby"
+          }
+        },
+        {
+          "id": "R08",
+          "title": "Make room / Letters from the studio",
+          "ref": "inquiry",
+          "behavior": "signup",
+          "content": "Inquiry is a route; newsletter is a separate opt-in form.",
+          "layout": "Large pink open area; two distinct actions.",
+          "targets": [
+            "Discuss a space → /room-and-ritual/studio#inquiry",
+            "Letters from the studio → newsletter endpoint, pending"
+          ],
+          "mobile": {
+            "layout": "Discuss a space remains a separate navigation link. Newsletter label, input and submit control form a distinct opt-in below it.",
+            "scroll": "Form stays in normal flow above the footer and is not covered by a sticky bar or keyboard overlay.",
+            "tap": "Tap input opens the email keyboard. Explicit submit shows inline validation, pending, server-confirmed success or retryable failure.",
+            "react": "NewsletterForm owns status; server owns success. type=email, autocomplete=email, visible label, aria-describedby and polite status region. No submission is implemented in this concept.",
+            "source": "ashby"
+          }
+        },
+        {
+          "id": "R09",
+          "title": "Room & Ritual footer",
+          "ref": "ashby",
+          "behavior": "footer",
+          "content": "Homes / Objects / Field notes / Studio / Contact / Privacy / Terms.",
+          "layout": "Dark wine footer, no cramped columns.",
+          "targets": [
+            "Homes → /room-and-ritual/homes",
+            "Objects → /room-and-ritual/objects",
+            "Studio → /room-and-ritual/studio"
+          ],
+          "mobile": {
+            "layout": "Wordmark followed by two compact link groups. Mobile never hides contact information behind hover.",
+            "scroll": "Footer follows the newsletter with no fixed positioning.",
+            "tap": "Links remain visible with generous row targets; do not require a first tap to reveal a link.",
+            "react": "Reuse SiteFooter nav data. CSS grid becomes two columns then one at large text; preserve DOM order and legal destinations.",
+            "source": "ashby"
+          }
+        }
+      ]
+    },
+    {
+      "id": "03-oriel",
+      "name": "Oriel",
+      "short": "Oriel",
+      "slug": "oriel",
+      "critique": "The hero is open and monumental; the first lower page reduced it to a dense catalog. Restore long ivory pauses, photographs of different sizes and a single quiet material composition. Keep architectural geometry true: organic means rhythm, daylight and irregular spacing, not decorative blob masks.",
+      "spacing": "Largest pauses in the set: 192–240 px between chapters at 1440 desktop; 96 px offsets; 7% side gutters. No adjacent full-width color bands. 70%+ of non-hero ground stays light ivory. Only one dark footer.",
+      "chapters": [
+        "Approved oriel hero unchanged: huge cream lowercase wordmark, rammed earth wall, oval opening, oak and brass.",
+        "Long luminous ivory pause with Places with a second life and short fine-type filters All / Culture / Living. One large Willow Hall landscape at left, ONE smaller River Rooms portrait offset far lower at right, with huge blank space around both. Foundry Commons is a small text link, never a third card.",
+        "Willow Hall, reopened: enormous architectural photograph, about 75% page width, offset right. Quiet 2-line serif heading and tiny caption outside; one very small plan drawing in margin below. Do not make a 50/50 boxed split.",
+        "Matter. Light. Belonging.: an open cream editorial still life of irregular earth sample, oak joinery block and brass offcut on a studio table in sunlight, one photograph only. Small Listen / Reuse / Make / Inhabit process notes run nearby, not in four bordered panels.",
+        "A place becomes itself through people: one large photographic panorama of the hall in use. Let it breathe with cream before and after. No text overlay rectangle. One small workshop-detail photo offset below can support Shared perspectives.",
+        "Practice notes: mostly typography and negative space, two links Working with what is here / Drawing with daylight, one small daylight detail. No two-by-two photo grid.",
+        "What could this place become? Huge airy ivory invitation with small Start a conversation action and separate email line. Finish with simple cocoa footer."
+      ],
+      "touts": [
+        {
+          "id": "O00",
+          "title": "Willow Hall hero",
+          "ref": "olson",
+          "behavior": "hero",
+          "content": "Approved ORIEL / SPATIAL PRACTICE and Willow Hall culture/community narrative.",
+          "layout": "Exact 1681:936 hero composition.",
+          "targets": [
+            "Projects → /oriel/projects",
+            "Approach → /oriel/approach"
+          ],
+          "mobile": {
+            "layout": "Portrait crop preserves the oval opening, oak and earth. Lowercase oriel stays large. Primary copy and Step inside remain visible without swiping.",
+            "scroll": "Normal document scroll. Reserve hero height to avoid layout shift; never force a full viewport if copy needs more room.",
+            "tap": "Menu opens a labelled dialog; Escape/close returns focus. Primary CTA navigates or scrolls to its named section.",
+            "react": "Header owns menuOpen; real links retain keyboard access. Picture sources and CSS object-position adapt crops. No viewport-dependent duplicate content.",
+            "source": "snohetta"
+          }
+        },
+        {
+          "id": "O01",
+          "title": "Places with a second life / project index",
+          "ref": "snohetta",
+          "behavior": "filter",
+          "content": "Willow Hall / River Rooms / Foundry Commons; All / Culture / Living. All project facts remain conceptual.",
+          "layout": "Two offset images; third text-only. ProjectTout behavior applies to each result.",
+          "targets": [
+            "Willow Hall → /oriel/projects/willow-hall",
+            "River Rooms → /oriel/projects/river-rooms",
+            "Foundry Commons → /oriel/projects/foundry-commons"
+          ],
+          "mobile": {
+            "layout": "All / Culture / Living wrap above a vertical sequence: Willow Hall, River Rooms, then Foundry Commons link. Project names and category labels sit below each image.",
+            "scroll": "Changing a filter keeps focus on the control and does not jump to the top. Existing results remain while pending.",
+            "tap": "Tap All, Culture or Living to change the URL-backed selection; show selected styling and a result count.",
+            "react": "ProjectIndex reads router search params as the source of truth. Browser Back restores selection. Empty state includes Reset; do not make width determine filter state.",
+            "source": "snohetta"
+          }
+        },
+        {
+          "id": "O02",
+          "title": "Willow Hall, reopened",
+          "ref": "olson",
+          "behavior": "story",
+          "content": "Retained fabric and shared use; no invented floor area, location or performance metrics.",
+          "layout": "9-column image with 2-column margin caption; plan below, not in a boxed fact panel.",
+          "targets": [
+            "Explore Willow Hall → /oriel/projects/willow-hall"
+          ],
+          "mobile": {
+            "layout": "Willow Hall heading, short narrative, earth/oval interior photo, small plan and project link follow DOM order. No floating metadata or narrow side column.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "snohetta"
+          }
+        },
+        {
+          "id": "O03",
+          "title": "Matter. Light. Belonging.",
+          "ref": "olson",
+          "behavior": "story",
+          "content": "Earth / Oak / Brass; material palette carried from original hero.",
+          "layout": "One photographic material still life; tiny external labels, no triptych.",
+          "targets": [
+            "Material approach → /oriel/approach#materials"
+          ],
+          "mobile": {
+            "layout": "One material still life spans the content area. Earth, Oak and Brass notes remain text under it. Use a 72–96px chapter pause.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "snohetta"
+          }
+        },
+        {
+          "id": "O04",
+          "title": "Built through conversation",
+          "ref": "olson",
+          "behavior": "story",
+          "content": "Listen / Reuse / Make / Inhabit proposed process.",
+          "layout": "Text sequence integrated with O03. All descriptions visible; do not invent hover cards.",
+          "targets": [
+            "Our process → /oriel/approach#process"
+          ],
+          "mobile": {
+            "layout": "Listen / Reuse / Make / Inhabit become an ordered vertical list beneath the material story. All text is available without a selector.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "snohetta"
+          }
+        },
+        {
+          "id": "O05",
+          "title": "A place becomes itself through people",
+          "ref": "snohetta",
+          "behavior": "story",
+          "content": "Hall-in-use image shows adult community use at believable human scale.",
+          "layout": "Wide 16:7 photograph and standalone caption with ivory margins.",
+          "targets": [
+            "Life at Willow Hall → /oriel/projects/willow-hall#use"
+          ],
+          "mobile": {
+            "layout": "Community heading and short copy precede the hall-in-use photo. Keep text outside the photo so contrast does not depend on the crop.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "snohetta"
+          }
+        },
+        {
+          "id": "O06",
+          "title": "Shared perspectives",
+          "ref": "olson",
+          "behavior": "journal",
+          "content": "On site / In the workshop / Around the table are proposed practice-story links.",
+          "layout": "Short text links and one small offset workshop photo within O05, no carousel.",
+          "targets": [
+            "On site → /oriel/practice/on-site",
+            "In the workshop → /oriel/practice/making",
+            "Around the table → /oriel/projects/willow-hall#use"
+          ],
+          "mobile": {
+            "layout": "Shared perspectives follows with a single workshop image and visible story link. Additional practice stories remain accessible on the linked route.",
+            "scroll": "Entries remain in document order; no autoplay or compulsory horizontal dragging.",
+            "tap": "One tap on the visible title/CTA navigates. Help rows use independent native disclosures.",
+            "react": "Reuse StoryLink data; CSS changes the layout. Optional thumbnail never becomes the only accessible name.",
+            "source": "snohetta"
+          }
+        },
+        {
+          "id": "O07",
+          "title": "Practice notes",
+          "ref": "olson",
+          "behavior": "journal",
+          "content": "Working with what is here / Drawing with daylight.",
+          "layout": "Two spacious text links, one daylight detail; no card backgrounds.",
+          "targets": [
+            "Working with what is here → /oriel/approach#reuse",
+            "Drawing with daylight → /oriel/practice/daylight"
+          ],
+          "mobile": {
+            "layout": "Working with what is here and Drawing with daylight become generous text rows with separators; do not collapse them into an auto-rotating carousel.",
+            "scroll": "Entries remain in document order; no autoplay or compulsory horizontal dragging.",
+            "tap": "One tap on the visible title/CTA navigates. Help rows use independent native disclosures.",
+            "react": "Reuse StoryLink data; CSS changes the layout. Optional thumbnail never becomes the only accessible name.",
+            "source": "snohetta"
+          }
+        },
+        {
+          "id": "O08",
+          "title": "What could this place become? / Notes from Oriel",
+          "ref": "inquiry",
+          "behavior": "signup",
+          "content": "Separate project inquiry route and optional studio-news subscription.",
+          "layout": "240 px top pause, short title, discreet controls.",
+          "targets": [
+            "Start a conversation → /oriel/practice#contact",
+            "Notes from Oriel → newsletter endpoint, pending"
+          ],
+          "mobile": {
+            "layout": "The inquiry CTA occupies a full row. Notes from Oriel and the labelled email field follow as a separate opt-in. Leave clear separation between the two actions.",
+            "scroll": "Form stays in normal flow above the footer and is not covered by a sticky bar or keyboard overlay.",
+            "tap": "Tap input opens the email keyboard. Explicit submit shows inline validation, pending, server-confirmed success or retryable failure.",
+            "react": "NewsletterForm owns status; server owns success. type=email, autocomplete=email, visible label, aria-describedby and polite status region. No submission is implemented in this concept.",
+            "source": "snohetta"
+          }
+        },
+        {
+          "id": "O09",
+          "title": "Oriel footer",
+          "ref": "snohetta",
+          "behavior": "footer",
+          "content": "Projects / Approach / Practice / Contact / Privacy / Terms.",
+          "layout": "Simple cocoa footer. Lowercase wordmark retains weight and proportion.",
+          "targets": [
+            "Projects → /oriel/projects",
+            "Approach → /oriel/approach",
+            "Practice → /oriel/practice"
+          ],
+          "mobile": {
+            "layout": "Small cocoa footer with two link groups and visible oriel identity. Exact text and tap area sizes come from CSS, not the raster.",
+            "scroll": "Footer follows the newsletter with no fixed positioning.",
+            "tap": "Links remain visible with generous row targets; do not require a first tap to reveal a link.",
+            "react": "Reuse SiteFooter nav data. CSS grid becomes two columns then one at large text; preserve DOM order and legal destinations.",
+            "source": "snohetta"
+          }
+        }
+      ]
+    },
+    {
+      "id": "04-sundrop",
+      "name": "Sundrop",
+      "short": "Sundrop",
+      "slug": "sundrop",
+      "critique": "Keep the sunlit product world and narrow wine-red display type. Replace the three boxed packs with one configurable still life. Merge flavor and ingredient panels; show serving as one dominant image and three explicit steps.",
+      "spacing": "Chapter gaps 128–176 px. Cream surrounds citrus and pack objects; orange used once for the flavor scene. Three equal grids never appear back-to-back.",
+      "chapters": [
+        "Approved Sundrop hero with apricot spritz, ribbed coupe, coral 200 ml can and 8% ALC/VOL.",
+        "Find your first pour: very spacious ivory area with one carton and one coral can on the left, elegant 4 cans / 8 cans / 12 cans radio-style labels on right. Selected 4 cans $24; other values $44 and $60. One Choose your pack button. No three cards.",
+        "Apricot. Bitter orange. A little sparkle.: one beautifully composed large orange/coral still life with can and naturally scattered real fruit, not three ingredient tiles. Three small external labels under image, no icons.",
+        "Chill. Pour. Take your time.: one large pouring photograph with wide cream margins. Three textual step selectors beneath, 01 Chill / 02 Pour / 03 Settle in. No three equal thumbnails.",
+        "There's room at our table: one warm full-width editorial gathering image. Under it one small offset detail of a table and a few lines; no stacked community grids.",
+        "The afternoon journal: two unequal photo-and-caption stories The orange-twist pour / A table for four, separated by substantial space. Three tiny FAQ rows nearby: How to serve / Pack sizes / Delivery.",
+        "A little sunshine in your inbox: open apricot signup area; full burgundy footer and Enjoy responsibly."
+      ],
+      "touts": [
+        {
+          "id": "D00",
+          "title": "A slower sip / hero",
+          "ref": "ghia",
+          "behavior": "hero",
+          "content": "Approved alcoholic aperitif: Apricot, bitter orange, 200 ml, 8% ALC/VOL. Do not import nonalcoholic claims.",
+          "layout": "Original 1586:992 ratio.",
+          "targets": [
+            "Find your first pour → /sundrop/aperitifs"
+          ],
+          "mobile": {
+            "layout": "Headline wraps above a portrait can/coupe composition. Preserve 200 ml and 8% ALC/VOL. Find your first pour goes to the pack chooser in the same document.",
+            "scroll": "Normal document scroll. Reserve hero height to avoid layout shift; never force a full viewport if copy needs more room.",
+            "tap": "Menu opens a labelled dialog; Escape/close returns focus. Primary CTA navigates or scrolls to its named section.",
+            "react": "Header owns menuOpen; real links retain keyboard access. Picture sources and CSS object-position adapt crops. No viewport-dependent duplicate content.",
+            "source": "ghia"
+          }
+        },
+        {
+          "id": "D01",
+          "title": "Find your first pour / pack chooser",
+          "ref": "ghia",
+          "behavior": "selector",
+          "content": "4 cans $24 / 8 cans $44 / 12 cans $60 are WDA concept values, pending commerce data.",
+          "layout": "One product scene with radio options; no three repeated product boxes.",
+          "targets": [
+            "4 cans → /sundrop/aperitifs/apricot?pack=4",
+            "8 cans → /sundrop/aperitifs/apricot?pack=8",
+            "12 cans → /sundrop/aperitifs/apricot?pack=12"
+          ],
+          "mobile": {
+            "layout": "Product scene precedes three full-width radio labels: 4 / 8 / 12 cans. One selected row, one derived price, one Choose your pack action. No fixed purchase bar.",
+            "scroll": "Chooser remains in flow. Reserve image space so a pack change does not move the CTA unexpectedly.",
+            "tap": "Tap the complete radio label to select 4, 8 or 12. Count, price, image and destination derive together; activation does not add to cart.",
+            "react": "PackSelector uses one selectedPackId. Native fieldset/legend/radios; polite price update. Same commerce data and state contract at every width.",
+            "source": "ghia"
+          }
+        },
+        {
+          "id": "D02",
+          "title": "Flavor story",
+          "ref": "ghia",
+          "behavior": "story",
+          "content": "Apricot / Bitter orange / A little sparkle. Sensory copy, no wellness claims.",
+          "layout": "One substantial still life, short copy outside.",
+          "targets": [
+            "Meet the aperitif → /sundrop/aperitifs/apricot"
+          ],
+          "mobile": {
+            "layout": "Flavor heading and ingredient scene stack vertically. The can stays readable and proportionate.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "ghia"
+          }
+        },
+        {
+          "id": "D03",
+          "title": "What goes into a slower afternoon",
+          "ref": "pentire",
+          "behavior": "story",
+          "content": "Apricots, bitter orange, botanicals are approved/proposed narrative cues; full ingredient declaration requires formulation data.",
+          "layout": "Captions integrated into D02, not a second ingredient grid.",
+          "targets": [
+            "Ingredients → /sundrop/aperitifs/apricot#ingredients"
+          ],
+          "mobile": {
+            "layout": "Ingredient labels can form a short three-up list at 390px; switch to one column at 320px or enlarged text. No ingredient claims beyond approved copy.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "ghia"
+          }
+        },
+        {
+          "id": "D04",
+          "title": "Chill / Pour / Settle in",
+          "ref": "pentire",
+          "behavior": "steps",
+          "content": "Three serving stages; final serving instructions need product sign-off.",
+          "layout": "Single large media area; explicit controls below.",
+          "targets": [
+            "Chill → local step chill",
+            "Pour → local step pour",
+            "Settle in → local step settle"
+          ],
+          "mobile": {
+            "layout": "Chill / Pour / Settle in are three visible buttons. Selection changes one instruction region and its approved image; it never advances with scroll or a timer.",
+            "scroll": "Selection changes only on activation, never on scroll position. Keep the selected region stable in height where practical.",
+            "tap": "Tap one of three labelled buttons. Focus alone does not select. The selected button is visibly marked and exposes aria-pressed.",
+            "react": "RitualSteps/ServeSteps owns selectedStepId. One record supplies image and copy. No incomplete ARIA tab implementation; do not duplicate state for mobile.",
+            "source": "ghia"
+          }
+        },
+        {
+          "id": "D05",
+          "title": "There’s room at our table",
+          "ref": "community",
+          "behavior": "story",
+          "content": "Adult gathering scene; no customer names or endorsements.",
+          "layout": "Cinematic image and small outside caption.",
+          "targets": [
+            "Pull up another chair → /sundrop/our-table"
+          ],
+          "mobile": {
+            "layout": "Adult gathering photo is a full-width story with an explicit Pull up another chair link. Keep adequate contrast if copy overlays the crop.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "ghia"
+          }
+        },
+        {
+          "id": "D06",
+          "title": "Good company, unhurried",
+          "ref": "community",
+          "behavior": "journal",
+          "content": "Sunlit sips / Simple pleasures / Made for the moment become contextual notes.",
+          "layout": "Embedded with D05; one smaller detail, not another three-card row.",
+          "targets": [
+            "More moments → /sundrop/our-table#stories"
+          ],
+          "mobile": {
+            "layout": "Supporting community notes remain inside the table story rather than three repeated photo cards. Route links retain descriptive labels.",
+            "scroll": "Entries remain in document order; no autoplay or compulsory horizontal dragging.",
+            "tap": "One tap on the visible title/CTA navigates. Help rows use independent native disclosures.",
+            "react": "Reuse StoryLink data; CSS changes the layout. Optional thumbnail never becomes the only accessible name.",
+            "source": "ghia"
+          }
+        },
+        {
+          "id": "D07",
+          "title": "Afternoon journal and practical FAQ",
+          "ref": "pentire",
+          "behavior": "journal",
+          "content": "The orange-twist pour / A table for four. FAQ uses shared disclosure behavior, not links that open empty drawers.",
+          "layout": "Two unequal story images; three quiet details/summary rows.",
+          "targets": [
+            "Orange-twist pour → /sundrop/how-we-pour/orange-twist",
+            "A table for four → /sundrop/our-table/table-for-four",
+            "How to serve / Pack sizes / Delivery → disclosures"
+          ],
+          "mobile": {
+            "layout": "Two journal entries stack with visible text; How to serve, Pack sizes and Delivery follow as separate full-width help disclosures.",
+            "scroll": "Entries remain in document order; no autoplay or compulsory horizontal dragging.",
+            "tap": "One tap on the visible title/CTA navigates. Help rows use independent native disclosures.",
+            "react": "Reuse StoryLink data; CSS changes the layout. Optional thumbnail never becomes the only accessible name.",
+            "source": "ghia"
+          }
+        },
+        {
+          "id": "D08",
+          "title": "A little sunshine in your inbox",
+          "ref": "ghia",
+          "behavior": "signup",
+          "content": "Recipe and hosting newsletter with an explicit opt-in.",
+          "layout": "Apricot closing field with generous padding.",
+          "targets": [
+            "Join our table → newsletter endpoint, pending"
+          ],
+          "mobile": {
+            "layout": "Peach newsletter uses a full-width field and a full-width button on the next row. Keep consent and error text in the same flow.",
+            "scroll": "Form stays in normal flow above the footer and is not covered by a sticky bar or keyboard overlay.",
+            "tap": "Tap input opens the email keyboard. Explicit submit shows inline validation, pending, server-confirmed success or retryable failure.",
+            "react": "NewsletterForm owns status; server owns success. type=email, autocomplete=email, visible label, aria-describedby and polite status region. No submission is implemented in this concept.",
+            "source": "ghia"
+          }
+        },
+        {
+          "id": "D09",
+          "title": "Sundrop footer",
+          "ref": "pentire",
+          "behavior": "footer",
+          "content": "Aperitifs / How we pour / Our table / Contact / Shipping / Privacy / Terms; Enjoy responsibly.",
+          "layout": "Deep wine close with spacious columns.",
+          "targets": [
+            "Aperitifs → /sundrop/aperitifs",
+            "How we pour → /sundrop/how-we-pour",
+            "Our table → /sundrop/our-table"
+          ],
+          "mobile": {
+            "layout": "Two readable footer groups and Enjoy responsibly. The product category and ABV remain consistent with the desktop concept.",
+            "scroll": "Footer follows the newsletter with no fixed positioning.",
+            "tap": "Links remain visible with generous row targets; do not require a first tap to reveal a link.",
+            "react": "Reuse SiteFooter nav data. CSS grid becomes two columns then one at large text; preserve DOM order and legal destinations.",
+            "source": "ghia"
+          }
+        }
+      ]
+    },
+    {
+      "id": "05-serein",
+      "name": "Serein",
+      "short": "Serein",
+      "slug": "serein",
+      "critique": "The color direction works; remove the sequence of repetitive three-image strips. Give Daily Oil a generous hero-like lower section. Botanical source material becomes one image with annotations; routine becomes a calm stateful scene.",
+      "spacing": "Desktop chapter gaps 144–192 px. Peach and blue used as large calm fields; 5–7% gutters. Product bottles float on cream; no enclosing tiles.",
+      "chapters": [
+        "Approved SEREIN hero: peach copy, botanical center strip, brown-skinned adult model on blue, Daily Oil 30 ml amber squat bottle with sculptural coral pump.",
+        "Your everyday essentials: three bottles/jar on one continuous cream ground with generous space, no rectangles. Dew Cleanser 150 ml $32 / Daily Oil 30 ml $48 / Cloud Cream 50 ml $42. Do not label cleanser as oil.",
+        "Daily Oil. A softer finish.: large faithful Daily Oil bottle and one tiny oil texture on expansive peach ground; much more blank space, short serif copy left. Preserve 30 ml, squat amber glass, sculptural coral pump.",
+        "Close to the source: one large sunlit botanical macro photograph and one little drop-of-oil detail offset, minimal Leaves / Petals / Texture notes. No ingredient-card triptych.",
+        "Cleanse. Nourish. Pause.: powder blue area with ONE large warm portrait and three elegant selectable step labels. Description and Daily Oil reference sit quietly beside portrait. No three thumbnail row.",
+        "A quieter moment at the sink: large warm sink scene, with a smaller candid portrait offset below-right and two community captions. The care journal becomes two airy text links and ONE texture detail. No repeated card grid.",
+        "Make a little room for yourself: calm peach signup with proper email and button; complete cream footer, optional slender blue ritual baseline."
+      ],
+      "touts": [
+        {
+          "id": "S00",
+          "title": "A little care, every day / hero",
+          "ref": "vintner",
+          "behavior": "hero",
+          "content": "Approved Serein, Daily Oil 30 ml, peach/blue/cream, existing hero copy.",
+          "layout": "Original 1586:992 ratio; do not rename oil Petal Oil.",
+          "targets": [
+            "Build your daily ritual → /serein/daily-ritual"
+          ],
+          "mobile": {
+            "layout": "Peach copy block above the portrait. Retain botanical accent, blue background and Daily Oil 30 ml inset. The blue ritual strip points to the routine section.",
+            "scroll": "Normal document scroll. Reserve hero height to avoid layout shift; never force a full viewport if copy needs more room.",
+            "tap": "Menu opens a labelled dialog; Escape/close returns focus. Primary CTA navigates or scrolls to its named section.",
+            "react": "Header owns menuOpen; real links retain keyboard access. Picture sources and CSS object-position adapt crops. No viewport-dependent duplicate content.",
+            "source": "botnia"
+          }
+        },
+        {
+          "id": "S01",
+          "title": "Everyday essentials / product tiles",
+          "ref": "botnia",
+          "behavior": "product",
+          "content": "Dew Cleanser 150 ml $32; Daily Oil 30 ml $48; Cloud Cream 50 ml $42. Secondary products/prices are concepts.",
+          "layout": "Three floating products with no separate image cards; labels stay visible.",
+          "targets": [
+            "Dew Cleanser → /serein/products/dew-cleanser",
+            "Daily Oil → /serein/products/daily-oil",
+            "Cloud Cream → /serein/products/cloud-cream"
+          ],
+          "mobile": {
+            "layout": "Daily Oil is the lead product; Dew Cleanser and Cloud Cream follow. Preserve names, volumes and concept prices. At 320px, stack secondary products.",
+            "scroll": "Products remain readable without animation or a swipe. Any entrance is optional and disabled for reduced motion.",
+            "tap": "One tap on the product link opens its detail route. Approved variant swatches, if implemented, use separate 44px buttons; first tap never merely reveals a hover CTA.",
+            "react": "One ProductRange data array and CSS grid. Variant state is per product only when approved; keep links separate from buttons.",
+            "source": "botnia"
+          }
+        },
+        {
+          "id": "S02",
+          "title": "Daily Oil / signature story",
+          "ref": "vintner",
+          "behavior": "story",
+          "content": "A softer finish; amber bottle and coral pump remain consistent. No efficacy metrics.",
+          "layout": "Large peach still life with small texture inset and concise text.",
+          "targets": [
+            "Meet Daily Oil → /serein/products/daily-oil"
+          ],
+          "mobile": {
+            "layout": "Keep Daily Oil bottle fully visible and its 30 ml label consistent. Text and image stack whenever the content width cannot support readable type.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "botnia"
+          }
+        },
+        {
+          "id": "S03",
+          "title": "Close to the source",
+          "ref": "ingredients",
+          "behavior": "story",
+          "content": "Leaves / Petals / Texture are visual notes; do not fabricate an INCI list or source farm.",
+          "layout": "One botanical photograph and an offset oil detail, no three cards.",
+          "targets": [
+            "Ingredient notes → /serein/ingredients"
+          ],
+          "mobile": {
+            "layout": "Botanical photo is followed by vertical Leaves / Petals / Texture notes. These are explanatory content, not filters.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "botnia"
+          }
+        },
+        {
+          "id": "S04",
+          "title": "Cleanse / Nourish / Pause",
+          "ref": "routine",
+          "behavior": "steps",
+          "content": "Dew Cleanser / Daily Oil / quiet moment. Actual application and suitability copy require formulation guidance.",
+          "layout": "One image per selected step, fixed media height, blue ground.",
+          "targets": [
+            "Cleanse → local step cleanse",
+            "Nourish → local step nourish",
+            "Pause → local step pause"
+          ],
+          "mobile": {
+            "layout": "Three tap buttons above one routine panel. Cleanse is the initial selected step; changing it updates the image and text together. No automatic selection while scrolling.",
+            "scroll": "Selection changes only on activation, never on scroll position. Keep the selected region stable in height where practical.",
+            "tap": "Tap one of three labelled buttons. Focus alone does not select. The selected button is visibly marked and exposes aria-pressed.",
+            "react": "RitualSteps/ServeSteps owns selectedStepId. One record supplies image and copy. No incomplete ARIA tab implementation; do not duplicate state for mobile.",
+            "source": "botnia"
+          }
+        },
+        {
+          "id": "S05",
+          "title": "A quieter moment at the sink",
+          "ref": "vintner",
+          "behavior": "story",
+          "content": "Contextual adult morning scene, no clinical before/after comparison.",
+          "layout": "Large natural-light image; caption in cream outside.",
+          "targets": [
+            "Our approach → /serein/our-approach"
+          ],
+          "mobile": {
+            "layout": "Sink photo and short narrative stack; The daily ritual is a normal descriptive link. Keep the bottle and tap in the crop.",
+            "scroll": "Vertical flow with image aspect ratios reserved. No sticky photo, parallax, or scroll hijacking on the phone.",
+            "tap": "Caption/CTA remains visible; a normal link opens the story. Decorative photos have no misleading button role.",
+            "react": "EditorialTout/ProjectTout uses the same content and href as desktop. CSS changes grid and image focal point; no separate mobile business logic.",
+            "source": "botnia"
+          }
+        },
+        {
+          "id": "S06",
+          "title": "Everyday rituals / embedded community",
+          "ref": "botnia",
+          "behavior": "journal",
+          "content": "Before the day / A moment of care / When the day slows are editorial concepts.",
+          "layout": "One smaller portrait embedded with S05; no stand-alone tile strip.",
+          "targets": [
+            "Everyday rituals → /serein/journal/everyday-rituals"
+          ],
+          "mobile": {
+            "layout": "A single portrait supports the sink story. Additional ritual stories are linked from the journal; no customer testimonial is implied.",
+            "scroll": "Entries remain in document order; no autoplay or compulsory horizontal dragging.",
+            "tap": "One tap on the visible title/CTA navigates. Help rows use independent native disclosures.",
+            "react": "Reuse StoryLink data; CSS changes the layout. Optional thumbnail never becomes the only accessible name.",
+            "source": "botnia"
+          }
+        },
+        {
+          "id": "S07",
+          "title": "Care journal and practical help",
+          "ref": "botnia",
+          "behavior": "journal",
+          "content": "Finding your daily rhythm / A guide to texture. Help rows use shared disclosure behavior.",
+          "layout": "Text-led stories plus one texture; FAQs have generous line spacing.",
+          "targets": [
+            "Finding your rhythm → /serein/journal/daily-rhythm",
+            "Guide to texture → /serein/journal/texture",
+            "Using Daily Oil / Your routine / Shipping → disclosures"
+          ],
+          "mobile": {
+            "layout": "Two journal text rows followed by Using Daily Oil, Your routine and Shipping disclosures. Entire summary row is the tap target.",
+            "scroll": "Entries remain in document order; no autoplay or compulsory horizontal dragging.",
+            "tap": "One tap on the visible title/CTA navigates. Help rows use independent native disclosures.",
+            "react": "Reuse StoryLink data; CSS changes the layout. Optional thumbnail never becomes the only accessible name.",
+            "source": "botnia"
+          }
+        },
+        {
+          "id": "S08",
+          "title": "Letters from Serein",
+          "ref": "botnia",
+          "behavior": "signup",
+          "content": "Optional email updates; no diagnostic quiz data collected on homepage.",
+          "layout": "Peach signup, visible label, one button.",
+          "targets": [
+            "Join us → newsletter endpoint, pending"
+          ],
+          "mobile": {
+            "layout": "Letters from Serein, field and Join us stack on peach. Use 16px minimum input text, a persistent label and an inline status region.",
+            "scroll": "Form stays in normal flow above the footer and is not covered by a sticky bar or keyboard overlay.",
+            "tap": "Tap input opens the email keyboard. Explicit submit shows inline validation, pending, server-confirmed success or retryable failure.",
+            "react": "NewsletterForm owns status; server owns success. type=email, autocomplete=email, visible label, aria-describedby and polite status region. No submission is implemented in this concept.",
+            "source": "botnia"
+          }
+        },
+        {
+          "id": "S09",
+          "title": "Serein footer",
+          "ref": "vintner",
+          "behavior": "footer",
+          "content": "Daily ritual / Daily Oil / Ingredients / Approach / Contact / Privacy / Terms.",
+          "layout": "Open cream footer with restrained blue baseline.",
+          "targets": [
+            "Daily ritual → /serein/daily-ritual",
+            "Ingredients → /serein/ingredients",
+            "Approach → /serein/our-approach"
+          ],
+          "mobile": {
+            "layout": "Two readable footer columns with comfortable line height. Ingredients and approach may be one editorial destination; final routing must retain all approved pages.",
+            "scroll": "Footer follows the newsletter with no fixed positioning.",
+            "tap": "Links remain visible with generous row targets; do not require a first tap to reveal a link.",
+            "react": "Reuse SiteFooter nav data. CSS grid becomes two columns then one at large text; preserve DOM order and legal destinations.",
+            "source": "botnia"
+          }
+        }
+      ]
+    }
+  ],
+  "mobile_evidence": {
+    "polene": {
+      "name": "Polène — mobile homepage",
+      "url": "https://eng.polene-paris.com/",
+      "image": "research/captures/mobile/polene-mobile-editorial.jpg",
+      "observed": "At 390 × 844, the header uses a compact menu and persistent brand/cart controls. Product cards form two columns with names and prices beneath; a large serif editorial passage follows. The cookie notice was dismissed. This is a viewport-width inspection, not a physical-device test.",
+      "applied": "Retain visible product labels, a compact header and generous story typography. Avela gives its signature Arc more prominence, then uses two secondary products."
+    },
+    "ashby": {
+      "name": "Studio Ashby — mobile projects",
+      "url": "https://studioashby.com/projects/",
+      "image": "research/captures/mobile/studio-ashby-mobile-projects.jpg",
+      "observed": "At 390 × 844, projects form one vertical sequence of large photographs with persistent captions below. The header shows the wordmark and menu icon. Activating Tamodi Estate opened its case-study page; the case-study content was inspected.",
+      "applied": "Room & Ritual keeps project names outside images and opens each home with one tap. Large photographs carry the narrative; a third project can remain a text link."
+    },
+    "snohetta": {
+      "name": "Snøhetta — mobile project index",
+      "url": "https://www.snohetta.com/projects?view=list&sortBy=last-updated",
+      "image": "research/captures/mobile/snohetta-mobile-list.jpg",
+      "observed": "At 390 × 844, the project introduction wraps above Grid / List / Map controls, search and two-column filter disclosures. List remained selected. Activating Filter projects updated the results and added a result count and Reset filter link. This was not an audit of every filter option.",
+      "applied": "Oriel retains explicit All / Culture / Living controls above its project content. The proposed three-filter interface is simpler than the reference; selection is visible and stored in the URL."
+    },
+    "ghia": {
+      "name": "Ghia — mobile product categories",
+      "url": "https://drinkghia.com/",
+      "image": "research/captures/mobile/ghia-mobile-fizz.jpg",
+      "observed": "At 390 × 844, a portrait hero is followed by category tabs and a large product tile with a sliver of the next tile visible. Activating Fizz selected it and displayed Le Fizz products. No cart or checkout action was performed.",
+      "applied": "Sundrop uses clear selected controls and generous product imagery. Its pack chooser remains a vertical radio group, and it retains 8% ALC/VOL; Ghia’s nonalcoholic product claims are not transferred."
+    },
+    "botnia": {
+      "name": "Botnia — mobile skincare homepage",
+      "url": "https://www.botniaskincare.com/",
+      "image": "research/captures/mobile/botnia-mobile-categories.jpg",
+      "observed": "At 390 × 844, product imagery and its name, price and action appear above full-width category rows with chevrons and separators. A newsletter overlay was dismissed. The capture verifies the row composition; no category result transition is claimed.",
+      "applied": "Serein keeps product information visible and uses full-width help disclosures. Its routine selector is a proposed three-button control, not a copied Botnia interaction."
+    }
+  }
+}

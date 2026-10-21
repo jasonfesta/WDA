@@ -1,0 +1,37 @@
+{
+  "gallery_mobile_images": 5,
+  "gallery_inspector_mobile_width": 390,
+  "responsive_checks": [
+    {
+      "page": "gallery",
+      "width": 320,
+      "horizontal_overflow": false
+    },
+    {
+      "page": "gallery",
+      "width": 390,
+      "horizontal_overflow": false
+    },
+    {
+      "page": "reviews/03-oriel.html",
+      "width": 320,
+      "horizontal_overflow": false
+    },
+    {
+      "page": "reviews/03-oriel.html",
+      "width": 390,
+      "horizontal_overflow": false
+    },
+    {
+      "page": "specs/03-oriel.html",
+      "width": 320,
+      "horizontal_overflow": false
+    },
+    {
+      "page": "specs/03-oriel.html",
+      "width": 390,
+      "horizontal_overflow": false
+    }
+  ],
+  "review_preview": "research/review-preview.jpg"
+}

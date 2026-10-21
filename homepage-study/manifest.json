@@ -1,0 +1,115 @@
+{
+  "title": "WDA / Homepage study",
+  "owner": "Jason Festa",
+  "repository": "https://github.com/jasonfesta/WDA",
+  "created": "2026-10-21",
+  "scope": "Five matching desktop and mobile homepage concepts with 50 tout specifications.",
+  "items": [
+    {
+      "id": "01-avela",
+      "name": "Avela / Soft Form",
+      "category": "Sculptural leather goods",
+      "desktop": "images/desktop/01-avela.png",
+      "mobile": "images/mobile/01-avela.jpg",
+      "desktop_dimensions": [
+        725,
+        2170
+      ],
+      "mobile_dimensions": [
+        390,
+        3210
+      ],
+      "review": "reviews/01-avela.html",
+      "specification": "specs/01-avela.md",
+      "sha256": {
+        "desktop": "5cd261a3aec378c9e87c63f346369c9af302182bdf85cbe45a3f9abfb406b78e",
+        "mobile": "d39b8f19be3ae2d7fe00da94c15ce92bf436545bdd0b3d64dc69176347b6c3b2"
+      }
+    },
+    {
+      "id": "02-room-and-ritual",
+      "name": "Room & Ritual",
+      "category": "Residential interiors",
+      "desktop": "images/desktop/02-room-and-ritual.png",
+      "mobile": "images/mobile/02-room-and-ritual.jpg",
+      "desktop_dimensions": [
+        724,
+        2172
+      ],
+      "mobile_dimensions": [
+        390,
+        3510
+      ],
+      "review": "reviews/02-room-and-ritual.html",
+      "specification": "specs/02-room-and-ritual.md",
+      "sha256": {
+        "desktop": "550942e510ae7172d12ecf5c861a3843a4e71c6fed7e8a60a2970d99ea565e03",
+        "mobile": "7cab5e11ad33bad1ec7f0433fd17e9f04f2ff98c03119810a034b13343e349ca"
+      }
+    },
+    {
+      "id": "03-oriel",
+      "name": "Oriel",
+      "category": "Architecture and adaptive reuse",
+      "desktop": "images/desktop/03-oriel.png",
+      "mobile": "images/mobile/03-oriel.jpg",
+      "desktop_dimensions": [
+        725,
+        2170
+      ],
+      "mobile_dimensions": [
+        390,
+        3497
+      ],
+      "review": "reviews/03-oriel.html",
+      "specification": "specs/03-oriel.md",
+      "sha256": {
+        "desktop": "6c24dc734bb5afa7ffac93d23a9acce1fdd457776a45bf6fd42f2f17222fe81a",
+        "mobile": "697b9c47864056eeba35e8ccce1e4f85e1fec00bcc38124bb1636157ac19ac40"
+      }
+    },
+    {
+      "id": "04-sundrop",
+      "name": "Sundrop",
+      "category": "Aperitif and hosting",
+      "desktop": "images/desktop/04-sundrop.png",
+      "mobile": "images/mobile/04-sundrop.jpg",
+      "desktop_dimensions": [
+        724,
+        2171
+      ],
+      "mobile_dimensions": [
+        390,
+        3510
+      ],
+      "review": "reviews/04-sundrop.html",
+      "specification": "specs/04-sundrop.md",
+      "sha256": {
+        "desktop": "5ecedf117f5c3feba18e8d4ab4b4b64136533aeac7245a1a528fa64cdd0d6e23",
+        "mobile": "ae66cab6061a73eed63f197d4276543e297a4a0a4e6250f8864845510db4754e"
+      }
+    },
+    {
+      "id": "05-serein",
+      "name": "Serein",
+      "category": "Botanical skincare",
+      "desktop": "images/desktop/05-serein.png",
+      "mobile": "images/mobile/05-serein.jpg",
+      "desktop_dimensions": [
+        724,
+        2172
+      ],
+      "mobile_dimensions": [
+        390,
+        3218
+      ],
+      "review": "reviews/05-serein.html",
+      "specification": "specs/05-serein.md",
+      "sha256": {
+        "desktop": "c5632bcf38f70f52000c4c8a8bbf35d6007a0b7c37b8bc9537ecaf5ca911106b",
+        "mobile": "91c0fa82cb3329cf30ca0eb971a11d3c28fffc7798645ea1c9ded8246dc103b8"
+      }
+    }
+  ],
+  "limitations": "Static composition studies. Mobile reflows desktop content; generated photos and fine text are illustrative. Production requires approved individual assets, real text, accessible controls and connected data."
+}
