@@ -1,0 +1,17 @@
+Use case: text-localization. Edit only the body paragraphs of the supplied AVELA legal page image. It is the edit target. Preserve native1536×1024 resolution, cream background, oxblood serif typography, title, visible "Draft for review", left chapter index, section headings, seven-section layout and all link positions. Keep same exact template, no new imagery, cards, header, nav, logo, newsletter or footer. The page is a visual design specimen. Replace future implementation commentary with the following concise shopper-facing DRAFT clauses, exactly. Do not add seller name, address, vendors, jurisdiction, dates, retention periods, prices, promises or liability terms.
+For TERMS & CONDITIONS, replace each paragraph under the matching existing heading:
+01 / About these terms:
+"These terms apply to use of the AVELA website and purchases made through it. Read them alongside product information and any terms shown during checkout."
+02 / Products and availability:
+"Review the selected product, colour and details before ordering. Product appearance may vary with screen settings, and availability can change."
+03 / Orders and payment:
+"Check your bag and order details before submitting payment. Review the order acceptance and payment information shown during checkout."
+04 / Prices and delivery:
+"Review the currency, full amount and any applicable tax or delivery charges before payment. Delivery information forms part of your order details."
+05 / Returns and cancellations:
+"Return and cancellation options depend on the order and applicable rights. Read Shipping & returns for the relevant conditions before purchase."
+06 / Care and repairs:
+"A repair request does not confirm work. Review and agree to any proposed work, cost and timing before sending your bag."
+07 / Website use and your rights:
+"Use the website lawfully and respect ownership of its content. Nothing in these terms removes rights that cannot lawfully be excluded. Contact us with questions."
+Keep both Contact and Privacy links and Draft for review clearly visible. Keep all numbered headings/index labels unchanged.

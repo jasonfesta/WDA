@@ -1,0 +1,27 @@
+Use case: text-localization / ui-mockup.
+Edit the supplied AVELA Privacy body raster into the TERMS page body. The supplied image is the edit target and the exact legal-template master. Preserve its native 1536 x 1024 resolution, cream background, oxblood ink, serif typography, left contents column, right reading column, margins, line-height and seven section placements. Keep NO header, logo, nav, newsletter, footer, frames, photos or cards. Change only the visible title, contents labels and body wording. Main title becomes "Terms & conditions" in the top title area, on one line across the open top margin above the right text column if needed; reduce only this title as needed to fit without overlap. Small "Draft for review" remains directly below. Seven body headings and their paragraphs must be readable, no added legal claims or competitor wording.
+Left contents labels:
+"01  About these terms"
+"02  Products and availability"
+"03  Orders and payment"
+"04  Prices and delivery"
+"05  Returns and cancellations"
+"06  Care and repairs"
+"07  Website use and your rights"
+Right reading text:
+"01 / About these terms"
+"The final terms will identify the seller and the markets covered. They will explain how these terms apply when you use the website and purchase an AVELA product."
+"02 / Products and availability"
+"The published terms will explain how screen display differences, stock changes and product information are handled."
+"03 / Orders and payment"
+"Review your chosen items and the full amount before payment. The final terms will explain when an order is accepted and when payment is taken."
+"04 / Prices and delivery"
+"Currency, taxes, shipping costs and delivery information will be explained before an order is placed."
+"05 / Returns and cancellations"
+"The final policy will state eligibility, time limits, return costs, cancellation options and refund steps for each selling market."
+"06 / Care and repairs"
+"A request is not confirmation of a repair. Any proposed work, cost and timing should be reviewed before agreement."
+"07 / Website use and your rights"
+"The final terms will explain permitted website use, content ownership and the applicable rights and dispute process. Verified contact details and an effective date will be added before publication."
+Bottom links underlined: "Contact ↗" and "Privacy ↗".
+Keep these exact seven sections. This is a design specimen, never claim final legal compliance. Do not invent seller name, address, governing law, arbitration, return window, vendors or dates. Preserve the template especially the continuous unboxed reading layout and small legible text.

@@ -28,3 +28,7 @@ Both new pages include the original homepage newsletter and footer, reused as de
 The images were made with built-in image generation and assembled proportionally. Desktop files preserve the narrowest generated section’s native width; mobile masters preserve native section detail, with separate 390 px review exports. The original newsletter/footer have the detail of the supplied homepage raster. Video, 3D, filtering, care and repair interactions are depicted design states; the companions record the intended future behavior. Material guidance and service terms require confirmation against the actual product before implementation.
 
 Earlier rejected page drafts are not part of this approved collection.
+
+## Remaining desktop review
+
+[Fifteen additional desktop pages and their reference companions](remaining-desktop/README.md) cover the missing footer destinations and connecting commerce, repair and editorial screens. These new images are a separate review round; the approved desktop/mobile collection above remains intact.

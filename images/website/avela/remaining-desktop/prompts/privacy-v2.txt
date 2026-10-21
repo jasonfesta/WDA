@@ -1,0 +1,17 @@
+Use case: text-localization. Edit only the body paragraphs of the supplied AVELA legal page image. It is the edit target. Preserve native1536×1024 resolution, cream background, oxblood serif typography, title, visible "Draft for review", left chapter index, section headings, seven-section layout and all link positions. Keep same exact template, no new imagery, cards, header, nav, logo, newsletter or footer. The page is a visual design specimen. Replace future implementation commentary with the following concise shopper-facing DRAFT clauses, exactly. Do not add seller name, address, vendors, jurisdiction, dates, retention periods, prices, promises or liability terms.
+For PRIVACY, replace each paragraph under the matching existing heading:
+01 / About this notice:
+"This notice explains how personal information is handled when you browse, shop or contact AVELA."
+02 / Information and purpose:
+"Information you provide may include contact details, order details and messages. It may be used to process orders, respond to requests and support the website."
+03 / Service providers and transfers:
+"Information may be shared with providers supporting payments, delivery and website services. Additional safeguards may apply where information crosses borders."
+04 / Retention and security:
+"How long information is held depends on its purpose and applicable obligations. Safeguards should reflect the nature of the information and how it is used."
+05 / Your choices and rights:
+"Depending on your location, you may have rights to access, correct or delete information, or object to certain uses. Contact us about a request."
+06 / Cookies and similar technologies:
+"Cookies and similar tools may support essential functions and optional measurement. Where consent is required, optional tools depend on your choice."
+07 / Contact and updates:
+"Contact AVELA with questions about this notice or your information. Review this notice for any updates that may affect you."
+Keep Contact link and Draft for review clearly visible. Keep all numbered headings/index labels unchanged.

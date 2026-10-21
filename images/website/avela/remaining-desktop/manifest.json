@@ -1,0 +1,852 @@
+{
+  "project": "AVELA",
+  "owner": "Jason Festa",
+  "date": "2026-10-21",
+  "status": "design-review",
+  "output": "desktop images only",
+  "pages": [
+    {
+      "slug": "product-arc",
+      "desktop": "desktop/product-arc.png",
+      "dimensions": [
+        1374,
+        1581
+      ],
+      "native_body": "sources/product-arc-body.png",
+      "native_body_dimensions": [
+        1374,
+        1145
+      ],
+      "header": "shared/header-empty-bag.png",
+      "footer": "shared/footer.png",
+      "research": "research/product-arc.md",
+      "prompt": "prompts/product-arc.txt",
+      "primary_reference": "https://eng.polene-paris.com/products/numero-dix-textured-plum"
+    },
+    {
+      "slug": "product-fold",
+      "desktop": "desktop/product-fold.png",
+      "dimensions": [
+        1374,
+        1581
+      ],
+      "native_body": "sources/product-fold-body.png",
+      "native_body_dimensions": [
+        1374,
+        1145
+      ],
+      "header": "shared/header-empty-bag.png",
+      "footer": "shared/footer.png",
+      "research": "research/product-fold.md",
+      "prompt": "prompts/product-fold.txt",
+      "primary_reference": "https://eng.polene-paris.com/products/cyme-textured-camel"
+    },
+    {
+      "slug": "product-day",
+      "desktop": "desktop/product-day.png",
+      "dimensions": [
+        1374,
+        1581
+      ],
+      "native_body": "sources/product-day-body.png",
+      "native_body_dimensions": [
+        1374,
+        1145
+      ],
+      "header": "shared/header-empty-bag.png",
+      "footer": "shared/footer.png",
+      "research": "research/product-day.md",
+      "prompt": "prompts/product-day.txt",
+      "primary_reference": "https://www.celine.com/en-us/soft-triomphe-wedge-in-supple-shiny-lambskin-123765597.38NO.html"
+    },
+    {
+      "slug": "shopping-bag",
+      "desktop": "desktop/shopping-bag.png",
+      "dimensions": [
+        1536,
+        1512
+      ],
+      "native_body": "sources/shopping-bag-body.png",
+      "native_body_dimensions": [
+        1536,
+        1024
+      ],
+      "header": "shared/header-one-item.png",
+      "footer": "shared/footer.png",
+      "research": "research/shopping-bag.md",
+      "prompt": "prompts/shopping-bag.txt",
+      "primary_reference": "https://www.celine.com/en-us/soft-triomphe-wedge-in-supple-shiny-lambskin-123765597.38NO.html"
+    },
+    {
+      "slug": "checkout",
+      "desktop": "desktop/checkout.png",
+      "dimensions": [
+        1536,
+        1512
+      ],
+      "native_body": "sources/checkout-body.png",
+      "native_body_dimensions": [
+        1536,
+        1024
+      ],
+      "header": "shared/header-one-item.png",
+      "footer": "shared/footer.png",
+      "research": "research/checkout.md",
+      "prompt": "prompts/checkout.txt",
+      "primary_reference": "https://support.polene-paris.com/hc/en-us/articles/32929188037650-How-do-I-place-an-order"
+    },
+    {
+      "slug": "order-confirmation",
+      "desktop": "desktop/order-confirmation.png",
+      "dimensions": [
+        1536,
+        1512
+      ],
+      "native_body": "sources/order-confirmation-body.png",
+      "native_body_dimensions": [
+        1536,
+        1024
+      ],
+      "header": "shared/header-empty-bag.png",
+      "footer": "shared/footer.png",
+      "research": "research/order-confirmation.md",
+      "prompt": "prompts/order-confirmation.txt",
+      "primary_reference": "https://www.cos.com/en-us/customer-service/payment"
+    },
+    {
+      "slug": "contact",
+      "desktop": "desktop/contact.png",
+      "dimensions": [
+        1536,
+        1512
+      ],
+      "native_body": "sources/contact-body.png",
+      "native_body_dimensions": [
+        1536,
+        1024
+      ],
+      "header": "shared/header-empty-bag.png",
+      "footer": "shared/footer.png",
+      "research": "research/contact.md",
+      "prompt": "prompts/contact.txt",
+      "primary_reference": "https://support.polene-paris.com/hc/en-us/requests/new"
+    },
+    {
+      "slug": "shipping-returns",
+      "desktop": "desktop/shipping-returns.png",
+      "dimensions": [
+        1536,
+        1512
+      ],
+      "native_body": "sources/shipping-returns-body.png",
+      "native_body_dimensions": [
+        1536,
+        1024
+      ],
+      "header": "shared/header-empty-bag.png",
+      "footer": "shared/footer.png",
+      "research": "research/shipping-returns.md",
+      "prompt": "prompts/shipping-returns.txt",
+      "primary_reference": "https://www.loewe.com/eur/en/pd/help/faqs.html"
+    },
+    {
+      "slug": "repair-assessment",
+      "desktop": "desktop/repair-assessment.png",
+      "dimensions": [
+        1254,
+        1652
+      ],
+      "native_body": "sources/repair-assessment-body.png",
+      "native_body_dimensions": [
+        1254,
+        1254
+      ],
+      "header": "shared/header-empty-bag.png",
+      "footer": "shared/footer.png",
+      "research": "research/repair-assessment.md",
+      "prompt": "prompts/repair-assessment.txt",
+      "primary_reference": "https://www.mulberry.com/us/customer-services/care-and-repairs/get-a-quote"
+    },
+    {
+      "slug": "repair-received",
+      "desktop": "desktop/repair-received.png",
+      "dimensions": [
+        1536,
+        1512
+      ],
+      "native_body": "sources/repair-received-body.png",
+      "native_body_dimensions": [
+        1536,
+        1024
+      ],
+      "header": "shared/header-empty-bag.png",
+      "footer": "shared/footer.png",
+      "research": "research/repair-received.md",
+      "prompt": "prompts/repair-received.txt",
+      "primary_reference": "https://www.mulberry.com/us/customer-services/care-and-repairs/get-a-quote"
+    },
+    {
+      "slug": "journal",
+      "desktop": "desktop/journal.png",
+      "dimensions": [
+        1536,
+        1766
+      ],
+      "native_body": "sources/journal-body.png",
+      "native_body_dimensions": [
+        1536,
+        1024
+      ],
+      "header": "shared/header-empty-bag.png",
+      "footer": "../shared/home-newsletter-footer-desktop.png",
+      "research": "research/journal.md",
+      "prompt": "prompts/journal.txt",
+      "primary_reference": "https://eng.polene-paris.com/blogs/editorials"
+    },
+    {
+      "slug": "journal-article",
+      "desktop": "desktop/journal-article.png",
+      "dimensions": [
+        1536,
+        1766
+      ],
+      "native_body": "sources/journal-article-body.png",
+      "native_body_dimensions": [
+        1536,
+        1024
+      ],
+      "header": "shared/header-empty-bag.png",
+      "footer": "../shared/home-newsletter-footer-desktop.png",
+      "research": "research/journal-article.md",
+      "prompt": "prompts/journal-article.txt",
+      "primary_reference": "https://eng.polene-paris.com/blogs/editorials/the-summit-ramblers"
+    },
+    {
+      "slug": "privacy",
+      "desktop": "desktop/privacy.png",
+      "dimensions": [
+        1536,
+        1512
+      ],
+      "native_body": "sources/privacy-body-v2.png",
+      "native_body_dimensions": [
+        1536,
+        1024
+      ],
+      "header": "shared/header-empty-bag.png",
+      "footer": "shared/footer.png",
+      "research": "research/privacy.md",
+      "prompt": "prompts/privacy-v2.txt",
+      "primary_reference": "https://eng.polene-paris.com/policies/privacy-policy"
+    },
+    {
+      "slug": "terms",
+      "desktop": "desktop/terms.png",
+      "dimensions": [
+        1536,
+        1512
+      ],
+      "native_body": "sources/terms-body-v2.png",
+      "native_body_dimensions": [
+        1536,
+        1024
+      ],
+      "header": "shared/header-empty-bag.png",
+      "footer": "shared/footer.png",
+      "research": "research/terms.md",
+      "prompt": "prompts/terms-v2.txt",
+      "primary_reference": "https://eng.polene-paris.com/policies/terms-of-sale"
+    },
+    {
+      "slug": "not-found",
+      "desktop": "desktop/not-found.png",
+      "dimensions": [
+        1536,
+        1512
+      ],
+      "native_body": "sources/not-found-body.png",
+      "native_body_dimensions": [
+        1536,
+        1024
+      ],
+      "header": "shared/header-empty-bag.png",
+      "footer": "shared/footer.png",
+      "research": "research/not-found.md",
+      "prompt": "prompts/not-found.txt",
+      "primary_reference": "https://eng.polene-paris.com/404"
+    }
+  ],
+  "files": [
+    {
+      "path": "PRODUCTION.md",
+      "bytes": 4439,
+      "sha256": "49bb7371603d36de4d616c82ef92d730fce13a208bf86fa9614e0b062445885d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4186,
+      "sha256": "9f5169ab99abc0897d9db89d4aa93da40a787bdef896c9b3142cd128441f1520"
+    },
+    {
+      "path": "VERIFICATION.md",
+      "bytes": 1487,
+      "sha256": "a9269cbf43334afe624783893d471c75d8ab609c3b3e5575daee612ec3e17c40"
+    },
+    {
+      "path": "desktop/checkout.png",
+      "bytes": 1346575,
+      "sha256": "133caa57e85db1b7f5150ffc8d3a3b4135d9e9fbc52bfdd8cfc87a364357cd8c",
+      "dimensions": [
+        1536,
+        1512
+      ]
+    },
+    {
+      "path": "desktop/contact.png",
+      "bytes": 1324606,
+      "sha256": "abbe1dea2f9a62205dbb48a3c8bffd7c34b242822e1b3d7e6323f42bb6b2e16c",
+      "dimensions": [
+        1536,
+        1512
+      ]
+    },
+    {
+      "path": "desktop/journal-article.png",
+      "bytes": 2475957,
+      "sha256": "84938dff608fc3ae22026da9e268572c8a36d4efddc100e0c8071a3e9f9a1b26",
+      "dimensions": [
+        1536,
+        1766
+      ]
+    },
+    {
+      "path": "desktop/journal.png",
+      "bytes": 2537077,
+      "sha256": "0d2a89ebe68448a4bb73504e6c7e6f275946685caa5852400d7799e5b567b906",
+      "dimensions": [
+        1536,
+        1766
+      ]
+    },
+    {
+      "path": "desktop/not-found.png",
+      "bytes": 1259372,
+      "sha256": "2449744865c4eef3f8030ce0b5340fdfe6693a779965080e7e04ea8c2560ff88",
+      "dimensions": [
+        1536,
+        1512
+      ]
+    },
+    {
+      "path": "desktop/order-confirmation.png",
+      "bytes": 1435735,
+      "sha256": "e96e1aef7e980ea407ad3b1ba49988ab63a8d375a9a86e17464211523675f318",
+      "dimensions": [
+        1536,
+        1512
+      ]
+    },
+    {
+      "path": "desktop/privacy.png",
+      "bytes": 1682540,
+      "sha256": "4fff911001e16daf5deff988fd56adb838e05ba8b4f99fe03fdce5ef3331dac5",
+      "dimensions": [
+        1536,
+        1512
+      ]
+    },
+    {
+      "path": "desktop/product-arc.png",
+      "bytes": 1905041,
+      "sha256": "4bc799ff72fd08b436e50c306f03663c3d4c5879f280cf5a3930681746731fc6",
+      "dimensions": [
+        1374,
+        1581
+      ]
+    },
+    {
+      "path": "desktop/product-day.png",
+      "bytes": 2041082,
+      "sha256": "d7834cf8421ec1d717e8e155f1070997f5e6f88578a2a34a7d28393a3ce778f4",
+      "dimensions": [
+        1374,
+        1581
+      ]
+    },
+    {
+      "path": "desktop/product-fold.png",
+      "bytes": 1906792,
+      "sha256": "59b9baa07e5449b20160282409a65087655710cba21960a9b7064fc8baef611b",
+      "dimensions": [
+        1374,
+        1581
+      ]
+    },
+    {
+      "path": "desktop/repair-assessment.png",
+      "bytes": 1752275,
+      "sha256": "e626c007f7743aa59be848f51d552fda79c9660f991b8f546999105c81ab0bc0",
+      "dimensions": [
+        1254,
+        1652
+      ]
+    },
+    {
+      "path": "desktop/repair-received.png",
+      "bytes": 1543405,
+      "sha256": "84836075abaf2c81554f9c11b2c5621044efb8a26e2eef5ab72f586138ba8d71",
+      "dimensions": [
+        1536,
+        1512
+      ]
+    },
+    {
+      "path": "desktop/shipping-returns.png",
+      "bytes": 1559916,
+      "sha256": "3944c2291b532fe4ed28df98a3b43c332cecceca33039b4876a4a41523522abb",
+      "dimensions": [
+        1536,
+        1512
+      ]
+    },
+    {
+      "path": "desktop/shopping-bag.png",
+      "bytes": 1390380,
+      "sha256": "514e024cfe6c44ab064ded03421831719b1dacf7249f7f8a8b31d01dfd975949",
+      "dimensions": [
+        1536,
+        1512
+      ]
+    },
+    {
+      "path": "desktop/terms.png",
+      "bytes": 1780579,
+      "sha256": "618b02ebb8aa59dfe75018457ec2ad56b15fe9f5b7946f1ae3c26bb9797b1ee6",
+      "dimensions": [
+        1536,
+        1512
+      ]
+    },
+    {
+      "path": "prompts/checkout.txt",
+      "bytes": 2173,
+      "sha256": "2f873d75862932ed510684973107b53b8c75772912361ec9c1d1fe96d2636961"
+    },
+    {
+      "path": "prompts/contact.txt",
+      "bytes": 2455,
+      "sha256": "3854a178be85b000abf0dd2c885e48130f5299ddec6a5f9c9bf518123863a2a0"
+    },
+    {
+      "path": "prompts/header-one-item.txt",
+      "bytes": 683,
+      "sha256": "085a40bfe5458d8d2bd6e86f445c562833555bab8a688502ccf09c577247e9ad"
+    },
+    {
+      "path": "prompts/journal-article.txt",
+      "bytes": 2670,
+      "sha256": "01a52c1d783f421f67ff748040748a98721964cc394efdb18927a27644723a9a"
+    },
+    {
+      "path": "prompts/journal.txt",
+      "bytes": 2752,
+      "sha256": "da4ee016d8d477d936f91e5aadee5f15c06c9735ba836c7713a7960e5faa1e56"
+    },
+    {
+      "path": "prompts/not-found.txt",
+      "bytes": 1413,
+      "sha256": "6b154052fec1984b9cd002999f281ba038008b768f400526ea775f0ee5298a9d"
+    },
+    {
+      "path": "prompts/order-confirmation.txt",
+      "bytes": 2076,
+      "sha256": "f0cf9aaa97e88a5aa1f66de999a417bfcd22c3719e22356a3b98ec211de28036"
+    },
+    {
+      "path": "prompts/privacy-v2.txt",
+      "bytes": 2077,
+      "sha256": "708d2a8217c4e330922c85c30c1daa0499e907920336a343c9b5ed2c388d07c4"
+    },
+    {
+      "path": "prompts/privacy.txt",
+      "bytes": 3477,
+      "sha256": "925f47a625b42f7929744fb39315e34a48b2d3f552ebcef99e719eab112bb624"
+    },
+    {
+      "path": "prompts/product-arc.txt",
+      "bytes": 2925,
+      "sha256": "e276ff8e35a687d587d9ebd4f4543dbb7f88ee5bfd9e7b1dc0f1491912816eb6"
+    },
+    {
+      "path": "prompts/product-day-back-link-fix.txt",
+      "bytes": 692,
+      "sha256": "03be1c1f125e2516fdd896e5a906fa30f1ea41bd451cbbbd27d6f2b642d5fee6"
+    },
+    {
+      "path": "prompts/product-day.txt",
+      "bytes": 2032,
+      "sha256": "8aaab9dfacf2cc85cef620c9c6c0d1c8e90644af2ec0d92502d4e2b84c413705"
+    },
+    {
+      "path": "prompts/product-fold.txt",
+      "bytes": 1945,
+      "sha256": "22f7790c75ba46d3f2130a902813ef18614c96b725f6b026b1355b0cfa817bf8"
+    },
+    {
+      "path": "prompts/repair-assessment.txt",
+      "bytes": 3127,
+      "sha256": "6c0fe955f5c94c17eefff32381919a29f382cd313b8e885c9e0b40c83bec7e5d"
+    },
+    {
+      "path": "prompts/repair-received.txt",
+      "bytes": 2396,
+      "sha256": "0ea5662d2d63159404d4a4888a78af19f5d3c463392c36ca84dd68c974a91b7b"
+    },
+    {
+      "path": "prompts/shipping-returns.txt",
+      "bytes": 2836,
+      "sha256": "7ffe302672dc2f8f26f66bc8d101a5b66ac569c56923feacce754a13e382d87a"
+    },
+    {
+      "path": "prompts/shopping-bag.txt",
+      "bytes": 1918,
+      "sha256": "d327010fc283b71ed01c8e1bbb436bdc401a5231ad4ad08f37f98dba1e7c70de"
+    },
+    {
+      "path": "prompts/terms-v2.txt",
+      "bytes": 2101,
+      "sha256": "0604faf54505688d72e2ded4da630505a0b8b6bab2f54250d30af2c4bef2507c"
+    },
+    {
+      "path": "prompts/terms.txt",
+      "bytes": 2630,
+      "sha256": "71b6b213e02704c03f08170d62f8db92ca3f0405a454d2fa14975abce8ed96c4"
+    },
+    {
+      "path": "research/captures/polene-404.jpg",
+      "bytes": 64480,
+      "sha256": "d127332c14240b2e74c95a004102fc1d6ace18880fd3f0572b4dc72f4668c31a",
+      "dimensions": [
+        1800,
+        948
+      ]
+    },
+    {
+      "path": "research/captures/polene-privacy.jpg",
+      "bytes": 100967,
+      "sha256": "ae4ae25a921fe163d22c0f653fd2fb500dc7e2184b5f14f6c385d891f8f2477f",
+      "dimensions": [
+        1800,
+        1004
+      ]
+    },
+    {
+      "path": "research/captures/polene-terms.jpg",
+      "bytes": 149987,
+      "sha256": "9b9d6870051052042d2b789fe1d900163be2c6df5c104f0d44ee1a22dba81832",
+      "dimensions": [
+        1800,
+        948
+      ]
+    },
+    {
+      "path": "research/checkout.md",
+      "bytes": 1865,
+      "sha256": "c70db900ca62ad86030645edb7b3a224cae27c029a0f08e4428423f75004296a"
+    },
+    {
+      "path": "research/commerce-plan.md",
+      "bytes": 6612,
+      "sha256": "83c9452572b5e9e855b083f0b3e7772c6093c68afb7ee32be41e287f7bf82294"
+    },
+    {
+      "path": "research/contact.md",
+      "bytes": 1640,
+      "sha256": "ca9c53842569da7ac4f8d8d6aa4c3c7d11112cf1015e9bf79ae612c5b0a09aed"
+    },
+    {
+      "path": "research/editorial-legal-plan.md",
+      "bytes": 9851,
+      "sha256": "c2c9f46f77927508982c61a8eacf2cbf45a3dc0a1178502a00ad1432954ceca3"
+    },
+    {
+      "path": "research/footer-audit.md",
+      "bytes": 3788,
+      "sha256": "f7949a859bcd48bbb146c7c4298274203e8d3aa2590c79e06bdb376fadfb2077"
+    },
+    {
+      "path": "research/journal-article.md",
+      "bytes": 1892,
+      "sha256": "9fdb6132cfba80b4feeb9bbc82e4b7a9d73d5af695ca33660a2ef65806b9425d"
+    },
+    {
+      "path": "research/journal.md",
+      "bytes": 1798,
+      "sha256": "1ed151461bf566877194f8d76e3cee9b74ac2fe3f7029c29fd9cbbdafcbacc09"
+    },
+    {
+      "path": "research/not-found.md",
+      "bytes": 1765,
+      "sha256": "ceefb5b0e25de8c22e9583de1675e492da8862a747972585b042a08e012faa17"
+    },
+    {
+      "path": "research/order-confirmation.md",
+      "bytes": 2011,
+      "sha256": "0cbbf6715a0d845965d01f07b7d4464cecbb9e65aa41f6351a4df423bf98a609"
+    },
+    {
+      "path": "research/privacy-copy.md",
+      "bytes": 1839,
+      "sha256": "f2fd0c0c2ca641ff91ca970b947470870576468fbd8d55f65f7afdfc42076b32"
+    },
+    {
+      "path": "research/privacy.md",
+      "bytes": 2880,
+      "sha256": "a1adaf61941ae694be9114f70b4806077734215d092407a696ef1bd62033af3a"
+    },
+    {
+      "path": "research/product-arc.md",
+      "bytes": 2411,
+      "sha256": "7668e8a71c7a8ddc3e1f6b2a76f2536acfd21d08b52ca8960e18377cec7b4f40"
+    },
+    {
+      "path": "research/product-day.md",
+      "bytes": 1642,
+      "sha256": "e0e71b2eab044cb7cf7ec03cddfd17c30cc4d2aa697adccb44f171f8965dbd18"
+    },
+    {
+      "path": "research/product-fold.md",
+      "bytes": 1831,
+      "sha256": "e8b7c1688d244f8a161d835bf0a1cb471c22cd20b0f3b8fda63fa936f228137f"
+    },
+    {
+      "path": "research/repair-assessment.md",
+      "bytes": 1859,
+      "sha256": "cb409b8e19c20bfa0dc8602d9b2ce6995c4d7de34482db825a9a74e990339048"
+    },
+    {
+      "path": "research/repair-received.md",
+      "bytes": 1691,
+      "sha256": "ad243c69bdb70d63c8ad7ebeff0ca921e3088374f68e68e62d3a05028cd0ce9f"
+    },
+    {
+      "path": "research/service-plan.md",
+      "bytes": 8926,
+      "sha256": "da7e3730dd31cd50f7c00e7ebc9f5c87654c6c3ee6c74da4c6e8432ebe7dc2b7"
+    },
+    {
+      "path": "research/shipping-returns.md",
+      "bytes": 1637,
+      "sha256": "484e8e5d5f09b78800e03177c60d7e805ba8db63ebfb46d242e8588c1091628a"
+    },
+    {
+      "path": "research/shopping-bag.md",
+      "bytes": 1959,
+      "sha256": "ad3b10a628d8d76dfa71494a7285697215e67ac9f032354c65c9c1632fa137c0"
+    },
+    {
+      "path": "research/terms-copy.md",
+      "bytes": 1767,
+      "sha256": "742881d57aa5849713ad8f84f3ce1cb3348260c86111f654cefd7e96781b01e2"
+    },
+    {
+      "path": "research/terms.md",
+      "bytes": 2803,
+      "sha256": "0604ea74ffa8505aadcf2641a187726613e44f5cb2ebe9f88bc047ca5d82e5d8"
+    },
+    {
+      "path": "shared/README.md",
+      "bytes": 1567,
+      "sha256": "b61e1b6bde5a5c68e06c5b75bc26038a4538e47e6460b89b1bb0a1bdbda9f603"
+    },
+    {
+      "path": "shared/footer.png",
+      "bytes": 100910,
+      "sha256": "c578f47222bf3249634e52a54ed1c82101293ddcc471a8f696897e378c0bcc9e",
+      "dimensions": [
+        725,
+        170
+      ]
+    },
+    {
+      "path": "shared/header-empty-bag.png",
+      "bytes": 67691,
+      "sha256": "8596e1ea1177cf76696cedcc3712e173e4959895a405e7f5a944bab0a4faffc0",
+      "dimensions": [
+        1080,
+        90
+      ]
+    },
+    {
+      "path": "shared/header-one-item.png",
+      "bytes": 67646,
+      "sha256": "44dac6020ac5c6539bceb138f0e87d9c08fd63a811bda80531ed9cdd6271d052",
+      "dimensions": [
+        1080,
+        90
+      ]
+    },
+    {
+      "path": "sources/checkout-body.png",
+      "bytes": 1252549,
+      "sha256": "785b6d6352701befc1257ee128fc20c9624438a6c1d4712f695e54e02bd30694",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "sources/contact-body.png",
+      "bytes": 1237045,
+      "sha256": "7d3afcbe608b01d3bec2421487d0ae9191e189dfb3afbc920a35528ec994cf93",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "sources/header-one-item-generated.png",
+      "bytes": 1074033,
+      "sha256": "7051c46764c92b43c481274d2386b7a7fdd54073487e70a050c00079a33eae1a",
+      "dimensions": [
+        2172,
+        724
+      ]
+    },
+    {
+      "path": "sources/journal-article-body.png",
+      "bytes": 2065924,
+      "sha256": "a57784ee5b24d85e5b7e76dd6c054d56b52ca352978fb01b3e4671112184fa01",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "sources/journal-body.png",
+      "bytes": 2132640,
+      "sha256": "0fa8b762f05c877636c02561a23a2b2a0f5a92aec896235617726b0c9f4eeb04",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "sources/not-found-body.png",
+      "bytes": 1188937,
+      "sha256": "9a425c3df1684c64f92cac9cc2f25991beeded46345f4e8596bf351a52552892",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "sources/order-confirmation-body.png",
+      "bytes": 1338791,
+      "sha256": "eaea1e510a0b3639062950632dd684cfcda9ad253dbdc6662a4303ec0f8d8fc7",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "sources/privacy-body-v2.png",
+      "bytes": 1551091,
+      "sha256": "aed22291f8b13c87c6b7324df6b5efa6f508309fc81c6aac2bfa12628cc68c46",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "sources/privacy-body.png",
+      "bytes": 1468001,
+      "sha256": "3c99a2a57be06991253a9e2869d2a7c79d7e5669e15b9817a8b83972297f8ef7",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "sources/product-arc-body.png",
+      "bytes": 1774783,
+      "sha256": "b2669b00b771720e86806f039e07f48d1c5faa1cde4f7e0ad3fad5bbea3d6cb1",
+      "dimensions": [
+        1374,
+        1145
+      ]
+    },
+    {
+      "path": "sources/product-day-body.png",
+      "bytes": 1935303,
+      "sha256": "e4de2acb81040bfc024a6d3adc5a9f54eddc9ceab2904dcb8369713c78c6bef1",
+      "dimensions": [
+        1374,
+        1145
+      ]
+    },
+    {
+      "path": "sources/product-fold-body.png",
+      "bytes": 1770524,
+      "sha256": "49235c5789f645e2aea3ecc90d8994ac80fa9888de4d80d77aee9125849f5d9f",
+      "dimensions": [
+        1374,
+        1145
+      ]
+    },
+    {
+      "path": "sources/repair-assessment-body.png",
+      "bytes": 1627579,
+      "sha256": "743bcf2f194a0fff0317451381df548d8224156fde2946cc7a51c174f635327e",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "sources/repair-received-body.png",
+      "bytes": 1416060,
+      "sha256": "3766505bff2e9fe55422be83fd9fa8c5358ef2b5ed4811ac703e5b92edd93f1f",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "sources/shipping-returns-body.png",
+      "bytes": 1421769,
+      "sha256": "3eb91da5c5dd97db2092e126f1a7f339bdcc08ad6c63ad9d4208a09358387409",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "sources/shopping-bag-body.png",
+      "bytes": 1301369,
+      "sha256": "e7244a62d1dba4e7388115825604af8bb7af907623293566599a0dca8bb43305",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "sources/terms-body-v2.png",
+      "bytes": 1634519,
+      "sha256": "76e1a52a04d0cb67e16795883e3cc56143ca97ae6501421adf03c59035690e93",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "sources/terms-body.png",
+      "bytes": 1515078,
+      "sha256": "8633d513f57f5d386d3a57a7ffcd7f3c4a090ba70a03166906f2b5592c347653",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    }
+  ]
+}

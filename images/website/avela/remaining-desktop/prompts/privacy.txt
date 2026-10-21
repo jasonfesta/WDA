@@ -1,0 +1,24 @@
+Use case: ui-mockup.
+Create ONE native-resolution raster desktop website BODY section for AVELA. Target canvas 1536 x 1536 px. This is a complete page body to be assembled with existing header/footer artwork later, so DO NOT draw any header, navigation, AVELA logo, Bag count, newsletter, footer or outer mockup frame. Do not label the output "desktop" or "mockup".
+Input images are REFERENCES ONLY, not edit targets: approved homepage shows brand, bag identities and warm coastal mood; approved care page shows interior typography and cream field; workshop shows craft imagery. Reinterpret only page body content specified below.
+Use a uniform pale cream background #FBF5E6, elegant oxblood #601F29 serif title and text, fine understated rules and underlined text links. Large calm margins, open air, no cards/shadows/rounded rectangles, no generic marketing bands. At least 32px uninterrupted cream at very top and bottom; 64px side gutters. Native output WIDTH MUST BE AT LEAST 1024 pixels; generate at requested size rather than enlarging a small image. Real wide desktop composition, not mobile. Image art may be photorealistic but all interface typography crisp and readable.
+PAGE BODY: "Privacy".
+Use a quiet compact legal document layout. Main title "Privacy" at x64 y70, modest 66px serif; a small line below "Draft for review". Below y215 compose a 230px wide left table of contents and a SINGLE right reading column beginning x430, width about 990. The left index is small 20px muted oxblood serif, seven numbered rows, no borders, no enclosing box. Right body text ~21px serif with 1.35 line height, section headings ~27px. Keep sections compact with generous 26px breaks. All text on cream. No huge title, photos or iconography.
+Exact seven left index labels: "01  About this notice"; "02  Information and purpose"; "03  Service providers"; "04  Retention and security"; "05  Your choices and rights"; "06  Cookies"; "07  Contact and updates".
+Exact right-column text, no invented extra copy:
+"01 / About this notice"
+"The published notice will identify the organisation responsible for personal information and explain how to contact it."
+"02 / Information and purpose"
+"The final notice will describe the information collected through shopping, enquiries and newsletter requests, together with the purpose and applicable legal basis for each use."
+"03 / Service providers and transfers"
+"The published notice will identify relevant recipients, service providers and any transfers across borders. It will explain the safeguards that apply."
+"04 / Retention and security"
+"The final notice will explain how retention periods are determined and describe the safeguards used to protect personal information."
+"05 / Your choices and rights"
+"The published notice will explain the rights available in each market, how to make a request and how to raise a privacy concern."
+"06 / Cookies and similar technologies"
+"The final notice will describe the technologies actually used, their purposes and durations, and any consent or preference controls available."
+"07 / Contact and updates"
+"Verified contact details and an effective date will be added before publication. Material changes and the route for privacy questions will be explained here."
+At reading-column bottom: small underlined "Contact ↗".
+No fictitious entity, address, vendors, dates, legal jurisdiction, response timeframe or retention period. It is a design specimen, visibly marked Draft for review.
