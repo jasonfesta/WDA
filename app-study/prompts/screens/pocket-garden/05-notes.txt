@@ -1,0 +1,25 @@
+Use case: ui-mockup. Create ONE polished mobile application screen only. Full-bleed upright rectangular canvas, target 756 × 1559 pixels (aspect ratio 0.485). The app surface reaches all four image edges and ALL FOUR SQUARE CORNERS. ZERO outer white presentation space, ZERO phone frame, ZERO rounded device outline, ZERO surrounding mockup background, ZERO shadow around the entire screen. The reference has a phone frame and margins: REMOVE those and extend/reflow the app interior into the full canvas. Do not crop text or controls. Do not draw a device. Rounded small controls INSIDE the app are allowed. No collage or multiple panels. Native screenshot-like, crisp readable copy, generous internal spacing but no exterior padding. Consistent 24px logical side gutters inside the app; status area at top; safe area/home indicator at bottom. Practical body text and 44px logical touch targets. All buttons are rendered as design, not annotations. No extra controls or marketing badges. Preserve object proportions; no stretched imagery or typography. The exact screen title and all specified copy must be legible. Render in the same stable mobile viewport for every screen.
+
+REFERENCE ROLE: attached original screenshot supplies this app’s art direction only; its device frame and surrounding whitespace must not appear.
+APP: Pocket Garden
+STYLE: Original Pocket Garden art direction: beautiful tactile gouache illustration, leafy olive greens, peach flowers, coral overalls, soft warm sunlight, cream reading surfaces, burgundy humanist headings. Consistent dark-haired gardener and botanical brush texture. Avoid generic vector clip art or glass dashboards.
+PALETTE: #FFF9E9, #6A7044, #BC7352, #782E35
+TYPE DIRECTION: DM Sans (approximate in raster; readable, never stretched).
+SCREEN: The things you notice
+CONTENT AND STATE:
+Pocket Garden, heading "The things you notice". "Pip · Kitchen window". One subtle botanical leaf illustration in corner. Labeled editor "New observation" with exact text "Pip has two new leaves." Optional outlined control "Add a photo". Primary "Save note". Secondary "Cancel". Quiet footer line "Your notes will grow here." Bottom Garden / Care / Notes; ONLY Notes active. Do not show a second copy of the unsaved note in history.
+
+PERSISTENT DATA / CONSISTENCY:
+One plant: Pip, Olive, Kitchen window, Bright light. One soil-check task initially pending. Completing the check records observed soil as Still damp and skips watering. One saved note appears only after saving.
+Only display the subset specified for this screen. This fixture is for consistency, not extra text to print.
+FINAL GEOMETRY CHECK: the complete image IS the app screen itself, with square outer corners and no white margin or outer frame anywhere.
+Image 2 supplies the new home/play UI family: retain type, materials, palette, tab icons, same mobile density. Create the specified fifth screen ONLY. Full-bleed 874 × 1800 canvas, four square outer corners, no phone frame and no exterior margins. Every specified control and label must fit and be readable. In Home Note, Avery is an adult household owner, Morgan an adult invited helper. In Pocket Garden, the plant selector has a small chevron. On Soul the reminder is OFF and reduce motion is ON; these must not be confused.
+
+REVISION APPLIED
+Recompose this exact screen into a NARROWER, TALLER mobile viewport, 874 by 1800 pixels, ratio 0.485. Do not stretch the image or add outer padding: reflow all the content with the same natural typography and imagery. Preserve all content, but REMOVE the incorrect 25/500 character counter entirely. Add a small downward chevron after “Pip · Kitchen window” to make it a clear plant selector. Preserve the note text exactly “Pip has two new leaves.” and Notes selected.
+
+FINAL OS CLEANUP APPLIED
+Use case: precise-object-edit. This is a surgical cleanup of the attached mobile app screenshot, the edit target. Remove ONLY the operating-system status bar: the tiny time in the extreme top-left (9:41 or 18:00), the cellular signal bars, Wi-Fi glyph, and battery/power glyph in the extreme top-right. Remove any OS home indicator at the very bottom if present. Seamlessly fill those small areas with the exact surrounding app background texture/color/gradient. Preserve EVERY in-app time, date, forecast, title, paragraph, control, illustration, progress indicator, tab, and app icon exactly, in the exact same position and size. Do not shift content upward or alter typography. Do not crop, stretch, reflow, add padding, round the outer corners, or change the native tall portrait aspect ratio. The app must remain full bleed with four square outer corners. No additions, no OS chrome anywhere. Keep all other pixels as unchanged as possible. Output one screen only.
+
+FINAL EXPORT REQUIREMENT (supersedes any earlier status-area instruction)
+No operating-system clock, cellular signal, Wi-Fi, battery or home indicator. Preserve in-app dates, times, icons and navigation.

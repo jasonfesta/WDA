@@ -1,0 +1,58 @@
+{
+  "motion-gestures": {
+    "title": "Motion · Gesture animation",
+    "url": "https://motion.dev/docs/react-gestures",
+    "finding": "Hover, press, focus and drag APIs support feedback on real controls. Specific timings and visual treatments in this study are WDA proposals.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "motion-access": {
+    "title": "Motion · Accessibility",
+    "url": "https://motion.dev/docs/react-accessibility",
+    "finding": "Reduced-motion policy can govern transforms and custom media behavior. The app must also stop its own shaders and decorative video.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "shader": {
+    "title": "Three.js · ShaderMaterial",
+    "url": "https://threejs.org/docs/pages/ShaderMaterial.html",
+    "finding": "A custom GLSL material can receive time and resolution uniforms. This supports a proposed procedural light field for Afterglow.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "r3f": {
+    "title": "React Three Fiber · Scaling performance",
+    "url": "https://r3f.docs.pmnd.rs/advanced/scaling-performance",
+    "finding": "On-demand rendering and explicit invalidation support scenes that stop when still. Reuse geometry and materials; measure the actual mobile workload.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "veo": {
+    "title": "Google · Video generation",
+    "url": "https://ai.google.dev/gemini-api/docs/video",
+    "finding": "Image-directed video is a motion-study option. Use a currently supported Veo endpoint at production time; these briefs intentionally do not pin a preview model. A generated clip is not editable 3D geometry.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "visibility": {
+    "title": "MDN · Page Visibility API",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API",
+    "finding": "Document visibility changes let the application suspend decorative media when the page is hidden. Resume from state rather than counting background frames.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "pause": {
+    "title": "W3C · Pause, Stop, Hide",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
+    "finding": "Automatically moving content lasting more than five seconds alongside other content needs a way to pause, stop or hide it. This proposal uses short ambient introductions that settle.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "drag-alternative": {
+    "title": "W3C · Dragging movements",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+    "finding": "Dragging needs a single-pointer alternative. Petal retains tap-select and tap-target controls as well as keyboard input.",
+    "checked": "2026-10-21",
+    "access": "read"
+  }
+}

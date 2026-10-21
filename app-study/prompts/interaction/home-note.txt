@@ -1,0 +1,54 @@
+WDA / Home Note — interaction and motion implementation prompt
+
+Read data/flows.json for this app, interaction/home-note.md, and interaction/motion/home-note.md before implementation. Implement the full documented flow including auxiliary routes and recovery; five images are representative states, not a linear five-step slideshow.
+
+ART DIRECTION
+Original Home Note art direction: peach, citron and burgundy; friendly sculptural adult and child avatars, tactile household pictograms, softly tilted illustrated cards in welcome only. Cream/pink surfaces, a rich expressive serif headline and practical rounded humanist labels. Never substitute portrait photography.
+Fonts: Fraunces, Nunito Sans. Palette: #FFE5D4, #E2D998, #9F9953, #78252E. Preserve full-bleed square edges, airy internal spacing, exact UI content and no OS chrome.
+
+APP MOTION
+Bring the soft clay house to life with a little window warmth and foliage movement. Keep the adult avatar consistent and let handover actions, read states and invitations carry the functional feedback.
+Compose an illustration-only video inside the house region, under semantic form and card UI. The house can have a single 4-second entrance vignette on welcome/setup; main tabs use the still. Expand notes with CSS/Motion layout and preserve focus. A successful create/save/acknowledgement drives a short state treatment; a clip ending does not create a household, mark a note read or send an invitation.
+
+INTERACTION RULES
+Touch is primary. Enable rollover only for (hover: hover) and (pointer: fine). Every hover cue has a focus-visible equivalent; no action or information is available only on hover. Pointer exit restores the resting style without changing selection. Use native buttons, links and labeled fields, not clickable artwork.
+
+Proposed tokens: hover 120 ms; press tint 80 ms; focus outline immediate; route crossfade 160 ms; small state changes 180 ms; expanded content 220 ms. Ease with cubic-bezier(0.2, 0, 0, 1), without overshoot. No animation delays navigation, saving or focus.
+
+Play at most one 4-second decorative introduction on first eligible entry per session, then settle to the approved still. Do not replay on field focus, typing, tab return or scroll. This is the default without adding new controls to the approved screens. Continuous motion is a later option only with a visible, keyboard-operable Pause animation control; record that as an additional control before implementation.
+
+effectiveReducedMotion = system preference OR saved app preference. When true, use a static poster, freeze shader time and 3D poses, remove parallax, and apply state changes immediately. Functional pointer-following remains direct, with no inertial or settling animation. Text and status feedback remain complete.
+
+Use normal document scroll; never hijack scrolling or move the foreground type with a background effect. Decorative layers stay inside their illustration region. Suspend them when offscreen, document-hidden, an editor has keyboard focus, or a modal covers the screen. Return to the same phase without catch-up bursts.
+
+Keep text, navigation and forms in the DOM above pointer-events:none, aria-hidden decorative layers. A missing asset, failed video, unavailable WebGL or context loss immediately shows the approved still. Media is muted, plays inline and does not request sound or device-motion permissions. Measure a target of 30 fps for ambient rendering; cap DPR at 1.5 initially and fall back when consistently slow. These are design budgets, not measured results.
+
+DATA
+Maple House; Avery is the owner. The demonstration agenda is Friday, 19 June 2026: school pickup 15:15, snack 16:00, story 19:30. Setup creates one member. The People image is a later state after explicitly inviting Morgan: one member and one pending invitation.
+
+APPROVED SCREEN REFERENCES
+- 01-welcome: images/mobile/home-note/01-welcome.png (approved composition, full screen; do not animate UI pixels)
+- 02-household: images/mobile/home-note/02-household.png (approved composition, full screen; do not animate UI pixels)
+- 03-today: images/mobile/home-note/03-today.png (approved composition, full screen; do not animate UI pixels)
+- 04-notes: images/mobile/home-note/04-notes.png (approved composition, full screen; do not animate UI pixels)
+- 05-people: images/mobile/home-note/05-people.png (approved composition, full screen; do not animate UI pixels)
+
+PRODUCT REFERENCE CHAIN
+Read research/sources.json and the source IDs in this app record. Retain references/originals/home-note.png for historical art direction; the current clean PNGs override any old device/OS presentation.
+
+VERIFIED BUILD REFERENCES
+- Google · Video generation: https://ai.google.dev/gemini-api/docs/video
+  Application: Image-directed video is a motion-study option. Use a currently supported Veo endpoint at production time; these briefs intentionally do not pin a preview model. A generated clip is not editable 3D geometry.
+- Motion · Gesture animation: https://motion.dev/docs/react-gestures
+  Application: Hover, press, focus and drag APIs support feedback on real controls. Specific timings and visual treatments in this study are WDA proposals.
+- Motion · Accessibility: https://motion.dev/docs/react-accessibility
+  Application: Reduced-motion policy can govern transforms and custom media behavior. The app must also stop its own shaders and decorative video.
+- MDN · Page Visibility API: https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
+  Application: Document visibility changes let the application suspend decorative media when the page is hidden. Resume from state rather than counting background frames.
+- W3C · Pause, Stop, Hide: https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html
+  Application: Automatically moving content lasting more than five seconds alongside other content needs a way to pause, stop or hide it. This proposal uses short ambient introductions that settle.
+
+ACCEPTANCE
+Check all five screens with touch, mouse, keyboard and 200% text. Confirm hover never commits data; press/cancel does not double-submit; focus is visible over every background frame; animation completion never grants progress. Check reduced motion on initial load and during playback, hidden/offscreen pause, poster fallback, resize, route return and canceled requests. Compare each resting frame with its approved PNG.
+
+Proposed motion and interaction specification. No video, shader, extracted asset or 3D model has been produced in this round; the review remains a static screen study with an action explorer.

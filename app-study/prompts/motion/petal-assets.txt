@@ -1,0 +1,24 @@
+WDA / Petal — asset preparation prompt
+
+Status: specified for the next production pass; no extracted assets are delivered yet.
+
+Use Petal 04-complete as the source for the continuous completed Citrus artwork, with 03-play as the offset/interaction reference. Separate the illustration from all headings, progress, buttons and navigation. Reconstruct one coherent full image where necessary, then verify continuous joins. Keep the lemon, leaves, cream paper and original palette; no new objects. Production will mask that one art file into five horizontal bands. Do not deliver independently redrawn strips or infer geometry from mismatched generated bands.
+
+INPUT ROLES
+- 01-welcome: images/mobile/petal/01-welcome.png (approved composition, full screen; do not animate UI pixels)
+- 02-collections: images/mobile/petal/02-collections.png (approved composition, full screen; do not animate UI pixels)
+- 03-play: images/mobile/petal/03-play.png (approved composition, full screen; do not animate UI pixels)
+- 04-complete: images/mobile/petal/04-complete.png (approved composition, full screen; do not animate UI pixels)
+- 05-profile: images/mobile/petal/05-profile.png (approved composition, full screen; do not animate UI pixels)
+
+Deliver each asset with filename, source screen, normalized bounds, pivot if relevant, alpha/occlusion notes and static fallback. Keep all UI content in code.
+
+REFERENCES
+- Motion · Gesture animation: https://motion.dev/docs/react-gestures
+  Application: Hover, press, focus and drag APIs support feedback on real controls. Specific timings and visual treatments in this study are WDA proposals.
+- W3C · Dragging movements: https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html
+  Application: Dragging needs a single-pointer alternative. Petal retains tap-select and tap-target controls as well as keyboard input.
+- Motion · Accessibility: https://motion.dev/docs/react-accessibility
+  Application: Reduced-motion policy can govern transforms and custom media behavior. The app must also stop its own shaders and decorative video.
+- MDN · Page Visibility API: https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
+  Application: Document visibility changes let the application suspend decorative media when the page is hidden. Resume from state rather than counting background frames.

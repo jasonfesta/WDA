@@ -1,0 +1,28 @@
+WDA / Soul — asset preparation prompt
+
+Status: specified for the next production pass; no extracted assets are delivered yet.
+
+Use Soul 03-today as the primary visual reference and 01-place as supporting silhouette reference. Extract ONLY the orange sun sphere, each visible orange capsule ray and cream cloud as separate transparent RGBA cutouts, maintaining visible edges, overlap, clay-like grain, scale and upper-left light. Also export the combined group on transparency, a clean blue background plate, and normalized anchor/bounding-box notes. No title, temperatures, forecast chart, icons or OS chrome. Mark occluded surfaces as unknown; do not claim to recover hidden geometry. Next reconstruct editable 3D meshes to match the cutouts, with named Sun/Rays/Cloud nodes, local pivots, consistent material/light settings and a fixed camera. Deliver a GLB and a matching rendered poster. A cutout is a 2D source reference, not a recovered 3D model.
+
+INPUT ROLES
+- 01-place: images/mobile/soul/01-place.png (approved composition, full screen; do not animate UI pixels)
+- 02-preferences: images/mobile/soul/02-preferences.png (approved composition, full screen; do not animate UI pixels)
+- 03-today: images/mobile/soul/03-today.png (approved composition, full screen; do not animate UI pixels)
+- 04-places: images/mobile/soul/04-places.png (approved composition, full screen; do not animate UI pixels)
+- 05-settings: images/mobile/soul/05-settings.png (approved composition, full screen; do not animate UI pixels)
+
+Deliver each asset with filename, source screen, normalized bounds, pivot if relevant, alpha/occlusion notes and static fallback. Keep all UI content in code.
+
+REFERENCES
+- React Three Fiber · Scaling performance: https://r3f.docs.pmnd.rs/advanced/scaling-performance
+  Application: On-demand rendering and explicit invalidation support scenes that stop when still. Reuse geometry and materials; measure the actual mobile workload.
+- Google · Video generation: https://ai.google.dev/gemini-api/docs/video
+  Application: Image-directed video is a motion-study option. Use a currently supported Veo endpoint at production time; these briefs intentionally do not pin a preview model. A generated clip is not editable 3D geometry.
+- Motion · Gesture animation: https://motion.dev/docs/react-gestures
+  Application: Hover, press, focus and drag APIs support feedback on real controls. Specific timings and visual treatments in this study are WDA proposals.
+- Motion · Accessibility: https://motion.dev/docs/react-accessibility
+  Application: Reduced-motion policy can govern transforms and custom media behavior. The app must also stop its own shaders and decorative video.
+- MDN · Page Visibility API: https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
+  Application: Document visibility changes let the application suspend decorative media when the page is hidden. Resume from state rather than counting background frames.
+- W3C · Pause, Stop, Hide: https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html
+  Application: Automatically moving content lasting more than five seconds alongside other content needs a way to pause, stop or hide it. This proposal uses short ambient introductions that settle.

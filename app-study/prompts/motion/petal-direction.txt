@@ -1,0 +1,22 @@
+WDA / Petal — motion direction prompt
+
+Programmatic animation prompt — reproduce Petal with the one continuous botanical art source. Welcome can demonstrate one non-saved strip movement over 2 seconds and then stop, controlled by its existing pause action. In actual play only the active strip follows input; neighbors remain fixed. A valid move settles in 180 ms; final alignment gives a subtle 300 ms edge-light fade, then a static whole image. 3/5 becomes 4/5 and 5/5 only from real alignment. Profile 1/12 uses an 8.33% fill. Optional Veo pacing studies may show the same single-strip gesture, but no generated video ships as puzzle logic.
+
+ASSET INPUT
+Prepare the art using prompts/motion/petal-assets.txt; never submit the full UI screenshot as an illustration-only video plate.
+
+Play at most one 4-second decorative introduction on first eligible entry per session, then settle to the approved still. Do not replay on field focus, typing, tab return or scroll. This is the default without adding new controls to the approved screens. Continuous motion is a later option only with a visible, keyboard-operable Pause animation control; record that as an additional control before implementation.
+
+effectiveReducedMotion = system preference OR saved app preference. When true, use a static poster, freeze shader time and 3D poses, remove parallax, and apply state changes immediately. Functional pointer-following remains direct, with no inertial or settling animation. Text and status feedback remain complete.
+
+Proposed motion and interaction specification. No video, shader, extracted asset or 3D model has been produced in this round; the review remains a static screen study with an action explorer.
+
+REFERENCES
+- Motion · Gesture animation: https://motion.dev/docs/react-gestures
+  Application: Hover, press, focus and drag APIs support feedback on real controls. Specific timings and visual treatments in this study are WDA proposals.
+- W3C · Dragging movements: https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html
+  Application: Dragging needs a single-pointer alternative. Petal retains tap-select and tap-target controls as well as keyboard input.
+- Motion · Accessibility: https://motion.dev/docs/react-accessibility
+  Application: Reduced-motion policy can govern transforms and custom media behavior. The app must also stop its own shaders and decorative video.
+- MDN · Page Visibility API: https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
+  Application: Document visibility changes let the application suspend decorative media when the page is hidden. Resume from state rather than counting background frames.

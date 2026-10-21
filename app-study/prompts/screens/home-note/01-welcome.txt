@@ -1,0 +1,19 @@
+Use case: ui-mockup. Create ONE polished mobile application screen only. Full-bleed upright rectangular canvas, target 756 × 1559 pixels (aspect ratio 0.485). The app surface reaches all four image edges and ALL FOUR SQUARE CORNERS. ZERO outer white presentation space, ZERO phone frame, ZERO rounded device outline, ZERO surrounding mockup background, ZERO shadow around the entire screen. The reference has a phone frame and margins: REMOVE those and extend/reflow the app interior into the full canvas. Do not crop text or controls. Do not draw a device. Rounded small controls INSIDE the app are allowed. No collage or multiple panels. Native screenshot-like, crisp readable copy, generous internal spacing but no exterior padding. Consistent 24px logical side gutters inside the app; status area at top; safe area/home indicator at bottom. Practical body text and 44px logical touch targets. All buttons are rendered as design, not annotations. No extra controls or marketing badges. Preserve object proportions; no stretched imagery or typography. The exact screen title and all specified copy must be legible. Render in the same stable mobile viewport for every screen.
+
+REFERENCE ROLE: attached original screenshot supplies this app’s art direction only; its device frame and surrounding whitespace must not appear.
+APP: Home Note
+STYLE: Original Home Note art direction: peach, citron and burgundy; friendly sculptural adult and child avatars, tactile household pictograms, softly tilted illustrated cards in welcome only. Cream/pink surfaces, a rich expressive serif headline and practical rounded humanist labels. Never substitute portrait photography.
+PALETTE: #FFE5D4, #E2D998, #9F9953, #78252E
+TYPE DIRECTION: Fraunces, Nunito Sans (approximate in raster; readable, never stretched).
+SCREEN: Leave the details. Keep the peace.
+CONTENT AND STATE:
+Home Note brand. Same warm original 3D household handover cards and two friendly original avatars in upper half; one card "Friday with June" with school bag, apple, book. Headline "Leave the details. Keep the peace." Body "The little things, ready for whoever is helping." Marker "1 / 2". Primary "Create your home note". Secondary "I have an invitation". No tabs.
+
+PERSISTENT DATA / CONSISTENCY:
+Maple House. Avery is owner. Morgan has an invitation pending, not an accepted member. 1 member + 1 pending invite. Today fixture: pickup 15:15 assigned Avery; snack 16:00; story 19:30. No automatic invitations are sent during setup.
+Only display the subset specified for this screen. This fixture is for consistency, not extra text to print.
+FINAL GEOMETRY CHECK: the complete image IS the app screen itself, with square outer corners and no white margin or outer frame anywhere.
+Image 2 is this app's approved new interior visual reference. Match its UI scale, color treatment, typography, and full-bleed geometry. Create this NEW requested screen, not a copy of image 2. Use a canvas 874 pixels wide by 1800 pixels tall.
+
+FINAL EXPORT REQUIREMENT (supersedes any earlier status-area instruction)
+No operating-system clock, cellular signal, Wi-Fi, battery or home indicator. Preserve in-app dates, times, icons and navigation.

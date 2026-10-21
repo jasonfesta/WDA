@@ -1,0 +1,15 @@
+{
+  "apps": 6,
+  "screens": 30,
+  "control_and_navigation_entries": 182,
+  "auxiliary_routes": 42,
+  "motion_briefs": 6,
+  "screen_interaction_prompts": 30,
+  "controls_with_rollover_notes": 182,
+  "os_chrome_free_exports": 30,
+  "local_links_checked": 743,
+  "all_mobile_assets_in_manifest": true,
+  "image_pixel_review": "21 OS-chrome edits inspected, 9 already-clean images retained. Full-bleed square edges, copy and state consistency checked. Raster component detail still needs normalization during implementation.",
+  "errors": [],
+  "passed": true
+}

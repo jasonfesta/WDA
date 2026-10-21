@@ -1,0 +1,22 @@
+Use case: ui-mockup. Create ONE polished mobile application screen only. Full-bleed upright rectangular canvas, target 756 × 1559 pixels (aspect ratio 0.485). The app surface reaches all four image edges and ALL FOUR SQUARE CORNERS. ZERO outer white presentation space, ZERO phone frame, ZERO rounded device outline, ZERO surrounding mockup background, ZERO shadow around the entire screen. The reference has a phone frame and margins: REMOVE those and extend/reflow the app interior into the full canvas. Do not crop text or controls. Do not draw a device. Rounded small controls INSIDE the app are allowed. No collage or multiple panels. Native screenshot-like, crisp readable copy, generous internal spacing but no exterior padding. Consistent 24px logical side gutters inside the app; status area at top; safe area/home indicator at bottom. Practical body text and 44px logical touch targets. All buttons are rendered as design, not annotations. No extra controls or marketing badges. Preserve object proportions; no stretched imagery or typography. The exact screen title and all specified copy must be legible. Render in the same stable mobile viewport for every screen.
+
+REFERENCE ROLE: attached original screenshot supplies this app’s art direction only; its device frame and surrounding whitespace must not appear.
+APP: Petal
+STYLE: Original Petal art direction: precise painterly lemon, blossom and leaf botanical artwork on creamy paper; expressive refined serif headlines, muted olive utility text, warm coral controls, thin botanical dividers. Preserve the original illustration-based strip puzzle, not abstract colour bars.
+PALETTE: #FFF9EC, #718064, #E8795B, #993D2A
+TYPE DIRECTION: Cormorant Garamond, DM Sans (approximate in raster; readable, never stretched).
+SCREEN: Your quiet collection
+CONTENT AND STATE:
+PETAL, heading "Your quiet collection". Small botanical sprig. Display "Guest garden". One clear statistic "1 arrangement completed". Progress line "Citrus · 1 of 12". Preferences "Gentle haptics" ON, "Sound effects" OFF, "Reduce motion" ON. Main outlined "Save my progress". Quiet link "Replay the tutorial". Bottom Play / Collections / Profile; ONLY Profile active. No inventedstreakorpoints.
+
+PERSISTENT DATA / CONSISTENCY:
+Citrus collection12 arrangements. Arrangement01 initially0complete and3/5stripsaligned in play. Completion5/5 increments collection and profile exactlyonce to1. Progressbar60%then100%.
+Only display the subset specified for this screen. This fixture is for consistency, not extra text to print.
+FINAL GEOMETRY CHECK: the complete image IS the app screen itself, with square outer corners and no white margin or outer frame anywhere.
+Image 2 supplies the new home/play UI family: retain type, materials, palette, tab icons, same mobile density. Create the specified fifth screen ONLY. Full-bleed 874 × 1800 canvas, four square outer corners, no phone frame and no exterior margins. Every specified control and label must fit and be readable. In Home Note, Avery is an adult household owner, Morgan an adult invited helper. In Pocket Garden, the plant selector has a small chevron. On Soul the reminder is OFF and reduce motion is ON; these must not be confused.
+
+REVISION APPLIED
+Change only the progress bar to one twelfth of the track; preserve all other content.
+
+FINAL EXPORT REQUIREMENT (supersedes any earlier status-area instruction)
+No operating-system clock, cellular signal, Wi-Fi, battery or home indicator. Preserve in-app dates, times, icons and navigation.

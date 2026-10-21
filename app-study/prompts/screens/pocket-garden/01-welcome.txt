@@ -1,0 +1,19 @@
+Use case: ui-mockup. Create ONE polished mobile application screen only. Full-bleed upright rectangular canvas, target 756 × 1559 pixels (aspect ratio 0.485). The app surface reaches all four image edges and ALL FOUR SQUARE CORNERS. ZERO outer white presentation space, ZERO phone frame, ZERO rounded device outline, ZERO surrounding mockup background, ZERO shadow around the entire screen. The reference has a phone frame and margins: REMOVE those and extend/reflow the app interior into the full canvas. Do not crop text or controls. Do not draw a device. Rounded small controls INSIDE the app are allowed. No collage or multiple panels. Native screenshot-like, crisp readable copy, generous internal spacing but no exterior padding. Consistent 24px logical side gutters inside the app; status area at top; safe area/home indicator at bottom. Practical body text and 44px logical touch targets. All buttons are rendered as design, not annotations. No extra controls or marketing badges. Preserve object proportions; no stretched imagery or typography. The exact screen title and all specified copy must be legible. Render in the same stable mobile viewport for every screen.
+
+REFERENCE ROLE: attached original screenshot supplies this app’s art direction only; its device frame and surrounding whitespace must not appear.
+APP: Pocket Garden
+STYLE: Original Pocket Garden art direction: beautiful tactile gouache illustration, leafy olive greens, peach flowers, coral overalls, soft warm sunlight, cream reading surfaces, burgundy humanist headings. Consistent dark-haired gardener and botanical brush texture. Avoid generic vector clip art or glass dashboards.
+PALETTE: #FFF9E9, #6A7044, #BC7352, #782E35
+TYPE DIRECTION: DM Sans (approximate in raster; readable, never stretched).
+SCREEN: Your little garden starts here
+CONTENT AND STATE:
+Pocket Garden brand. The original illustrated gardener among olive foliage and peach flowers fills the top 60%, extending fully to both side edges and top, fading into warm cream. Headline "Your little garden starts here." Body "Start with one plant. Learn its little rhythms." Main "Add my first plant". Secondary "Explore a sample garden". No early-access badge, no spot-saved claim. No tabs.
+
+PERSISTENT DATA / CONSISTENCY:
+One plant: Pip, Olive, Kitchen window, Bright light. One soil-check task initially pending. Completing the check records observed soil as Still damp and skips watering. One saved note appears only after saving.
+Only display the subset specified for this screen. This fixture is for consistency, not extra text to print.
+FINAL GEOMETRY CHECK: the complete image IS the app screen itself, with square outer corners and no white margin or outer frame anywhere.
+Image 2 is this app's approved new interior visual reference. Match its UI scale, color treatment, typography, and full-bleed geometry. Create this NEW requested screen, not a copy of image 2. Use a canvas 874 pixels wide by 1800 pixels tall.
+
+FINAL EXPORT REQUIREMENT (supersedes any earlier status-area instruction)
+No operating-system clock, cellular signal, Wi-Fi, battery or home indicator. Preserve in-app dates, times, icons and navigation.

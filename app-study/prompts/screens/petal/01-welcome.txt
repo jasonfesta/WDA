@@ -1,0 +1,19 @@
+Use case: ui-mockup. Create ONE polished mobile application screen only. Full-bleed upright rectangular canvas, target 756 × 1559 pixels (aspect ratio 0.485). The app surface reaches all four image edges and ALL FOUR SQUARE CORNERS. ZERO outer white presentation space, ZERO phone frame, ZERO rounded device outline, ZERO surrounding mockup background, ZERO shadow around the entire screen. The reference has a phone frame and margins: REMOVE those and extend/reflow the app interior into the full canvas. Do not crop text or controls. Do not draw a device. Rounded small controls INSIDE the app are allowed. No collage or multiple panels. Native screenshot-like, crisp readable copy, generous internal spacing but no exterior padding. Consistent 24px logical side gutters inside the app; status area at top; safe area/home indicator at bottom. Practical body text and 44px logical touch targets. All buttons are rendered as design, not annotations. No extra controls or marketing badges. Preserve object proportions; no stretched imagery or typography. The exact screen title and all specified copy must be legible. Render in the same stable mobile viewport for every screen.
+
+REFERENCE ROLE: attached original screenshot supplies this app’s art direction only; its device frame and surrounding whitespace must not appear.
+APP: Petal
+STYLE: Original Petal art direction: precise painterly lemon, blossom and leaf botanical artwork on creamy paper; expressive refined serif headlines, muted olive utility text, warm coral controls, thin botanical dividers. Preserve the original illustration-based strip puzzle, not abstract colour bars.
+PALETTE: #FFF9EC, #718064, #E8795B, #993D2A
+TYPE DIRECTION: Cormorant Garamond, DM Sans (approximate in raster; readable, never stretched).
+SCREEN: Put the garden back together
+CONTENT AND STATE:
+PETAL small spaced brand. Headline "Put the garden back together." A beautiful large lemon blossom botanical image divided into five horizontal strips, with two visibly offset, fills the middle. Short instruction "Slide a piece into place. Or tap a piece, then its destination." Primary "Try a little arrangement". Secondary "I have played before". No tabs. No completion count on tutorial artwork.
+
+PERSISTENT DATA / CONSISTENCY:
+Citrus collection12 arrangements. Arrangement01 initially0complete and3/5stripsaligned in play. Completion5/5 increments collection and profile exactlyonce to1. Progressbar60%then100%.
+Only display the subset specified for this screen. This fixture is for consistency, not extra text to print.
+FINAL GEOMETRY CHECK: the complete image IS the app screen itself, with square outer corners and no white margin or outer frame anywhere.
+Image 2 is this app's approved new interior visual reference. Match its UI scale, color treatment, typography, and full-bleed geometry. Create this NEW requested screen, not a copy of image 2. Use a canvas 874 pixels wide by 1800 pixels tall.
+
+FINAL EXPORT REQUIREMENT (supersedes any earlier status-area instruction)
+No operating-system clock, cellular signal, Wi-Fi, battery or home indicator. Preserve in-app dates, times, icons and navigation.

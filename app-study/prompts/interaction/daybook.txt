@@ -1,0 +1,50 @@
+WDA / Daybook — interaction and motion implementation prompt
+
+Read data/flows.json for this app, interaction/daybook.md, and interaction/motion/daybook.md before implementation. Implement the full documented flow including auxiliary routes and recovery; five images are representative states, not a linear five-step slideshow.
+
+ART DIRECTION
+Original Daybook art direction: expansive warm cream, very large burgundy editorial serif with a little italic, quiet monospaced date/time labels, delicate landscape-and-sun-arc illustration, thin warm rules and open agenda rows. Coral and olive accents. Keep editorial air and avoid boxed dashboard grids.
+Fonts: Cormorant Garamond, DM Sans, DM Mono. Palette: #FFF5E6, #6A1822, #ED9370, #939567. Preserve full-bleed square edges, airy internal spacing, exact UI content and no OS chrome.
+
+APP MOTION
+Draw the daylight arc and its marker from the selected place, date and time. Let edits settle gently into the timeline while the editorial landscape, generous spacing and typography remain still.
+Build DaylightArc as SVG over a still landscape. Given valid sunrise, sunset and current instant in Europe/Lisbon, compute p=clamp((now-sunrise)/(sunset-sunrise),0,1). Map x=cx-r*cos(pi*p), y=cy-r*sin(pi*p); derive remaining minutes=max(0,ceil((sunset-now)/60000)). The review fixture is 18 June 2026 at 18:00, sunrise 06:12, sunset 20:58, so remaining=178 minutes and p=708/886. State is canonical instants with timezone-aware formatting; do not rely on unzoned date parsing. On user-selected date/place change, interpolate the marker for 400 ms only when both data sets are valid. Do not animate a whole sunrise on entry. Minute ticks update the position directly; no perpetual render loop. For past/future dates say Daylight duration instead of live time left, using noon as the preview marker with a Preview label. Handle night, missing data and polar conditions explicitly.
+
+INTERACTION RULES
+Touch is primary. Enable rollover only for (hover: hover) and (pointer: fine). Every hover cue has a focus-visible equivalent; no action or information is available only on hover. Pointer exit restores the resting style without changing selection. Use native buttons, links and labeled fields, not clickable artwork.
+
+Proposed tokens: hover 120 ms; press tint 80 ms; focus outline immediate; route crossfade 160 ms; small state changes 180 ms; expanded content 220 ms. Ease with cubic-bezier(0.2, 0, 0, 1), without overshoot. No animation delays navigation, saving or focus.
+
+Play at most one 4-second decorative introduction on first eligible entry per session, then settle to the approved still. Do not replay on field focus, typing, tab return or scroll. This is the default without adding new controls to the approved screens. Continuous motion is a later option only with a visible, keyboard-operable Pause animation control; record that as an additional control before implementation.
+
+effectiveReducedMotion = system preference OR saved app preference. When true, use a static poster, freeze shader time and 3D poses, remove parallax, and apply state changes immediately. Functional pointer-following remains direct, with no inertial or settling animation. Text and status feedback remain complete.
+
+Use normal document scroll; never hijack scrolling or move the foreground type with a background effect. Decorative layers stay inside their illustration region. Suspend them when offscreen, document-hidden, an editor has keyboard focus, or a modal covers the screen. Return to the same phase without catch-up bursts.
+
+Keep text, navigation and forms in the DOM above pointer-events:none, aria-hidden decorative layers. A missing asset, failed video, unavailable WebGL or context loss immediately shows the approved still. Media is muted, plays inline and does not request sound or device-motion permissions. Measure a target of 30 fps for ambient rendering; cap DPR at 1.5 initially and fall back when consistently slow. These are design budgets, not measured results.
+
+DATA
+Demo date Thursday, 18 June 2026, timezone Europe/Lisbon. Current time 18:00; sunrise 06:12; sunset 20:58; daylight remaining 2h 58m. Walk starts 18:30 and initially ends 19:05 (35 min). Edited end 19:10 gives 40 min. Dinner stays 19:15–20:15 (60 min). Week 15–21 June, Thursday 18 selected. Three saved places.
+
+APPROVED SCREEN REFERENCES
+- 01-setup: images/mobile/daybook/01-setup.png (approved composition, full screen; do not animate UI pixels)
+- 02-today: images/mobile/daybook/02-today.png (approved composition, full screen; do not animate UI pixels)
+- 03-editor: images/mobile/daybook/03-editor.png (approved composition, full screen; do not animate UI pixels)
+- 04-week: images/mobile/daybook/04-week.png (approved composition, full screen; do not animate UI pixels)
+- 05-places: images/mobile/daybook/05-places.png (approved composition, full screen; do not animate UI pixels)
+
+PRODUCT REFERENCE CHAIN
+Read research/sources.json and the source IDs in this app record. Retain references/originals/daybook.png for historical art direction; the current clean PNGs override any old device/OS presentation.
+
+VERIFIED BUILD REFERENCES
+- Motion · Gesture animation: https://motion.dev/docs/react-gestures
+  Application: Hover, press, focus and drag APIs support feedback on real controls. Specific timings and visual treatments in this study are WDA proposals.
+- Motion · Accessibility: https://motion.dev/docs/react-accessibility
+  Application: Reduced-motion policy can govern transforms and custom media behavior. The app must also stop its own shaders and decorative video.
+- MDN · Page Visibility API: https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
+  Application: Document visibility changes let the application suspend decorative media when the page is hidden. Resume from state rather than counting background frames.
+
+ACCEPTANCE
+Check all five screens with touch, mouse, keyboard and 200% text. Confirm hover never commits data; press/cancel does not double-submit; focus is visible over every background frame; animation completion never grants progress. Check reduced motion on initial load and during playback, hidden/offscreen pause, poster fallback, resize, route return and canceled requests. Compare each resting frame with its approved PNG.
+
+Proposed motion and interaction specification. No video, shader, extracted asset or 3D model has been produced in this round; the review remains a static screen study with an action explorer.

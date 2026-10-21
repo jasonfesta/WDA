@@ -1,0 +1,114 @@
+{
+  "headspace": {
+    "title": "Headspace \u00b7 Sleep",
+    "url": "https://www.headspace.com/content/categories/sleep",
+    "finding": "Sleepcasts, music, soundscapes and wind-down content support separate ritual and audio destinations. The specific routine, timer and navigation below are WDA proposals.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "planta": {
+    "title": "Planta",
+    "url": "https://getplanta.com/",
+    "finding": "Plant care, plant collections and journals inform a plant-centered structure. The painterly presentation remains Pocket Garden\u2019s original direction.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "planta-start": {
+    "title": "Planta \u00b7 Getting started",
+    "url": "https://getplanta.com/discover/getstartedwithplanta",
+    "finding": "Adding plants to sites, completing or postponing tasks, and keeping plant notes inform setup \u2192 garden \u2192 care \u2192 observation.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "planta-care": {
+    "title": "Planta \u00b7 Custom care",
+    "url": "https://getplanta.com/discover/iam/custom/care",
+    "finding": "Custom tasks can have descriptions and recurrence. Pocket Garden uses an observation before recording care; it does not assume every reminder requires watering.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "cozi": {
+    "title": "Cozi \u00b7 Feature overview",
+    "url": "https://www.cozi.com/feature-overview/",
+    "finding": "Shared calendars, reminders and lists support a household agenda. Home Note\u2019s invitation, acknowledgement and handover details are proposed here, not copied native flows.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "weather": {
+    "title": "Apple \u00b7 Check the weather",
+    "url": "https://support.apple.com/guide/iphone/check-the-weather-iph1ac0b35f/ios",
+    "finding": "Current conditions and forecast detail support a summary-to-detail hierarchy. Soul\u2019s city, preferences and daylight routes are WDA design decisions.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "hue": {
+    "title": "I Love Hue \u00b7 Official product page",
+    "url": "https://zutgames.com/i-love-hue.php",
+    "finding": "Calm visual arrangement informs the play loop. Horizontal botanical strips, snapping rules and tap alternatives are Petal-specific proposals.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "structured": {
+    "title": "Structured",
+    "url": "https://structured.app/",
+    "finding": "A visual timeline and calendar integration inform Daybook\u2019s planning structure. Its daylight landscape and saved places remain original to this study.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "structured-tasks": {
+    "title": "Structured \u00b7 Create and edit tasks",
+    "url": "https://help.structured.app/en/articles/338050",
+    "finding": "Task creation, date/time/duration editing and saving back into the timeline support an explicit editor. Daybook additionally preserves drafts and derives the duration from start/end.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "onboarding": {
+    "title": "Apple \u00b7 Onboarding",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/onboarding",
+    "finding": "Reference retained from the research plan. Full article could not be read through the text fetch, so no specific behavior is attributed to it. The proposed short setup sequences are WDA decisions.",
+    "checked": "2026-10-21",
+    "access": "partial"
+  },
+  "forms": {
+    "title": "W3C \u00b7 Validating input",
+    "url": "https://www.w3.org/WAI/tutorials/forms/validation/",
+    "finding": "Label required fields and expose accessible validation feedback. Validate on the server as well as the client. Failed saves should keep the user\u2019s draft.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "dialog": {
+    "title": "W3C \u00b7 Modal dialog pattern",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+    "finding": "Modal focus stays inside the dialog; Escape closes it. Restore useful focus on return. Dirty drafts require an explicit discard choice.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "drag": {
+    "title": "W3C \u00b7 Dragging movements",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+    "finding": "Provide a single-pointer alternative to dragging. Petal uses tap a strip, then its target, with keyboard support in addition.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "tabs": {
+    "title": "W3C \u00b7 Tabs pattern",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+    "finding": "In-page tabs need matching panels and keyboard behavior. The study\u2019s bottom destinations are route navigation: implement links with aria-current, rather than applying tab semantics to unrelated pages.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "motion": {
+    "title": "MDN \u00b7 Reduced motion",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion",
+    "finding": "Respect the system\u2019s request to reduce nonessential movement. Motion is never the only signal that an action succeeded.",
+    "checked": "2026-10-21",
+    "access": "read"
+  },
+  "permission": {
+    "title": "MDN \u00b7 Notification permission",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/requestPermission_static",
+    "finding": "Permission can be granted, denied or undecided. Keep reminder state separate from requested permission and retain a usable path after refusal.",
+    "checked": "2026-10-21",
+    "access": "read"
+  }
+}

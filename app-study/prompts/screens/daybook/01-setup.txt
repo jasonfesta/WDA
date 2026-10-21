@@ -1,0 +1,22 @@
+Use case: ui-mockup. Create ONE polished mobile application screen only. Full-bleed upright rectangular canvas, target 756 × 1559 pixels (aspect ratio 0.485). The app surface reaches all four image edges and ALL FOUR SQUARE CORNERS. ZERO outer white presentation space, ZERO phone frame, ZERO rounded device outline, ZERO surrounding mockup background, ZERO shadow around the entire screen. The reference has a phone frame and margins: REMOVE those and extend/reflow the app interior into the full canvas. Do not crop text or controls. Do not draw a device. Rounded small controls INSIDE the app are allowed. No collage or multiple panels. Native screenshot-like, crisp readable copy, generous internal spacing but no exterior padding. Consistent 24px logical side gutters inside the app; status area at top; safe area/home indicator at bottom. Practical body text and 44px logical touch targets. All buttons are rendered as design, not annotations. No extra controls or marketing badges. Preserve object proportions; no stretched imagery or typography. The exact screen title and all specified copy must be legible. Render in the same stable mobile viewport for every screen.
+
+REFERENCE ROLE: attached original screenshot supplies this app’s art direction only; its device frame and surrounding whitespace must not appear.
+APP: Daybook
+STYLE: Original Daybook art direction: expansive warm cream, very large burgundy editorial serif with a little italic, quiet monospaced date/time labels, delicate landscape-and-sun-arc illustration, thin warm rules and open agenda rows. Coral and olive accents. Keep editorial air and avoid boxed dashboard grids.
+PALETTE: #FFF5E6, #6A1822, #ED9370, #939567
+TYPE DIRECTION: Cormorant Garamond, DM Sans, DM Mono (approximate in raster; readable, never stretched).
+SCREEN: Give the daylight a place
+CONTENT AND STATE:
+DAYBOOK, small "A lighter day starts here". Large serif title "Give the daylight a place." Warm landscape with a small sun arc. City field label "Where your day begins" value "Lisbon, Portugal". Small "Europe/Lisbon". Explanation "Start with a simple plan. Add your calendar when you are ready." Primary "Start with manual plans". Secondary "Connect a calendar". No tabs.
+
+PERSISTENT DATA / CONSISTENCY:
+Demonstration date Thu18Jun2026; timezoneEurope/Lisbon, currenttime18:00, sunrise06:12,sunset20:58,remaining2h58m. Walk18:30–19:05 initially35min; editedend19:10 is40min. Dinner19:15–20:15 remains60min. Week15–21June, Thu18selected.3savedplaces.
+Only display the subset specified for this screen. This fixture is for consistency, not extra text to print.
+FINAL GEOMETRY CHECK: the complete image IS the app screen itself, with square outer corners and no white margin or outer frame anywhere.
+Image 2 is this app's approved new interior visual reference. Match its UI scale, color treatment, typography, and full-bleed geometry. Create this NEW requested screen, not a copy of image 2. Use a canvas 874 pixels wide by 1800 pixels tall.
+
+FINAL OS CLEANUP APPLIED
+Use case: precise-object-edit. This is a surgical cleanup of the attached mobile app screenshot, the edit target. Remove ONLY the operating-system status bar: the tiny time in the extreme top-left (9:41 or 18:00), the cellular signal bars, Wi-Fi glyph, and battery/power glyph in the extreme top-right. Remove any OS home indicator at the very bottom if present. Seamlessly fill those small areas with the exact surrounding app background texture/color/gradient. Preserve EVERY in-app time, date, forecast, title, paragraph, control, illustration, progress indicator, tab, and app icon exactly, in the exact same position and size. Do not shift content upward or alter typography. Do not crop, stretch, reflow, add padding, round the outer corners, or change the native tall portrait aspect ratio. The app must remain full bleed with four square outer corners. No additions, no OS chrome anywhere. Keep all other pixels as unchanged as possible. Output one screen only.
+
+FINAL EXPORT REQUIREMENT (supersedes any earlier status-area instruction)
+No operating-system clock, cellular signal, Wi-Fi, battery or home indicator. Preserve in-app dates, times, icons and navigation.

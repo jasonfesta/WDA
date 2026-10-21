@@ -1,0 +1,282 @@
+{
+  "date": "2026-10-21",
+  "checks": [
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Afterglow review · WDA",
+      "prompt": "../prompts/interaction/afterglow/01-welcome.txt",
+      "rollover": true,
+      "screen": "01 / A softer end to your day"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Afterglow review · WDA",
+      "prompt": "../prompts/interaction/afterglow/02-time.txt",
+      "rollover": true,
+      "screen": "02 / When does your evening slow down?"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Afterglow review · WDA",
+      "prompt": "../prompts/interaction/afterglow/03-tonight.txt",
+      "rollover": true,
+      "screen": "03 / Tonight can be simple"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Afterglow review · WDA",
+      "prompt": "../prompts/interaction/afterglow/04-rituals.txt",
+      "rollover": true,
+      "screen": "04 / Small rituals to return to"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Afterglow review · WDA",
+      "prompt": "../prompts/interaction/afterglow/05-sounds.txt",
+      "rollover": true,
+      "screen": "05 / Rain beyond the window"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Pocket Garden review · WDA",
+      "prompt": "../prompts/interaction/pocket-garden/01-welcome.txt",
+      "rollover": true,
+      "screen": "01 / Your little garden starts here"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Pocket Garden review · WDA",
+      "prompt": "../prompts/interaction/pocket-garden/02-plant.txt",
+      "rollover": true,
+      "screen": "02 / Who is growing with you?"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Pocket Garden review · WDA",
+      "prompt": "../prompts/interaction/pocket-garden/03-garden.txt",
+      "rollover": true,
+      "screen": "03 / Good morning, little garden"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Pocket Garden review · WDA",
+      "prompt": "../prompts/interaction/pocket-garden/04-care.txt",
+      "rollover": true,
+      "screen": "04 / Check the soil"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Pocket Garden review · WDA",
+      "prompt": "../prompts/interaction/pocket-garden/05-notes.txt",
+      "rollover": true,
+      "screen": "05 / The things you notice"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Home Note review · WDA",
+      "prompt": "../prompts/interaction/home-note/01-welcome.txt",
+      "rollover": true,
+      "screen": "01 / Leave the details. Keep the peace."
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Home Note review · WDA",
+      "prompt": "../prompts/interaction/home-note/02-household.txt",
+      "rollover": true,
+      "screen": "02 / Give your home a name"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Home Note review · WDA",
+      "prompt": "../prompts/interaction/home-note/03-today.txt",
+      "rollover": true,
+      "screen": "03 / Today at Maple House"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Home Note review · WDA",
+      "prompt": "../prompts/interaction/home-note/04-notes.txt",
+      "rollover": true,
+      "screen": "04 / The handover notebook"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Home Note review · WDA",
+      "prompt": "../prompts/interaction/home-note/05-people.txt",
+      "rollover": true,
+      "screen": "05 / The people who make home"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Soul review · WDA",
+      "prompt": "../prompts/interaction/soul/01-place.txt",
+      "rollover": true,
+      "screen": "01 / Find the light in your day"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Soul review · WDA",
+      "prompt": "../prompts/interaction/soul/02-preferences.txt",
+      "rollover": true,
+      "screen": "02 / Weather, your way"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Soul review · WDA",
+      "prompt": "../prompts/interaction/soul/03-today.txt",
+      "rollover": true,
+      "screen": "03 / Bright until dusk"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Soul review · WDA",
+      "prompt": "../prompts/interaction/soul/04-places.txt",
+      "rollover": true,
+      "screen": "04 / Places you keep an eye on"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Soul review · WDA",
+      "prompt": "../prompts/interaction/soul/05-settings.txt",
+      "rollover": true,
+      "screen": "05 / Make the forecast yours"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Petal review · WDA",
+      "prompt": "../prompts/interaction/petal/01-welcome.txt",
+      "rollover": true,
+      "screen": "01 / Put the garden back together"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Petal review · WDA",
+      "prompt": "../prompts/interaction/petal/02-collections.txt",
+      "rollover": true,
+      "screen": "02 / A shelf of small gardens"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Petal review · WDA",
+      "prompt": "../prompts/interaction/petal/03-play.txt",
+      "rollover": true,
+      "screen": "03 / A little closer, piece by piece"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Petal review · WDA",
+      "prompt": "../prompts/interaction/petal/04-complete.txt",
+      "rollover": true,
+      "screen": "04 / A small garden, whole again"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Petal review · WDA",
+      "prompt": "../prompts/interaction/petal/05-profile.txt",
+      "rollover": true,
+      "screen": "05 / Your quiet collection"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Daybook review · WDA",
+      "prompt": "../prompts/interaction/daybook/01-setup.txt",
+      "rollover": true,
+      "screen": "01 / Give the daylight a place"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Daybook review · WDA",
+      "prompt": "../prompts/interaction/daybook/02-today.txt",
+      "rollover": true,
+      "screen": "02 / An evening worth keeping"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Daybook review · WDA",
+      "prompt": "../prompts/interaction/daybook/03-editor.txt",
+      "rollover": true,
+      "screen": "03 / Make room for the light"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Daybook review · WDA",
+      "prompt": "../prompts/interaction/daybook/04-week.txt",
+      "rollover": true,
+      "screen": "04 / A week with breathing room"
+    },
+    {
+      "ambient": true,
+      "motionRows": 5,
+      "overflow": false,
+      "page": "Daybook review · WDA",
+      "prompt": "../prompts/interaction/daybook/05-places.txt",
+      "rollover": true,
+      "screen": "05 / Places for an open hour"
+    }
+  ],
+  "desktopWidth": 1262,
+  "mobile": {
+    "width": 390,
+    "overflow": false,
+    "expandedPromptFits": true
+  },
+  "passed": true
+}

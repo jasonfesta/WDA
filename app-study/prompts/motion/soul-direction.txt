@@ -1,0 +1,26 @@
+WDA / Soul — motion direction prompt
+
+Veo reference-only prompt — from the isolated Soul sun-and-cloud plate, show a locked-camera four-second micro-motion study. Preserve the orange textured sun, capsule rays, cream cloud, blue background and exact object hierarchy. Cloud moves a few pixels laterally, rays rotate by no more than two degrees, then return to the original pose. No camera movement, weather changes, text, UI, particles, sound or object morphing. Use the result only to judge pacing; recreate production behavior with the extracted/reconstructed 3D objects and real app state.
+
+ASSET INPUT
+Prepare the art using prompts/motion/soul-assets.txt; never submit the full UI screenshot as an illustration-only video plate.
+
+Play at most one 4-second decorative introduction on first eligible entry per session, then settle to the approved still. Do not replay on field focus, typing, tab return or scroll. This is the default without adding new controls to the approved screens. Continuous motion is a later option only with a visible, keyboard-operable Pause animation control; record that as an additional control before implementation.
+
+effectiveReducedMotion = system preference OR saved app preference. When true, use a static poster, freeze shader time and 3D poses, remove parallax, and apply state changes immediately. Functional pointer-following remains direct, with no inertial or settling animation. Text and status feedback remain complete.
+
+Proposed motion and interaction specification. No video, shader, extracted asset or 3D model has been produced in this round; the review remains a static screen study with an action explorer.
+
+REFERENCES
+- React Three Fiber · Scaling performance: https://r3f.docs.pmnd.rs/advanced/scaling-performance
+  Application: On-demand rendering and explicit invalidation support scenes that stop when still. Reuse geometry and materials; measure the actual mobile workload.
+- Google · Video generation: https://ai.google.dev/gemini-api/docs/video
+  Application: Image-directed video is a motion-study option. Use a currently supported Veo endpoint at production time; these briefs intentionally do not pin a preview model. A generated clip is not editable 3D geometry.
+- Motion · Gesture animation: https://motion.dev/docs/react-gestures
+  Application: Hover, press, focus and drag APIs support feedback on real controls. Specific timings and visual treatments in this study are WDA proposals.
+- Motion · Accessibility: https://motion.dev/docs/react-accessibility
+  Application: Reduced-motion policy can govern transforms and custom media behavior. The app must also stop its own shaders and decorative video.
+- MDN · Page Visibility API: https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
+  Application: Document visibility changes let the application suspend decorative media when the page is hidden. Resume from state rather than counting background frames.
+- W3C · Pause, Stop, Hide: https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html
+  Application: Automatically moving content lasting more than five seconds alongside other content needs a way to pause, stop or hide it. This proposal uses short ambient introductions that settle.

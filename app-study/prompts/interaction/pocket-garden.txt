@@ -1,0 +1,54 @@
+WDA / Pocket Garden — interaction and motion implementation prompt
+
+Read data/flows.json for this app, interaction/pocket-garden.md, and interaction/motion/pocket-garden.md before implementation. Implement the full documented flow including auxiliary routes and recovery; five images are representative states, not a linear five-step slideshow.
+
+ART DIRECTION
+Original Pocket Garden art direction: beautiful tactile gouache illustration, leafy olive greens, peach flowers, coral overalls, soft warm sunlight, cream reading surfaces, burgundy humanist headings. Consistent dark-haired gardener and botanical brush texture. Avoid generic vector clip art or glass dashboards.
+Fonts: DM Sans. Palette: #FFF9E9, #6A7044, #BC7352, #782E35. Preserve full-bleed square edges, airy internal spacing, exact UI content and no OS chrome.
+
+APP MOTION
+Keep the painterly gardener, warm window and Pip recognizable. Let a few leaves and filtered light move within the picture; the care decisions and notes stay calm and easy to read.
+Use a clipped IllustrationMotion region with a still poster and a short muted inline clip. The matching per-screen pose is required; never reuse the watering or potting action under a note editor. On first eligible entry play a 4-second excerpt once and settle to its matching still. If a clip has face drift, unstable hands or a visible endpoint jump, reject it and use low-amplitude leaf layers instead. Stop the clip on focus, keyboard or modal; forms are independent DOM controls.
+
+INTERACTION RULES
+Touch is primary. Enable rollover only for (hover: hover) and (pointer: fine). Every hover cue has a focus-visible equivalent; no action or information is available only on hover. Pointer exit restores the resting style without changing selection. Use native buttons, links and labeled fields, not clickable artwork.
+
+Proposed tokens: hover 120 ms; press tint 80 ms; focus outline immediate; route crossfade 160 ms; small state changes 180 ms; expanded content 220 ms. Ease with cubic-bezier(0.2, 0, 0, 1), without overshoot. No animation delays navigation, saving or focus.
+
+Play at most one 4-second decorative introduction on first eligible entry per session, then settle to the approved still. Do not replay on field focus, typing, tab return or scroll. This is the default without adding new controls to the approved screens. Continuous motion is a later option only with a visible, keyboard-operable Pause animation control; record that as an additional control before implementation.
+
+effectiveReducedMotion = system preference OR saved app preference. When true, use a static poster, freeze shader time and 3D poses, remove parallax, and apply state changes immediately. Functional pointer-following remains direct, with no inertial or settling animation. Text and status feedback remain complete.
+
+Use normal document scroll; never hijack scrolling or move the foreground type with a background effect. Decorative layers stay inside their illustration region. Suspend them when offscreen, document-hidden, an editor has keyboard focus, or a modal covers the screen. Return to the same phase without catch-up bursts.
+
+Keep text, navigation and forms in the DOM above pointer-events:none, aria-hidden decorative layers. A missing asset, failed video, unavailable WebGL or context loss immediately shows the approved still. Media is muted, plays inline and does not request sound or device-motion permissions. Measure a target of 30 fps for ambient rendering; cap DPR at 1.5 initially and fall back when consistently slow. These are design budgets, not measured results.
+
+DATA
+One plant: Pip, an Olive at the Kitchen window, observed in Bright light. One soil check is due. Still damp is selected, so no watering is recorded. The note “Pip has two new leaves.” is an unsaved draft.
+
+APPROVED SCREEN REFERENCES
+- 01-welcome: images/mobile/pocket-garden/01-welcome.png (approved composition, full screen; do not animate UI pixels)
+- 02-plant: images/mobile/pocket-garden/02-plant.png (approved composition, full screen; do not animate UI pixels)
+- 03-garden: images/mobile/pocket-garden/03-garden.png (approved composition, full screen; do not animate UI pixels)
+- 04-care: images/mobile/pocket-garden/04-care.png (approved composition, full screen; do not animate UI pixels)
+- 05-notes: images/mobile/pocket-garden/05-notes.png (approved composition, full screen; do not animate UI pixels)
+
+PRODUCT REFERENCE CHAIN
+Read research/sources.json and the source IDs in this app record. Retain references/originals/pocket-garden.png for historical art direction; the current clean PNGs override any old device/OS presentation.
+
+VERIFIED BUILD REFERENCES
+- Google · Video generation: https://ai.google.dev/gemini-api/docs/video
+  Application: Image-directed video is a motion-study option. Use a currently supported Veo endpoint at production time; these briefs intentionally do not pin a preview model. A generated clip is not editable 3D geometry.
+- Motion · Gesture animation: https://motion.dev/docs/react-gestures
+  Application: Hover, press, focus and drag APIs support feedback on real controls. Specific timings and visual treatments in this study are WDA proposals.
+- Motion · Accessibility: https://motion.dev/docs/react-accessibility
+  Application: Reduced-motion policy can govern transforms and custom media behavior. The app must also stop its own shaders and decorative video.
+- MDN · Page Visibility API: https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
+  Application: Document visibility changes let the application suspend decorative media when the page is hidden. Resume from state rather than counting background frames.
+- W3C · Pause, Stop, Hide: https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html
+  Application: Automatically moving content lasting more than five seconds alongside other content needs a way to pause, stop or hide it. This proposal uses short ambient introductions that settle.
+
+ACCEPTANCE
+Check all five screens with touch, mouse, keyboard and 200% text. Confirm hover never commits data; press/cancel does not double-submit; focus is visible over every background frame; animation completion never grants progress. Check reduced motion on initial load and during playback, hidden/offscreen pause, poster fallback, resize, route return and canceled requests. Compare each resting frame with its approved PNG.
+
+Proposed motion and interaction specification. No video, shader, extracted asset or 3D model has been produced in this round; the review remains a static screen study with an action explorer.

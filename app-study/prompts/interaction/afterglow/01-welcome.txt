@@ -1,0 +1,21 @@
+WDA / Afterglow / 01-welcome — screen implementation prompt
+
+Approved visual reference: images/mobile/afterglow/01-welcome.png. Full app rules: prompts/interaction/afterglow.txt. Product research: interaction/afterglow.md. Motion/build references: interaction/motion/afterglow.md.
+
+ENTRY: First launch
+STATE: Brand Afterglow. Small marker 1 / 2. Upper half: sculptural amber crescent floating in a warm peach light bloom. Headline "A softer end to your day." Body "A few small rituals between your day and your pillow." Main CTA "Find my rhythm". Secondary "I already have an account". No tab bar.
+DISPLAY: Brand, headings, body copy, background texture, decorative vignettes and dividers are noninteractive. Read meaningful copy in document order; decorative artwork uses empty alt. OS chrome is intentionally omitted from exports; production safe-area insets belong to the app shell. Step markers communicate progress and are not buttons. Numeric totals derive from saved data or the explicitly described draft. Any exceptions appear in the control ledger.
+AMBIENT: 4-second amber swell behind the crescent on first welcome, then still.
+ACTIONS: Find my rhythm warms its coral fill on hover; press adds a darker tint, then navigates immediately. Account link underlines without moving.
+SCROLL/RETURN: One vertical scroll region. Preserve the airy spacing; at small heights or large text allow scrolling instead of scaling text down. Keep the bottom destination navigation above the safe area when present, and add content inset so it covers nothing. Keyboard opening scrolls the focused field into view; closing it restores the prior position. No horizontal paging gesture changes destination. Motion layer: The illustration scrolls naturally with the page; Back restores the still welcome. Use normal document scroll; never hijack scrolling or move the foreground type with a background effect. Decorative layers stay inside their illustration region. Suspend them when offscreen, document-hidden, an editor has keyboard focus, or a modal covers the screen. Return to the same phase without catch-up bursts.
+
+effectiveReducedMotion = system preference OR saved app preference. When true, use a static poster, freeze shader time and 3D poses, remove parallax, and apply state changes immediately. Functional pointer-following remains direct, with no inertial or settling animation. Text and status feedback remain complete.
+
+EVERY CONTROL
+
+
+Implement afterglow.01.01 (Find my rhythm) as button. Input: Tap/click; Enter or Space. Result: Start setup; preserve any local draft. Target: 02-time. Button with visible focus; pending state only for asynchronous work. Return focus after a sheet closes. Hover: 120 ms contextual fill/border tint. Focus: immediate visible outline. Press: 80 ms darker tint without layout shift. Exit/canceled press restores rest. Activate on release/keyboard once; preserve labels while pending, suppress duplicate submits, and show explicit success/error. No decorative animation gates the action.
+
+Implement afterglow.01.02 (I already have an account) as link. Input: Tap/click; Enter. Result: Open sign-in; return to welcome on cancel; restore saved settings only after success. Target: aux:sign-in. Route link; announce destination heading after navigation and restore scroll on Back. Hover: 120 ms underline/tint. Focus: immediate outline. Press: 80 ms tint; no image/card movement. Exit restores rest without changing active destination. Route crossfade 160 ms after activation; reduced motion immediate. Active route selection is a no-op; preserve route scroll/drafts.
+
+Never rasterize UI text or controls into a background video. No OS status bar or home indicator. Preserve native aspect ratio. Auxiliary destinations follow the app ledger, not another unrelated app screen.

@@ -1,0 +1,296 @@
+[
+  {
+    "source_id": 14,
+    "id": "afterglow",
+    "name": "Afterglow",
+    "category": "Evening rhythm",
+    "headline": "When does your evening slow down?",
+    "stage": "Time-selection onboarding",
+    "reference_id": 7,
+    "alias": "Emberrest",
+    "summary": "A warm, focused setup screen for choosing a wind-down time.",
+    "observed": [
+      "A three-part progress indicator has its middle step highlighted.",
+      "The selected time is 10:45 pm, repeated in the large readout and hour/minute picker.",
+      "A back control and “Set my evening” action frame the next step. The copy connects the choice to timing the last coffee."
+    ],
+    "keep": [
+      "Localized amber light, a small sculptural moon and a quiet cream surface.",
+      "A single clear decision with generous space around the selected time."
+    ],
+    "discuss": [
+      "Decide whether the product stays focused on coffee timing or follows the later evening-routine direction.",
+      "Specify picker movement, keyboard and screen-reader controls, time-format preferences and what happens after confirmation."
+    ],
+    "sequence": [
+      "Previous setup step",
+      "Wind-down time — pictured",
+      "Confirm preference",
+      "Daily view"
+    ],
+    "interaction": "The saved image depicts a picker, a back control and a primary action. It does not establish scrolling behavior, allowed minute increments or a saved preference state.",
+    "number": 1,
+    "image": "references/originals/afterglow.png",
+    "dimensions": [
+      928,
+      1695
+    ],
+    "sha256": "4b7bde5e051ca50b9da0ecfd92587c41f22ff92b460d3f92e7699288a441f333",
+    "source": "images/mobile/14-afterglow-bedtime.png",
+    "review": "reviews/afterglow.html",
+    "markdown": "reviews/afterglow.md",
+    "prompt": "prompts/afterglow.txt",
+    "reference": {
+      "image": "references/images/afterglow-source.png",
+      "title": "Bedtime selection",
+      "sha256": "12636b5369bb70dac233a21cdbe80fc656406731ec18f2150b276e25c6759094",
+      "note": "Original supplied screenshot recovered from the workspace archive. The source product and live behavior have not been independently verified."
+    },
+    "archived_screen_count": 10
+  },
+  {
+    "source_id": 15,
+    "id": "pocket-garden",
+    "name": "Pocket Garden",
+    "category": "Plant journal",
+    "headline": "Your little garden starts here.",
+    "stage": "Early-access confirmation",
+    "reference_id": 8,
+    "alias": "Spriglet",
+    "summary": "An illustrated welcome to a quieter plant journal.",
+    "observed": [
+      "A gardener illustration fills most of the screen and fades into the reading area.",
+      "The message says the visitor is already on the early-access list, reinforced by “EARLY ACCESS · SPOT SAVED.”",
+      "“Keep me in the loop” is the primary action; “Explore the plant notes” is secondary."
+    ],
+    "keep": [
+      "Painterly foliage, coral clothing and warm botanical light.",
+      "The gentle transition from illustration to open text and controls."
+    ],
+    "discuss": [
+      "Clarify the primary action after a spot has already been saved; distinguish confirmation from notification preferences.",
+      "Decide whether the next study remains an early-access journey or begins the plant-care app explored later."
+    ],
+    "sequence": [
+      "Early-access signup",
+      "Spot saved — pictured",
+      "Plant notes preview",
+      "First plant setup"
+    ],
+    "interaction": "Both calls to action are shown as static artwork. Signup validation, notification consent and the destination of plant notes are not demonstrated.",
+    "number": 2,
+    "image": "references/originals/pocket-garden.png",
+    "dimensions": [
+      928,
+      1695
+    ],
+    "sha256": "579fd652677440058d3ec8698b8afb1fa363d8d7f471ca366fb70454a3f11acb",
+    "source": "images/mobile/15-pocket-garden-waitlist.png",
+    "review": "reviews/pocket-garden.html",
+    "markdown": "reviews/pocket-garden.md",
+    "prompt": "prompts/pocket-garden.txt",
+    "reference": {
+      "image": "references/images/pocket-garden-source.png",
+      "title": "Early-access screen",
+      "sha256": "c0fa1b7bb4b0ef994981962148af241f701002cf330770cdc19ccbe1ae81c7a9",
+      "note": "Original supplied screenshot recovered from the workspace archive. The source product and live behavior have not been independently verified."
+    },
+    "archived_screen_count": 10
+  },
+  {
+    "source_id": 13,
+    "id": "home-note",
+    "name": "Home Note",
+    "category": "Family handover",
+    "headline": "Leave the details. Keep the peace.",
+    "stage": "Welcome / onboarding 01",
+    "reference_id": 6,
+    "alias": "KindredNote",
+    "summary": "A friendly first screen for sharing the small details of family care.",
+    "observed": [
+      "Layered household cards show “Friday with June,” school pickup, a peanut-free snack and a bedtime story.",
+      "The lower panel reads “Leave the details. Keep the peace.” with a 01 / 03 marker.",
+      "“Create your home note” and “I have an invitation” offer two distinct entry routes."
+    ],
+    "keep": [
+      "Peach, citron and burgundy, with tactile household symbols and friendly avatars.",
+      "The clear distinction between starting a household and joining one."
+    ],
+    "discuss": [
+      "Map the create and invitation routes before adding more screens.",
+      "Explore how the illustrated handover becomes an editable, readable note with clear ownership and confirmation."
+    ],
+    "sequence": [
+      "Welcome — pictured",
+      "Create or join a household",
+      "Add a handover note",
+      "Share and confirm"
+    ],
+    "interaction": "The two entry actions and progress marker are visible. The screenshot does not demonstrate a swipe sequence, invitation validation or the editor used after onboarding.",
+    "number": 4,
+    "image": "references/originals/home-note.png",
+    "dimensions": [
+      928,
+      1695
+    ],
+    "sha256": "f28ba6d613d66d90e220dc820a7badfd056b933d2264c324496fb369108342a5",
+    "source": "images/mobile/13-home-note-onboarding.png",
+    "review": "reviews/home-note.html",
+    "markdown": "reviews/home-note.md",
+    "prompt": "prompts/home-note.txt",
+    "reference": {
+      "image": "references/images/home-note-source.png",
+      "title": "Family onboarding",
+      "sha256": "2aa63ec12875db3fd7a239602c625ce500624d9db1586f4a824069bf7105df84",
+      "note": "Original supplied screenshot recovered from the workspace archive. The source product and live behavior have not been independently verified."
+    },
+    "archived_screen_count": 10
+  },
+  {
+    "source_id": 17,
+    "id": "sol",
+    "name": "Sol",
+    "category": "Weather & daylight",
+    "headline": "Bright until dusk.",
+    "stage": "Today / hourly forecast",
+    "reference_id": 10,
+    "alias": "Dayglint",
+    "summary": "A sunny dashboard combining the forecast with time outside.",
+    "observed": [
+      "Lisbon is selected, with 28°, “Bright until dusk,” and “Feels like 29°.”",
+      "Six hourly values run from 14:00 to 19:00: 28°, 29°, 28°, 27°, 25°, 24°. Wind is 12 km/h and humidity is 48%.",
+      "A “Best light · 18:30–20:00” row sits above Today, Places and Settings navigation."
+    ],
+    "keep": [
+      "The blue sky field, oversized temperature and tactile sun/cloud illustration.",
+      "A useful sequence from current weather to hourly trend and daylight."
+    ],
+    "discuss": [
+      "Define chart scrubbing, city switching and the destination of the Best light row.",
+      "Plan loading, stale-data, offline and location-permission states before implementing live weather."
+    ],
+    "sequence": [
+      "Choose a place",
+      "Today — pictured",
+      "Hourly or daylight detail",
+      "Saved places"
+    ],
+    "interaction": "The chart, city selector, plus control and three tabs are drawn in one static state. No live forecast, gesture or navigation behavior is demonstrated.",
+    "number": 5,
+    "image": "references/originals/sol.png",
+    "dimensions": [
+      966,
+      1629
+    ],
+    "sha256": "db557b558102f1666f9e9c082a76f266bcf483706c5381452d373edb6043ad93",
+    "source": "images/mobile/17-sol-forecast.png",
+    "review": "reviews/sol.html",
+    "markdown": "reviews/sol.md",
+    "prompt": "prompts/sol.txt",
+    "reference": {
+      "image": "references/images/sol-source.png",
+      "title": "Hourly weather forecast",
+      "sha256": "6ea7ed3ca56b854f48714468b489064520f52e2021e3fb2d0e392797b9bcfa36",
+      "note": "Original supplied screenshot recovered from the workspace archive. The source product and live behavior have not been independently verified."
+    },
+    "archived_screen_count": 10
+  },
+  {
+    "source_id": 16,
+    "id": "petal",
+    "name": "Petal",
+    "category": "Botanical puzzle",
+    "headline": "Put the garden back together.",
+    "stage": "Puzzle in progress",
+    "reference_id": 9,
+    "alias": "Florivo",
+    "summary": "A quiet arrangement game using fragments of a botanical illustration.",
+    "observed": [
+      "Five horizontal botanical strips are shown at different offsets.",
+      "The status reads “3 of 5 pieces aligned,” with a partly filled progress bar and 04 / 12 in the header.",
+      "Pause, “Show a hint” and “Start again” frame the play area."
+    ],
+    "keep": [
+      "Detailed lemon blossom artwork, expressive serif type and restrained coral controls.",
+      "The tangible strip arrangement and calm, uncluttered play area."
+    ],
+    "discuss": [
+      "Confirm the movement rule and what counts as aligned; the label and visual positions must agree.",
+      "Define drag and tap alternatives, hint feedback, reset confirmation and the completed puzzle state."
+    ],
+    "sequence": [
+      "Choose a puzzle",
+      "Arrange strips — pictured",
+      "Hint or pause",
+      "Complete and continue"
+    ],
+    "interaction": "The image suggests movable strips through visible handles and offsets. Dragging, snapping, hint behavior and the progress calculation are not implemented here.",
+    "number": 6,
+    "image": "references/originals/petal.png",
+    "dimensions": [
+      941,
+      1672
+    ],
+    "sha256": "cc31258e3888f6cde832a9795ab1c8e271f580eb636cd3070d092b735cba462e",
+    "source": "images/mobile/16-petal-puzzle.png",
+    "review": "reviews/petal.html",
+    "markdown": "reviews/petal.md",
+    "prompt": "prompts/petal.txt",
+    "reference": {
+      "image": "references/images/petal-source.png",
+      "title": "Botanical puzzle",
+      "sha256": "51ee8a46383c6e94c20998794f333f3105582e8a025ed7105f9e494f339ec4cd",
+      "note": "Original supplied screenshot recovered from the workspace archive. The source product and live behavior have not been independently verified."
+    },
+    "archived_screen_count": 10
+  },
+  {
+    "source_id": 18,
+    "id": "daybook",
+    "name": "Daybook",
+    "category": "Daylight planner",
+    "headline": "An evening worth keeping.",
+    "stage": "Today / evening plan",
+    "reference_id": 11,
+    "alias": "Evenfall",
+    "summary": "An editorial daily view that gives outdoor plans a place in the evening.",
+    "observed": [
+      "The header shows Thursday, 18 June, Lisbon, clear skies and 28°.",
+      "A daylight arc is labeled 06:12 and 20:58, with “2h 18m of daylight left.”",
+      "Two plans are shown: 18:30 Walk by the water for 35 minutes and 19:15 Dinner on the terrace for 60 minutes. Today is selected below the Add an evening plan action."
+    ],
+    "keep": [
+      "Burgundy editorial type, a restrained horizon illustration and an open agenda.",
+      "The relationship between the daylight arc and a short list of practical plans."
+    ],
+    "discuss": [
+      "Make the daylight countdown, current time and selected date consistent in the next iteration.",
+      "Define adding and editing a plan, overlapping activities, calendar access and Week / Places navigation."
+    ],
+    "sequence": [
+      "Choose place and date",
+      "Today — pictured",
+      "Add or edit a plan",
+      "Week or saved places"
+    ],
+    "interaction": "The timeline, add action and tab bar are visible in a static image. Time changes, planning forms and calendar integration are not demonstrated.",
+    "number": 7,
+    "image": "references/originals/daybook.png",
+    "dimensions": [
+      965,
+      1629
+    ],
+    "sha256": "d0a074bd48f519255a09bcd6b332592c6cde343a9dab066f053973a7dff7d378",
+    "source": "images/mobile/18-daybook-daylight.png",
+    "review": "reviews/daybook.html",
+    "markdown": "reviews/daybook.md",
+    "prompt": "prompts/daybook.txt",
+    "reference": {
+      "image": "references/images/daybook-source.png",
+      "title": "Daylight planner",
+      "sha256": "8da171aaa31d6fcab642e6d234120e4ef72ecd80e4aebe09fc8c2df4b6c6bab7",
+      "note": "Original supplied screenshot recovered from the workspace archive. The source product and live behavior have not been independently verified."
+    },
+    "archived_screen_count": 10
+  }
+]

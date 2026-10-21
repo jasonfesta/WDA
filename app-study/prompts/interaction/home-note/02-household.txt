@@ -1,0 +1,25 @@
+WDA / Home Note / 02-household — screen implementation prompt
+
+Approved visual reference: images/mobile/home-note/02-household.png. Full app rules: prompts/interaction/home-note.txt. Product research: interaction/home-note.md. Motion/build references: interaction/motion/home-note.md.
+
+ENTRY: Create your home note
+STATE: Back arrow and Home Note, "2 / 2". Small sculptural clay house on peach/citron. Title "Give your home a name". Field "Household name" value "Maple House". Field "Your name" value "Avery". Small explanation "Invite your people once you are inside." Primary "Open my home". No pre-sent invite, no tabs.
+DISPLAY: Brand, headings, body copy, background texture, decorative vignettes and dividers are noninteractive. Read meaningful copy in document order; decorative artwork uses empty alt. OS chrome is intentionally omitted from exports; production safe-area insets belong to the app shell. Step markers communicate progress and are not buttons. Numeric totals derive from saved data or the explicitly described draft. Any exceptions appear in the control ledger.
+AMBIENT: House light is still while household/name inputs are focused.
+ACTIONS: Household and Your name fields get an immediate visible border on focus. Open my home shows pending without hiding values; navigate only after successful creation.
+SCROLL/RETURN: One vertical scroll region. Preserve the airy spacing; at small heights or large text allow scrolling instead of scaling text down. Keep the bottom destination navigation above the safe area when present, and add content inset so it covers nothing. Keyboard opening scrolls the focused field into view; closing it restores the prior position. No horizontal paging gesture changes destination. Motion layer: Keyboard reveals Avery input and CTA. Back preserves the draft; no invitation is sent during setup. Use normal document scroll; never hijack scrolling or move the foreground type with a background effect. Decorative layers stay inside their illustration region. Suspend them when offscreen, document-hidden, an editor has keyboard focus, or a modal covers the screen. Return to the same phase without catch-up bursts.
+
+effectiveReducedMotion = system preference OR saved app preference. When true, use a static poster, freeze shader time and 3D poses, remove parallax, and apply state changes immediately. Functional pointer-following remains direct, with no inertial or settling animation. Text and status feedback remain complete.
+
+EVERY CONTROL
+
+
+Implement home-note.02.01 (Back) as button. Input: Tap/click; Enter or Space. Result: Preserve household draft. Target: 01-welcome. Button with visible focus; pending state only for asynchronous work. Return focus after a sheet closes. Hover: 120 ms contextual fill/border tint. Focus: immediate visible outline. Press: 80 ms darker tint without layout shift. Exit/canceled press restores rest. Activate on release/keyboard once; preserve labels while pending, suppress duplicate submits, and show explicit success/error. No decorative animation gates the action.
+
+Implement home-note.02.02 (Household name) as input. Input: Focus, type; blur validates. Result: Required 1–60 trimmed characters; clear inline error. Target: self. Native labeled input; errors use aria-describedby and aria-invalid. Keyboard must not cover the active field. Hover: 120 ms border tint. Focus: immediate visible outline with stable label; no scale or placeholder movement. Touch opens the native editing affordance. Freeze decoration during editing. Preserve draft, selection and keyboard position; validate without shaking the field.
+
+Implement home-note.02.03 (Your name) as input. Input: Focus, type; blur validates. Result: Required display name; do not infer role from typed text. Target: self. Native labeled input; errors use aria-describedby and aria-invalid. Keyboard must not cover the active field. Hover: 120 ms border tint. Focus: immediate visible outline with stable label; no scale or placeholder movement. Touch opens the native editing affordance. Freeze decoration during editing. Preserve draft, selection and keyboard position; validate without shaking the field.
+
+Implement home-note.02.04 (Open my home) as submit. Input: Tap/click or form Enter. Result: Create household with Avery as owner exactly once; show failure and retain draft if request fails. Target: 03-today. Validate, focus first invalid field, preserve draft; disable duplicate submission while pending. Success commits once; failure offers Retry. Hover: 120 ms contextual fill/border tint. Focus: immediate visible outline. Press: 80 ms darker tint without layout shift. Exit/canceled press restores rest. Activate on release/keyboard once; preserve labels while pending, suppress duplicate submits, and show explicit success/error. No decorative animation gates the action.
+
+Never rasterize UI text or controls into a background video. No OS status bar or home indicator. Preserve native aspect ratio. Auxiliary destinations follow the app ledger, not another unrelated app screen.

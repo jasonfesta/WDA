@@ -1,0 +1,511 @@
+{
+  "title": "WDA / App study",
+  "author": "Jason Festa",
+  "date": "2026-10-21",
+  "apps": 6,
+  "screens": 30,
+  "control_and_navigation_entries": 182,
+  "motion_status": "Specifications and prompts only; motion assets and runtime animation are future implementation.",
+  "motion_briefs": [
+    {
+      "app": "afterglow",
+      "method": "Programmatic background shader",
+      "brief": "interaction/motion/afterglow.md",
+      "interaction_prompt": "prompts/interaction/afterglow.txt",
+      "asset_prompt": "prompts/motion/afterglow-assets.txt",
+      "motion_prompt": "prompts/motion/afterglow-direction.txt"
+    },
+    {
+      "app": "pocket-garden",
+      "method": "Veo illustration study; layered motion fallback",
+      "brief": "interaction/motion/pocket-garden.md",
+      "interaction_prompt": "prompts/interaction/pocket-garden.txt",
+      "asset_prompt": "prompts/motion/pocket-garden-assets.txt",
+      "motion_prompt": "prompts/motion/pocket-garden-direction.txt"
+    },
+    {
+      "app": "home-note",
+      "method": "Veo house study; precise UI transitions",
+      "brief": "interaction/motion/home-note.md",
+      "interaction_prompt": "prompts/interaction/home-note.txt",
+      "asset_prompt": "prompts/motion/home-note-assets.txt",
+      "motion_prompt": "prompts/motion/home-note-direction.txt"
+    },
+    {
+      "app": "soul",
+      "method": "Programmatic 3D objects; Veo motion reference",
+      "brief": "interaction/motion/soul.md",
+      "interaction_prompt": "prompts/interaction/soul.txt",
+      "asset_prompt": "prompts/motion/soul-assets.txt",
+      "motion_prompt": "prompts/motion/soul-direction.txt"
+    },
+    {
+      "app": "petal",
+      "method": "Programmatic puzzle motion",
+      "brief": "interaction/motion/petal.md",
+      "interaction_prompt": "prompts/interaction/petal.txt",
+      "asset_prompt": "prompts/motion/petal-assets.txt",
+      "motion_prompt": "prompts/motion/petal-direction.txt"
+    },
+    {
+      "app": "daybook",
+      "method": "Programmatic SVG daylight and timeline",
+      "brief": "interaction/motion/daybook.md",
+      "interaction_prompt": "prompts/interaction/daybook.txt",
+      "asset_prompt": "prompts/motion/daybook-assets.txt",
+      "motion_prompt": "prompts/motion/daybook-direction.txt"
+    }
+  ],
+  "files": [
+    {
+      "app": "afterglow",
+      "screen": "01-welcome",
+      "path": "images/mobile/afterglow/01-welcome.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "815574048fa43e5f4b861cae449d418d879acabaf713c46ec54af41dee9c12d3",
+      "prompt": "prompts/screens/afterglow/01-welcome.txt",
+      "interaction_prompt": "prompts/interaction/afterglow/01-welcome.txt",
+      "os_chrome": false,
+      "cleanup_reference": null,
+      "cleanup_input_sha256": null
+    },
+    {
+      "app": "afterglow",
+      "screen": "02-time",
+      "path": "images/mobile/afterglow/02-time.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "c1c901e4ae19652a36b69989884d2461eaefad9e5f6717807051d7ead8b992c5",
+      "prompt": "prompts/screens/afterglow/02-time.txt",
+      "interaction_prompt": "prompts/interaction/afterglow/02-time.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/afterglow/02-time.png",
+      "cleanup_input_sha256": "6fa6fad4f6fe3257bbf0adfc2dd8b2bcb3334eaacbbecb54e97378de525db13e"
+    },
+    {
+      "app": "afterglow",
+      "screen": "03-tonight",
+      "path": "images/mobile/afterglow/03-tonight.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "fb1a2176add6798086119b22e00c3a35f5111d5accba81759b862a3d5b84b8e0",
+      "prompt": "prompts/screens/afterglow/03-tonight.txt",
+      "interaction_prompt": "prompts/interaction/afterglow/03-tonight.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/afterglow/03-tonight.png",
+      "cleanup_input_sha256": "fca9f08dbc57ff851db616066ce1814f9bed2d480114a2ed165c05374c4cbd6b"
+    },
+    {
+      "app": "afterglow",
+      "screen": "04-rituals",
+      "path": "images/mobile/afterglow/04-rituals.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "549132d507bad20f738fd617e7b497bda57c90b38c48982d67c4b2d89388c3a4",
+      "prompt": "prompts/screens/afterglow/04-rituals.txt",
+      "interaction_prompt": "prompts/interaction/afterglow/04-rituals.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/afterglow/04-rituals.png",
+      "cleanup_input_sha256": "c9400ae80c48ad70479c922b3986f40cd9de48bc77a2647318280457a6c9f081"
+    },
+    {
+      "app": "afterglow",
+      "screen": "05-sounds",
+      "path": "images/mobile/afterglow/05-sounds.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "74bb98a534d2995d7b4af963d976850663492214e164b52637e0b51b3242b297",
+      "prompt": "prompts/screens/afterglow/05-sounds.txt",
+      "interaction_prompt": "prompts/interaction/afterglow/05-sounds.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/afterglow/05-sounds.png",
+      "cleanup_input_sha256": "ca389e0de61d25c166430cc285d67a73e6b99e937f301269565d8731b2f9de38"
+    },
+    {
+      "app": "pocket-garden",
+      "screen": "01-welcome",
+      "path": "images/mobile/pocket-garden/01-welcome.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "5a87b322b3bfcc73e9a05bdfcd5f57be6d7003cf3925efd01c4346310d10041c",
+      "prompt": "prompts/screens/pocket-garden/01-welcome.txt",
+      "interaction_prompt": "prompts/interaction/pocket-garden/01-welcome.txt",
+      "os_chrome": false,
+      "cleanup_reference": null,
+      "cleanup_input_sha256": null
+    },
+    {
+      "app": "pocket-garden",
+      "screen": "02-plant",
+      "path": "images/mobile/pocket-garden/02-plant.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "c29110517ed535130a8f875864dc43924287bbb3ddbd44092cd76810ee958d29",
+      "prompt": "prompts/screens/pocket-garden/02-plant.txt",
+      "interaction_prompt": "prompts/interaction/pocket-garden/02-plant.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/pocket-garden/02-plant.png",
+      "cleanup_input_sha256": "48fd500d0d8eb79e8b987dc3daecedff4905e4fad399c88f14206c689bddbc5b"
+    },
+    {
+      "app": "pocket-garden",
+      "screen": "03-garden",
+      "path": "images/mobile/pocket-garden/03-garden.png",
+      "size": [
+        874,
+        1799
+      ],
+      "sha256": "0eaaef9bff2558e1bde5f09636b34955dbed4cc89b7b12335f08929d0e71b88c",
+      "prompt": "prompts/screens/pocket-garden/03-garden.txt",
+      "interaction_prompt": "prompts/interaction/pocket-garden/03-garden.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/pocket-garden/03-garden.png",
+      "cleanup_input_sha256": "8396fae3d10af39363142e65a1214796d55b252d25337e3c4418fa05343c18d0"
+    },
+    {
+      "app": "pocket-garden",
+      "screen": "04-care",
+      "path": "images/mobile/pocket-garden/04-care.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "f758255d6fdf3c975bb3628ac6cf2488900152d70760ecf3b2f3b96c5613d41a",
+      "prompt": "prompts/screens/pocket-garden/04-care.txt",
+      "interaction_prompt": "prompts/interaction/pocket-garden/04-care.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/pocket-garden/04-care.png",
+      "cleanup_input_sha256": "9a3f6a3f77fbec5420a020bb00bab3ad2b126e9ae8dcf88258c1b7877c8dab31"
+    },
+    {
+      "app": "pocket-garden",
+      "screen": "05-notes",
+      "path": "images/mobile/pocket-garden/05-notes.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "46a46c8c6ca08a2327aa5ccee45e9517559267c63a1e104a3c139a892557e97f",
+      "prompt": "prompts/screens/pocket-garden/05-notes.txt",
+      "interaction_prompt": "prompts/interaction/pocket-garden/05-notes.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/pocket-garden/05-notes.png",
+      "cleanup_input_sha256": "95723170be66d37752810b957e113c6472756f46da1951608c0eb691f95981d8"
+    },
+    {
+      "app": "home-note",
+      "screen": "01-welcome",
+      "path": "images/mobile/home-note/01-welcome.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "5bb4403e5749b9385ef89936891e16b07d37660aa68811833d90827a57af052a",
+      "prompt": "prompts/screens/home-note/01-welcome.txt",
+      "interaction_prompt": "prompts/interaction/home-note/01-welcome.txt",
+      "os_chrome": false,
+      "cleanup_reference": null,
+      "cleanup_input_sha256": null
+    },
+    {
+      "app": "home-note",
+      "screen": "02-household",
+      "path": "images/mobile/home-note/02-household.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "0edabf2cfe6fa6b8cd0b8a352fa1a12a7635bf6c3a7aaef1f49f51ebfdd2294c",
+      "prompt": "prompts/screens/home-note/02-household.txt",
+      "interaction_prompt": "prompts/interaction/home-note/02-household.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/home-note/02-household.png",
+      "cleanup_input_sha256": "4297d1f3b2ca94b540bfc3c26595e0bea7ab5af108c4d1c072b9231a969e1886"
+    },
+    {
+      "app": "home-note",
+      "screen": "03-today",
+      "path": "images/mobile/home-note/03-today.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "7dc297492ee44332eb3f347bced7b4473f6c4aa1eea63bdf18b10cac1a8547df",
+      "prompt": "prompts/screens/home-note/03-today.txt",
+      "interaction_prompt": "prompts/interaction/home-note/03-today.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/home-note/03-today.png",
+      "cleanup_input_sha256": "4ffd3ed930d512c8328408a6a83604bd4fed53cc92254d7198d5613dfcb6de98"
+    },
+    {
+      "app": "home-note",
+      "screen": "04-notes",
+      "path": "images/mobile/home-note/04-notes.png",
+      "size": [
+        873,
+        1801
+      ],
+      "sha256": "66b51f8527ef9e19716beaa8fad433faa38a245224d19b0ce7e7590b94e24df1",
+      "prompt": "prompts/screens/home-note/04-notes.txt",
+      "interaction_prompt": "prompts/interaction/home-note/04-notes.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/home-note/04-notes.png",
+      "cleanup_input_sha256": "071be87d98c823c094443a0918aa453195eba7c576f7399779c4feb443b93b94"
+    },
+    {
+      "app": "home-note",
+      "screen": "05-people",
+      "path": "images/mobile/home-note/05-people.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "52430cdac87f0f0bb1fda98f637891dfa32905a410cadaf4d760073d1b004db3",
+      "prompt": "prompts/screens/home-note/05-people.txt",
+      "interaction_prompt": "prompts/interaction/home-note/05-people.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/home-note/05-people.png",
+      "cleanup_input_sha256": "a0327c249be8ba9d92e7fd8ed1b8fcfcee32ff88c3db7c06db076d31a86794db"
+    },
+    {
+      "app": "soul",
+      "screen": "01-place",
+      "path": "images/mobile/soul/01-place.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "0c6ab6d4bbc784bcda943c728b58dd6afd89255e859c096be43a5fb8c8d8c451",
+      "prompt": "prompts/screens/soul/01-place.txt",
+      "interaction_prompt": "prompts/interaction/soul/01-place.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/soul/01-place.png",
+      "cleanup_input_sha256": "fbb5c047ab3a0931cbd00e811254d05a7f21ae87b417614be9fb7f0752384a2d"
+    },
+    {
+      "app": "soul",
+      "screen": "02-preferences",
+      "path": "images/mobile/soul/02-preferences.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "5d9bdcd70e64814ec590c913ec57e032fa18cd75879ad406c5d9e1cbb1693c27",
+      "prompt": "prompts/screens/soul/02-preferences.txt",
+      "interaction_prompt": "prompts/interaction/soul/02-preferences.txt",
+      "os_chrome": false,
+      "cleanup_reference": null,
+      "cleanup_input_sha256": null
+    },
+    {
+      "app": "soul",
+      "screen": "03-today",
+      "path": "images/mobile/soul/03-today.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "010a0d027d6e98da1a93f82696e93e49ac343ccad999a1fb2c8a12be47af8b3a",
+      "prompt": "prompts/screens/soul/03-today.txt",
+      "interaction_prompt": "prompts/interaction/soul/03-today.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/soul/03-today.png",
+      "cleanup_input_sha256": "7e8c78ce57d1dd93111f658238e15dc6956402f46716b7c6ee1bc28e52db3a1f"
+    },
+    {
+      "app": "soul",
+      "screen": "04-places",
+      "path": "images/mobile/soul/04-places.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "a75f0b1da26413c88fb8e9cf85bbf3e2c6076bc979b211cf4aa6d44185e39666",
+      "prompt": "prompts/screens/soul/04-places.txt",
+      "interaction_prompt": "prompts/interaction/soul/04-places.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/soul/04-places.png",
+      "cleanup_input_sha256": "0689a0d895a0b9402a8af3e654e9bc4fb9c71e9be24b20952dd82b594242be99"
+    },
+    {
+      "app": "soul",
+      "screen": "05-settings",
+      "path": "images/mobile/soul/05-settings.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "009693cf8f1102a9111e07e7177aff99c405d427271a378548d46301105f9ecb",
+      "prompt": "prompts/screens/soul/05-settings.txt",
+      "interaction_prompt": "prompts/interaction/soul/05-settings.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/soul/05-settings.png",
+      "cleanup_input_sha256": "e44272084c20122e6edf55ae24de28455236cb3a99b6cd29f0cdd76d5f5d1c5d"
+    },
+    {
+      "app": "petal",
+      "screen": "01-welcome",
+      "path": "images/mobile/petal/01-welcome.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "3ef7a1a6476f0d0423293860632cda506d8a6aedad6e314707e82850880e341c",
+      "prompt": "prompts/screens/petal/01-welcome.txt",
+      "interaction_prompt": "prompts/interaction/petal/01-welcome.txt",
+      "os_chrome": false,
+      "cleanup_reference": null,
+      "cleanup_input_sha256": null
+    },
+    {
+      "app": "petal",
+      "screen": "02-collections",
+      "path": "images/mobile/petal/02-collections.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "0665189e5df5defd918950efeac8ed5af219c56ffc748649f032e3112f1b6d65",
+      "prompt": "prompts/screens/petal/02-collections.txt",
+      "interaction_prompt": "prompts/interaction/petal/02-collections.txt",
+      "os_chrome": false,
+      "cleanup_reference": null,
+      "cleanup_input_sha256": null
+    },
+    {
+      "app": "petal",
+      "screen": "03-play",
+      "path": "images/mobile/petal/03-play.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "fbec920b25cc520b4b3dcd94c8ad1a229836a02f41eb77a2575be8430a393bb1",
+      "prompt": "prompts/screens/petal/03-play.txt",
+      "interaction_prompt": "prompts/interaction/petal/03-play.txt",
+      "os_chrome": false,
+      "cleanup_reference": null,
+      "cleanup_input_sha256": null
+    },
+    {
+      "app": "petal",
+      "screen": "04-complete",
+      "path": "images/mobile/petal/04-complete.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "a9ffa1d87c7268424564f521e73004f8637fc666e7c933f9c1a6c8b67496ab39",
+      "prompt": "prompts/screens/petal/04-complete.txt",
+      "interaction_prompt": "prompts/interaction/petal/04-complete.txt",
+      "os_chrome": false,
+      "cleanup_reference": null,
+      "cleanup_input_sha256": null
+    },
+    {
+      "app": "petal",
+      "screen": "05-profile",
+      "path": "images/mobile/petal/05-profile.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "1aeea283fabba4b9e943d899d28d428fe96f289873db361f43dfc77c99096e2a",
+      "prompt": "prompts/screens/petal/05-profile.txt",
+      "interaction_prompt": "prompts/interaction/petal/05-profile.txt",
+      "os_chrome": false,
+      "cleanup_reference": null,
+      "cleanup_input_sha256": null
+    },
+    {
+      "app": "daybook",
+      "screen": "01-setup",
+      "path": "images/mobile/daybook/01-setup.png",
+      "size": [
+        874,
+        1800
+      ],
+      "sha256": "1e3d17604815eef13b66834c20450575e6ff903a15071a6db128ef23b2df056b",
+      "prompt": "prompts/screens/daybook/01-setup.txt",
+      "interaction_prompt": "prompts/interaction/daybook/01-setup.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/daybook/01-setup.png",
+      "cleanup_input_sha256": "413cdc5db97f34648fd32bf3c92b9b25f3dfad64b582c0aefc2c4737572278b1"
+    },
+    {
+      "app": "daybook",
+      "screen": "02-today",
+      "path": "images/mobile/daybook/02-today.png",
+      "size": [
+        875,
+        1798
+      ],
+      "sha256": "b6848d48efed3a71ae9f2de49df7fdf69890fda61a3defe3654704ca91121c2c",
+      "prompt": "prompts/screens/daybook/02-today.txt",
+      "interaction_prompt": "prompts/interaction/daybook/02-today.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/daybook/02-today.png",
+      "cleanup_input_sha256": "f90a35b61eb329e0c79aa992f0ed10c20720cfc455c111f6566e1ada510d95fa"
+    },
+    {
+      "app": "daybook",
+      "screen": "03-editor",
+      "path": "images/mobile/daybook/03-editor.png",
+      "size": [
+        874,
+        1799
+      ],
+      "sha256": "edd608f79b9fa87e595ff507f6ec230c1605a0c90497cff872c1ba8a58f675f2",
+      "prompt": "prompts/screens/daybook/03-editor.txt",
+      "interaction_prompt": "prompts/interaction/daybook/03-editor.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/daybook/03-editor.png",
+      "cleanup_input_sha256": "ae7ab2c5f958dacbe4bb026161103eff8e83da4c0c8aa7e310fd4a4e04960477"
+    },
+    {
+      "app": "daybook",
+      "screen": "04-week",
+      "path": "images/mobile/daybook/04-week.png",
+      "size": [
+        875,
+        1798
+      ],
+      "sha256": "360443c368464164dcd493e9c09626b54c447f1179a6dc52bab6630e33604f1a",
+      "prompt": "prompts/screens/daybook/04-week.txt",
+      "interaction_prompt": "prompts/interaction/daybook/04-week.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/daybook/04-week.png",
+      "cleanup_input_sha256": "425b250a0a48c53036c9a2bb4aab54d19e165bd057c7c137b63eb2df6f9d362f"
+    },
+    {
+      "app": "daybook",
+      "screen": "05-places",
+      "path": "images/mobile/daybook/05-places.png",
+      "size": [
+        875,
+        1798
+      ],
+      "sha256": "46c3979da0a2b5373c2eeddefaccdf08a2ad5ef15b66462370d98267eb9fdda0",
+      "prompt": "prompts/screens/daybook/05-places.txt",
+      "interaction_prompt": "prompts/interaction/daybook/05-places.txt",
+      "os_chrome": false,
+      "cleanup_reference": "references/edit-inputs/daybook/05-places.png",
+      "cleanup_input_sha256": "ef2f24ca7f549f9c3a6f742de6751b1e614d840dee79940a039a9945865bb434"
+    }
+  ]
+}

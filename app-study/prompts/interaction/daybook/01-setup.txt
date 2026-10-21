@@ -1,0 +1,23 @@
+WDA / Daybook / 01-setup — screen implementation prompt
+
+Approved visual reference: images/mobile/daybook/01-setup.png. Full app rules: prompts/interaction/daybook.txt. Product research: interaction/daybook.md. Motion/build references: interaction/motion/daybook.md.
+
+ENTRY: First launch
+STATE: DAYBOOK, small "A lighter day starts here". Large serif title "Give the daylight a place." Warm landscape with a small sun arc. City field label "Where your day begins" value "Lisbon, Portugal". Small "Europe/Lisbon". Explanation "Start with a simple plan. Add your calendar when you are ready." Primary "Start with manual plans". Secondary "Connect a calendar". No tabs.
+DISPLAY: Brand, headings, body copy, background texture, decorative vignettes and dividers are noninteractive. Read meaningful copy in document order; decorative artwork uses empty alt. OS chrome is intentionally omitted from exports; production safe-area insets belong to the app shell. Step markers communicate progress and are not buttons. Numeric totals derive from saved data or the explicitly described draft. Any exceptions appear in the control ledger.
+AMBIENT: Still landscape and a static preview arc until a location/date is confirmed.
+ACTIONS: Location control underlines on hover/focus. Manual plans enters Today; calendar connection is explicit and cannot move the arc before valid data returns.
+SCROLL/RETURN: One vertical scroll region. Preserve the airy spacing; at small heights or large text allow scrolling instead of scaling text down. Keep the bottom destination navigation above the safe area when present, and add content inset so it covers nothing. Keyboard opening scrolls the focused field into view; closing it restores the prior position. No horizontal paging gesture changes destination. Motion layer: Normal document scroll. Do not use scroll position to change the time of day. Use normal document scroll; never hijack scrolling or move the foreground type with a background effect. Decorative layers stay inside their illustration region. Suspend them when offscreen, document-hidden, an editor has keyboard focus, or a modal covers the screen. Return to the same phase without catch-up bursts.
+
+effectiveReducedMotion = system preference OR saved app preference. When true, use a static poster, freeze shader time and 3D poses, remove parallax, and apply state changes immediately. Functional pointer-following remains direct, with no inertial or settling animation. Text and status feedback remain complete.
+
+EVERY CONTROL
+
+
+Implement daybook.01.01 (City field) as combobox. Input: Type/search then select. Result: Select a real location and timezone; no permission required for manual entry. Target: aux:city-search. Accessible combobox/listbox, clear action, arrow navigation, Enter select, Escape close. Distinguish query from selected record ID. Hover: 120 ms border tint. Focus: immediate visible outline with stable label; no scale or placeholder movement. Touch opens the native editing affordance. Freeze decoration during editing. Preserve draft, selection and keyboard position; validate without shaking the field.
+
+Implement daybook.01.02 (Start with manual plans) as submit. Input: Tap/click or form Enter. Result: Finish setup without calendar access; initial concept data is explicitly a demo fixture. Target: 02-today. Validate, focus first invalid field, preserve draft; disable duplicate submission while pending. Success commits once; failure offers Retry. Hover: 120 ms contextual fill/border tint. Focus: immediate visible outline. Press: 80 ms darker tint without layout shift. Exit/canceled press restores rest. Activate on release/keyboard once; preserve labels while pending, suppress duplicate submits, and show explicit success/error. No decorative animation gates the action.
+
+Implement daybook.01.03 (Connect a calendar) as button. Input: Tap/click; Enter or Space. Result: Explain read-only import first; denied/cancel returns to manual path, no false connected state. Target: aux:calendar-permission. Button with visible focus; pending state only for asynchronous work. Return focus after a sheet closes. Hover: 120 ms contextual fill/border tint. Focus: immediate visible outline. Press: 80 ms darker tint without layout shift. Exit/canceled press restores rest. Activate on release/keyboard once; preserve labels while pending, suppress duplicate submits, and show explicit success/error. No decorative animation gates the action.
+
+Never rasterize UI text or controls into a background video. No OS status bar or home indicator. Preserve native aspect ratio. Auxiliary destinations follow the app ledger, not another unrelated app screen.

@@ -1,0 +1,24 @@
+WDA / Home Note — motion direction prompt
+
+Veo motion-study prompt — animate the supplied Home Note clay-house plate with a completely locked camera. Over four seconds softly brighten the already-lit windows by a small amount and let the outer shrub leaves settle through a very small sway. Maintain exact house shape, terracotta roof, peach scene, creamy clay texture and shadows. End at the resting composition. No door opening, new inhabitants, moving architecture, talking faces, text, UI, music or narration. The effect is atmosphere only.
+
+ASSET INPUT
+Prepare the art using prompts/motion/home-note-assets.txt; never submit the full UI screenshot as an illustration-only video plate.
+
+Play at most one 4-second decorative introduction on first eligible entry per session, then settle to the approved still. Do not replay on field focus, typing, tab return or scroll. This is the default without adding new controls to the approved screens. Continuous motion is a later option only with a visible, keyboard-operable Pause animation control; record that as an additional control before implementation.
+
+effectiveReducedMotion = system preference OR saved app preference. When true, use a static poster, freeze shader time and 3D poses, remove parallax, and apply state changes immediately. Functional pointer-following remains direct, with no inertial or settling animation. Text and status feedback remain complete.
+
+Proposed motion and interaction specification. No video, shader, extracted asset or 3D model has been produced in this round; the review remains a static screen study with an action explorer.
+
+REFERENCES
+- Google · Video generation: https://ai.google.dev/gemini-api/docs/video
+  Application: Image-directed video is a motion-study option. Use a currently supported Veo endpoint at production time; these briefs intentionally do not pin a preview model. A generated clip is not editable 3D geometry.
+- Motion · Gesture animation: https://motion.dev/docs/react-gestures
+  Application: Hover, press, focus and drag APIs support feedback on real controls. Specific timings and visual treatments in this study are WDA proposals.
+- Motion · Accessibility: https://motion.dev/docs/react-accessibility
+  Application: Reduced-motion policy can govern transforms and custom media behavior. The app must also stop its own shaders and decorative video.
+- MDN · Page Visibility API: https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
+  Application: Document visibility changes let the application suspend decorative media when the page is hidden. Resume from state rather than counting background frames.
+- W3C · Pause, Stop, Hide: https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html
+  Application: Automatically moving content lasting more than five seconds alongside other content needs a way to pause, stop or hide it. This proposal uses short ambient introductions that settle.

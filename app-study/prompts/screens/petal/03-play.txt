@@ -1,0 +1,18 @@
+Use case: ui-mockup. Create ONE polished mobile application screen only. Full-bleed upright rectangular canvas, target 756 × 1559 pixels (aspect ratio 0.485). The app surface reaches all four image edges and ALL FOUR SQUARE CORNERS. ZERO outer white presentation space, ZERO phone frame, ZERO rounded device outline, ZERO surrounding mockup background, ZERO shadow around the entire screen. The reference has a phone frame and margins: REMOVE those and extend/reflow the app interior into the full canvas. Do not crop text or controls. Do not draw a device. Rounded small controls INSIDE the app are allowed. No collage or multiple panels. Native screenshot-like, crisp readable copy, generous internal spacing but no exterior padding. Consistent 24px logical side gutters inside the app; status area at top; safe area/home indicator at bottom. Practical body text and 44px logical touch targets. All buttons are rendered as design, not annotations. No extra controls or marketing badges. Preserve object proportions; no stretched imagery or typography. The exact screen title and all specified copy must be legible. Render in the same stable mobile viewport for every screen.
+
+REFERENCE ROLE: attached original screenshot supplies this app’s art direction only; its device frame and surrounding whitespace must not appear.
+APP: Petal
+STYLE: Original Petal art direction: precise painterly lemon, blossom and leaf botanical artwork on creamy paper; expressive refined serif headlines, muted olive utility text, warm coral controls, thin botanical dividers. Preserve the original illustration-based strip puzzle, not abstract colour bars.
+PALETTE: #FFF9EC, #718064, #E8795B, #993D2A
+TYPE DIRECTION: Cormorant Garamond, DM Sans (approximate in raster; readable, never stretched).
+SCREEN: A little closer, piece by piece
+CONTENT AND STATE:
+PETAL. Header "Citrus · 01 / 12" with pause icon. Original botanical lemon branch artwork in EXACTLY FIVE horizontal strips. Strips 1,3,5 in correct position; strips2and4 visibly offset and incomplete. Text "3 of 5 pieces aligned" and exactly60%filledcoralprogress. Primary "Show a hint". Secondary "Start again". Small helper "Drag a strip, or tap to move". Bottom Play / Collections / Profile; ONLY Play active. Do not write complete.
+
+PERSISTENT DATA / CONSISTENCY:
+Citrus collection12 arrangements. Arrangement01 initially0complete and3/5stripsaligned in play. Completion5/5 increments collection and profile exactlyonce to1. Progressbar60%then100%.
+Only display the subset specified for this screen. This fixture is for consistency, not extra text to print.
+FINAL GEOMETRY CHECK: the complete image IS the app screen itself, with square outer corners and no white margin or outer frame anywhere.
+
+FINAL EXPORT REQUIREMENT (supersedes any earlier status-area instruction)
+No operating-system clock, cellular signal, Wi-Fi, battery or home indicator. Preserve in-app dates, times, icons and navigation.

@@ -1,0 +1,26 @@
+WDA / Home Note — asset preparation prompt
+
+Status: specified for the next production pass; no extracted assets are delivered yet.
+
+From Home Note 02-household isolate the cream clay house, terracotta roof, warm windows, fence and green shrubs. Preserve geometry, surface softness, shadows and fixed camera. Make an illustration-only plate with the same peach background and an alpha cutout option. Keep Avery from 03-today as a separate still portrait, preserving her adult face, brown wavy hair, hoops and sweater. Do not animate or replace avatars and do not make Morgan a photographed person. Remove all UI lettering from the motion plate.
+
+INPUT ROLES
+- 01-welcome: images/mobile/home-note/01-welcome.png (approved composition, full screen; do not animate UI pixels)
+- 02-household: images/mobile/home-note/02-household.png (approved composition, full screen; do not animate UI pixels)
+- 03-today: images/mobile/home-note/03-today.png (approved composition, full screen; do not animate UI pixels)
+- 04-notes: images/mobile/home-note/04-notes.png (approved composition, full screen; do not animate UI pixels)
+- 05-people: images/mobile/home-note/05-people.png (approved composition, full screen; do not animate UI pixels)
+
+Deliver each asset with filename, source screen, normalized bounds, pivot if relevant, alpha/occlusion notes and static fallback. Keep all UI content in code.
+
+REFERENCES
+- Google · Video generation: https://ai.google.dev/gemini-api/docs/video
+  Application: Image-directed video is a motion-study option. Use a currently supported Veo endpoint at production time; these briefs intentionally do not pin a preview model. A generated clip is not editable 3D geometry.
+- Motion · Gesture animation: https://motion.dev/docs/react-gestures
+  Application: Hover, press, focus and drag APIs support feedback on real controls. Specific timings and visual treatments in this study are WDA proposals.
+- Motion · Accessibility: https://motion.dev/docs/react-accessibility
+  Application: Reduced-motion policy can govern transforms and custom media behavior. The app must also stop its own shaders and decorative video.
+- MDN · Page Visibility API: https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
+  Application: Document visibility changes let the application suspend decorative media when the page is hidden. Resume from state rather than counting background frames.
+- W3C · Pause, Stop, Hide: https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html
+  Application: Automatically moving content lasting more than five seconds alongside other content needs a way to pause, stop or hide it. This proposal uses short ambient introductions that settle.

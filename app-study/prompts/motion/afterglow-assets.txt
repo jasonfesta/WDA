@@ -1,0 +1,26 @@
+WDA / Afterglow — asset preparation prompt
+
+Status: specified for the next production pass; no extracted assets are delivered yet.
+
+Use the approved Afterglow welcome and Tonight PNGs as art-direction references. Separate the amber crescent from the background into a transparent RGBA asset; preserve its exact silhouette, warm material, highlight and orientation. Export a clean cream/peach background plate with no type, cards, OS icons or app controls. Do not invent a moon face, stars, new scenery or extra glow over the reading zone. Keep a still fallback matching the approved composition.
+
+INPUT ROLES
+- 01-welcome: images/mobile/afterglow/01-welcome.png (approved composition, full screen; do not animate UI pixels)
+- 02-time: images/mobile/afterglow/02-time.png (approved composition, full screen; do not animate UI pixels)
+- 03-tonight: images/mobile/afterglow/03-tonight.png (approved composition, full screen; do not animate UI pixels)
+- 04-rituals: images/mobile/afterglow/04-rituals.png (approved composition, full screen; do not animate UI pixels)
+- 05-sounds: images/mobile/afterglow/05-sounds.png (approved composition, full screen; do not animate UI pixels)
+
+Deliver each asset with filename, source screen, normalized bounds, pivot if relevant, alpha/occlusion notes and static fallback. Keep all UI content in code.
+
+REFERENCES
+- Three.js · ShaderMaterial: https://threejs.org/docs/pages/ShaderMaterial.html
+  Application: A custom GLSL material can receive time and resolution uniforms. This supports a proposed procedural light field for Afterglow.
+- Motion · Gesture animation: https://motion.dev/docs/react-gestures
+  Application: Hover, press, focus and drag APIs support feedback on real controls. Specific timings and visual treatments in this study are WDA proposals.
+- Motion · Accessibility: https://motion.dev/docs/react-accessibility
+  Application: Reduced-motion policy can govern transforms and custom media behavior. The app must also stop its own shaders and decorative video.
+- MDN · Page Visibility API: https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
+  Application: Document visibility changes let the application suspend decorative media when the page is hidden. Resume from state rather than counting background frames.
+- W3C · Pause, Stop, Hide: https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html
+  Application: Automatically moving content lasting more than five seconds alongside other content needs a way to pause, stop or hide it. This proposal uses short ambient introductions that settle.

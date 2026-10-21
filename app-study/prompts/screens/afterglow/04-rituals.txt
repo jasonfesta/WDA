@@ -1,0 +1,23 @@
+Use case: ui-mockup. Create ONE polished mobile application screen only. Full-bleed upright rectangular canvas, target 756 × 1559 pixels (aspect ratio 0.485). The app surface reaches all four image edges and ALL FOUR SQUARE CORNERS. ZERO outer white presentation space, ZERO phone frame, ZERO rounded device outline, ZERO surrounding mockup background, ZERO shadow around the entire screen. The reference has a phone frame and margins: REMOVE those and extend/reflow the app interior into the full canvas. Do not crop text or controls. Do not draw a device. Rounded small controls INSIDE the app are allowed. No collage or multiple panels. Native screenshot-like, crisp readable copy, generous internal spacing but no exterior padding. Consistent 24px logical side gutters inside the app; status area at top; safe area/home indicator at bottom. Practical body text and 44px logical touch targets. All buttons are rendered as design, not annotations. No extra controls or marketing badges. Preserve object proportions; no stretched imagery or typography. The exact screen title and all specified copy must be legible. Render in the same stable mobile viewport for every screen.
+
+REFERENCE ROLE: attached original screenshot supplies this app’s art direction only; its device frame and surrounding whitespace must not appear.
+APP: Afterglow
+STYLE: Original Afterglow art direction: luminous localized peach and amber blooms on milk cream, deep burgundy rounded humanist typography, tiny polished amber crescent, frosted controls, generous calm negative space INSIDE the UI. Preserve warm light and type character of the original.
+PALETTE: #FFF6E9, #F4BE83, #E67450, #631C22
+TYPE DIRECTION: Nunito Sans (approximate in raster; readable, never stretched).
+SCREEN: Small rituals to return to
+CONTENT AND STATE:
+Afterglow and settings gear. Heading "Small rituals to return to". Three airy editorial rows with small warm cream/amber illustrations: "Window breathing" / "2 min"; "Shoulder release" / "5 min"; "A chapter in low light" / "8 min". Each row has a small plus action. A selected detail region for Shoulder release reads "Let your shoulders settle." CTA "Start 5 minutes". Bottom Tonight / Rituals / Sounds; ONLY Rituals active.
+
+PERSISTENT DATA / CONSISTENCY:
+Wind-down 22:45; reminder optional and initially off; a 15-minute routine is Breathe 2 + Stretch 5 + Read 8. Rain is a separate 20-minute track, not part of that total.
+Only display the subset specified for this screen. This fixture is for consistency, not extra text to print.
+FINAL GEOMETRY CHECK: the complete image IS the app screen itself, with square outer corners and no white margin or outer frame anywhere.
+Image 2 is the matching new home/play screen. Match its typography, UI density, icons and colors. New screen only, full bleed with square corners. Canvas must be 874 × 1800; same narrow mobile aspect as image 2.
+CORRECTION: All THREE rituals already belong to Tonight. Show a small checkmark membership button on EACH row, not a plus. Tapping toggles membership; keep all three marked added in this pictured state. Do not show duplicated rituals.
+
+FINAL OS CLEANUP APPLIED
+Use case: precise-object-edit. This is a surgical cleanup of the attached mobile app screenshot, the edit target. Remove ONLY the operating-system status bar: the tiny time in the extreme top-left (9:41 or 18:00), the cellular signal bars, Wi-Fi glyph, and battery/power glyph in the extreme top-right. Remove any OS home indicator at the very bottom if present. Seamlessly fill those small areas with the exact surrounding app background texture/color/gradient. Preserve EVERY in-app time, date, forecast, title, paragraph, control, illustration, progress indicator, tab, and app icon exactly, in the exact same position and size. Do not shift content upward or alter typography. Do not crop, stretch, reflow, add padding, round the outer corners, or change the native tall portrait aspect ratio. The app must remain full bleed with four square outer corners. No additions, no OS chrome anywhere. Keep all other pixels as unchanged as possible. Output one screen only.
+
+FINAL EXPORT REQUIREMENT (supersedes any earlier status-area instruction)
+No operating-system clock, cellular signal, Wi-Fi, battery or home indicator. Preserve in-app dates, times, icons and navigation.
