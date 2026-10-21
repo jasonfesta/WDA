@@ -2,6 +2,10 @@
 
 [All image folders](../README.md)
 
+## AVELA approved website pages
+
+[Open the AVELA collection](avela/) — Bags, Our workshop, and Care & repair, with separate desktop/mobile images, native source masters, side-by-side previews, research companions and exact prompts. Jason Festa / WDA.
+
 ## Website layouts
 
 - [Avela — The Arc bag](01-avela-arc-bag.png)

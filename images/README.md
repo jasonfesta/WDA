@@ -2,6 +2,10 @@
 
 A collection of website layouts, mobile screens, components, and color references maintained by Jason Festa.
 
+## AVELA approved website pages
+
+[Open the approved AVELA collection](website/avela/) — Bags, Our workshop, and Care & repair. Includes separate desktop and 390 px mobile images, native source masters, review previews, live-reference research and generation prompts.
+
 ## Latest: Nano Banana 2 Cleanup
 
 [Open the complete 21-sheet collection](nano-banana-2-cleanup/): 9 website sheets, 6 mobile app sheets, and 6 component sheets, covering 135 designs. Each folder includes the original input, the Nano Banana 2 output, the cleanup prompt, and generation metadata.

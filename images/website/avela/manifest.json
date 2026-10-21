@@ -1,0 +1,348 @@
+{
+  "title": "AVELA approved page images",
+  "owner": "Jason Festa",
+  "date": "2026-10-21",
+  "repository": "jasonfesta/WDA",
+  "status": "Approved by Jason Festa in design review",
+  "scope": [
+    "The bags",
+    "Our workshop",
+    "Care & repair"
+  ],
+  "generation": "Built-in image generation; proportionate image assembly and resizing only. No website implementation.",
+  "mobile_width": 390,
+  "source_homepages": {
+    "desktop": "../../../homepage-study/images/desktop/01-avela.png",
+    "mobile": "../../../homepage-study/images/mobile/01-avela.jpg"
+  },
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 3359,
+      "sha256": "512e8fbe2f0da7d958fda244affe24eb1f862967c2a9aabdb089aa6785b8460f"
+    },
+    {
+      "file": "desktop/bags.png",
+      "bytes": 1614116,
+      "sha256": "821e14962e02fada3fa84a4a6dc30129188928c7d110479347f4fc506a4c21fe",
+      "width": 921,
+      "height": 1708
+    },
+    {
+      "file": "desktop/care-and-repair.png",
+      "bytes": 3352180,
+      "sha256": "2b1b01ceb44fb5c516e7647c79607d38e4bedcd770ce2fb7ae6daff61f4be8cd",
+      "width": 1080,
+      "height": 2681
+    },
+    {
+      "file": "desktop/our-workshop.png",
+      "bytes": 4246420,
+      "sha256": "394ea9897920ec92c473f630b0132b7d872314b4e3afb94abec7d19108f5f311",
+      "width": 1209,
+      "height": 3083
+    },
+    {
+      "file": "masters/mobile/care-and-repair.png",
+      "bytes": 5428016,
+      "sha256": "0c9c480185e4e0ff74ff294ac28fe53903d29e62f5974470bf753e2ebe778692",
+      "width": 909,
+      "height": 5267
+    },
+    {
+      "file": "masters/mobile/our-workshop.png",
+      "bytes": 5258392,
+      "sha256": "859bffc7ce333b2a5844bcbba356f2f36f7f7ad8bd8518ef756fb81d0e7eb7a8",
+      "width": 921,
+      "height": 4985
+    },
+    {
+      "file": "mobile/bags.png",
+      "bytes": 624752,
+      "sha256": "b6c3af6be9e3575ee4f297366e31b4929a8414a61a74fcf0abe0af9ddb053913",
+      "width": 390,
+      "height": 1427
+    },
+    {
+      "file": "mobile/care-and-repair.png",
+      "bytes": 1226626,
+      "sha256": "4352346dde4268e96f81994ca237e7272a82c3b1cbf04708078c76df9e7b001b",
+      "width": 390,
+      "height": 2260
+    },
+    {
+      "file": "mobile/our-workshop.png",
+      "bytes": 1159589,
+      "sha256": "1340d4dce99a122da55d23d25d27e753383716089866bd47fccb61ce110b54ee",
+      "width": 390,
+      "height": 2111
+    },
+    {
+      "file": "prompts/bags-desktop-v2.txt",
+      "bytes": 3683,
+      "sha256": "e0e7f9cff1d12571267bfe0988a2635dd70367a5b749514dcda6d9e5f882d0d8"
+    },
+    {
+      "file": "prompts/bags-mobile-lower.txt",
+      "bytes": 3345,
+      "sha256": "d123bb90bc4b69ab7fe3d7b4bc3305288515e2a1242d4060fd7845d4c0d5bae4"
+    },
+    {
+      "file": "prompts/bags-mobile-upper.txt",
+      "bytes": 3027,
+      "sha256": "4fe17925725c4ddcd99abf7662c79d8c3ca72516fd229435bc924deff5b31deb"
+    },
+    {
+      "file": "prompts/care-desktop-lower.txt",
+      "bytes": 2856,
+      "sha256": "a486f43e5b663a020863b6a981fb1d9a0edd93874fb4d6cb5ca0148fd2407b0e"
+    },
+    {
+      "file": "prompts/care-desktop-upper.txt",
+      "bytes": 3127,
+      "sha256": "594e90252bcb999c42b00503612f934227d54cb0a8a0d71e2cb9ce0da8240c0c"
+    },
+    {
+      "file": "prompts/care-mobile-lower.txt",
+      "bytes": 1979,
+      "sha256": "eb3be413bc5f6c4418c47f03f519bcfe04ac797ce11256a878f805fd4b514757"
+    },
+    {
+      "file": "prompts/care-mobile-middle.txt",
+      "bytes": 1758,
+      "sha256": "14de634a66417d054c1afd3f4a41fff8ed95162746cfa0b03c7e4aa3544e4ae5"
+    },
+    {
+      "file": "prompts/care-mobile-upper.txt",
+      "bytes": 1651,
+      "sha256": "bc1cfb7a3c684ff2ea617de39bf204b6a809c661f9eaad23de477cf993963821"
+    },
+    {
+      "file": "prompts/workshop-desktop-lower.txt",
+      "bytes": 2883,
+      "sha256": "93ccb452932bd7c29bf16584e91e1cbdd7a3555de4c33eb420bff14c62c1a921"
+    },
+    {
+      "file": "prompts/workshop-desktop-upper.txt",
+      "bytes": 3088,
+      "sha256": "676a099299c9b1b3152e6f053544a7ece620b038a3a3d8d21f49d3a6b3c3f8e6"
+    },
+    {
+      "file": "prompts/workshop-mobile-lower.txt",
+      "bytes": 1650,
+      "sha256": "658a2b7d6ba498f7ba1885d9cb370c636fd2a8cd5d85506c698c195dda448846"
+    },
+    {
+      "file": "prompts/workshop-mobile-middle.txt",
+      "bytes": 1740,
+      "sha256": "e6b2ef3ad1a91505b6f9bd15df81ec672ede6d24dd8121857086b3c44072661f"
+    },
+    {
+      "file": "prompts/workshop-mobile-upper.txt",
+      "bytes": 2003,
+      "sha256": "925dc9ef419c334154da2b5f289614f1ce2f16e16b9fff5bfbdcf338e9defc7e"
+    },
+    {
+      "file": "research/bags-companion.md",
+      "bytes": 5707,
+      "sha256": "2fe2f3ae25bd13685e6acf8744988407bf2d16b52cb0e7692f2c6f74a5689003"
+    },
+    {
+      "file": "research/captures/coach-care-demonstration.jpg",
+      "bytes": 104889,
+      "sha256": "8dbf1f45e83ead262c1fabf1fce4ab976c70a5c5af4bafc874b28ae5b9fc4d49",
+      "width": 1800,
+      "height": 948
+    },
+    {
+      "file": "research/captures/cos-mobile-filters-390.jpg",
+      "bytes": 18434,
+      "sha256": "a026203ac5778c4f22e2856bd3fd8d097d4c15e0875097ce9df8476e5fd45bb8",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "file": "research/captures/cos-mobile-grid-390.jpg",
+      "bytes": 32322,
+      "sha256": "807d4295d4e53accd3851f6174077d307bffe612c1c107eb8d8d565e680da953",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "file": "research/captures/hereu-desktop-detail.jpg",
+      "bytes": 242384,
+      "sha256": "7191111149ea4fa2bc9754d48d085642465aba387c0dab74988a8a9fa3c1eeb6",
+      "width": 1800,
+      "height": 948
+    },
+    {
+      "file": "research/captures/hereu-desktop-full.jpg",
+      "bytes": 748437,
+      "sha256": "eab0a311e4bcedb56712ab78aa3cacc40c0191ca7285a16fd3c294d5a815bf79",
+      "width": 1800,
+      "height": 4004
+    },
+    {
+      "file": "research/captures/hereu-mobile-full.jpg",
+      "bytes": 255563,
+      "sha256": "4a4135f32a7f95fd9017df90d7eadcdb58fb05deebc6ad7e266b33f5d865bd04",
+      "width": 390,
+      "height": 4397
+    },
+    {
+      "file": "research/captures/jason-markk-handbag-tutorial.jpg",
+      "bytes": 143687,
+      "sha256": "67f13c1c5bd99f72f9555dacd015af6873f1f3e39738ed50bcf4f311eca203fa",
+      "width": 1800,
+      "height": 948
+    },
+    {
+      "file": "research/captures/polene-catalogue.jpg",
+      "bytes": 54623,
+      "sha256": "defe95defcd37e2d2e9279af4a247572493d000a277d397c3e10cbcf96dc24f3",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "research/captures/polene-filters.jpg",
+      "bytes": 30695,
+      "sha256": "ce086f203eeaf4e539d31f6e2905fe5799d8f39ca8acf5a719afc0d8fa1c2b49",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "research/care-candidates.md",
+      "bytes": 3970,
+      "sha256": "bfac8db8021d70198023e7867c56c0c4ac0b9ed6da440d15705ef2ece59f0284"
+    },
+    {
+      "file": "research/care-companion.md",
+      "bytes": 7303,
+      "sha256": "9649b6125d490d9f157ef0549fdd1a69ee18c47a277f235b8139d96ebdc6528d"
+    },
+    {
+      "file": "research/workshop-companion.md",
+      "bytes": 5263,
+      "sha256": "d945e219ce1b07327ead6a321f0c2de1d133213e5a669facbeb719d3cd88350d"
+    },
+    {
+      "file": "review/bags.png",
+      "bytes": 2119366,
+      "sha256": "e4e8f42adaa00aff07206cc530de3e050c5c6fc8f8c73b05a43b5a387007b311",
+      "width": 1423,
+      "height": 1804
+    },
+    {
+      "file": "review/care-and-repair.png",
+      "bytes": 3813297,
+      "sha256": "f814fed788fb65d01a23740a1c94927afa34cadddbb4a9b8cc171e47d43ee68d",
+      "width": 1362,
+      "height": 2308
+    },
+    {
+      "file": "review/our-workshop.png",
+      "bytes": 3861369,
+      "sha256": "4152ac5160cfafe95079478626249b4557c41baaf512898cc7f7f226bb28bb88",
+      "width": 1362,
+      "height": 2343
+    },
+    {
+      "file": "shared/home-newsletter-footer-desktop.png",
+      "bytes": 174717,
+      "sha256": "217946663000ce94b923fb1c4cc5bf86b9f9ee705f9dc7db5aad852f5c2b74f5",
+      "width": 725,
+      "height": 290
+    },
+    {
+      "file": "shared/home-newsletter-footer-mobile.png",
+      "bytes": 76349,
+      "sha256": "085952e3c46afd74b9a588e519ecc40b5e1379d874f222b53b34ca136b6f649e",
+      "width": 390,
+      "height": 260
+    },
+    {
+      "file": "sources/bags-mobile-lower-source.png",
+      "bytes": 1434793,
+      "sha256": "60d16bc029bf8c82a4f765faaab3c3c3d15f963072d3f3ad20aa05afe43df728",
+      "width": 921,
+      "height": 1707
+    },
+    {
+      "file": "sources/bags-mobile-upper-source.png",
+      "bytes": 1417565,
+      "sha256": "477d7b171a9085c6df8680c07a24da2b0fe75c58a0dda8ee29323a7d51863d4a",
+      "width": 1029,
+      "height": 1528
+    },
+    {
+      "file": "sources/care-desktop-lower.png",
+      "bytes": 1889367,
+      "sha256": "14e11dd89554812da49b831b2de6bea3c70c92bff95653f447a3d37261c9035b",
+      "width": 1464,
+      "height": 1074
+    },
+    {
+      "file": "sources/care-desktop-upper.png",
+      "bytes": 2151236,
+      "sha256": "f185f59b1f275172e6969e29a98ed9125196c370cae78e4edcb0d76284442c58",
+      "width": 1080,
+      "height": 1457
+    },
+    {
+      "file": "sources/care-mobile-lower.png",
+      "bytes": 1839625,
+      "sha256": "90a23082ec85d332343e89d7bd63b97d6e202e92e33283dcf63e276b505ed3c4",
+      "width": 933,
+      "height": 1686
+    },
+    {
+      "file": "sources/care-mobile-middle.png",
+      "bytes": 2154391,
+      "sha256": "7a8239f5d19e7e3b2a9ef505ac606c8ed70acd8772063f96a5a98dc56330ae53",
+      "width": 909,
+      "height": 1731
+    },
+    {
+      "file": "sources/care-mobile-upper.png",
+      "bytes": 1967768,
+      "sha256": "b2136ddde03b3af8df208695445dd960b96089d03b27d74a3729b2069cd31dca",
+      "width": 1054,
+      "height": 1492
+    },
+    {
+      "file": "sources/workshop-desktop-lower.png",
+      "bytes": 2142238,
+      "sha256": "6ebb1cf997d38f059e5e5913e727e31e5ffca1dc89f1219a26ee5e7bdcc6dea5",
+      "width": 1209,
+      "height": 1300
+    },
+    {
+      "file": "sources/workshop-desktop-upper.png",
+      "bytes": 2013822,
+      "sha256": "bcbe0d04cac8507f0bf90129b92808402192e2fca283fc2e423c2425e9a0ec43",
+      "width": 1210,
+      "height": 1300
+    },
+    {
+      "file": "sources/workshop-mobile-lower.png",
+      "bytes": 2285420,
+      "sha256": "5ae9b81cf625658069b4c0437f1423273b162f8ed12adbc33715edb7df5fc4b1",
+      "width": 1131,
+      "height": 1391
+    },
+    {
+      "file": "sources/workshop-mobile-middle.png",
+      "bytes": 1857969,
+      "sha256": "1c32dc89cb4ae4de1b02100e1ac21e3154c62f76b5716fdfb91138081f65be2e",
+      "width": 973,
+      "height": 1616
+    },
+    {
+      "file": "sources/workshop-mobile-upper.png",
+      "bytes": 1928442,
+      "sha256": "3c9f275688e9c0f6ccf67bb0121b89fdedf71ae9b7df59fc0a92f010f2c6ba46",
+      "width": 921,
+      "height": 1708
+    }
+  ]
+}

@@ -2,6 +2,10 @@
 
 [All image folders](../README.md)
 
+## AVELA mobile website pages
+
+[Approved Bags, Workshop, and Care & repair](../website/avela/) are available as separate 390 px mobile files alongside desktop versions, native source masters and reference companions.
+
 ## Mobile screens
 
 - [Home Note — Family handover](13-home-note-onboarding.png)
