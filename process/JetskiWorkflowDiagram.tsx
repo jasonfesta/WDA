@@ -85,6 +85,7 @@ const WORKFLOW_COLUMNS: WorkflowColumn[] = [
         stepNumber: '03',
         title: 'Dynamic Design Range & Charm',
         subtitle: 'Structuring design thinking upfront',
+        quote: '"Begin to structure our design range from minimal to opinionated, represented by xyz.com for minimal, xyz.com for structured, and xyz.com for opinionated."',
         subBoxes: [
           {
             title: 'A. Dynamic Design Spectrum',
