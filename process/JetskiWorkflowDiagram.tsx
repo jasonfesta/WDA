@@ -7,7 +7,7 @@ export interface WorkflowNodeItem {
 
 export interface WorkflowNode {
   id: string;
-  stepNumber: string;
+  stepNumber?: string;
   title: string;
   subtitle?: string;
   badge?: string;
@@ -307,17 +307,10 @@ const WORKFLOW_COLUMNS: WorkflowColumn[] = [
       },
       {
         id: 'golden-template',
-        stepNumber: '11',
         title: 'React Golden Template',
-        subtitle: 'Final Production & Model-Ready Output',
+        subtitle: 'Fully Steered, Design Benchmarked & Packaged',
         badge: 'GOLDEN TEMPLATE',
         isFinalOutput: true,
-        items: [
-          {
-            label: 'Fully Steered, Design Benchmarked & Packaged',
-            detail: 'Production-verified React Golden Template ready for model training, evaluation, or deployment at scale',
-          },
-        ],
       },
     ],
   },
@@ -563,13 +556,22 @@ export const JetskiWorkflowDiagram: React.FC = () => {
                           style={{
                             borderRadius: '12px',
                             border: isFinal
-                              ? '2px solid #111111'
+                              ? '2px solid #D4AF37'
                               : isHuman
                               ? '1.75px solid #111111'
                               : '1.25px solid #D4D4D8',
-                            backgroundColor: isFinal ? '#111111' : isHuman ? '#FAFAFA' : '#FFFFFF',
+                            background: isFinal
+                              ? 'radial-gradient(circle at 50% 32%, rgba(245, 158, 11, 0.22) 0%, #0D0D0F 72%)'
+                              : isHuman
+                              ? '#FAFAFA'
+                              : '#FFFFFF',
+                            backgroundColor: isFinal ? '#0D0D0F' : isHuman ? '#FAFAFA' : '#FFFFFF',
                             color: isFinal ? '#FFFFFF' : '#111111',
-                            padding: '18px 20px',
+                            padding: isFinal ? '28px 24px' : '18px 20px',
+                            textAlign: isFinal ? 'center' : 'left',
+                            boxShadow: isFinal
+                              ? '0 8px 28px rgba(212, 175, 55, 0.18), inset 0 0 0 1px rgba(253, 230, 138, 0.22)'
+                              : 'none',
                             boxSizing: 'border-box',
                           }}
                         >
@@ -577,29 +579,31 @@ export const JetskiWorkflowDiagram: React.FC = () => {
                           <div
                             style={{
                               display: 'flex',
-                              justifyContent: 'space-between',
+                              justifyContent: isFinal ? 'center' : 'space-between',
                               alignItems: 'center',
                               marginBottom: '8px',
                               gap: '8px',
                             }}
                           >
-                            <span
-                              style={{
-                                fontSize: '12px',
-                                fontWeight: 600,
-                                letterSpacing: '0.06em',
-                                color: isFinal ? '#A1A1AA' : '#52525B',
-                              }}
-                            >
-                              STEP {node.stepNumber}
-                            </span>
+                            {node.stepNumber && (
+                              <span
+                                style={{
+                                  fontSize: '12px',
+                                  fontWeight: 600,
+                                  letterSpacing: '0.06em',
+                                  color: '#52525B',
+                                }}
+                              >
+                                STEP {node.stepNumber}
+                              </span>
+                            )}
                             {node.badge && (
                               <span
                                 style={{
                                   fontSize: '12px',
                                   fontWeight: isFinal ? 700 : 600,
-                                  letterSpacing: '0.03em',
-                                  padding: '2px 8px',
+                                  letterSpacing: isFinal ? '0.08em' : '0.03em',
+                                  padding: isFinal ? '4px 12px' : '2px 8px',
                                   borderRadius: '999px',
                                   border: isFinal
                                     ? '1px solid #F59E0B'
@@ -607,12 +611,12 @@ export const JetskiWorkflowDiagram: React.FC = () => {
                                     ? '1px solid #111111'
                                     : '1px solid #D4D4D8',
                                   background: isFinal
-                                    ? 'linear-gradient(135deg, #FDE68A 0%, #F59E0B 55%, #D97706 100%)'
+                                    ? 'linear-gradient(135deg, #FEF08A 0%, #F59E0B 55%, #D97706 100%)'
                                     : isHuman
                                     ? '#111111'
                                     : '#F4F4F5',
                                   color: isFinal ? '#111111' : isHuman ? '#FFFFFF' : '#111111',
-                                  boxShadow: isFinal ? '0 1px 6px rgba(245, 158, 11, 0.35)' : 'none',
+                                  boxShadow: isFinal ? '0 2px 10px rgba(245, 158, 11, 0.4)' : 'none',
                                   whiteSpace: 'nowrap',
                                 }}
                               >
@@ -629,21 +633,16 @@ export const JetskiWorkflowDiagram: React.FC = () => {
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
-                                gap: '6px',
-                                margin: '14px 0 8px',
-                                padding: '14px 0',
-                                borderRadius: '10px',
-                                background:
-                                  'radial-gradient(circle at center, rgba(245, 158, 11, 0.18) 0%, rgba(17, 17, 17, 0) 75%)',
-                                border: '1px solid rgba(245, 158, 11, 0.35)',
+                                gap: '10px',
+                                margin: '18px 0 16px',
                               }}
                             >
                               <span
                                 style={{
-                                  fontSize: '46px',
+                                  fontSize: '58px',
                                   lineHeight: 1,
                                   filter:
-                                    'sepia(1) saturate(5) hue-rotate(5deg) brightness(1.08) drop-shadow(0 2px 8px rgba(245, 158, 11, 0.45))',
+                                    'sepia(1) saturate(5.5) hue-rotate(5deg) brightness(1.1) drop-shadow(0 4px 14px rgba(245, 158, 11, 0.55))',
                                   display: 'inline-block',
                                   transform: 'scaleX(-1)',
                                 }}
@@ -652,10 +651,10 @@ export const JetskiWorkflowDiagram: React.FC = () => {
                               </span>
                               <span
                                 style={{
-                                  fontSize: '46px',
+                                  fontSize: '58px',
                                   lineHeight: 1,
                                   filter:
-                                    'sepia(1) saturate(5) hue-rotate(5deg) brightness(1.08) drop-shadow(0 2px 8px rgba(245, 158, 11, 0.45))',
+                                    'sepia(1) saturate(5.5) hue-rotate(5deg) brightness(1.1) drop-shadow(0 4px 14px rgba(245, 158, 11, 0.55))',
                                   display: 'inline-block',
                                 }}
                               >
@@ -667,10 +666,12 @@ export const JetskiWorkflowDiagram: React.FC = () => {
                           {/* Node Title & Subtitle */}
                           <div
                             style={{
-                              fontSize: '15px',
-                              fontWeight: 600,
-                              lineHeight: 1.3,
-                              letterSpacing: '-0.01em',
+                              fontSize: isFinal ? '22px' : '15px',
+                              fontWeight: isFinal ? 700 : 600,
+                              lineHeight: isFinal ? 1.2 : 1.3,
+                              letterSpacing: isFinal ? '-0.02em' : '-0.01em',
+                              color: isFinal ? '#FDE68A' : '#111111',
+                              marginBottom: isFinal ? '8px' : 0,
                             }}
                           >
                             {node.title}
@@ -678,9 +679,10 @@ export const JetskiWorkflowDiagram: React.FC = () => {
                           {node.subtitle && (
                             <div
                               style={{
-                                fontSize: '12px',
-                                color: isFinal ? '#D4D4D8' : '#52525B',
-                                marginTop: '3px',
+                                fontSize: isFinal ? '13px' : '12px',
+                                fontWeight: isFinal ? 500 : 400,
+                                color: isFinal ? '#E4E4E7' : '#52525B',
+                                marginTop: isFinal ? 0 : '3px',
                               }}
                             >
                               {node.subtitle}
