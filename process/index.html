@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jetski Design Workflow: Prompt & Mood Board to React Golden Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #FFFFFF;
+      color: #111111;
+      font-family: "Google Sans Flex", "Google Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .page-wrapper {
+      padding: 40px 48px;
+      min-width: 1960px;
+      background-color: #FFFFFF;
+    }
+    .header {
+      border-bottom: 1.5px solid #111111;
+      padding-bottom: 20px;
+      margin-bottom: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+    }
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #52525B;
+      margin-bottom: 6px;
+    }
+    .title {
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 0;
+      color: #111111;
+    }
+    .legend {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 12px;
+      color: #3F3F46;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .swatch-default {
+      border: 1.25px solid #D4D4D8;
+      background: #FFFFFF;
+    }
+    .swatch-human {
+      border: 1.75px solid #111111;
+      background: #FAFAFA;
+    }
+    .swatch-final {
+      border: 1.5px solid #111111;
+      background: #111111;
+    }
+    .pipeline {
+      display: flex;
+      align-items: flex-start;
+    }
+    .column {
+      width: 344px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .phase-header {
+      border-bottom: 1.5px solid #111111;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+    .phase-num {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: #52525B;
+      margin-bottom: 4px;
+    }
+    .phase-title {
+      font-size: 17px;
+      font-weight: 600;
+      color: #111111;
+      letter-spacing: -0.01em;
+    }
+    .phase-sub {
+      font-size: 12px;
+      color: #52525B;
+      margin-top: 2px;
+    }
+    .node {
+      border-radius: 12px;
+      border: 1.25px solid #D4D4D8;
+      background-color: #FFFFFF;
+      color: #111111;
+      padding: 18px 20px;
+    }
+    .node.human {
+      border: 1.75px solid #111111;
+      background-color: #FAFAFA;
+    }
+    .node.final {
+      border: 2px solid #111111;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+    .node-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      gap: 8px;
+    }
+    .step-num {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: #52525B;
+    }
+    .node.final .step-num {
+      color: #A1A1AA;
+    }
+    .badge {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid #D4D4D8;
+      background-color: #F4F4F5;
+      color: #111111;
+    }
+    .node.human .badge {
+      border-color: #111111;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+    .node.final .badge {
+      border-color: #3F3F46;
+      background-color: #27272A;
+      color: #FFFFFF;
+    }
+    .node-title {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+    .node-subtitle {
+      font-size: 12px;
+      color: #52525B;
+      margin-top: 3px;
+    }
+    .node.final .node-subtitle {
+      color: #D4D4D8;
+    }
+    .quote-box {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid #E4E4E7;
+      background-color: #FAFAFA;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.45;
+      color: #111111;
+    }
+    .items-list {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-top: 1px solid #E4E4E7;
+      padding-top: 12px;
+    }
+    .node.final .items-list {
+      border-top-color: #27272A;
+    }
+    .item-label {
+      font-size: 12.5px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .item-detail {
+      font-size: 12px;
+      color: #52525B;
+      margin-top: 2px;
+      line-height: 1.45;
+    }
+    .node.final .item-detail {
+      color: #D4D4D8;
+    }
+    .sub-boxes {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .sub-box {
+      border-radius: 8px;
+      border: 1px solid #D4D4D8;
+      background-color: #FFFFFF;
+      padding: 10px 12px;
+      color: #111111;
+    }
+    .sub-box-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #111111;
+      margin-bottom: 6px;
+    }
+    .sub-box ul {
+      margin: 0;
+      padding-left: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      list-style-type: disc;
+    }
+    .sub-box li {
+      font-size: 12px;
+      line-height: 1.4;
+      color: #3F3F46;
+    }
+    .down-arrow {
+      display: flex;
+      justify-content: center;
+      padding: 6px 0;
+    }
+    .right-connector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      flex-shrink: 0;
+      padding-top: 110px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Top Header -->
+    <header class="header">
+      <div>
+        <div class="eyebrow">JETSKI DESIGN WORKFLOW</div>
+        <h1 class="title">Prompt &amp; Mood Board → React Golden Template</h1>
+      </div>
+      <div class="legend">
+        <div class="legend-item">
+          <span class="swatch swatch-default"></span>
+          <span>Process / Skill Node (&amp; .md Artifacts)</span>
+        </div>
+        <div class="legend-item">
+          <span class="swatch swatch-human"></span>
+          <span>Human Review / Steering Checkpoint</span>
+        </div>
+        <div class="legend-item">
+          <span class="swatch swatch-final"></span>
+          <span>Final Golden Template</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Left-to-Right Pipeline -->
+    <div class="pipeline">
+      <!-- PHASE 01 -->
+      <div class="column">
+        <div class="phase-header">
+          <div class="phase-num">PHASE 01</div>
+          <div class="phase-title">Origin &amp; Voice Research</div>
+          <div class="phase-sub">Prompt to category benchmarking</div>
+        </div>
+
+        <div class="node">
+          <div class="node-top">
+            <span class="step-num">STEP 01</span>
+          </div>
+          <div class="node-title">Initial Prompt</div>
+          <div class="node-subtitle">Workflow Trigger</div>
+          <div class="quote-box">"Make me a warm landing page for my new coffee shop and brand"</div>
+        </div>
+
+        <div class="down-arrow">
+          <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+            <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
+            <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="node">
+          <div class="node-top">
+            <span class="step-num">STEP 02</span>
+            <span class="badge">1× research.md</span>
+          </div>
+          <div class="node-title">Competitor Research Benchmarking</div>
+          <div class="node-subtitle">Voice-generated Markdown artifact</div>
+          <div class="quote-box">"Give me 25 examples of coffee shop brands that are modern and popular across Instagram and the social web."</div>
+          <div class="items-list">
+            <div>
+              <div class="item-label">1× research.md File (via Voice)</div>
+              <div class="item-detail">Top 15–25 websites &amp; apps in the target category</div>
+            </div>
+            <div>
+              <div class="item-label">Reference Capture</div>
+              <div class="item-detail">Benchmarked by URL + Screenshot (~25 total references)</div>
+            </div>
+            <div>
+              <div class="item-label">Dual Evaluation Lens</div>
+              <div class="item-detail">Analyzes both Visual Design and Code Interactions</div>
+            </div>
+          </div>
+          <div class="sub-boxes">
+            <div class="sub-box">
+              <div class="sub-box-title">Future State: Library &amp; Catalog Pull</div>
+              <ul>
+                <li>Can pull directly from a pre-indexed library &amp; catalog instead of running in real time</li>
+                <li>Runs as a hidden instruction in the background to keep references fresh</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Connector 1 -> 2 -->
+      <div class="right-connector">
+        <svg width="44" height="24" viewBox="0 0 44 24" fill="none">
+          <line x1="0" y1="12" x2="36" y2="12" stroke="#111111" stroke-width="1.5" />
+          <path d="M31 6.5L37.5 12L31 17.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+
+      <!-- PHASE 02 -->
+      <div class="column">
+        <div class="phase-header">
+          <div class="phase-num">PHASE 02</div>
+          <div class="phase-title">Design Range &amp; MD Artifacts</div>
+          <div class="phase-sub">Spectrum definition &amp; prompt readiness</div>
+        </div>
+
+        <div class="node">
+          <div class="node-top">
+            <span class="step-num">STEP 03</span>
+          </div>
+          <div class="node-title">Dynamic Design Range &amp; Charm</div>
+          <div class="node-subtitle">Structuring design thinking upfront</div>
+          <div class="sub-boxes">
+            <div class="sub-box">
+              <div class="sub-box-title">A. Dynamic Design Spectrum</div>
+              <ul>
+                <li>Declare full category range from research</li>
+                <li>e.g., Minimal → Structured → Opinionated</li>
+                <li>Barbershop e.g.: Minimal → Nostalgic London Burgundy / Elite → Hip-Hop</li>
+              </ul>
+            </div>
+            <div class="sub-box">
+              <div class="sub-box-title">B. Interaction &amp; Touch Areas ("Charm")</div>
+              <ul>
+                <li>Highlight specific section behaviors &amp; micro-touches to carry into Image Gen</li>
+                <li>Assign explicit brutal / minimal / interactive moments per section</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="down-arrow">
+          <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+            <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
+            <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="node">
+          <div class="node-top">
+            <span class="step-num">STEP 04</span>
+            <span class="badge">1 Main + 5–10 Range .md</span>
+          </div>
+          <div class="node-title">Structured Markdown Files</div>
+          <div class="node-subtitle">Roll-over context for Image Gen</div>
+          <div class="items-list">
+            <div>
+              <div class="item-label">1× Main Agent .md File</div>
+              <div class="item-detail">Core architecture, global rules, and interaction specs</div>
+            </div>
+            <div>
+              <div class="item-label">5–10× Design Range .md Files</div>
+              <div class="item-detail">One per category flavor depending on category breadth</div>
+            </div>
+            <div>
+              <div class="item-label">Zero Tertiary Research in MGen</div>
+              <div class="item-detail">Armed with prompts, model URLs, &amp; code refs to go straight to prompts</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Connector 2 -> 3 -->
+      <div class="right-connector">
+        <svg width="44" height="24" viewBox="0 0 44 24" fill="none">
+          <line x1="0" y1="12" x2="36" y2="12" stroke="#111111" stroke-width="1.5" />
+          <path d="M31 6.5L37.5 12L31 17.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+
+      <!-- PHASE 03 -->
+      <div class="column">
+        <div class="phase-header">
+          <div class="phase-num">PHASE 03</div>
+          <div class="phase-title">Image Generation (Nano Banana 2)</div>
+          <div class="phase-sub">Comps, 4K grids, &amp; Design Package .md</div>
+        </div>
+
+        <div class="node">
+          <div class="node-top">
+            <span class="step-num">STEP 05</span>
+            <span class="badge">Desktop + Mobile</span>
+          </div>
+          <div class="node-title">Iterative Image Generation</div>
+          <div class="node-subtitle">Nano Banana 2 Pipeline</div>
+          <div class="items-list">
+            <div>
+              <div class="item-label">Anchor Screens &amp; Breakpoints</div>
+              <div class="item-detail">Generate initial screens, steer against .md files, lock Desktop + Mobile breakpoints</div>
+            </div>
+            <div>
+              <div class="item-label">Clone &amp; Full-Site Expansion</div>
+              <div class="item-detail">Clone locked anchor → print main sections → generate rest of site + footer (up to 35+ pages)</div>
+            </div>
+            <div>
+              <div class="item-label">Output Format (1-by-1 or 4K Grid)</div>
+              <div class="item-detail">Image per screen generated individually OR via massive 4K grid split up to save cost</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="down-arrow">
+          <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+            <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
+            <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="node human">
+          <div class="node-top">
+            <span class="step-num">STEP 06</span>
+            <span class="badge">HUMAN GATE</span>
+          </div>
+          <div class="node-title">Human Checkpoint #1: Grid &amp; Comp QA</div>
+          <div class="node-subtitle">Internal Design Team Review Surface</div>
+          <div class="items-list">
+            <div>
+              <div class="item-label">Internal Review Page</div>
+              <div class="item-detail">Rapid "Yes, yes, yes, looks great" pass across generated screen grids</div>
+            </div>
+            <div>
+              <div class="item-label">Prevents Multi-Screen "Slop"</div>
+              <div class="item-detail">Catches off-colors or missed direction early before wasting 30+ generated screens</div>
+            </div>
+          </div>
+          <div class="sub-boxes">
+            <div class="sub-box">
+              <div class="sub-box-title">Drift Resolution &amp; Model Evolution</div>
+              <ul>
+                <li>Today: Fill public reference gaps with explicit Visual Ref + Code Snippet + Steering</li>
+                <li>Over Time: Train skill to predict next spots cleanly from only the first few screens</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="down-arrow">
+          <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+            <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
+            <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="node">
+          <div class="node-top">
+            <span class="step-num">STEP 07</span>
+            <span class="badge">1× design-package.md</span>
+          </div>
+          <div class="node-title">Complete Design Package</div>
+          <div class="node-subtitle">Consolidated Markdown &amp; Asset Handoff</div>
+          <div class="items-list">
+            <div>
+              <div class="item-label">1× Complete Design Package .md File</div>
+              <div class="item-detail">Unifies all research .md files, code references, breakpoint specs, &amp; approved screen comps</div>
+            </div>
+            <div>
+              <div class="item-label">Zero Mid-Build Ad-Hoc Image Gen</div>
+              <div class="item-detail">Locks 35+ page architecture before entering the React build phase</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Connector 3 -> 4 -->
+      <div class="right-connector">
+        <svg width="44" height="24" viewBox="0 0 44 24" fill="none">
+          <line x1="0" y1="12" x2="36" y2="12" stroke="#111111" stroke-width="1.5" />
+          <path d="M31 6.5L37.5 12L31 17.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+
+      <!-- PHASE 04 -->
+      <div class="column">
+        <div class="phase-header">
+          <div class="phase-num">PHASE 04</div>
+          <div class="phase-title">Image-to-React Skills &amp; Steering</div>
+          <div class="phase-sub">Pipeline .md, skill checkpoints, &amp; steering</div>
+        </div>
+
+        <div class="node">
+          <div class="node-top">
+            <span class="step-num">STEP 08</span>
+            <span class="badge">1 Pipeline + 3 Skill .md</span>
+          </div>
+          <div class="node-title">Image-to-React Skills Pipeline</div>
+          <div class="node-subtitle">Markdown-driven skills &amp; checkpoint outputs</div>
+          <div class="items-list">
+            <div>
+              <div class="item-label">1× Image-to-React Pipeline .md File</div>
+              <div class="item-detail">Master orchestration spec governing component translation &amp; evaluation</div>
+            </div>
+            <div>
+              <div class="item-label">3× Skill Definition &amp; Checkpoint .md Files</div>
+              <div class="item-detail">Each skill executes from its .md spec and emits a verifiable checkpoint .md artifact</div>
+            </div>
+          </div>
+          <div class="sub-boxes">
+            <div class="sub-box">
+              <div class="sub-box-title">Skill 01 (.md) — Clean Image-to-React Translation</div>
+              <ul>
+                <li>Direct structural &amp; visual translation from approved screen comps</li>
+              </ul>
+            </div>
+            <div class="sub-box">
+              <div class="sub-box-title">Skill 02 (.md) — Cleanup &amp; Eval Benchmarking</div>
+              <ul>
+                <li>Dual verification benchmarked by both Model and Human Reviewer</li>
+              </ul>
+            </div>
+            <div class="sub-box">
+              <div class="sub-box-title">Skill 03 (.md) — Viewport &amp; Performance QA</div>
+              <ul>
+                <li>Responsive feel across viewports, 60fps scrolling verification, scroll kits working</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="down-arrow">
+          <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+            <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
+            <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="node human">
+          <div class="node-top">
+            <span class="step-num">STEP 09</span>
+            <span class="badge">HUMAN GATE</span>
+          </div>
+          <div class="node-title">Human Checkpoint #2: Code Steering</div>
+          <div class="node-subtitle">Shareable Artifacts on Core Screens</div>
+          <div class="items-list">
+            <div>
+              <div class="item-label">Artifact Checkpoints</div>
+              <div class="item-detail">Each skill emits a verifiable, shareable artifact—critical on core pages before multiplying</div>
+            </div>
+            <div>
+              <div class="item-label">~3 Steering Moments (First 3–5 Pages)</div>
+              <div class="item-detail">First moment designer steers actual code before scaling across the rest of the site</div>
+            </div>
+          </div>
+          <div class="sub-boxes">
+            <div class="sub-box">
+              <div class="sub-box-title">Two Designer Steering Paths</div>
+              <ul>
+                <li>Path A (Correct Drift): Detect where code veered off and revert strictly back to comp</li>
+                <li>Path B (Capture Serendipity): Model does something cool halfway → "Stop, freeze worktree, analyze, &amp; go forward"</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Connector 4 -> 5 -->
+      <div class="right-connector">
+        <svg width="44" height="24" viewBox="0 0 44 24" fill="none">
+          <line x1="0" y1="12" x2="36" y2="12" stroke="#111111" stroke-width="1.5" />
+          <path d="M31 6.5L37.5 12L31 17.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+
+      <!-- PHASE 05 -->
+      <div class="column">
+        <div class="phase-header">
+          <div class="phase-num">PHASE 05</div>
+          <div class="phase-title">Packaging &amp; Golden Template</div>
+          <div class="phase-sub">Model-safe linting, bundle .md, &amp; final .zip</div>
+        </div>
+
+        <div class="node">
+          <div class="node-top">
+            <span class="step-num">STEP 10</span>
+            <span class="badge">1× bundle.md + .zip</span>
+          </div>
+          <div class="node-title">Linting &amp; Model-Safe Packaging Skill</div>
+          <div class="node-subtitle">Format verification &amp; single-bundle archive</div>
+          <div class="items-list">
+            <div>
+              <div class="item-label">1× Bundle Manifest &amp; Packaging .md File</div>
+              <div class="item-detail">Documents full model-safe structure, lint verification, and file inventory</div>
+            </div>
+            <div>
+              <div class="item-label">Lints &amp; Validates for Target Model Format</div>
+              <div class="item-detail">Ensures full compliance and safety across the entire codebase</div>
+            </div>
+          </div>
+          <div class="sub-boxes">
+            <div class="sub-box">
+              <div class="sub-box-title">Single Bundle (.zip) Contents</div>
+              <ul>
+                <li>Bundle Manifest .md file</li>
+                <li>All required website &amp; application pages</li>
+                <li>All .apx files</li>
+                <li>All JavaScript / TypeScript (.js / .ts) files</li>
+                <li>All application &amp; build configuration files</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="down-arrow">
+          <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+            <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
+            <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="node final">
+          <div class="node-top">
+            <span class="step-num">STEP 11</span>
+            <span class="badge">GOLDEN TEMPLATE</span>
+          </div>
+          <div class="node-title">React Golden Template</div>
+          <div class="node-subtitle">Final Production &amp; Model-Ready Output</div>
+          <div class="items-list">
+            <div>
+              <div class="item-label">Fully Steered, Benchmarked &amp; Packaged</div>
+              <div class="item-detail">Ready for model consumption, evaluation, or direct deployment at scale</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
