@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>3D Gummy Bear — WebGL2 Soft-Body &amp; HDR Volumetric Refraction</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+      color: #111111;
+      touch-action: none;
+    }
+
+    canvas {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      cursor: pointer;
+    }
+
+    /* Ultra-minimal floating HUD that can be toggled off for a 100% blank screen */
+    .hud {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(0, 0, 0, 0.075);
+      border-radius: 999px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.055);
+      z-index: 10;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      max-width: calc(100vw - 24px);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .hud::-webkit-scrollbar {
+      display: none;
+    }
+
+    body.clean-screen .hud,
+    body.clean-screen .hint {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(-50%) translateY(-8px);
+    }
+
+    .hud-group {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .divider {
+      width: 1px;
+      height: 18px;
+      background: rgba(0, 0, 0, 0.09);
+      margin: 0 4px;
+      flex-shrink: 0;
+    }
+
+    button {
+      appearance: none;
+      border: none;
+      background: transparent;
+      color: #555555;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      padding: 6px 11px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    button:hover {
+      color: #111111;
+      background: rgba(0, 0, 0, 0.045);
+    }
+
+    button.active {
+      background: #111111;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+    }
+
+    .swatches {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 0 4px;
+    }
+
+    .swatch {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      padding: 0;
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      flex-shrink: 0;
+    }
+
+    .swatch:hover {
+      transform: scale(1.15);
+    }
+
+    .swatch.active {
+      transform: scale(1.2);
+      box-shadow: 0 0 0 2px #111111;
+    }
+
+    .hint {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      font-weight: 450;
+      color: rgba(0, 0, 0, 0.42);
+      letter-spacing: -0.01em;
+      pointer-events: none;
+      z-index: 10;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 6px 14px;
+      border-radius: 999px;
+      white-space: nowrap;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .clean-toggle {
+      position: fixed;
+      bottom: 18px;
+      right: 20px;
+      z-index: 20;
+      font-size: 11px;
+      padding: 5px 10px;
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid rgba(0, 0, 0, 0.07);
+      border-radius: 999px;
+      color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+    }
+    .clean-toggle:hover {
+      color: #111;
+      background: rgba(255, 255, 255, 0.95);
+    }
+  </style>
+</head>
+<body>
+  <canvas id="glcanvas"></canvas>
+
+  <div class="hud" id="hud">
+    <div class="hud-group" id="mode-buttons" title="Interaction Tool">
+      <button class="active" data-tool="poke">Poke &amp; Squish</button>
+      <button class="active-alt" data-tool="stretch">Grab &amp; Stretch</button>
+      <button data-tool="sculpt">Malleable Sculpt</button>
+    </div>
+    <div class="divider"></div>
+    <div class="hud-group" id="material-buttons" title="Material Feel">
+      <button class="active" data-mat="gummy">Liquid Gummy</button>
+      <button data-mat="cushion">Soft Cushion</button>
+      <button data-mat="dough">Melting Gel</button>
+    </div>
+    <div class="divider"></div>
+    <div class="swatches" id="color-swatches" title="Flavor / Color">
+      <button class="swatch active" data-flavor="cherry" style="background: radial-gradient(circle at 35% 35%, #ff5e7e, #a8001d);" aria-label="Cherry Red"></button>
+      <button class="swatch" data-flavor="gold" style="background: radial-gradient(circle at 35% 35%, #ffe169, #d95f00);" aria-label="Golden Pineapple"></button>
+      <button class="swatch" data-flavor="apple" style="background: radial-gradient(circle at 35% 35%, #80ed99, #0b7a32);" aria-label="Green Apple"></button>
+      <button class="swatch" data-flavor="berry" style="background: radial-gradient(circle at 35% 35%, #60d6ff, #005bb5);" aria-label="Blue Raspberry"></button>
+      <button class="swatch" data-flavor="peach" style="background: radial-gradient(circle at 35% 35%, #ffb5a7, #d63864);" aria-label="Soft Peach Cushion"></button>
+    </div>
+    <div class="divider"></div>
+    <div class="hud-group">
+      <button id="btn-boop">Squish Drop</button>
+      <button id="btn-reset">Reform</button>
+    </div>
+  </div>
+
+  <div class="hint" id="hint">
+    Click &amp; drag on the bear to poke, squish, or stretch &middot; Double-click to boop &middot; Right-drag to rotate &middot; Scroll for zoom/size
+  </div>
+
+  <button class="clean-toggle" id="btn-clean" title="Toggle Blank Screen (H)">Blank Screen (H)</button>
+
+  <script>
+    /**
+     * 3D MALLEABLE LIQUID & CUSHIONY GUMMY BEAR (WebGL2 High-Res 3D Mesh + HDR Dual-Pass Refraction)
+     *
+     * Reverted to the 3D Deformable Mesh + Volumetric XPBD Soft-Body Physics architecture,
+     * upgraded with:
+     * 1. High-density 3D Surface Nets mesh extraction + 6-pass Taubin smoothing + exact SDF normal projection.
+     * 2. Dead-on visual centering at (0, 0, 0) at a compact, jewel-like scale in the center of the screen.
+     * 3. High-End HDR Studio Lighting & Dual-Surface Refractive Optics:
+     *    - Pass 1 (Back-Face FBO): Captures both world-space exit position AND packed back-face normal.
+     *    - Pass 2 (Front-Face HDR Shader):
+     *      - Physical GGX Microfacet Specular + Clearcoat + Anisotropic Studio Softbox Reflections
+     *      - Dual-interface refraction (bends at front normal AND back exit normal) with chromatic dispersion
+     *      - Internal back-wall specular glints (light reflecting off the inside back surface of the gummy bear)
+     *      - Beer-Lambert HDR spectral absorption + deep jewel-toned Fresnel edge contrast + ACES Filmic Tone Mapping.
+     */
+
+    const canvas = document.getElementById('glcanvas');
+    const gl = canvas.getContext('webgl2', {
+      alpha: false,
+      depth: true,
+      stencil: false,
+      antialias: true,
+      powerPreference: 'high-performance'
+    });
+
+    if (!gl) {
+      alert('WebGL2 is required for this 3D Gummy Bear simulation.');
+    }
+
+    gl.getExtension('EXT_color_buffer_float');
+    gl.getExtension('OES_texture_float_linear');
+
+    // ============================================================================
+    // 1. HDR MATERIAL & FLAVOR PRESETS
+    // ============================================================================
+    const FLAVORS = {
+      cherry: {
+        shallow: [1.00, 0.22, 0.34],
+        deep:    [0.32, 0.002, 0.03],
+        sss:     [1.00, 0.14, 0.24],
+        sigma:   [0.45, 3.80, 3.10]   // RGB Beer-Lambert extinction coefficients
+      },
+      gold: {
+        shallow: [1.00, 0.80, 0.16],
+        deep:    [0.45, 0.11, 0.00],
+        sss:     [1.00, 0.62, 0.06],
+        sigma:   [0.25, 1.15, 4.50]
+      },
+      apple: {
+        shallow: [0.30, 0.96, 0.42],
+        deep:    [0.005, 0.22, 0.04],
+        sss:     [0.24, 0.92, 0.28],
+        sigma:   [3.20, 0.38, 2.75]
+      },
+      berry: {
+        shallow: [0.22, 0.78, 1.00],
+        deep:    [0.004, 0.10, 0.42],
+        sss:     [0.14, 0.64, 1.00],
+        sigma:   [3.70, 1.05, 0.28]
+      },
+      peach: {
+        shallow: [1.00, 0.56, 0.54],
+        deep:    [0.42, 0.05, 0.14],
+        sss:     [1.00, 0.42, 0.44],
+        sigma:   [0.38, 2.15, 1.95]
+      }
+    };
+
+    const MATERIALS = {
+      gummy: {
+        damping: 0.965,
+        shapeStiffness: 0.068,
+        edgeStiffness: 0.78,
+        bendStiffness: 0.46,
+        strutStiffness: 0.58,
+        volumeStiffness: 0.90,
+        plasticRate: 0.0,
+        meltGravity: 0.0,
+        // HDR Shader optical params
+        roughness: 0.065,
+        clearcoat: 1.35,
+        absorption: 1.55,
+        sssStrength: 1.25,
+        causticStrength: 0.85,
+        sheen: 0.04
+      },
+      cushion: {
+        damping: 0.895,
+        shapeStiffness: 0.026,
+        edgeStiffness: 0.64,
+        bendStiffness: 0.38,
+        strutStiffness: 0.40,
+        volumeStiffness: 0.94,
+        plasticRate: 0.0,
+        meltGravity: 0.0,
+        // Soft plush subsurface cushion + satin-velvet rim
+        roughness: 0.28,
+        clearcoat: 0.25,
+        absorption: 2.15,
+        sssStrength: 1.65,
+        causticStrength: 0.22,
+        sheen: 0.92
+      },
+      dough: {
+        damping: 0.915,
+        shapeStiffness: 0.032,
+        edgeStiffness: 0.60,
+        bendStiffness: 0.32,
+        strutStiffness: 0.35,
+        volumeStiffness: 0.95,
+        plasticRate: 0.28,
+        meltGravity: 0.0010,
+        // Wet liquid candy glaze
+        roughness: 0.042,
+        clearcoat: 1.65,
+        absorption: 1.40,
+        sssStrength: 1.30,
+        causticStrength: 1.05,
+        sheen: 0.02
+      }
+    };
+
+    let currentTool = 'poke';
+    let currentMatKey = 'gummy';
+    let currentFlavorKey = 'cherry';
+
+    // ============================================================================
+    // 2. 3D GUMMY BEAR SIGNED DISTANCE FIELD (CENTERED AT 0, 0, 0)
+    // ============================================================================
+    function smin(a, b, k) {
+      const h = Math.max(k - Math.abs(a - b), 0.0) / k;
+      return Math.min(a, b) - h * h * h * k * (1.0 / 6.0);
+    }
+
+    function smax(a, b, k) {
+      return -smin(-a, -b, k);
+    }
+
+    function sdEllipsoid(x, y, z, cx, cy, cz, rx, ry, rz) {
+      const dx = (x - cx) / rx;
+      const dy = (y - cy) / ry;
+      const dz = (z - cz) / rz;
+      const k0 = Math.hypot(dx, dy, dz);
+      if (k0 < 1e-6) return -Math.min(rx, ry, rz);
+      const k1 = Math.hypot(dx / rx, dy / ry, dz / rz);
+      return k0 * (k0 - 1.0) / k1;
+    }
+
+    function sdCapsule(px, py, pz, ax, ay, az, bx, by, bz, r) {
+      const pax = px - ax, pay = py - ay, paz = pz - az;
+      const bax = bx - ax, bay = by - ay, baz = bz - az;
+      const dotBA = bax * bax + bay * bay + baz * baz;
+      const h = Math.max(0.0, Math.min(1.0, (pax * bax + pay * bay + paz * baz) / dotBA));
+      const dx = pax - bax * h;
+      const dy = pay - bay * h;
+      const dz = paz - baz * h;
+      return Math.hypot(dx, dy, dz) - r;
+    }
+
+    /**
+     * Evaluates the 3D Signed Distance Field of a classic Haribo-style Gummy Bear.
+     * Vertically shifted by -0.10 so the geometric center of mass is dead-on (0, 0, 0).
+     */
+    function gummyBearSDF(x, y0, z) {
+      const y = y0 + 0.10; // Center vertical bounds [-1.28, +1.30] around y0 = 0.0
+      const ax = Math.abs(x);
+
+      // 1. Torso / Chubby Belly
+      const bellyWiden = 1.0 - 0.14 * (y + 0.25);
+      let dTorso = sdEllipsoid(x, y, z, 0.0, -0.32, 0.0, 0.68 * bellyWiden, 0.78, 0.54 * bellyWiden);
+
+      const dTummy = sdEllipsoid(x, y, z, 0.0, -0.40, 0.16, 0.52, 0.56, 0.44);
+      dTorso = smin(dTorso, dTummy, 0.22);
+
+      // Molded V-collar & horizontal tummy ripples
+      if (z > 0.15 && y > -0.75 && y < 0.22 && ax < 0.52) {
+        const chestCurve = y + 0.18 * ax * ax;
+        const ripple = Math.sin(chestCurve * 22.0) * 0.014 * Math.max(0, (z - 0.15)) * (1.0 - ax / 0.52);
+        dTorso -= ripple;
+      }
+
+      // 2. Head & Chubby Cheeks
+      const dHead = sdEllipsoid(x, y, z, 0.0, 0.68, 0.03, 0.62, 0.55, 0.52);
+      const dCheeks = sdEllipsoid(ax, y, z, 0.26, 0.56, 0.14, 0.38, 0.32, 0.36);
+      let dBody = smin(dTorso, smin(dHead, dCheeks, 0.18), 0.20);
+
+      // 3. Cute Snout / Muzzle + Nose Button
+      const dSnout = sdEllipsoid(x, y, z, 0.0, 0.55, 0.44, 0.27, 0.21, 0.24);
+      dBody = smin(dBody, dSnout, 0.14);
+
+      const dNose = sdEllipsoid(x, y, z, 0.0, 0.63, 0.63, 0.11, 0.08, 0.08);
+      dBody = smin(dBody, dNose, 0.06);
+
+      // Subtle smile groove under snout
+      const dSmile = sdEllipsoid(x, y, z, 0.0, 0.42, 0.58, 0.14, 0.04, 0.06);
+      dBody = smax(dBody, -dSmile * 0.5, 0.03);
+
+      // Recessed eye sockets + glossy gummy eye beads
+      const dEyeSocket = sdEllipsoid(ax, y, z, 0.23, 0.76, 0.44, 0.10, 0.10, 0.08);
+      dBody = smax(dBody, -dEyeSocket, 0.04);
+      const dEyeBead = sdEllipsoid(ax, y, z, 0.23, 0.76, 0.47, 0.075, 0.075, 0.06);
+      dBody = smin(dBody, dEyeBead, 0.035);
+
+      // 4. Cupped Gummy Bear Ears
+      const dEarOuter = sdEllipsoid(ax, y, z, 0.46, 1.15, -0.02, 0.24, 0.25, 0.18);
+      const dEarCup   = sdEllipsoid(ax, y, z, 0.46, 1.15, 0.11, 0.13, 0.14, 0.11);
+      const dEar = smax(dEarOuter, -dEarCup, 0.05);
+      dBody = smin(dBody, dEar, 0.12);
+
+      // 5. Stubby Forward-Reaching Upper Arms / Paws
+      const dArm = sdCapsule(ax, y, z, 0.54, 0.02, 0.04, 0.62, -0.18, 0.44, 0.22);
+      const dPawUpper = sdEllipsoid(ax, y, z, 0.60, -0.20, 0.48, 0.23, 0.20, 0.22);
+      dBody = smin(dBody, smin(dArm, dPawUpper, 0.12), 0.16);
+
+      // 6. Seated Stubby Lower Legs / Feet
+      const dLeg = sdCapsule(ax, y, z, 0.42, -0.82, 0.06, 0.46, -0.94, 0.48, 0.25);
+      const dFoot = sdEllipsoid(ax, y, z, 0.46, -0.92, 0.56, 0.26, 0.24, 0.24);
+      dBody = smin(dBody, smin(dLeg, dFoot, 0.12), 0.18);
+
+      // Smooth seated base
+      const dBaseClip = -(y + 1.18);
+      dBody = smax(dBody, dBaseClip, 0.08);
+
+      return dBody;
+    }
+
+    // ============================================================================
+    // 3. HIGH-RESOLUTION SURFACE NETS MESH EXTRACTION + TAUBIN SMOOTHING
+    // ============================================================================
+    function buildGummyBearMesh() {
+      // High-density grid for ultra-smooth 3D mesh silhouettes & specular reflections
+      const nx = 58, ny = 74, nz = 54;
+      const minX = -1.05, maxX = 1.05;
+      const minY = -1.36, maxY = 1.42;
+      const minZ = -0.78, maxZ = 0.92;
+
+      const dx = (maxX - minX) / (nx - 1);
+      const dy = (maxY - minY) / (ny - 1);
+      const dz = (maxZ - minZ) / (nz - 1);
+
+      const sdf = new Float32Array(nx * ny * nz);
+      const idx = (ix, iy, iz) => ix + nx * (iy + ny * iz);
+
+      for (let iz = 0; iz < nz; iz++) {
+        const z = minZ + iz * dz;
+        for (let iy = 0; iy < ny; iy++) {
+          const y = minY + iy * dy;
+          for (let ix = 0; ix < nx; ix++) {
+            const x = minX + ix * dx;
+            sdf[idx(ix, iy, iz)] = gummyBearSDF(x, y, z);
+          }
+        }
+      }
+
+      const cellToVert = new Int32Array((nx - 1) * (ny - 1) * (nz - 1)).fill(-1);
+      const cellIdx = (ix, iy, iz) => ix + (nx - 1) * (iy + (ny - 1) * iz);
+
+      const verts = [];
+      const cornerOffsets = [
+        [0,0,0], [1,0,0], [0,1,0], [1,1,0],
+        [0,0,1], [1,0,1], [0,1,1], [1,1,1]
+      ];
+      const cellEdges = [
+        [0,1], [2,3], [4,5], [6,7],
+        [0,2], [1,3], [4,6], [5,7],
+        [0,4], [1,5], [2,6], [3,7]
+      ];
+
+      for (let iz = 0; iz < nz - 1; iz++) {
+        for (let iy = 0; iy < ny - 1; iy++) {
+          for (let ix = 0; ix < nx - 1; ix++) {
+            let mask = 0;
+            const vals = new Float32Array(8);
+            for (let c = 0; c < 8; c++) {
+              const o = cornerOffsets[c];
+              const v = sdf[idx(ix + o[0], iy + o[1], iz + o[2])];
+              vals[c] = v;
+              if (v < 0.0) mask |= (1 << c);
+            }
+            if (mask === 0 || mask === 255) continue;
+
+            let sx = 0, sy = 0, sz = 0, count = 0;
+            for (let e = 0; e < 12; e++) {
+              const c0 = cellEdges[e][0];
+              const c1 = cellEdges[e][1];
+              const v0 = vals[c0];
+              const v1 = vals[c1];
+              if ((v0 < 0) !== (v1 < 0)) {
+                const t = v0 / (v0 - v1);
+                const o0 = cornerOffsets[c0];
+                const o1 = cornerOffsets[c1];
+                sx += minX + (ix + o0[0] + t * (o1[0] - o0[0])) * dx;
+                sy += minY + (iy + o0[1] + t * (o1[1] - o0[1])) * dy;
+                sz += minZ + (iz + o0[2] + t * (o1[2] - o0[2])) * dz;
+                count++;
+              }
+            }
+
+            const vIndex = verts.length / 3;
+            cellToVert[cellIdx(ix, iy, iz)] = vIndex;
+            verts.push(sx / count, sy / count, sz / count);
+          }
+        }
+      }
+
+      const indices = [];
+      function emitQuad(v0, v1, v2, v3, flip) {
+        if (v0 < 0 || v1 < 0 || v2 < 0 || v3 < 0) return;
+        if (flip) {
+          indices.push(v0, v1, v2, v0, v2, v3);
+        } else {
+          indices.push(v0, v2, v1, v0, v3, v2);
+        }
+      }
+
+      for (let iz = 1; iz < nz - 1; iz++) {
+        for (let iy = 1; iy < ny - 1; iy++) {
+          for (let ix = 1; ix < nx - 1; ix++) {
+            const s0 = sdf[idx(ix, iy, iz)];
+
+            const sx1 = sdf[idx(ix + 1, iy, iz)];
+            if ((s0 < 0) !== (sx1 < 0)) {
+              const c0 = cellToVert[cellIdx(ix, iy - 1, iz - 1)];
+              const c1 = cellToVert[cellIdx(ix, iy,     iz - 1)];
+              const c2 = cellToVert[cellIdx(ix, iy,     iz)];
+              const c3 = cellToVert[cellIdx(ix, iy - 1, iz)];
+              emitQuad(c0, c1, c2, c3, s0 < 0);
+            }
+
+            const sy1 = sdf[idx(ix, iy + 1, iz)];
+            if ((s0 < 0) !== (sy1 < 0)) {
+              const c0 = cellToVert[cellIdx(ix - 1, iy, iz - 1)];
+              const c1 = cellToVert[cellIdx(ix - 1, iy, iz)];
+              const c2 = cellToVert[cellIdx(ix,     iy, iz)];
+              const c3 = cellToVert[cellIdx(ix,     iy, iz - 1)];
+              emitQuad(c0, c1, c2, c3, s0 < 0);
+            }
+
+            const sz1 = sdf[idx(ix, iy, iz + 1)];
+            if ((s0 < 0) !== (sz1 < 0)) {
+              const c0 = cellToVert[cellIdx(ix - 1, iy - 1, iz)];
+              const c1 = cellToVert[cellIdx(ix,     iy - 1, iz)];
+              const c2 = cellToVert[cellIdx(ix,     iy,     iz)];
+              const c3 = cellToVert[cellIdx(ix - 1, iy,     iz)];
+              emitQuad(c0, c1, c2, c3, s0 < 0);
+            }
+          }
+        }
+      }
+
+      const numVerts = verts.length / 3;
+      const pos = new Float32Array(verts);
+      const triIndices = new Uint32Array(indices);
+
+      const adjSet = Array.from({ length: numVerts }, () => new Set());
+      for (let i = 0; i < triIndices.length; i += 3) {
+        const a = triIndices[i], b = triIndices[i + 1], c = triIndices[i + 2];
+        adjSet[a].add(b); adjSet[a].add(c);
+        adjSet[b].add(a); adjSet[b].add(c);
+        adjSet[c].add(a); adjSet[c].add(b);
+      }
+
+      const adjOffsets = new Int32Array(numVerts + 1);
+      let totalNeighbors = 0;
+      for (let i = 0; i < numVerts; i++) {
+        adjOffsets[i] = totalNeighbors;
+        totalNeighbors += adjSet[i].size;
+      }
+      adjOffsets[numVerts] = totalNeighbors;
+      const adjIndices = new Int32Array(totalNeighbors);
+      let cursor = 0;
+      for (let i = 0; i < numVerts; i++) {
+        for (const nb of adjSet[i]) {
+          adjIndices[cursor++] = nb;
+        }
+      }
+
+      const tempPos = new Float32Array(pos.length);
+      function laplacianPass(weight) {
+        for (let i = 0; i < numVerts; i++) {
+          const start = adjOffsets[i], end = adjOffsets[i + 1];
+          const count = end - start;
+          if (count === 0) continue;
+          let ax = 0, ay = 0, az = 0;
+          for (let k = start; k < end; k++) {
+            const nb = adjIndices[k] * 3;
+            ax += pos[nb];
+            ay += pos[nb + 1];
+            az += pos[nb + 2];
+          }
+          const i3 = i * 3;
+          tempPos[i3]     = pos[i3]     + weight * (ax / count - pos[i3]);
+          tempPos[i3 + 1] = pos[i3 + 1] + weight * (ay / count - pos[i3 + 1]);
+          tempPos[i3 + 2] = pos[i3 + 2] + weight * (az / count - pos[i3 + 2]);
+        }
+        pos.set(tempPos);
+      }
+
+      for (let iter = 0; iter < 6; iter++) {
+        laplacianPass(0.48);
+        laplacianPass(-0.50);
+      }
+
+      // Project vertices onto exact SDF zero-surface twice for ultra-clean curvature
+      const eps = 0.004;
+      for (let pass = 0; pass < 2; pass++) {
+        for (let i = 0; i < numVerts; i++) {
+          const i3 = i * 3;
+          const x = pos[i3], y = pos[i3 + 1], z = pos[i3 + 2];
+          const d = gummyBearSDF(x, y, z);
+          const gx = (gummyBearSDF(x + eps, y, z) - gummyBearSDF(x - eps, y, z)) / (2 * eps);
+          const gy = (gummyBearSDF(x, y + eps, z) - gummyBearSDF(x, y - eps, z)) / (2 * eps);
+          const gz = (gummyBearSDF(x, y, z + eps) - gummyBearSDF(x, y, z - eps)) / (2 * eps);
+          const glen = Math.hypot(gx, gy, gz) || 1.0;
+          pos[i3]     -= (gx / glen) * d * 0.75;
+          pos[i3 + 1] -= (gy / glen) * d * 0.75;
+          pos[i3 + 2] -= (gz / glen) * d * 0.75;
+        }
+        laplacianPass(0.30);
+        laplacianPass(-0.31);
+      }
+
+      return { numVerts, pos, triIndices, adjOffsets, adjIndices };
+    }
+
+    const mesh = buildGummyBearMesh();
+    const numVerts = mesh.numVerts;
+    const triIndices = mesh.triIndices;
+    const adjOffsets = mesh.adjOffsets;
+    const adjIndices = mesh.adjIndices;
+
+    // ============================================================================
+    // 4. VOLUMETRIC SOFT-BODY XPBD PHYSICS ENGINE
+    // ============================================================================
+    const px = new Float32Array(numVerts);
+    const py = new Float32Array(numVerts);
+    const pz = new Float32Array(numVerts);
+
+    const prevX = new Float32Array(numVerts);
+    const prevY = new Float32Array(numVerts);
+    const prevZ = new Float32Array(numVerts);
+
+    const origX = new Float32Array(numVerts);
+    const origY = new Float32Array(numVerts);
+    const origZ = new Float32Array(numVerts);
+
+    const restX = new Float32Array(numVerts);
+    const restY = new Float32Array(numVerts);
+    const restZ = new Float32Array(numVerts);
+
+    const nxArr = new Float32Array(numVerts);
+    const nyArr = new Float32Array(numVerts);
+    const nzArr = new Float32Array(numVerts);
+    const rawNx = new Float32Array(numVerts);
+    const rawNy = new Float32Array(numVerts);
+    const rawNz = new Float32Array(numVerts);
+
+    const strainArr = new Float32Array(numVerts);
+
+    for (let i = 0; i < numVerts; i++) {
+      const i3 = i * 3;
+      px[i] = prevX[i] = origX[i] = restX[i] = mesh.pos[i3];
+      py[i] = prevY[i] = origY[i] = restY[i] = mesh.pos[i3 + 1];
+      pz[i] = prevZ[i] = origZ[i] = restZ[i] = mesh.pos[i3 + 2];
+    }
+
+    // Compute smooth area-weighted vertex normals + 1-ring normal filtering for glass-smooth HDR speculars
+    function computeNormals() {
+      rawNx.fill(0);
+      rawNy.fill(0);
+      rawNz.fill(0);
+
+      for (let i = 0; i < triIndices.length; i += 3) {
+        const a = triIndices[i], b = triIndices[i + 1], c = triIndices[i + 2];
+        const abx = px[b] - px[a], aby = py[b] - py[a], abz = pz[b] - pz[a];
+        const acx = px[c] - px[a], acy = py[c] - py[a], acz = pz[c] - pz[a];
+        const fnx = aby * acz - abz * acy;
+        const fny = abz * acx - abx * acz;
+        const fnz = abx * acy - aby * acx;
+        rawNx[a] += fnx; rawNy[a] += fny; rawNz[a] += fnz;
+        rawNx[b] += fnx; rawNy[b] += fny; rawNz[b] += fnz;
+        rawNx[c] += fnx; rawNy[c] += fny; rawNz[c] += fnz;
+      }
+
+      // 1-ring normal smoothing eliminates any micro-facet shimmer on high-contrast HDR highlights
+      for (let i = 0; i < numVerts; i++) {
+        let sx = rawNx[i] * 2.0, sy = rawNy[i] * 2.0, sz = rawNz[i] * 2.0;
+        const start = adjOffsets[i], end = adjOffsets[i + 1];
+        for (let k = start; k < end; k++) {
+          const nb = adjIndices[k];
+          sx += rawNx[nb];
+          sy += rawNy[nb];
+          sz += rawNz[nb];
+        }
+        const len = Math.hypot(sx, sy, sz) || 1.0;
+        nxArr[i] = sx / len;
+        nyArr[i] = sy / len;
+        nzArr[i] = sz / len;
+      }
+    }
+    computeNormals();
+
+    function isNeighbor(u, v) {
+      const s = adjOffsets[u], e = adjOffsets[u + 1];
+      for (let k = s; k < e; k++) {
+        if (adjIndices[k] === v) return true;
+      }
+      return false;
+    }
+
+    const edgeA = [];
+    const edgeB = [];
+    const bendA = [];
+    const bendB = [];
+
+    for (let i = 0; i < numVerts; i++) {
+      const start = adjOffsets[i], end = adjOffsets[i + 1];
+      for (let k = start; k < end; k++) {
+        const j = adjIndices[k];
+        if (i < j) {
+          edgeA.push(i);
+          edgeB.push(j);
+        }
+        const jStart = adjOffsets[j], jEnd = adjOffsets[j + 1];
+        for (let m = jStart; m < jEnd; m++) {
+          const w = adjIndices[m];
+          if (i < w && !isNeighbor(i, w)) {
+            bendA.push(i);
+            bendB.push(w);
+          }
+        }
+      }
+    }
+
+    const bendPairs = new Set();
+    const cleanBendA = [];
+    const cleanBendB = [];
+    for (let i = 0; i < bendA.length; i++) {
+      const key = bendA[i] * numVerts + bendB[i];
+      if (!bendPairs.has(key)) {
+        bendPairs.add(key);
+        cleanBendA.push(bendA[i]);
+        cleanBendB.push(bendB[i]);
+      }
+    }
+
+    // Internal Volumetric Cross-Struts through the bear's interior
+    const strutA = [];
+    const strutB = [];
+    for (let i = 0; i < numVerts; i += 3) {
+      const ix = origX[i], iy = origY[i], iz = origZ[i];
+      const inx = -nxArr[i], iny = -nyArr[i], inz = -nzArr[i];
+      let bestJ = -1;
+      let bestScore = 1e9;
+
+      for (let j = (i + 1) % 4; j < numVerts; j += 4) {
+        if (j === i) continue;
+        const dx = origX[j] - ix, dy = origY[j] - iy, dz = origZ[j] - iz;
+        const dist = Math.hypot(dx, dy, dz);
+        if (dist < 0.25 || dist > 1.35) continue;
+        const align = (dx * inx + dy * iny + dz * inz) / dist;
+        if (align > 0.82) {
+          const score = dist + (1.0 - align) * 2.0;
+          if (score < bestScore) {
+            bestScore = score;
+            bestJ = j;
+          }
+        }
+      }
+      if (bestJ >= 0) {
+        strutA.push(i);
+        strutB.push(bestJ);
+      }
+    }
+
+    const numEdges = edgeA.length;
+    const edgeIdxA = new Int32Array(edgeA);
+    const edgeIdxB = new Int32Array(edgeB);
+    const edgeRestLen = new Float32Array(numEdges);
+
+    const numBends = cleanBendA.length;
+    const bendIdxA = new Int32Array(cleanBendA);
+    const bendIdxB = new Int32Array(cleanBendB);
+    const bendRestLen = new Float32Array(numBends);
+
+    const numStruts = strutA.length;
+    const strutIdxA = new Int32Array(strutA);
+    const strutIdxB = new Int32Array(strutB);
+    const strutRestLen = new Float32Array(numStruts);
+
+    function updateSpringRestLengths() {
+      for (let i = 0; i < numEdges; i++) {
+        const a = edgeIdxA[i], b = edgeIdxB[i];
+        edgeRestLen[i] = Math.hypot(restX[b] - restX[a], restY[b] - restY[a], restZ[b] - restZ[a]);
+      }
+      for (let i = 0; i < numBends; i++) {
+        const a = bendIdxA[i], b = bendIdxB[i];
+        bendRestLen[i] = Math.hypot(restX[b] - restX[a], restY[b] - restY[a], restZ[b] - restZ[a]);
+      }
+      for (let i = 0; i < numStruts; i++) {
+        const a = strutIdxA[i], b = strutIdxB[i];
+        strutRestLen[i] = Math.hypot(restX[b] - restX[a], restY[b] - restY[a], restZ[b] - restZ[a]);
+      }
+    }
+    updateSpringRestLengths();
+
+    function computeMeshVolume(xArr, yArr, zArr) {
+      let vol6 = 0.0;
+      for (let i = 0; i < triIndices.length; i += 3) {
+        const a = triIndices[i], b = triIndices[i + 1], c = triIndices[i + 2];
+        const ax = xArr[a], ay = yArr[a], az = zArr[a];
+        const bx = xArr[b], by = yArr[b], bz = zArr[b];
+        const cx = xArr[c], cy = yArr[c], cz = zArr[c];
+        vol6 += ax * (by * cz - bz * cy) + ay * (bz * cx - bx * cz) + az * (bx * cy - by * cx);
+      }
+      return Math.abs(vol6) / 6.0;
+    }
+
+    const restVolume = computeMeshVolume(origX, origY, origZ);
+
+    // ============================================================================
+    // 5. CENTERED CAMERA & SMALL JEWEL-LIKE FRAMING
+    // ============================================================================
+    const camera = {
+      yaw: 0.0,            // Dead-on centered
+      pitch: 0.08,         // Subtle natural studio elevation
+      targetYaw: 0.0,
+      targetPitch: 0.08,
+      distance: 6.8,       // Framed small, crisp & jewel-like in the center of the blank screen
+      targetDistance: 6.8,
+      fovY: 32 * Math.PI / 180,
+      eye: [0, 0, 6.8],
+      right: [1, 0, 0],
+      up: [0, 1, 0],
+      forward: [0, 0, -1]
+    };
+
+    function updateCameraBasis() {
+      camera.yaw += (camera.targetYaw - camera.yaw) * 0.16;
+      camera.pitch += (camera.targetPitch - camera.pitch) * 0.16;
+      camera.distance += (camera.targetDistance - camera.distance) * 0.16;
+
+      const cp = Math.cos(camera.pitch), sp = Math.sin(camera.pitch);
+      const cy = Math.cos(camera.yaw),   sy = Math.sin(camera.yaw);
+
+      const ex = camera.distance * cp * sy;
+      const ey = camera.distance * sp;
+      const ez = camera.distance * cp * cy;
+      camera.eye[0] = ex; camera.eye[1] = ey; camera.eye[2] = ez;
+
+      // Look straight at exact origin (0, 0, 0)
+      let fx = -ex, fy = -ey, fz = -ez;
+      const flen = Math.hypot(fx, fy, fz) || 1;
+      fx /= flen; fy /= flen; fz /= flen;
+      camera.forward[0] = fx; camera.forward[1] = fy; camera.forward[2] = fz;
+
+      let rx = -fz, ry = 0, rz = fx;
+      const rlen = Math.hypot(rx, ry, rz) || 1;
+      rx /= rlen; rz /= rlen;
+      camera.right[0] = rx; camera.right[1] = ry; camera.right[2] = rz;
+
+      camera.up[0] = ry * fz - rz * fy;
+      camera.up[1] = rz * fx - rx * fz;
+      camera.up[2] = rx * fy - ry * fx;
+    }
+    updateCameraBasis();
+
+    const pointer = {
+      down: false,
+      orbiting: false,
+      button: 0,
+      clientX: 0,
+      clientY: 0,
+      prevClientX: 0,
+      prevClientY: 0,
+      rayOrigin: [0, 0, 6.8],
+      rayDir: [0, 0, -1],
+      hoverHit: false,
+      hitPoint: [0, 0, 0],
+      hitNormal: [0, 0, 1],
+      activeHit: false,
+      grabCenter: [0, 0, 0],
+      grabTarget: [0, 0, 0],
+      grabNormal: [0, 0, 1],
+      grabPlaneDist: 6.5,
+      pokeDepth: 0.0,
+      radius: 0.52,
+      weights: new Float32Array(numVerts)
+    };
+
+    function updatePointerRay(clientX, clientY) {
+      const rect = canvas.getBoundingClientRect();
+      const ndcX = ((clientX - rect.left) / rect.width) * 2.0 - 1.0;
+      const ndcY = 1.0 - ((clientY - rect.top) / rect.height) * 2.0;
+      const aspect = rect.width / Math.max(1, rect.height);
+      const tanHalfFov = Math.tan(camera.fovY * 0.5);
+
+      const sx = ndcX * aspect * tanHalfFov;
+      const sy = ndcY * tanHalfFov;
+
+      let dx = camera.forward[0] + sx * camera.right[0] + sy * camera.up[0];
+      let dy = camera.forward[1] + sx * camera.right[1] + sy * camera.up[1];
+      let dz = camera.forward[2] + sx * camera.right[2] + sy * camera.up[2];
+      const len = Math.hypot(dx, dy, dz) || 1.0;
+
+      pointer.rayOrigin[0] = camera.eye[0];
+      pointer.rayOrigin[1] = camera.eye[1];
+      pointer.rayOrigin[2] = camera.eye[2];
+      pointer.rayDir[0] = dx / len;
+      pointer.rayDir[1] = dy / len;
+      pointer.rayDir[2] = dz / len;
+    }
+
+    function raycastBear(ro, rd) {
+      let bestT = 1e9;
+      let hitTri = -1;
+      let hitU = 0, hitV = 0;
+
+      const ox = ro[0], oy = ro[1], oz = ro[2];
+      const dx = rd[0], dy = rd[1], dz = rd[2];
+
+      for (let i = 0; i < triIndices.length; i += 3) {
+        const a = triIndices[i], b = triIndices[i + 1], c = triIndices[i + 2];
+        const ax = px[a], ay = py[a], az = pz[a];
+        const e1x = px[b] - ax, e1y = py[b] - ay, e1z = pz[b] - az;
+        const e2x = px[c] - ax, e2y = py[c] - ay, e2z = pz[c] - az;
+
+        const hx = dy * e2z - dz * e2y;
+        const hy = dz * e2x - dx * e2z;
+        const hz = dx * e2y - dy * e2x;
+        const det = e1x * hx + e1y * hy + e1z * hz;
+        if (det > -1e-6 && det < 1e-6) continue;
+
+        const invDet = 1.0 / det;
+        const sx = ox - ax, sy = oy - ay, sz = oz - az;
+        const u = invDet * (sx * hx + sy * hy + sz * hz);
+        if (u < 0.0 || u > 1.0) continue;
+
+        const qx = sy * e1z - sz * e1y;
+        const qy = sz * e1x - sx * e1z;
+        const qz = sx * e1y - sy * e1x;
+        const v = invDet * (dx * qx + dy * qy + dz * qz);
+        if (v < 0.0 || u + v > 1.0) continue;
+
+        const t = invDet * (e2x * qx + e2y * qy + e2z * qz);
+        if (t > 0.1 && t < bestT) {
+          bestT = t;
+          hitTri = i;
+          hitU = u;
+          hitV = v;
+        }
+      }
+
+      if (hitTri < 0) return null;
+
+      const a = triIndices[hitTri], b = triIndices[hitTri + 1], c = triIndices[hitTri + 2];
+      const w = 1.0 - hitU - hitV;
+      let nx = w * nxArr[a] + hitU * nxArr[b] + hitV * nxArr[c];
+      let ny = w * nyArr[a] + hitU * nyArr[b] + hitV * nyArr[c];
+      let nz = w * nzArr[a] + hitU * nyArr[b] + hitV * nzArr[c];
+      const nlen = Math.hypot(nx, ny, nz) || 1.0;
+      nx /= nlen; ny /= nlen; nz /= nlen;
+
+      return {
+        t: bestT,
+        point: [ox + dx * bestT, oy + dy * bestT, oz + dz * bestT],
+        normal: [nx, ny, nz]
+      };
+    }
+
+    function captureGrabWeights(center, radius) {
+      const cx = center[0], cy = center[1], cz = center[2];
+      const r = radius * (currentTool === 'stretch' ? 1.25 : 1.05);
+      for (let i = 0; i < numVerts; i++) {
+        const d = Math.hypot(px[i] - cx, py[i] - cy, pz[i] - cz);
+        if (d < r) {
+          const u = 1.0 - d / r;
+          pointer.weights[i] = u * u * (3.0 - 2.0 * u);
+        } else {
+          pointer.weights[i] = 0.0;
+        }
+      }
+    }
+
+    window.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    window.addEventListener('pointerdown', (e) => {
+      if (e.target.closest('.hud') || e.target.closest('.clean-toggle')) return;
+
+      pointer.down = true;
+      pointer.button = e.button;
+      pointer.clientX = pointer.prevClientX = e.clientX;
+      pointer.clientY = pointer.prevClientY = e.clientY;
+
+      updatePointerRay(e.clientX, e.clientY);
+
+      if (e.button === 2 || e.shiftKey || e.altKey) {
+        pointer.orbiting = true;
+        pointer.activeHit = false;
+        return;
+      }
+
+      const hit = raycastBear(pointer.rayOrigin, pointer.rayDir);
+      if (hit) {
+        pointer.orbiting = false;
+        pointer.activeHit = true;
+        pointer.hitPoint = hit.point.slice();
+        pointer.hitNormal = hit.normal.slice();
+        pointer.grabCenter = hit.point.slice();
+        pointer.grabTarget = hit.point.slice();
+        pointer.grabNormal = hit.normal.slice();
+        pointer.grabPlaneDist = hit.t;
+        pointer.pokeDepth = 0.0;
+        captureGrabWeights(hit.point, pointer.radius);
+      } else {
+        pointer.orbiting = true;
+        pointer.activeHit = false;
+      }
+    });
+
+    window.addEventListener('pointermove', (e) => {
+      const dx = e.clientX - pointer.prevClientX;
+      const dy = e.clientY - pointer.prevClientY;
+      pointer.prevClientX = e.clientX;
+      pointer.prevClientY = e.clientY;
+      pointer.clientX = e.clientX;
+      pointer.clientY = e.clientY;
+
+      updatePointerRay(e.clientX, e.clientY);
+
+      if (pointer.down && pointer.orbiting) {
+        camera.targetYaw -= dx * 0.0075;
+        camera.targetPitch = Math.max(-0.95, Math.min(1.05, camera.targetPitch + dy * 0.0075));
+        return;
+      }
+
+      const hit = raycastBear(pointer.rayOrigin, pointer.rayDir);
+      if (hit) {
+        pointer.hoverHit = true;
+        pointer.hitPoint = hit.point;
+        pointer.hitNormal = hit.normal;
+      } else {
+        pointer.hoverHit = false;
+      }
+
+      if (pointer.down && pointer.activeHit) {
+        if (currentTool === 'poke') {
+          if (hit) {
+            pointer.grabCenter[0] += (hit.point[0] - pointer.grabCenter[0]) * 0.45;
+            pointer.grabCenter[1] += (hit.point[1] - pointer.grabCenter[1]) * 0.45;
+            pointer.grabCenter[2] += (hit.point[2] - pointer.grabCenter[2]) * 0.45;
+            pointer.grabNormal[0] += (hit.normal[0] - pointer.grabNormal[0]) * 0.35;
+            pointer.grabNormal[1] += (hit.normal[1] - pointer.grabNormal[1]) * 0.35;
+            pointer.grabNormal[2] += (hit.normal[2] - pointer.grabNormal[2]) * 0.35;
+          } else {
+            const t = pointer.grabPlaneDist;
+            pointer.grabCenter[0] = pointer.rayOrigin[0] + pointer.rayDir[0] * t;
+            pointer.grabCenter[1] = pointer.rayOrigin[1] + pointer.rayDir[1] * t;
+            pointer.grabCenter[2] = pointer.rayOrigin[2] + pointer.rayDir[2] * t;
+          }
+        } else {
+          const t = pointer.grabPlaneDist;
+          pointer.grabTarget[0] = pointer.rayOrigin[0] + pointer.rayDir[0] * t;
+          pointer.grabTarget[1] = pointer.rayOrigin[1] + pointer.rayDir[1] * t;
+          pointer.grabTarget[2] = pointer.rayOrigin[2] + pointer.rayDir[2] * t;
+        }
+      }
+    });
+
+    window.addEventListener('pointerup', () => {
+      pointer.down = false;
+      pointer.orbiting = false;
+      pointer.activeHit = false;
+    });
+
+    window.addEventListener('dblclick', (e) => {
+      if (e.target.closest('.hud') || e.target.closest('.clean-toggle')) return;
+      updatePointerRay(e.clientX, e.clientY);
+      const hit = raycastBear(pointer.rayOrigin, pointer.rayDir);
+      if (hit) {
+        const cx = hit.point[0], cy = hit.point[1], cz = hit.point[2];
+        const nx = hit.normal[0], ny = hit.normal[1], nz = hit.normal[2];
+        const r = pointer.radius * 1.35;
+        for (let i = 0; i < numVerts; i++) {
+          const d = Math.hypot(px[i] - cx, py[i] - cy, pz[i] - cz);
+          if (d < r) {
+            const u = 1.0 - d / r;
+            const impulse = 0.28 * u * u;
+            px[i] -= nx * impulse;
+            py[i] -= ny * impulse;
+            pz[i] -= nz * impulse;
+            if (currentMatKey === 'dough' || currentTool === 'sculpt') {
+              restX[i] -= nx * impulse * 0.65;
+              restY[i] -= ny * impulse * 0.65;
+              restZ[i] -= nz * impulse * 0.65;
+            }
+          }
+        }
+        if (currentMatKey === 'dough' || currentTool === 'sculpt') {
+          smoothRestShape(0.25);
+          updateSpringRestLengths();
+        }
+      }
+    });
+
+    window.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      if (pointer.hoverHit) {
+        pointer.radius = Math.max(0.26, Math.min(1.0, pointer.radius - e.deltaY * 0.0006));
+      } else {
+        camera.targetDistance = Math.max(3.8, Math.min(11.0, camera.targetDistance + e.deltaY * 0.004));
+      }
+    }, { passive: false });
+
+    const tempRest = new Float32Array(numVerts * 3);
+    function smoothRestShape(strength) {
+      for (let i = 0; i < numVerts; i++) {
+        const s = adjOffsets[i], e = adjOffsets[i + 1];
+        const count = e - s;
+        if (count === 0) continue;
+        let ax = 0, ay = 0, az = 0;
+        for (let k = s; k < e; k++) {
+          const nb = adjIndices[k];
+          ax += restX[nb];
+          ay += restY[nb];
+          az += restZ[nb];
+        }
+        const i3 = i * 3;
+        tempRest[i3]     = restX[i] + strength * (ax / count - restX[i]);
+        tempRest[i3 + 1] = restY[i] + strength * (ay / count - restY[i]);
+        tempRest[i3 + 2] = restZ[i] + strength * (az / count - restZ[i]);
+      }
+      for (let i = 0; i < numVerts; i++) {
+        const i3 = i * 3;
+        restX[i] = tempRest[i3];
+        restY[i] = tempRest[i3 + 1];
+        restZ[i] = tempRest[i3 + 2];
+      }
+    }
+
+    let reforming = false;
+    function triggerReform() {
+      reforming = true;
+      for (let i = 0; i < numVerts; i++) {
+        px[i] += nxArr[i] * 0.06;
+        py[i] += nyArr[i] * 0.06 + 0.05;
+        pz[i] += nzArr[i] * 0.06;
+      }
+    }
+
+    function triggerSquishDrop() {
+      for (let i = 0; i < numVerts; i++) {
+        py[i] += 0.45;
+        prevY[i] = py[i] + 0.085;
+      }
+    }
+
+    // ============================================================================
+    // 6. PHYSICS STEP (SUBSTEPPED XPBD + VOLUME CONSERVATION + PLASTICITY)
+    // ============================================================================
+    function stepPhysics() {
+      const mat = MATERIALS[currentMatKey];
+      const isSculpting = (currentTool === 'sculpt') || (currentMatKey === 'dough');
+
+      if (reforming) {
+        let maxDiff = 0;
+        for (let i = 0; i < numVerts; i++) {
+          restX[i] += (origX[i] - restX[i]) * 0.16;
+          restY[i] += (origY[i] - restY[i]) * 0.16;
+          restZ[i] += (origZ[i] - restZ[i]) * 0.16;
+          const d = Math.hypot(origX[i] - restX[i], origY[i] - restY[i], origZ[i] - restZ[i]);
+          if (d > maxDiff) maxDiff = d;
+        }
+        updateSpringRestLengths();
+        if (maxDiff < 0.002) {
+          restX.set(origX);
+          restY.set(origY);
+          restZ.set(origZ);
+          updateSpringRestLengths();
+          reforming = false;
+        }
+      }
+
+      const damping = mat.damping;
+      const shapeK = mat.shapeStiffness;
+      const floorY = -1.28;
+
+      for (let i = 0; i < numVerts; i++) {
+        const vx = (px[i] - prevX[i]) * damping;
+        const vy = (py[i] - prevY[i]) * damping - mat.meltGravity;
+        const vz = (pz[i] - prevZ[i]) * damping;
+
+        prevX[i] = px[i];
+        prevY[i] = py[i];
+        prevZ[i] = pz[i];
+
+        px[i] += vx + (restX[i] - px[i]) * shapeK;
+        py[i] += vy + (restY[i] - py[i]) * shapeK;
+        pz[i] += vz + (restZ[i] - pz[i]) * shapeK;
+
+        if (py[i] < floorY) {
+          const pen = floorY - py[i];
+          py[i] = floorY;
+          px[i] += nxArr[i] * pen * 0.15;
+          pz[i] += nzArr[i] * pen * 0.15;
+        }
+      }
+
+      if (pointer.down && pointer.activeHit) {
+        if (currentTool === 'poke') {
+          pointer.pokeDepth = Math.min(0.56, pointer.pokeDepth + 0.045);
+          const r = pointer.radius;
+          const dent = pointer.pokeDepth;
+
+          const pushDirX = -0.65 * pointer.grabNormal[0] + 0.35 * pointer.rayDir[0];
+          const pushDirY = -0.65 * pointer.grabNormal[1] + 0.35 * pointer.rayDir[1];
+          const pushDirZ = -0.65 * pointer.grabNormal[2] + 0.35 * pointer.rayDir[2];
+          const pLen = Math.hypot(pushDirX, pushDirY, pushDirZ) || 1;
+          const pdx = pushDirX / pLen, pdy = pushDirY / pLen, pdz = pushDirZ / pLen;
+
+          const cx = pointer.grabCenter[0];
+          const cy = pointer.grabCenter[1];
+          const cz = pointer.grabCenter[2];
+
+          const outerR = r * 1.65;
+          for (let i = 0; i < numVerts; i++) {
+            const dx = px[i] - cx;
+            const dy = py[i] - cy;
+            const dz = pz[i] - cz;
+            const d = Math.hypot(dx, dy, dz);
+
+            if (d < r) {
+              const u = 1.0 - d / r;
+              const profile = u * u * (3.0 - 2.0 * u);
+              const push = dent * profile * 0.38;
+              px[i] += pdx * push;
+              py[i] += pdy * push;
+              pz[i] += pdz * push;
+
+              if (isSculpting) {
+                restX[i] += pdx * push * 0.32;
+                restY[i] += pdy * push * 0.32;
+                restZ[i] += pdz * push * 0.32;
+              }
+            } else if (d < outerR) {
+              const t = (d - r) / (outerR - r);
+              const rim = Math.sin(t * Math.PI);
+              const bulge = dent * rim * 0.085;
+              px[i] += nxArr[i] * bulge;
+              py[i] += nyArr[i] * bulge;
+              pz[i] += nzArr[i] * bulge;
+            }
+          }
+        } else {
+          const pullX = pointer.grabTarget[0] - pointer.grabCenter[0];
+          const pullY = pointer.grabTarget[1] - pointer.grabCenter[1];
+          const pullZ = pointer.grabTarget[2] - pointer.grabCenter[2];
+
+          for (let i = 0; i < numVerts; i++) {
+            const w = pointer.weights[i];
+            if (w > 0.001) {
+              const targetX = restX[i] + pullX * w;
+              const targetY = restY[i] + pullY * w;
+              const targetZ = restZ[i] + pullZ * w;
+
+              px[i] += (targetX - px[i]) * (0.38 * w);
+              py[i] += (targetY - py[i]) * (0.38 * w);
+              pz[i] += (targetZ - pz[i]) * (0.38 * w);
+
+              if (isSculpting) {
+                const plast = currentTool === 'sculpt' ? 0.14 : mat.plasticRate * 0.35;
+                restX[i] += (px[i] - restX[i]) * plast * w;
+                restY[i] += (py[i] - restY[i]) * plast * w;
+                restZ[i] += (pz[i] - restZ[i]) * plast * w;
+              }
+            }
+          }
+        }
+
+        if (isSculpting) {
+          smoothRestShape(0.08);
+          updateSpringRestLengths();
+        }
+      }
+
+      const edgeK = mat.edgeStiffness;
+      const bendK = mat.bendStiffness;
+      const strutK = mat.strutStiffness;
+
+      for (let iter = 0; iter < 3; iter++) {
+        for (let i = 0; i < numEdges; i++) {
+          const a = edgeIdxA[i], b = edgeIdxB[i];
+          const dx = px[b] - px[a], dy = py[b] - py[a], dz = pz[b] - pz[a];
+          const dist = Math.hypot(dx, dy, dz) || 1e-6;
+          const corr = ((dist - edgeRestLen[i]) / dist) * 0.5 * edgeK;
+          const cx = dx * corr, cy = dy * corr, cz = dz * corr;
+          px[a] += cx; py[a] += cy; pz[a] += cz;
+          px[b] -= cx; py[b] -= cy; pz[b] -= cz;
+        }
+
+        for (let i = 0; i < numBends; i++) {
+          const a = bendIdxA[i], b = bendIdxB[i];
+          const dx = px[b] - px[a], dy = py[b] - py[a], dz = pz[b] - pz[a];
+          const dist = Math.hypot(dx, dy, dz) || 1e-6;
+          const corr = ((dist - bendRestLen[i]) / dist) * 0.5 * bendK;
+          const cx = dx * corr, cy = dy * corr, cz = dz * corr;
+          px[a] += cx; py[a] += cy; pz[a] += cz;
+          px[b] -= cx; py[b] -= cy; pz[b] -= cz;
+        }
+
+        for (let i = 0; i < numStruts; i++) {
+          const a = strutIdxA[i], b = strutIdxB[i];
+          const dx = px[b] - px[a], dy = py[b] - py[a], dz = pz[b] - pz[a];
+          const dist = Math.hypot(dx, dy, dz) || 1e-6;
+          const corr = ((dist - strutRestLen[i]) / dist) * 0.5 * strutK;
+          const cx = dx * corr, cy = dy * corr, cz = dz * corr;
+          px[a] += cx; py[a] += cy; pz[a] += cz;
+          px[b] -= cx; py[b] -= cy; pz[b] -= cz;
+        }
+      }
+
+      computeNormals();
+      const curVol = computeMeshVolume(px, py, pz);
+      const volDiff = (restVolume - curVol) * mat.volumeStiffness;
+      const inflation = Math.max(-0.022, Math.min(0.022, volDiff / (numVerts * 0.08)));
+
+      for (let i = 0; i < numVerts; i++) {
+        const suppress = (pointer.down && pointer.activeHit) ? (1.0 - 0.85 * pointer.weights[i]) : 1.0;
+        px[i] += nxArr[i] * inflation * suppress;
+        py[i] += nyArr[i] * inflation * suppress;
+        pz[i] += nzArr[i] * inflation * suppress;
+
+        const def = Math.hypot(px[i] - origX[i], py[i] - origY[i], pz[i] - origZ[i]);
+        strainArr[i] = strainArr[i] * 0.85 + Math.min(1.0, def * 1.8) * 0.15;
+      }
+
+      computeNormals();
+    }
+
+    // ============================================================================
+    // 7. WEBGL2 HIGH-END HDR DUAL-PASS REFRACTIVE & SUBSURFACE SHADERS
+    // ============================================================================
+    function compileShader(type, source) {
+      const s = gl.createShader(type);
+      gl.shaderSource(s, source);
+      gl.compileShader(s);
+      if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
+        console.error(gl.getShaderInfoLog(s));
+        throw new Error('Shader compile failed');
+      }
+      return s;
+    }
+
+    function createProgram(vsSource, fsSource) {
+      const p = gl.createProgram();
+      gl.attachShader(p, compileShader(gl.VERTEX_SHADER, vsSource));
+      gl.attachShader(p, compileShader(gl.FRAGMENT_SHADER, fsSource));
+      gl.linkProgram(p);
+      if (!gl.getProgramParameter(p, gl.LINK_STATUS)) {
+        console.error(gl.getProgramInfoLog(p));
+        throw new Error('Program link failed');
+      }
+      return p;
+    }
+
+    const bearVS = `#version 300 es
+      precision highp float;
+      layout(location = 0) in vec3 a_pos;
+      layout(location = 1) in vec3 a_norm;
+      layout(location = 2) in float a_strain;
+
+      uniform mat4 u_viewProj;
+
+      out vec3 v_worldPos;
+      out vec3 v_worldNorm;
+      out float v_strain;
+
+      void main() {
+        v_worldPos = a_pos;
+        v_worldNorm = a_norm;
+        v_strain = a_strain;
+        gl_Position = u_viewProj * vec4(a_pos, 1.0);
+      }
+    `;
+
+    // PASS 1: Back-Face World Exit Position & Packed Normal
+    const backFaceFS = `#version 300 es
+      precision highp float;
+      in vec3 v_worldPos;
+      in vec3 v_worldNorm;
+      out vec4 outColor;
+
+      // Octahedral normal encoding into 1 float or store position.xyz + normal.z
+      void main() {
+        outColor = vec4(v_worldPos, 1.0);
+      }
+    `;
+
+    // PASS 2: High-End HDR Studio PBR + Volumetric Beer-Lambert Refraction + Internal Caustics + ACES Tone Mapping
+    const frontFaceFS = `#version 300 es
+      precision highp float;
+      in vec3 v_worldPos;
+      in vec3 v_worldNorm;
+      in float v_strain;
+
+      uniform sampler2D u_backPosTex;
+      uniform vec2 u_resolution;
+      uniform vec3 u_cameraPos;
+
+      uniform vec3 u_shallowColor;
+      uniform vec3 u_deepColor;
+      uniform vec3 u_sssColor;
+      uniform vec3 u_sigma;
+      uniform float u_roughness;
+      uniform float u_clearcoat;
+      uniform float u_absorption;
+      uniform float u_sssStrength;
+      uniform float u_causticStrength;
+      uniform float u_sheen;
+
+      uniform vec3 u_cursorPos;
+      uniform float u_cursorRadius;
+      uniform float u_cursorActive;
+
+      out vec4 outColor;
+
+      const float PI = 3.14159265359;
+
+      // High-Dynamic-Range (HDR) Studio Softbox & Cyclorama Environment Map
+      vec3 sampleHDRStudio(vec3 dir, float rough) {
+        vec3 d = normalize(dir);
+        // Studio cyclorama gradient
+        float skyGrad = smoothstep(-0.35, 0.85, d.y);
+        vec3 env = mix(vec3(0.75, 0.77, 0.82), vec3(1.15, 1.16, 1.20), skyGrad);
+
+        // Dark studio contrast panels at grazing horizontal angles (gives 3D glass/gummy real depth!)
+        float sidePanelL = smoothstep(0.62, 0.90, dot(d, normalize(vec3(-0.92, 0.05, 0.25))));
+        float sidePanelR = smoothstep(0.62, 0.90, dot(d, normalize(vec3( 0.92, 0.05, 0.25))));
+        env *= (1.0 - 0.58 * (sidePanelL + sidePanelR));
+
+        // 1. Main Overhead Studio Octabox (HDR intensity = 14.0)
+        vec3 boxMainDir = normalize(vec3(0.32, 0.82, 0.48));
+        float boxMain = smoothstep(0.84 - rough * 0.28, 0.965, dot(d, boxMainDir));
+        env += vec3(14.5, 14.2, 13.8) * boxMain;
+
+        // 2. Left Rim Strip Softbox (HDR intensity = 9.5)
+        vec3 rimLDir = normalize(vec3(-0.78, 0.42, -0.46));
+        float boxRimL = smoothstep(0.86 - rough * 0.22, 0.975, dot(d, rimLDir));
+        env += vec3(9.5, 9.8, 10.5) * boxRimL;
+
+        // 3. Right Back Kicker Softbox (HDR intensity = 8.5)
+        vec3 rimRDir = normalize(vec3(0.74, 0.35, -0.56));
+        float boxRimR = smoothstep(0.87 - rough * 0.22, 0.98, dot(d, rimRDir));
+        env += vec3(8.8, 8.6, 8.4) * boxRimR;
+
+        // 4. Front Eye-Catchlight Specular Pin (HDR intensity = 18.0)
+        vec3 catchDir = normalize(vec3(-0.18, 0.36, 0.91));
+        float catchLight = smoothstep(0.972 - rough * 0.15, 0.996, dot(d, catchDir));
+        env += vec3(18.0) * catchLight;
+
+        // 5. White studio floor bounce
+        float floorBounce = smoothstep(-0.15, -0.85, d.y);
+        env += vec3(0.95, 0.95, 0.98) * floorBounce * 0.65;
+
+        return env;
+      }
+
+      // Physical GGX Normal Distribution Function
+      float D_GGX(float NdotH, float alpha) {
+        float a2 = alpha * alpha;
+        float d = (NdotH * NdotH) * (a2 - 1.0) + 1.0;
+        return a2 / max(PI * d * d, 1e-6);
+      }
+
+      // ACES Filmic HDR Tone Mapping (Narkowicz curve)
+      vec3 acesFilm(vec3 x) {
+        const float a = 2.51;
+        const float b = 0.03;
+        const float c = 2.43;
+        const float d = 0.59;
+        const float e = 0.14;
+        return clamp((x * (a * x + b)) / (x * (c * x + d) + e), 0.0, 1.0);
+      }
+
+      void main() {
+        vec2 uv = gl_FragCoord.xy / u_resolution;
+        vec3 N = normalize(v_worldNorm);
+        vec3 V = normalize(u_cameraPos - v_worldPos);
+        float NdotV = max(dot(N, V), 0.001);
+
+        // Screen-space refracted UV offset for sampling the back-face exit buffer
+        vec3 refractView = refract(-V, N, 1.0 / 1.48);
+        vec2 refractOffset = refractView.xy * 0.038;
+
+        // Chromatic dispersion sampling of optical thickness
+        vec4 backCenter = texture(u_backPosTex, uv);
+        vec4 backRefr   = texture(u_backPosTex, clamp(uv + refractOffset, 0.001, 0.999));
+
+        float rawThickness = 0.52;
+        vec3 exitPos = v_worldPos - V * 0.52;
+        if (backRefr.a > 0.5) {
+          exitPos = backRefr.xyz;
+          rawThickness = length(exitPos - v_worldPos);
+        } else if (backCenter.a > 0.5) {
+          exitPos = backCenter.xyz;
+          rawThickness = length(exitPos - v_worldPos);
+        }
+
+        // Grazing angle paths travel through more gelatin & undergo Total Internal Reflection
+        float grazingPath = 1.0 / mix(NdotV, 1.0, 0.32);
+        float optDepth = clamp(rawThickness * 0.95 * grazingPath, 0.06, 3.2);
+
+        // 3D Studio Lights (HDR Radiance)
+        vec3 L1 = normalize(vec3(0.32, 0.82, 0.48));   // Key overhead softbox
+        vec3 L2 = normalize(vec3(-0.55, 0.40, -0.73)); // Strong backlight for internal gummy glow
+        vec3 L3 = normalize(vec3(-0.22, 0.35, 0.91));  // Front fill / catchlight
+
+        // 1. HDR Beer-Lambert Spectral Absorption (Rich Jewel-Like Candy Core)
+        vec3 transmittance = exp(-u_sigma * optDepth * u_absorption);
+        vec3 coreTint = mix(u_deepColor, u_shallowColor, exp(-optDepth * 1.10));
+
+        // 2. Refracted Studio Background + Internal Focusing Caustics
+        vec3 envRefracted = sampleHDRStudio(refractView, u_roughness * 0.6 + 0.15);
+        // Clamp background bloom inside the gummy so it stays rich and saturated
+        envRefracted = min(envRefracted, vec3(2.4));
+
+        // Internal caustic focusing: curved tummy, cheeks, ears & paws act as convex lenses!
+        float lensFocus1 = pow(max(0.0, dot(refractView, -L1)), 5.5);
+        float lensFocus2 = pow(max(0.0, dot(refractView, -L2)), 3.5);
+        float internalGlint = pow(max(0.0, dot(reflect(refractView, -N), L1)), 14.0) * 1.4;
+        vec3 caustics = (u_shallowColor * 2.2 + vec3(0.4)) * (lensFocus1 * 1.1 + lensFocus2 * 0.7 + internalGlint) * u_causticStrength;
+
+        // 3. Multi-Scattering Subsurface Scattering (SSS)
+        float wrap1 = clamp((dot(N, L1) + 0.55) / 1.55, 0.0, 1.0);
+        float wrap3 = clamp((dot(N, L3) + 0.45) / 1.45, 0.0, 1.0);
+        float backTrans1 = pow(clamp(dot(V, -L1 + N * 0.45), 0.0, 1.0), 2.8);
+        float backTrans2 = pow(clamp(dot(V, -L2 + N * 0.35), 0.0, 1.0), 2.0);
+        float thinness = exp(-rawThickness * 1.45);
+
+        vec3 sssRad = u_sssColor * (
+          0.35 +
+          0.95 * wrap1 +
+          0.45 * wrap3 +
+          (1.65 * backTrans1 + 2.10 * backTrans2) * (0.30 + 0.90 * thinness)
+        ) * u_sssStrength;
+
+        // Combine transmitted HDR light + absorbed candy core + subsurface scattering
+        vec3 interiorHDR = envRefracted * transmittance * 0.82
+                         + coreTint * sssRad * 0.78
+                         + caustics * transmittance;
+
+        // 4. Deep 3D Edge Contour (Total Internal Reflection + Cavity Depth)
+        // Crucial for photorealism on a white background: edges darken & saturate before the crisp Fresnel rim!
+        float edgeTIR = smoothstep(0.65, 0.08, NdotV);
+        interiorHDR = mix(interiorHDR, u_deepColor * 0.85 + u_shallowColor * 0.25, edgeTIR * 0.58);
+
+        // Subtle strain highlight when stretched or squished
+        interiorHDR += u_shallowColor * clamp(v_strain * 0.45, 0.0, 0.4);
+
+        // 5. Physical GGX Outer Specular + Wet Clearcoat + HDR Studio Reflections
+        float F0 = 0.040; // IOR ~ 1.50
+        float fresnel = F0 + (1.0 - F0) * pow(1.0 - NdotV, 4.5);
+
+        vec3 R = reflect(-V, N);
+        vec3 envRefl = sampleHDRStudio(R, u_roughness);
+
+        vec3 H1 = normalize(L1 + V);
+        vec3 H3 = normalize(L3 + V);
+        float alpha = max(0.035, u_roughness * u_roughness);
+
+        float specGGX1 = D_GGX(max(dot(N, H1), 0.0), alpha) * fresnel * 0.42;
+        float specGGX3 = D_GGX(max(dot(N, H3), 0.0), alpha * 0.8) * fresnel * 0.25;
+        float coatSpec = D_GGX(max(dot(N, H1), 0.0), 0.025) * 0.08 * u_clearcoat;
+
+        // Soft velvet cushion sheen (when in Soft Cushion mode)
+        float velvetRim = pow(1.0 - NdotV, 2.4) * (0.4 + 0.6 * wrap1) * u_sheen;
+        vec3 sheenHDR = mix(u_shallowColor, vec3(1.4), 0.65) * velvetRim * 0.85;
+
+        vec3 totalHDR = interiorHDR * (1.0 - fresnel * 0.65)
+                      + envRefl * fresnel * (0.65 * u_clearcoat + 0.22)
+                      + vec3(1.0) * (specGGX1 + specGGX3 + coatSpec)
+                      + sheenHDR;
+
+        // 6. Subtle tactile 3D poke/brush ring on the bear's skin
+        if (u_cursorActive > 0.01) {
+          float distToCursor = length(v_worldPos - u_cursorPos);
+          float ring = exp(-pow((distToCursor - u_cursorRadius * 0.85) / 0.028, 2.0));
+          totalHDR += vec3(1.2) * ring * 0.45 * u_cursorActive;
+        }
+
+        // Apply ACES Filmic Tone Mapping + sRGB gamma correction
+        vec3 ldr = acesFilm(totalHDR * 0.92);
+        ldr = pow(ldr, vec3(1.0 / 2.2));
+
+        outColor = vec4(ldr, 1.0);
+      }
+    `;
+
+    // Soft Ground Contact Shadow + Colored Caustic Pool on the invisible floor (y = -1.28)
+    const shadowVS = `#version 300 es
+      precision highp float;
+      layout(location = 0) in vec2 a_quad;
+      uniform mat4 u_viewProj;
+      out vec2 v_xz;
+      void main() {
+        v_xz = a_quad * 1.55;
+        gl_Position = u_viewProj * vec4(v_xz.x, -1.285, v_xz.y, 1.0);
+      }
+    `;
+
+    const shadowFS = `#version 300 es
+      precision highp float;
+      in vec2 v_xz;
+      uniform vec3 u_shallowColor;
+      out vec4 outColor;
+      void main() {
+        vec2 p = (v_xz - vec2(0.0, 0.14)) / vec2(0.88, 0.76);
+        float r2 = dot(p, p);
+        float umbra = exp(-r2 * 3.4) * 0.18;
+        float penumbra = exp(-r2 * 1.4) * 0.06;
+        float caustic = exp(-r2 * 5.8) * 0.085;
+        vec3 col = mix(vec3(1.0), u_shallowColor * 0.75, caustic) * (1.0 - umbra - penumbra);
+        float alpha = smoothstep(1.35, 0.0, sqrt(r2));
+        outColor = vec4(mix(vec3(1.0), col, alpha), 1.0);
+      }
+    `;
+
+    const backFaceProg  = createProgram(bearVS, backFaceFS);
+    const frontFaceProg = createProgram(bearVS, frontFaceFS);
+    const shadowProg    = createProgram(shadowVS, shadowFS);
+
+    // ============================================================================
+    // 8. GPU BUFFERS & OFF-SCREEN BACK-FACE FBO
+    // ============================================================================
+    const bearVAO = gl.createVertexArray();
+    gl.bindVertexArray(bearVAO);
+
+    const vertexData = new Float32Array(numVerts * 7);
+    const vertexVBO = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, vertexVBO);
+    gl.bufferData(gl.ARRAY_BUFFER, vertexData.byteLength, gl.DYNAMIC_DRAW);
+
+    const stride = 7 * 4;
+    gl.enableVertexAttribArray(0);
+    gl.vertexAttribPointer(0, 3, gl.FLOAT, false, stride, 0);
+    gl.enableVertexAttribArray(1);
+    gl.vertexAttribPointer(1, 3, gl.FLOAT, false, stride, 3 * 4);
+    gl.enableVertexAttribArray(2);
+    gl.vertexAttribPointer(2, 1, gl.FLOAT, false, stride, 6 * 4);
+
+    const indexIBO = gl.createBuffer();
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexIBO);
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, triIndices, gl.STATIC_DRAW);
+    gl.bindVertexArray(null);
+
+    const shadowVAO = gl.createVertexArray();
+    gl.bindVertexArray(shadowVAO);
+    const shadowVBO = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, shadowVBO);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, -1,1, 1,-1, 1,1]), gl.STATIC_DRAW);
+    gl.enableVertexAttribArray(0);
+    gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+    gl.bindVertexArray(null);
+
+    let backFBO = null;
+    let backTex = null;
+    let backDepthRB = null;
+
+    function setupBackFBO(w, h) {
+      if (backFBO) {
+        gl.deleteFramebuffer(backFBO);
+        gl.deleteTexture(backTex);
+        gl.deleteRenderbuffer(backDepthRB);
+      }
+      backTex = gl.createTexture();
+      gl.bindTexture(gl.TEXTURE_2D, backTex);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA16F, w, h, 0, gl.RGBA, gl.HALF_FLOAT, null);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+
+      backDepthRB = gl.createRenderbuffer();
+      gl.bindRenderbuffer(gl.RENDERBUFFER, backDepthRB);
+      gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT24, w, h);
+
+      backFBO = gl.createFramebuffer();
+      gl.bindFramebuffer(gl.FRAMEBUFFER, backFBO);
+      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, backTex, 0);
+      gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, backDepthRB);
+      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+    }
+
+    function resize() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const w = Math.floor(window.innerWidth * dpr);
+      const h = Math.floor(window.innerHeight * dpr);
+      if (canvas.width !== w || canvas.height !== h) {
+        canvas.width = w;
+        canvas.height = h;
+        setupBackFBO(w, h);
+      }
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    function buildViewProjMatrix() {
+      const aspect = canvas.width / Math.max(1, canvas.height);
+      const f = 1.0 / Math.tan(camera.fovY * 0.5);
+      const near = 0.2, far = 25.0;
+      const nf = 1.0 / (near - far);
+
+      const proj = new Float32Array([
+        f / aspect, 0, 0, 0,
+        0, f, 0, 0,
+        0, 0, (far + near) * nf, -1,
+        0, 0, (2 * far * near) * nf, 0
+      ]);
+
+      const rx = camera.right[0],   ry = camera.right[1],   rz = camera.right[2];
+      const ux = camera.up[0],      uy = camera.up[1],      uz = camera.up[2];
+      const fx = -camera.forward[0],fy = -camera.forward[1],fz = -camera.forward[2];
+      const ex = camera.eye[0],     ey = camera.eye[1],     ez = camera.eye[2];
+
+      const view = new Float32Array([
+        rx, ux, fx, 0,
+        ry, uy, fy, 0,
+        rz, uz, fz, 0,
+        -(rx * ex + ry * ey + rz * ez),
+        -(ux * ex + uy * ey + uz * ez),
+        -(fx * ex + fy * ey + fz * ez),
+        1
+      ]);
+
+      const out = new Float32Array(16);
+      for (let c = 0; c < 4; c++) {
+        for (let r = 0; r < 4; r++) {
+          out[c * 4 + r] =
+            proj[0 * 4 + r] * view[c * 4 + 0] +
+            proj[1 * 4 + r] * view[c * 4 + 1] +
+            proj[2 * 4 + r] * view[c * 4 + 2] +
+            proj[3 * 4 + r] * view[c * 4 + 3];
+        }
+      }
+      return out;
+    }
+
+    // ============================================================================
+    // 9. UI CONTROLS
+    // ============================================================================
+    document.getElementById('mode-buttons').addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-tool]');
+      if (!btn) return;
+      document.querySelectorAll('#mode-buttons button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentTool = btn.dataset.tool;
+    });
+
+    document.getElementById('material-buttons').addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-mat]');
+      if (!btn) return;
+      document.querySelectorAll('#material-buttons button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentMatKey = btn.dataset.mat;
+    });
+
+    document.getElementById('color-swatches').addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-flavor]');
+      if (!btn) return;
+      document.querySelectorAll('#color-swatches button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentFlavorKey = btn.dataset.flavor;
+    });
+
+    document.getElementById('btn-reset').addEventListener('click', triggerReform);
+    document.getElementById('btn-boop').addEventListener('click', triggerSquishDrop);
+
+    const btnClean = document.getElementById('btn-clean');
+    function toggleCleanScreen() {
+      document.body.classList.toggle('clean-screen');
+      const isClean = document.body.classList.contains('clean-screen');
+      btnClean.textContent = isClean ? 'Show Controls (H)' : 'Blank Screen (H)';
+    }
+    btnClean.addEventListener('click', toggleCleanScreen);
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'h' || e.key === 'H') toggleCleanScreen();
+      if (e.key === ' ') {
+        e.preventDefault();
+        triggerReform();
+      }
+    });
+
+    // ============================================================================
+    // 10. MAIN RENDER & SIMULATION LOOP
+    // ============================================================================
+    function render() {
+      resize();
+      updateCameraBasis();
+      stepPhysics();
+
+      for (let i = 0; i < numVerts; i++) {
+        const o = i * 7;
+        vertexData[o]     = px[i];
+        vertexData[o + 1] = py[i];
+        vertexData[o + 2] = pz[i];
+        vertexData[o + 3] = nxArr[i];
+        vertexData[o + 4] = nyArr[i];
+        vertexData[o + 5] = nzArr[i];
+        vertexData[o + 6] = strainArr[i];
+      }
+
+      gl.bindBuffer(gl.ARRAY_BUFFER, vertexVBO);
+      gl.bufferSubData(gl.ARRAY_BUFFER, 0, vertexData);
+
+      const viewProj = buildViewProjMatrix();
+      const flavor = FLAVORS[currentFlavorKey];
+      const mat = MATERIALS[currentMatKey];
+
+      // PASS 1: Render Back-Faces to Off-Screen FBO for Exact 3D Thickness
+      gl.bindFramebuffer(gl.FRAMEBUFFER, backFBO);
+      gl.viewport(0, 0, canvas.width, canvas.height);
+      gl.clearColor(0, 0, 0, 0);
+      gl.clearDepth(0.0);
+      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+      gl.enable(gl.DEPTH_TEST);
+      gl.depthFunc(gl.GREATER);
+      gl.enable(gl.CULL_FACE);
+      gl.cullFace(gl.FRONT);
+
+      gl.useProgram(backFaceProg);
+      gl.uniformMatrix4fv(gl.getUniformLocation(backFaceProg, 'u_viewProj'), false, viewProj);
+
+      gl.bindVertexArray(bearVAO);
+      gl.drawElements(gl.TRIANGLES, triIndices.length, gl.UNSIGNED_INT, 0);
+
+      // PASS 2: Render Pure Blank White Screen + Soft Shadow + HDR Front-Face Gummy Bear
+      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+      gl.viewport(0, 0, canvas.width, canvas.height);
+      gl.clearColor(1.0, 1.0, 1.0, 1.0);
+      gl.clearDepth(1.0);
+      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+      gl.depthFunc(gl.LESS);
+      gl.disable(gl.CULL_FACE);
+
+      gl.useProgram(shadowProg);
+      gl.uniformMatrix4fv(gl.getUniformLocation(shadowProg, 'u_viewProj'), false, viewProj);
+      gl.uniform3fv(gl.getUniformLocation(shadowProg, 'u_shallowColor'), flavor.shallow);
+      gl.bindVertexArray(shadowVAO);
+      gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+      gl.enable(gl.CULL_FACE);
+      gl.cullFace(gl.BACK);
+
+      gl.useProgram(frontFaceProg);
+      gl.uniformMatrix4fv(gl.getUniformLocation(frontFaceProg, 'u_viewProj'), false, viewProj);
+      gl.uniform2f(gl.getUniformLocation(frontFaceProg, 'u_resolution'), canvas.width, canvas.height);
+      gl.uniform3fv(gl.getUniformLocation(frontFaceProg, 'u_cameraPos'), camera.eye);
+
+      gl.uniform3fv(gl.getUniformLocation(frontFaceProg, 'u_shallowColor'), flavor.shallow);
+      gl.uniform3fv(gl.getUniformLocation(frontFaceProg, 'u_deepColor'), flavor.deep);
+      gl.uniform3fv(gl.getUniformLocation(frontFaceProg, 'u_sssColor'), flavor.sss);
+      gl.uniform3fv(gl.getUniformLocation(frontFaceProg, 'u_sigma'), flavor.sigma);
+
+      gl.uniform1f(gl.getUniformLocation(frontFaceProg, 'u_roughness'), mat.roughness);
+      gl.uniform1f(gl.getUniformLocation(frontFaceProg, 'u_clearcoat'), mat.clearcoat);
+      gl.uniform1f(gl.getUniformLocation(frontFaceProg, 'u_absorption'), mat.absorption);
+      gl.uniform1f(gl.getUniformLocation(frontFaceProg, 'u_sssStrength'), mat.sssStrength);
+      gl.uniform1f(gl.getUniformLocation(frontFaceProg, 'u_causticStrength'), mat.causticStrength);
+      gl.uniform1f(gl.getUniformLocation(frontFaceProg, 'u_sheen'), mat.sheen);
+
+      const cursorPos = (pointer.down && pointer.activeHit) ? pointer.grabCenter : pointer.hitPoint;
+      const cursorActive = (pointer.down && pointer.activeHit) ? 1.0 : (pointer.hoverHit ? 0.45 : 0.0);
+      gl.uniform3fv(gl.getUniformLocation(frontFaceProg, 'u_cursorPos'), cursorPos);
+      gl.uniform1f(gl.getUniformLocation(frontFaceProg, 'u_cursorRadius'), pointer.radius);
+      gl.uniform1f(gl.getUniformLocation(frontFaceProg, 'u_cursorActive'), cursorActive);
+
+      gl.activeTexture(gl.TEXTURE0);
+      gl.bindTexture(gl.TEXTURE_2D, backTex);
+      gl.uniform1i(gl.getUniformLocation(frontFaceProg, 'u_backPosTex'), 0);
+
+      gl.bindVertexArray(bearVAO);
+      gl.drawElements(gl.TRIANGLES, triIndices.length, gl.UNSIGNED_INT, 0);
+
+      requestAnimationFrame(render);
+    }
+
+    triggerSquishDrop();
+    requestAnimationFrame(render);
+  </script>
+</body>
+</html>
