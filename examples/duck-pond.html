@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bao To — Portfolio Duck Pond (1:1 Recreation)</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f5f1ec;
+      color: #2a2520;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      overflow: hidden;
+    }
+    @keyframes bubbleIn {
+      from { opacity: 0; transform: translateY(6px) scale(0.92); }
+      to   { opacity: 1; transform: translateY(0px) scale(1); }
+    }
+    .duck-bubble-anim {
+      animation: bubbleIn 0.25s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    }
+  </style>
+</head>
+<body class="h-[100dvh] bg-[#f5f1ec] flex flex-col items-center justify-center overflow-hidden">
+
+  <!-- Exact DOM hierarchy from baothiento.com -->
+  <div class="relative flex flex-col items-center">
+    <!-- Feed Mode Prompt -->
+    <div class="h-6 mb-1.5 flex items-center justify-center">
+      <span
+        id="feed-prompt"
+        class="text-xs tracking-wide text-[#2a2520]/40 hidden"
+        style="letter-spacing: 0.06em;"
+      >tap anywhere to feed the ducks</span>
+    </div>
+
+    <!-- Outer Pond Stage -->
+    <div class="relative w-[88vw] h-[45dvh] sm:w-[70vw] sm:h-[65vh] max-w-[900px] max-h-[600px]">
+      <!-- Clipped Pond Box (Layers 1, 2, 3) -->
+      <div
+        id="pond-container"
+        class="relative w-full h-full border-0 outline-none rounded-sm overflow-hidden"
+        style="cursor: pointer;"
+      >
+        <div class="absolute inset-[1.25px] overflow-hidden">
+          <!-- LAYER 1: WebGL Seascape + Slope-Warped Ripple Shader Canvas -->
+          <canvas
+            id="wave-canvas"
+            class="absolute pointer-events-none"
+            style="inset: -1.25px; width: calc(100% + 2.5px); height: calc(100% + 2.5px);"
+          ></canvas>
+
+          <!-- LAYER 2: Sandwiched DOM/SVG Entities (Food Pellets, Ducks, Fish) -->
+          <div id="floats-layer" class="absolute inset-0 pointer-events-none"></div>
+
+          <!-- LAYER 3: 2D Paper Grain, Radial Fog, Light Leaks & SDF Edge Mask Canvas -->
+          <canvas
+            id="paper-canvas"
+            class="absolute pointer-events-none"
+            style="inset: -1.25px; width: calc(100% + 2.5px); height: calc(100% + 2.5px);"
+          ></canvas>
+        </div>
+      </div>
+
+      <!-- LAYER 4: Unclipped Speech Bubble Layer (z-index: 50) -->
+      <div
+        id="speech-bubble-anchor"
+        class="absolute pointer-events-none"
+        style="will-change: transform, opacity; z-index: 50; display: none;"
+      >
+        <div class="duck-bubble-anim relative px-3 py-1 bg-white rounded-xl shadow-sm border border-black/[0.06] max-w-[200px] whitespace-normal">
+          <p id="speech-bubble-text" class="text-xs text-[#2a2520]/70 leading-relaxed m-0"></p>
+          <div class="absolute -bottom-[5px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-white border-r border-b border-black/[0.06] rotate-45"></div>
+        </div>
+      </div>
+
+      <!-- LAYER 5: Oversized 2D Shoreline Reeds & Cattails Canvas (inset: -200px, z-index: 7) -->
+      <canvas
+        id="plant-canvas"
+        class="absolute pointer-events-none"
+        style="inset: -200px; width: calc(100% + 400px); height: calc(100% + 400px); z-index: 7;"
+      ></canvas>
+    </div>
+
+    <!-- Feed Mode Toggle Button -->
+    <div class="mt-2" style="z-index: 20;">
+      <button
+        id="feed-btn"
+        type="button"
+        aria-label="Feed the ducks"
+        title="Feed the ducks"
+        class="group relative flex items-center justify-center transition-transform duration-300 hover:scale-110 active:scale-95 cursor-pointer"
+        style="width: 46px; height: 46px;"
+      >
+        <div id="feed-icon-pellets" class="relative" style="width: 46px; height: 46px; filter: blur(0.4px);"></div>
+        <svg
+          id="feed-icon-close"
+          class="hidden"
+          width="22"
+          height="22"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line x1="4" y1="4" x2="16" y2="16" stroke="rgba(42,37,32,0.35)" stroke-width="1.5" stroke-linecap="round" />
+          <line x1="16" y1="4" x2="4" y2="16" stroke="rgba(42,37,32,0.35)" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // ==========================================================================
+    // 1. CONSTANTS & CONFIG (1:1 FROM CHUNK_0K & CHUNK_2IOCGB)
+    // ==========================================================================
+    const BG = { r: 245, g: 241, b: 236 };
+    const PAPER = {
+      brightness: 21,
+      contrast: 31,
+      warmth: 23,
+      grain: 71,
+      grainPop: 9,
+      fog: 63,
+      lightLeak: 12,
+      edgeFade: 10,
+      cornerRadius: 28,
+      edgeNoise: 27,
+      edgeMargin: 5,
+    };
+
+    const DUCK_LINES = [
+      "hi :)", "u clicked me!", "hey! that tickles", "do u think they'll feed us",
+      "i think they like us", "psst... scroll down", "we see u", "stop poking me",
+      "bao made this pond for us :)", "bao hasn't fed us today smh",
+      "i can't feel my feet actually", "we don't get paid for this",
+      "i peaked at birth honestly", "this water isn't even real",
+      "nice weather today", "quack", "QUACK QUACK QUACK", "quack", "...",
+      "u ever wonder what's below the water", "stop following me",
+      "race u to the other side", "i think i'm the favorite duck",
+      "don't tell bao i said this but the pond is kinda small"
+    ];
+
+    const FISH_LINES = [
+      "YO IS THAT A FISH", "omg a fish!!", "bro there's a FISH", "FISH FISH FISH",
+      "wait... do fish even live here", "GET IT GET IT", "dibs on the fish",
+      "that fish is MINE", "yo who invited the fish", "a fish?? in THIS economy?",
+      "nature is healing 🐟"
+    ];
+
+    function pickRandom(arr, exclude) {
+      const pool = exclude ? arr.filter((x) => x !== exclude) : arr;
+      return pool[Math.floor(Math.random() * pool.length)];
+    }
+
+    // Build feed button pellet cluster icon
+    const PELLET_DOTS = [
+      { x: 22, y: 20, s: 8, h: 34 },
+      { x: 15, y: 16, s: 7, h: 30 },
+      { x: 29, y: 17, s: 7.5, h: 38 },
+      { x: 18, y: 26, s: 6.5, h: 32 },
+      { x: 27, y: 25, s: 7, h: 36 },
+      { x: 24, y: 12, s: 5.5, h: 29 },
+      { x: 11, y: 21, s: 5, h: 31 },
+      { x: 35, y: 23, s: 5.5, h: 33 },
+      { x: 13, y: 28, s: 4.5, h: 28 },
+      { x: 32, y: 29, s: 5, h: 35 },
+      { x: 9, y: 14, s: 4, h: 30 },
+      { x: 37, y: 15, s: 4.2, h: 32 },
+    ];
+    const pelletsContainer = document.getElementById("feed-icon-pellets");
+    PELLET_DOTS.forEach((e, n) => {
+      const div = document.createElement("div");
+      div.className = "absolute rounded-full";
+      div.style.left = e.x + "px";
+      div.style.top = e.y + "px";
+      div.style.width = e.s + "px";
+      div.style.height = e.s + "px";
+      div.style.transform = "translate(-50%, -50%)";
+      div.style.background = `radial-gradient(circle, hsla(${e.h}, 45%, 60%, 0.5) 0%, hsla(${e.h}, 40%, 45%, 0.3) 50%, hsla(${e.h}, 35%, 35%, 0.1) 100%)`;
+      div.style.filter = `blur(${0.6 + (n % 3) * 0.3}px)`;
+      div.style.boxShadow = `0 0 ${1.5 * e.s}px hsla(${e.h}, 35%, 50%, 0.15)`;
+      pelletsContainer.appendChild(div);
+    });
+
+    // ==========================================================================
+    // 2. PROCEDURAL WEB AUDIO SYNTHESIZER (1:1 FROM CHUNK_1W11)
+    // ==========================================================================
+    const sfx = (() => {
+      let ctx = null;
+      let master = null;
+      let noiseBuf = null;
+      let voices = 0;
+      const throttleMap = new Map();
+
+      function init() {
+        if (ctx) return;
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        ctx = new AudioCtx();
+        const comp = ctx.createDynamicsCompressor();
+        comp.threshold.value = -6;
+        comp.knee.value = 4;
+        comp.ratio.value = 12;
+        comp.attack.value = 0.002;
+        comp.release.value = 0.12;
+        comp.connect(ctx.destination);
+        master = ctx.createGain();
+        master.gain.value = 0.85;
+        master.connect(comp);
+        noiseBuf = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate);
+        const ch = noiseBuf.getChannelData(0);
+        for (let i = 0; i < ch.length; i++) ch[i] = Math.random() * 2 - 1;
+      }
+
+      function getAudio() {
+        if (!ctx) init();
+        if (!ctx || !master) return null;
+        if (ctx.state === "suspended") ctx.resume().catch(() => {});
+        return { ctx, master };
+      }
+
+      function throttled(key, ms) {
+        const now = performance.now();
+        const last = throttleMap.get(key);
+        if (last !== undefined && now - last < ms) return true;
+        throttleMap.set(key, now);
+        return false;
+      }
+
+      function stereo(nx) {
+        return (Math.max(0, Math.min(1, nx ?? 0.5)) - 0.5) * 0.7;
+      }
+
+      function detune(freq, cents = 30) {
+        return freq * Math.pow(2, ((Math.random() * 2 - 1) * cents) / 1200);
+      }
+
+      const scale = [392, 440, 523.25, 587.33, 698.46];
+      function pentatonic(e) {
+        const t = scale.length;
+        const n = Math.floor(e / t);
+        return scale[((e % t) + t) % t] * Math.pow(2, n);
+      }
+
+      function routeVoice(node, srcNode, pan, audioCtx, masterNode, stopTime, startFn) {
+        let out = node;
+        if (pan !== undefined && audioCtx.createStereoPanner) {
+          const p = audioCtx.createStereoPanner();
+          p.pan.value = Math.max(-1, Math.min(1, pan));
+          node.connect(p);
+          out = p;
+        }
+        out.connect(masterNode);
+        let done = false;
+        const release = () => {
+          if (!done) {
+            done = true;
+            voices = Math.max(0, voices - 1);
+          }
+        };
+        srcNode.onended = release;
+        setTimeout(release, (stopTime - audioCtx.currentTime) * 1000 + 250);
+        startFn();
+        srcNode.stop(stopTime);
+      }
+
+      function noise(e) {
+        const r = getAudio();
+        if (!r || !noiseBuf || voices >= 14) return;
+        voices++;
+        const { ctx: a, master: i } = r;
+        const u = a.currentTime + (e.delay ?? 0);
+        const f = e.dur ?? 0.05;
+        const l = e.gain ?? 0.08;
+        const s = a.createBufferSource();
+        s.buffer = noiseBuf;
+        const c = Math.random() * Math.max(0, noiseBuf.duration - f - 0.05);
+        const d = a.createBiquadFilter();
+        d.type = e.filter ?? "bandpass";
+        d.frequency.setValueAtTime(e.freq ?? 1200, u);
+        if (e.to !== undefined) d.frequency.exponentialRampToValueAtTime(Math.max(20, e.to), u + f);
+        d.Q.value = e.q ?? 1;
+        const p = a.createGain();
+        p.gain.setValueAtTime(0.0001, u);
+        p.gain.exponentialRampToValueAtTime(l, u + 0.003);
+        p.gain.exponentialRampToValueAtTime(0.0001, u + f);
+        s.connect(d);
+        d.connect(p);
+        routeVoice(p, s, e.pan, a, i, u + f + 0.02, () => s.start(u, c, f + 0.02));
+      }
+
+      function tone(e) {
+        const r = getAudio();
+        if (!r || voices >= 14) return;
+        voices++;
+        const { ctx: o, master: a } = r;
+        const i = o.currentTime + (e.delay ?? 0);
+        const u = e.dur ?? 0.12;
+        const f = e.attack ?? 0.004;
+        const l = e.gain ?? 0.1;
+        const s = o.createOscillator();
+        s.type = e.type ?? "sine";
+        s.frequency.setValueAtTime(e.freq, i);
+        if (e.to !== undefined) s.frequency.exponentialRampToValueAtTime(Math.max(1, e.to), i + u);
+        const c = o.createGain();
+        c.gain.setValueAtTime(0.0001, i);
+        c.gain.exponentialRampToValueAtTime(l, i + f);
+        c.gain.exponentialRampToValueAtTime(0.0001, i + u);
+        s.connect(c);
+        let d = c;
+        if (e.cutoff !== undefined) {
+          const t = o.createBiquadFilter();
+          t.type = e.filter ?? "lowpass";
+          t.frequency.value = e.cutoff;
+          t.Q.value = e.q ?? 0.7;
+          c.connect(t);
+          d = t;
+        }
+        routeVoice(d, s, e.pan, o, a, i + u + 0.02, () => s.start(i));
+      }
+
+      function tap(e = 1) {
+        noise({ filter: "lowpass", freq: 1500, dur: 0.022, gain: 0.295 * e, q: 0.5 });
+        tone({ freq: detune(196), to: 120, dur: 0.07, gain: 0.1023 * e, cutoff: 900 });
+      }
+
+      return {
+        toggle(e) {
+          tap(0.7);
+          const t = e ? pentatonic(1) : pentatonic(3);
+          const r = e ? pentatonic(3) : pentatonic(1);
+          tone({ freq: t, dur: 0.06, gain: 0.057, cutoff: 2400 });
+          tone({ freq: r, dur: 0.14, gain: 0.0665, delay: 0.045, attack: 0.006, cutoff: 2400 });
+        },
+        plop(e, t = 1) {
+          const r = stereo(e);
+          noise({ filter: "lowpass", freq: 1400, to: 260, dur: 0.09, gain: 1.177 * t, q: 0.7, pan: r });
+          const o = detune(760, 140);
+          tone({ freq: o, to: 1.5 * o, dur: 0.028, gain: 0.18 * t, cutoff: 3000, pan: r });
+          const a = detune(1150, 200);
+          tone({ freq: a, to: 1.4 * a, dur: 0.018, gain: 0.09 * t, cutoff: 4000, delay: 0.035 + 0.03 * Math.random(), pan: r + 0.06 });
+        },
+        pellets(e) {
+          if (throttled("pellets", 130)) return;
+          const r = stereo(e);
+          const o = 3 + Math.floor(3 * Math.random());
+          for (let i = 0; i < o; i++) {
+            noise({
+              filter: "bandpass",
+              freq: 1800 + 2200 * Math.random(),
+              dur: 0.01,
+              gain: 0.306,
+              q: 1.4,
+              delay: 0.12 * Math.random(),
+              pan: r + (Math.random() - 0.5) * 0.3,
+            });
+          }
+          const a = detune(1300, 220);
+          tone({ freq: a, to: 1.4 * a, dur: 0.02, gain: 0.0884, cutoff: 4000, delay: 0.045, pan: r });
+        },
+        surface(e) {
+          const t = stereo(e);
+          noise({ filter: "lowpass", freq: 260, to: 2000, dur: 0.11, gain: 1.896, q: 0.6, pan: t });
+          noise({ filter: "lowpass", freq: 1600, to: 400, dur: 0.13, gain: 1.138, q: 0.6, delay: 0.1, pan: t });
+          const r = detune(680, 160);
+          tone({ freq: r, to: 1.5 * r, dur: 0.025, gain: 0.2, cutoff: 3000, delay: 0.12, pan: t });
+        },
+        nibble(e) {
+          if (throttled("nibble", 240)) return;
+          const r = stereo(e);
+          let o = 0;
+          for (let i = 0; i < 3; i++) {
+            noise({ filter: "bandpass", freq: 900 + 700 * Math.random(), dur: 0.014, gain: 0.3936, q: 1.1, delay: o, pan: r });
+            o += 0.03 + 0.03 * Math.random();
+          }
+        },
+        chomp(e) {
+          const t = stereo(e);
+          noise({ filter: "lowpass", freq: 2600, to: 500, dur: 0.06, gain: 0.774, q: 0.7, pan: t });
+          noise({ filter: "bandpass", freq: 700, dur: 0.02, gain: 0.3612, q: 1.2, delay: 0.03, pan: t });
+          const r = detune(520, 120);
+          tone({ freq: r, to: 1.35 * r, dur: 0.02, gain: 0.1836, cutoff: 2600, delay: 0.045, pan: t });
+        },
+        chirp(e, t) {
+          const r = stereo(t);
+          const o = 300 * Math.pow(1.14, ((e % 5) + 5) % 5);
+          tone({ freq: 1.12 * o, to: 0.86 * o, dur: 0.09, gain: 0.61, type: "sawtooth", filter: "bandpass", cutoff: 3.4 * o, q: 3.2, attack: 0.006, pan: r });
+          noise({ filter: "bandpass", freq: 3.4 * o, dur: 0.05, gain: 0.2916, q: 2.5, pan: r });
+        },
+      };
+    })();
+
+    // ==========================================================================
+    // 3. NOISE, SDF EDGE MASK & PAPER GRAIN OVERLAY (LAYER 3)
+    // ==========================================================================
+    function intHash(e, t) {
+      let r = (0x165667b1 * e + 0x27d4eb2f * t) | 0;
+      r = Math.imul(r ^ (r >> 13), 0x4bf19f61);
+      return ((r ^ (r >> 16)) & 0x7fffffff) / 0x7fffffff;
+    }
+
+    function valueNoise(e, r, a) {
+      const o = e * a, n = r * a;
+      const l = Math.floor(o), i = Math.floor(n);
+      const s = o - l, c = n - i;
+      const d = s * s * (3 - 2 * s), u = c * c * (3 - 2 * c);
+      return (
+        (intHash(l, i) * (1 - d) + intHash(l + 1, i) * d) * (1 - u) +
+        (intHash(l, i + 1) * (1 - d) + intHash(l + 1, i + 1) * d) * u
+      );
+    }
+
+    function fractalNoise(e, t) {
+      return 0.6 * valueNoise(e, t, 0.004) + 0.25 * valueNoise(e, t, 0.01) + 0.15 * valueNoise(e, t, 0.025);
+    }
+
+    function filmGrain(e, t, r) {
+      const a = Math.random();
+      if (a < 0.6 * t) return r * (0.5 + 0.5 * Math.random()) * e;
+      if (a < t) return -(r * (0.3 + 0.4 * Math.random()) * e);
+      return ((Math.random() + Math.random() + Math.random()) / 3 - 0.5) * e * 2;
+    }
+
+    function evalEdgeSDF(e, t, r, a) {
+      const o = (PAPER.edgeMargin / 100) * Math.min(r, a);
+      const n = r / 2, l = a / 2;
+      const i = n - o, s = l - o;
+      const c = Math.min(i, s);
+      const d = (PAPER.cornerRadius / 100) * c;
+      const u = (PAPER.edgeNoise / 100) * Math.min(r, a) * 0.06;
+      const p = Math.abs(e - n) - (i - d);
+      const g = Math.abs(t - l) - (s - d);
+      const m = Math.max(p, 0), b = Math.max(g, 0);
+      let x = Math.sqrt(m * m + b * b) + Math.min(Math.max(p, g), 0) - d;
+      if (u > 0) x += (2 * fractalNoise(e, t) - 1) * u;
+      return x;
+    }
+
+    function createEdgeMask(e, a) {
+      const o = new Float32Array(e * a);
+      const n = (PAPER.edgeMargin / 100) * Math.min(e, a);
+      const l = e / 2, i = a / 2;
+      const s = l - n, c = i - n;
+      const d = Math.min(s, c);
+      const u = (PAPER.cornerRadius / 100) * d;
+      const h = (PAPER.edgeNoise / 100) * Math.min(e, a) * 0.06;
+      for (let t = 0; t < a; t++) {
+        for (let x = 0; x < e; x++) {
+          const p = Math.abs(x - l) - (s - u);
+          const g = Math.abs(t - i) - (c - u);
+          const f = Math.max(p, 0), m = Math.max(g, 0);
+          let dist = Math.sqrt(f * f + m * m) + Math.min(Math.max(p, g), 0) - u;
+          if (h > 0) dist += (2 * fractalNoise(x, t) - 1) * h;
+          o[t * e + x] = dist;
+        }
+      }
+      return o;
+    }
+
+    function applyPaperBackdrop(e, t, r, a) {
+      for (let o = 0; o < t.length; o++) {
+        const n = t[o], l = 4 * o;
+        if (n > 0) {
+          e[l] = a.r;
+          e[l + 1] = a.g;
+          e[l + 2] = a.b;
+          e[l + 3] = 255;
+        } else if (r > 0 && -n < r) {
+          const tVal = -n / r;
+          const oVal = 1 - tVal * tVal * (3 - 2 * tVal);
+          const i = e[l + 3] / 255;
+          const s = oVal + i * (1 - oVal);
+          if (s > 0) {
+            e[l] = Math.round((a.r * oVal + e[l] * i * (1 - oVal)) / s);
+            e[l + 1] = Math.round((a.g * oVal + e[l + 1] * i * (1 - oVal)) / s);
+            e[l + 2] = Math.round((a.b * oVal + e[l + 2] * i * (1 - oVal)) / s);
+          }
+          e[l + 3] = Math.round(255 * s);
+        }
+      }
+    }
+
+    function renderPaperOverlay(canvas, mask) {
+      const f = canvas.width, p = canvas.height;
+      if (f === 0 || p === 0) return;
+      const g = canvas.getContext("2d");
+
+      // Pass 1: Film grain + smoothstep edge fade
+      const img = g.createImageData(f, p);
+      const s = img.data;
+      const d = (PAPER.edgeFade / 100) * Math.min(f, p) * 0.45;
+      const u = (PAPER.grain / 100) * 80;
+      const h = PAPER.grainPop / 100;
+      const popP = 0.15 * h;
+      const popM = 1.5 + 2.5 * h;
+      const warm = 0.3 * PAPER.warmth;
+      const bright = (PAPER.brightness / 100) * 255;
+
+      for (let y = 0; y < p; y++) {
+        for (let x = 0; x < f; x++) {
+          const r = y * f + x;
+          const n = 4 * r;
+          const i = mask[r];
+          if (i > 0) continue;
+          let cr = warm + bright, cb = bright, cx = -warm + bright;
+          const gr = filmGrain(u, popP, popM);
+          const v = ((cr += gr) + (cb += gr) + (cx += gr)) / 3;
+          const C = Math.min(255, Math.max(0, 0.7 * Math.abs(v)));
+          if (v >= 0) {
+            s[n] = Math.min(255, 245 + Math.round(0.5 * warm));
+            s[n + 1] = 240;
+            s[n + 2] = Math.max(0, 230 - Math.round(0.3 * warm));
+            s[n + 3] = Math.round(C);
+          } else {
+            s[n] = 30;
+            s[n + 1] = 25;
+            s[n + 2] = 20;
+            s[n + 3] = Math.round(0.6 * C);
+          }
+          if (d > 0 && -i < d) {
+            const e = -i / d;
+            const t = Math.round(255 * (1 - e * e * (3 - 2 * e)));
+            const rA = s[n + 3] / 255;
+            const aA = t / 255;
+            const o = rA + aA * (1 - rA);
+            if (o > 0) {
+              s[n] = Math.round((s[n] * rA + BG.r * aA * (1 - rA)) / o);
+              s[n + 1] = Math.round((s[n + 1] * rA + BG.g * aA * (1 - rA)) / o);
+              s[n + 2] = Math.round((s[n + 2] * rA + BG.b * aA * (1 - rA)) / o);
+            }
+            s[n + 3] = Math.round(255 * o);
+          }
+        }
+      }
+      g.putImageData(img, 0, 0);
+
+      // Pass 2: Radial fog & 3 warm light leaks
+      const cx = f / 2, cy = p / 2;
+      const maxR = Math.sqrt(cx * cx + cy * cy);
+      const fogA = (PAPER.fog / 100) * 0.35;
+      const fogGrad = g.createRadialGradient(cx, cy, 0.05 * f, cx, cy, maxR);
+      fogGrad.addColorStop(0, `rgba(240, 235, 228, ${fogA})`);
+      fogGrad.addColorStop(0.5, `rgba(240, 235, 228, ${0.6 * fogA})`);
+      fogGrad.addColorStop(1, `rgba(220, 215, 210, ${0.8 * fogA})`);
+      g.fillStyle = fogGrad;
+      g.globalCompositeOperation = "source-atop";
+      g.fillRect(0, 0, f, p);
+
+      const leakA = (PAPER.lightLeak / 100) * 0.35;
+      const leaks = [
+        { x: 0.15 * f, y: 0.2 * p, r: 0.5 * f },
+        { x: 0.85 * f, y: 0.7 * p, r: 0.4 * f },
+        { x: 0.5 * f, y: 0.1 * p, r: 0.35 * f },
+      ];
+      for (const lk of leaks) {
+        const o = g.createRadialGradient(lk.x, lk.y, 0, lk.x, lk.y, lk.r);
+        o.addColorStop(0, `rgba(255, 252, 245, ${leakA})`);
+        o.addColorStop(0.4, `rgba(255, 250, 240, ${0.4 * leakA})`);
+        o.addColorStop(1, "rgba(255, 250, 240, 0)");
+        g.fillStyle = o;
+        g.fillRect(0, 0, f, p);
+      }
+      g.globalCompositeOperation = "source-over";
+
+      // Pass 3: Solid paper backdrop outside SDF mask
+      const finalImg = g.getImageData(0, 0, f, p);
+      applyPaperBackdrop(finalImg.data, mask, 0, BG);
+      g.putImageData(finalImg, 0, 0);
+    }
+
+    // ==========================================================================
+    // 4. WEBGL SEASCAPE + SLOPE-WARPED RIPPLE SHADER (LAYER 1)
+    // ==========================================================================
+    const VERT_SRC = `
+      attribute vec2 a_position;
+      void main() {
+        gl_Position = vec4(a_position, 0.0, 1.0);
+      }
+    `;
+
+    const FRAG_SRC = `
+      precision highp float;
+
+      uniform float u_time;
+      uniform vec2 u_resolution;
+      uniform vec4 u_ripples[12];
+
+      float hash(vec2 p) {
+        float h = dot(p, vec2(127.1, 311.7));
+        return fract(sin(h) * 43758.5453123);
+      }
+
+      float noise(vec2 p) {
+        vec2 i = floor(p);
+        vec2 f = fract(p);
+        vec2 u = f * f * (3.0 - 2.0 * f);
+        return -1.0 + 2.0 * mix(
+          mix(hash(i), hash(i + vec2(1.0, 0.0)), u.x),
+          mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), u.x),
+          u.y
+        );
+      }
+
+      float sea_octave(vec2 uv, float choppy) {
+        uv += noise(uv);
+        vec2 wv = 1.0 - abs(sin(uv));
+        vec2 swv = abs(cos(uv));
+        wv = mix(wv, swv, wv);
+        return pow(1.0 - pow(wv.x * wv.y, 0.65), choppy);
+      }
+
+      const mat2 octave_m = mat2(1.6, 1.2, -1.2, 1.6);
+
+      float getHeight(vec2 uv) {
+        float SEA_TIME = u_time * 0.8;
+        float freq = 0.16;
+        float amp = 0.6;
+        float choppy = 4.0;
+        float h = 0.0;
+
+        for (int i = 0; i < 5; i++) {
+          float d  = sea_octave((uv + SEA_TIME) * freq, choppy);
+                d += sea_octave((uv - SEA_TIME) * freq, choppy);
+          h += d * amp;
+          uv *= octave_m;
+          freq *= 1.9;
+          amp *= 0.22;
+          choppy = mix(choppy, 1.0, 0.2);
+        }
+        return h;
+      }
+
+      vec3 getNormal(vec2 uv, float eps) {
+        float h  = getHeight(uv);
+        float hx = getHeight(uv + vec2(eps, 0.0));
+        float hy = getHeight(uv + vec2(0.0, eps));
+        return normalize(vec3(h - hx, eps * 8.0, h - hy));
+      }
+
+      float ripple(vec2 pos, vec2 center, float time, float dropTime) {
+        float age = time - dropTime;
+        if (age < 0.0 || age > 4.0) return 0.0;
+
+        float eps = 0.04;
+        float hc = getHeight(pos);
+        float hx = getHeight(pos + vec2(eps, 0.0));
+        float hy = getHeight(pos + vec2(0.0, eps));
+        vec2 grad = vec2(hx - hc, hy - hc) / eps;
+
+        vec2 diff = pos - center + grad * 1.2;
+
+        float n = noise(pos * 3.0 + time * 0.5) * 0.15;
+        diff += vec2(n, -n);
+
+        float dist = length(diff);
+
+        float speedMod = 1.0 + hc * 0.3;
+        float wavefront = age * 4.5 * speedMod;
+        float envelope = exp(-pow(dist - wavefront, 2.0) / 1.5);
+        float decay = exp(-age * 1.4);
+
+        return 0.45 * envelope * decay * cos(dist * 5.0 - time * 6.0);
+      }
+
+      vec3 getWaterColor(vec2 uv, vec3 normal, float height) {
+        vec3 deepColor = vec3(0.02, 0.18, 0.32);
+        vec3 waterColor = vec3(0.25, 0.65, 0.60);
+        vec3 skyColor = vec3(0.50, 0.82, 0.88);
+
+        vec3 lightDir = normalize(vec3(0.4, 0.7, 0.3));
+        vec3 eye = vec3(0.0, 1.0, 0.0);
+
+        float fresnel = 1.0 - max(dot(normal, eye), 0.0);
+        fresnel = clamp(pow(fresnel, 3.0) * 0.65, 0.0, 1.0);
+
+        float diff = pow(dot(normal, lightDir) * 0.4 + 0.6, 80.0);
+        vec3 refracted = deepColor + diff * waterColor * 0.12;
+
+        vec3 color = mix(refracted, skyColor, fresnel);
+
+        color += waterColor * (height - 0.6) * 0.18;
+
+        vec3 refl = reflect(-eye, normal);
+        float spec = pow(max(dot(refl, lightDir), 0.0), 60.0);
+        float nrm = (60.0 + 8.0) / (3.14159 * 8.0);
+        color += vec3(spec * nrm * 0.15);
+
+        return color;
+      }
+
+      void main() {
+        vec2 px = gl_FragCoord.xy;
+        px.y = u_resolution.y - px.y;
+        vec2 res = u_resolution;
+
+        float scale = 30.0;
+        vec2 uv = (px / min(res.x, res.y)) * scale;
+
+        float height = getHeight(uv);
+
+        for (int i = 0; i < 12; i++) {
+          vec2 mouseUV = (u_ripples[i].xy / min(res.x, res.y)) * scale;
+          float dropTime = u_ripples[i].z;
+          float amp = u_ripples[i].w;
+          height += ripple(uv, mouseUV, u_time, dropTime) * amp;
+        }
+
+        vec3 normal = getNormal(uv, 0.01);
+        vec3 color = getWaterColor(uv, normal, height);
+        color = pow(max(color, vec3(0.0)), vec3(0.75));
+
+        gl_FragColor = vec4(clamp(color, 0.0, 1.0), 1.0);
+      }
+    `;
+
+    const waveCanvas = document.getElementById("wave-canvas");
+    const paperCanvas = document.getElementById("paper-canvas");
+    const plantCanvas = document.getElementById("plant-canvas");
+    const pondContainer = document.getElementById("pond-container");
+
+    let simTime = 0;
+    const startTime = performance.now();
+    const ripples = [];
+
+    function triggerRippleAt(nx, ny, amp = 1) {
+      const now = (performance.now() - startTime) / 1000;
+      const x = nx * waveCanvas.width;
+      const y = ny * waveCanvas.height;
+      let w = 0;
+      for (let i = 0; i < ripples.length; i++) {
+        if (now - ripples[i].time < 4) ripples[w++] = ripples[i];
+      }
+      ripples.length = w;
+      if (ripples.length >= 12) ripples.shift();
+      ripples.push({ x, y, time: now, amp });
+    }
+
+    function compileShader(gl, type, src) {
+      const s = gl.createShader(type);
+      gl.shaderSource(s, src);
+      gl.compileShader(s);
+      if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
+        console.error(gl.getShaderInfoLog(s));
+        return null;
+      }
+      return s;
+    }
+
+    const gl = waveCanvas.getContext("webgl", { antialias: false, alpha: false });
+    const vs = compileShader(gl, gl.VERTEX_SHADER, VERT_SRC);
+    const fs = compileShader(gl, gl.FRAGMENT_SHADER, FRAG_SRC);
+    const prog = gl.createProgram();
+    gl.attachShader(prog, vs);
+    gl.attachShader(prog, fs);
+    gl.linkProgram(prog);
+    gl.useProgram(prog);
+
+    const quadBuf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, quadBuf);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]), gl.STATIC_DRAW);
+    const aPos = gl.getAttribLocation(prog, "a_position");
+    gl.enableVertexAttribArray(aPos);
+    gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
+
+    const uTimeLoc = gl.getUniformLocation(prog, "u_time");
+    const uResLoc = gl.getUniformLocation(prog, "u_resolution");
+    const uRippleLocs = [];
+    for (let i = 0; i < 12; i++) uRippleLocs.push(gl.getUniformLocation(prog, `u_ripples[${i}]`));
+
+    // ==========================================================================
+    // 5. OVERSIZED SHORELINE PLANT & CATTAIL CANVAS (LAYER 5)
+    // ==========================================================================
+    const PLANT_COLORS = [
+      "rgba(120, 160, 105, 0.72)",
+      "rgba(130, 168, 112, 0.68)",
+      "rgba(112, 152, 100, 0.65)",
+      "rgba(135, 172, 118, 0.62)",
+      "rgba(125, 164, 108, 0.68)",
+    ];
+
+    const PLANT_SPECS = [
+      { edge: "bottom", along: 0.06, bladeCount: 12, spread: 0.03, heightRange: [80, 150], cattailChance: 0.25 },
+      { edge: "bottom", along: 0.12, bladeCount: 10, spread: 0.025, heightRange: [70, 130], cattailChance: 0.2 },
+      { edge: "bottom", along: 0.18, bladeCount: 8, spread: 0.025, heightRange: [55, 110], cattailChance: 0.15 },
+      { edge: "bottom", along: 0.24, bladeCount: 6, spread: 0.02, heightRange: [42, 90], cattailChance: 0.1 },
+      { edge: "bottom", along: 0.3, bladeCount: 4, spread: 0.018, heightRange: [35, 70], cattailChance: 0.1 },
+      { edge: "bottom", along: 0.42, bladeCount: 3, spread: 0.02, heightRange: [28, 55], cattailChance: 0.15 },
+      { edge: "bottom", along: 0.55, bladeCount: 3, spread: 0.018, heightRange: [25, 50], cattailChance: 0.2 },
+      { edge: "bottom", along: 0.7, bladeCount: 4, spread: 0.018, heightRange: [35, 70], cattailChance: 0.1 },
+      { edge: "bottom", along: 0.76, bladeCount: 5, spread: 0.02, heightRange: [38, 85], cattailChance: 0.1 },
+      { edge: "bottom", along: 0.82, bladeCount: 7, spread: 0.025, heightRange: [52, 105], cattailChance: 0.15 },
+      { edge: "bottom", along: 0.88, bladeCount: 9, spread: 0.025, heightRange: [62, 125], cattailChance: 0.2 },
+      { edge: "bottom", along: 0.94, bladeCount: 11, spread: 0.03, heightRange: [75, 145], cattailChance: 0.25 },
+      { edge: "left", along: 0.22, bladeCount: 3, spread: 0.01, heightRange: [32, 62], cattailChance: 0.3 },
+      { edge: "left", along: 0.35, bladeCount: 3, spread: 0.012, heightRange: [35, 70], cattailChance: 0.3 },
+      { edge: "left", along: 0.5, bladeCount: 4, spread: 0.012, heightRange: [42, 84], cattailChance: 0.35 },
+      { edge: "left", along: 0.65, bladeCount: 5, spread: 0.015, heightRange: [48, 98], cattailChance: 0.3 },
+      { edge: "left", along: 0.8, bladeCount: 6, spread: 0.018, heightRange: [55, 110], cattailChance: 0.3 },
+      { edge: "right", along: 0.25, bladeCount: 3, spread: 0.01, heightRange: [32, 62], cattailChance: 0.3 },
+      { edge: "right", along: 0.38, bladeCount: 3, spread: 0.012, heightRange: [35, 70], cattailChance: 0.35 },
+      { edge: "right", along: 0.52, bladeCount: 4, spread: 0.012, heightRange: [38, 76], cattailChance: 0.3 },
+      { edge: "right", along: 0.68, bladeCount: 5, spread: 0.015, heightRange: [45, 90], cattailChance: 0.3 },
+      { edge: "right", along: 0.82, bladeCount: 6, spread: 0.018, heightRange: [52, 105], cattailChance: 0.25 },
+      { edge: "top", along: 0.08, bladeCount: 6, spread: 0.02, heightRange: [48, 98], cattailChance: 0.2 },
+      { edge: "top", along: 0.15, bladeCount: 4, spread: 0.018, heightRange: [38, 76], cattailChance: 0.15 },
+      { edge: "top", along: 0.35, bladeCount: 3, spread: 0.018, heightRange: [28, 55], cattailChance: 0.2 },
+      { edge: "top", along: 0.6, bladeCount: 3, spread: 0.018, heightRange: [25, 52], cattailChance: 0.25 },
+      { edge: "top", along: 0.85, bladeCount: 4, spread: 0.018, heightRange: [35, 70], cattailChance: 0.15 },
+      { edge: "top", along: 0.92, bladeCount: 5, spread: 0.02, heightRange: [45, 90], cattailChance: 0.2 },
+    ];
+
+    function findShoreline(edge, along, r, a) {
+      let o, n;
+      if (edge === "bottom") {
+        const x = along * r;
+        o = 0.5 * a; n = a;
+        for (let i = 0; i < 20; i++) {
+          const mid = (o + n) / 2;
+          if (evalEdgeSDF(x, mid, r, a) < -20) o = mid; else n = mid;
+        }
+        return (o + n) / 2 / a;
+      }
+      if (edge === "top") {
+        const x = along * r;
+        o = 0; n = 0.5 * a;
+        for (let i = 0; i < 20; i++) {
+          const mid = (o + n) / 2;
+          if (evalEdgeSDF(x, mid, r, a) < -20) n = mid; else o = mid;
+        }
+        return (o + n) / 2 / a;
+      }
+      if (edge === "left") {
+        const y = along * a;
+        o = 0; n = 0.5 * r;
+        for (let i = 0; i < 20; i++) {
+          const mid = (o + n) / 2;
+          if (evalEdgeSDF(mid, y, r, a) < -20) n = mid; else o = mid;
+        }
+        return (o + n) / 2 / r;
+      }
+      const y = along * a;
+      o = 0.5 * r; n = r;
+      for (let i = 0; i < 20; i++) {
+        const mid = (o + n) / 2;
+        if (evalEdgeSDF(mid, y, r, a) < -20) o = mid; else n = mid;
+      }
+      return (o + n) / 2 / r;
+    }
+
+    function buildPlantClusters(e, t, seed = 42) {
+      let a = seed | 0;
+      const rand = () => {
+        a = (a + 0x6d2b79f5) | 0;
+        let x = Math.imul(a ^ (a >>> 15), 1 | a);
+        x = (x + Math.imul(x ^ (x >>> 7), 61 | x)) ^ x;
+        return ((x ^ (x >>> 14)) >>> 0) / 0x100000000;
+      };
+      return PLANT_SPECS.map((r) => {
+        const l = findShoreline(r.edge, r.along, e, t);
+        const cx = r.edge === "bottom" || r.edge === "top" ? r.along : l;
+        const cy = r.edge === "bottom" || r.edge === "top" ? l : r.along;
+        const blades = [];
+        for (let i = 0; i < r.bladeCount; i++) {
+          const frac = r.bladeCount > 1 ? i / (r.bladeCount - 1) : 0.5;
+          const isCat = rand() < r.cattailChance;
+          const s = (frac - 0.5) * 0.8;
+          let c = (rand() - 0.5) * r.spread;
+          let d = (rand() - 0.5) * r.spread * 0.3;
+          if (r.edge === "left" || r.edge === "right") [c, d] = [d, c];
+          const u = r.heightRange[0] + rand() * (r.heightRange[1] - r.heightRange[0]);
+          blades.push({
+            baseX: cx + c,
+            baseY: cy + d,
+            height: u,
+            lean: s + (rand() - 0.5) * 0.3,
+            curve: 0.15 + 0.35 * rand(),
+            width: isCat ? 1.2 + 0.6 * rand() : 0.6 + 0.9 * rand(),
+            color: PLANT_COLORS[Math.floor(rand() * PLANT_COLORS.length)],
+            windPhase: rand() * Math.PI * 2,
+            windFlex: 0.3 + 0.5 * rand(),
+            type: isCat ? "cattail" : "reed",
+            headHeight: isCat ? 8 + 7 * rand() : undefined,
+          });
+        }
+        blades.sort((x, y) => y.height - x.height);
+        return { x: cx, y: cy, blades };
+      });
+    }
+
+    let plantClusters = [];
+    const plantCtx = plantCanvas.getContext("2d");
+
+    function drawBlade(ctx, t, r, a, o) {
+      const n = t.baseX * r, l = t.baseY * a;
+      const i = 8 * Math.sin(0.8 * o + t.windPhase) * t.windFlex + 3 * Math.sin(0.3 * o + 0.7 * t.windPhase + 0.01 * n) * t.windFlex;
+      const s = t.lean + (i / t.height) * 0.5;
+      const c = n + Math.sin(s) * t.height + i * t.curve;
+      const d = l - Math.cos(s) * t.height;
+      const u = n + Math.sin(0.4 * s) * t.height * 0.55 + i * t.curve * 0.3;
+      const h = l - Math.cos(0.4 * s) * t.height * 0.55;
+      const f = 0.5 * t.width;
+      const p = Math.cos(0.3 * s), g = Math.sin(0.3 * s);
+
+      ctx.beginPath();
+      ctx.moveTo(n - p * f, l - g * f);
+      ctx.quadraticCurveTo(u - p * f * 0.5, h, c, d);
+      ctx.quadraticCurveTo(u + p * f * 0.5, h, n + p * f, l + g * f);
+      ctx.closePath();
+      ctx.fillStyle = t.color;
+      ctx.fill();
+
+      if (t.type === "cattail" && t.headHeight) {
+        const hx = n + Math.sin(0.72 * s) * t.height * 0.72 + i * t.curve * 0.36;
+        const hy = l - Math.cos(0.72 * s) * t.height * 0.72;
+        const rot = 0.6 * s;
+        const ry = 0.55 * t.headHeight;
+        const rx = 1.3 * t.width;
+        ctx.save();
+        ctx.translate(hx, hy);
+        ctx.rotate(rot);
+        ctx.beginPath();
+        ctx.ellipse(0, 0, rx + 1.2, ry + 1.5, 0, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(140, 118, 98, 0.25)";
+        ctx.fill();
+
+        const grad = ctx.createRadialGradient(0, 0, 0, 0, 0, Math.max(rx, ry));
+        grad.addColorStop(0, "rgba(95, 68, 52, 0.75)");
+        grad.addColorStop(0.6, "rgba(120, 92, 72, 0.55)");
+        grad.addColorStop(1, "rgba(125, 108, 92, 0.08)");
+        ctx.beginPath();
+        ctx.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2);
+        ctx.fillStyle = grad;
+        ctx.fill();
+
+        ctx.strokeStyle = "rgba(65, 48, 38, 0.12)";
+        ctx.lineWidth = 0.3;
+        for (let ty = -0.6 * ry; ty < 0.6 * ry; ty += 3.5) {
+          const span = rx * Math.sqrt(1 - (ty / ry) * (ty / ry)) * 0.85;
+          ctx.beginPath();
+          ctx.moveTo(-span, ty);
+          ctx.lineTo(span, ty);
+          ctx.stroke();
+        }
+        const spike = 0.8 * t.headHeight;
+        ctx.beginPath();
+        ctx.moveTo(0, -ry);
+        ctx.lineTo(-0.35, -ry - 0.35 * spike);
+        ctx.lineTo(0, -ry - spike);
+        ctx.lineTo(0.35, -ry - 0.35 * spike);
+        ctx.closePath();
+        ctx.fillStyle = "rgba(125, 160, 108, 0.6)";
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    // ==========================================================================
+    // 6. SVG GENERATORS FOR DUCK, MALLARD & FISH (LAYER 2)
+    // ==========================================================================
+    function createDuckSVGMarkup(mallard) {
+      const wingFill = mallard ? "#7A7268" : "#E8E2D8";
+      const wingShadow = mallard ? "#5A5248" : "#C4BAA8";
+      const wingStroke1 = mallard ? "#6A6258" : "#CCC4B4";
+      const wingStroke2 = mallard ? "#7A7268" : "#D4CCC0";
+      const wingEdge = mallard ? "#5A5248" : "#B8B0A0";
+      const beakStroke = mallard ? "#806818" : "#B07020";
+
+      return `
+        <svg width="72" height="72" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="duck-shadow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+            </filter>
+            <radialGradient id="body-grad" cx="0.48" cy="0.38" r="0.55">
+              <stop offset="0%" stop-color="#FAF7F2" />
+              <stop offset="60%" stop-color="#F0EBE3" />
+              <stop offset="100%" stop-color="#DDD6CA" />
+            </radialGradient>
+            <radialGradient id="mallard-body-grad" cx="0.48" cy="0.38" r="0.55">
+              <stop offset="0%" stop-color="#A8A098" />
+              <stop offset="60%" stop-color="#8E8680" />
+              <stop offset="100%" stop-color="#726B64" />
+            </radialGradient>
+            <radialGradient id="head-grad" cx="0.46" cy="0.38" r="0.55">
+              <stop offset="0%" stop-color="white" />
+              <stop offset="50%" stop-color="#F5F1EB" />
+              <stop offset="100%" stop-color="#E4DED4" />
+            </radialGradient>
+            <radialGradient id="mallard-head-grad" cx="0.46" cy="0.38" r="0.55">
+              <stop offset="0%" stop-color="#2D6B4A" />
+              <stop offset="50%" stop-color="#1B5E3A" />
+              <stop offset="100%" stop-color="#0F4028" />
+            </radialGradient>
+            <linearGradient id="beak-grad" x1="0.5" y1="0" x2="0.5" y2="1">
+              <stop offset="0%" stop-color="#F0B848" />
+              <stop offset="100%" stop-color="#D89028" />
+            </linearGradient>
+            <linearGradient id="mallard-beak-grad" x1="0.5" y1="0" x2="0.5" y2="1">
+              <stop offset="0%" stop-color="#C8A830" />
+              <stop offset="100%" stop-color="#A08020" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="24" cy="27" rx="10" ry="7.5" fill="none" stroke="#1a4a65" stroke-width="0.4" opacity="0.06" />
+          <ellipse cx="24" cy="27" rx="11.5" ry="8.5" fill="none" stroke="#1a4a65" stroke-width="0.25" opacity="0.04" />
+          <ellipse cx="24.5" cy="28" rx="7.5" ry="6" fill="#1a4a65" opacity="0.08" filter="url(#duck-shadow)" />
+          <g class="duck-foot" opacity="0.35" style="display:none;">
+            <line class="foot-leg" x1="22" y1="33" x2="22" y2="36" stroke="#E8A030" stroke-width="1" stroke-linecap="round" opacity="0.6" />
+            <g class="foot-web" transform="translate(21.5, 35.5)">
+              <path d="M-0.8 0 L-1.5 2 L-0.3 1.5 L0.5 2.5 L1.3 1.5 L2.5 2 L1.8 0Z" fill="#E8A030" />
+              <path d="M-0.8 0 L-1.5 2 L-0.3 1.5 L0.5 2.5 L1.3 1.5 L2.5 2 L1.8 0Z" fill="none" stroke="#C07820" stroke-width="0.2" opacity="0.5" />
+            </g>
+          </g>
+          <g>
+            <path d="M22 34 Q24 38, 26 34" fill="${mallard ? "#6A6258" : "#E0D8CC"}" />
+            <path d="M23 34 Q24 36.5, 25 34" fill="${mallard ? "#7A7268" : "#E8E2D8"}" />
+          </g>
+          <g>
+            <ellipse cx="24" cy="26" rx="7" ry="8.5" fill="${mallard ? "url(#mallard-body-grad)" : "url(#body-grad)"}" />
+            <path d="M17.5 28 Q20 34, 24 35 Q28 34, 30.5 28" fill="${mallard ? "#5A5450" : "#C8C0B0"}" opacity="0.35" />
+            <path d="M17.2 22 Q16.8 27, 17.8 32" fill="none" stroke="${mallard ? "#605850" : "#C4BAA8"}" stroke-width="2" opacity="0.12" />
+            <path d="M30.8 22 Q31.2 27, 30.2 32" fill="none" stroke="${mallard ? "#605850" : "#C4BAA8"}" stroke-width="2" opacity="0.12" />
+            <ellipse cx="23" cy="23" rx="2.5" ry="3" fill="white" opacity="${mallard ? 0.12 : 0.2}" />
+            <path d="M30 22 Q31 26, 30 30" fill="none" stroke="white" stroke-width="0.5" opacity="0.08" />
+            <ellipse cx="24" cy="26" rx="7" ry="8.5" fill="none" stroke="${mallard ? "#6A6258" : "#B8B0A0"}" stroke-width="0.35" opacity="0.18" />
+          </g>
+          <g>
+            <path d="M17.5 22 Q16 26.5, 17.5 32 Q19.5 27.5, 17.5 22Z" fill="${wingShadow}" opacity="0.15" />
+            <path d="M17 21 Q15.5 26.5, 17 32.5 Q19.5 27, 17 21Z" fill="${wingFill}" />
+            <path d="M17.2 21.5 Q19 21, 19.2 22" fill="none" stroke="white" stroke-width="0.4" opacity="0.15" />
+            <path d="M17.8 23 Q17 26.5, 17.8 30" fill="none" stroke="${wingStroke1}" stroke-width="0.4" opacity="0.3" />
+            <path d="M18.3 24 Q17.5 27, 18.3 29" fill="none" stroke="${wingStroke2}" stroke-width="0.3" opacity="0.22" />
+            <path d="M17 21 Q15.5 26.5, 17 32.5" fill="none" stroke="${wingEdge}" stroke-width="0.35" opacity="0.25" />
+            <path d="M30.5 22 Q32 26.5, 30.5 32 Q28.5 27.5, 30.5 22Z" fill="${wingShadow}" opacity="0.15" />
+            <path d="M31 21 Q32.5 26.5, 31 32.5 Q28.5 27, 31 21Z" fill="${wingFill}" />
+            <path d="M30.8 21.5 Q29 21, 28.8 22" fill="none" stroke="white" stroke-width="0.4" opacity="0.15" />
+            <path d="M30.2 23 Q31 26.5, 30.2 30" fill="none" stroke="${wingStroke1}" stroke-width="0.4" opacity="0.3" />
+            <path d="M29.7 24 Q30.5 27, 29.7 29" fill="none" stroke="${wingStroke2}" stroke-width="0.3" opacity="0.22" />
+            <path d="M31 21 Q32.5 26.5, 31 32.5" fill="none" stroke="${wingEdge}" stroke-width="0.35" opacity="0.25" />
+          </g>
+          <g>
+            <ellipse cx="24" cy="19.5" rx="3" ry="1.2" fill="${mallard ? "#0F4028" : "#C4BAA8"}" opacity="0.2" />
+            <ellipse cx="24" cy="18.5" rx="2.3" ry="1.5" fill="${mallard ? "#E8E4DC" : "#EDE8E0"}" />
+            <ellipse cx="24" cy="17.5" rx="2.8" ry="0.8" fill="${mallard ? "#0A3020" : "#C8C0B2"}" opacity="0.15" />
+            <circle cx="24" cy="15.2" r="3.2" fill="${mallard ? "url(#mallard-head-grad)" : "url(#head-grad)"}" />
+            <circle cx="23" cy="14" r="1.2" fill="${mallard ? "#4AE88A" : "white"}" opacity="${mallard ? 0.2 : 0.25}" />
+            <path d="M21 13.5 Q20.7 15.2, 21.3 16.5" fill="none" stroke="${mallard ? "#0A3020" : "#C8C0B2"}" stroke-width="0.8" opacity="0.2" />
+            <path d="M27 13.5 Q27.3 15.2, 26.7 16.5" fill="none" stroke="${mallard ? "#0A3020" : "#C8C0B2"}" stroke-width="0.8" opacity="0.2" />
+            <circle cx="24" cy="15.2" r="3.2" fill="none" stroke="${mallard ? "#0A3020" : "#B8B0A2"}" stroke-width="0.3" opacity="0.2" />
+            <circle cx="21.3" cy="15" r="0.6" fill="#1a1a1a" />
+            <circle cx="26.7" cy="15" r="0.6" fill="#1a1a1a" />
+            <circle cx="21.5" cy="14.8" r="0.2" fill="white" opacity="0.6" />
+            <circle cx="26.9" cy="14.8" r="0.2" fill="white" opacity="0.6" />
+          </g>
+          <g>
+            <path d="M21 13.2 Q24 14, 27 13.2" fill="${mallard ? "#0A3020" : "#C4BAA8"}" opacity="0.15" />
+            <path d="M20.8 13.5 Q20.2 11.5, 21.5 10 Q24 8.5, 26.5 10 Q27.8 11.5, 27.2 13.5" fill="${mallard ? "url(#mallard-beak-grad)" : "url(#beak-grad)"}" />
+            <path d="M22.5 10.5 Q24 9.5, 25.5 10.5" fill="white" opacity="0.15" />
+            <path d="M20.8 13.5 Q20.2 11.5, 21.5 10 Q24 8.5, 26.5 10 Q27.8 11.5, 27.2 13.5" fill="none" stroke="${beakStroke}" stroke-width="0.35" opacity="0.35" />
+            <ellipse cx="23" cy="11" rx="0.4" ry="0.2" fill="${beakStroke}" opacity="0.3" />
+            <ellipse cx="25" cy="11" rx="0.4" ry="0.2" fill="${beakStroke}" opacity="0.3" />
+            <path d="M23 9.8 Q24 8.9, 25 9.8" fill="${beakStroke}" opacity="0.25" />
+          </g>
+          <ellipse cx="22" cy="22" rx="4" ry="5" fill="white" opacity="0.06" />
+        </svg>
+      `;
+    }
+
+    function createFishSVGMarkup() {
+      return `
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="fish-body-grad" cx="0.45" cy="0.4" r="0.55">
+              <stop offset="0%" stop-color="#F4A460" />
+              <stop offset="60%" stop-color="#E8913A" />
+              <stop offset="100%" stop-color="#D07828" />
+            </radialGradient>
+            <filter id="fish-shadow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+            </filter>
+          </defs>
+          <ellipse cx="24" cy="24" rx="3.5" ry="5" fill="#1a4a65" opacity="0.06" filter="url(#fish-shadow)" />
+          <ellipse cx="24" cy="24" rx="4.5" ry="6.5" fill="none" stroke="#1a4a65" stroke-width="0.3" opacity="0.05" />
+          <path class="fish-tail" d="M24 31 L21 35 L27 35 Z" fill="#D07828" opacity="0.85" />
+          <ellipse cx="24" cy="24" rx="4" ry="8" fill="url(#fish-body-grad)" />
+          <ellipse cx="23.5" cy="23" rx="1.8" ry="4" fill="white" opacity="0.2" />
+          <path d="M24 18 Q21 24, 24 30" fill="none" stroke="#C06820" stroke-width="0.6" opacity="0.3" />
+          <circle cx="22.5" cy="19" r="1.2" fill="#2A2520" />
+          <circle cx="22.2" cy="18.7" r="0.4" fill="white" opacity="0.7" />
+          <ellipse cx="24" cy="24" rx="4" ry="8" fill="none" stroke="#B06818" stroke-width="0.3" opacity="0.2" />
+          <ellipse cx="23" cy="22" rx="1" ry="2" fill="white" opacity="0.1" />
+        </svg>
+      `;
+    }
+
+    // ==========================================================================
+    // 7. CPU WAVE PHYSICS & BOIDS SIMULATION (1:1 FROM CHUNK_2IOCGB)
+    // ==========================================================================
+    function cpuHash(x, y) {
+      const t = 43758.5453123 * Math.sin(127.1 * x + 311.7 * y);
+      return t - Math.floor(t);
+    }
+
+    function cpuSeaOctave(e, t, n) {
+      const r = Math.floor(e), s = Math.floor(t);
+      const l = e - r, o = t - s;
+      const c = l * l * (3 - 2 * l), d = o * o * (3 - 2 * o);
+      const h = cpuHash(r, s), u = cpuHash(r + 1, s), p = cpuHash(r, s + 1);
+      const x = -1 + 2 * ((h + (u - h) * c) * (1 - d) + (p + (cpuHash(r + 1, s + 1) - p) * c) * d);
+      let m = 1 - Math.abs(Math.sin((e += x)));
+      let y = 1 - Math.abs(Math.sin((t += x)));
+      const g = Math.abs(Math.cos(e)), v = Math.abs(Math.cos(t));
+      m += (g - m) * m;
+      y += (v - y) * y;
+      return Math.pow(1 - Math.pow(m * y, 0.65), n);
+    }
+
+    function cpuGetHeight(e, t, n, a = 2) {
+      const i = 0.8 * n;
+      let r = 0.16, s = 0.6, l = 4, o = 0, c = e, d = t;
+      for (let k = 0; k < a; k++) {
+        let val = cpuSeaOctave((c + i) * r, (d + i) * r, l);
+        val += cpuSeaOctave((c - i) * r, (d - i) * r, l);
+        o += val * s;
+        const nc = 1.6 * c + 1.2 * d;
+        const nd = -1.2 * c + 1.6 * d;
+        c = nc; d = nd;
+        r *= 1.9;
+        s *= 0.22;
+        l += (1 - l) * 0.2;
+      }
+      return o;
+    }
+
+    function sampleWave(e, t, n) {
+      const i = cpuGetHeight(e, t, n, 2);
+      return {
+        height: i,
+        slopeX: (cpuGetHeight(e + 0.05, t, n, 2) - i) / 0.05,
+        slopeY: (cpuGetHeight(e, t + 0.05, n, 2) - i) / 0.05,
+      };
+    }
+
+    function lerpDeg(e, t, n) {
+      let a = t - e;
+      while (a > 180) a -= 360;
+      while (a < -180) a += 360;
+      return e + a * n;
+    }
+
+    const floats = [];
+    const foods = [];
+    const hunterMap = new Map();
+    let entityIdSeq = 0;
+    let foodIdSeq = 0;
+    let dropCount = 0;
+    let nextBoostTime = 0;
+    let whirlpool = null;
+    let nextWhirlpoolTime = 12 + 4 * Math.random();
+    let aspectRatio = 1.5;
+    let feedMode = false;
+
+    const floatsLayer = document.getElementById("floats-layer");
+    const speechAnchor = document.getElementById("speech-bubble-anchor");
+    const speechTextEl = document.getElementById("speech-bubble-text");
+    let speakerIndex = 0;
+    let lastSpeechLine = null;
+    let speechTimeout = null;
+
+    function showDuckSpeech(idx) {
+      if (speechTimeout) clearTimeout(speechTimeout);
+      const line = pickRandom(DUCK_LINES, lastSpeechLine);
+      lastSpeechLine = line;
+      speakerIndex = idx;
+      speechTextEl.textContent = line;
+      speechAnchor.style.display = "block";
+      speechTimeout = setTimeout(() => {
+        speechAnchor.style.display = "none";
+      }, 4000 + 1500 * Math.random());
+    }
+
+    function showFishSpeech(idx) {
+      if (speechTimeout) clearTimeout(speechTimeout);
+      speakerIndex = idx;
+      speechTextEl.textContent = pickRandom(FISH_LINES);
+      speechAnchor.style.display = "block";
+      speechTimeout = setTimeout(() => {
+        speechAnchor.style.display = "none";
+      }, 3500 + 1500 * Math.random());
+    }
+
+    function spawnDuck(nx, ny, now) {
+      const active = floats.filter((e) => e.action !== "drowning" && e.action !== "leaving");
+      if (active.length >= 15) {
+        const oldest = active[0];
+        oldest.action = "leaving";
+        const t = oldest.nx, i = 1 - oldest.nx, r = oldest.ny, s = Math.min(t, i, r, 1 - oldest.ny);
+        oldest.heading = s === t ? Math.PI : s === i ? 0 : s === r ? -Math.PI / 2 : Math.PI / 2;
+        oldest.heading += (Math.random() - 0.5) * 0.3;
+        oldest.speed = 1.2;
+        oldest.speedBoost = 1.5;
+        oldest.actionEnd = now + 4;
+      }
+
+      const id = entityIdSeq++;
+      const heading = Math.random() * Math.PI * 2;
+      const mallard = Math.random() < 0.06;
+
+      const el = document.createElement("div");
+      el.className = "absolute pointer-events-auto cursor-pointer";
+      el.style.willChange = "transform, opacity";
+      el.style.filter = "blur(0.45px) drop-shadow(0 0 3px rgba(42,37,32,0.08))";
+      el.innerHTML = createDuckSVGMarkup(mallard);
+
+      const footGroup = el.querySelector(".duck-foot");
+      const footLeg = el.querySelector(".foot-leg");
+      const footWeb = el.querySelector(".foot-web");
+
+      const ent = {
+        id,
+        variant: { kind: "duck", mallard },
+        nx,
+        ny,
+        offsetY: 0,
+        rotation: (180 / Math.PI) * heading,
+        spawnTime: now,
+        scale: 0,
+        phase: 100 * Math.random(),
+        heading,
+        actionEnd: now + 1 + 2 * Math.random(),
+        action: "float",
+        paddleIntensity: 0,
+        turnRate: (Math.random() - 0.5) * 0.6,
+        speed: 0,
+        lastRipple: 0,
+        opacity: 1,
+        speedBoost: 1,
+        waveVx: 0,
+        waveVy: 0,
+        el,
+        footGroup,
+        footLeg,
+        footWeb,
+        footSide: Math.random() > 0.5 ? 1 : 0,
+        lastFootSwap: now,
+      };
+
+      el.addEventListener("click", (ev) => {
+        ev.stopPropagation();
+        const currentIdx = floats.indexOf(ent);
+        if (currentIdx >= 0) {
+          sfx.chirp(currentIdx, ent.nx);
+          showDuckSpeech(currentIdx);
+        }
+      });
+
+      floatsLayer.appendChild(el);
+      floats.push(ent);
+    }
+
+    function spawnFish(nx, ny, now) {
+      const id = entityIdSeq++;
+      const heading = Math.random() * Math.PI * 2;
+
+      const el = document.createElement("div");
+      el.className = "absolute pointer-events-auto cursor-pointer";
+      el.style.willChange = "transform, opacity";
+      el.style.filter = "blur(0.45px) drop-shadow(0 0 3px rgba(42,37,32,0.08))";
+      el.innerHTML = createFishSVGMarkup();
+
+      const tailPath = el.querySelector(".fish-tail");
+      const ent = {
+        id,
+        variant: { kind: "fish" },
+        nx,
+        ny,
+        offsetY: 0,
+        rotation: (180 / Math.PI) * heading,
+        spawnTime: now,
+        scale: 0,
+        phase: 100 * Math.random(),
+        heading,
+        actionEnd: now + 1 + 2 * Math.random(),
+        action: "paddle",
+        paddleIntensity: 0,
+        turnRate: 0,
+        speed: 0,
+        lastRipple: 0,
+        opacity: 1,
+        speedBoost: 1,
+        waveVx: 0,
+        waveVy: 0,
+        el,
+        tailPath,
+      };
+
+      floatsLayer.appendChild(el);
+      floats.push(ent);
+    }
+
+    function spawnFoodPellets(nx, ny, now) {
+      dropCount++;
+      if (dropCount % 4 === 0) {
+        spawnFish(nx, ny, now);
+        triggerRippleAt(nx, ny, 0.5);
+        sfx.surface(nx);
+
+        let nearestIdx = -1;
+        let bestDist = Infinity;
+        floats.forEach((f, idx) => {
+          if (f.variant.kind === "fish") return;
+          const dx = f.nx - nx, dy = f.ny - ny;
+          const dSq = dx * dx + dy * dy;
+          if (dSq < bestDist) {
+            bestDist = dSq;
+            nearestIdx = idx;
+          }
+        });
+        if (nearestIdx >= 0) {
+          showFishSpeech(nearestIdx);
+          const speakerNx = floats[nearestIdx]?.nx ?? nx;
+          setTimeout(() => sfx.chirp(nearestIdx, speakerNx), 190);
+        }
+        return;
+      }
+
+      sfx.pellets(nx);
+      triggerRippleAt(nx, ny, 1);
+
+      const id = foodIdSeq++;
+      const wrapper = document.createElement("div");
+      wrapper.className = "absolute inset-0 pointer-events-none";
+      wrapper.style.transition = "opacity 0.8s ease-out";
+      wrapper.style.willChange = "opacity";
+
+      const count = 5 + Math.floor(4 * Math.random());
+      for (let i = 0; i < count; i++) {
+        const px = nx + (Math.random() - 0.5) * 0.08;
+        const py = ny + (Math.random() - 0.5) * 0.08;
+        const size = 5 + 6 * Math.random();
+        const hue = 28 + 16 * Math.random();
+        const blur = 2 + 2 * Math.random();
+
+        const dotWrap = document.createElement("div");
+        dotWrap.className = "absolute pointer-events-none";
+        dotWrap.style.left = `${100 * px}%`;
+        dotWrap.style.top = `${100 * py}%`;
+        dotWrap.style.transform = "translate(-50%, -50%)";
+
+        const dot = document.createElement("div");
+        dot.className = "rounded-full";
+        dot.style.width = `${size}px`;
+        dot.style.height = `${size}px`;
+        dot.style.background = `radial-gradient(circle, hsla(${hue}, 45%, 60%, 0.5) 0%, hsla(${hue}, 40%, 45%, 0.3) 50%, hsla(${hue}, 35%, 35%, 0.1) 100%)`;
+        dot.style.filter = `blur(${blur}px)`;
+        dot.style.boxShadow = `0 0 ${2 * size}px hsla(${hue}, 35%, 50%, 0.2)`;
+
+        dotWrap.appendChild(dot);
+        wrapper.appendChild(dotWrap);
+      }
+
+      floatsLayer.insertBefore(wrapper, floatsLayer.firstChild);
+      foods.push({ id, nx, ny, startTime: now, arrivedTime: null, el: wrapper });
+    }
+
+    // Resize & Canvas Setup
+    function syncSizes() {
+      const rect = waveCanvas.getBoundingClientRect();
+      waveCanvas.width = Math.round(rect.width);
+      waveCanvas.height = Math.round(rect.height);
+      gl.viewport(0, 0, waveCanvas.width, waveCanvas.height);
+      gl.uniform2f(uResLoc, waveCanvas.width, waveCanvas.height);
+
+      paperCanvas.width = Math.round(rect.width);
+      paperCanvas.height = Math.round(rect.height);
+      const mask = createEdgeMask(paperCanvas.width, paperCanvas.height);
+      renderPaperOverlay(paperCanvas, mask);
+
+      const pRect = plantCanvas.getBoundingClientRect();
+      plantCanvas.width = Math.round(pRect.width);
+      plantCanvas.height = Math.round(pRect.height);
+      plantClusters = buildPlantClusters(plantCanvas.width - 400, plantCanvas.height - 400);
+
+      if (pondContainer.offsetWidth > 0 && pondContainer.offsetHeight > 0) {
+        aspectRatio = pondContainer.offsetWidth / pondContainer.offsetHeight;
+      }
+    }
+
+    syncSizes();
+    let resizeTimeout = 0;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(syncSizes, 150);
+    });
+
+    // Interaction Handlers
+    pondContainer.addEventListener("click", (e) => {
+      const rect = pondContainer.getBoundingClientRect();
+      const nx = (e.clientX - rect.left) / rect.width;
+      const ny = (e.clientY - rect.top) / rect.height;
+      if (nx < 0 || nx > 1 || ny < 0 || ny > 1) return;
+
+      if (feedMode) {
+        spawnFoodPellets(nx, ny, simTime);
+      } else {
+        spawnDuck(nx, ny, simTime);
+        triggerRippleAt(nx, ny, 1);
+        sfx.plop(nx);
+      }
+    });
+
+    const feedBtn = document.getElementById("feed-btn");
+    const feedPrompt = document.getElementById("feed-prompt");
+    const feedIconPellets = document.getElementById("feed-icon-pellets");
+    const feedIconClose = document.getElementById("feed-icon-close");
+
+    feedBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      feedMode = !feedMode;
+      sfx.toggle(feedMode);
+      pondContainer.style.cursor = feedMode ? "crosshair" : "pointer";
+      feedPrompt.classList.toggle("hidden", !feedMode);
+      feedIconPellets.classList.toggle("hidden", feedMode);
+      feedIconClose.classList.toggle("hidden", !feedMode);
+    });
+
+    // Spawn initial 2 ducks
+    setTimeout(() => {
+      const nx = 0.35 + 0.1 * Math.random(), ny = 0.4 + 0.1 * Math.random();
+      spawnDuck(nx, ny, simTime);
+      triggerRippleAt(nx, ny, 1);
+    }, 200);
+    setTimeout(() => {
+      const nx = 0.55 + 0.1 * Math.random(), ny = 0.55 + 0.1 * Math.random();
+      spawnDuck(nx, ny, simTime);
+      triggerRippleAt(nx, ny, 1);
+    }, 800);
+
+    // ==========================================================================
+    // 8. UNIFIED 60FPS RENDER LOOP (WEBGL + ENTITIES + PLANTS)
+    // ==========================================================================
+    let lastTime = 0;
+
+    function tick() {
+      simTime = (performance.now() - startTime) / 1000;
+      const dt = lastTime > 0 ? Math.min(simTime - lastTime, 0.05) : 0.016;
+      lastTime = simTime;
+
+      // --- Pass A: Render WebGL Water & Ripples ---
+      gl.uniform1f(uTimeLoc, simTime);
+      for (let i = 0; i < 12; i++) {
+        if (i < ripples.length) {
+          gl.uniform4f(uRippleLocs[i], ripples[i].x, ripples[i].y, ripples[i].time, ripples[i].amp);
+        } else {
+          gl.uniform4f(uRippleLocs[i], 0, 0, -10, 0);
+        }
+      }
+      gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+      // --- Pass B: Update Boids, Wave Drift & Food ---
+      const ducks = [];
+      const fishes = [];
+      for (const f of floats) {
+        if (f.variant.kind === "duck") ducks.push(f);
+        else if (f.variant.kind === "fish") fishes.push(f);
+      }
+
+      if (simTime >= nextBoostTime && ducks.length > 0) {
+        const paddling = ducks.filter((d) => d.action === "paddle");
+        if (paddling.length > 0) {
+          paddling[Math.floor(Math.random() * paddling.length)].speedBoost = Math.random() < 0.2 ? 3.2 : 1.6;
+        }
+        nextBoostTime = simTime + 1.5 + Math.random();
+      }
+
+      if (whirlpool && simTime > whirlpool.end) {
+        whirlpool = null;
+        nextWhirlpoolTime = simTime + 10 + 6 * Math.random();
+      }
+      if (!whirlpool && simTime >= nextWhirlpoolTime && ducks.length >= 3) {
+        const centerDucks = ducks.filter(
+          (d) => d.action !== "drowning" && Math.abs(d.nx - 0.5) < 0.25 && Math.abs(d.ny - 0.5) < 0.25
+        );
+        if (centerDucks.length >= 2) {
+          whirlpool = {
+            start: simTime,
+            end: simTime + 4,
+            cx: centerDucks.reduce((a, b) => a + b.nx, 0) / centerDucks.length,
+            cy: centerDucks.reduce((a, b) => a + b.ny, 0) / centerDucks.length,
+          };
+          for (const d of centerDucks) {
+            if (d.action === "float") {
+              d.action = "paddle";
+              d.actionEnd = simTime + 5;
+            }
+          }
+        }
+      }
+
+      // Update food pellet fade-out
+      for (let i = foods.length - 1; i >= 0; i--) {
+        const fd = foods[i];
+        if (fd.arrivedTime !== null) {
+          const age = simTime - fd.arrivedTime;
+          if (age >= 2.5) {
+            fd.el.remove();
+            foods.splice(i, 1);
+          } else {
+            const p = age / 2.5;
+            fd.el.style.opacity = String(Math.max(0, 1 - p * p));
+          }
+        }
+      }
+
+      // Fish hunter assignment
+      const activeFishIds = new Set(fishes.filter((f) => f.opacity !== -1).map((f) => f.id));
+      for (const k of hunterMap.keys()) {
+        if (!activeFishIds.has(k)) hunterMap.delete(k);
+      }
+      const assignedDucks = new Set(hunterMap.values());
+      for (const fid of activeFishIds) {
+        if (hunterMap.has(fid) && ducks.some((d) => d.id === hunterMap.get(fid) && d.action !== "leaving")) continue;
+        const fishObj = fishes.find((f) => f.id === fid);
+        let best = Infinity, bestId = -1;
+        for (const d of ducks) {
+          if (d.action === "leaving" || assignedDucks.has(d.id)) continue;
+          const dx = fishObj.nx - d.nx, dy = fishObj.ny - d.ny;
+          const dSq = dx * dx + dy * dy;
+          if (dSq < best) { best = dSq; bestId = d.id; }
+        }
+        if (bestId >= 0) {
+          hunterMap.set(fid, bestId);
+          assignedDucks.add(bestId);
+        }
+      }
+
+      const u = 1 - Math.pow(0.01, dt);
+
+      for (let idx = floats.length - 1; idx >= 0; idx--) {
+        const l = floats[idx];
+
+        if (l.action !== "leaving") {
+          const age = simTime - l.spawnTime;
+          if (age < 0.35) {
+            const t = age / 0.35;
+            l.scale = t < 0.6 ? (t / 0.6) * 1.15 : 1.15 - ((t - 0.6) / 0.4) * 0.15;
+          } else {
+            l.scale = 1;
+          }
+        }
+
+        const uvX = aspectRatio >= 1 ? l.nx * aspectRatio * 30 : 30 * l.nx;
+        const uvY = aspectRatio >= 1 ? 30 * l.ny : (l.ny / aspectRatio) * 30;
+        const { height: d, slopeX: h, slopeY: f } = sampleWave(uvX, uvY, simTime);
+        l.offsetY += (0.8 * d - l.offsetY) * u;
+        const wvx = -(0.006 * h), wvy = -(0.006 * f);
+        const wLerp = Math.min(1, 3 * dt);
+        l.waveVx += (wvx - l.waveVx) * wLerp;
+        l.waveVy += (wvy - l.waveVy) * wLerp;
+
+        if (l.variant.kind === "fish") {
+          let o = 0, c = 0, minSq = Infinity;
+          for (const dk of ducks) {
+            if (dk.action === "leaving") continue;
+            const dx = l.nx - dk.nx, dy = l.ny - dk.ny;
+            const sq = dx * dx + dy * dy;
+            if (sq < minSq) { minSq = sq; o = dx; c = dy; }
+          }
+          const burst = ((simTime + l.phase) % 1.3) / 1.3 < 0.62;
+          const ux = 0.5 - l.nx, uy = 0.5 - l.ny;
+          const p = Math.sqrt(ux * ux + uy * uy);
+          const xAng = Math.atan2(uy, ux);
+          if (minSq < 0.0625) {
+            const aAng = Math.atan2(c, o);
+            const iAng = aAng + Math.atan2(Math.sin(xAng - aAng), Math.cos(xAng - aAng)) * Math.min(1, 4 * p) * 0.5;
+            const wig = 0.2 * Math.sin(3 * simTime + l.phase);
+            l.heading += (iAng + wig - l.heading) * Math.min(1, dt * (burst ? 12 : 4));
+          } else {
+            l.heading += (xAng + 0.5 * Math.sin(2 * simTime + l.phase) - l.heading) * Math.min(1, dt * (p > 0.15 ? 6 : 2));
+          }
+          l.speed += ((burst ? 1.8 : 0.3) - l.speed) * Math.min(1, dt * (burst ? 8 : 3));
+          const mx = 0.06 * Math.cos(l.heading) * l.speed;
+          const my = 0.06 * Math.sin(l.heading) * l.speed;
+          l.nx = Math.max(0.12, Math.min(0.88, l.nx + (l.waveVx + mx) * dt));
+          l.ny = Math.max(0.12, Math.min(0.88, l.ny + (l.waveVy + my) * dt));
+          if (Math.sqrt(mx * mx + my * my) > 0.0003) {
+            l.rotation = lerpDeg(l.rotation, (180 / Math.PI) * Math.atan2(mx, -my), u * (burst ? 0.85 : 0.3));
+          }
+          l.paddleIntensity = burst ? 1 : 0.2;
+          if (l.tailPath) {
+            l.tailPath.setAttribute("d", burst ? "M24 31 L19 36 L29 36 Z" : "M24 31 L21 35 L27 35 Z");
+          }
+          if (burst && l.speed > 0.5 && simTime - l.lastRipple > 0.2) {
+            const rx = l.nx - 0.015 * Math.cos(l.heading);
+            const ry = l.ny - 0.015 * Math.sin(l.heading);
+            if (rx > 0.02 && rx < 0.98 && ry > 0.02 && ry < 0.98) {
+              triggerRippleAt(rx, ry, 0.35);
+              l.lastRipple = simTime;
+            }
+          }
+        } else if (l.action !== "leaving") {
+          let sepX = 0, sepY = 0, cohX = 0, cohY = 0, sinS = 0, cosS = 0, count = 0;
+          for (const other of ducks) {
+            if (other.id === l.id) continue;
+            const dx = other.nx - l.nx, dy = other.ny - l.ny;
+            const sq = dx * dx + dy * dy;
+            if (sq <= 0.04 && sq >= 1e-6) {
+              count++;
+              cohX += other.nx; cohY += other.ny;
+              sinS += Math.sin(other.heading); cosS += Math.cos(other.heading);
+              if (sq < 0.0036) {
+                const dist = Math.sqrt(sq);
+                const push = (0.06 - dist) / 0.06;
+                sepX -= (dx / dist) * push;
+                sepY -= (dy / dist) * push;
+              }
+            }
+          }
+          const hasFlock = count > 0;
+          const fx = hasFlock ? 0.03 * sepX + 0.008 * (cohX / count - l.nx) : 0;
+          const fy = hasFlock ? 0.03 * sepY + 0.008 * (cohY / count - l.ny) : 0;
+          const alignH = hasFlock ? Math.atan2(sinS / count, cosS / count) : null;
+
+          let huntedFish = null;
+          for (const [fid, did] of hunterMap.entries()) {
+            if (did === l.id) {
+              huntedFish = fishes.find((f) => f.id === fid && f.opacity !== -1);
+              break;
+            }
+          }
+
+          let targetFood = null;
+          if (!huntedFish && foods.length > 0) {
+            let bestSq = Infinity;
+            for (const fd of foods) {
+              const dx = fd.nx - l.nx, dy = fd.ny - l.ny;
+              const sq = dx * dx + dy * dy;
+              if (sq < bestSq) { bestSq = sq; targetFood = fd; }
+            }
+          }
+
+          if (targetFood) {
+            const dx = targetFood.nx - l.nx, dy = targetFood.ny - l.ny;
+            const r = Math.sqrt(dx * dx + dy * dy);
+            if (r < 0.045) {
+              if (l.action === "paddle") {
+                l.action = "float";
+                l.actionEnd = simTime + 10;
+                l.speed *= 0.3;
+              }
+              if (targetFood.arrivedTime === null) {
+                targetFood.arrivedTime = simTime;
+                sfx.nibble(l.nx);
+              }
+            } else {
+              l.heading = Math.atan2(dy, dx) + 0.12 * Math.sin(l.phase + 2 * simTime);
+              l.action = "paddle";
+              l.actionEnd = simTime + 2;
+              l.speed += (0.6 + 0.4 * Math.min(1, r / 0.3) - l.speed) * 0.1;
+            }
+          } else if (huntedFish) {
+            const dx = huntedFish.nx - l.nx, dy = huntedFish.ny - l.ny;
+            const r = Math.sqrt(dx * dx + dy * dy);
+            if (r < 0.035) {
+              huntedFish.opacity = -1;
+              triggerRippleAt(huntedFish.nx, huntedFish.ny, 0.5);
+              sfx.chomp(huntedFish.nx);
+            } else {
+              l.heading = Math.atan2(dy, dx) + 0.08 * Math.sin(l.phase + 2 * simTime);
+              l.action = "paddle";
+              l.actionEnd = simTime + 1;
+              l.speed += (1 + 0.3 * Math.min(1, r / 0.2) - l.speed) * 0.15;
+            }
+          } else {
+            if (simTime > l.actionEnd) {
+              if (l.action === "float") {
+                l.action = "paddle";
+                l.turnRate = hasFlock ? (Math.random() - 0.5) * 0.1 : (Math.random() - 0.5) * 0.5;
+                const cx = 0.5 - l.nx, cy = 0.5 - l.ny;
+                if (Math.sqrt(cx * cx + cy * cy) > 0.25) {
+                  l.heading = Math.atan2(cy, cx) + (Math.random() - 0.5) * 0.8;
+                } else if (hasFlock && alignH !== null && Math.random() < 0.6) {
+                  l.heading = alignH + (Math.random() - 0.5) * 0.4;
+                } else {
+                  l.heading += (Math.random() - 0.5) * Math.PI * 0.7;
+                }
+                l.actionEnd = hasFlock ? simTime + 4 + 4 * Math.random() : simTime + 2 + 3 * Math.random();
+              } else {
+                l.action = "float";
+                l.turnRate = (Math.random() - 0.5) * 0.15;
+                const longFloat = !hasFlock && Math.random() < 0.3;
+                l.actionEnd = hasFlock ? simTime + 1 + 2 * Math.random() : longFloat ? simTime + 6 + 8 * Math.random() : simTime + 2 + 4 * Math.random();
+              }
+            }
+            if (l.action === "paddle") {
+              const a = 0.8 + 0.2 * Math.sin(l.phase);
+              l.speed += ((hasFlock ? 1.15 * a : a) - l.speed) * Math.min(1, 2.5 * dt);
+            } else {
+              l.speed *= Math.pow(0.15, dt);
+              if (l.speed < 0.005) l.speed = 0;
+            }
+            const padTarget = l.action === "paddle" ? 1 : 0;
+            l.paddleIntensity += (padTarget - l.paddleIntensity) * Math.min(1, 3 * dt);
+            l.speedBoost += (1 - l.speedBoost) * Math.min(1, 1.5 * dt);
+          }
+
+          let turn = l.turnRate;
+          if (alignH !== null && l.paddleIntensity > 0.1) {
+            const diff = alignH - l.heading;
+            turn += 1.2 * Math.atan2(Math.sin(diff), Math.cos(diff)) * l.paddleIntensity;
+          }
+          let wx = 0, wy = 0;
+          if (l.nx < 0.15) wx = (0.15 - l.nx) / 0.15;
+          if (l.nx > 0.85) wx = -(l.nx - 0.85) / 0.15;
+          if (l.ny < 0.15) wy = (0.15 - l.ny) / 0.15;
+          if (l.ny > 0.85) wy = -(l.ny - 0.85) / 0.15;
+          if (wx !== 0 || wy !== 0) {
+            const wAng = Math.atan2(wy, wx);
+            turn += Math.atan2(Math.sin(wAng - l.heading), Math.cos(wAng - l.heading)) * Math.sqrt(wx * wx + wy * wy) * 2.5;
+          }
+          if (whirlpool) {
+            const dx = l.nx - whirlpool.cx, dy = l.ny - whirlpool.cy;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 0.25) {
+              const tang = Math.atan2(dx, -dy);
+              const tDiff = Math.atan2(Math.sin(tang - l.heading), Math.cos(tang - l.heading));
+              const env = Math.sin(((simTime - whirlpool.start) / (whirlpool.end - whirlpool.start)) * Math.PI);
+              const prox = 1 - dist / 0.25;
+              turn += tDiff * prox * env * 3;
+              const inw = Math.atan2(-dy, -dx);
+              turn += Math.atan2(Math.sin(inw - l.heading), Math.cos(inw - l.heading)) * prox * env * 0.4;
+            }
+          }
+
+          l.heading += turn * dt;
+          const baseV = hasFlock ? 0.06 : 0.05;
+          const dx = Math.cos(l.heading) * baseV * l.speed * l.speedBoost;
+          const dy = Math.sin(l.heading) * baseV * l.speed * l.speedBoost;
+          const waddle = l.paddleIntensity > 0.1 ? 0.8 * Math.sin(5 * simTime + l.phase) * l.paddleIntensity : 0;
+          const totX = l.waveVx + dx + fx;
+          const totY = l.waveVy + dy + fy;
+          l.nx += totX * dt;
+          l.ny += totY * dt;
+
+          const actX = dx + fx, actY = dy + fy;
+          const actMag = Math.sqrt(actX * actX + actY * actY);
+          if (Math.sqrt(totX * totX + totY * totY) > 0.0003) {
+            const deg = (180 / Math.PI) * Math.atan2(actMag > 0.0002 ? actX : totX, -(actMag > 0.0002 ? actY : totY)) + waddle;
+            const rRate = l.speed > 0.1 ? 0.18 : 0.04;
+            l.rotation = lerpDeg(l.rotation, deg, u * rRate);
+          }
+
+          if (l.speed > 0.15 && simTime - l.lastRipple > 0.3) {
+            const rx = l.nx - 0.02 * Math.cos(l.heading);
+            const ry = l.ny - 0.02 * Math.sin(l.heading);
+            if (rx > 0.02 && rx < 0.98 && ry > 0.02 && ry < 0.98) {
+              triggerRippleAt(rx, ry, 0.55);
+              l.lastRipple = simTime;
+            }
+          }
+        } else {
+          // Leaving state
+          const prog = Math.min(1, (simTime - (l.actionEnd - 4)) / 4);
+          const rx = 0.08 * Math.cos(l.heading) * l.speed * l.speedBoost;
+          const ry = 0.08 * Math.sin(l.heading) * l.speed * l.speedBoost;
+          l.nx += rx * dt;
+          l.ny += ry * dt;
+          l.rotation = lerpDeg(l.rotation, (180 / Math.PI) * Math.atan2(rx, -ry), Math.min(1, 3 * dt));
+          l.speedBoost += (1 - l.speedBoost) * Math.min(1, 0.8 * dt);
+          if (l.speed > 0.1 && simTime - l.lastRipple > 0.25) {
+            triggerRippleAt(l.nx - 0.02 * Math.cos(l.heading), l.ny - 0.02 * Math.sin(l.heading), 0.4);
+            l.lastRipple = simTime;
+          }
+          if (prog > 0.5) {
+            const fade = (prog - 0.5) / 0.5;
+            l.scale = Math.max(0, 1 - 0.7 * fade);
+            l.opacity = Math.max(0, 1 - fade);
+          }
+          if (prog >= 1 || l.nx < -0.02 || l.nx > 1.02 || l.ny < -0.02 || l.ny > 1.02) {
+            l.opacity = -1;
+          }
+        }
+
+        if (l.action !== "leaving") {
+          const hit = l.nx < 0.03 || l.nx > 0.97 || l.ny < 0.03 || l.ny > 0.97;
+          l.nx = Math.max(0.03, Math.min(0.97, l.nx));
+          l.ny = Math.max(0.03, Math.min(0.97, l.ny));
+          if (hit) l.heading = Math.atan2(0.5 - l.ny, 0.5 - l.nx) + (Math.random() - 0.5) * 0.6;
+        }
+
+        if (l.opacity === -1) {
+          l.el.remove();
+          floats.splice(idx, 1);
+          continue;
+        }
+
+        // Update paddling webbed foot toggle (every 250ms)
+        if (l.footGroup) {
+          const isPaddling = l.action === "paddle" || l.action === "leaving";
+          l.footGroup.style.display = isPaddling ? "inline" : "none";
+          if (isPaddling && simTime - l.lastFootSwap >= 0.25) {
+            l.footSide = l.footSide === 0 ? 1 : 0;
+            l.lastFootSwap = simTime;
+            const fxPos = l.footSide === 0 ? 21.5 : 26;
+            l.footLeg.setAttribute("x1", String(fxPos + 0.5));
+            l.footLeg.setAttribute("x2", String(fxPos + 0.5));
+            l.footWeb.setAttribute("transform", `translate(${fxPos}, 35.5)`);
+          }
+        }
+
+        // Update DOM element transform
+        l.el.style.left = `${100 * l.nx}%`;
+        l.el.style.top = `${100 * l.ny}%`;
+        l.el.style.transform = `translate(-50%,-50%) translateY(${-l.offsetY}px) rotate(${l.rotation}deg) scale(${l.scale})`;
+        l.el.style.opacity = String(l.opacity);
+      }
+
+      // Update speech bubble position
+      if (speechAnchor.style.display !== "none" && floats.length > 0) {
+        const sp = floats[speakerIndex % floats.length];
+        speechAnchor.style.left = `${100 * sp.nx}%`;
+        speechAnchor.style.top = `${100 * sp.ny}%`;
+        speechAnchor.style.transform = "translate(-50%, -100%) translateY(-28px)";
+        speechAnchor.style.opacity = String(sp.opacity);
+      }
+
+      // --- Pass C: Render Shoreline Reeds & Cattails (Layer 5) ---
+      const pondW = plantCanvas.width - 400;
+      const pondH = plantCanvas.height - 400;
+      plantCtx.clearRect(0, 0, plantCanvas.width, plantCanvas.height);
+      plantCtx.save();
+      plantCtx.translate(200, 200);
+      for (const cluster of plantClusters) {
+        for (const blade of cluster.blades) {
+          drawBlade(plantCtx, blade, pondW, pondH, simTime);
+        }
+      }
+      plantCtx.restore();
+
+      requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+  </script>
+</body>
+</html>
