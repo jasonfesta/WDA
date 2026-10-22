@@ -14,6 +14,7 @@ export interface WorkflowNode {
   isHumanCheckpoint?: boolean;
   isFinalOutput?: boolean;
   quote?: string;
+  quotes?: string[];
   items?: WorkflowNodeItem[];
   subBoxes?: {
     title: string;
@@ -48,7 +49,10 @@ const WORKFLOW_COLUMNS: WorkflowColumn[] = [
         title: 'Competitor Research Benchmarking',
         subtitle: 'Voice-generated Markdown artifact',
         badge: '1× research.md',
-        quote: '"Give me 25 examples of coffee shop brands that are modern and popular across Instagram and the social web."',
+        quotes: [
+          '"Give me 25 examples of coffee shop brands that are modern and popular across Instagram and the social web."',
+          '"Keep going in this direction, XYZ brand. Find me more versions of this that have high brand quality, similar photography, and visual direction."',
+        ],
         items: [
           {
             label: '1× research.md File (via Voice)',
@@ -317,8 +321,8 @@ const WORKFLOW_COLUMNS: WorkflowColumn[] = [
 ];
 
 const DownArrow: React.FC = () => (
-  <div style={{ display: 'flex', justifyContent: 'center', padding: '6px 0' }}>
-    <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div style={{ display: 'flex', justifyContent: 'center', padding: '4px 0' }}>
+    <svg width="14" height="20" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" strokeWidth="1.5" />
       <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
@@ -331,14 +335,14 @@ const RightConnector: React.FC = () => (
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      width: '44px',
+      width: '24px',
       flexShrink: 0,
-      paddingTop: '110px',
+      paddingTop: '90px',
     }}
   >
-    <svg width="44" height="24" viewBox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <line x1="0" y1="12" x2="36" y2="12" stroke="#111111" strokeWidth="1.5" />
-      <path d="M31 6.5L37.5 12L31 17.5" stroke="#111111" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="10" x2="18" y2="10" stroke="#111111" strokeWidth="1.5" />
+      <path d="M14 5.5L19.5 10L14 14.5" stroke="#111111" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   </div>
 );
@@ -351,7 +355,9 @@ export const JetskiWorkflowDiagram: React.FC = () => {
         color: '#111111',
         fontFamily: '"Google Sans Flex", "Google Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif',
         minHeight: '100vh',
-        padding: '48px 56px',
+        padding: '28px 32px 48px',
+        width: '100%',
+        maxWidth: '100%',
         boxSizing: 'border-box',
       }}
     >
@@ -451,7 +457,7 @@ export const JetskiWorkflowDiagram: React.FC = () => {
         style={{
           display: 'flex',
           alignItems: 'flex-start',
-          overflowX: 'auto',
+          width: '100%',
           paddingBottom: '24px',
         }}
       >
@@ -460,8 +466,8 @@ export const JetskiWorkflowDiagram: React.FC = () => {
             {/* Column */}
             <div
               style={{
-                width: '340px',
-                flexShrink: 0,
+                flex: '1 1 0%',
+                minWidth: 0,
                 display: 'flex',
                 flexDirection: 'column',
               }}
@@ -597,24 +603,43 @@ export const JetskiWorkflowDiagram: React.FC = () => {
                           </div>
                         )}
 
-                        {/* Prompt Quote */}
+                        {/* Prompt Quote(s) */}
                         {node.quote && (
                           <div
                             style={{
-                              marginTop: '12px',
-                              padding: '12px 14px',
-                              borderRadius: '8px',
+                              marginTop: '10px',
+                              padding: '9px 11px',
+                              borderRadius: '7px',
                               border: '1px solid #E4E4E7',
                               backgroundColor: '#FAFAFA',
-                              fontSize: '13px',
+                              fontSize: '11.5px',
                               fontWeight: 500,
-                              lineHeight: 1.45,
+                              lineHeight: 1.4,
                               color: '#111111',
                             }}
                           >
                             {node.quote}
                           </div>
                         )}
+                        {node.quotes &&
+                          node.quotes.map((q, qIdx) => (
+                            <div
+                              key={qIdx}
+                              style={{
+                                marginTop: qIdx === 0 ? '10px' : '6px',
+                                padding: '9px 11px',
+                                borderRadius: '7px',
+                                border: '1px solid #E4E4E7',
+                                backgroundColor: '#FAFAFA',
+                                fontSize: '11.5px',
+                                fontWeight: 500,
+                                lineHeight: 1.4,
+                                color: '#111111',
+                              }}
+                            >
+                              {q}
+                            </div>
+                          ))}
 
                         {/* Bullet Items */}
                         {node.items && node.items.length > 0 && (
