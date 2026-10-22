@@ -16,60 +16,69 @@
     html, body {
       margin: 0;
       padding: 0;
+      width: 100%;
+      overflow-x: hidden;
       background-color: #FFFFFF;
       color: #111111;
       font-family: "Google Sans Flex", "Google Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     }
-    .page-wrapper {
-      padding: 28px 32px 48px;
+    #viewport-scaler {
       width: 100%;
-      max-width: 100%;
+      overflow: hidden;
+      background-color: #FFFFFF;
+    }
+    .page-wrapper {
+      padding: 40px 48px 56px;
+      width: 1960px;
+      transform-origin: top left;
       background-color: #FFFFFF;
     }
     .header {
       border-bottom: 1.5px solid #111111;
-      padding-bottom: 16px;
-      margin-bottom: 24px;
+      padding-bottom: 20px;
+      margin-bottom: 36px;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      flex-wrap: wrap;
-      gap: 16px;
+      gap: 24px;
     }
     .eyebrow {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #52525B;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
     .title {
-      font-size: clamp(20px, 1.8vw, 26px);
+      font-size: 26px;
       font-weight: 600;
       letter-spacing: -0.02em;
       margin: 0;
       color: #111111;
     }
+    .header-sub {
+      font-size: 13px;
+      color: #52525B;
+      margin-top: 6px;
+    }
     .legend {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 18px;
+      gap: 24px;
       font-size: 12px;
       color: #3F3F46;
     }
     .legend-item {
       display: flex;
       align-items: center;
-      gap: 7px;
+      gap: 8px;
     }
     .swatch {
-      width: 13px;
-      height: 13px;
-      border-radius: 3px;
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
       display: inline-block;
-      flex-shrink: 0;
     }
     .swatch-default {
       border: 1.25px solid #D4D4D8;
@@ -85,46 +94,45 @@
     }
     .pipeline {
       display: flex;
+      flex-direction: row;
       align-items: flex-start;
-      width: 100%;
+      flex-wrap: nowrap;
     }
     .column {
-      flex: 1 1 0%;
-      min-width: 0;
+      width: 344px;
+      flex-shrink: 0;
       display: flex;
       flex-direction: column;
     }
     .phase-header {
       border-bottom: 1.5px solid #111111;
-      padding-bottom: 10px;
-      margin-bottom: 14px;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
     }
     .phase-num {
-      font-size: 10.5px;
+      font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.08em;
       color: #52525B;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
     .phase-title {
-      font-size: clamp(13.5px, 1.05vw, 16px);
+      font-size: 17px;
       font-weight: 600;
       color: #111111;
       letter-spacing: -0.01em;
-      line-height: 1.25;
     }
     .phase-sub {
-      font-size: 11.5px;
+      font-size: 12px;
       color: #52525B;
       margin-top: 2px;
-      line-height: 1.35;
     }
     .node {
-      border-radius: 10px;
+      border-radius: 12px;
       border: 1.25px solid #D4D4D8;
       background-color: #FFFFFF;
       color: #111111;
-      padding: 13px 14px;
+      padding: 18px 20px;
     }
     .node.human {
       border: 1.75px solid #111111;
@@ -139,12 +147,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      margin-bottom: 6px;
-      gap: 6px;
+      margin-bottom: 8px;
+      gap: 8px;
     }
     .step-num {
-      font-size: 10.5px;
+      font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.06em;
       color: #52525B;
@@ -153,10 +160,10 @@
       color: #A1A1AA;
     }
     .badge {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.03em;
-      padding: 2px 7px;
+      padding: 2px 8px;
       border-radius: 999px;
       border: 1px solid #D4D4D8;
       background-color: #F4F4F5;
@@ -169,549 +176,583 @@
       color: #FFFFFF;
     }
     .node.final .badge {
-      border-color: #3F3F46;
-      background-color: #27272A;
-      color: #FFFFFF;
+      border-color: #F59E0B;
+      background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 55%, #D97706 100%);
+      color: #111111;
+      font-weight: 700;
+      box-shadow: 0 1px 6px rgba(245, 158, 11, 0.35);
+    }
+    .golden-wings-hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin: 14px 0 8px;
+      padding: 14px 0;
+      border-radius: 10px;
+      background: radial-gradient(circle at center, rgba(245, 158, 11, 0.18) 0%, rgba(17, 17, 17, 0) 75%);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+    }
+    .golden-wing-emoji {
+      font-size: 46px;
+      line-height: 1;
+      filter: sepia(1) saturate(5) hue-rotate(5deg) brightness(1.08) drop-shadow(0 2px 8px rgba(245, 158, 11, 0.45));
+      display: inline-block;
+    }
+    .golden-wing-emoji.left {
+      transform: scaleX(-1);
     }
     .node-title {
-      font-size: clamp(13px, 0.95vw, 14.5px);
+      font-size: 15px;
       font-weight: 600;
       line-height: 1.3;
       letter-spacing: -0.01em;
     }
     .node-subtitle {
-      font-size: 11px;
+      font-size: 12px;
       color: #52525B;
-      margin-top: 2px;
-      line-height: 1.35;
+      margin-top: 3px;
     }
     .node.final .node-subtitle {
       color: #D4D4D8;
     }
+    .quote-label {
+      margin-top: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #52525B;
+      letter-spacing: 0.02em;
+    }
     .quote-box {
-      margin-top: 10px;
-      padding: 9px 11px;
-      border-radius: 7px;
+      margin-top: 6px;
+      padding: 10px 12px;
+      border-radius: 8px;
       border: 1px solid #E4E4E7;
       background-color: #FAFAFA;
-      font-size: 11.5px;
+      font-size: 12.5px;
       font-weight: 500;
-      line-height: 1.4;
+      line-height: 1.45;
       color: #111111;
     }
     .items-list {
-      margin-top: 10px;
+      margin-top: 14px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
       border-top: 1px solid #E4E4E7;
-      padding-top: 10px;
+      padding-top: 12px;
     }
     .node.final .items-list {
       border-top-color: #27272A;
     }
     .item-label {
-      font-size: 11.5px;
+      font-size: 12.5px;
       font-weight: 600;
-      line-height: 1.35;
+      line-height: 1.4;
     }
     .item-detail {
-      font-size: 11px;
+      font-size: 12px;
       color: #52525B;
-      margin-top: 1.5px;
-      line-height: 1.4;
+      margin-top: 2px;
+      line-height: 1.45;
     }
     .node.final .item-detail {
       color: #D4D4D8;
     }
     .sub-boxes {
-      margin-top: 10px;
+      margin-top: 12px;
       display: flex;
       flex-direction: column;
-      gap: 7px;
+      gap: 8px;
     }
     .sub-box {
-      border-radius: 7px;
+      border-radius: 8px;
       border: 1px solid #D4D4D8;
       background-color: #FFFFFF;
-      padding: 8px 10px;
+      padding: 10px 12px;
       color: #111111;
     }
     .sub-box-title {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
       color: #111111;
-      margin-bottom: 4px;
-      line-height: 1.3;
+      margin-bottom: 6px;
     }
     .sub-box ul {
       margin: 0;
-      padding-left: 14px;
+      padding-left: 16px;
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 4px;
       list-style-type: disc;
     }
     .sub-box li {
-      font-size: 11px;
-      line-height: 1.35;
+      font-size: 12px;
+      line-height: 1.4;
       color: #3F3F46;
     }
     .down-arrow {
       display: flex;
       justify-content: center;
-      padding: 4px 0;
+      padding: 6px 0;
     }
     .right-connector {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 24px;
+      width: 44px;
       flex-shrink: 0;
-      padding-top: 90px;
-    }
-
-    /* Responsive fallback for smaller tablets / mobile */
-    @media (max-width: 1024px) {
-      .page-wrapper {
-        padding: 20px 16px 40px;
-      }
-      .pipeline {
-        flex-direction: column;
-        gap: 24px;
-      }
-      .column {
-        width: 100%;
-      }
-      .right-connector {
-        width: 100%;
-        padding-top: 0;
-        transform: rotate(90deg);
-        height: 28px;
-      }
+      padding-top: 110px;
     }
   </style>
 </head>
 <body>
-  <div class="page-wrapper">
-    <!-- Top Header -->
-    <header class="header">
-      <div>
-        <div class="eyebrow">JETSKI DESIGN WORKFLOW</div>
-        <h1 class="title">Prompt &amp; Mood Board → React Golden Template</h1>
-      </div>
-      <div class="legend">
-        <div class="legend-item">
-          <span class="swatch swatch-default"></span>
-          <span>Process / Skill Node (&amp; .md Artifacts)</span>
+  <div id="viewport-scaler">
+    <div class="page-wrapper" id="diagram-canvas">
+      <!-- Top Header -->
+      <header class="header">
+        <div>
+          <div class="eyebrow">JETSKI DESIGN WORKFLOW</div>
+          <h1 class="title">Prompt &amp; Mood Board → React Golden Template</h1>
+          <div class="header-sub">End-to-End Architecture: Voice Benchmarking, Dynamic Design Spectrums, Nano Banana 2 Comps, Skill Checkpoints, &amp; Model-Safe Packaging</div>
         </div>
-        <div class="legend-item">
-          <span class="swatch swatch-human"></span>
-          <span>Human Review / Steering Checkpoint</span>
-        </div>
-        <div class="legend-item">
-          <span class="swatch swatch-final"></span>
-          <span>Final Golden Template</span>
-        </div>
-      </div>
-    </header>
-
-    <!-- Left-to-Right Pipeline -->
-    <div class="pipeline">
-      <!-- PHASE 01 -->
-      <div class="column">
-        <div class="phase-header">
-          <div class="phase-num">PHASE 01</div>
-          <div class="phase-title">Origin &amp; Voice Research</div>
-          <div class="phase-sub">Prompt to category benchmarking</div>
-        </div>
-
-        <div class="node">
-          <div class="node-top">
-            <span class="step-num">STEP 01</span>
+        <div class="legend">
+          <div class="legend-item">
+            <span class="swatch swatch-default"></span>
+            <span>Process / Skill Node (&amp; .md Specs)</span>
           </div>
-          <div class="node-title">Initial Prompt</div>
-          <div class="node-subtitle">Workflow Trigger</div>
-          <div class="quote-box">"Make me a warm landing page for my new coffee shop and brand"</div>
+          <div class="legend-item">
+            <span class="swatch swatch-human"></span>
+            <span>Human Review / Steering Gate</span>
+          </div>
+          <div class="legend-item">
+            <span class="swatch swatch-final"></span>
+            <span>Final Golden Template</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Left-to-Right Pipeline -->
+      <div class="pipeline">
+        <!-- PHASE 01 -->
+        <div class="column">
+          <div class="phase-header">
+            <div class="phase-num">PHASE 01</div>
+            <div class="phase-title">Origin &amp; Voice Research</div>
+            <div class="phase-sub">Prompt to category benchmarking</div>
+          </div>
+
+          <div class="node">
+            <div class="node-top">
+              <span class="step-num">STEP 01</span>
+              <span class="badge">Prompt Origin</span>
+            </div>
+            <div class="node-title">Initial Prompt</div>
+            <div class="node-subtitle">Workflow Trigger</div>
+            <div class="quote-box">"Make me a warm landing page for my new coffee shop and brand"</div>
+          </div>
+
+          <div class="down-arrow">
+            <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+              <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
+              <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <div class="node">
+            <div class="node-top">
+              <span class="step-num">STEP 02</span>
+              <span class="badge">1× research.md</span>
+            </div>
+            <div class="node-title">Competitor Research Benchmarking</div>
+            <div class="node-subtitle">Voice-generated Markdown specification</div>
+            <div class="quote-label">Example Voice Research Prompts</div>
+            <div class="quote-box">"Give me 25 examples of coffee shop brands that are modern and popular across Instagram and the social web."</div>
+            <div class="quote-box">"Keep going in this direction, XYZ brand. Find me more versions of this that have high brand quality, similar photography, and visual direction."</div>
+            <div class="items-list">
+              <div>
+                <div class="item-label">1× research.md Artifact (via Voice)</div>
+                <div class="item-detail">Benchmarks top 15–25 live category websites &amp; applications</div>
+              </div>
+              <div>
+                <div class="item-label">Reference Capture (~25 Sources)</div>
+                <div class="item-detail">Indexed by production URL + full-viewport screenshot</div>
+              </div>
+              <div>
+                <div class="item-label">Dual Evaluation Lens</div>
+                <div class="item-detail">Analyzes both Visual Direction and Code / DOM Interactions</div>
+              </div>
+            </div>
+            <div class="sub-boxes">
+              <div class="sub-box">
+                <div class="sub-box-title">Future State: Pre-Indexed Library &amp; Catalog</div>
+                <ul>
+                  <li>Pulls directly from a curated reference catalog rather than running real-time discovery</li>
+                  <li>Executes as a background instruction to continuously refresh category benchmarks</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="down-arrow">
-          <svg width="14" height="20" viewBox="0 0 16 24" fill="none">
-            <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
-            <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <!-- Connector 1 -> 2 -->
+        <div class="right-connector">
+          <svg width="44" height="24" viewBox="0 0 44 24" fill="none">
+            <line x1="0" y1="12" x2="36" y2="12" stroke="#111111" stroke-width="1.5" />
+            <path d="M31 6.5L37.5 12L31 17.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
 
-        <div class="node">
-          <div class="node-top">
-            <span class="step-num">STEP 02</span>
-            <span class="badge">1× research.md</span>
+        <!-- PHASE 02 -->
+        <div class="column">
+          <div class="phase-header">
+            <div class="phase-num">PHASE 02</div>
+            <div class="phase-title">Design Range &amp; MD Artifacts</div>
+            <div class="phase-sub">Spectrum parameterization &amp; prompt specs</div>
           </div>
-          <div class="node-title">Competitor Research Benchmarking</div>
-          <div class="node-subtitle">Voice-generated Markdown artifact</div>
-          <div class="quote-box">"Give me 25 examples of coffee shop brands that are modern and popular across Instagram and the social web."</div>
-          <div class="quote-box" style="margin-top: 6px;">"Keep going in this direction, XYZ brand. Find me more versions of this that have high brand quality, similar photography, and visual direction."</div>
-          <div class="items-list">
-            <div>
-              <div class="item-label">1× research.md File (via Voice)</div>
-              <div class="item-detail">Top 15–25 websites &amp; apps in the target category</div>
-            </div>
-            <div>
-              <div class="item-label">Reference Capture</div>
-              <div class="item-detail">Benchmarked by URL + Screenshot (~25 total references)</div>
-            </div>
-            <div>
-              <div class="item-label">Dual Evaluation Lens</div>
-              <div class="item-detail">Analyzes both Visual Design and Code Interactions</div>
-            </div>
-          </div>
-          <div class="sub-boxes">
-            <div class="sub-box">
-              <div class="sub-box-title">Future State: Library &amp; Catalog Pull</div>
-              <ul>
-                <li>Can pull directly from a pre-indexed library &amp; catalog instead of running in real time</li>
-                <li>Runs as a hidden instruction in the background to keep references fresh</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Connector 1 -> 2 -->
-      <div class="right-connector">
-        <svg width="24" height="20" viewBox="0 0 24 20" fill="none">
-          <line x1="0" y1="10" x2="18" y2="10" stroke="#111111" stroke-width="1.5" />
-          <path d="M14 5.5L19.5 10L14 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </div>
-
-      <!-- PHASE 02 -->
-      <div class="column">
-        <div class="phase-header">
-          <div class="phase-num">PHASE 02</div>
-          <div class="phase-title">Design Range &amp; MD Artifacts</div>
-          <div class="phase-sub">Spectrum definition &amp; prompt readiness</div>
-        </div>
-
-        <div class="node">
-          <div class="node-top">
-            <span class="step-num">STEP 03</span>
-          </div>
-          <div class="node-title">Dynamic Design Range &amp; Charm</div>
-          <div class="node-subtitle">Structuring design thinking upfront</div>
-          <div class="quote-box">"Begin to structure our design range from minimal to opinionated, represented by xyz.com for minimal, xyz.com for structured, and xyz.com for opinionated."</div>
-          <div class="sub-boxes">
-            <div class="sub-box">
-              <div class="sub-box-title">A. Dynamic Design Spectrum</div>
-              <ul>
-                <li>Declare full category range from research</li>
-                <li>e.g., Minimal → Structured → Opinionated</li>
-                <li>Barbershop e.g.: Minimal → Nostalgic London Burgundy / Elite → Hip-Hop</li>
-              </ul>
+          <div class="node">
+            <div class="node-top">
+              <span class="step-num">STEP 03</span>
+              <span class="badge">Spectrum Spec</span>
             </div>
-            <div class="sub-box">
-              <div class="sub-box-title">B. Interaction &amp; Touch Areas ("Charm")</div>
-              <ul>
-                <li>Highlight specific section behaviors &amp; micro-touches to carry into Image Gen</li>
-                <li>Assign explicit brutal / minimal / interactive moments per section</li>
-              </ul>
+            <div class="node-title">Dynamic Design Range &amp; Interaction Specs</div>
+            <div class="node-subtitle">Upfront design-space parameterization</div>
+            <div class="quote-label">Example Range Structuring Prompt</div>
+            <div class="quote-box">"Begin to structure our design range from minimal to opinionated, represented by xyz.com for minimal, xyz.com for structured, and xyz.com for opinionated."</div>
+            <div class="sub-boxes">
+              <div class="sub-box">
+                <div class="sub-box-title">A. Dynamic Design Spectrum</div>
+                <ul>
+                  <li>Defines explicit stylistic axes from category research (Minimal → Structured → Opinionated)</li>
+                  <li>Maps distinct category archetypes (e.g., Minimalist vs. Heritage Editorial vs. Streetwear)</li>
+                </ul>
+              </div>
+              <div class="sub-box">
+                <div class="sub-box-title">B. Interaction &amp; Touch Areas ("Charm")</div>
+                <ul>
+                  <li>Specifies section-level micro-interactions and motion behaviors prior to Image Gen</li>
+                  <li>Assigns structural &amp; interactive constraints per section so charm carries into comps</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="down-arrow">
+            <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+              <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
+              <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <div class="node">
+            <div class="node-top">
+              <span class="step-num">STEP 04</span>
+              <span class="badge">1 Main + 5–10 Range .md</span>
+            </div>
+            <div class="node-title">Structured Markdown Specifications</div>
+            <div class="node-subtitle">Roll-over context for Image Generation</div>
+            <div class="items-list">
+              <div>
+                <div class="item-label">1× Main Agent .md File</div>
+                <div class="item-detail">Global architecture, layout constraints, and interaction specifications</div>
+              </div>
+              <div>
+                <div class="item-label">5–10× Design Range .md Files</div>
+                <div class="item-detail">One dedicated specification per design spectrum point</div>
+              </div>
+              <div>
+                <div class="item-label">Zero Tertiary Research in Image Gen</div>
+                <div class="item-detail">Pre-loaded with prompts, reference URLs, and code references for direct generation</div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="down-arrow">
-          <svg width="14" height="20" viewBox="0 0 16 24" fill="none">
-            <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
-            <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <!-- Connector 2 -> 3 -->
+        <div class="right-connector">
+          <svg width="44" height="24" viewBox="0 0 44 24" fill="none">
+            <line x1="0" y1="12" x2="36" y2="12" stroke="#111111" stroke-width="1.5" />
+            <path d="M31 6.5L37.5 12L31 17.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
 
-        <div class="node">
-          <div class="node-top">
-            <span class="step-num">STEP 04</span>
-            <span class="badge">1 Main + 5–10 Range .md</span>
+        <!-- PHASE 03 -->
+        <div class="column">
+          <div class="phase-header">
+            <div class="phase-num">PHASE 03</div>
+            <div class="phase-title">Image Generation (Nano Banana 2)</div>
+            <div class="phase-sub">Comps, 4K grids, &amp; Design Package .md</div>
           </div>
-          <div class="node-title">Structured Markdown Files</div>
-          <div class="node-subtitle">Roll-over context for Image Gen</div>
-          <div class="items-list">
-            <div>
-              <div class="item-label">1× Main Agent .md File</div>
-              <div class="item-detail">Core architecture, global rules, and interaction specs</div>
+
+          <div class="node">
+            <div class="node-top">
+              <span class="step-num">STEP 05</span>
+              <span class="badge">Desktop + Mobile</span>
             </div>
-            <div>
-              <div class="item-label">5–10× Design Range .md Files</div>
-              <div class="item-detail">One per category flavor depending on category breadth</div>
+            <div class="node-title">Iterative Image Generation</div>
+            <div class="node-subtitle">Nano Banana 2 Visual Pipeline</div>
+            <div class="items-list">
+              <div>
+                <div class="item-label">Anchor Screens &amp; Breakpoints</div>
+                <div class="item-detail">Generates initial screens steered by .md specs; locks Desktop + Mobile breakpoints</div>
+              </div>
+              <div>
+                <div class="item-label">Clone &amp; Full-Site Expansion</div>
+                <div class="item-detail">Clones locked anchor → generates core sections + footer → scales up to 35+ screens</div>
+              </div>
+              <div>
+                <div class="item-label">Execution Mode (1-by-1 or 4K Grid)</div>
+                <div class="item-detail">Renders screens individually OR as a composite 4K grid sliced post-generation for cost efficiency</div>
+              </div>
             </div>
-            <div>
-              <div class="item-label">Zero Tertiary Research in MGen</div>
-              <div class="item-detail">Armed with prompts, model URLs, &amp; code refs to go straight to prompts</div>
+          </div>
+
+          <div class="down-arrow">
+            <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+              <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
+              <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <div class="node human">
+            <div class="node-top">
+              <span class="step-num">STEP 06</span>
+              <span class="badge">HUMAN GATE</span>
+            </div>
+            <div class="node-title">Human Checkpoint #1: Grid &amp; Comp QA</div>
+            <div class="node-subtitle">Internal Design Team Review Gate</div>
+            <div class="items-list">
+              <div>
+                <div class="item-label">Internal Grid Review Surface</div>
+                <div class="item-detail">Rapid pass/fail audit across generated screen grids to validate palette, typography, and layout</div>
+              </div>
+              <div>
+                <div class="item-label">Prevents Downstream Drift ("Slop")</div>
+                <div class="item-detail">Catches palette or structural regressions early—before scaling across 30+ screens</div>
+              </div>
+            </div>
+            <div class="sub-boxes">
+              <div class="sub-box">
+                <div class="sub-box-title">Drift Mitigation &amp; Model Evolution</div>
+                <ul>
+                  <li>Current Grounding: Bridges public reference gaps via Screenshot + Code Reference + Steering</li>
+                  <li>Target Evolution: Trains skill to extrapolate full flows from only the first few anchor screens</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="down-arrow">
+            <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+              <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
+              <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <div class="node">
+            <div class="node-top">
+              <span class="step-num">STEP 07</span>
+              <span class="badge">1× design-package.md</span>
+            </div>
+            <div class="node-title">Complete Design Package</div>
+            <div class="node-subtitle">Consolidated Build Handoff</div>
+            <div class="items-list">
+              <div>
+                <div class="item-label">1× Complete Design Package .md File</div>
+                <div class="item-detail">Unifies all research .md files, code references, breakpoint specs, &amp; approved screen comps</div>
+              </div>
+              <div>
+                <div class="item-label">Deterministic Build Input</div>
+                <div class="item-detail">Eliminates ad-hoc Image Gen or visual guesswork during React engineering</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Connector 2 -> 3 -->
-      <div class="right-connector">
-        <svg width="24" height="20" viewBox="0 0 24 20" fill="none">
-          <line x1="0" y1="10" x2="18" y2="10" stroke="#111111" stroke-width="1.5" />
-          <path d="M14 5.5L19.5 10L14 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </div>
-
-      <!-- PHASE 03 -->
-      <div class="column">
-        <div class="phase-header">
-          <div class="phase-num">PHASE 03</div>
-          <div class="phase-title">Image Generation (Nano Banana 2)</div>
-          <div class="phase-sub">Comps, 4K grids, &amp; Design Package .md</div>
-        </div>
-
-        <div class="node">
-          <div class="node-top">
-            <span class="step-num">STEP 05</span>
-            <span class="badge">Desktop + Mobile</span>
-          </div>
-          <div class="node-title">Iterative Image Generation</div>
-          <div class="node-subtitle">Nano Banana 2 Pipeline</div>
-          <div class="items-list">
-            <div>
-              <div class="item-label">Anchor Screens &amp; Breakpoints</div>
-              <div class="item-detail">Generate initial screens, steer against .md files, lock Desktop + Mobile breakpoints</div>
-            </div>
-            <div>
-              <div class="item-label">Clone &amp; Full-Site Expansion</div>
-              <div class="item-detail">Clone locked anchor → print main sections → generate rest of site + footer (up to 35+ pages)</div>
-            </div>
-            <div>
-              <div class="item-label">Output Format (1-by-1 or 4K Grid)</div>
-              <div class="item-detail">Image per screen generated individually OR via massive 4K grid split up to save cost</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="down-arrow">
-          <svg width="14" height="20" viewBox="0 0 16 24" fill="none">
-            <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
-            <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <!-- Connector 3 -> 4 -->
+        <div class="right-connector">
+          <svg width="44" height="24" viewBox="0 0 44 24" fill="none">
+            <line x1="0" y1="12" x2="36" y2="12" stroke="#111111" stroke-width="1.5" />
+            <path d="M31 6.5L37.5 12L31 17.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
 
-        <div class="node human">
-          <div class="node-top">
-            <span class="step-num">STEP 06</span>
-            <span class="badge">HUMAN GATE</span>
+        <!-- PHASE 04 -->
+        <div class="column">
+          <div class="phase-header">
+            <div class="phase-num">PHASE 04</div>
+            <div class="phase-title">Image-to-React Skills &amp; Steering</div>
+            <div class="phase-sub">Pipeline .md, skill checkpoints, &amp; steering</div>
           </div>
-          <div class="node-title">Human Checkpoint #1: Grid &amp; Comp QA</div>
-          <div class="node-subtitle">Internal Design Team Review Surface</div>
-          <div class="items-list">
-            <div>
-              <div class="item-label">Internal Review Page</div>
-              <div class="item-detail">Rapid "Yes, yes, yes, looks great" pass across generated screen grids</div>
+
+          <div class="node">
+            <div class="node-top">
+              <span class="step-num">STEP 08</span>
+              <span class="badge">1 Pipeline + 3 Skill .md</span>
             </div>
-            <div>
-              <div class="item-label">Prevents Multi-Screen "Slop"</div>
-              <div class="item-detail">Catches off-colors or missed direction early before wasting 30+ generated screens</div>
+            <div class="node-title">Image-to-React Skills Pipeline</div>
+            <div class="node-subtitle">Modular skills with verifiable checkpoints</div>
+            <div class="items-list">
+              <div>
+                <div class="item-label">1× Image-to-React Pipeline .md File</div>
+                <div class="item-detail">Master orchestration spec governing component translation and QA gates</div>
+              </div>
+              <div>
+                <div class="item-label">3× Skill Definition &amp; Checkpoint .md Files</div>
+                <div class="item-detail">Each skill executes from its .md spec and emits a shareable checkpoint artifact</div>
+              </div>
+            </div>
+            <div class="sub-boxes">
+              <div class="sub-box">
+                <div class="sub-box-title">Skill 01 (.md) — Clean Image-to-React Translation</div>
+                <ul>
+                  <li>High-fidelity structural and visual translation from approved screen comps to React</li>
+                </ul>
+              </div>
+              <div class="sub-box">
+                <div class="sub-box-title">Skill 02 (.md) — Cleanup &amp; Evaluation Benchmarking</div>
+                <ul>
+                  <li>Automated model evaluation paired with human reviewer benchmarking</li>
+                </ul>
+              </div>
+              <div class="sub-box">
+                <div class="sub-box-title">Skill 03 (.md) — Viewport &amp; Performance QA</div>
+                <ul>
+                  <li>Cross-viewport responsiveness, 60fps scroll performance, and scroll-kit verification</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="sub-boxes">
-            <div class="sub-box">
-              <div class="sub-box-title">Drift Resolution &amp; Model Evolution</div>
-              <ul>
-                <li>Today: Fill public reference gaps with explicit Visual Ref + Code Snippet + Steering</li>
-                <li>Over Time: Train skill to predict next spots cleanly from only the first few screens</li>
-              </ul>
+
+          <div class="down-arrow">
+            <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+              <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
+              <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <div class="node human">
+            <div class="node-top">
+              <span class="step-num">STEP 09</span>
+              <span class="badge">HUMAN GATE</span>
+            </div>
+            <div class="node-title">Human Checkpoint #2: Code Steering</div>
+            <div class="node-subtitle">Core Screen Verification &amp; Worktree Control</div>
+            <div class="items-list">
+              <div>
+                <div class="item-label">Shareable Artifact Checkpoints</div>
+                <div class="item-detail">Validates core template screens before multiplying patterns across 35+ pages</div>
+              </div>
+              <div>
+                <div class="item-label">~3 Designer Steering Moments (First 3–5 Pages)</div>
+                <div class="item-detail">Targeted code-level interventions on foundational screens</div>
+              </div>
+            </div>
+            <div class="sub-boxes">
+              <div class="sub-box">
+                <div class="sub-box-title">Two Code Steering Paths</div>
+                <ul>
+                  <li>Path A (Revert Drift): Identifies deviation from comp and restores strict visual fidelity</li>
+                  <li>Path B (Freeze &amp; Branch): Captures emergent high-craft behavior → freezes worktree, analyzes, &amp; promotes forward</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="down-arrow">
-          <svg width="14" height="20" viewBox="0 0 16 24" fill="none">
-            <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
-            <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <!-- Connector 4 -> 5 -->
+        <div class="right-connector">
+          <svg width="44" height="24" viewBox="0 0 44 24" fill="none">
+            <line x1="0" y1="12" x2="36" y2="12" stroke="#111111" stroke-width="1.5" />
+            <path d="M31 6.5L37.5 12L31 17.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
 
-        <div class="node">
-          <div class="node-top">
-            <span class="step-num">STEP 07</span>
-            <span class="badge">1× design-package.md</span>
+        <!-- PHASE 05 -->
+        <div class="column">
+          <div class="phase-header">
+            <div class="phase-num">PHASE 05</div>
+            <div class="phase-title">Packaging &amp; Golden Template</div>
+            <div class="phase-sub">Model-safe linting, bundle .md, &amp; final .zip</div>
           </div>
-          <div class="node-title">Complete Design Package</div>
-          <div class="node-subtitle">Consolidated Markdown &amp; Asset Handoff</div>
-          <div class="items-list">
-            <div>
-              <div class="item-label">1× Complete Design Package .md File</div>
-              <div class="item-detail">Unifies all research .md files, code references, breakpoint specs, &amp; approved screen comps</div>
-            </div>
-            <div>
-              <div class="item-label">Zero Mid-Build Ad-Hoc Image Gen</div>
-              <div class="item-detail">Locks 35+ page architecture before entering the React build phase</div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Connector 3 -> 4 -->
-      <div class="right-connector">
-        <svg width="24" height="20" viewBox="0 0 24 20" fill="none">
-          <line x1="0" y1="10" x2="18" y2="10" stroke="#111111" stroke-width="1.5" />
-          <path d="M14 5.5L19.5 10L14 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </div>
+          <div class="node">
+            <div class="node-top">
+              <span class="step-num">STEP 10</span>
+              <span class="badge">1× bundle.md + .zip</span>
+            </div>
+            <div class="node-title">Linting &amp; Model-Safe Packaging Skill</div>
+            <div class="node-subtitle">Schema validation &amp; single-archive bundling</div>
+            <div class="items-list">
+              <div>
+                <div class="item-label">1× Bundle Manifest &amp; Packaging .md File</div>
+                <div class="item-detail">Documents model-safe directory structure, lint pass status, and file inventory</div>
+              </div>
+              <div>
+                <div class="item-label">Model-Format Linting &amp; Validation</div>
+                <div class="item-detail">Enforces strict schema and syntax compliance across the entire application</div>
+              </div>
+            </div>
+            <div class="sub-boxes">
+              <div class="sub-box">
+                <div class="sub-box-title">Single Bundle (.zip) Payload</div>
+                <ul>
+                  <li>Bundle Manifest (.md) specification</li>
+                  <li>All required website &amp; application route pages</li>
+                  <li>All .apx files</li>
+                  <li>All JavaScript / TypeScript (.js / .ts / .tsx) modules</li>
+                  <li>All application, environment, &amp; build configuration files</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-      <!-- PHASE 04 -->
-      <div class="column">
-        <div class="phase-header">
-          <div class="phase-num">PHASE 04</div>
-          <div class="phase-title">Image-to-React Skills &amp; Steering</div>
-          <div class="phase-sub">Pipeline .md, skill checkpoints, &amp; steering</div>
-        </div>
+          <div class="down-arrow">
+            <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+              <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
+              <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
 
-        <div class="node">
-          <div class="node-top">
-            <span class="step-num">STEP 08</span>
-            <span class="badge">1 Pipeline + 3 Skill .md</span>
-          </div>
-          <div class="node-title">Image-to-React Skills Pipeline</div>
-          <div class="node-subtitle">Markdown-driven skills &amp; checkpoint outputs</div>
-          <div class="items-list">
-            <div>
-              <div class="item-label">1× Image-to-React Pipeline .md File</div>
-              <div class="item-detail">Master orchestration spec governing component translation &amp; evaluation</div>
+          <div class="node final">
+            <div class="node-top">
+              <span class="step-num">STEP 11</span>
+              <span class="badge">GOLDEN TEMPLATE</span>
             </div>
-            <div>
-              <div class="item-label">3× Skill Definition &amp; Checkpoint .md Files</div>
-              <div class="item-detail">Each skill executes from its .md spec and emits a verifiable checkpoint .md artifact</div>
+            <div class="golden-wings-hero" aria-label="Golden Wings">
+              <span class="golden-wing-emoji left">🪽</span>
+              <span class="golden-wing-emoji">🪽</span>
             </div>
-          </div>
-          <div class="sub-boxes">
-            <div class="sub-box">
-              <div class="sub-box-title">Skill 01 (.md) — Clean Image-to-React Translation</div>
-              <ul>
-                <li>Direct structural &amp; visual translation from approved screen comps</li>
-              </ul>
-            </div>
-            <div class="sub-box">
-              <div class="sub-box-title">Skill 02 (.md) — Cleanup &amp; Eval Benchmarking</div>
-              <ul>
-                <li>Dual verification benchmarked by both Model and Human Reviewer</li>
-              </ul>
-            </div>
-            <div class="sub-box">
-              <div class="sub-box-title">Skill 03 (.md) — Viewport &amp; Performance QA</div>
-              <ul>
-                <li>Responsive feel across viewports, 60fps scrolling verification, scroll kits working</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="down-arrow">
-          <svg width="14" height="20" viewBox="0 0 16 24" fill="none">
-            <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
-            <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-
-        <div class="node human">
-          <div class="node-top">
-            <span class="step-num">STEP 09</span>
-            <span class="badge">HUMAN GATE</span>
-          </div>
-          <div class="node-title">Human Checkpoint #2: Code Steering</div>
-          <div class="node-subtitle">Shareable Artifacts on Core Screens</div>
-          <div class="items-list">
-            <div>
-              <div class="item-label">Artifact Checkpoints</div>
-              <div class="item-detail">Each skill emits a verifiable, shareable artifact—critical on core pages before multiplying</div>
-            </div>
-            <div>
-              <div class="item-label">~3 Steering Moments (First 3–5 Pages)</div>
-              <div class="item-detail">First moment designer steers actual code before scaling across the rest of the site</div>
-            </div>
-          </div>
-          <div class="sub-boxes">
-            <div class="sub-box">
-              <div class="sub-box-title">Two Designer Steering Paths</div>
-              <ul>
-                <li>Path A (Correct Drift): Detect where code veered off and revert strictly back to comp</li>
-                <li>Path B (Capture Serendipity): Model does something cool halfway → "Stop, freeze worktree, analyze, &amp; go forward"</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Connector 4 -> 5 -->
-      <div class="right-connector">
-        <svg width="24" height="20" viewBox="0 0 24 20" fill="none">
-          <line x1="0" y1="10" x2="18" y2="10" stroke="#111111" stroke-width="1.5" />
-          <path d="M14 5.5L19.5 10L14 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </div>
-
-      <!-- PHASE 05 -->
-      <div class="column">
-        <div class="phase-header">
-          <div class="phase-num">PHASE 05</div>
-          <div class="phase-title">Packaging &amp; Golden Template</div>
-          <div class="phase-sub">Model-safe linting, bundle .md, &amp; final .zip</div>
-        </div>
-
-        <div class="node">
-          <div class="node-top">
-            <span class="step-num">STEP 10</span>
-            <span class="badge">1× bundle.md + .zip</span>
-          </div>
-          <div class="node-title">Linting &amp; Model-Safe Packaging Skill</div>
-          <div class="node-subtitle">Format verification &amp; single-bundle archive</div>
-          <div class="items-list">
-            <div>
-              <div class="item-label">1× Bundle Manifest &amp; Packaging .md File</div>
-              <div class="item-detail">Documents full model-safe structure, lint verification, and file inventory</div>
-            </div>
-            <div>
-              <div class="item-label">Lints &amp; Validates for Target Model Format</div>
-              <div class="item-detail">Ensures full compliance and safety across the entire codebase</div>
-            </div>
-          </div>
-          <div class="sub-boxes">
-            <div class="sub-box">
-              <div class="sub-box-title">Single Bundle (.zip) Contents</div>
-              <ul>
-                <li>Bundle Manifest .md file</li>
-                <li>All required website &amp; application pages</li>
-                <li>All .apx files</li>
-                <li>All JavaScript / TypeScript (.js / .ts) files</li>
-                <li>All application &amp; build configuration files</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="down-arrow">
-          <svg width="14" height="20" viewBox="0 0 16 24" fill="none">
-            <line x1="8" y1="0" x2="8" y2="18" stroke="#111111" stroke-width="1.5" />
-            <path d="M3.5 14.5L8 19.5L12.5 14.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-
-        <div class="node final">
-          <div class="node-top">
-            <span class="step-num">STEP 11</span>
-            <span class="badge">GOLDEN TEMPLATE</span>
-          </div>
-          <div class="node-title">React Golden Template</div>
-          <div class="node-subtitle">Final Production &amp; Model-Ready Output</div>
-          <div class="items-list">
-            <div>
-              <div class="item-label">Fully Steered, Benchmarked &amp; Packaged</div>
-              <div class="item-detail">Ready for model consumption, evaluation, or direct deployment at scale</div>
+            <div class="node-title">React Golden Template</div>
+            <div class="node-subtitle">Final Production &amp; Model-Ready Output</div>
+            <div class="items-list">
+              <div>
+                <div class="item-label">Fully Steered, Design Benchmarked &amp; Packaged</div>
+                <div class="item-detail">Production-verified React Golden Template ready for model training, evaluation, or deployment at scale</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <script>
+    function fitDiagramToViewport() {
+      var canvas = document.getElementById('diagram-canvas');
+      var scaler = document.getElementById('viewport-scaler');
+      if (!canvas || !scaler) return;
+      var designWidth = 1960;
+      var availableWidth = document.documentElement.clientWidth || window.innerWidth;
+      var scale = availableWidth / designWidth;
+      canvas.style.transform = 'scale(' + scale + ')';
+      scaler.style.height = Math.ceil(canvas.offsetHeight * scale) + 'px';
+    }
+    window.addEventListener('resize', fitDiagramToViewport);
+    window.addEventListener('DOMContentLoaded', fitDiagramToViewport);
+    window.addEventListener('load', fitDiagramToViewport);
+    fitDiagramToViewport();
+  </script>
 </body>
 </html>
