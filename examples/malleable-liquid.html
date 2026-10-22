@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>3D MLS-MPM Liquid — Narrow-Range SSFR & Raytraced Refraction</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #ffffff !important;
+      color: #111111;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+      touch-action: none;
+    }
+
+    canvas {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      cursor: grab;
+    }
+
+    canvas.grabbing {
+      cursor: grabbing;
+    }
+
+    .hud {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 8px;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 999px;
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06);
+      z-index: 10;
+      max-width: calc(100vw - 24px);
+      overflow-x: auto;
+    }
+
+    .hud-group {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .divider {
+      width: 1px;
+      height: 18px;
+      background: rgba(0, 0, 0, 0.09);
+      margin: 0 4px;
+      flex-shrink: 0;
+    }
+
+    .hud button {
+      appearance: none;
+      border: none;
+      background: transparent;
+      color: #555555;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .hud button:hover {
+      color: #111111;
+      background: rgba(0, 0, 0, 0.045);
+    }
+
+    .hud button.active {
+      background: #111111;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+    }
+
+    .hint {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      font-weight: 450;
+      color: rgba(0, 0, 0, 0.46);
+      letter-spacing: -0.01em;
+      pointer-events: none;
+      z-index: 10;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(8px);
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      white-space: nowrap;
+    }
+
+    .badge {
+      position: fixed;
+      bottom: 18px;
+      right: 20px;
+      font-size: 12px;
+      font-variant-numeric: tabular-nums;
+      color: rgba(0, 0, 0, 0.35);
+      pointer-events: none;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="glcanvas"></canvas>
+
+  <div class="hud">
+    <div class="hud-group" id="preset-buttons">
+      <button class="active" data-preset="water">MLS-MPM Water</button>
+      <button data-preset="slime">Viscoelastic Gel</button>
+      <button data-preset="mercury">Liquid Chrome</button>
+      <button data-preset="zerog">Zero-G Bolus</button>
+    </div>
+    <div class="divider"></div>
+    <div class="hud-group">
+      <button id="btn-slam-top">Throw to Ceiling</button>
+      <button id="btn-wave">Wave Pulse</button>
+      <button id="btn-reset">Reset</button>
+    </div>
+  </div>
+
+  <div class="hint">
+    Click &amp; hold to gather 3D liquid in mid-air &middot; Whip &amp; release to hurl against ceiling, floor, or walls &middot; Scroll to resize grab sphere
+  </div>
+
+  <div class="badge" id="perf-badge">11,000 3D MLS-MPM Particles &middot; Narrow-Range SSFR</div>
+
+  <script>
+    /**
+     * ============================================================================
+     * HIGH-END 3D MLS-MPM FLUID + NARROW-RANGE SCREEN-SPACE FLUID RENDERER (SSFR)
+     * ============================================================================
+     * Architecture based on:
+     * 1. Hu et al. (SIGGRAPH 2018) — Moving Least Squares Material Point Method (MLS-MPM)
+     *    with APIC 3x3 Affine Velocity Matrix (C) & quadratic B-spline P2G/G2P transfers.
+     * 2. Truong & Yuksel (PACMCGIT 2018) — Separable Narrow-Range Depth Filter for
+     *    artifact-free 3D Screen-Space Fluid Rendering (as used in matsuoka-601/Splash).
+     * 3. 3D Ray-Traced Box Refraction, Beer-Lambert Volumetric Absorption, & Caustics.
+     */
+
+    const canvas = document.getElementById('glcanvas');
+    const gl = canvas.getContext('webgl2', {
+      alpha: false,
+      depth: true,
+      stencil: false,
+      antialias: false,
+      powerPreference: 'high-performance'
+    });
+
+    if (!gl) {
+      document.body.innerHTML = '<div style="padding:24px;font-size:14px;">WebGL2 is required.</div>';
+    }
+
+    const extColorBufferFloat = gl.getExtension('EXT_color_buffer_float');
+    const extFloatLinear = gl.getExtension('OES_texture_float_linear');
+
+    // ============================================================================
+    // 1. 3D MLS-MPM SIMULATION CONFIGURATION
+    // ============================================================================
+    const NUM_PARTICLES = 11000;
+
+    // 3D Eulerian background grid dimensions (X: width, Y: height, Z: depth)
+    let GRID_X = 44;
+    const GRID_Y = 34;
+    const GRID_Z = 20;
+    const MAX_GRID_X = 64;
+    const MAX_GRID_NODES = MAX_GRID_X * GRID_Y * GRID_Z;
+
+    // Material presets
+    const PRESETS = {
+      water: {
+        name: 'MLS-MPM Water',
+        gravity: -28.0,
+        stiffness: 320.0,         // EOS bulk modulus
+        restDensity: 3.4,
+        dynamicViscosity: 0.14,   // APIC shear viscosity
+        elasticity: 0.0,          // Pure fluid
+        surfaceTension: 16.5,     // Continuum CSF inward cohesion
+        tensileClamp: 0.22,       // Negative pressure cohesion clamp
+        ceilingAdhesion: 0.18,
+        grabStrength: 88.0,
+        grabCohesion: 1.0,
+        sphereRadius: 0.62,       // 3D impostor sphere radius in grid units
+        // Optical PBR properties
+        deepColor: [0.015, 0.34, 0.86],
+        shallowColor: [0.28, 0.78, 0.99],
+        absorption: 1.55,
+        ior: 1.333,
+        roughness: 0.045,
+        metallic: 0.0,
+        dispersion: 0.018
+      },
+      slime: {
+        name: 'Viscoelastic Gel',
+        gravity: -25.0,
+        stiffness: 360.0,
+        restDensity: 3.1,
+        dynamicViscosity: 0.85,   // High viscoelastic shear
+        elasticity: 22.0,         // Viscoelastic memory (putty/slime recoil)
+        surfaceTension: 32.0,     // Strong cohesive skin
+        tensileClamp: 0.65,       // Strong negative pressure resistance so blob lifts whole
+        ceilingAdhesion: 0.55,    // Clings to ceiling & stretches down in thick drips
+        grabStrength: 110.0,
+        grabCohesion: 1.35,
+        sphereRadius: 0.68,
+        deepColor: [0.02, 0.62, 0.44],
+        shallowColor: [0.38, 0.94, 0.72],
+        absorption: 1.85,
+        ior: 1.42,
+        roughness: 0.06,
+        metallic: 0.0,
+        dispersion: 0.024
+      },
+      mercury: {
+        name: 'Liquid Chrome',
+        gravity: -32.0,
+        stiffness: 420.0,
+        restDensity: 3.3,
+        dynamicViscosity: 0.25,
+        elasticity: 4.0,
+        surfaceTension: 42.0,     // Ultra-high surface tension -> fat heavy liquid metal orbs
+        tensileClamp: 0.50,
+        ceilingAdhesion: 0.05,
+        grabStrength: 96.0,
+        grabCohesion: 1.15,
+        sphereRadius: 0.65,
+        deepColor: [0.18, 0.21, 0.26],
+        shallowColor: [0.76, 0.81, 0.88],
+        absorption: 4.5,
+        ior: 2.4,
+        roughness: 0.03,
+        metallic: 0.94,
+        dispersion: 0.0
+      },
+      zerog: {
+        name: 'Zero-G Bolus',
+        gravity: 0.0,
+        stiffness: 310.0,
+        restDensity: 3.2,
+        dynamicViscosity: 0.30,
+        elasticity: 6.5,
+        surfaceTension: 34.0,     // Self-gravitating surface tension in 0G
+        tensileClamp: 0.55,
+        ceilingAdhesion: 0.08,
+        grabStrength: 85.0,
+        grabCohesion: 1.2,
+        sphereRadius: 0.66,
+        deepColor: [0.12, 0.24, 0.92],
+        shallowColor: [0.42, 0.72, 1.0],
+        absorption: 1.45,
+        ior: 1.36,
+        roughness: 0.04,
+        metallic: 0.04,
+        dispersion: 0.028
+      }
+    };
+
+    let preset = PRESETS.water;
+
+    // 3D Particle State Arrays (SoA for cache-coherent high-speed MLS-MPM)
+    const px = new Float32Array(NUM_PARTICLES);
+    const py = new Float32Array(NUM_PARTICLES);
+    const pz = new Float32Array(NUM_PARTICLES);
+
+    const vx = new Float32Array(NUM_PARTICLES);
+    const vy = new Float32Array(NUM_PARTICLES);
+    const vz = new Float32Array(NUM_PARTICLES);
+
+    // 3x3 Affine Velocity Matrix C per particle (9 floats per particle)
+    const affineC = new Float32Array(NUM_PARTICLES * 9);
+
+    // Viscoelastic shear strain memory per particle (diagonal + off-diagonal)
+    const strainXX = new Float32Array(NUM_PARTICLES);
+    const strainYY = new Float32Array(NUM_PARTICLES);
+    const strainXY = new Float32Array(NUM_PARTICLES);
+
+    // Grabbed affinity per particle (0..1)
+    const grabAffinity = new Float32Array(NUM_PARTICLES);
+
+    // Interleaved GPU upload buffer: [x, y, z, speed]
+    const gpuParticleBuffer = new Float32Array(NUM_PARTICLES * 4);
+
+    // 3D Background Grid Arrays: mass and momentum/velocity (vx, vy, vz)
+    const gridMass = new Float32Array(MAX_GRID_NODES);
+    const gridVx = new Float32Array(MAX_GRID_NODES);
+    const gridVy = new Float32Array(MAX_GRID_NODES);
+    const gridVz = new Float32Array(MAX_GRID_NODES);
+
+    // ============================================================================
+    // 2. CAMERA & 3D RAYCAST INTERACTION
+    // ============================================================================
+    const camera = {
+      fovY: 38 * Math.PI / 180,
+      aspect: 1.5,
+      near: 2.0,
+      far: 140.0,
+      eye: [22.0, 17.0, 48.0],
+      target: [22.0, 16.5, 10.0],
+      projMatrix: new Float32Array(16),
+      invProjMatrix: new Float32Array(16),
+      viewMatrix: new Float32Array(16),
+      invViewMatrix: new Float32Array(16)
+    };
+
+    function updateCameraMatrices() {
+      const f = 1.0 / Math.tan(camera.fovY * 0.5);
+      const nf = 1.0 / (camera.near - camera.far);
+      const a = camera.aspect;
+
+      // Column-major perspective matrix
+      const P = camera.projMatrix;
+      P.fill(0);
+      P[0] = f / a;
+      P[5] = f;
+      P[10] = (camera.far + camera.near) * nf;
+      P[11] = -1.0;
+      P[14] = (2.0 * camera.far * camera.near) * nf;
+
+      // Inverse projection matrix
+      const IP = camera.invProjMatrix;
+      IP.fill(0);
+      IP[0] = a / f;
+      IP[5] = 1.0 / f;
+      IP[11] = (camera.near - camera.far) / (2.0 * camera.far * camera.near);
+      IP[14] = -1.0;
+      IP[15] = (camera.far + camera.near) / (2.0 * camera.far * camera.near);
+
+      // Center camera on the 3D simulation box [0..GRID_X, 0..GRID_Y, 0..GRID_Z]
+      const cx = GRID_X * 0.5;
+      const cy = GRID_Y * 0.5;
+      const cz = GRID_Z * 0.5;
+      const dist = (GRID_Y * 0.52) / Math.tan(camera.fovY * 0.5) + GRID_Z * 0.62;
+
+      camera.eye[0] = cx;
+      camera.eye[1] = cy;
+      camera.eye[2] = cz + dist;
+      camera.target[0] = cx;
+      camera.target[1] = cy;
+      camera.target[2] = cz;
+
+      // Simple translation view matrix (camera looks straight along -Z)
+      const V = camera.viewMatrix;
+      V.fill(0);
+      V[0] = 1; V[5] = 1; V[10] = 1; V[15] = 1;
+      V[12] = -camera.eye[0];
+      V[13] = -camera.eye[1];
+      V[14] = -camera.eye[2];
+
+      const IV = camera.invViewMatrix;
+      IV.fill(0);
+      IV[0] = 1; IV[5] = 1; IV[10] = 1; IV[15] = 1;
+      IV[12] = camera.eye[0];
+      IV[13] = camera.eye[1];
+      IV[14] = camera.eye[2];
+    }
+
+    // Pointer state in 3D grid coordinates
+    const pointer = {
+      active: false,
+      x: 22.0,
+      y: 12.0,
+      z: 10.0,
+      prevX: 22.0,
+      prevY: 12.0,
+      prevZ: 10.0,
+      vx: 0.0,
+      vy: 0.0,
+      vz: 0.0,
+      flingVx: 0.0,
+      flingVy: 0.0,
+      radius: 6.8, // 3D grab radius in grid units
+      history: []
+    };
+
+    function clientToWorldOnMidPlane(clientX, clientY) {
+      const rect = canvas.getBoundingClientRect();
+      const ndcX = ((clientX - rect.left) / Math.max(1, rect.width)) * 2.0 - 1.0;
+      const ndcY = 1.0 - ((clientY - rect.top) / Math.max(1, rect.height)) * 2.0;
+
+      // Intersect camera ray with the mid-Z plane of the fluid box (z = GRID_Z * 0.5)
+      const planeZ = GRID_Z * 0.5;
+      const depthFromEye = camera.eye[2] - planeZ;
+      const halfH = Math.tan(camera.fovY * 0.5) * depthFromEye;
+      const halfW = halfH * camera.aspect;
+
+      return {
+        x: Math.max(2.5, Math.min(GRID_X - 2.5, camera.eye[0] + ndcX * halfW)),
+        y: Math.max(2.5, Math.min(GRID_Y - 2.5, camera.eye[1] + ndcY * halfH)),
+        z: planeZ
+      };
+    }
+
+    function pushPointerHistory(x, y, now) {
+      pointer.history.push({ x, y, t: now });
+      while (pointer.history.length > 2 && now - pointer.history[0].t > 80) {
+        pointer.history.shift();
+      }
+      if (pointer.history.length >= 2) {
+        const a = pointer.history[0];
+        const b = pointer.history[pointer.history.length - 1];
+        const dt = Math.max(0.008, (b.t - a.t) * 0.001);
+        pointer.flingVx = (b.x - a.x) / dt;
+        pointer.flingVy = (b.y - a.y) / dt;
+      }
+    }
+
+    window.addEventListener('pointerdown', (e) => {
+      if (e.target.closest('.hud')) return;
+      const p = clientToWorldOnMidPlane(e.clientX, e.clientY);
+      pointer.active = true;
+      pointer.x = pointer.prevX = p.x;
+      pointer.y = pointer.prevY = p.y;
+      pointer.z = pointer.prevZ = p.z;
+      pointer.vx = pointer.vy = pointer.vz = 0;
+      pointer.flingVx = pointer.flingVy = 0;
+      pointer.history = [{ x: p.x, y: p.y, t: performance.now() }];
+      canvas.classList.add('grabbing');
+
+      // Tag particles within 3D scoop cylinder/sphere so they lock into a cohesive lifted bolus
+      const r = pointer.radius * 1.35 * preset.grabCohesion;
+      const rSq = r * r;
+      for (let i = 0; i < NUM_PARTICLES; i++) {
+        const dx = px[i] - pointer.x;
+        const dy = py[i] - pointer.y;
+        const dz = (pz[i] - pointer.z) * 0.45;
+        const dSq = dx * dx + dy * dy + dz * dz;
+        if (dSq < rSq) {
+          const w = 1.0 - Math.sqrt(dSq) / r;
+          grabAffinity[i] = Math.min(1.0, 0.55 + 0.45 * w);
+        } else {
+          grabAffinity[i] = 0.0;
+        }
+      }
+    });
+
+    window.addEventListener('pointermove', (e) => {
+      const p = clientToWorldOnMidPlane(e.clientX, e.clientY);
+      pointer.x = p.x;
+      pointer.y = p.y;
+      pointer.z = p.z;
+      pushPointerHistory(p.x, p.y, performance.now());
+    });
+
+    function handlePointerRelease() {
+      if (!pointer.active) return;
+      pointer.active = false;
+      canvas.classList.remove('grabbing');
+
+      pushPointerHistory(pointer.x, pointer.y, performance.now());
+      let tvx = pointer.flingVx * 1.15;
+      let tvy = pointer.flingVy * 1.15;
+      const speed = Math.hypot(tvx, tvy);
+      const maxSpeed = 95.0;
+      if (speed > maxSpeed) {
+        tvx = (tvx / speed) * maxSpeed;
+        tvy = (tvy / speed) * maxSpeed;
+      }
+
+      if (speed > 2.0) {
+        const r = pointer.radius * 1.5;
+        const rSq = r * r;
+        for (let i = 0; i < NUM_PARTICLES; i++) {
+          let w = grabAffinity[i];
+          const dx = px[i] - pointer.x;
+          const dy = py[i] - pointer.y;
+          const dSq = dx * dx + dy * dy;
+          if (dSq < rSq) {
+            w = Math.max(w, 1.0 - Math.sqrt(dSq) / r);
+          }
+          if (w > 0.02) {
+            const blend = Math.min(1.0, w * 0.92);
+            vx[i] = vx[i] * (1.0 - blend) + tvx * blend;
+            vy[i] = vy[i] * (1.0 - blend) + tvy * blend;
+            // Add slight 3D Z-splash turbulence on hard throws
+            vz[i] += (Math.random() - 0.5) * speed * 0.08 * blend;
+          }
+          grabAffinity[i] = 0.0;
+        }
+      } else {
+        grabAffinity.fill(0.0);
+      }
+    }
+
+    window.addEventListener('pointerup', handlePointerRelease);
+    window.addEventListener('pointercancel', handlePointerRelease);
+
+    window.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      pointer.radius = Math.max(3.5, Math.min(13.0, pointer.radius - e.deltaY * 0.006));
+    }, { passive: false });
+
+    // ============================================================================
+    // 3. INITIALIZE 3D FLUID VOLUME
+    // ============================================================================
+    function spawnFluidBlock() {
+      affineC.fill(0);
+      strainXX.fill(0);
+      strainYY.fill(0);
+      strainXY.fill(0);
+      grabAffinity.fill(0);
+
+      // Spawn as a dense 3D cohesive liquid block in the center that drops and splashes
+      const boxW = GRID_X * 0.52;
+      const boxH = GRID_Y * 0.44;
+      const boxD = GRID_Z * 0.56;
+      const startX = (GRID_X - boxW) * 0.5;
+      const startY = preset.gravity === 0 ? (GRID_Y - boxH) * 0.5 : 3.2;
+      const startZ = (GRID_Z - boxD) * 0.5;
+
+      const nx = Math.round(Math.cbrt(NUM_PARTICLES * (boxW / boxH) * (boxW / boxD)));
+      const ny = Math.round(nx * (boxH / boxW));
+      const nz = Math.max(4, Math.ceil(NUM_PARTICLES / (nx * ny)));
+
+      let idx = 0;
+      for (let ix = 0; ix < nx && idx < NUM_PARTICLES; ix++) {
+        for (let iy = 0; iy < ny && idx < NUM_PARTICLES; iy++) {
+          for (let iz = 0; iz < nz && idx < NUM_PARTICLES; iz++) {
+            const jx = (Math.random() - 0.5) * 0.35;
+            const jy = (Math.random() - 0.5) * 0.35;
+            const jz = (Math.random() - 0.5) * 0.35;
+            px[idx] = startX + ((ix + 0.5 + jx) / nx) * boxW;
+            py[idx] = startY + ((iy + 0.5 + jy) / ny) * boxH;
+            pz[idx] = startZ + ((iz + 0.5 + jz) / nz) * boxD;
+            vx[idx] = 0.0;
+            vy[idx] = 0.0;
+            vz[idx] = 0.0;
+            idx++;
+          }
+        }
+      }
+    }
+
+    function throwToCeilingImpulse() {
+      const cx = GRID_X * 0.5;
+      const cz = GRID_Z * 0.5;
+      for (let i = 0; i < NUM_PARTICLES; i++) {
+        const dx = px[i] - cx;
+        const dz = pz[i] - cz;
+        const w = Math.exp(-(dx * dx) / (GRID_X * 2.2));
+        if (w > 0.05) {
+          vy[i] += (42.0 + Math.random() * 8.0) * w;
+          vx[i] += (-dx * 0.9 + (Math.random() - 0.5) * 6.0) * w;
+          vz[i] += (-dz * 0.5 + (Math.random() - 0.5) * 5.0) * w;
+        }
+      }
+    }
+
+    function wavePulseImpulse() {
+      for (let i = 0; i < NUM_PARTICLES; i++) {
+        vx[i] += 26.0 * Math.exp(-px[i] * 0.08);
+        vy[i] += 10.0 * Math.exp(-px[i] * 0.06);
+      }
+    }
+
+    // ============================================================================
+    // 4. 3D MLS-MPM SOLVER (HU ET AL. SIGGRAPH 2018 + CONTINUUM SURFACE TENSION)
+    // ============================================================================
+    // Pre-allocated quadratic B-spline weight tables for zero GC pressure
+    const wx = new Float32Array(3);
+    const wy = new Float32Array(3);
+    const wz = new Float32Array(3);
+    const dwx = new Float32Array(3);
+    const dwy = new Float32Array(3);
+
+    function stepMLSMPM(frameDt) {
+      const substeps = 2;
+      const dt = Math.min(0.016, frameDt) / substeps;
+
+      // Track smoothed pointer velocity
+      const instVx = (pointer.x - pointer.prevX) / Math.max(0.001, frameDt);
+      const instVy = (pointer.y - pointer.prevY) / Math.max(0.001, frameDt);
+      pointer.vx = pointer.vx * 0.35 + instVx * 0.65;
+      pointer.vy = pointer.vy * 0.35 + instVy * 0.65;
+      pointer.prevX = pointer.x;
+      pointer.prevY = pointer.y;
+
+      const gxCount = GRID_X;
+      const gyCount = GRID_Y;
+      const gzCount = GRID_Z;
+      const strideY = gxCount;
+      const strideZ = gxCount * gyCount;
+      const totalNodes = gxCount * gyCount * gzCount;
+
+      const grav = preset.gravity;
+      const restDensity = preset.restDensity;
+      const stiffness = preset.stiffness;
+      const visc = preset.dynamicViscosity;
+      const elasticity = preset.elasticity;
+      const surfTension = preset.surfaceTension;
+      const tensileClamp = preset.tensileClamp;
+      const grabR = pointer.radius;
+      const grabRSq = grabR * grabR;
+      const scoopR = pointer.radius * 1.55;
+      const scoopRSq = scoopR * scoopR;
+
+      for (let step = 0; step < substeps; step++) {
+        // --------------------------------------------------------------------
+        // PHASE 1: CLEAR 3D BACKGROUND GRID
+        // --------------------------------------------------------------------
+        gridMass.fill(0, 0, totalNodes);
+        gridVx.fill(0, 0, totalNodes);
+        gridVy.fill(0, 0, totalNodes);
+        gridVz.fill(0, 0, totalNodes);
+
+        // --------------------------------------------------------------------
+        // PHASE 2: PARTICLE-TO-GRID (P2G) — MASS, APIC MOMENTUM & STRESS
+        // --------------------------------------------------------------------
+        for (let p = 0; p < NUM_PARTICLES; p++) {
+          const x = px[p];
+          const y = py[p];
+          const z = pz[p];
+
+          const baseX = Math.max(1, Math.min(gxCount - 3, Math.floor(x - 0.5)));
+          const baseY = Math.max(1, Math.min(gyCount - 3, Math.floor(y - 0.5)));
+          const baseZ = Math.max(1, Math.min(gzCount - 3, Math.floor(z - 0.5)));
+
+          const fx = x - baseX;
+          const fy = y - baseY;
+          const fz = z - baseZ;
+
+          // Quadratic B-spline weights
+          wx[0] = 0.5 * (1.5 - fx) * (1.5 - fx);
+          wx[1] = 0.75 - (fx - 1.0) * (fx - 1.0);
+          wx[2] = 0.5 * (fx - 0.5) * (fx - 0.5);
+
+          wy[0] = 0.5 * (1.5 - fy) * (1.5 - fy);
+          wy[1] = 0.75 - (fy - 1.0) * (fy - 1.0);
+          wy[2] = 0.5 * (fy - 0.5) * (fy - 0.5);
+
+          wz[0] = 0.5 * (1.5 - fz) * (1.5 - fz);
+          wz[1] = 0.75 - (fz - 1.0) * (fz - 1.0);
+          wz[2] = 0.5 * (fz - 0.5) * (fz - 0.5);
+
+          const cBase = p * 9;
+          const c00 = affineC[cBase],     c01 = affineC[cBase + 1], c02 = affineC[cBase + 2];
+          const c10 = affineC[cBase + 3], c11 = affineC[cBase + 4], c12 = affineC[cBase + 5];
+          const c20 = affineC[cBase + 6], c21 = affineC[cBase + 7], c22 = affineC[cBase + 8];
+
+          // Update viscoelastic strain memory from velocity gradient C
+          let sxx = (strainXX[p] + dt * c00) * 0.96;
+          let syy = (strainYY[p] + dt * c11) * 0.96;
+          let sxy = (strainXY[p] + dt * 0.5 * (c01 + c10)) * 0.96;
+          // Plastic yield limit so gel stays malleable and doesn't snap back forever
+          const maxStrain = 0.38;
+          sxx = Math.max(-maxStrain, Math.min(maxStrain, sxx));
+          syy = Math.max(-maxStrain, Math.min(maxStrain, syy));
+          sxy = Math.max(-maxStrain, Math.min(maxStrain, sxy));
+          strainXX[p] = sxx;
+          strainYY[p] = syy;
+          strainXY[p] = sxy;
+
+          const pvx = vx[p];
+          const pvy = vy[p];
+          const pvz = vz[p];
+
+          for (let i = 0; i < 3; i++) {
+            const dx = (i - fx);
+            const wxi = wx[i];
+            const nodeX = baseX + i;
+            for (let j = 0; j < 3; j++) {
+              const dy = (j - fy);
+              const wxij = wxi * wy[j];
+              const nodeXY = (baseY + j) * strideY + nodeX;
+              for (let k = 0; k < 3; k++) {
+                const dz = (k - fz);
+                const weight = wxij * wz[k];
+                const idx = (baseZ + k) * strideZ + nodeXY;
+
+                // APIC affine velocity contribution: v_p + C_p * (x_i - x_p)
+                const affVx = pvx + c00 * dx + c01 * dy + c02 * dz;
+                const affVy = pvy + c10 * dx + c11 * dy + c12 * dz;
+                const affVz = pvz + c20 * dx + c21 * dy + c22 * dz;
+
+                gridMass[idx] += weight;
+                gridVx[idx] += weight * affVx;
+                gridVy[idx] += weight * affVy;
+                gridVz[idx] += weight * affVz;
+              }
+            }
+          }
+        }
+
+        // --------------------------------------------------------------------
+        // PHASE 2B: MLS-MPM CONTINUUM PRESSURE + VISCOELASTIC STRESS + SURFACE TENSION
+        // --------------------------------------------------------------------
+        for (let p = 0; p < NUM_PARTICLES; p++) {
+          const x = px[p];
+          const y = py[p];
+          const z = pz[p];
+
+          const baseX = Math.max(1, Math.min(gxCount - 3, Math.floor(x - 0.5)));
+          const baseY = Math.max(1, Math.min(gyCount - 3, Math.floor(y - 0.5)));
+          const baseZ = Math.max(1, Math.min(gzCount - 3, Math.floor(z - 0.5)));
+
+          const fx = x - baseX;
+          const fy = y - baseY;
+          const fz = z - baseZ;
+
+          wx[0] = 0.5 * (1.5 - fx) * (1.5 - fx);
+          wx[1] = 0.75 - (fx - 1.0) * (fx - 1.0);
+          wx[2] = 0.5 * (fx - 0.5) * (fx - 0.5);
+
+          wy[0] = 0.5 * (1.5 - fy) * (1.5 - fy);
+          wy[1] = 0.75 - (fy - 1.0) * (fy - 1.0);
+          wy[2] = 0.5 * (fy - 0.5) * (fy - 0.5);
+
+          wz[0] = 0.5 * (1.5 - fz) * (1.5 - fz);
+          wz[1] = 0.75 - (fz - 1.0) * (fz - 1.0);
+          wz[2] = 0.5 * (fz - 0.5) * (fz - 0.5);
+
+          // B-spline analytic derivatives for continuum surface-tension density gradient
+          dwx[0] = fx - 1.5;
+          dwx[1] = -2.0 * (fx - 1.0);
+          dwx[2] = fx - 0.5;
+
+          dwy[0] = fy - 1.5;
+          dwy[1] = -2.0 * (fy - 1.0);
+          dwy[2] = fy - 0.5;
+
+          let density = 0.0;
+          let gradRhoX = 0.0;
+          let gradRhoY = 0.0;
+
+          for (let i = 0; i < 3; i++) {
+            const wxi = wx[i];
+            const dwxi = dwx[i];
+            const nodeX = baseX + i;
+            for (let j = 0; j < 3; j++) {
+              const wyj = wy[j];
+              const dwyj = dwy[j];
+              const wxij = wxi * wyj;
+              const nodeXY = (baseY + j) * strideY + nodeX;
+              for (let k = 0; k < 3; k++) {
+                const wzk = wz[k];
+                const idx = (baseZ + k) * strideZ + nodeXY;
+                const m = gridMass[idx];
+                density += wxij * wzk * m;
+                gradRhoX += dwxi * wyj * wzk * m;
+                gradRhoY += wxi * dwyj * wzk * m;
+              }
+            }
+          }
+
+          // Equation of State (Tait EOS with cohesive negative-pressure clamp for malleability)
+          const ratio = density / restDensity;
+          let pressure = stiffness * (ratio * ratio * ratio - 1.0);
+          if (pressure < -stiffness * tensileClamp) {
+            pressure = -stiffness * tensileClamp;
+          }
+
+          const cBase = p * 9;
+          const c00 = affineC[cBase],     c01 = affineC[cBase + 1], c02 = affineC[cBase + 2];
+          const c10 = affineC[cBase + 3], c11 = affineC[cBase + 4], c12 = affineC[cBase + 5];
+          const c20 = affineC[cBase + 6], c21 = affineC[cBase + 7], c22 = affineC[cBase + 8];
+
+          // Cauchy stress tensor = -pressure * I + viscosity * (C + C^T) + elasticity * strain
+          const scale = -4.0 * dt;
+          const s00 = scale * (-pressure + visc * c00 + elasticity * strainXX[p]);
+          const s11 = scale * (-pressure + visc * c11 + elasticity * strainYY[p]);
+          const s22 = scale * (-pressure + visc * c22);
+          const s01 = scale * (visc * 0.5 * (c01 + c10) + elasticity * strainXY[p]);
+          const s02 = scale * (visc * 0.5 * (c02 + c20));
+          const s12 = scale * (visc * 0.5 * (c12 + c21));
+
+          for (let i = 0; i < 3; i++) {
+            const dx = (i - fx);
+            const wxi = wx[i];
+            const nodeX = baseX + i;
+            for (let j = 0; j < 3; j++) {
+              const dy = (j - fy);
+              const wxij = wxi * wy[j];
+              const nodeXY = (baseY + j) * strideY + nodeX;
+              for (let k = 0; k < 3; k++) {
+                const dz = (k - fz);
+                const weight = wxij * wz[k];
+                const idx = (baseZ + k) * strideZ + nodeXY;
+
+                gridVx[idx] += weight * (s00 * dx + s01 * dy + s02 * dz);
+                gridVy[idx] += weight * (s01 * dx + s11 * dy + s12 * dz);
+                gridVz[idx] += weight * (s02 * dx + s12 * dy + s22 * dz);
+              }
+            }
+          }
+
+          // Continuum Surface Tension (CSF): pulls free-surface boundary particles inward
+          const gradMag = Math.hypot(gradRhoX, gradRhoY);
+          if (gradMag > 0.15 && density < restDensity * 1.15) {
+            const invGrad = (surfTension * dt) / (gradMag + 0.5);
+            vx[p] += gradRhoX * invGrad;
+            vy[p] += gradRhoY * invGrad;
+          }
+        }
+
+        // --------------------------------------------------------------------
+        // PHASE 3: GRID VELOCITY NORMALIZATION & 3D STUDIO BOUNDARY CONDITIONS
+        // --------------------------------------------------------------------
+        const pad = 2;
+        for (let z = 0; z < gzCount; z++) {
+          const zOffset = z * strideZ;
+          for (let y = 0; y < gyCount; y++) {
+            const yzOffset = zOffset + y * strideY;
+            for (let x = 0; x < gxCount; x++) {
+              const idx = yzOffset + x;
+              const m = gridMass[idx];
+              if (m > 1e-6) {
+                const invM = 1.0 / m;
+                let vxNode = gridVx[idx] * invM;
+                let vyNode = gridVy[idx] * invM + grav * dt;
+                let vzNode = gridVz[idx] * invM;
+
+                // Studio walls (X)
+                if (x < pad && vxNode < 0) vxNode = 0;
+                if (x > gxCount - 1 - pad && vxNode > 0) vxNode = 0;
+
+                // Studio floor & ceiling (Y)
+                if (y < pad && vyNode < 0) vyNode = 0;
+                if (y > gyCount - 1 - pad) {
+                  if (vyNode > 0) vyNode = 0;
+                  // Ceiling adhesion damping so thrown liquid sheets across the ceiling before dripping
+                  vxNode *= (1.0 - preset.ceilingAdhesion * 0.12);
+                  vyNode += Math.abs(grav) * preset.ceilingAdhesion * dt;
+                }
+
+                // Studio front & back glass walls (Z)
+                if (z < pad && vzNode < 0) vzNode = 0;
+                if (z > gzCount - 1 - pad && vzNode > 0) vzNode = 0;
+
+                gridVx[idx] = vxNode;
+                gridVy[idx] = vyNode;
+                gridVz[idx] = vzNode;
+              }
+            }
+          }
+        }
+
+        // --------------------------------------------------------------------
+        // PHASE 4: GRID-TO-PARTICLE (G2P) — APIC AFFINE MATRIX C & ADVECTION
+        // --------------------------------------------------------------------
+        const minBoundX = 1.6, maxBoundX = gxCount - 2.6;
+        const minBoundY = 1.6, maxBoundY = gyCount - 2.6;
+        const minBoundZ = 1.6, maxBoundZ = gzCount - 2.6;
+        const midZ = gzCount * 0.5;
+
+        for (let p = 0; p < NUM_PARTICLES; p++) {
+          const x = px[p];
+          const y = py[p];
+          const z = pz[p];
+
+          const baseX = Math.max(1, Math.min(gxCount - 3, Math.floor(x - 0.5)));
+          const baseY = Math.max(1, Math.min(gyCount - 3, Math.floor(y - 0.5)));
+          const baseZ = Math.max(1, Math.min(gzCount - 3, Math.floor(z - 0.5)));
+
+          const fx = x - baseX;
+          const fy = y - baseY;
+          const fz = z - baseZ;
+
+          wx[0] = 0.5 * (1.5 - fx) * (1.5 - fx);
+          wx[1] = 0.75 - (fx - 1.0) * (fx - 1.0);
+          wx[2] = 0.5 * (fx - 0.5) * (fx - 0.5);
+
+          wy[0] = 0.5 * (1.5 - fy) * (1.5 - fy);
+          wy[1] = 0.75 - (fy - 1.0) * (fy - 1.0);
+          wy[2] = 0.5 * (fy - 0.5) * (fy - 0.5);
+
+          wz[0] = 0.5 * (1.5 - fz) * (1.5 - fz);
+          wz[1] = 0.75 - (fz - 1.0) * (fz - 1.0);
+          wz[2] = 0.5 * (fz - 0.5) * (fz - 0.5);
+
+          let newVx = 0.0, newVy = 0.0, newVz = 0.0;
+          let c00 = 0, c01 = 0, c02 = 0;
+          let c10 = 0, c11 = 0, c12 = 0;
+          let c20 = 0, c21 = 0, c22 = 0;
+
+          for (let i = 0; i < 3; i++) {
+            const dx = (i - fx);
+            const wxi = wx[i];
+            const nodeX = baseX + i;
+            for (let j = 0; j < 3; j++) {
+              const dy = (j - fy);
+              const wxij = wxi * wy[j];
+              const nodeXY = (baseY + j) * strideY + nodeX;
+              for (let k = 0; k < 3; k++) {
+                const dz = (k - fz);
+                const weight = wxij * wz[k];
+                const idx = (baseZ + k) * strideZ + nodeXY;
+
+                const gvx = gridVx[idx];
+                const gvy = gridVy[idx];
+                const gvz = gridVz[idx];
+
+                newVx += weight * gvx;
+                newVy += weight * gvy;
+                newVz += weight * gvz;
+
+                const w4 = 4.0 * weight;
+                const wvx = w4 * gvx;
+                const wvy = w4 * gvy;
+                const wvz = w4 * gvz;
+
+                c00 += wvx * dx; c01 += wvx * dy; c02 += wvx * dz;
+                c10 += wvy * dx; c11 += wvy * dy; c12 += wvy * dz;
+                c20 += wvz * dx; c21 += wvz * dy; c22 += wvz * dz;
+              }
+            }
+          }
+
+          // 3D Continuum Hand / Grabber Force
+          if (pointer.active) {
+            const dx = pointer.x - x;
+            const dy = pointer.y - y;
+            const dz = (midZ - z);
+            const dSq2D = dx * dx + dy * dy;
+
+            if (dSq2D < grabRSq) {
+              const w = 1.0 - Math.sqrt(dSq2D) / grabR;
+              if (w > grabAffinity[p]) {
+                grabAffinity[p] = Math.min(1.0, grabAffinity[p] + w * 0.45);
+              }
+            } else if (dSq2D < scoopRSq) {
+              const dist = Math.sqrt(dSq2D) + 1e-4;
+              const pull = (1.0 - dist / scoopR) * preset.grabStrength * 0.45 * dt;
+              newVx += (dx / dist) * pull;
+              newVy += (dy / dist) * pull;
+            }
+
+            const ga = grabAffinity[p];
+            if (ga > 0.001) {
+              // Cancel gravity while suspended in hand
+              newVy -= grav * ga * 0.96 * dt;
+
+              // Cohesive spring gather into a 3D floating liquid orb around the cursor
+              const spring = preset.grabStrength * ga * dt;
+              newVx += dx * spring * 0.36;
+              newVy += dy * spring * 0.36;
+              newVz += dz * spring * 0.25;
+
+              // Match cursor velocity smoothly so dragging carries the whole mass
+              const velMatch = Math.min(0.65, ga * 0.52);
+              newVx += (pointer.vx - newVx) * velMatch;
+              newVy += (pointer.vy - newVy) * velMatch;
+            }
+          }
+
+          // Gentle centering force in Z so liquid stays rich and volumetric in view
+          newVz += (midZ - z) * 0.35 * dt;
+
+          const cBase = p * 9;
+          affineC[cBase]     = c00; affineC[cBase + 1] = c01; affineC[cBase + 2] = c02;
+          affineC[cBase + 3] = c10; affineC[cBase + 4] = c11; affineC[cBase + 5] = c12;
+          affineC[cBase + 6] = c20; affineC[cBase + 7] = c21; affineC[cBase + 8] = c22;
+
+          let nx = x + newVx * dt;
+          let ny = y + newVy * dt;
+          let nz = z + newVz * dt;
+
+          // Soft boundary clamp with bounce
+          if (nx < minBoundX) { nx = minBoundX; newVx *= -0.25; }
+          else if (nx > maxBoundX) { nx = maxBoundX; newVx *= -0.25; }
+
+          if (ny < minBoundY) { ny = minBoundY; newVy *= -0.2; }
+          else if (ny > maxBoundY) {
+            // Splatter sideways when hitting the top ceiling at high speed
+            if (newVy > 2.0) {
+              newVx += (Math.random() - 0.5) * newVy * 0.35;
+              newVz += (Math.random() - 0.5) * newVy * 0.25;
+            }
+            ny = maxBoundY;
+            newVy *= -0.18;
+          }
+
+          if (nz < minBoundZ) { nz = minBoundZ; newVz *= -0.25; }
+          else if (nz > maxBoundZ) { nz = maxBoundZ; newVz *= -0.25; }
+
+          px[p] = nx;
+          py[p] = ny;
+          pz[p] = nz;
+          vx[p] = newVx;
+          vy[p] = newVy;
+          vz[p] = newVz;
+        }
+      }
+    }
+
+    // ============================================================================
+    // 5. WEBGL2 NARROW-RANGE SCREEN-SPACE FLUID RENDERING (SSFR) SHADERS
+    // ============================================================================
+    function compileShader(type, src) {
+      const s = gl.createShader(type);
+      gl.shaderSource(s, src);
+      gl.compileShader(s);
+      if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
+        console.error(gl.getShaderInfoLog(s));
+        throw new Error('Shader compilation failed');
+      }
+      return s;
+    }
+
+    function createProgram(vs, fs) {
+      const p = gl.createProgram();
+      gl.attachShader(p, compileShader(gl.VERTEX_SHADER, vs));
+      gl.attachShader(p, compileShader(gl.FRAGMENT_SHADER, fs));
+      gl.linkProgram(p);
+      if (!gl.getProgramParameter(p, gl.LINK_STATUS)) {
+        console.error(gl.getProgramInfoLog(p));
+        throw new Error('Program link failed');
+      }
+      return p;
+    }
+
+    // --------------------------------------------------------------------------
+    // PASS 1: 3D Sphere Impostor Depth & Kinetic Energy Pass
+    // Renders exact ray-sphere intersections in 3D view space with gl_FragDepth
+    // --------------------------------------------------------------------------
+    const depthVS = `#version 300 es
+    precision highp float;
+    layout(location = 0) in vec4 a_particle; // xyz = world pos, w = speed
+
+    uniform mat4 u_view;
+    uniform mat4 u_proj;
+    uniform float u_sphereRadius;
+    uniform float u_viewportHeight;
+
+    out vec3 v_viewPos;
+    out float v_radius;
+    out float v_speed;
+
+    void main() {
+      vec4 viewPos = u_view * vec4(a_particle.xyz, 1.0);
+      v_viewPos = viewPos.xyz;
+      v_speed = a_particle.w;
+
+      // Plump, cohesive sphere radius that swells slightly under high velocity
+      v_radius = u_sphereRadius * 1.12 * (1.0 + min(0.22, v_speed * 0.0045));
+
+      gl_Position = u_proj * viewPos;
+
+      // Exact perspective point sprite diameter in pixels
+      float projScale = u_proj[1][1] * u_viewportHeight * 0.5;
+      gl_PointSize = max(2.0, (v_radius * 2.0 * projScale) / max(0.5, -viewPos.z));
+    }
+    `;
+
+    const depthFS = `#version 300 es
+    precision highp float;
+
+    in vec3 v_viewPos;
+    in float v_radius;
+    in float v_speed;
+
+    uniform mat4 u_proj;
+
+    out vec4 outDepth; // r = positive linear view depth (-z), g = speed, b = edge weight
+
+    void main() {
+      vec2 coord = gl_PointCoord * 2.0 - 1.0;
+      float r2 = dot(coord, coord);
+      if (r2 > 1.0) discard;
+
+      // Smooth spherical cap profile for organic blending between neighboring particles
+      float zOffset = sqrt(1.0 - r2);
+      vec3 sphereSurfaceView = v_viewPos + vec3(coord * v_radius, zOffset * v_radius);
+
+      // Compute hardware NDC depth so closer spheres occlude distant ones
+      vec4 clipPos = u_proj * vec4(sphereSurfaceView, 1.0);
+      float ndcDepth = clipPos.z / clipPos.w;
+      gl_FragDepth = ndcDepth * 0.5 + 0.5;
+
+      // Store positive linear view-space distance (-sphereSurfaceView.z)
+      outDepth = vec4(-sphereSurfaceView.z, clamp(v_speed * 0.025, 0.0, 1.0), zOffset, 1.0);
+    }
+    `;
+
+    // --------------------------------------------------------------------------
+    // PASS 2: 3D Volumetric Optical Thickness & Density Pass (Additive Blending)
+    // Used for Beer-Lambert light absorption, meniscus volume, and floor caustics
+    // --------------------------------------------------------------------------
+    const thicknessFS = `#version 300 es
+    precision highp float;
+
+    in vec3 v_viewPos;
+    in float v_radius;
+    in float v_speed;
+
+    out vec4 outThick;
+
+    void main() {
+      vec2 coord = gl_PointCoord * 2.0 - 1.0;
+      float r2 = dot(coord, coord);
+      if (r2 > 1.0) discard;
+
+      // Smooth Wyvill + spherical chord kernel for rich, plump optical thickness
+      float w = 1.0 - r2;
+      float metaball = w * w * w;
+      float chord = sqrt(max(0.0, w)) * w;
+      outThick = vec4(chord * 0.38, metaball * 0.45, v_speed * 0.02 * metaball, 1.0);
+    }
+    `;
+
+    // Full-screen quad vertex shader
+    const quadVS = `#version 300 es
+    precision highp float;
+    layout(location = 0) in vec2 a_pos;
+    out vec2 v_uv;
+    void main() {
+      v_uv = a_pos * 0.5 + 0.5;
+      gl_Position = vec4(a_pos, 0.0, 1.0);
+    }
+    `;
+
+    // --------------------------------------------------------------------------
+    // PASS 3 & 4: Separable Narrow-Range Depth & Curvature Filter
+    // Truong & Yuksel (2018) with smooth Gaussian range kernel for liquid-glass skin
+    // --------------------------------------------------------------------------
+    const narrowFilterFS = `#version 300 es
+    precision highp float;
+
+    in vec2 v_uv;
+    uniform sampler2D u_depthTex;
+    uniform vec2 u_blurDir;        // (1/w, 0) or (0, 1/h)
+    uniform float u_filterScale;   // World-to-pixel projection scale
+    uniform float u_depthThreshold;
+
+    out vec4 outFiltered;
+
+    void main() {
+      vec4 center = texture(u_depthTex, v_uv);
+      float z0 = center.r;
+
+      if (z0 <= 0.001 || z0 > 200.0) {
+        outFiltered = center;
+        return;
+      }
+
+      // Dynamic world-space kernel radius inversely proportional to view depth z0
+      int radius = clamp(int(u_filterScale / z0), 4, 22);
+      float sigma = float(radius) * 0.52;
+      float twoSigmaSq = 2.0 * sigma * sigma;
+
+      float sumZ = z0;
+      float sumSpeed = center.g;
+      float sumW = 1.0;
+
+      float delta = u_depthThreshold;
+      float invDeltaSq = 1.0 / (delta * delta);
+
+      for (int i = 1; i <= 22; i++) {
+        if (i > radius) break;
+        float fi = float(i);
+        float spatialW = exp(-(fi * fi) / twoSigmaSq);
+        vec2 offset = u_blurDir * fi;
+
+        // Positive side sample
+        vec4 s1 = texture(u_depthTex, v_uv + offset);
+        float z1 = s1.r;
+        if (z1 > 0.001 && z1 < 200.0) {
+          float diff1 = z1 - z0;
+          float absDiff1 = abs(diff1);
+          if (absDiff1 < delta) {
+            // Smooth Gaussian narrow-range weight eliminates sphere faceting completely
+            float rangeW1 = exp(-(diff1 * diff1) * 1.65 * invDeltaSq);
+            float w1 = spatialW * rangeW1;
+            sumZ += z1 * w1;
+            sumSpeed += s1.g * w1;
+            sumW += w1;
+          } else if (z1 < z0) {
+            // Narrow-range upper clamp bridges gaps between droplets smoothly
+            float clampW = spatialW * 0.22;
+            sumZ += (z0 - delta * 0.38) * clampW;
+            sumW += clampW;
+          }
+        }
+
+        // Negative side sample
+        vec4 s2 = texture(u_depthTex, v_uv - offset);
+        float z2 = s2.r;
+        if (z2 > 0.001 && z2 < 200.0) {
+          float diff2 = z2 - z0;
+          float absDiff2 = abs(diff2);
+          if (absDiff2 < delta) {
+            float rangeW2 = exp(-(diff2 * diff2) * 1.65 * invDeltaSq);
+            float w2 = spatialW * rangeW2;
+            sumZ += z2 * w2;
+            sumSpeed += s2.g * w2;
+            sumW += w2;
+          } else if (z2 < z0) {
+            float clampW = spatialW * 0.22;
+            sumZ += (z0 - delta * 0.38) * clampW;
+            sumW += clampW;
+          }
+        }
+      }
+
+      outFiltered = vec4(sumZ / sumW, sumSpeed / sumW, 1.0, 1.0);
+    }
+    `;
+
+    // Wide Gaussian smoothing shader for optical thickness & metaball meniscus field
+    const smoothThickFS = `#version 300 es
+    precision highp float;
+    in vec2 v_uv;
+    uniform sampler2D u_tex;
+    uniform vec2 u_dir;
+    out vec4 outColor;
+    void main() {
+      const float w[7] = float[](0.196482, 0.175713, 0.121703, 0.065984, 0.028002, 0.0093, 0.0024);
+      vec4 sum = texture(u_tex, v_uv) * w[0];
+      for (int i = 1; i < 7; i++) {
+        vec2 off = u_dir * float(i) * 1.65;
+        sum += texture(u_tex, v_uv + off) * w[i];
+        sum += texture(u_tex, v_uv - off) * w[i];
+      }
+      outColor = sum;
+    }
+    `;
+
+    // --------------------------------------------------------------------------
+    // PASS 5: Ultra-Juicy 3D Liquid Surface Shader
+    // - Multi-scale bilateral normal reconstruction + meniscus normal blending
+    // - Double-refraction (front & back surface thickness gradient)
+    // - Total Internal Reflection (TIR) meniscus rim + glowing subsurface caustic crescent
+    // - Screen-space crevice ambient occlusion & Beer-Lambert deep absorption
+    // - Real-time refractive caustic convergence on the pure white cyclorama
+    // --------------------------------------------------------------------------
+    const compositeFS = `#version 300 es
+    precision highp float;
+
+    in vec2 v_uv;
+
+    uniform sampler2D u_depthTex;
+    uniform sampler2D u_thickTex;
+    uniform vec2 u_resolution;
+    uniform mat4 u_invProj;
+    uniform mat4 u_invView;
+    uniform vec3 u_cameraEye;
+    uniform vec3 u_boxSize;
+
+    uniform vec3 u_deepColor;
+    uniform vec3 u_shallowColor;
+    uniform float u_absorption;
+    uniform float u_ior;
+    uniform float u_roughness;
+    uniform float u_metallic;
+    uniform float u_dispersion;
+    uniform vec4 u_pointerWorld;
+
+    out vec4 outColor;
+
+    // Reconstruct 3D view-space position from UV and positive linear depth z
+    vec3 uvToViewPos(vec2 uv, float linearZ) {
+      vec2 ndc = uv * 2.0 - 1.0;
+      vec3 viewRay = vec3(
+        ndc.x * u_invProj[0][0],
+        ndc.y * u_invProj[1][1],
+        -1.0
+      );
+      return viewRay * linearZ;
+    }
+
+    // Ray-box intersection with the 3D white architectural studio room
+    vec3 traceStudioRoom(vec3 ro, vec3 rd, float thickness, vec3 shallowCol) {
+      vec3 boxMin = vec3(1.2, 1.2, 0.5);
+      vec3 boxMax = u_boxSize - vec3(1.2, 1.2, 0.5);
+
+      vec3 invDir = 1.0 / (rd + vec3(1e-6));
+      vec3 tMin = (boxMin - ro) * invDir;
+      vec3 tMax = (boxMax - ro) * invDir;
+      vec3 t2 = max(tMin, tMax);
+      float tHit = min(min(t2.x, t2.y), t2.z);
+
+      vec3 hitPos = ro + rd * max(0.0, tHit);
+
+      // Crisp studio cyclorama white (#ffffff)
+      vec3 col = vec3(0.995, 0.998, 1.0);
+
+      if (tHit > 0.0) {
+        vec2 gridUV = hitPos.xy * 0.52;
+        if (abs(hitPos.y - boxMin.y) < 0.08) {
+          gridUV = hitPos.xz * 0.52;
+        }
+        vec2 f = abs(fract(gridUV - 0.5) - 0.5);
+        float dotDist = length(f);
+        float microDot = 1.0 - smoothstep(0.025, 0.075, dotDist);
+        col = mix(col, vec3(0.80, 0.85, 0.91), microDot * 0.42);
+
+        // Internal caustic shimmer magnified through the refracted liquid volume
+        float causWave = sin(hitPos.x * 2.8 + hitPos.z * 2.1) * cos(hitPos.y * 2.8 - hitPos.x * 1.9);
+        float internalCaustic = smoothstep(0.1, 0.95, causWave) * clamp(thickness * 0.45, 0.0, 1.0);
+        col += shallowCol * internalCaustic * 0.18;
+
+        // Soft studio floor crease
+        float floorCrease = exp(-max(0.0, hitPos.y - boxMin.y) * 0.16) * 0.04;
+        col -= floorCrease;
+      }
+
+      return col;
+    }
+
+    // Studio HDRI environment with crisp softboxes, rim tubes, and dark architectural horizon
+    vec3 sampleStudioEnv(vec3 R, float roughness) {
+      float y = R.y * 0.5 + 0.5;
+      vec3 env = mix(vec3(0.88, 0.92, 0.97), vec3(1.0, 1.0, 1.0), smoothstep(0.05, 0.85, y));
+
+      // Deep studio horizon reflection band — creates that unmistakable glossy "liquid glass" contrast on white
+      float horizon1 = exp(-pow((R.y + 0.06) * 5.2, 2.0));
+      float horizon2 = exp(-pow((R.y - 0.28) * 8.5, 2.0)) * smoothstep(0.0, 0.7, abs(R.x));
+      env = mix(env, vec3(0.04, 0.08, 0.16), (horizon1 * 0.78 + horizon2 * 0.35));
+
+      // Key overhead studio softbox with sharp rectangular falloff
+      vec3 keyDir = normalize(vec3(-0.34, 0.76, 0.55));
+      float keyBox = smoothstep(0.74 - roughness * 0.2, 0.93, dot(R, keyDir));
+
+      // Secondary rim softbox
+      vec3 rimDir = normalize(vec3(0.52, 0.62, 0.58));
+      float rimBox = smoothstep(0.78 - roughness * 0.2, 0.95, dot(R, rimDir));
+
+      // Bottom studio bounce card reflection for juicy underside droplet glow
+      vec3 bounceDir = normalize(vec3(0.0, -0.78, 0.62));
+      float bounceBox = smoothstep(0.72, 0.94, dot(R, bounceDir));
+
+      env += vec3(1.0, 1.0, 1.0) * (keyBox * 1.15 + rimBox * 0.85 + bounceBox * 0.45);
+      return env;
+    }
+
+    // Bilateral view-space derivative helper at arbitrary pixel radius
+    void computeBilateralPartials(vec2 uv, vec3 P, float stepPx, vec2 texel, out vec3 ddx, out vec3 ddy, out float curvature) {
+      vec2 ox = vec2(texel.x * stepPx, 0.0);
+      vec2 oy = vec2(0.0, texel.y * stepPx);
+
+      float zR = texture(u_depthTex, uv + ox).r;
+      float zL = texture(u_depthTex, uv - ox).r;
+      float zU = texture(u_depthTex, uv + oy).r;
+      float zD = texture(u_depthTex, uv - oy).r;
+
+      bool validR = (zR > 0.001 && zR < 200.0 && abs(zR - P.z * -1.0) < 3.2);
+      bool validL = (zL > 0.001 && zL < 200.0 && abs(zL - P.z * -1.0) < 3.2);
+      bool validU = (zU > 0.001 && zU < 200.0 && abs(zU - P.z * -1.0) < 3.2);
+      bool validD = (zD > 0.001 && zD < 200.0 && abs(zD - P.z * -1.0) < 3.2);
+
+      vec3 pR = uvToViewPos(uv + ox, validR ? zR : -P.z);
+      vec3 pL = uvToViewPos(uv - ox, validL ? zL : -P.z);
+      vec3 pU = uvToViewPos(uv + oy, validU ? zU : -P.z);
+      vec3 pD = uvToViewPos(uv - oy, validD ? zD : -P.z);
+
+      vec3 dR = pR - P;
+      vec3 dL = P - pL;
+      if (validR && validL) {
+        ddx = (abs(dR.z) < abs(dL.z)) ? dR : dL;
+        if (abs(dR.z - dL.z) < 0.8) ddx = (dR + dL) * 0.5;
+      } else if (validR) {
+        ddx = dR;
+      } else {
+        ddx = dL;
+      }
+
+      vec3 dU = pU - P;
+      vec3 dD = P - pD;
+      if (validU && validD) {
+        ddy = (abs(dU.z) < abs(dD.z)) ? dU : dD;
+        if (abs(dU.z - dD.z) < 0.8) ddy = (dU + dD) * 0.5;
+      } else if (validU) {
+        ddy = dU;
+      } else {
+        ddy = dD;
+      }
+
+      // Laplacian depth curvature for crevice self-shadowing & convex highlight boost
+      float z0 = -P.z;
+      float lapZ = ((validR ? zR : z0) + (validL ? zL : z0) + (validU ? zU : z0) + (validD ? zD : z0)) - 4.0 * z0;
+      curvature = lapZ;
+    }
+
+    void main() {
+      vec2 texel = 1.0 / u_resolution;
+      vec4 depthSample = texture(u_depthTex, v_uv);
+      float linearZ = depthSample.r;
+      float speed = depthSample.g;
+
+      vec4 thickSample = texture(u_thickTex, v_uv);
+      float thickness = thickSample.r;
+      float metaballField = thickSample.g;
+
+      // Primary camera ray in world space
+      vec3 viewRay = normalize(uvToViewPos(v_uv, 1.0));
+      vec3 worldRayDir = (u_invView * vec4(viewRay, 0.0)).xyz;
+
+      // ----------------------------------------------------------------------
+      // PURE WHITE STUDIO PAGE + REFRACTIVE CAUSTIC SHADOW PROJECTION
+      // ----------------------------------------------------------------------
+      vec2 shadowUV = v_uv - vec2(4.5, -10.0) * texel;
+      vec4 shSample = texture(u_thickTex, shadowUV);
+      float shThick = shSample.r;
+      float shMeta = shSample.g;
+
+      // Compute refractive caustic convergence from lens curvature of the shadow thickness field
+      float shR = texture(u_thickTex, shadowUV + vec2(texel.x * 3.0, 0.0)).g;
+      float shL = texture(u_thickTex, shadowUV - vec2(texel.x * 3.0, 0.0)).g;
+      float shU = texture(u_thickTex, shadowUV + vec2(0.0, texel.y * 3.0)).g;
+      float shD = texture(u_thickTex, shadowUV - vec2(0.0, texel.y * 3.0)).g;
+      float lensConvergence = max(0.0, 4.0 * shMeta - (shR + shL + shU + shD));
+
+      float shadowMask = smoothstep(0.02, 0.55, shMeta);
+      float causticGlow = smoothstep(0.02, 0.28, lensConvergence * 3.2 + shThick * 0.22) * (1.0 - u_metallic * 0.92);
+
+      vec3 pageBg = vec3(1.0);
+      // Soft ambient shadow tinted with transmitted liquid color + bright focused caustic core
+      vec3 tintedShadow = mix(vec3(0.90, 0.92, 0.95), mix(vec3(1.0), u_shallowColor, 0.55), causticGlow);
+      pageBg = mix(pageBg, tintedShadow, shadowMask * 0.42);
+      pageBg += u_shallowColor * pow(causticGlow, 1.5) * shadowMask * 0.22;
+      pageBg = min(vec3(1.0), pageBg);
+
+      // Crisp, anti-aliased liquid meniscus threshold
+      float surfaceMask = smoothstep(0.032, 0.075, metaballField);
+      if (linearZ <= 0.001 || linearZ > 200.0 || surfaceMask <= 0.001) {
+        outColor = vec4(pageBg, 1.0);
+        return;
+      }
+
+      // ----------------------------------------------------------------------
+      // MULTI-SCALE BILATERAL 3D NORMAL + MENISCUS ROUNDING
+      // ----------------------------------------------------------------------
+      vec3 P = uvToViewPos(v_uv, linearZ);
+
+      vec3 ddx1, ddy1, ddx2, ddy2;
+      float curv1, curv2;
+      computeBilateralPartials(v_uv, P, 1.25, texel, ddx1, ddy1, curv1);
+      computeBilateralPartials(v_uv, P, 3.00, texel, ddx2, ddy2, curv2);
+
+      vec3 Nview1 = normalize(cross(ddx1, ddy1));
+      vec3 Nview2 = normalize(cross(ddx2, ddy2));
+
+      // Thickness-gradient meniscus normal for juicy rounded silhouette edges
+      float tR = texture(u_thickTex, v_uv + vec2(texel.x * 2.2, 0.0)).g;
+      float tL = texture(u_thickTex, v_uv - vec2(texel.x * 2.2, 0.0)).g;
+      float tU = texture(u_thickTex, v_uv + vec2(0.0, texel.y * 2.2)).g;
+      float tD = texture(u_thickTex, v_uv - vec2(0.0, texel.y * 2.2)).g;
+      vec2 gradT = vec2(tR - tL, tU - tD);
+      vec3 Nmeniscus = normalize(vec3(-gradT * 2.6, max(0.22, sqrt(clamp(metaballField * 1.4, 0.0, 1.0)))));
+
+      // Blend multi-scale view depth normal with smooth meniscus rim normal
+      float rimBlend = 1.0 - smoothstep(0.06, 0.38, metaballField);
+      vec3 Nview = normalize(mix(normalize(mix(Nview1, Nview2, 0.65)), Nmeniscus, rimBlend * 0.68));
+
+      vec3 N = normalize((u_invView * vec4(Nview, 0.0)).xyz);
+      vec3 V = -worldRayDir;
+      vec3 worldPos = u_cameraEye + worldRayDir * length(P);
+
+      float NdotV = clamp(dot(N, V), 0.001, 1.0);
+
+      // Screen-space crevice occlusion (darkens deep folds where blobs collide or overlap)
+      float creviceOcclusion = clamp(1.0 - max(0.0, -curv2 * 1.65), 0.58, 1.0);
+
+      // ----------------------------------------------------------------------
+      // DOUBLE-SURFACE REFRACTION, TOTAL INTERNAL REFLECTION & CHROMATIC DISPERSION
+      // ----------------------------------------------------------------------
+      float f0 = pow((1.0 - u_ior) / (1.0 + u_ior), 2.0);
+      f0 = mix(f0, 0.90, u_metallic);
+      float fresnel = f0 + (1.0 - f0) * pow(1.0 - NdotV, 4.2);
+
+      // Back-face exit normal perturbation from thickness gradient (simulates double refraction!)
+      vec3 Nexit = normalize(N - vec3(gradT * 0.85, 0.0));
+
+      float etaR = 1.0 / (u_ior - u_dispersion * 1.35);
+      float etaG = 1.0 / u_ior;
+      float etaB = 1.0 / (u_ior + u_dispersion * 1.35);
+
+      vec3 refrR = refract(worldRayDir, normalize(mix(N, Nexit, 0.35)), etaR);
+      vec3 refrG = refract(worldRayDir, normalize(mix(N, Nexit, 0.35)), etaG);
+      vec3 refrB = refract(worldRayDir, normalize(mix(N, Nexit, 0.35)), etaB);
+
+      vec3 bgR = traceStudioRoom(worldPos, refrR, thickness, u_shallowColor);
+      vec3 bgG = traceStudioRoom(worldPos, refrG, thickness, u_shallowColor);
+      vec3 bgB = traceStudioRoom(worldPos, refrB, thickness, u_shallowColor);
+      vec3 refractedScene = vec3(bgR.r, bgG.g, bgB.b);
+
+      // ----------------------------------------------------------------------
+      // BEER-LAMBERT VOLUMETRIC ABSORPTION + JUICY MENISCUS RIM & SUBSURFACE GLOW
+      // ----------------------------------------------------------------------
+      float opticalDepth = clamp(thickness * 0.82, 0.0, 2.8);
+      vec3 absorbCoeff = (vec3(1.0) - u_shallowColor) * u_absorption;
+      vec3 transmittance = exp(-absorbCoeff * opticalDepth);
+
+      // Deep core saturation vs vibrant shallow aqua/emerald
+      vec3 volumeColor = mix(u_shallowColor, u_deepColor, clamp(opticalDepth * 0.68, 0.0, 1.0));
+      vec3 transmittedColor = mix(volumeColor, refractedScene * transmittance, 0.72) * creviceOcclusion;
+
+      // Subsurface internal caustic crescent just inside the curved meniscus rim
+      float crescentZone = exp(-pow((NdotV - 0.44) * 4.8, 2.0));
+      vec3 subsurfaceGlow = u_shallowColor * crescentZone * clamp(thickness * 0.9, 0.15, 1.0) * (1.0 - u_metallic) * 0.34;
+      transmittedColor += subsurfaceGlow;
+
+      // Total Internal Reflection (TIR) dark refractive outer meniscus ring on white background
+      float tirRing = pow(1.0 - NdotV, 2.8) * (1.0 - u_metallic * 0.8);
+      vec3 rimTint = mix(u_deepColor * 0.28, vec3(0.04, 0.12, 0.28), 0.5);
+      transmittedColor = mix(transmittedColor, rimTint, tirRing * 0.62);
+
+      // Metallic chrome override
+      vec3 R = reflect(worldRayDir, N);
+      vec3 envReflection = sampleStudioEnv(R, u_roughness);
+      vec3 metallicSurface = envReflection * mix(u_shallowColor, vec3(1.0), 0.38) * creviceOcclusion;
+      vec3 baseLiquid = mix(transmittedColor, metallicSurface, u_metallic);
+
+      // ----------------------------------------------------------------------
+      // DUAL-LOBE WET STUDIO SPECULAR HIGHLIGHTS (PRIMARY COAT + SOFT WET BLOOM)
+      // ----------------------------------------------------------------------
+      vec3 L1 = normalize(vec3(-0.34, 0.76, 0.55));
+      vec3 H1 = normalize(L1 + V);
+      float NdotH1 = max(0.0, dot(N, H1));
+      float specCoat1 = pow(NdotH1, mix(420.0, 48.0, u_roughness)) * 1.85;
+      float specBloom1 = pow(NdotH1, mix(42.0, 12.0, u_roughness)) * 0.24;
+
+      vec3 L2 = normalize(vec3(0.52, -0.30, 0.80));
+      vec3 H2 = normalize(L2 + V);
+      float NdotH2 = max(0.0, dot(N, H2));
+      float specCoat2 = pow(NdotH2, mix(260.0, 32.0, u_roughness)) * 0.72;
+
+      // Top grazing rim light for 3D silhouette pop
+      vec3 L3 = normalize(vec3(0.0, 0.92, -0.38));
+      float rimSpec = pow(max(0.0, dot(R, L3)), 18.0) * pow(1.0 - NdotV, 2.0) * 0.55;
+
+      // Combine base volume, Fresnel studio reflection, and wet specular lobes
+      vec3 shadedLiquid = mix(baseLiquid, envReflection, clamp(fresnel * 0.88, 0.0, 0.94));
+      shadedLiquid += vec3(1.0) * (specCoat1 + specCoat2 + rimSpec) + mix(vec3(1.0), u_shallowColor, 0.35) * specBloom1;
+
+      // Filmic shoulder tone-mapping on bright speculars while keeping pure #FFFFFF background
+      shadedLiquid = shadedLiquid / (1.0 + max(vec3(0.0), shadedLiquid - vec3(0.92)) * 0.22);
+
+      vec3 finalRGB = mix(pageBg, shadedLiquid, surfaceMask);
+      outColor = vec4(finalRGB, 1.0);
+    }
+    `;
+
+    const depthProg = createProgram(depthVS, depthFS);
+    const thickProg = createProgram(depthVS, thicknessFS);
+    const narrowProg = createProgram(quadVS, narrowFilterFS);
+    const smoothThickProg = createProgram(quadVS, smoothThickFS);
+    const compositeProg = createProgram(quadVS, compositeFS);
+
+    // ============================================================================
+    // 6. GPU BUFFERS & MULTI-PASS RENDER TARGETS
+    // ============================================================================
+    const particleVAO = gl.createVertexArray();
+    const particleVBO = gl.createBuffer();
+    gl.bindVertexArray(particleVAO);
+    gl.bindBuffer(gl.ARRAY_BUFFER, particleVBO);
+    gl.bufferData(gl.ARRAY_BUFFER, gpuParticleBuffer.byteLength, gl.DYNAMIC_DRAW);
+    gl.enableVertexAttribArray(0);
+    gl.vertexAttribPointer(0, 4, gl.FLOAT, false, 16, 0);
+
+    const quadVAO = gl.createVertexArray();
+    const quadVBO = gl.createBuffer();
+    gl.bindVertexArray(quadVAO);
+    gl.bindBuffer(gl.ARRAY_BUFFER, quadVBO);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
+      -1, -1,  1, -1, -1,  1,
+      -1,  1,  1, -1,  1,  1
+    ]), gl.STATIC_DRAW);
+    gl.enableVertexAttribArray(0);
+    gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+
+    let rtDepthA = null, rtDepthB = null;
+    let rtThickA = null, rtThickB = null;
+    let ssfrW = 0, ssfrH = 0;
+
+    function createFloatTarget(w, h, withDepthBuffer) {
+      const tex = gl.createTexture();
+      gl.bindTexture(gl.TEXTURE_2D, tex);
+      const internalFormat = extColorBufferFloat ? gl.RGBA16F : gl.RGBA8;
+      const type = extColorBufferFloat ? gl.FLOAT : gl.UNSIGNED_BYTE;
+      const filter = (extColorBufferFloat && !extFloatLinear) ? gl.NEAREST : gl.LINEAR;
+
+      gl.texImage2D(gl.TEXTURE_2D, 0, internalFormat, w, h, 0, gl.RGBA, type, null);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, filter);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, filter);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+
+      const fbo = gl.createFramebuffer();
+      gl.bindFramebuffer(gl.FRAMEBUFFER, fbo);
+      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, tex, 0);
+
+      let depthRb = null;
+      if (withDepthBuffer) {
+        depthRb = gl.createRenderbuffer();
+        gl.bindRenderbuffer(gl.RENDERBUFFER, depthRb);
+        gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT24, w, h);
+        gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, depthRb);
+      }
+
+      return { fbo, tex, depthRb };
+    }
+
+    function destroyTarget(rt) {
+      if (!rt) return;
+      gl.deleteFramebuffer(rt.fbo);
+      gl.deleteTexture(rt.tex);
+      if (rt.depthRb) gl.deleteRenderbuffer(rt.depthRb);
+    }
+
+    function resize() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2.0);
+      const w = Math.max(300, window.innerWidth || document.documentElement.clientWidth || 800);
+      const h = Math.max(300, window.innerHeight || document.documentElement.clientHeight || 600);
+
+      canvas.width = Math.floor(w * dpr);
+      canvas.height = Math.floor(h * dpr);
+      camera.aspect = w / h;
+
+      // Adapt 3D simulation box width to match viewport aspect ratio
+      GRID_X = Math.max(30, Math.min(MAX_GRID_X - 2, Math.round(GRID_Y * camera.aspect)));
+      updateCameraMatrices();
+
+      // Offscreen SSFR resolution (0.82x for ultra-clean real-time Narrow-Range filtering)
+      ssfrW = Math.max(256, Math.floor(canvas.width * 0.82));
+      ssfrH = Math.max(256, Math.floor(canvas.height * 0.82));
+
+      destroyTarget(rtDepthA);
+      destroyTarget(rtDepthB);
+      destroyTarget(rtThickA);
+      destroyTarget(rtThickB);
+
+      rtDepthA = createFloatTarget(ssfrW, ssfrH, true);
+      rtDepthB = createFloatTarget(ssfrW, ssfrH, false);
+      rtThickA = createFloatTarget(ssfrW, ssfrH, false);
+      rtThickB = createFloatTarget(ssfrW, ssfrH, false);
+    }
+
+    window.addEventListener('resize', resize);
+    new ResizeObserver(resize).observe(document.documentElement);
+    resize();
+    spawnFluidBlock();
+
+    // ============================================================================
+    // 7. UI EVENT BINDINGS
+    // ============================================================================
+    document.querySelectorAll('#preset-buttons button').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#preset-buttons button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        preset = PRESETS[btn.dataset.preset];
+      });
+    });
+
+    document.getElementById('btn-slam-top').addEventListener('click', throwToCeilingImpulse);
+    document.getElementById('btn-wave').addEventListener('click', wavePulseImpulse);
+    document.getElementById('btn-reset').addEventListener('click', spawnFluidBlock);
+
+    // ============================================================================
+    // 8. UNIFORM LOCATIONS & MAIN RENDER LOOP
+    // ============================================================================
+    const uDepthView = gl.getUniformLocation(depthProg, 'u_view');
+    const uDepthProj = gl.getUniformLocation(depthProg, 'u_proj');
+    const uDepthRadius = gl.getUniformLocation(depthProg, 'u_sphereRadius');
+    const uDepthVpH = gl.getUniformLocation(depthProg, 'u_viewportHeight');
+
+    const uThickView = gl.getUniformLocation(thickProg, 'u_view');
+    const uThickProj = gl.getUniformLocation(thickProg, 'u_proj');
+    const uThickRadius = gl.getUniformLocation(thickProg, 'u_sphereRadius');
+    const uThickVpH = gl.getUniformLocation(thickProg, 'u_viewportHeight');
+
+    const uNarrowTex = gl.getUniformLocation(narrowProg, 'u_depthTex');
+    const uNarrowDir = gl.getUniformLocation(narrowProg, 'u_blurDir');
+    const uNarrowScale = gl.getUniformLocation(narrowProg, 'u_filterScale');
+    const uNarrowThresh = gl.getUniformLocation(narrowProg, 'u_depthThreshold');
+
+    const uSmoothTex = gl.getUniformLocation(smoothThickProg, 'u_tex');
+    const uSmoothDir = gl.getUniformLocation(smoothThickProg, 'u_dir');
+
+    const uCompDepth = gl.getUniformLocation(compositeProg, 'u_depthTex');
+    const uCompThick = gl.getUniformLocation(compositeProg, 'u_thickTex');
+    const uCompRes = gl.getUniformLocation(compositeProg, 'u_resolution');
+    const uCompInvProj = gl.getUniformLocation(compositeProg, 'u_invProj');
+    const uCompInvView = gl.getUniformLocation(compositeProg, 'u_invView');
+    const uCompEye = gl.getUniformLocation(compositeProg, 'u_cameraEye');
+    const uCompBox = gl.getUniformLocation(compositeProg, 'u_boxSize');
+    const uCompDeep = gl.getUniformLocation(compositeProg, 'u_deepColor');
+    const uCompShallow = gl.getUniformLocation(compositeProg, 'u_shallowColor');
+    const uCompAbsorb = gl.getUniformLocation(compositeProg, 'u_absorption');
+    const uCompIOR = gl.getUniformLocation(compositeProg, 'u_ior');
+    const uCompRough = gl.getUniformLocation(compositeProg, 'u_roughness');
+    const uCompMetal = gl.getUniformLocation(compositeProg, 'u_metallic');
+    const uCompDisp = gl.getUniformLocation(compositeProg, 'u_dispersion');
+    const uCompPtr = gl.getUniformLocation(compositeProg, 'u_pointerWorld');
+
+    let lastTime = performance.now();
+
+    function animate(now) {
+      const dt = Math.min(0.025, Math.max(0.004, (now - lastTime) * 0.001));
+      lastTime = now;
+
+      // 1. Run 3D MLS-MPM continuum physics
+      stepMLSMPM(dt);
+
+      // 2. Pack 3D particle positions & speeds for GPU upload
+      for (let i = 0; i < NUM_PARTICLES; i++) {
+        const base = i * 4;
+        gpuParticleBuffer[base]     = px[i];
+        gpuParticleBuffer[base + 1] = py[i];
+        gpuParticleBuffer[base + 2] = pz[i];
+        gpuParticleBuffer[base + 3] = Math.hypot(vx[i], vy[i], vz[i]);
+      }
+
+      gl.bindVertexArray(particleVAO);
+      gl.bindBuffer(gl.ARRAY_BUFFER, particleVBO);
+      gl.bufferSubData(gl.ARRAY_BUFFER, 0, gpuParticleBuffer);
+
+      // ----------------------------------------------------------------------
+      // PASS 1: 3D Sphere Impostor Depth Buffer
+      // ----------------------------------------------------------------------
+      gl.bindFramebuffer(gl.FRAMEBUFFER, rtDepthA.fbo);
+      gl.viewport(0, 0, ssfrW, ssfrH);
+      gl.clearColor(0.0, 0.0, 0.0, 0.0);
+      gl.clearDepth(1.0);
+      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+      gl.enable(gl.DEPTH_TEST);
+      gl.depthFunc(gl.LESS);
+      gl.disable(gl.BLEND);
+
+      gl.useProgram(depthProg);
+      gl.uniformMatrix4fv(uDepthView, false, camera.viewMatrix);
+      gl.uniformMatrix4fv(uDepthProj, false, camera.projMatrix);
+      gl.uniform1f(uDepthRadius, preset.sphereRadius);
+      gl.uniform1f(uDepthVpH, ssfrH);
+
+      gl.drawArrays(gl.POINTS, 0, NUM_PARTICLES);
+      gl.disable(gl.DEPTH_TEST);
+
+      // ----------------------------------------------------------------------
+      // PASS 2: 3D Volumetric Optical Thickness Buffer
+      // ----------------------------------------------------------------------
+      gl.bindFramebuffer(gl.FRAMEBUFFER, rtThickA.fbo);
+      gl.viewport(0, 0, ssfrW, ssfrH);
+      gl.clearColor(0.0, 0.0, 0.0, 0.0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+
+      gl.enable(gl.BLEND);
+      gl.blendFunc(gl.ONE, gl.ONE);
+
+      gl.useProgram(thickProg);
+      gl.uniformMatrix4fv(uThickView, false, camera.viewMatrix);
+      gl.uniformMatrix4fv(uThickProj, false, camera.projMatrix);
+      gl.uniform1f(uThickRadius, preset.sphereRadius * 1.45);
+      gl.uniform1f(uThickVpH, ssfrH);
+
+      gl.drawArrays(gl.POINTS, 0, NUM_PARTICLES);
+      gl.disable(gl.BLEND);
+
+      // ----------------------------------------------------------------------
+      // PASS 3: Truong & Yuksel Separable Narrow-Range Depth Smoothing (3 Iterations)
+      // ----------------------------------------------------------------------
+      gl.useProgram(narrowProg);
+      gl.bindVertexArray(quadVAO);
+      gl.uniform1i(uNarrowTex, 0);
+
+      const filterScale = camera.projMatrix[5] * ssfrH * preset.sphereRadius * 1.28;
+      gl.uniform1f(uNarrowScale, filterScale);
+      gl.uniform1f(uNarrowThresh, preset.sphereRadius * 3.6);
+
+      for (let iter = 0; iter < 3; iter++) {
+        // Horizontal pass (A -> B)
+        gl.bindFramebuffer(gl.FRAMEBUFFER, rtDepthB.fbo);
+        gl.activeTexture(gl.TEXTURE0);
+        gl.bindTexture(gl.TEXTURE_2D, rtDepthA.tex);
+        gl.uniform2f(uNarrowDir, 1.0 / ssfrW, 0.0);
+        gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+        // Vertical pass (B -> A)
+        gl.bindFramebuffer(gl.FRAMEBUFFER, rtDepthA.fbo);
+        gl.bindTexture(gl.TEXTURE_2D, rtDepthB.tex);
+        gl.uniform2f(uNarrowDir, 0.0, 1.0 / ssfrH);
+        gl.drawArrays(gl.TRIANGLES, 0, 6);
+      }
+
+      // Smooth optical thickness & metaball meniscus buffer (2 Iterations)
+      gl.useProgram(smoothThickProg);
+      gl.uniform1i(uSmoothTex, 0);
+
+      for (let iter = 0; iter < 2; iter++) {
+        gl.bindFramebuffer(gl.FRAMEBUFFER, rtThickB.fbo);
+        gl.activeTexture(gl.TEXTURE0);
+        gl.bindTexture(gl.TEXTURE_2D, rtThickA.tex);
+        gl.uniform2f(uSmoothDir, 1.0 / ssfrW, 0.0);
+        gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+        gl.bindFramebuffer(gl.FRAMEBUFFER, rtThickA.fbo);
+        gl.bindTexture(gl.TEXTURE_2D, rtThickB.tex);
+        gl.uniform2f(uSmoothDir, 0.0, 1.0 / ssfrH);
+        gl.drawArrays(gl.TRIANGLES, 0, 6);
+      }
+
+      // ----------------------------------------------------------------------
+      // PASS 4: Final 3D Screen-Space Fluid Composite on White Studio Page
+      // ----------------------------------------------------------------------
+      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+      gl.viewport(0, 0, canvas.width, canvas.height);
+
+      gl.useProgram(compositeProg);
+      gl.activeTexture(gl.TEXTURE0);
+      gl.bindTexture(gl.TEXTURE_2D, rtDepthA.tex);
+      gl.uniform1i(uCompDepth, 0);
+
+      gl.activeTexture(gl.TEXTURE1);
+      gl.bindTexture(gl.TEXTURE_2D, rtThickA.tex);
+      gl.uniform1i(uCompThick, 1);
+
+      gl.uniform2f(uCompRes, ssfrW, ssfrH);
+      gl.uniformMatrix4fv(uCompInvProj, false, camera.invProjMatrix);
+      gl.uniformMatrix4fv(uCompInvView, false, camera.invViewMatrix);
+      gl.uniform3fv(uCompEye, camera.eye);
+      gl.uniform3f(uCompBox, GRID_X, GRID_Y, GRID_Z);
+
+      gl.uniform3fv(uCompDeep, preset.deepColor);
+      gl.uniform3fv(uCompShallow, preset.shallowColor);
+      gl.uniform1f(uCompAbsorb, preset.absorption);
+      gl.uniform1f(uCompIOR, preset.ior);
+      gl.uniform1f(uCompRough, preset.roughness);
+      gl.uniform1f(uCompMetal, preset.metallic);
+      gl.uniform1f(uCompDisp, preset.dispersion);
+      gl.uniform4f(
+        uCompPtr,
+        pointer.x,
+        pointer.y,
+        pointer.z,
+        pointer.active ? pointer.radius : -1.0
+      );
+
+      gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+      requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  </script>
+</body>
+</html>
