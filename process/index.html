@@ -139,9 +139,13 @@
       background-color: #FAFAFA;
     }
     .node.final {
-      border: 2px solid #111111;
-      background-color: #111111;
+      border: 2px solid #D4AF37;
+      background: radial-gradient(circle at 50% 32%, rgba(245, 158, 11, 0.22) 0%, #0D0D0F 72%);
+      background-color: #0D0D0F;
       color: #FFFFFF;
+      padding: 28px 24px;
+      text-align: center;
+      box-shadow: 0 8px 28px rgba(212, 175, 55, 0.18), inset 0 0 0 1px rgba(253, 230, 138, 0.22);
     }
     .node-top {
       display: flex;
@@ -155,9 +159,6 @@
       font-weight: 600;
       letter-spacing: 0.06em;
       color: #52525B;
-    }
-    .node.final .step-num {
-      color: #A1A1AA;
     }
     .badge {
       font-size: 12px;
@@ -177,30 +178,45 @@
     }
     .node.final .badge {
       border-color: #F59E0B;
-      background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 55%, #D97706 100%);
+      background: linear-gradient(135deg, #FEF08A 0%, #F59E0B 55%, #D97706 100%);
       color: #111111;
       font-weight: 700;
-      box-shadow: 0 1px 6px rgba(245, 158, 11, 0.35);
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      box-shadow: 0 2px 10px rgba(245, 158, 11, 0.4);
     }
     .golden-wings-hero {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      margin: 14px 0 8px;
-      padding: 14px 0;
-      border-radius: 10px;
-      background: radial-gradient(circle at center, rgba(245, 158, 11, 0.18) 0%, rgba(17, 17, 17, 0) 75%);
-      border: 1px solid rgba(245, 158, 11, 0.35);
+      gap: 10px;
+      margin: 18px 0 16px;
     }
     .golden-wing-emoji {
-      font-size: 46px;
+      font-size: 58px;
       line-height: 1;
-      filter: sepia(1) saturate(5) hue-rotate(5deg) brightness(1.08) drop-shadow(0 2px 8px rgba(245, 158, 11, 0.45));
+      filter: sepia(1) saturate(5.5) hue-rotate(5deg) brightness(1.1) drop-shadow(0 4px 14px rgba(245, 158, 11, 0.55));
       display: inline-block;
     }
     .golden-wing-emoji.left {
       transform: scaleX(-1);
+    }
+    .golden-card-title {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #FFFBEB 0%, #FDE68A 45%, #F59E0B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #FDE68A;
+      margin-bottom: 8px;
+    }
+    .golden-card-sub {
+      font-size: 13px;
+      font-weight: 500;
+      color: #E4E4E7;
+      line-height: 1.45;
     }
     .node-title {
       font-size: 15px;
@@ -716,22 +732,15 @@
           </div>
 
           <div class="node final">
-            <div class="node-top">
-              <span class="step-num">STEP 11</span>
+            <div style="display: flex; justify-content: center;">
               <span class="badge">GOLDEN TEMPLATE</span>
             </div>
             <div class="golden-wings-hero" aria-label="Golden Wings">
               <span class="golden-wing-emoji left">🪽</span>
               <span class="golden-wing-emoji">🪽</span>
             </div>
-            <div class="node-title">React Golden Template</div>
-            <div class="node-subtitle">Final Production &amp; Model-Ready Output</div>
-            <div class="items-list">
-              <div>
-                <div class="item-label">Fully Steered, Design Benchmarked &amp; Packaged</div>
-                <div class="item-detail">Production-verified React Golden Template ready for model training, evaluation, or deployment at scale</div>
-              </div>
-            </div>
+            <div class="golden-card-title">React Golden Template</div>
+            <div class="golden-card-sub">Fully Steered, Design Benchmarked &amp; Packaged</div>
           </div>
         </div>
       </div>
