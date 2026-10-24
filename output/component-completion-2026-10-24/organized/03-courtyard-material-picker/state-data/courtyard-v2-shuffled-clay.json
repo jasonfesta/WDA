@@ -1,0 +1,61 @@
+{
+  "key": "courtyard-v2-shuffled-clay",
+  "family": "courtyard",
+  "title": "Clay in shuffled set",
+  "id": "shuffled-clay",
+  "palette": [
+    [
+      "Clay",
+      "Terracotta",
+      "#C77E5A"
+    ],
+    [
+      "Peel",
+      "Matte ceramic",
+      "#EDAD71"
+    ],
+    [
+      "Brick",
+      "Textured clay",
+      "#A94F35"
+    ],
+    [
+      "Plum",
+      "Polished ceramic",
+      "#886476"
+    ],
+    [
+      "Ash",
+      "Natural stone",
+      "#BDB8AF"
+    ]
+  ],
+  "selected": 0,
+  "material": {
+    "name": "Clay",
+    "finish": "Terracotta",
+    "hex": "#C77E5A"
+  },
+  "width": 640,
+  "height": 304,
+  "svg": "editable-svg/courtyard-v2-shuffled-clay.svg",
+  "png": "images/courtyard-v2-shuffled-clay.png",
+  "specification": "state-data/courtyard-v2-shuffled-clay.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Material",
+    "A finish for your next idea.",
+    "Shuffle",
+    "Clay",
+    "Peel",
+    "Brick",
+    "Plum",
+    "Ash",
+    "Clay",
+    "Terracotta",
+    "#C77E5A",
+    "Palette shuffled",
+    "Undo"
+  ],
+  "path_base": "study folder"
+}

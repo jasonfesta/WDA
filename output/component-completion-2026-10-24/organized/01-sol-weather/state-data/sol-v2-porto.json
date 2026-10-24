@@ -1,0 +1,43 @@
+{
+  "key": "sol-v2-porto",
+  "family": "sol",
+  "title": "Porto forecast committed",
+  "id": "porto",
+  "unit": "C",
+  "selected_day": 0,
+  "city": "Porto",
+  "temperatures": [
+    23,
+    24,
+    22,
+    21
+  ],
+  "sunset": "21:04",
+  "loading": false,
+  "width": 440,
+  "height": 344,
+  "svg": "editable-svg/sol-v2-porto.svg",
+  "png": "images/sol-v2-porto.png",
+  "specification": "state-data/sol-v2-porto.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Porto",
+    "Thursday, 18 June",
+    "°C",
+    "°F",
+    "23°",
+    "Sunny",
+    "Sunset",
+    "21:04",
+    "Today",
+    "23°",
+    "Fri 19",
+    "24°",
+    "Sat 20",
+    "22°",
+    "Sun 21",
+    "21°",
+    "Updated 18:05"
+  ],
+  "path_base": "study folder"
+}

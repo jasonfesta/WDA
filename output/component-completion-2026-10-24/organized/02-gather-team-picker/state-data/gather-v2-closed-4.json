@@ -1,0 +1,51 @@
+{
+  "key": "gather-v2-closed-4",
+  "family": "gather",
+  "title": "Closed picker with 4 selected",
+  "id": "closed-4",
+  "selected_people": [
+    {
+      "name": "Lena Ortiz",
+      "role": "Design lead",
+      "initials": "LO",
+      "color": "#eed9d2"
+    },
+    {
+      "name": "Noah Bell",
+      "role": "Product designer",
+      "initials": "NB",
+      "color": "#f3dfb8"
+    },
+    {
+      "name": "Amara Chen",
+      "role": "Engineer",
+      "initials": "AC",
+      "color": "#e1e5d3"
+    },
+    {
+      "name": "Eli Brooks",
+      "role": "Photographer",
+      "initials": "EB",
+      "color": "#653d41"
+    }
+  ],
+  "count": 4,
+  "open": false,
+  "search": "",
+  "saved_count": 4,
+  "width": 400,
+  "height": 58,
+  "svg": "editable-svg/gather-v2-closed-4.svg",
+  "png": "images/gather-v2-closed-4.png",
+  "specification": "state-data/gather-v2-closed-4.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "LO",
+    "NB",
+    "AC",
+    "EB",
+    "Project team",
+    "4"
+  ],
+  "path_base": "study folder"
+}

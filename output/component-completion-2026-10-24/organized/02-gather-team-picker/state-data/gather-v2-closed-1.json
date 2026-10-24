@@ -1,0 +1,30 @@
+{
+  "key": "gather-v2-closed-1",
+  "family": "gather",
+  "title": "Closed picker with 1 selected",
+  "id": "closed-1",
+  "selected_people": [
+    {
+      "name": "Lena Ortiz",
+      "role": "Design lead",
+      "initials": "LO",
+      "color": "#eed9d2"
+    }
+  ],
+  "count": 1,
+  "open": false,
+  "search": "",
+  "saved_count": 1,
+  "width": 400,
+  "height": 58,
+  "svg": "editable-svg/gather-v2-closed-1.svg",
+  "png": "images/gather-v2-closed-1.png",
+  "specification": "state-data/gather-v2-closed-1.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "LO",
+    "Project team",
+    "1"
+  ],
+  "path_base": "study folder"
+}

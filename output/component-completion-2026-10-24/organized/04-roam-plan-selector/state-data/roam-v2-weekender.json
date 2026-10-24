@@ -1,0 +1,40 @@
+{
+  "key": "roam-v2-weekender",
+  "family": "roam",
+  "title": "Weekender plan",
+  "id": "weekender",
+  "plan": {
+    "name": "Weekender",
+    "price": 12,
+    "gb": 5,
+    "devices": 1
+  },
+  "selected_plan": "weekender",
+  "fixture_only": true,
+  "width": 400,
+  "height": 544,
+  "svg": "editable-svg/roam-v2-weekender.svg",
+  "png": "images/roam-v2-weekender.png",
+  "specification": "state-data/roam-v2-weekender.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Choose your plan",
+    "roam",
+    "Monthly roaming data, wherever you work.",
+    "Weekender",
+    "Everyday",
+    "Worldwide",
+    "Weekender",
+    "5 GB",
+    "$12",
+    "/ month",
+    "Billed monthly",
+    "5 GB of roaming data",
+    "Coverage in 120 destinations",
+    "Use on 1 device",
+    "Cancel before your next renewal",
+    "Continue with Weekender",
+    "Review your plan before checkout."
+  ],
+  "path_base": "study folder"
+}

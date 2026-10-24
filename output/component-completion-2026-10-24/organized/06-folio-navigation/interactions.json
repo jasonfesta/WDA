@@ -1,0 +1,315 @@
+{
+  "version": "3.2",
+  "date": "2026-10-24",
+  "shared": {
+    "scope": "These are detailed implementation requirements for the six static studies. All 93 planned PNG/SVG states are mapped below. Generic hover/press combinations, every data permutation and additional host-only failure branches are specified in text rather than claimed as extra rendered images. No production behavior is implemented by this document.",
+    "contracts": [
+      [
+        "Buttons",
+        "Use a semantic button. Enter or Space activates once; suppress duplicate pending actions. Focus is visible immediately. Keep a pending focused control in the tab order with aria-disabled when disabling it would lose focus; the handler must also prevent activation."
+      ],
+      [
+        "Manual tabs",
+        "Tab enters at the selected tab. Left/Right and Home/End move focus without activation; Enter/Space commits. Arrow navigation wraps. The active tab and associated panel are labelled together; focus and selection are separate."
+      ],
+      [
+        "Radios",
+        "Tab enters at the checked radio. Arrow keys move and select; Space checks the focused item. Only one option is checked. Use native radios where possible. Unit and material controls use this pattern; plan/day/period controls use manual tabs."
+      ],
+      [
+        "Combobox",
+        "Keep text-editing focus in the input; Up/Down changes the active suggestion and Enter chooses it. Expose expanded state, controlled list and active option. Typed arbitrary text never becomes a committed city. Escape closes the location panel."
+      ],
+      [
+        "Modal dialogs",
+        "Give the modal a heading and accessible name. On entry focus that heading when context needs reading; keep Tab/Shift+Tab inside. Background is inert. Escape, close or explicit Back dismisses and restores the recorded trigger. Backdrop clicks do not dismiss in this study."
+      ],
+      [
+        "Nonmodal panels",
+        "Sol search and Gather picker do not trap focus. Escape and explicit dismissal return to the trigger. Pointer outside closes and allows the clicked target to receive focus. Keyboard focus leaving the panel closes it after the move, without redirecting focus."
+      ],
+      [
+        "Links",
+        "Use real hrefs. Enter follows; modifier clicks and browser history retain native behavior. Do not make navigation links into radio controls. Use aria-current only for the committed route."
+      ]
+    ],
+    "feedback": [
+      [
+        "Hover",
+        "120 ms background/colour transition. Use neutral tint for unselected items; selected fill stays distinct. Do not reveal essential information only on hover."
+      ],
+      [
+        "Press",
+        "Apply immediate darker surface while held; return within 90 ms on release. No scale, bounce or layout displacement. Pointer cancellation does not activate."
+      ],
+      [
+        "Focus",
+        "2 px burgundy outline with 2 px offset, not a duplicate selected fill. Never remove focus styles. Keep logical DOM order; no positive tabindex."
+      ],
+      [
+        "Loading",
+        "Show progress immediately and preserve known data. A spinner may rotate at a steady 800 ms cycle; it is decorative and not the only loading indicator. No minimum artificial wait or fabricated progress percentage."
+      ],
+      [
+        "Overlays",
+        "Open with a 120 ms opacity transition; close in 90 ms. Focus behavior runs immediately, independent of animation completion. No spring or perspective transforms."
+      ],
+      [
+        "Reduced motion",
+        "Disable decorative rotation and overlay/colour interpolation; show the final state immediately. Text status and visible focus remain."
+      ],
+      [
+        "Errors and announcements",
+        "Use one polite live region for async status. Keep an actionable error until retry, dismissal or a successful superseding action. Do not move focus merely to announce it. A disappearing focused recovery control returns to its stable trigger."
+      ],
+      [
+        "Touch and targets",
+        "Target at least 44 × 44 CSS px where space permits, even when the icon is smaller; keep target areas from overlapping. Tap duplicates pointer activation, never hover. Keep browser zoom and text selection enabled."
+      ]
+    ],
+    "host_contract": "Stable IDs, not visible labels, identify people, materials, cities, plans and routes. Async callbacks carry a request/version ID and cannot apply after cancellation, replacement or unmount. Server acknowledgements govern persistence and purchases. The per-state JSON fixtures are example inputs, not a backend schema.",
+    "sources": [
+      [
+        "WAI-ARIA APG: Tabs",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/"
+      ],
+      [
+        "WAI-ARIA APG: Radio group",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/radio/"
+      ],
+      [
+        "WAI-ARIA APG: Combobox",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/"
+      ],
+      [
+        "WAI-ARIA APG: Modal dialog",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"
+      ]
+    ]
+  },
+  "components": {
+    "folio": {
+      "family": "folio",
+      "name": "Folio · Navigation dock",
+      "purpose": "Four primary routes with clear current, focused and pending states.",
+      "model": [
+        "currentRoute: studio, explore, saved or profile",
+        "pendingRoute, navigationRequestId, navigationError",
+        "previousSuccessfulRoute; hostContentState; signInReturnRoute",
+        "hoverTarget and focusTarget are transient visual state only"
+      ],
+      "initial": "Studio is current. Route order never changes: Studio, Explore, Saved, Profile. Saved empty and signed-out Profile are valid loaded routes.",
+      "persistence": [
+        "Derive currentRoute from the successfully committed router location. Do not infer it from hover, focus or the last attempted click.",
+        "Use actual links with host-provided hrefs; preserve open-in-new-tab, copy-link, browser Back and Forward behavior. Modifier clicks do not change the current tab’s active marker.",
+        "The host owns page content, authentication and history. Dock order and labels stay stable across account and empty states."
+      ],
+      "async_rules": [
+        "Keep the current route highlighted while another route loads. Put pending/error messages in the host content strip, outside the dock.",
+        "A new unmodified navigation can supersede a pending one; abort or ignore the old request. Only the latest successful route commits.",
+        "On failure stay on the last successful route and show Retry for the failed target. Do not remove access to the other links.",
+        "After a successful client-side route change, move focus to the destination main heading. Back/Forward uses host scroll/focus restoration and must not force focus back to the dock."
+      ],
+      "layout": [
+        "Native dock: 560 × 96; with status strip: 560 × 174. Use four equal columns and visible labels at narrow widths.",
+        "If fixed to a mobile viewport, respect the safe-area inset and reserve content space beneath the page so the dock cannot cover the last action.",
+        "Current fill/dot, neutral hover and outer focus ring remain distinct. Icons are decorative alongside text."
+      ],
+      "acceptance": [
+        "Focus Saved while Studio is current: only Studio retains current styling and aria-current.",
+        "Open Explore and fail: Studio remains current; Retry targets Explore.",
+        "Navigate to empty Saved: Saved becomes current and Browse Explore is available in host content.",
+        "Reach signed-out Profile: Profile is current; Sign in resumes Profile; Cancel returns to the previous successful route (Studio in the fixture).",
+        "Use modifier-click or keyboard open-in-new-tab: preserve native link behavior without activating this tab’s pending UI."
+      ],
+      "controls": [
+        {
+          "id": "routes",
+          "label": "Studio / Explore / Saved / Profile",
+          "semantics": "Four links in navigation landmark labelled Primary; exactly one aria-current=page",
+          "pointer": "Unmodified activation starts host navigation. Current-route activation is a no-op when idle; if another destination is pending, it cancels that pending attempt. Preserve native modifier/new-tab behavior.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Link contract: Tab/Shift+Tab, Enter. No roving tab index or radio-style arrows; Space retains native page-scroll behavior.",
+          "disabled_or_pending": "Keep links available during navigation so a new target can supersede the pending one.",
+          "result": "Pending/error stays outside dock; commit highlight only with route success.",
+          "return_or_dismiss": "Host history restores prior routes. On success focus the destination main heading.",
+          "announcement": "Host status region announces Loading Explore or Couldn’t open Explore; current route is exposed by aria-current."
+        },
+        {
+          "id": "retry",
+          "label": "Route Retry",
+          "semantics": "Button in host status strip",
+          "pointer": "Retry the failed pendingRoute, preserving currentRoute.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract.",
+          "disabled_or_pending": "aria-disabled while retrying; other navigation links remain usable.",
+          "result": "Success commits destination; failure retains old route and Retry.",
+          "return_or_dismiss": "Choosing any other link supersedes this error/request.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "browse",
+          "label": "Browse Explore",
+          "semantics": "Link in empty Saved content",
+          "pointer": "Navigate to Explore using the normal router contract.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Link contract.",
+          "disabled_or_pending": "No special disabled state; duplicate pending target is deduplicated.",
+          "result": "Saved stays current until Explore succeeds.",
+          "return_or_dismiss": "Failure uses the same host retry strip while retaining Saved.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "sign-in",
+          "label": "Sign in",
+          "semantics": "Button in signed-out Profile content",
+          "pointer": "Open host authentication with return destination Profile.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract.",
+          "disabled_or_pending": "Suppress duplicate authentication launches.",
+          "result": "Successful authentication refreshes Profile content; cancelled authentication retains signed-out Profile.",
+          "return_or_dismiss": "Auth failure is shown by the host sign-in flow; no credentials are collected by the dock.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "cancel",
+          "label": "Cancel in signed-out Profile",
+          "semantics": "Button",
+          "pointer": "Return to previousSuccessfulRoute; use Studio if none is available.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract.",
+          "disabled_or_pending": "Available while no external auth flow owns the screen.",
+          "result": "Use normal pending/success routing; Profile stays current until the return route commits.",
+          "return_or_dismiss": "Focus the returned page heading. This does not sign the user out or erase saved items.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        }
+      ],
+      "states": [
+        {
+          "id": "default",
+          "key": "folio-v2-default",
+          "title": "Navigation dock · default",
+          "entry": "Router successfully commits Studio.",
+          "exit": "Activate another link → route pending; success commits it, failure retains current route.",
+          "focus": "Destination main heading on client-side success; browser history uses host restoration.",
+          "notes": "One current route; fixed order and labels.",
+          "preview": "images/folio-v2-default.png",
+          "data": "state-data/folio-v2-default.json"
+        },
+        {
+          "id": "explore",
+          "key": "folio-v2-explore",
+          "title": "Explore current",
+          "entry": "Router successfully commits Explore.",
+          "exit": "Activate another link → route pending; success commits it, failure retains current route.",
+          "focus": "Destination main heading on client-side success; browser history uses host restoration.",
+          "notes": "One current route; fixed order and labels.",
+          "preview": "images/folio-v2-explore.png",
+          "data": "state-data/folio-v2-explore.json"
+        },
+        {
+          "id": "saved",
+          "key": "folio-v2-saved",
+          "title": "Saved current",
+          "entry": "Router successfully commits Saved.",
+          "exit": "Activate another link → route pending; success commits it, failure retains current route.",
+          "focus": "Destination main heading on client-side success; browser history uses host restoration.",
+          "notes": "One current route; fixed order and labels.",
+          "preview": "images/folio-v2-saved.png",
+          "data": "state-data/folio-v2-saved.json"
+        },
+        {
+          "id": "profile",
+          "key": "folio-v2-profile",
+          "title": "Profile current",
+          "entry": "Router successfully commits Profile.",
+          "exit": "Activate another link → route pending; success commits it, failure retains current route.",
+          "focus": "Destination main heading on client-side success; browser history uses host restoration.",
+          "notes": "One current route; fixed order and labels.",
+          "preview": "images/folio-v2-profile.png",
+          "data": "state-data/folio-v2-profile.json"
+        },
+        {
+          "id": "focus",
+          "key": "folio-v2-focus",
+          "title": "Keyboard focus on Saved",
+          "entry": "Focus Saved with keyboard.",
+          "exit": "Activate the target → pending; leave target → remove transient styling.",
+          "focus": "Saved outline only for keyboard focus; hover never moves focus.",
+          "notes": "Studio remains current. Neither transient state changes history or fetches content.",
+          "preview": "images/folio-v2-focus.png",
+          "data": "state-data/folio-v2-focus.json"
+        },
+        {
+          "id": "hover",
+          "key": "folio-v2-hover",
+          "title": "Explore hover",
+          "entry": "Hover Explore with pointer.",
+          "exit": "Activate the target → pending; leave target → remove transient styling.",
+          "focus": "Saved outline only for keyboard focus; hover never moves focus.",
+          "notes": "Studio remains current. Neither transient state changes history or fetches content.",
+          "preview": "images/folio-v2-hover.png",
+          "data": "state-data/folio-v2-hover.json"
+        },
+        {
+          "id": "pending",
+          "key": "folio-v2-pending",
+          "title": "Explore route loading",
+          "entry": "Request Explore from Studio; navigation is pending.",
+          "exit": "pending → explore on success or error; error → Retry/pending; another link supersedes the attempt.",
+          "focus": "Keep activated link or Retry focus until navigation succeeds; then destination heading.",
+          "notes": "Studio stays current and host feedback appears above the dock.",
+          "preview": "images/folio-v2-pending.png",
+          "data": "state-data/folio-v2-pending.json"
+        },
+        {
+          "id": "error",
+          "key": "folio-v2-error",
+          "title": "Explore route failed",
+          "entry": "Request Explore from Studio; navigation fails.",
+          "exit": "pending → explore on success or error; error → Retry/pending; another link supersedes the attempt.",
+          "focus": "Keep activated link or Retry focus until navigation succeeds; then destination heading.",
+          "notes": "Studio stays current and host feedback appears above the dock.",
+          "preview": "images/folio-v2-error.png",
+          "data": "state-data/folio-v2-error.json"
+        },
+        {
+          "id": "saved-empty",
+          "key": "folio-v2-saved-empty",
+          "title": "Saved has no items",
+          "entry": "Saved route succeeds with an empty collection.",
+          "exit": "Browse Explore → normal Explore navigation; any dock link follows normal routing.",
+          "focus": "Saved page heading on route entry.",
+          "notes": "Empty content is a successful Saved route, not a loading/error state.",
+          "preview": "images/folio-v2-saved-empty.png",
+          "data": "state-data/folio-v2-saved-empty.json"
+        },
+        {
+          "id": "profile-signed-out",
+          "key": "folio-v2-profile-signed-out",
+          "title": "Profile signed out",
+          "entry": "Profile route succeeds but has no authenticated session.",
+          "exit": "Sign in → host auth then Profile; Cancel → previous successful route, Studio in the fixture; other dock links work.",
+          "focus": "Profile page heading, followed by Sign in and Cancel in content order.",
+          "notes": "Profile is current despite being signed out; the dock never collects credentials.",
+          "preview": "images/folio-v2-profile-signed-out.png",
+          "data": "state-data/folio-v2-profile-signed-out.json"
+        }
+      ],
+      "read_only": "Each icon and visible label form one link target. The active dot is decorative. The dock shell and gaps are not clickable, and destinations cannot be dragged or reordered.",
+      "default_image": "images/folio-v2-default.png",
+      "rendered_state_count": 10,
+      "control_count": 5,
+      "audit_clarifications": [
+        "Activating the current route is a no-op only when idle. If another route is pending, an unmodified activation of the current link cancels that pending attempt, clears its transient status/error and keeps the current page. Ignore late completion of the cancelled target. Modifier clicks still retain native link behavior.",
+        "Deduplicate repeated activation of the same pending destination. A different destination supersedes it. A browser Back/Forward event cancels incompatible local pending requests before the router restores the committed route, scroll and focus.",
+        "The host authentication flow owns its pending, error and credential states. Sign-in cancellation returns to signed-out Profile; the separate Cancel action in Profile routes back to the previously successful page. These are different cancellations. Keep exactly one current-route marker throughout and announce each outcome only once."
+      ]
+    }
+  }
+}

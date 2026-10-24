@@ -1,0 +1,43 @@
+{
+  "key": "sol-v2-focus",
+  "family": "sol",
+  "title": "Day focus without selection",
+  "id": "focus",
+  "unit": "C",
+  "selected_day": 0,
+  "city": "Lisbon",
+  "temperatures": [
+    28,
+    29,
+    27,
+    26
+  ],
+  "sunset": "20:58",
+  "loading": false,
+  "width": 440,
+  "height": 344,
+  "svg": "editable-svg/sol-v2-focus.svg",
+  "png": "images/sol-v2-focus.png",
+  "specification": "state-data/sol-v2-focus.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Lisbon",
+    "Thursday, 18 June",
+    "°C",
+    "°F",
+    "28°",
+    "Sunny",
+    "Sunset",
+    "20:58",
+    "Today",
+    "28°",
+    "Fri 19",
+    "29°",
+    "Sat 20",
+    "27°",
+    "Sun 21",
+    "26°",
+    "Updated 18:00"
+  ],
+  "path_base": "study folder"
+}

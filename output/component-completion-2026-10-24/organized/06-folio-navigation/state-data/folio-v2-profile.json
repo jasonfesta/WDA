@@ -1,0 +1,22 @@
+{
+  "key": "folio-v2-profile",
+  "family": "folio",
+  "title": "Profile current",
+  "id": "profile",
+  "current_route": "Profile",
+  "focus_route": null,
+  "hover_route": null,
+  "width": 560,
+  "height": 96,
+  "svg": "editable-svg/folio-v2-profile.svg",
+  "png": "images/folio-v2-profile.png",
+  "specification": "state-data/folio-v2-profile.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Studio",
+    "Explore",
+    "Saved",
+    "Profile"
+  ],
+  "path_base": "study folder"
+}

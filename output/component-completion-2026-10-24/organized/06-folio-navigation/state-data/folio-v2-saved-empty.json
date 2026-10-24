@@ -1,0 +1,24 @@
+{
+  "key": "folio-v2-saved-empty",
+  "family": "folio",
+  "title": "Saved has no items",
+  "id": "saved-empty",
+  "current_route": "Saved",
+  "focus_route": null,
+  "hover_route": null,
+  "width": 560,
+  "height": 174,
+  "svg": "editable-svg/folio-v2-saved-empty.svg",
+  "png": "images/folio-v2-saved-empty.png",
+  "specification": "state-data/folio-v2-saved-empty.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "No saved items yet",
+    "Browse Explore",
+    "Studio",
+    "Explore",
+    "Saved",
+    "Profile"
+  ],
+  "path_base": "study folder"
+}

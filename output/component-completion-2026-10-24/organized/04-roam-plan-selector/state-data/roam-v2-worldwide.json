@@ -1,0 +1,40 @@
+{
+  "key": "roam-v2-worldwide",
+  "family": "roam",
+  "title": "Worldwide plan",
+  "id": "worldwide",
+  "plan": {
+    "name": "Worldwide",
+    "price": 48,
+    "gb": 50,
+    "devices": 5
+  },
+  "selected_plan": "worldwide",
+  "fixture_only": true,
+  "width": 400,
+  "height": 544,
+  "svg": "editable-svg/roam-v2-worldwide.svg",
+  "png": "images/roam-v2-worldwide.png",
+  "specification": "state-data/roam-v2-worldwide.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Choose your plan",
+    "roam",
+    "Monthly roaming data, wherever you work.",
+    "Weekender",
+    "Everyday",
+    "Worldwide",
+    "Worldwide",
+    "50 GB",
+    "$48",
+    "/ month",
+    "Billed monthly",
+    "50 GB of roaming data",
+    "Coverage in 120 destinations",
+    "Use on 5 devices",
+    "Cancel before your next renewal",
+    "Continue with Worldwide",
+    "Review your plan before checkout."
+  ],
+  "path_base": "study folder"
+}

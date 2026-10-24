@@ -1,0 +1,55 @@
+{
+  "key": "gather-v2-two",
+  "family": "gather",
+  "title": "Two teammates selected",
+  "id": "two",
+  "selected_people": [
+    {
+      "name": "Noah Bell",
+      "role": "Product designer",
+      "initials": "NB",
+      "color": "#f3dfb8"
+    },
+    {
+      "name": "Eli Brooks",
+      "role": "Photographer",
+      "initials": "EB",
+      "color": "#653d41"
+    }
+  ],
+  "count": 2,
+  "open": true,
+  "search": "",
+  "saved_count": 2,
+  "width": 400,
+  "height": 484,
+  "svg": "editable-svg/gather-v2-two.svg",
+  "png": "images/gather-v2-two.png",
+  "specification": "state-data/gather-v2-two.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "NB",
+    "EB",
+    "Project team",
+    "2",
+    "Project team",
+    "Choose who appears on this project.",
+    "Find a teammate…",
+    "LO",
+    "Lena Ortiz",
+    "Design lead",
+    "NB",
+    "Noah Bell",
+    "Product designer",
+    "AC",
+    "Amara Chen",
+    "Engineer",
+    "EB",
+    "Eli Brooks",
+    "Photographer",
+    "2 selected",
+    "Clear",
+    "Selection saved"
+  ],
+  "path_base": "study folder"
+}

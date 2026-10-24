@@ -1,0 +1,60 @@
+{
+  "key": "courtyard-v2-undo-moss",
+  "family": "courtyard",
+  "title": "Undo restores Moss",
+  "id": "undo-moss",
+  "palette": [
+    [
+      "Rose",
+      "Polished ceramic",
+      "#D68C80"
+    ],
+    [
+      "Apricot",
+      "Matte ceramic",
+      "#E9A16D"
+    ],
+    [
+      "Citron",
+      "Textured clay",
+      "#E4C65A"
+    ],
+    [
+      "Moss",
+      "Natural stone",
+      "#797D50"
+    ],
+    [
+      "Burgundy",
+      "Ribbed wood",
+      "#65333C"
+    ]
+  ],
+  "selected": 3,
+  "material": {
+    "name": "Moss",
+    "finish": "Natural stone",
+    "hex": "#797D50"
+  },
+  "width": 640,
+  "height": 304,
+  "svg": "editable-svg/courtyard-v2-undo-moss.svg",
+  "png": "images/courtyard-v2-undo-moss.png",
+  "specification": "state-data/courtyard-v2-undo-moss.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Material",
+    "A finish for your next idea.",
+    "Shuffle",
+    "Rose",
+    "Apricot",
+    "Citron",
+    "Moss",
+    "Burgundy",
+    "Moss",
+    "Natural stone",
+    "#797D50",
+    "Previous palette restored"
+  ],
+  "path_base": "study folder"
+}

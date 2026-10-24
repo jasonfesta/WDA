@@ -1,0 +1,48 @@
+{
+  "key": "gather-v2-one",
+  "family": "gather",
+  "title": "One teammate selected",
+  "id": "one",
+  "selected_people": [
+    {
+      "name": "Lena Ortiz",
+      "role": "Design lead",
+      "initials": "LO",
+      "color": "#eed9d2"
+    }
+  ],
+  "count": 1,
+  "open": true,
+  "search": "",
+  "saved_count": 1,
+  "width": 400,
+  "height": 484,
+  "svg": "editable-svg/gather-v2-one.svg",
+  "png": "images/gather-v2-one.png",
+  "specification": "state-data/gather-v2-one.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "LO",
+    "Project team",
+    "1",
+    "Project team",
+    "Choose who appears on this project.",
+    "Find a teammate…",
+    "LO",
+    "Lena Ortiz",
+    "Design lead",
+    "NB",
+    "Noah Bell",
+    "Product designer",
+    "AC",
+    "Amara Chen",
+    "Engineer",
+    "EB",
+    "Eli Brooks",
+    "Photographer",
+    "1 selected",
+    "Clear",
+    "Selection saved"
+  ],
+  "path_base": "study folder"
+}

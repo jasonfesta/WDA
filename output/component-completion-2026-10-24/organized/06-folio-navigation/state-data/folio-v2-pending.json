@@ -1,0 +1,23 @@
+{
+  "key": "folio-v2-pending",
+  "family": "folio",
+  "title": "Explore route loading",
+  "id": "pending",
+  "current_route": "Studio",
+  "focus_route": null,
+  "hover_route": null,
+  "width": 560,
+  "height": 174,
+  "svg": "editable-svg/folio-v2-pending.svg",
+  "png": "images/folio-v2-pending.png",
+  "specification": "state-data/folio-v2-pending.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Loading Explore…",
+    "Studio",
+    "Explore",
+    "Saved",
+    "Profile"
+  ],
+  "path_base": "study folder"
+}

@@ -1,0 +1,61 @@
+{
+  "key": "courtyard-v2-shuffled-brick",
+  "family": "courtyard",
+  "title": "Brick in shuffled set",
+  "id": "shuffled-brick",
+  "palette": [
+    [
+      "Clay",
+      "Terracotta",
+      "#C77E5A"
+    ],
+    [
+      "Peel",
+      "Matte ceramic",
+      "#EDAD71"
+    ],
+    [
+      "Brick",
+      "Textured clay",
+      "#A94F35"
+    ],
+    [
+      "Plum",
+      "Polished ceramic",
+      "#886476"
+    ],
+    [
+      "Ash",
+      "Natural stone",
+      "#BDB8AF"
+    ]
+  ],
+  "selected": 2,
+  "material": {
+    "name": "Brick",
+    "finish": "Textured clay",
+    "hex": "#A94F35"
+  },
+  "width": 640,
+  "height": 304,
+  "svg": "editable-svg/courtyard-v2-shuffled-brick.svg",
+  "png": "images/courtyard-v2-shuffled-brick.png",
+  "specification": "state-data/courtyard-v2-shuffled-brick.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Material",
+    "A finish for your next idea.",
+    "Shuffle",
+    "Clay",
+    "Peel",
+    "Brick",
+    "Plum",
+    "Ash",
+    "Brick",
+    "Textured clay",
+    "#A94F35",
+    "Palette shuffled",
+    "Undo"
+  ],
+  "path_base": "study folder"
+}

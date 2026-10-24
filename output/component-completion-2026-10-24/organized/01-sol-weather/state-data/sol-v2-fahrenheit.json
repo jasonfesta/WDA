@@ -1,0 +1,43 @@
+{
+  "key": "sol-v2-fahrenheit",
+  "family": "sol",
+  "title": "Today in Fahrenheit",
+  "id": "fahrenheit",
+  "unit": "F",
+  "selected_day": 0,
+  "city": "Lisbon",
+  "temperatures": [
+    82,
+    84,
+    81,
+    79
+  ],
+  "sunset": "20:58",
+  "loading": false,
+  "width": 440,
+  "height": 344,
+  "svg": "editable-svg/sol-v2-fahrenheit.svg",
+  "png": "images/sol-v2-fahrenheit.png",
+  "specification": "state-data/sol-v2-fahrenheit.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Lisbon",
+    "Thursday, 18 June",
+    "°C",
+    "°F",
+    "82°",
+    "Sunny",
+    "Sunset",
+    "20:58",
+    "Today",
+    "82°",
+    "Fri 19",
+    "84°",
+    "Sat 20",
+    "81°",
+    "Sun 21",
+    "79°",
+    "Updated 18:00"
+  ],
+  "path_base": "study folder"
+}

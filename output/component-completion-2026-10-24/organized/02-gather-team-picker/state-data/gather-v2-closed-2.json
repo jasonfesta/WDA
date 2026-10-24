@@ -1,0 +1,37 @@
+{
+  "key": "gather-v2-closed-2",
+  "family": "gather",
+  "title": "Closed picker with 2 selected",
+  "id": "closed-2",
+  "selected_people": [
+    {
+      "name": "Noah Bell",
+      "role": "Product designer",
+      "initials": "NB",
+      "color": "#f3dfb8"
+    },
+    {
+      "name": "Eli Brooks",
+      "role": "Photographer",
+      "initials": "EB",
+      "color": "#653d41"
+    }
+  ],
+  "count": 2,
+  "open": false,
+  "search": "",
+  "saved_count": 2,
+  "width": 400,
+  "height": 58,
+  "svg": "editable-svg/gather-v2-closed-2.svg",
+  "png": "images/gather-v2-closed-2.png",
+  "specification": "state-data/gather-v2-closed-2.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "NB",
+    "EB",
+    "Project team",
+    "2"
+  ],
+  "path_base": "study folder"
+}

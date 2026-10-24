@@ -1,0 +1,22 @@
+{
+  "key": "gather-v2-closed-0",
+  "family": "gather",
+  "title": "Closed picker with 0 selected",
+  "id": "closed-0",
+  "selected_people": [],
+  "count": 0,
+  "open": false,
+  "search": "",
+  "saved_count": 0,
+  "width": 400,
+  "height": 58,
+  "svg": "editable-svg/gather-v2-closed-0.svg",
+  "png": "images/gather-v2-closed-0.png",
+  "specification": "state-data/gather-v2-closed-0.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Project team",
+    "0"
+  ],
+  "path_base": "study folder"
+}

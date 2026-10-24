@@ -1,0 +1,33 @@
+{
+  "key": "roam-v2-account-error",
+  "family": "roam",
+  "title": "Membership unavailable",
+  "id": "account-error",
+  "plan": {
+    "name": "Everyday",
+    "price": 24,
+    "gb": 20,
+    "devices": 3
+  },
+  "selected_plan": "everyday",
+  "fixture_only": true,
+  "width": 400,
+  "height": 544,
+  "svg": "editable-svg/roam-v2-account-error.svg",
+  "png": "images/roam-v2-account-error.png",
+  "specification": "state-data/roam-v2-account-error.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Choose your plan",
+    "roam",
+    "Monthly roaming data, wherever you work.",
+    "Weekender",
+    "Everyday",
+    "Worldwide",
+    "Membership unavailable",
+    "We couldn’t load your account.",
+    "Retry",
+    "Back"
+  ],
+  "path_base": "study folder"
+}

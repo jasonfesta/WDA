@@ -1,0 +1,24 @@
+{
+  "key": "folio-v2-error",
+  "family": "folio",
+  "title": "Explore route failed",
+  "id": "error",
+  "current_route": "Studio",
+  "focus_route": null,
+  "hover_route": null,
+  "width": 560,
+  "height": 174,
+  "svg": "editable-svg/folio-v2-error.svg",
+  "png": "images/folio-v2-error.png",
+  "specification": "state-data/folio-v2-error.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Couldn’t open Explore",
+    "Retry",
+    "Studio",
+    "Explore",
+    "Saved",
+    "Profile"
+  ],
+  "path_base": "study folder"
+}

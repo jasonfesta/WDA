@@ -1,0 +1,410 @@
+{
+  "version": "3.2",
+  "date": "2026-10-24",
+  "shared": {
+    "scope": "These are detailed implementation requirements for the six static studies. All 93 planned PNG/SVG states are mapped below. Generic hover/press combinations, every data permutation and additional host-only failure branches are specified in text rather than claimed as extra rendered images. No production behavior is implemented by this document.",
+    "contracts": [
+      [
+        "Buttons",
+        "Use a semantic button. Enter or Space activates once; suppress duplicate pending actions. Focus is visible immediately. Keep a pending focused control in the tab order with aria-disabled when disabling it would lose focus; the handler must also prevent activation."
+      ],
+      [
+        "Manual tabs",
+        "Tab enters at the selected tab. Left/Right and Home/End move focus without activation; Enter/Space commits. Arrow navigation wraps. The active tab and associated panel are labelled together; focus and selection are separate."
+      ],
+      [
+        "Radios",
+        "Tab enters at the checked radio. Arrow keys move and select; Space checks the focused item. Only one option is checked. Use native radios where possible. Unit and material controls use this pattern; plan/day/period controls use manual tabs."
+      ],
+      [
+        "Combobox",
+        "Keep text-editing focus in the input; Up/Down changes the active suggestion and Enter chooses it. Expose expanded state, controlled list and active option. Typed arbitrary text never becomes a committed city. Escape closes the location panel."
+      ],
+      [
+        "Modal dialogs",
+        "Give the modal a heading and accessible name. On entry focus that heading when context needs reading; keep Tab/Shift+Tab inside. Background is inert. Escape, close or explicit Back dismisses and restores the recorded trigger. Backdrop clicks do not dismiss in this study."
+      ],
+      [
+        "Nonmodal panels",
+        "Sol search and Gather picker do not trap focus. Escape and explicit dismissal return to the trigger. Pointer outside closes and allows the clicked target to receive focus. Keyboard focus leaving the panel closes it after the move, without redirecting focus."
+      ],
+      [
+        "Links",
+        "Use real hrefs. Enter follows; modifier clicks and browser history retain native behavior. Do not make navigation links into radio controls. Use aria-current only for the committed route."
+      ]
+    ],
+    "feedback": [
+      [
+        "Hover",
+        "120 ms background/colour transition. Use neutral tint for unselected items; selected fill stays distinct. Do not reveal essential information only on hover."
+      ],
+      [
+        "Press",
+        "Apply immediate darker surface while held; return within 90 ms on release. No scale, bounce or layout displacement. Pointer cancellation does not activate."
+      ],
+      [
+        "Focus",
+        "2 px burgundy outline with 2 px offset, not a duplicate selected fill. Never remove focus styles. Keep logical DOM order; no positive tabindex."
+      ],
+      [
+        "Loading",
+        "Show progress immediately and preserve known data. A spinner may rotate at a steady 800 ms cycle; it is decorative and not the only loading indicator. No minimum artificial wait or fabricated progress percentage."
+      ],
+      [
+        "Overlays",
+        "Open with a 120 ms opacity transition; close in 90 ms. Focus behavior runs immediately, independent of animation completion. No spring or perspective transforms."
+      ],
+      [
+        "Reduced motion",
+        "Disable decorative rotation and overlay/colour interpolation; show the final state immediately. Text status and visible focus remain."
+      ],
+      [
+        "Errors and announcements",
+        "Use one polite live region for async status. Keep an actionable error until retry, dismissal or a successful superseding action. Do not move focus merely to announce it. A disappearing focused recovery control returns to its stable trigger."
+      ],
+      [
+        "Touch and targets",
+        "Target at least 44 × 44 CSS px where space permits, even when the icon is smaller; keep target areas from overlapping. Tap duplicates pointer activation, never hover. Keep browser zoom and text selection enabled."
+      ]
+    ],
+    "host_contract": "Stable IDs, not visible labels, identify people, materials, cities, plans and routes. Async callbacks carry a request/version ID and cannot apply after cancellation, replacement or unmount. Server acknowledgements govern persistence and purchases. The per-state JSON fixtures are example inputs, not a backend schema.",
+    "sources": [
+      [
+        "WAI-ARIA APG: Tabs",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/"
+      ],
+      [
+        "WAI-ARIA APG: Radio group",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/radio/"
+      ],
+      [
+        "WAI-ARIA APG: Combobox",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/"
+      ],
+      [
+        "WAI-ARIA APG: Modal dialog",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"
+      ]
+    ]
+  },
+  "components": {
+    "kiln": {
+      "family": "kiln",
+      "name": "Kiln · Usage & limits",
+      "purpose": "A truthful period summary, activity breakdown and host billing entry point.",
+      "model": [
+        "committedPeriod: cycle, previous or week; requestedPeriod; requestId",
+        "usage: total, allowance, period dates, reset date and activity totals, or unknown",
+        "resourceCounts: seats, storage and collections, independently loaded",
+        "status: ready, loading or error; detailActivity; billingDialogStatus"
+      ],
+      "initial": "June cycle: 6,240 / 8,000 credits (78%); 1,760 remaining; reset 1 July. Activity: Render 3,200, Explore 1,600, Compose 960, Export 480. Resources: seats 6/8, storage 2.4/4 GB, collections 18.",
+      "persistence": [
+        "Commit a period label and its data together. Focus may move to another period without changing either. Keep resources independent from credit usage.",
+        "Meter percentage is period total / cycle allowance. Weekly usage is not a remaining cycle balance. If actual cycle usage exceeds allowance, cap visual fill at 100%, show the true percentage and an explicit over-limit amount; that extension is not separately rendered.",
+        "Activity shares use period total, rounded to one decimal; do not force a rounded sum to 100. At zero, shares are undefined (em dash). Missing and zero are different states."
+      ],
+      "async_rules": [
+        "While a new period loads keep committed labels/numbers visible, mark the usage region busy and deduplicate requests. Freeze period activation until the request settles; arrow focus may still move.",
+        "Failure preserves committed values and requestedPeriod for Retry. A new explicit period activation after failure replaces that target. Ignore late responses from obsolete request IDs.",
+        "If there is no usable usage response, show missing values and Retry; retain known resources. Do not substitute zero.",
+        "Billing details and navigation are host-owned. Keep usage visible behind the modal while plan data loads or fails; never invent a price or payment method."
+      ],
+      "layout": [
+        "Native study: 640 × 508. At narrow widths stack the metric suffix and resource summary while retaining table column headings.",
+        "Activity detail is a modal dialog, not a chart tooltip. The table row has an explicit details button; numeric cells remain readable text.",
+        "Progress fill is decorative beside an accessible numeric meter. Missing values use an unavailable label rather than an empty valid meter."
+      ],
+      "acceptance": [
+        "This cycle totals 6,240 and fills exactly 78%; Previous totals 4,800 and fills 60%.",
+        "Week totals 1,400, fills 17.5%, and never says 6,600 credits remaining.",
+        "Missing usage shows unknown values; verified zero shows 0, empty fill and 8,000 remaining.",
+        "Request Previous and fail: This cycle and all June numbers stay visible; Retry requests Previous.",
+        "Open each activity detail: its value/share matches the current table and returns focus to its own row control."
+      ],
+      "controls": [
+        {
+          "id": "periods",
+          "label": "This cycle / Previous / Week",
+          "semantics": "Manual tabs labelled Usage period",
+          "pointer": "Request the selected period; commit tab and data only after success.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Manual-tab contract. Focus alone never loads a period.",
+          "disabled_or_pending": "Activation suppressed during a request; focused target remains visible.",
+          "result": "Loading feedback with old data, then atomic new period/data or retained data plus Retry.",
+          "return_or_dismiss": "Selecting the committed tab is a no-op; a failed target can be retried or replaced.",
+          "announcement": "Announce Loading previous cycle, Usage updated, or Couldn’t load previous cycle."
+        },
+        {
+          "id": "usage-retry",
+          "label": "Usage / range Retry",
+          "semantics": "Button",
+          "pointer": "Retry requestedPeriod after range failure, or current period when no usage data exists.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract.",
+          "disabled_or_pending": "One request at a time; suppress repeat activation.",
+          "result": "Success commits data; failure retains cached data or the unknown-value state.",
+          "return_or_dismiss": "Focus stays on a stable status/action location; on success, if Retry disappears, focus the committed period tab.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "activity",
+          "label": "Render / Explore / Compose / Export details",
+          "semantics": "Button in each activity table row; named [activity] usage details",
+          "pointer": "Open a detail dialog for the committed period’s activity.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract plus modal contract.",
+          "disabled_or_pending": "Available only when the activity value is known, including verified zero. Disable when data is missing.",
+          "result": "Show activity name, credits, share and period; no invented event history.",
+          "return_or_dismiss": "Close/Escape returns to the same activity control.",
+          "announcement": "Dialog title and value provide context; no extra live-region repetition."
+        },
+        {
+          "id": "detail-close",
+          "label": "Close usage detail",
+          "semantics": "Icon button named Close usage detail",
+          "pointer": "Close the activity dialog.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract; Escape; modal contract.",
+          "disabled_or_pending": "Always available inside the dialog.",
+          "result": "Underlying period and all values remain unchanged.",
+          "return_or_dismiss": "Focus returns to the activity details trigger; backdrop click does not dismiss.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "manage",
+          "label": "Manage plan",
+          "semantics": "Button",
+          "pointer": "Open billing details and begin the host plan read.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract.",
+          "disabled_or_pending": "Deduplicate openings; modal is the single active overlay.",
+          "result": "Loading plan details, then Studio / 8,000 credits per cycle, or plan error.",
+          "return_or_dismiss": "Back/close returns to Manage plan.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "billing-open",
+          "label": "Open billing settings",
+          "semantics": "Button",
+          "pointer": "Navigate to the host’s authenticated billing settings.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract within modal.",
+          "disabled_or_pending": "Available after valid plan details; suppress duplicate navigation while pending.",
+          "result": "Host owns the settings page. No upgrade price, purchase or card entry happens in this component.",
+          "return_or_dismiss": "If the host cannot open billing, retain the dialog and show its retryable error. Browser Back returns to the originating usage view.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "billing-retry",
+          "label": "Plan Retry",
+          "semantics": "Button",
+          "pointer": "Retry the failed billing details read or settings handoff, according to the failed operation.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract.",
+          "disabled_or_pending": "Suppressed while pending.",
+          "result": "Loading then valid plan details/settings, or same error.",
+          "return_or_dismiss": "Back to usage remains available.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "billing-dismiss",
+          "label": "Billing close × / Back to usage",
+          "semantics": "Buttons; close named Close plan management",
+          "pointer": "Dismiss the billing modal and invalidate a pending plan read.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract; Escape; modal contract.",
+          "disabled_or_pending": "Available during loading and errors; no outside-click dismissal.",
+          "result": "Keep committed usage untouched. Late plan responses must not reopen the modal.",
+          "return_or_dismiss": "Restore focus to Manage plan.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        }
+      ],
+      "states": [
+        {
+          "id": "default",
+          "key": "kiln-v2-default",
+          "title": "Usage & limits · default",
+          "entry": "Load or successfully commit the illustrated period’s data.",
+          "exit": "Activate another period → loading; open known activity → detail; Manage plan → plans-loading/manage.",
+          "focus": "Keep the initiating period tab focused after data commits.",
+          "notes": "Total 6240; allowance 8000; 78.0%. Zero and near-limit are verified data fixtures.",
+          "preview": "images/kiln-v2-default.png",
+          "data": "state-data/kiln-v2-default.json"
+        },
+        {
+          "id": "previous",
+          "key": "kiln-v2-previous",
+          "title": "Previous billing cycle",
+          "entry": "Load or successfully commit the illustrated period’s data.",
+          "exit": "Activate another period → loading; open known activity → detail; Manage plan → plans-loading/manage.",
+          "focus": "Keep the initiating period tab focused after data commits.",
+          "notes": "Total 4800; allowance 8000; 60.0%. Zero and near-limit are verified data fixtures.",
+          "preview": "images/kiln-v2-previous.png",
+          "data": "state-data/kiln-v2-previous.json"
+        },
+        {
+          "id": "week",
+          "key": "kiln-v2-week",
+          "title": "This week usage",
+          "entry": "Load or successfully commit the illustrated period’s data.",
+          "exit": "Activate another period → loading; open known activity → detail; Manage plan → plans-loading/manage.",
+          "focus": "Keep the initiating period tab focused after data commits.",
+          "notes": "Total 1400; allowance 8000; 17.5%. Weekly usage does not establish remaining cycle credits.",
+          "preview": "images/kiln-v2-week.png",
+          "data": "state-data/kiln-v2-week.json"
+        },
+        {
+          "id": "detail-render",
+          "key": "kiln-v2-detail-render",
+          "title": "Render usage detail",
+          "entry": "Activate Render usage details in the current period.",
+          "exit": "Close/Escape → same committed usage state. Other periods are inert behind the modal.",
+          "focus": "Dialog heading on entry; trap focus; return to the originating activity button.",
+          "notes": "Example detail values use June; implementation reads the committed period, never a hard-coded default.",
+          "preview": "images/kiln-v2-detail-render.png",
+          "data": "state-data/kiln-v2-detail-render.json"
+        },
+        {
+          "id": "detail-explore",
+          "key": "kiln-v2-detail-explore",
+          "title": "Explore usage detail",
+          "entry": "Activate Explore usage details in the current period.",
+          "exit": "Close/Escape → same committed usage state. Other periods are inert behind the modal.",
+          "focus": "Dialog heading on entry; trap focus; return to the originating activity button.",
+          "notes": "Example detail values use June; implementation reads the committed period, never a hard-coded default.",
+          "preview": "images/kiln-v2-detail-explore.png",
+          "data": "state-data/kiln-v2-detail-explore.json"
+        },
+        {
+          "id": "detail-compose",
+          "key": "kiln-v2-detail-compose",
+          "title": "Compose usage detail",
+          "entry": "Activate Compose usage details in the current period.",
+          "exit": "Close/Escape → same committed usage state. Other periods are inert behind the modal.",
+          "focus": "Dialog heading on entry; trap focus; return to the originating activity button.",
+          "notes": "Example detail values use June; implementation reads the committed period, never a hard-coded default.",
+          "preview": "images/kiln-v2-detail-compose.png",
+          "data": "state-data/kiln-v2-detail-compose.json"
+        },
+        {
+          "id": "detail-export",
+          "key": "kiln-v2-detail-export",
+          "title": "Export usage detail",
+          "entry": "Activate Export usage details in the current period.",
+          "exit": "Close/Escape → same committed usage state. Other periods are inert behind the modal.",
+          "focus": "Dialog heading on entry; trap focus; return to the originating activity button.",
+          "notes": "Example detail values use June; implementation reads the committed period, never a hard-coded default.",
+          "preview": "images/kiln-v2-detail-export.png",
+          "data": "state-data/kiln-v2-detail-export.json"
+        },
+        {
+          "id": "loading",
+          "key": "kiln-v2-loading",
+          "title": "Usage range loading",
+          "entry": "Activate Previous from the June cycle.",
+          "exit": "Success → previous; failure → error.",
+          "focus": "Keep existing focus; if the recovery action disappears after success, focus the committed period tab.",
+          "notes": "Loading/error retain June data. Missing uses em dashes while known resource counts remain visible.",
+          "preview": "images/kiln-v2-loading.png",
+          "data": "state-data/kiln-v2-loading.json"
+        },
+        {
+          "id": "error",
+          "key": "kiln-v2-error",
+          "title": "Usage range failed",
+          "entry": "Previous request fails while June is cached.",
+          "exit": "Retry → loading; another period activation replaces the failed target.",
+          "focus": "Keep existing focus; if the recovery action disappears after success, focus the committed period tab.",
+          "notes": "Loading/error retain June data. Missing uses em dashes while known resource counts remain visible.",
+          "preview": "images/kiln-v2-error.png",
+          "data": "state-data/kiln-v2-error.json"
+        },
+        {
+          "id": "missing",
+          "key": "kiln-v2-missing",
+          "title": "Usage data unavailable",
+          "entry": "Usage read fails without usable credit data.",
+          "exit": "Retry → load the requested/current period; success → its usage, failure → missing.",
+          "focus": "Keep existing focus; if the recovery action disappears after success, focus the committed period tab.",
+          "notes": "Loading/error retain June data. Missing uses em dashes while known resource counts remain visible.",
+          "preview": "images/kiln-v2-missing.png",
+          "data": "state-data/kiln-v2-missing.json"
+        },
+        {
+          "id": "zero",
+          "key": "kiln-v2-zero",
+          "title": "Verified zero usage",
+          "entry": "Load or successfully commit the illustrated period’s data.",
+          "exit": "Activate another period → loading; open known activity → detail; Manage plan → plans-loading/manage.",
+          "focus": "Keep the initiating period tab focused after data commits.",
+          "notes": "Total 0; allowance 8000; 0.0%. Zero and near-limit are verified data fixtures.",
+          "preview": "images/kiln-v2-zero.png",
+          "data": "state-data/kiln-v2-zero.json"
+        },
+        {
+          "id": "near-limit",
+          "key": "kiln-v2-near-limit",
+          "title": "Near capacity",
+          "entry": "Load or successfully commit the illustrated period’s data.",
+          "exit": "Activate another period → loading; open known activity → detail; Manage plan → plans-loading/manage.",
+          "focus": "Keep the initiating period tab focused after data commits.",
+          "notes": "Total 7600; allowance 8000; 95.0%. Zero and near-limit are verified data fixtures.",
+          "preview": "images/kiln-v2-near-limit.png",
+          "data": "state-data/kiln-v2-near-limit.json"
+        },
+        {
+          "id": "manage",
+          "key": "kiln-v2-manage",
+          "title": "Plan management",
+          "entry": "Host plan details load successfully.",
+          "exit": "Open billing settings → host; close/Back/Escape → same usage.",
+          "focus": "Dialog heading on entry; keep focus within modal; dismiss to Manage plan.",
+          "notes": "Closing invalidates pending plan reads and never alters credit usage.",
+          "preview": "images/kiln-v2-manage.png",
+          "data": "state-data/kiln-v2-manage.json"
+        },
+        {
+          "id": "plans-loading",
+          "key": "kiln-v2-plans-loading",
+          "title": "Loading plan details",
+          "entry": "Activate Manage plan or Retry.",
+          "exit": "Success → manage; failure → plans-error; close → usage.",
+          "focus": "Dialog heading on entry; keep focus within modal; dismiss to Manage plan.",
+          "notes": "Closing invalidates pending plan reads and never alters credit usage.",
+          "preview": "images/kiln-v2-plans-loading.png",
+          "data": "state-data/kiln-v2-plans-loading.json"
+        },
+        {
+          "id": "plans-error",
+          "key": "kiln-v2-plans-error",
+          "title": "Plan details unavailable",
+          "entry": "Host plan read/settings handoff fails.",
+          "exit": "Retry → plans-loading or host handoff; close/Back/Escape → usage.",
+          "focus": "Dialog heading on entry; keep focus within modal; dismiss to Manage plan.",
+          "notes": "Closing invalidates pending plan reads and never alters credit usage.",
+          "preview": "images/kiln-v2-plans-error.png",
+          "data": "state-data/kiln-v2-plans-error.json"
+        }
+      ],
+      "read_only": "The capacity meter, totals, table headings and resource summaries are read-only. There is no chart tooltip or resource-card navigation. Activity details are exposed through the row detail button, not through the numbers themselves.",
+      "default_image": "images/kiln-v2-default.png",
+      "rendered_state_count": 15,
+      "control_count": 8,
+      "audit_clarifications": [
+        "Validate totals and allowances before arithmetic: usage is finite and nonnegative; allowance must be finite and greater than zero to calculate a percentage. Invalid or unknown inputs show the missing-data treatment and Retry, never NaN, Infinity or a fabricated zero. Independently known resource values remain visible; unknown resource values use an em dash with an unavailable accessible label.",
+        "At exactly 100%, show 0 credits remaining. Above the cycle allowance, cap fill at 100% but show the true percentage and “[amount] credits over limit”; do not show negative remaining credits. Weekly totals never imply a cycle balance. Over-limit and partially unavailable resources are documented variants without separate PNGs.",
+        "If a usage response arrives while an activity dialog is open, preserve the dialog’s period/activity snapshot until it closes. Apply any newer committed table data together on return; never show a period heading from one response with amounts from another. Missing activity amounts disable only their details action. Zero totals keep amounts at zero and shares unavailable.",
+        "A settings handoff has its own pending operation after plan details load. Keep the billing summary, suppress duplicate navigation, and retain Back. Failure shows the existing plan-error treatment; Retry repeats the failed operation, not a different billing request. A late callback after dismissal cannot navigate or reopen the modal."
+      ]
+    }
+  }
+}

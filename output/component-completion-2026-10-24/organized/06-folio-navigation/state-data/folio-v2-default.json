@@ -1,0 +1,22 @@
+{
+  "key": "folio-v2-default",
+  "family": "folio",
+  "title": "Navigation dock · default",
+  "id": "default",
+  "current_route": "Studio",
+  "focus_route": null,
+  "hover_route": null,
+  "width": 560,
+  "height": 96,
+  "svg": "editable-svg/folio-v2-default.svg",
+  "png": "images/folio-v2-default.png",
+  "specification": "state-data/folio-v2-default.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Studio",
+    "Explore",
+    "Saved",
+    "Profile"
+  ],
+  "path_base": "study folder"
+}

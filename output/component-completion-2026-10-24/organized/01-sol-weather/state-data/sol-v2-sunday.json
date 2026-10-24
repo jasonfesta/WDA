@@ -1,0 +1,43 @@
+{
+  "key": "sol-v2-sunday",
+  "family": "sol",
+  "title": "Sunday forecast",
+  "id": "sunday",
+  "unit": "C",
+  "selected_day": 3,
+  "city": "Lisbon",
+  "temperatures": [
+    28,
+    29,
+    27,
+    26
+  ],
+  "sunset": "21:01",
+  "loading": false,
+  "width": 440,
+  "height": 344,
+  "svg": "editable-svg/sol-v2-sunday.svg",
+  "png": "images/sol-v2-sunday.png",
+  "specification": "state-data/sol-v2-sunday.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Lisbon",
+    "Sunday, 21 June",
+    "°C",
+    "°F",
+    "26°",
+    "Sunny",
+    "Sunset",
+    "21:01",
+    "Today",
+    "28°",
+    "Fri 19",
+    "29°",
+    "Sat 20",
+    "27°",
+    "Sun 21",
+    "26°",
+    "Updated 18:00"
+  ],
+  "path_base": "study folder"
+}

@@ -1,0 +1,36 @@
+{
+  "key": "roam-v2-confirmed-weekender",
+  "family": "roam",
+  "title": "Weekender confirmed",
+  "id": "confirmed-weekender",
+  "plan": {
+    "name": "Weekender",
+    "price": 12,
+    "gb": 5,
+    "devices": 1
+  },
+  "selected_plan": "weekender",
+  "fixture_only": true,
+  "width": 400,
+  "height": 544,
+  "svg": "editable-svg/roam-v2-confirmed-weekender.svg",
+  "png": "images/roam-v2-confirmed-weekender.png",
+  "specification": "state-data/roam-v2-confirmed-weekender.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Choose your plan",
+    "roam",
+    "Monthly roaming data, wherever you work.",
+    "Weekender",
+    "Everyday",
+    "Worldwide",
+    "Plan activated",
+    "Weekender",
+    "$12 / month",
+    "5 GB of roaming data",
+    "Billed monthly",
+    "Manage membership",
+    "Back to plans"
+  ],
+  "path_base": "study folder"
+}

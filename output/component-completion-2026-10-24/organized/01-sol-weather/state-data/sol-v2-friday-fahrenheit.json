@@ -1,0 +1,43 @@
+{
+  "key": "sol-v2-friday-fahrenheit",
+  "family": "sol",
+  "title": "Friday in Fahrenheit",
+  "id": "friday-fahrenheit",
+  "unit": "F",
+  "selected_day": 1,
+  "city": "Lisbon",
+  "temperatures": [
+    82,
+    84,
+    81,
+    79
+  ],
+  "sunset": "20:59",
+  "loading": false,
+  "width": 440,
+  "height": 344,
+  "svg": "editable-svg/sol-v2-friday-fahrenheit.svg",
+  "png": "images/sol-v2-friday-fahrenheit.png",
+  "specification": "state-data/sol-v2-friday-fahrenheit.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Lisbon",
+    "Friday, 19 June",
+    "°C",
+    "°F",
+    "84°",
+    "Sunny",
+    "Sunset",
+    "20:59",
+    "Today",
+    "82°",
+    "Fri 19",
+    "84°",
+    "Sat 20",
+    "81°",
+    "Sun 21",
+    "79°",
+    "Updated 18:00"
+  ],
+  "path_base": "study folder"
+}

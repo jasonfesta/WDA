@@ -1,0 +1,752 @@
+{
+  "date": "2026-10-24",
+  "state_count": 93,
+  "study_count": 6,
+  "control_count": 41,
+  "states": [
+    {
+      "family": "sol",
+      "key": "sol-v2-default",
+      "title": "Weather card · default",
+      "png": "01-sol-weather/images/sol-v2-default.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-default.svg",
+      "data": "01-sol-weather/state-data/sol-v2-default.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-fahrenheit",
+      "title": "Today in Fahrenheit",
+      "png": "01-sol-weather/images/sol-v2-fahrenheit.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-fahrenheit.svg",
+      "data": "01-sol-weather/state-data/sol-v2-fahrenheit.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-friday",
+      "title": "Friday forecast",
+      "png": "01-sol-weather/images/sol-v2-friday.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-friday.svg",
+      "data": "01-sol-weather/state-data/sol-v2-friday.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-friday-fahrenheit",
+      "title": "Friday in Fahrenheit",
+      "png": "01-sol-weather/images/sol-v2-friday-fahrenheit.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-friday-fahrenheit.svg",
+      "data": "01-sol-weather/state-data/sol-v2-friday-fahrenheit.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-saturday",
+      "title": "Saturday forecast",
+      "png": "01-sol-weather/images/sol-v2-saturday.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-saturday.svg",
+      "data": "01-sol-weather/state-data/sol-v2-saturday.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-saturday-fahrenheit",
+      "title": "Saturday in Fahrenheit",
+      "png": "01-sol-weather/images/sol-v2-saturday-fahrenheit.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-saturday-fahrenheit.svg",
+      "data": "01-sol-weather/state-data/sol-v2-saturday-fahrenheit.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-sunday",
+      "title": "Sunday forecast",
+      "png": "01-sol-weather/images/sol-v2-sunday.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-sunday.svg",
+      "data": "01-sol-weather/state-data/sol-v2-sunday.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-sunday-fahrenheit",
+      "title": "Sunday in Fahrenheit",
+      "png": "01-sol-weather/images/sol-v2-sunday-fahrenheit.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-sunday-fahrenheit.svg",
+      "data": "01-sol-weather/state-data/sol-v2-sunday-fahrenheit.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-refreshing",
+      "title": "Refreshing cached forecast",
+      "png": "01-sol-weather/images/sol-v2-refreshing.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-refreshing.svg",
+      "data": "01-sol-weather/state-data/sol-v2-refreshing.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-refresh-error",
+      "title": "Refresh failed with cached data",
+      "png": "01-sol-weather/images/sol-v2-refresh-error.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-refresh-error.svg",
+      "data": "01-sol-weather/state-data/sol-v2-refresh-error.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-first-loading",
+      "title": "First forecast loading",
+      "png": "01-sol-weather/images/sol-v2-first-loading.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-first-loading.svg",
+      "data": "01-sol-weather/state-data/sol-v2-first-loading.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-first-error",
+      "title": "First forecast unavailable",
+      "png": "01-sol-weather/images/sol-v2-first-error.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-first-error.svg",
+      "data": "01-sol-weather/state-data/sol-v2-first-error.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-location-search",
+      "title": "Location search empty",
+      "png": "01-sol-weather/images/sol-v2-location-search.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-location-search.svg",
+      "data": "01-sol-weather/state-data/sol-v2-location-search.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-location-searching",
+      "title": "Searching locations",
+      "png": "01-sol-weather/images/sol-v2-location-searching.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-location-searching.svg",
+      "data": "01-sol-weather/state-data/sol-v2-location-searching.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-location-empty",
+      "title": "No locations found",
+      "png": "01-sol-weather/images/sol-v2-location-empty.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-location-empty.svg",
+      "data": "01-sol-weather/state-data/sol-v2-location-empty.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-location-results",
+      "title": "Location results",
+      "png": "01-sol-weather/images/sol-v2-location-results.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-location-results.svg",
+      "data": "01-sol-weather/state-data/sol-v2-location-results.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-location-loading",
+      "title": "New location loading",
+      "png": "01-sol-weather/images/sol-v2-location-loading.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-location-loading.svg",
+      "data": "01-sol-weather/state-data/sol-v2-location-loading.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-location-error",
+      "title": "New location failed",
+      "png": "01-sol-weather/images/sol-v2-location-error.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-location-error.svg",
+      "data": "01-sol-weather/state-data/sol-v2-location-error.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-porto",
+      "title": "Porto forecast committed",
+      "png": "01-sol-weather/images/sol-v2-porto.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-porto.svg",
+      "data": "01-sol-weather/state-data/sol-v2-porto.json"
+    },
+    {
+      "family": "sol",
+      "key": "sol-v2-focus",
+      "title": "Day focus without selection",
+      "png": "01-sol-weather/images/sol-v2-focus.png",
+      "svg": "01-sol-weather/editable-svg/sol-v2-focus.svg",
+      "data": "01-sol-weather/state-data/sol-v2-focus.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-default",
+      "title": "Team picker · default",
+      "png": "02-gather-team-picker/images/gather-v2-default.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-default.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-default.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-none",
+      "title": "No teammates selected",
+      "png": "02-gather-team-picker/images/gather-v2-none.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-none.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-none.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-one",
+      "title": "One teammate selected",
+      "png": "02-gather-team-picker/images/gather-v2-one.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-one.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-one.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-two",
+      "title": "Two teammates selected",
+      "png": "02-gather-team-picker/images/gather-v2-two.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-two.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-two.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-alternate-three",
+      "title": "Alternate three selected",
+      "png": "02-gather-team-picker/images/gather-v2-alternate-three.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-alternate-three.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-alternate-three.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-four",
+      "title": "All four selected",
+      "png": "02-gather-team-picker/images/gather-v2-four.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-four.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-four.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-closed-0",
+      "title": "Closed picker with 0 selected",
+      "png": "02-gather-team-picker/images/gather-v2-closed-0.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-closed-0.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-closed-0.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-closed-1",
+      "title": "Closed picker with 1 selected",
+      "png": "02-gather-team-picker/images/gather-v2-closed-1.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-closed-1.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-closed-1.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-closed-2",
+      "title": "Closed picker with 2 selected",
+      "png": "02-gather-team-picker/images/gather-v2-closed-2.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-closed-2.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-closed-2.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-closed-3",
+      "title": "Closed picker with 3 selected",
+      "png": "02-gather-team-picker/images/gather-v2-closed-3.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-closed-3.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-closed-3.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-closed-4",
+      "title": "Closed picker with 4 selected",
+      "png": "02-gather-team-picker/images/gather-v2-closed-4.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-closed-4.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-closed-4.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-saving",
+      "title": "Saving a selection",
+      "png": "02-gather-team-picker/images/gather-v2-saving.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-saving.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-saving.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-save-error",
+      "title": "Selection save failed",
+      "png": "02-gather-team-picker/images/gather-v2-save-error.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-save-error.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-save-error.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-focus",
+      "title": "Focus on unselected Eli",
+      "png": "02-gather-team-picker/images/gather-v2-focus.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-focus.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-focus.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-search-result",
+      "title": "Search filtered teammate",
+      "png": "02-gather-team-picker/images/gather-v2-search-result.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-search-result.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-search-result.json"
+    },
+    {
+      "family": "gather",
+      "key": "gather-v2-search-empty",
+      "title": "No teammates match",
+      "png": "02-gather-team-picker/images/gather-v2-search-empty.png",
+      "svg": "02-gather-team-picker/editable-svg/gather-v2-search-empty.svg",
+      "data": "02-gather-team-picker/state-data/gather-v2-search-empty.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-default",
+      "title": "Material picker · default",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-default.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-default.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-default.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-rose",
+      "title": "Rose selected",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-rose.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-rose.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-rose.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-citron",
+      "title": "Citron selected",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-citron.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-citron.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-citron.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-moss",
+      "title": "Moss selected",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-moss.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-moss.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-moss.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-burgundy",
+      "title": "Burgundy selected",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-burgundy.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-burgundy.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-burgundy.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-shuffled-clay",
+      "title": "Clay in shuffled set",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-shuffled-clay.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-shuffled-clay.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-shuffled-clay.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-shuffled-peel",
+      "title": "Peel in shuffled set",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-shuffled-peel.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-shuffled-peel.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-shuffled-peel.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-shuffled-brick",
+      "title": "Brick in shuffled set",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-shuffled-brick.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-shuffled-brick.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-shuffled-brick.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-shuffled-plum",
+      "title": "Plum in shuffled set",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-shuffled-plum.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-shuffled-plum.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-shuffled-plum.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-shuffled-ash",
+      "title": "Ash in shuffled set",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-shuffled-ash.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-shuffled-ash.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-shuffled-ash.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-undo-apricot",
+      "title": "Undo restores Apricot",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-undo-apricot.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-undo-apricot.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-undo-apricot.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-undo-moss",
+      "title": "Undo restores Moss",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-undo-moss.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-undo-moss.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-undo-moss.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-loading",
+      "title": "Palette loading",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-loading.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-loading.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-loading.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-error",
+      "title": "Palette load failed",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-error.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-error.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-error.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-copied",
+      "title": "Material value copied",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-copied.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-copied.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-copied.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-copy-error",
+      "title": "Copy unavailable",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-copy-error.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-copy-error.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-copy-error.json"
+    },
+    {
+      "family": "courtyard",
+      "key": "courtyard-v2-focus",
+      "title": "Focus on Shuffle",
+      "png": "03-courtyard-material-picker/images/courtyard-v2-focus.png",
+      "svg": "03-courtyard-material-picker/editable-svg/courtyard-v2-focus.svg",
+      "data": "03-courtyard-material-picker/state-data/courtyard-v2-focus.json"
+    },
+    {
+      "family": "roam",
+      "key": "roam-v2-default",
+      "title": "Plan selector · default",
+      "png": "04-roam-plan-selector/images/roam-v2-default.png",
+      "svg": "04-roam-plan-selector/editable-svg/roam-v2-default.svg",
+      "data": "04-roam-plan-selector/state-data/roam-v2-default.json"
+    },
+    {
+      "family": "roam",
+      "key": "roam-v2-weekender",
+      "title": "Weekender plan",
+      "png": "04-roam-plan-selector/images/roam-v2-weekender.png",
+      "svg": "04-roam-plan-selector/editable-svg/roam-v2-weekender.svg",
+      "data": "04-roam-plan-selector/state-data/roam-v2-weekender.json"
+    },
+    {
+      "family": "roam",
+      "key": "roam-v2-review-weekender",
+      "title": "Review Weekender",
+      "png": "04-roam-plan-selector/images/roam-v2-review-weekender.png",
+      "svg": "04-roam-plan-selector/editable-svg/roam-v2-review-weekender.svg",
+      "data": "04-roam-plan-selector/state-data/roam-v2-review-weekender.json"
+    },
+    {
+      "family": "roam",
+      "key": "roam-v2-confirmed-weekender",
+      "title": "Weekender confirmed",
+      "png": "04-roam-plan-selector/images/roam-v2-confirmed-weekender.png",
+      "svg": "04-roam-plan-selector/editable-svg/roam-v2-confirmed-weekender.svg",
+      "data": "04-roam-plan-selector/state-data/roam-v2-confirmed-weekender.json"
+    },
+    {
+      "family": "roam",
+      "key": "roam-v2-review-everyday",
+      "title": "Review Everyday",
+      "png": "04-roam-plan-selector/images/roam-v2-review-everyday.png",
+      "svg": "04-roam-plan-selector/editable-svg/roam-v2-review-everyday.svg",
+      "data": "04-roam-plan-selector/state-data/roam-v2-review-everyday.json"
+    },
+    {
+      "family": "roam",
+      "key": "roam-v2-confirmed-everyday",
+      "title": "Everyday confirmed",
+      "png": "04-roam-plan-selector/images/roam-v2-confirmed-everyday.png",
+      "svg": "04-roam-plan-selector/editable-svg/roam-v2-confirmed-everyday.svg",
+      "data": "04-roam-plan-selector/state-data/roam-v2-confirmed-everyday.json"
+    },
+    {
+      "family": "roam",
+      "key": "roam-v2-worldwide",
+      "title": "Worldwide plan",
+      "png": "04-roam-plan-selector/images/roam-v2-worldwide.png",
+      "svg": "04-roam-plan-selector/editable-svg/roam-v2-worldwide.svg",
+      "data": "04-roam-plan-selector/state-data/roam-v2-worldwide.json"
+    },
+    {
+      "family": "roam",
+      "key": "roam-v2-review-worldwide",
+      "title": "Review Worldwide",
+      "png": "04-roam-plan-selector/images/roam-v2-review-worldwide.png",
+      "svg": "04-roam-plan-selector/editable-svg/roam-v2-review-worldwide.svg",
+      "data": "04-roam-plan-selector/state-data/roam-v2-review-worldwide.json"
+    },
+    {
+      "family": "roam",
+      "key": "roam-v2-confirmed-worldwide",
+      "title": "Worldwide confirmed",
+      "png": "04-roam-plan-selector/images/roam-v2-confirmed-worldwide.png",
+      "svg": "04-roam-plan-selector/editable-svg/roam-v2-confirmed-worldwide.svg",
+      "data": "04-roam-plan-selector/state-data/roam-v2-confirmed-worldwide.json"
+    },
+    {
+      "family": "roam",
+      "key": "roam-v2-checkout-pending",
+      "title": "Checkout pending",
+      "png": "04-roam-plan-selector/images/roam-v2-checkout-pending.png",
+      "svg": "04-roam-plan-selector/editable-svg/roam-v2-checkout-pending.svg",
+      "data": "04-roam-plan-selector/state-data/roam-v2-checkout-pending.json"
+    },
+    {
+      "family": "roam",
+      "key": "roam-v2-checkout-error",
+      "title": "Checkout failed",
+      "png": "04-roam-plan-selector/images/roam-v2-checkout-error.png",
+      "svg": "04-roam-plan-selector/editable-svg/roam-v2-checkout-error.svg",
+      "data": "04-roam-plan-selector/state-data/roam-v2-checkout-error.json"
+    },
+    {
+      "family": "roam",
+      "key": "roam-v2-cancelled",
+      "title": "Checkout cancelled",
+      "png": "04-roam-plan-selector/images/roam-v2-cancelled.png",
+      "svg": "04-roam-plan-selector/editable-svg/roam-v2-cancelled.svg",
+      "data": "04-roam-plan-selector/state-data/roam-v2-cancelled.json"
+    },
+    {
+      "family": "roam",
+      "key": "roam-v2-account-sign-in",
+      "title": "Sign in to manage membership",
+      "png": "04-roam-plan-selector/images/roam-v2-account-sign-in.png",
+      "svg": "04-roam-plan-selector/editable-svg/roam-v2-account-sign-in.svg",
+      "data": "04-roam-plan-selector/state-data/roam-v2-account-sign-in.json"
+    },
+    {
+      "family": "roam",
+      "key": "roam-v2-account-error",
+      "title": "Membership unavailable",
+      "png": "04-roam-plan-selector/images/roam-v2-account-error.png",
+      "svg": "04-roam-plan-selector/editable-svg/roam-v2-account-error.svg",
+      "data": "04-roam-plan-selector/state-data/roam-v2-account-error.json"
+    },
+    {
+      "family": "roam",
+      "key": "roam-v2-focus",
+      "title": "Plan keyboard focus",
+      "png": "04-roam-plan-selector/images/roam-v2-focus.png",
+      "svg": "04-roam-plan-selector/editable-svg/roam-v2-focus.svg",
+      "data": "04-roam-plan-selector/state-data/roam-v2-focus.json"
+    },
+    {
+      "family": "kiln",
+      "key": "kiln-v2-default",
+      "title": "Usage & limits · default",
+      "png": "05-kiln-usage-and-limits/images/kiln-v2-default.png",
+      "svg": "05-kiln-usage-and-limits/editable-svg/kiln-v2-default.svg",
+      "data": "05-kiln-usage-and-limits/state-data/kiln-v2-default.json"
+    },
+    {
+      "family": "kiln",
+      "key": "kiln-v2-previous",
+      "title": "Previous billing cycle",
+      "png": "05-kiln-usage-and-limits/images/kiln-v2-previous.png",
+      "svg": "05-kiln-usage-and-limits/editable-svg/kiln-v2-previous.svg",
+      "data": "05-kiln-usage-and-limits/state-data/kiln-v2-previous.json"
+    },
+    {
+      "family": "kiln",
+      "key": "kiln-v2-week",
+      "title": "This week usage",
+      "png": "05-kiln-usage-and-limits/images/kiln-v2-week.png",
+      "svg": "05-kiln-usage-and-limits/editable-svg/kiln-v2-week.svg",
+      "data": "05-kiln-usage-and-limits/state-data/kiln-v2-week.json"
+    },
+    {
+      "family": "kiln",
+      "key": "kiln-v2-detail-render",
+      "title": "Render usage detail",
+      "png": "05-kiln-usage-and-limits/images/kiln-v2-detail-render.png",
+      "svg": "05-kiln-usage-and-limits/editable-svg/kiln-v2-detail-render.svg",
+      "data": "05-kiln-usage-and-limits/state-data/kiln-v2-detail-render.json"
+    },
+    {
+      "family": "kiln",
+      "key": "kiln-v2-detail-explore",
+      "title": "Explore usage detail",
+      "png": "05-kiln-usage-and-limits/images/kiln-v2-detail-explore.png",
+      "svg": "05-kiln-usage-and-limits/editable-svg/kiln-v2-detail-explore.svg",
+      "data": "05-kiln-usage-and-limits/state-data/kiln-v2-detail-explore.json"
+    },
+    {
+      "family": "kiln",
+      "key": "kiln-v2-detail-compose",
+      "title": "Compose usage detail",
+      "png": "05-kiln-usage-and-limits/images/kiln-v2-detail-compose.png",
+      "svg": "05-kiln-usage-and-limits/editable-svg/kiln-v2-detail-compose.svg",
+      "data": "05-kiln-usage-and-limits/state-data/kiln-v2-detail-compose.json"
+    },
+    {
+      "family": "kiln",
+      "key": "kiln-v2-detail-export",
+      "title": "Export usage detail",
+      "png": "05-kiln-usage-and-limits/images/kiln-v2-detail-export.png",
+      "svg": "05-kiln-usage-and-limits/editable-svg/kiln-v2-detail-export.svg",
+      "data": "05-kiln-usage-and-limits/state-data/kiln-v2-detail-export.json"
+    },
+    {
+      "family": "kiln",
+      "key": "kiln-v2-loading",
+      "title": "Usage range loading",
+      "png": "05-kiln-usage-and-limits/images/kiln-v2-loading.png",
+      "svg": "05-kiln-usage-and-limits/editable-svg/kiln-v2-loading.svg",
+      "data": "05-kiln-usage-and-limits/state-data/kiln-v2-loading.json"
+    },
+    {
+      "family": "kiln",
+      "key": "kiln-v2-error",
+      "title": "Usage range failed",
+      "png": "05-kiln-usage-and-limits/images/kiln-v2-error.png",
+      "svg": "05-kiln-usage-and-limits/editable-svg/kiln-v2-error.svg",
+      "data": "05-kiln-usage-and-limits/state-data/kiln-v2-error.json"
+    },
+    {
+      "family": "kiln",
+      "key": "kiln-v2-missing",
+      "title": "Usage data unavailable",
+      "png": "05-kiln-usage-and-limits/images/kiln-v2-missing.png",
+      "svg": "05-kiln-usage-and-limits/editable-svg/kiln-v2-missing.svg",
+      "data": "05-kiln-usage-and-limits/state-data/kiln-v2-missing.json"
+    },
+    {
+      "family": "kiln",
+      "key": "kiln-v2-zero",
+      "title": "Verified zero usage",
+      "png": "05-kiln-usage-and-limits/images/kiln-v2-zero.png",
+      "svg": "05-kiln-usage-and-limits/editable-svg/kiln-v2-zero.svg",
+      "data": "05-kiln-usage-and-limits/state-data/kiln-v2-zero.json"
+    },
+    {
+      "family": "kiln",
+      "key": "kiln-v2-near-limit",
+      "title": "Near capacity",
+      "png": "05-kiln-usage-and-limits/images/kiln-v2-near-limit.png",
+      "svg": "05-kiln-usage-and-limits/editable-svg/kiln-v2-near-limit.svg",
+      "data": "05-kiln-usage-and-limits/state-data/kiln-v2-near-limit.json"
+    },
+    {
+      "family": "kiln",
+      "key": "kiln-v2-manage",
+      "title": "Plan management",
+      "png": "05-kiln-usage-and-limits/images/kiln-v2-manage.png",
+      "svg": "05-kiln-usage-and-limits/editable-svg/kiln-v2-manage.svg",
+      "data": "05-kiln-usage-and-limits/state-data/kiln-v2-manage.json"
+    },
+    {
+      "family": "kiln",
+      "key": "kiln-v2-plans-loading",
+      "title": "Loading plan details",
+      "png": "05-kiln-usage-and-limits/images/kiln-v2-plans-loading.png",
+      "svg": "05-kiln-usage-and-limits/editable-svg/kiln-v2-plans-loading.svg",
+      "data": "05-kiln-usage-and-limits/state-data/kiln-v2-plans-loading.json"
+    },
+    {
+      "family": "kiln",
+      "key": "kiln-v2-plans-error",
+      "title": "Plan details unavailable",
+      "png": "05-kiln-usage-and-limits/images/kiln-v2-plans-error.png",
+      "svg": "05-kiln-usage-and-limits/editable-svg/kiln-v2-plans-error.svg",
+      "data": "05-kiln-usage-and-limits/state-data/kiln-v2-plans-error.json"
+    },
+    {
+      "family": "folio",
+      "key": "folio-v2-default",
+      "title": "Navigation dock · default",
+      "png": "06-folio-navigation/images/folio-v2-default.png",
+      "svg": "06-folio-navigation/editable-svg/folio-v2-default.svg",
+      "data": "06-folio-navigation/state-data/folio-v2-default.json"
+    },
+    {
+      "family": "folio",
+      "key": "folio-v2-explore",
+      "title": "Explore current",
+      "png": "06-folio-navigation/images/folio-v2-explore.png",
+      "svg": "06-folio-navigation/editable-svg/folio-v2-explore.svg",
+      "data": "06-folio-navigation/state-data/folio-v2-explore.json"
+    },
+    {
+      "family": "folio",
+      "key": "folio-v2-saved",
+      "title": "Saved current",
+      "png": "06-folio-navigation/images/folio-v2-saved.png",
+      "svg": "06-folio-navigation/editable-svg/folio-v2-saved.svg",
+      "data": "06-folio-navigation/state-data/folio-v2-saved.json"
+    },
+    {
+      "family": "folio",
+      "key": "folio-v2-profile",
+      "title": "Profile current",
+      "png": "06-folio-navigation/images/folio-v2-profile.png",
+      "svg": "06-folio-navigation/editable-svg/folio-v2-profile.svg",
+      "data": "06-folio-navigation/state-data/folio-v2-profile.json"
+    },
+    {
+      "family": "folio",
+      "key": "folio-v2-focus",
+      "title": "Keyboard focus on Saved",
+      "png": "06-folio-navigation/images/folio-v2-focus.png",
+      "svg": "06-folio-navigation/editable-svg/folio-v2-focus.svg",
+      "data": "06-folio-navigation/state-data/folio-v2-focus.json"
+    },
+    {
+      "family": "folio",
+      "key": "folio-v2-hover",
+      "title": "Explore hover",
+      "png": "06-folio-navigation/images/folio-v2-hover.png",
+      "svg": "06-folio-navigation/editable-svg/folio-v2-hover.svg",
+      "data": "06-folio-navigation/state-data/folio-v2-hover.json"
+    },
+    {
+      "family": "folio",
+      "key": "folio-v2-pending",
+      "title": "Explore route loading",
+      "png": "06-folio-navigation/images/folio-v2-pending.png",
+      "svg": "06-folio-navigation/editable-svg/folio-v2-pending.svg",
+      "data": "06-folio-navigation/state-data/folio-v2-pending.json"
+    },
+    {
+      "family": "folio",
+      "key": "folio-v2-error",
+      "title": "Explore route failed",
+      "png": "06-folio-navigation/images/folio-v2-error.png",
+      "svg": "06-folio-navigation/editable-svg/folio-v2-error.svg",
+      "data": "06-folio-navigation/state-data/folio-v2-error.json"
+    },
+    {
+      "family": "folio",
+      "key": "folio-v2-saved-empty",
+      "title": "Saved has no items",
+      "png": "06-folio-navigation/images/folio-v2-saved-empty.png",
+      "svg": "06-folio-navigation/editable-svg/folio-v2-saved-empty.svg",
+      "data": "06-folio-navigation/state-data/folio-v2-saved-empty.json"
+    },
+    {
+      "family": "folio",
+      "key": "folio-v2-profile-signed-out",
+      "title": "Profile signed out",
+      "png": "06-folio-navigation/images/folio-v2-profile-signed-out.png",
+      "svg": "06-folio-navigation/editable-svg/folio-v2-profile-signed-out.svg",
+      "data": "06-folio-navigation/state-data/folio-v2-profile-signed-out.json"
+    }
+  ]
+}

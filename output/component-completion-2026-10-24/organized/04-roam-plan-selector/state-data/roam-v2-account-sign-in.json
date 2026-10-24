@@ -1,0 +1,34 @@
+{
+  "key": "roam-v2-account-sign-in",
+  "family": "roam",
+  "title": "Sign in to manage membership",
+  "id": "account-sign-in",
+  "plan": {
+    "name": "Everyday",
+    "price": 24,
+    "gb": 20,
+    "devices": 3
+  },
+  "selected_plan": "everyday",
+  "fixture_only": true,
+  "width": 400,
+  "height": 544,
+  "svg": "editable-svg/roam-v2-account-sign-in.svg",
+  "png": "images/roam-v2-account-sign-in.png",
+  "specification": "state-data/roam-v2-account-sign-in.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Choose your plan",
+    "roam",
+    "Monthly roaming data, wherever you work.",
+    "Weekender",
+    "Everyday",
+    "Worldwide",
+    "Sign in to manage",
+    "your membership",
+    "Return to your membership after sign-in.",
+    "Sign in",
+    "Back"
+  ],
+  "path_base": "study folder"
+}

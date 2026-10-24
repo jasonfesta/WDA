@@ -1,0 +1,371 @@
+# Gather · Team picker — full interaction specification
+
+24 October 2026 · Version 3.2 · 6 control groups · 16 rendered states
+
+[Readable guide](INTERACTIONS.html) · [Visual review](README.md) · [Structured specification](interactions.json)
+
+Immediate project-team selection with searchable people and recoverable persistence.
+
+These are detailed implementation requirements for the six static studies. All 93 planned PNG/SVG states are mapped below. Generic hover/press combinations, every data permutation and additional host-only failure branches are specified in text rather than claimed as extra rendered images. No production behavior is implemented by this document.
+
+## Initial fixture
+
+Lena Ortiz (LO, Design lead), Noah Bell (NB, Product designer), Amara Chen (AC, Engineer) selected; Eli Brooks (EB, Photographer) unselected. Open default shows three selected.
+
+## Every control
+
+### Project team trigger
+
+Control ID: `gather.trigger`
+
+- **Semantics:** Button with count in accessible name and expanded state
+- **Click / tap:** Toggle the nonmodal team popover.
+- **Hover:** Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.
+- **Press / touch:** Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.
+- **Keyboard:** Button contract; Escape closes.
+- **Pending / disabled:** Always available; closing never discards selection or interrupts persistence.
+- **Result:** Open search receives focus; close renders the selected avatars/count in the trigger only.
+- **Return / dismiss:** Escape restores trigger focus; outside click preserves the outside target’s focus.
+- **Announcement:** The accessible name and state expose the result; do not duplicate it with a toast.
+
+### Find a teammate
+
+Control ID: `gather.search`
+
+- **Semantics:** Labelled search input; filtered checkbox group below
+- **Click / tap:** Filter by name or role, case-insensitive; preserve all hidden selected IDs.
+- **Hover:** Input border changes only; no selection change on hover.
+- **Press / touch:** Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.
+- **Keyboard:** Native input editing; Tab goes to the first visible checkbox.
+- **Pending / disabled:** Search stays available while saving or after a save failure.
+- **Result:** Empty query shows all four; Eli shows Eli; Zoe shows no matches.
+- **Return / dismiss:** Clearing restores all rows without touching selection. Closing clears only query.
+- **Announcement:** Announce the filtered result count after a short typing pause.
+
+### Lena / Noah / Amara / Eli rows
+
+Control ID: `gather.person`
+
+- **Semantics:** Independent labelled checkboxes; role text is a description
+- **Click / tap:** Toggle exactly the clicked person; row and checkbox share one action handler.
+- **Hover:** Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.
+- **Press / touch:** Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.
+- **Keyboard:** Tab visits each visible checkbox; Space toggles. Enter is not required for native checkboxes.
+- **Pending / disabled:** Available while saving and queued by revision. After failure, a new toggle supersedes the failed attempt and starts a new save.
+- **Result:** Update avatars, badge and footer atomically; start or queue save.
+- **Return / dismiss:** Toggling again reverses that person and saves the new set.
+- **Announcement:** Announce checked state through the checkbox; save feedback uses one live status region.
+
+### Clear
+
+Control ID: `gather.clear`
+
+- **Semantics:** Button
+- **Click / tap:** Set selectedIds to empty and save that set. Applies to all people, including hidden results.
+- **Hover:** Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.
+- **Press / touch:** Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.
+- **Keyboard:** Button contract.
+- **Pending / disabled:** Disabled at zero or while saving. After a save error, Clear starts a new empty-set save and replaces the old attempt.
+- **Result:** All checks clear; no avatars; count 0; Saving then Selection saved.
+- **Return / dismiss:** Reselect people individually; no generic Undo is shown.
+- **Announcement:** The accessible name and state expose the result; do not duplicate it with a toast.
+
+### Save Retry
+
+Control ID: `gather.retry`
+
+- **Semantics:** Button
+- **Click / tap:** Resubmit the attempted selected-ID set.
+- **Hover:** Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.
+- **Press / touch:** Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.
+- **Keyboard:** Button contract.
+- **Pending / disabled:** Suppressed during the retry; no duplicate write.
+- **Result:** Saving then Selection saved, or retain the error and attempted selection.
+- **Return / dismiss:** Revert remains the alternative when retry is no longer pending.
+- **Announcement:** Announce Saving selection and its outcome once.
+
+### Revert
+
+Control ID: `gather.revert`
+
+- **Semantics:** Button
+- **Click / tap:** Restore the last acknowledged saved-ID set, clear the error and do not issue a write.
+- **Hover:** Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.
+- **Press / touch:** Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.
+- **Keyboard:** Button contract.
+- **Pending / disabled:** Available only after a failed save and when no request is pending.
+- **Result:** Example: attempted 4 returns to saved 3 (LO/NB/AC).
+- **Return / dismiss:** Return focus to the first selected visible checkbox, or search if filtering hides all selected rows.
+- **Announcement:** Announce Previous selection restored.
+
+## State transitions
+
+### Team picker · default
+
+`gather-v2-default` · [View state](images/gather-v2-default.png) · [Data](state-data/gather-v2-default.json)
+
+- **Entry:** Load or successfully save the illustrated selected-ID set.
+- **Exit / return:** Toggle a person → saving; Clear → saving/none; close → matching closed count and identities.
+- **Focus:** Keep the triggering row or Clear focus; do not move to the count.
+- **Data / guard:** Selected LO, NB, AC; count 3; Selection saved.
+
+### No teammates selected
+
+`gather-v2-none` · [View state](images/gather-v2-none.png) · [Data](state-data/gather-v2-none.json)
+
+- **Entry:** Load or successfully save the illustrated selected-ID set.
+- **Exit / return:** Toggle a person → saving; Clear → saving/none; close → matching closed count and identities.
+- **Focus:** Keep the triggering row or Clear focus; do not move to the count.
+- **Data / guard:** Selected none; count 0; Selection saved.
+
+### One teammate selected
+
+`gather-v2-one` · [View state](images/gather-v2-one.png) · [Data](state-data/gather-v2-one.json)
+
+- **Entry:** Load or successfully save the illustrated selected-ID set.
+- **Exit / return:** Toggle a person → saving; Clear → saving/none; close → matching closed count and identities.
+- **Focus:** Keep the triggering row or Clear focus; do not move to the count.
+- **Data / guard:** Selected LO; count 1; Selection saved.
+
+### Two teammates selected
+
+`gather-v2-two` · [View state](images/gather-v2-two.png) · [Data](state-data/gather-v2-two.json)
+
+- **Entry:** Load or successfully save the illustrated selected-ID set.
+- **Exit / return:** Toggle a person → saving; Clear → saving/none; close → matching closed count and identities.
+- **Focus:** Keep the triggering row or Clear focus; do not move to the count.
+- **Data / guard:** Selected NB, EB; count 2; Selection saved.
+
+### Alternate three selected
+
+`gather-v2-alternate-three` · [View state](images/gather-v2-alternate-three.png) · [Data](state-data/gather-v2-alternate-three.json)
+
+- **Entry:** Load or successfully save the illustrated selected-ID set.
+- **Exit / return:** Toggle a person → saving; Clear → saving/none; close → matching closed count and identities.
+- **Focus:** Keep the triggering row or Clear focus; do not move to the count.
+- **Data / guard:** Selected LO, AC, EB; count 3; Selection saved.
+
+### All four selected
+
+`gather-v2-four` · [View state](images/gather-v2-four.png) · [Data](state-data/gather-v2-four.json)
+
+- **Entry:** Load or successfully save the illustrated selected-ID set.
+- **Exit / return:** Toggle a person → saving; Clear → saving/none; close → matching closed count and identities.
+- **Focus:** Keep the triggering row or Clear focus; do not move to the count.
+- **Data / guard:** Selected LO, NB, AC, EB; count 4; Selection saved.
+
+### Closed picker with 0 selected
+
+`gather-v2-closed-0` · [View state](images/gather-v2-closed-0.png) · [Data](state-data/gather-v2-closed-0.json)
+
+- **Entry:** Close the picker after selection or restore this saved set.
+- **Exit / return:** Activate trigger → open the same selection; do not replace it with the default three.
+- **Focus:** Trigger; outside-click dismissal may leave focus on the outside target.
+- **Data / guard:** Count 0; trigger avatars none.
+
+### Closed picker with 1 selected
+
+`gather-v2-closed-1` · [View state](images/gather-v2-closed-1.png) · [Data](state-data/gather-v2-closed-1.json)
+
+- **Entry:** Close the picker after selection or restore this saved set.
+- **Exit / return:** Activate trigger → open the same selection; do not replace it with the default three.
+- **Focus:** Trigger; outside-click dismissal may leave focus on the outside target.
+- **Data / guard:** Count 1; trigger avatars LO.
+
+### Closed picker with 2 selected
+
+`gather-v2-closed-2` · [View state](images/gather-v2-closed-2.png) · [Data](state-data/gather-v2-closed-2.json)
+
+- **Entry:** Close the picker after selection or restore this saved set.
+- **Exit / return:** Activate trigger → open the same selection; do not replace it with the default three.
+- **Focus:** Trigger; outside-click dismissal may leave focus on the outside target.
+- **Data / guard:** Count 2; trigger avatars NB, EB.
+
+### Closed picker with 3 selected
+
+`gather-v2-closed-3` · [View state](images/gather-v2-closed-3.png) · [Data](state-data/gather-v2-closed-3.json)
+
+- **Entry:** Close the picker after selection or restore this saved set.
+- **Exit / return:** Activate trigger → open the same selection; do not replace it with the default three.
+- **Focus:** Trigger; outside-click dismissal may leave focus on the outside target.
+- **Data / guard:** Count 3; trigger avatars LO, NB, AC.
+
+### Closed picker with 4 selected
+
+`gather-v2-closed-4` · [View state](images/gather-v2-closed-4.png) · [Data](state-data/gather-v2-closed-4.json)
+
+- **Entry:** Close the picker after selection or restore this saved set.
+- **Exit / return:** Activate trigger → open the same selection; do not replace it with the default three.
+- **Focus:** Trigger; outside-click dismissal may leave focus on the outside target.
+- **Data / guard:** Count 4; trigger avatars LO, NB, AC, EB.
+
+### Saving a selection
+
+`gather-v2-saving` · [View state](images/gather-v2-saving.png) · [Data](state-data/gather-v2-saving.json)
+
+- **Entry:** Toggle Eli on from the saved three; write is pending.
+- **Exit / return:** saving → acknowledged four or save-error; save-error → Retry/saving or Revert/default.
+- **Focus:** Keep row focus during save. Revert focuses a visible selected row, or search.
+- **Data / guard:** Attempted LO, NB, AC, EB; saved set remains LO/NB/AC until acknowledged.
+
+### Selection save failed
+
+`gather-v2-save-error` · [View state](images/gather-v2-save-error.png) · [Data](state-data/gather-v2-save-error.json)
+
+- **Entry:** Toggle Eli on from the saved three; write fails.
+- **Exit / return:** saving → acknowledged four or save-error; save-error → Retry/saving or Revert/default.
+- **Focus:** Keep row focus during save. Revert focuses a visible selected row, or search.
+- **Data / guard:** Attempted LO, NB, AC, EB; saved set remains LO/NB/AC until acknowledged.
+
+### Focus on unselected Eli
+
+`gather-v2-focus` · [View state](images/gather-v2-focus.png) · [Data](state-data/gather-v2-focus.json)
+
+- **Entry:** Tab to unchecked Eli.
+- **Exit / return:** Space toggles Eli → saving/four; Tab or Shift+Tab moves without selection.
+- **Focus:** Eli checkbox with visible focus.
+- **Data / guard:** LO/NB/AC remain selected until Space or pointer activation.
+
+### Search filtered teammate
+
+`gather-v2-search-result` · [View state](images/gather-v2-search-result.png) · [Data](state-data/gather-v2-search-result.json)
+
+- **Entry:** Type Eli into search.
+- **Exit / return:** Edit/clear query to change visible rows; close preserves selection; selecting Eli in result starts saving four.
+- **Focus:** Search input; Tab moves into available result checkboxes.
+- **Data / guard:** Hidden selection remains LO/NB/AC and count 3; no-match text is not an action.
+
+### No teammates match
+
+`gather-v2-search-empty` · [View state](images/gather-v2-search-empty.png) · [Data](state-data/gather-v2-search-empty.json)
+
+- **Entry:** Type Zoe into search.
+- **Exit / return:** Edit/clear query to change visible rows; close preserves selection; selecting Eli in result starts saving four.
+- **Focus:** Search input; Tab moves into available result checkboxes.
+- **Data / guard:** Hidden selection remains LO/NB/AC and count 3; no-match text is not an action.
+
+## Read-only content
+
+Avatars and count are part of the trigger, not separate buttons. Name and role belong to one checkbox row. Saved/status text is read-only; there is no avatar drag, reorder, invite or role-edit action.
+
+## State model
+
+- people: stable IDs, full names, roles and initials
+- selectedIds: optimistic selection; savedIds: last acknowledged selection
+- open, query, focusTarget
+- saveStatus: idle, saving, reconciling or error; saveRevision: monotonically increasing version
+
+## Persistence
+
+- The selected-ID set drives the trigger avatars, badge, row checks and footer. Use directory order Lena/Noah/Amara/Eli, not click order.
+- Closing preserves selectedIds and any pending/error state. Reopening clears the search query and shows the current selection.
+- savedIds changes only after an acknowledged write. Revert restores savedIds without sending a new save. No Done button, invitation action or permission editor is part of this component.
+
+Stable IDs, not visible labels, identify people, materials, cities, plans and routes. Async callbacks carry a request/version ID and cannot apply after cancellation, replacement or unmount. Server acknowledgements govern persistence and purchases. The per-state JSON fixtures are example inputs, not a backend schema.
+
+## Async and edge cases
+
+- Each checkbox change updates optimistic state immediately. Allow further toggles while saving; serialize writes and coalesce queued changes to the newest set. A stale response cannot replace a newer selection.
+- Disable Clear during a write; checkbox changes may queue. Show Saving until the newest selection is acknowledged.
+- On failure stop automatic retries and keep the attempted set. Retry resends it; Revert restores savedIds. A new checkbox change or Clear supersedes the failed attempt, clears its error and starts a save of the new set. Search and dismissal remain available.
+- Close does not cancel an in-flight save. If closed when a save fails, the host announces failure and reopening shows Retry/Revert; a closed-error badge is not separately rendered in the study.
+
+## Keyboard, pointer and feedback contracts
+
+### Buttons
+
+Use a semantic button. Enter or Space activates once; suppress duplicate pending actions. Focus is visible immediately. Keep a pending focused control in the tab order with aria-disabled when disabling it would lose focus; the handler must also prevent activation.
+
+### Manual tabs
+
+Tab enters at the selected tab. Left/Right and Home/End move focus without activation; Enter/Space commits. Arrow navigation wraps. The active tab and associated panel are labelled together; focus and selection are separate.
+
+### Radios
+
+Tab enters at the checked radio. Arrow keys move and select; Space checks the focused item. Only one option is checked. Use native radios where possible. Unit and material controls use this pattern; plan/day/period controls use manual tabs.
+
+### Combobox
+
+Keep text-editing focus in the input; Up/Down changes the active suggestion and Enter chooses it. Expose expanded state, controlled list and active option. Typed arbitrary text never becomes a committed city. Escape closes the location panel.
+
+### Modal dialogs
+
+Give the modal a heading and accessible name. On entry focus that heading when context needs reading; keep Tab/Shift+Tab inside. Background is inert. Escape, close or explicit Back dismisses and restores the recorded trigger. Backdrop clicks do not dismiss in this study.
+
+### Nonmodal panels
+
+Sol search and Gather picker do not trap focus. Escape and explicit dismissal return to the trigger. Pointer outside closes and allows the clicked target to receive focus. Keyboard focus leaving the panel closes it after the move, without redirecting focus.
+
+### Links
+
+Use real hrefs. Enter follows; modifier clicks and browser history retain native behavior. Do not make navigation links into radio controls. Use aria-current only for the committed route.
+
+### Hover
+
+120 ms background/colour transition. Use neutral tint for unselected items; selected fill stays distinct. Do not reveal essential information only on hover.
+
+### Press
+
+Apply immediate darker surface while held; return within 90 ms on release. No scale, bounce or layout displacement. Pointer cancellation does not activate.
+
+### Focus
+
+2 px burgundy outline with 2 px offset, not a duplicate selected fill. Never remove focus styles. Keep logical DOM order; no positive tabindex.
+
+### Loading
+
+Show progress immediately and preserve known data. A spinner may rotate at a steady 800 ms cycle; it is decorative and not the only loading indicator. No minimum artificial wait or fabricated progress percentage.
+
+### Overlays
+
+Open with a 120 ms opacity transition; close in 90 ms. Focus behavior runs immediately, independent of animation completion. No spring or perspective transforms.
+
+### Reduced motion
+
+Disable decorative rotation and overlay/colour interpolation; show the final state immediately. Text status and visible focus remain.
+
+### Errors and announcements
+
+Use one polite live region for async status. Keep an actionable error until retry, dismissal or a successful superseding action. Do not move focus merely to announce it. A disappearing focused recovery control returns to its stable trigger.
+
+### Touch and targets
+
+Target at least 44 × 44 CSS px where space permits, even when the icon is smaller; keep target areas from overlapping. Tap duplicates pointer activation, never hover. Keep browser zoom and text selection enabled.
+
+## Responsive layout
+
+- Native open study: 400 × 484; closed trigger: 400 × 58. Preserve trigger width when count changes.
+- Popover stays within viewport; long lists scroll inside a bounded region while search and footer remain visible.
+- The whole person row toggles one native checkbox. Initial avatars are decorative because the adjacent name supplies identity.
+
+These are implementation requirements; additional responsive component exports are not included.
+
+## Acceptance checks for future implementation
+
+- Search Eli while three other people are selected: only Eli appears, unchecked, while the trigger and footer remain 3.
+- Select Noah and Eli: exactly NB and EB appear in the trigger, count 2; closed state keeps the same identity.
+- Fail saving four people, then Revert: restore LO/NB/AC and count 3.
+- Toggle rapidly during save: only the newest acknowledged set becomes savedIds; older responses cannot roll it back.
+
+## Primary references
+
+Checked 24 October 2026. Timings and product behavior are study-specific decisions.
+
+- [WAI-ARIA APG: Tabs](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)
+- [WAI-ARIA APG: Radio group](https://www.w3.org/WAI/ARIA/apg/patterns/radio/)
+- [WAI-ARIA APG: Combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/)
+- [WAI-ARIA APG: Modal dialog](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
+
+## Final audit clarifications
+
+These rules clarify exceptional transitions without adding rendered image states. They take precedence where the earlier general rule needs a narrower condition.
+
+- Each selection write needs a stable operation ID plus monotonically increasing revision. Retry of the same attempted set reuses that operation ID. The host must reject obsolete revisions; merely ignoring an old client callback is insufficient to protect saved data.
+
+- A definite rejected write enters the illustrated save-error state. A timeout or lost acknowledgement first reconciles the operation status: retain the attempted selection and show “Checking saved selection…”. Revert is unavailable while the outcome is unknown. A confirmed success updates savedIds; a confirmed rejection enables Retry/Revert. If status cannot be resolved, retain the attempted set, explain “Couldn’t confirm your saved selection”, and let Retry check the same operation again. Revert never silently overwrites a potentially committed server change. This reconciliation branch is documented without a separate PNG.
+
+- While reconciliation runs, search and dismissal remain available; newer checkbox changes queue behind it. Closing does not cancel a write or status reconciliation. If Revert is offered after a definite rejection, it restores the last acknowledged set without another write, as specified above.
+
+- The study receives an already resolved people directory from its host. Host directory loading, authentication and directory-fetch failure are outside this picker. For a valid empty directory with no selected IDs, reuse the empty-results region with “No teammates available”; count is 0, search and Clear are disabled, and no save starts. If selected IDs cannot be resolved, retain them in the data model and ask the host to resolve the directory; never silently discard members or invent names. No separate empty-directory image is included.
+
+[Rebuild reference](../REBUILD.md) · [Coverage and audit](../AUDIT.md)

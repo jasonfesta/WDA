@@ -1,0 +1,36 @@
+{
+  "key": "roam-v2-confirmed-worldwide",
+  "family": "roam",
+  "title": "Worldwide confirmed",
+  "id": "confirmed-worldwide",
+  "plan": {
+    "name": "Worldwide",
+    "price": 48,
+    "gb": 50,
+    "devices": 5
+  },
+  "selected_plan": "worldwide",
+  "fixture_only": true,
+  "width": 400,
+  "height": 544,
+  "svg": "editable-svg/roam-v2-confirmed-worldwide.svg",
+  "png": "images/roam-v2-confirmed-worldwide.png",
+  "specification": "state-data/roam-v2-confirmed-worldwide.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Choose your plan",
+    "roam",
+    "Monthly roaming data, wherever you work.",
+    "Weekender",
+    "Everyday",
+    "Worldwide",
+    "Plan activated",
+    "Worldwide",
+    "$48 / month",
+    "50 GB of roaming data",
+    "Billed monthly",
+    "Manage membership",
+    "Back to plans"
+  ],
+  "path_base": "study folder"
+}

@@ -1,0 +1,422 @@
+{
+  "version": "3.2",
+  "date": "2026-10-24",
+  "shared": {
+    "scope": "These are detailed implementation requirements for the six static studies. All 93 planned PNG/SVG states are mapped below. Generic hover/press combinations, every data permutation and additional host-only failure branches are specified in text rather than claimed as extra rendered images. No production behavior is implemented by this document.",
+    "contracts": [
+      [
+        "Buttons",
+        "Use a semantic button. Enter or Space activates once; suppress duplicate pending actions. Focus is visible immediately. Keep a pending focused control in the tab order with aria-disabled when disabling it would lose focus; the handler must also prevent activation."
+      ],
+      [
+        "Manual tabs",
+        "Tab enters at the selected tab. Left/Right and Home/End move focus without activation; Enter/Space commits. Arrow navigation wraps. The active tab and associated panel are labelled together; focus and selection are separate."
+      ],
+      [
+        "Radios",
+        "Tab enters at the checked radio. Arrow keys move and select; Space checks the focused item. Only one option is checked. Use native radios where possible. Unit and material controls use this pattern; plan/day/period controls use manual tabs."
+      ],
+      [
+        "Combobox",
+        "Keep text-editing focus in the input; Up/Down changes the active suggestion and Enter chooses it. Expose expanded state, controlled list and active option. Typed arbitrary text never becomes a committed city. Escape closes the location panel."
+      ],
+      [
+        "Modal dialogs",
+        "Give the modal a heading and accessible name. On entry focus that heading when context needs reading; keep Tab/Shift+Tab inside. Background is inert. Escape, close or explicit Back dismisses and restores the recorded trigger. Backdrop clicks do not dismiss in this study."
+      ],
+      [
+        "Nonmodal panels",
+        "Sol search and Gather picker do not trap focus. Escape and explicit dismissal return to the trigger. Pointer outside closes and allows the clicked target to receive focus. Keyboard focus leaving the panel closes it after the move, without redirecting focus."
+      ],
+      [
+        "Links",
+        "Use real hrefs. Enter follows; modifier clicks and browser history retain native behavior. Do not make navigation links into radio controls. Use aria-current only for the committed route."
+      ]
+    ],
+    "feedback": [
+      [
+        "Hover",
+        "120 ms background/colour transition. Use neutral tint for unselected items; selected fill stays distinct. Do not reveal essential information only on hover."
+      ],
+      [
+        "Press",
+        "Apply immediate darker surface while held; return within 90 ms on release. No scale, bounce or layout displacement. Pointer cancellation does not activate."
+      ],
+      [
+        "Focus",
+        "2 px burgundy outline with 2 px offset, not a duplicate selected fill. Never remove focus styles. Keep logical DOM order; no positive tabindex."
+      ],
+      [
+        "Loading",
+        "Show progress immediately and preserve known data. A spinner may rotate at a steady 800 ms cycle; it is decorative and not the only loading indicator. No minimum artificial wait or fabricated progress percentage."
+      ],
+      [
+        "Overlays",
+        "Open with a 120 ms opacity transition; close in 90 ms. Focus behavior runs immediately, independent of animation completion. No spring or perspective transforms."
+      ],
+      [
+        "Reduced motion",
+        "Disable decorative rotation and overlay/colour interpolation; show the final state immediately. Text status and visible focus remain."
+      ],
+      [
+        "Errors and announcements",
+        "Use one polite live region for async status. Keep an actionable error until retry, dismissal or a successful superseding action. Do not move focus merely to announce it. A disappearing focused recovery control returns to its stable trigger."
+      ],
+      [
+        "Touch and targets",
+        "Target at least 44 × 44 CSS px where space permits, even when the icon is smaller; keep target areas from overlapping. Tap duplicates pointer activation, never hover. Keep browser zoom and text selection enabled."
+      ]
+    ],
+    "host_contract": "Stable IDs, not visible labels, identify people, materials, cities, plans and routes. Async callbacks carry a request/version ID and cannot apply after cancellation, replacement or unmount. Server acknowledgements govern persistence and purchases. The per-state JSON fixtures are example inputs, not a backend schema.",
+    "sources": [
+      [
+        "WAI-ARIA APG: Tabs",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/"
+      ],
+      [
+        "WAI-ARIA APG: Radio group",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/radio/"
+      ],
+      [
+        "WAI-ARIA APG: Combobox",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/"
+      ],
+      [
+        "WAI-ARIA APG: Modal dialog",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"
+      ]
+    ]
+  },
+  "components": {
+    "roam": {
+      "family": "roam",
+      "name": "Roam · Plan selector",
+      "purpose": "Compare a recurring plan, review it, and hand off to a host checkout without implying premature purchase.",
+      "model": [
+        "selectedPlanId: weekender, everyday or worldwide",
+        "view: plans, review, confirmed, accountSignIn or accountError",
+        "checkoutStatus: idle, pending, reconciling, uncertain or error; checkoutAttemptId; confirmedPlanId",
+        "accountReturnView; dialogTrigger; cancellationNotice"
+      ],
+      "initial": "Everyday: $24/month, 20 GB, 3 devices. Weekender: $12/month, 5 GB, 1 device. Worldwide: $48/month, 50 GB, 5 devices. All show 120 destinations and monthly billing. These are design fixtures, not real offers.",
+      "persistence": [
+        "Plan selection persists across review, cancellation and account handoff. Review snapshots the selected plan so every label and the checkout payload agree.",
+        "Confirmed plan identity comes from a verified host result, not from whichever tab the user last focused. Back to plans preserves that confirmed plan as the selected comparison tab.",
+        "No payment data, credential fields, tax estimate or account identity is invented by this component. The host owns checkout, billing and sign-in."
+      ],
+      "async_rules": [
+        "Continue to checkout starts one attempt with a stable idempotency key; retry reuses the same attempt identity until its outcome is known. A successful session creation navigates to the host checkout; it is not Plan activated.",
+        "Show Plan activated only after the host confirms a completed activation for the matching plan. Failure, timeout, leaving the dialog or returning without a confirmed result never produces success.",
+        "Close/Back during session creation cancels local waiting and invalidates navigation callbacks. It does not claim to reverse a purchase; the host must reconcile uncertain transaction outcomes before allowing another attempt.",
+        "The No purchase made notice is valid only for an explicitly abandoned pre-purchase flow or a host-confirmed cancelled checkout. Ambiguous outcomes require a host status check; there is no separate ambiguous-outcome PNG."
+      ],
+      "layout": [
+        "Native study: 400 × 544. Keep the three plan tabs in fixed order and the primary action full width.",
+        "Review is a modal dialog: background is inert, dialog scrolls internally if necessary, actions stay reachable. Do not dismiss on backdrop click.",
+        "At small heights keep the dialog inside 16 px viewport margins; allow content scrolling without clipping close, Back or price."
+      ],
+      "acceptance": [
+        "Focus Worldwide while Everyday is current: price stays $24 and allowance 20 GB until activation.",
+        "Choose Weekender then Review: title, $12/month, 5 GB and 1 device all agree.",
+        "Create a checkout session successfully: navigate to the host; do not show Plan activated yet.",
+        "Retry after a network failure must not create duplicate purchases; only verified activation shows confirmation."
+      ],
+      "controls": [
+        {
+          "id": "plans",
+          "label": "Weekender / Everyday / Worldwide",
+          "semantics": "Manual tabs labelled Plan",
+          "pointer": "Activate the selected plan and update its entire content panel.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Manual-tab contract; Home/End supported. This deliberately uses tabs, not automatic-selection radios.",
+          "disabled_or_pending": "Inert behind review; available on plans. On confirmation/account views, activating another tab returns to plans for that plan without changing membership.",
+          "result": "One active tab; title, price, allowance, device count and Continue label update together.",
+          "return_or_dismiss": "Switching plans has no billing side effect.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "continue",
+          "label": "Continue with [plan]",
+          "semantics": "Button",
+          "pointer": "Open the selected plan’s review modal.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract.",
+          "disabled_or_pending": "Only available on the comparison view; no request starts yet.",
+          "result": "Focus the Review your plan heading; include plan, recurring amount, billing interval, GB, destinations and devices.",
+          "return_or_dismiss": "Back, close or Escape returns to this Continue button.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "checkout",
+          "label": "Continue to checkout / Retry",
+          "semantics": "Button inside review dialog",
+          "pointer": "Start or retry the host checkout-session handoff.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract within modal.",
+          "disabled_or_pending": "aria-disabled while pending; keep focus and suppress duplicate submissions.",
+          "result": "Starting checkout; host session success navigates; failure keeps review open with Retry.",
+          "return_or_dismiss": "Back returns to comparison; close cancels local waiting without claiming financial reversal.",
+          "announcement": "Announce Starting checkout or Checkout could not start; never announce purchase success from session creation."
+        },
+        {
+          "id": "review-dismiss",
+          "label": "Review close × / Back to plans",
+          "semantics": "Close button named Close plan review; text Back button",
+          "pointer": "Dismiss review and preserve the selected comparison plan.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract; Escape also dismisses; modal focus contract.",
+          "disabled_or_pending": "Available during local session creation; invalidate pending navigation callbacks when dismissed.",
+          "result": "Return to plans; a clear pre-purchase cancellation may show the cancelled notice.",
+          "return_or_dismiss": "Restore focus to Continue with the same plan. Backdrop clicks do nothing.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "manage",
+          "label": "Manage membership",
+          "semantics": "Button on verified confirmation",
+          "pointer": "Request host membership management.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract.",
+          "disabled_or_pending": "Debounce repeated handoffs. Keep confirmed membership data while awaiting host response.",
+          "result": "Authenticated host opens membership settings; unauthenticated → sign-in handoff; failed account read → account error.",
+          "return_or_dismiss": "Remember confirmation as the account return view.",
+          "announcement": "Announce account unavailability only on failure; navigation success is handled by the host."
+        },
+        {
+          "id": "confirmed-back",
+          "label": "Confirmation: Back to plans",
+          "semantics": "Button",
+          "pointer": "Return to comparison for the confirmed plan.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract.",
+          "disabled_or_pending": "Available after confirmation.",
+          "result": "Plan selector remains consistent; membership is neither cancelled nor changed.",
+          "return_or_dismiss": "Focus the selected plan tab.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "sign-in",
+          "label": "Sign in",
+          "semantics": "Button launching host authentication",
+          "pointer": "Launch the host sign-in flow, keeping the intended membership destination.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract.",
+          "disabled_or_pending": "Deduplicate launches; no inline credentials are collected.",
+          "result": "Host success resumes membership settings; cancellation returns to this sign-in view.",
+          "return_or_dismiss": "Back returns to the saved account return view.",
+          "announcement": "The host supplies authentication outcomes; do not manufacture a signed-in identity."
+        },
+        {
+          "id": "account-retry",
+          "label": "Membership Retry",
+          "semantics": "Button",
+          "pointer": "Retry fetching or opening the host membership account.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract.",
+          "disabled_or_pending": "Suppress repeated requests while pending; retain the error context until a result.",
+          "result": "Host success opens settings; authentication required → sign-in; repeated failure stays retryable.",
+          "return_or_dismiss": "Back returns to the saved confirmation or plan view.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "account-back",
+          "label": "Account Back",
+          "semantics": "Button",
+          "pointer": "Leave the account handoff/error and restore accountReturnView.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract.",
+          "disabled_or_pending": "Available when host navigation has not already taken over.",
+          "result": "Restore confirmed plan when entered from Manage membership; otherwise restore comparison.",
+          "return_or_dismiss": "Focus Manage membership or the selected plan tab, whichever opened the account flow.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        }
+      ],
+      "states": [
+        {
+          "id": "default",
+          "key": "roam-v2-default",
+          "title": "Plan selector · default",
+          "entry": "Activate Everyday or load its comparison view.",
+          "exit": "Continue → review-everyday; another tab → its plan; no purchase happens on tab selection.",
+          "focus": "Selected plan tab or Continue button, according to the trigger.",
+          "notes": "$24/month, 20 GB, 3 device(s), billed monthly.",
+          "preview": "images/roam-v2-default.png",
+          "data": "state-data/roam-v2-default.json"
+        },
+        {
+          "id": "weekender",
+          "key": "roam-v2-weekender",
+          "title": "Weekender plan",
+          "entry": "Activate Weekender or load its comparison view.",
+          "exit": "Continue → review-weekender; another tab → its plan; no purchase happens on tab selection.",
+          "focus": "Selected plan tab or Continue button, according to the trigger.",
+          "notes": "$12/month, 5 GB, 1 device(s), billed monthly.",
+          "preview": "images/roam-v2-weekender.png",
+          "data": "state-data/roam-v2-weekender.json"
+        },
+        {
+          "id": "review-weekender",
+          "key": "roam-v2-review-weekender",
+          "title": "Review Weekender",
+          "entry": "Continue with Weekender.",
+          "exit": "Continue to checkout → pending host attempt; error → retry review; Back/close/Escape → weekender.",
+          "focus": "Review heading on entry; trap focus; return to Continue on dismissal.",
+          "notes": "The same review contract applies to every plan; only Everyday pending/error is separately rendered.",
+          "preview": "images/roam-v2-review-weekender.png",
+          "data": "state-data/roam-v2-review-weekender.json"
+        },
+        {
+          "id": "confirmed-weekender",
+          "key": "roam-v2-confirmed-weekender",
+          "title": "Weekender confirmed",
+          "entry": "Host confirms completed activation of Weekender.",
+          "exit": "Manage membership → host settings, sign-in or account error; Back to plans → weekender.",
+          "focus": "Plan activated heading on entry; subsequent Tab reaches Manage membership.",
+          "notes": "Never reach this state merely from creating a checkout session.",
+          "preview": "images/roam-v2-confirmed-weekender.png",
+          "data": "state-data/roam-v2-confirmed-weekender.json"
+        },
+        {
+          "id": "review-everyday",
+          "key": "roam-v2-review-everyday",
+          "title": "Review Everyday",
+          "entry": "Continue with Everyday.",
+          "exit": "Continue to checkout → pending host attempt; error → retry review; Back/close/Escape → default.",
+          "focus": "Review heading on entry; trap focus; return to Continue on dismissal.",
+          "notes": "The same review contract applies to every plan; only Everyday pending/error is separately rendered.",
+          "preview": "images/roam-v2-review-everyday.png",
+          "data": "state-data/roam-v2-review-everyday.json"
+        },
+        {
+          "id": "confirmed-everyday",
+          "key": "roam-v2-confirmed-everyday",
+          "title": "Everyday confirmed",
+          "entry": "Host confirms completed activation of Everyday.",
+          "exit": "Manage membership → host settings, sign-in or account error; Back to plans → default.",
+          "focus": "Plan activated heading on entry; subsequent Tab reaches Manage membership.",
+          "notes": "Never reach this state merely from creating a checkout session.",
+          "preview": "images/roam-v2-confirmed-everyday.png",
+          "data": "state-data/roam-v2-confirmed-everyday.json"
+        },
+        {
+          "id": "worldwide",
+          "key": "roam-v2-worldwide",
+          "title": "Worldwide plan",
+          "entry": "Activate Worldwide or load its comparison view.",
+          "exit": "Continue → review-worldwide; another tab → its plan; no purchase happens on tab selection.",
+          "focus": "Selected plan tab or Continue button, according to the trigger.",
+          "notes": "$48/month, 50 GB, 5 device(s), billed monthly.",
+          "preview": "images/roam-v2-worldwide.png",
+          "data": "state-data/roam-v2-worldwide.json"
+        },
+        {
+          "id": "review-worldwide",
+          "key": "roam-v2-review-worldwide",
+          "title": "Review Worldwide",
+          "entry": "Continue with Worldwide.",
+          "exit": "Continue to checkout → pending host attempt; error → retry review; Back/close/Escape → worldwide.",
+          "focus": "Review heading on entry; trap focus; return to Continue on dismissal.",
+          "notes": "The same review contract applies to every plan; only Everyday pending/error is separately rendered.",
+          "preview": "images/roam-v2-review-worldwide.png",
+          "data": "state-data/roam-v2-review-worldwide.json"
+        },
+        {
+          "id": "confirmed-worldwide",
+          "key": "roam-v2-confirmed-worldwide",
+          "title": "Worldwide confirmed",
+          "entry": "Host confirms completed activation of Worldwide.",
+          "exit": "Manage membership → host settings, sign-in or account error; Back to plans → worldwide.",
+          "focus": "Plan activated heading on entry; subsequent Tab reaches Manage membership.",
+          "notes": "Never reach this state merely from creating a checkout session.",
+          "preview": "images/roam-v2-confirmed-worldwide.png",
+          "data": "state-data/roam-v2-confirmed-worldwide.json"
+        },
+        {
+          "id": "checkout-pending",
+          "key": "roam-v2-checkout-pending",
+          "title": "Checkout pending",
+          "entry": "Start Everyday checkout; session creation is pending.",
+          "exit": "pending → host checkout or checkout-error; error → Retry/pending; dismissal → preserved comparison.",
+          "focus": "Keep focus on checkout/Retry inside the modal.",
+          "notes": "No purchase/activation has been confirmed. Dismissal invalidates late navigation callbacks.",
+          "preview": "images/roam-v2-checkout-pending.png",
+          "data": "state-data/roam-v2-checkout-pending.json"
+        },
+        {
+          "id": "checkout-error",
+          "key": "roam-v2-checkout-error",
+          "title": "Checkout failed",
+          "entry": "Start Everyday checkout; session creation fails.",
+          "exit": "pending → host checkout or checkout-error; error → Retry/pending; dismissal → preserved comparison.",
+          "focus": "Keep focus on checkout/Retry inside the modal.",
+          "notes": "No purchase/activation has been confirmed. Dismissal invalidates late navigation callbacks.",
+          "preview": "images/roam-v2-checkout-error.png",
+          "data": "state-data/roam-v2-checkout-error.json"
+        },
+        {
+          "id": "cancelled",
+          "key": "roam-v2-cancelled",
+          "title": "Checkout cancelled",
+          "entry": "A pre-purchase flow is explicitly abandoned or the host confirms cancellation.",
+          "exit": "Continue → review-everyday; another tab changes comparison. Clear the notice on the next plan/review action.",
+          "focus": "Return to Continue with Everyday.",
+          "notes": "The No purchase made sentence is prohibited for an unknown payment outcome.",
+          "preview": "images/roam-v2-cancelled.png",
+          "data": "state-data/roam-v2-cancelled.json"
+        },
+        {
+          "id": "account-sign-in",
+          "key": "roam-v2-account-sign-in",
+          "title": "Sign in to manage membership",
+          "entry": "Manage membership requires authentication.",
+          "exit": "Sign in → host authentication/settings; cancel host auth → same state; Back → recorded account return view.",
+          "focus": "Sign-in heading on entry, then Sign in/Back in normal order.",
+          "notes": "",
+          "preview": "images/roam-v2-account-sign-in.png",
+          "data": "state-data/roam-v2-account-sign-in.json"
+        },
+        {
+          "id": "account-error",
+          "key": "roam-v2-account-error",
+          "title": "Membership unavailable",
+          "entry": "Host account details or settings handoff fails.",
+          "exit": "Retry → host request, success → settings; auth required → account-sign-in; Back → recorded return view.",
+          "focus": "Error heading on entry; keep Retry focus after repeated failure.",
+          "notes": "",
+          "preview": "images/roam-v2-account-error.png",
+          "data": "state-data/roam-v2-account-error.json"
+        },
+        {
+          "id": "focus",
+          "key": "roam-v2-focus",
+          "title": "Plan keyboard focus",
+          "entry": "Move plan-tab focus to Worldwide while Everyday remains selected.",
+          "exit": "Enter/Space → worldwide; other focus movement leaves Everyday selected.",
+          "focus": "Worldwide has an outline; Everyday retains the active surface.",
+          "notes": "Price remains $24 and allowance 20 GB until activation.",
+          "preview": "images/roam-v2-focus.png",
+          "data": "state-data/roam-v2-focus.json"
+        }
+      ],
+      "read_only": "Price, allowance badge, benefit rows and the roam wordmark are read-only. The decorative ribbon has no click or drag behavior. Only explicit tabs and actions affect the flow.",
+      "default_image": "images/roam-v2-default.png",
+      "rendered_state_count": 15,
+      "control_count": 9,
+      "audit_clarifications": [
+        "An unknown checkout outcome is an explicit documented state. Keep the review summary and plan identity, show “Checking checkout status…”, and disable purchase submission while the host reconciles the existing attempt. Do not create another attempt or announce activation/cancellation from a timeout.",
+        "If reconciliation also fails, show “We couldn’t confirm checkout” with Check status and Back to plans. Check status retries the same attempt lookup; it does not create a checkout session. Keep focus on the triggering action, announce status once, and restore Continue on dismissal. Reopening review resumes reconciliation for that attempt before allowing checkout. Confirmed activation enters the matching confirmed image; confirmed non-completion permits retry with the host’s same-attempt/idempotency contract; confirmed cancellation may show “No purchase made”. These exceptional states have no separate PNG.",
+        "Account and authentication handoffs have a pending state: retain the current summary and accessible action label, expose busy status, and suppress repeat launches. Back invalidates local callbacks before the host takes over; returned authentication cancellation restores the same sign-in view. Authenticated settings and payment entry belong to the host, with return destinations supplied by the integration.",
+        "Plan IDs, prices, allowances and devices must arrive as one valid record. A missing or malformed host plan record must not fall back to a different paid plan or fabricate a price; retain a valid cached record if present, otherwise show an unavailable plan message with host retry. The three supplied plan records are valid fixtures, not live commercial offers."
+      ]
+    }
+  }
+}

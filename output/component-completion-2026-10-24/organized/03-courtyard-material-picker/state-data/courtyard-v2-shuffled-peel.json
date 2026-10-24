@@ -1,0 +1,61 @@
+{
+  "key": "courtyard-v2-shuffled-peel",
+  "family": "courtyard",
+  "title": "Peel in shuffled set",
+  "id": "shuffled-peel",
+  "palette": [
+    [
+      "Clay",
+      "Terracotta",
+      "#C77E5A"
+    ],
+    [
+      "Peel",
+      "Matte ceramic",
+      "#EDAD71"
+    ],
+    [
+      "Brick",
+      "Textured clay",
+      "#A94F35"
+    ],
+    [
+      "Plum",
+      "Polished ceramic",
+      "#886476"
+    ],
+    [
+      "Ash",
+      "Natural stone",
+      "#BDB8AF"
+    ]
+  ],
+  "selected": 1,
+  "material": {
+    "name": "Peel",
+    "finish": "Matte ceramic",
+    "hex": "#EDAD71"
+  },
+  "width": 640,
+  "height": 304,
+  "svg": "editable-svg/courtyard-v2-shuffled-peel.svg",
+  "png": "images/courtyard-v2-shuffled-peel.png",
+  "specification": "state-data/courtyard-v2-shuffled-peel.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Material",
+    "A finish for your next idea.",
+    "Shuffle",
+    "Clay",
+    "Peel",
+    "Brick",
+    "Plum",
+    "Ash",
+    "Peel",
+    "Matte ceramic",
+    "#EDAD71",
+    "Palette shuffled",
+    "Undo"
+  ],
+  "path_base": "study folder"
+}

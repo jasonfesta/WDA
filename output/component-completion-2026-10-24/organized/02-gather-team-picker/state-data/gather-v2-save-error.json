@@ -1,0 +1,71 @@
+{
+  "key": "gather-v2-save-error",
+  "family": "gather",
+  "title": "Selection save failed",
+  "id": "save-error",
+  "selected_people": [
+    {
+      "name": "Lena Ortiz",
+      "role": "Design lead",
+      "initials": "LO",
+      "color": "#eed9d2"
+    },
+    {
+      "name": "Noah Bell",
+      "role": "Product designer",
+      "initials": "NB",
+      "color": "#f3dfb8"
+    },
+    {
+      "name": "Amara Chen",
+      "role": "Engineer",
+      "initials": "AC",
+      "color": "#e1e5d3"
+    },
+    {
+      "name": "Eli Brooks",
+      "role": "Photographer",
+      "initials": "EB",
+      "color": "#653d41"
+    }
+  ],
+  "count": 4,
+  "open": true,
+  "search": "",
+  "saved_count": 3,
+  "width": 400,
+  "height": 484,
+  "svg": "editable-svg/gather-v2-save-error.svg",
+  "png": "images/gather-v2-save-error.png",
+  "specification": "state-data/gather-v2-save-error.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "LO",
+    "NB",
+    "AC",
+    "EB",
+    "Project team",
+    "4",
+    "Project team",
+    "Choose who appears on this project.",
+    "Find a teammate…",
+    "LO",
+    "Lena Ortiz",
+    "Design lead",
+    "NB",
+    "Noah Bell",
+    "Product designer",
+    "AC",
+    "Amara Chen",
+    "Engineer",
+    "EB",
+    "Eli Brooks",
+    "Photographer",
+    "4 selected",
+    "Clear",
+    "Couldn’t save selection",
+    "Retry",
+    "Revert"
+  ],
+  "path_base": "study folder"
+}

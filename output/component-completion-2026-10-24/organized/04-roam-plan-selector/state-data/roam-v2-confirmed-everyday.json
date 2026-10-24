@@ -1,0 +1,36 @@
+{
+  "key": "roam-v2-confirmed-everyday",
+  "family": "roam",
+  "title": "Everyday confirmed",
+  "id": "confirmed-everyday",
+  "plan": {
+    "name": "Everyday",
+    "price": 24,
+    "gb": 20,
+    "devices": 3
+  },
+  "selected_plan": "everyday",
+  "fixture_only": true,
+  "width": 400,
+  "height": 544,
+  "svg": "editable-svg/roam-v2-confirmed-everyday.svg",
+  "png": "images/roam-v2-confirmed-everyday.png",
+  "specification": "state-data/roam-v2-confirmed-everyday.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Choose your plan",
+    "roam",
+    "Monthly roaming data, wherever you work.",
+    "Weekender",
+    "Everyday",
+    "Worldwide",
+    "Plan activated",
+    "Everyday",
+    "$24 / month",
+    "20 GB of roaming data",
+    "Billed monthly",
+    "Manage membership",
+    "Back to plans"
+  ],
+  "path_base": "study folder"
+}

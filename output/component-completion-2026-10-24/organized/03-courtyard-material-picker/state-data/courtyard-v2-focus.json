@@ -1,0 +1,60 @@
+{
+  "key": "courtyard-v2-focus",
+  "family": "courtyard",
+  "title": "Focus on Shuffle",
+  "id": "focus",
+  "palette": [
+    [
+      "Rose",
+      "Polished ceramic",
+      "#D68C80"
+    ],
+    [
+      "Apricot",
+      "Matte ceramic",
+      "#E9A16D"
+    ],
+    [
+      "Citron",
+      "Textured clay",
+      "#E4C65A"
+    ],
+    [
+      "Moss",
+      "Natural stone",
+      "#797D50"
+    ],
+    [
+      "Burgundy",
+      "Ribbed wood",
+      "#65333C"
+    ]
+  ],
+  "selected": 1,
+  "material": {
+    "name": "Apricot",
+    "finish": "Matte ceramic",
+    "hex": "#E9A16D"
+  },
+  "width": 640,
+  "height": 304,
+  "svg": "editable-svg/courtyard-v2-focus.svg",
+  "png": "images/courtyard-v2-focus.png",
+  "specification": "state-data/courtyard-v2-focus.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Material",
+    "A finish for your next idea.",
+    "Shuffle",
+    "Rose",
+    "Apricot",
+    "Citron",
+    "Moss",
+    "Burgundy",
+    "Apricot",
+    "Matte ceramic",
+    "#E9A16D",
+    "Applied to selected object"
+  ],
+  "path_base": "study folder"
+}

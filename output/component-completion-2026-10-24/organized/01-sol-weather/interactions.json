@@ -1,0 +1,463 @@
+{
+  "version": "3.2",
+  "date": "2026-10-24",
+  "shared": {
+    "scope": "These are detailed implementation requirements for the six static studies. All 93 planned PNG/SVG states are mapped below. Generic hover/press combinations, every data permutation and additional host-only failure branches are specified in text rather than claimed as extra rendered images. No production behavior is implemented by this document.",
+    "contracts": [
+      [
+        "Buttons",
+        "Use a semantic button. Enter or Space activates once; suppress duplicate pending actions. Focus is visible immediately. Keep a pending focused control in the tab order with aria-disabled when disabling it would lose focus; the handler must also prevent activation."
+      ],
+      [
+        "Manual tabs",
+        "Tab enters at the selected tab. Left/Right and Home/End move focus without activation; Enter/Space commits. Arrow navigation wraps. The active tab and associated panel are labelled together; focus and selection are separate."
+      ],
+      [
+        "Radios",
+        "Tab enters at the checked radio. Arrow keys move and select; Space checks the focused item. Only one option is checked. Use native radios where possible. Unit and material controls use this pattern; plan/day/period controls use manual tabs."
+      ],
+      [
+        "Combobox",
+        "Keep text-editing focus in the input; Up/Down changes the active suggestion and Enter chooses it. Expose expanded state, controlled list and active option. Typed arbitrary text never becomes a committed city. Escape closes the location panel."
+      ],
+      [
+        "Modal dialogs",
+        "Give the modal a heading and accessible name. On entry focus that heading when context needs reading; keep Tab/Shift+Tab inside. Background is inert. Escape, close or explicit Back dismisses and restores the recorded trigger. Backdrop clicks do not dismiss in this study."
+      ],
+      [
+        "Nonmodal panels",
+        "Sol search and Gather picker do not trap focus. Escape and explicit dismissal return to the trigger. Pointer outside closes and allows the clicked target to receive focus. Keyboard focus leaving the panel closes it after the move, without redirecting focus."
+      ],
+      [
+        "Links",
+        "Use real hrefs. Enter follows; modifier clicks and browser history retain native behavior. Do not make navigation links into radio controls. Use aria-current only for the committed route."
+      ]
+    ],
+    "feedback": [
+      [
+        "Hover",
+        "120 ms background/colour transition. Use neutral tint for unselected items; selected fill stays distinct. Do not reveal essential information only on hover."
+      ],
+      [
+        "Press",
+        "Apply immediate darker surface while held; return within 90 ms on release. No scale, bounce or layout displacement. Pointer cancellation does not activate."
+      ],
+      [
+        "Focus",
+        "2 px burgundy outline with 2 px offset, not a duplicate selected fill. Never remove focus styles. Keep logical DOM order; no positive tabindex."
+      ],
+      [
+        "Loading",
+        "Show progress immediately and preserve known data. A spinner may rotate at a steady 800 ms cycle; it is decorative and not the only loading indicator. No minimum artificial wait or fabricated progress percentage."
+      ],
+      [
+        "Overlays",
+        "Open with a 120 ms opacity transition; close in 90 ms. Focus behavior runs immediately, independent of animation completion. No spring or perspective transforms."
+      ],
+      [
+        "Reduced motion",
+        "Disable decorative rotation and overlay/colour interpolation; show the final state immediately. Text status and visible focus remain."
+      ],
+      [
+        "Errors and announcements",
+        "Use one polite live region for async status. Keep an actionable error until retry, dismissal or a successful superseding action. Do not move focus merely to announce it. A disappearing focused recovery control returns to its stable trigger."
+      ],
+      [
+        "Touch and targets",
+        "Target at least 44 × 44 CSS px where space permits, even when the icon is smaller; keep target areas from overlapping. Tap duplicates pointer activation, never hover. Keep browser zoom and text selection enabled."
+      ]
+    ],
+    "host_contract": "Stable IDs, not visible labels, identify people, materials, cities, plans and routes. Async callbacks carry a request/version ID and cannot apply after cancellation, replacement or unmount. Server acknowledgements govern persistence and purchases. The per-state JSON fixtures are example inputs, not a backend schema.",
+    "sources": [
+      [
+        "WAI-ARIA APG: Tabs",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/"
+      ],
+      [
+        "WAI-ARIA APG: Radio group",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/radio/"
+      ],
+      [
+        "WAI-ARIA APG: Combobox",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/"
+      ],
+      [
+        "WAI-ARIA APG: Modal dialog",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"
+      ]
+    ]
+  },
+  "components": {
+    "sol": {
+      "family": "sol",
+      "name": "Sol · Weather card",
+      "purpose": "A compact forecast with explicit location, units, day selection and freshness.",
+      "model": [
+        "committedLocation: stable location ID and display name",
+        "forecastByDay: date, canonical Celsius, condition and sunset for four days",
+        "unit: C or F; selectedDay: one of the four date IDs",
+        "forecastStatus: initialLoading, ready, refreshing, initialError or refreshError",
+        "locationPanel: closed, empty, searching, results, noResults, loadingForecast or error",
+        "query, candidateLocation, latestSearchRequestId, latestForecastRequestId, updatedAt"
+      ],
+      "initial": "Lisbon; Thursday 18 June 2026; Today selected; Celsius; temperatures 28, 29, 27, 26; Sunny; sunset 20:58; updated 18:00.",
+      "persistence": [
+        "Unit and selected day survive popover dismissal and refresh. Keep unit when committing another city; preserve the date if available, otherwise select Today.",
+        "Only a successful forecast replaces committed location, forecast and updatedAt together. Closing location search discards query/candidate, never committed weather.",
+        "The host may persist unit and last successful location. Query, focus, pending requests and error messages are session state."
+      ],
+      "async_rules": [
+        "Debounce nonempty city queries by 250 ms; trim whitespace and do not send empty queries. Ignore results for older queries. A query-service failure keeps the input editable and shows a textual retry message; this branch is specified but has no separate PNG.",
+        "Cancel or close invalidates the candidate request. Late responses must not switch the city. Refresh requests are deduplicated per committed location.",
+        "A failed refresh retains all cached values and the real last-update time. First-load failure shows em dashes; it must not imply 0°C or a successful timestamp."
+      ],
+      "layout": [
+        "Native study: 440 × 344. On narrow screens use full available width, retain four equal day targets and place location search within viewport padding.",
+        "Keep four-day labels together. Truncate a long city name visually with its full accessible name; do not truncate the condition or error action.",
+        "The sun is decorative. Its size and position do not change on hover, unit conversion or refresh."
+      ],
+      "acceptance": [
+        "Switch to Friday, then Fahrenheit: Friday remains current; main value is 84°, four-day values are 82/84/81/79.",
+        "Start Porto, then cancel before response: Lisbon remains committed even if Porto resolves later.",
+        "Fail refresh with cache: weather stays visible and Retry is the only recovery action in the footer.",
+        "Tab to Friday while Today is selected: focus is visible, Today remains selected until activation."
+      ],
+      "controls": [
+        {
+          "id": "location",
+          "label": "City / location trigger",
+          "semantics": "Button, expanded state, controls a labelled nonmodal search panel",
+          "pointer": "Open the location panel. A second activation closes it.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract; Escape dismisses the open panel.",
+          "disabled_or_pending": "Enabled with cached weather and during initial loading/error; opening it does not start a geolocation request.",
+          "result": "Open an empty city search; focus its input.",
+          "return_or_dismiss": "Close/Cancel/Escape returns focus to the city trigger. Outside click closes without stealing focus from the clicked target.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "units",
+          "label": "Celsius / Fahrenheit",
+          "semantics": "Radio group labelled Temperature units",
+          "pointer": "Choose the unit and recompute all visible temperatures from Celsius.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Radio contract: arrows select; Space checks.",
+          "disabled_or_pending": "Available with unknown weather; em dashes stay em dashes. No network dependency.",
+          "result": "Selected unit changes immediately; day, city, condition and sunset stay unchanged.",
+          "return_or_dismiss": "The other unit reverses the conversion; do not convert from previously rounded Fahrenheit.",
+          "announcement": "Expose Celsius/Fahrenheit as full accessible names and checked state."
+        },
+        {
+          "id": "days",
+          "label": "Today / Fri 19 / Sat 20 / Sun 21",
+          "semantics": "Manual tabs labelled Forecast day",
+          "pointer": "Select a day; update date, temperature, condition and sunset together.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Manual-tab contract. Home/End move focus to first/last day.",
+          "disabled_or_pending": "Keep available while refreshing cached data. During initial unknown data, selection may change the date but numeric fields stay unknown.",
+          "result": "Only one day has selected fill/underline. The focused day may differ.",
+          "return_or_dismiss": "Selecting Today returns to its forecast while preserving unit.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "refresh",
+          "label": "Refresh / forecast Retry",
+          "semantics": "Button labelled Refresh forecast or Retry forecast",
+          "pointer": "Fetch the committed location again.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract.",
+          "disabled_or_pending": "Ignore repeat activation while pending; keep the busy target focusable with aria-disabled and suppress its handler.",
+          "result": "Cached data remains during refreshing; success updates data and timestamp, failure exposes one Retry.",
+          "return_or_dismiss": "Retry repeats the same request; it never changes city, day or unit.",
+          "announcement": "Announce Refreshing forecast, then Forecast updated or Couldn’t refresh."
+        },
+        {
+          "id": "city-search",
+          "label": "Search city field",
+          "semantics": "Labelled editable combobox with result list",
+          "pointer": "Type a city; show results only for the current query.",
+          "hover": "Hover only changes input border; no query starts until input changes.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Combobox contract. Native text editing is preserved; Enter chooses only the highlighted result.",
+          "disabled_or_pending": "Editable while searching; editing invalidates prior results. During candidate forecast loading, show the pending panel until success/cancel.",
+          "result": "Empty query → helper; Porto → searching/results; Portoo → no matches.",
+          "return_or_dismiss": "Clear the text to return to the empty helper. Escape closes the panel and leaves committed weather unchanged.",
+          "announcement": "Announce result count or no matches after the response, not on every keystroke."
+        },
+        {
+          "id": "city-result",
+          "label": "City result row",
+          "semantics": "Combobox option with city and country",
+          "pointer": "Choose the explicit location ID represented by the result.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Combobox contract; Enter commits the highlighted candidate to a request.",
+          "disabled_or_pending": "One candidate forecast request at a time. The old city remains visible while pending.",
+          "result": "Start loading Porto; only success commits Porto and closes the panel.",
+          "return_or_dismiss": "Failure stays in the panel with Retry and Cancel.",
+          "announcement": "Announce Loading Porto forecast, then Porto forecast loaded or Couldn’t load Porto."
+        },
+        {
+          "id": "city-retry",
+          "label": "Location Retry",
+          "semantics": "Button",
+          "pointer": "Retry the failed candidate forecast; retain saved Lisbon in the background.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract.",
+          "disabled_or_pending": "Suppressed while retry is running.",
+          "result": "Success commits candidate; another failure keeps the same candidate and error.",
+          "return_or_dismiss": "Cancel returns to committed city without changing its weather.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        },
+        {
+          "id": "city-dismiss",
+          "label": "Close × / Cancel",
+          "semantics": "Buttons; close icon named Close location search",
+          "pointer": "Dismiss search or candidate loading and invalidate that request.",
+          "hover": "Use the neutral surface tint and stronger label contrast. Hover never commits a selection or starts a request.",
+          "press": "Activate once on release inside the target; dragging out cancels. Use a brief darker surface, with no scale or layout shift. Touch uses the same action without requiring hover.",
+          "keyboard": "Button contract plus Escape.",
+          "disabled_or_pending": "Available during search and forecast loading.",
+          "result": "No unit, day, location or forecast change.",
+          "return_or_dismiss": "Restore focus to the city trigger. This is not an undo of an already successful location change.",
+          "announcement": "The accessible name and state expose the result; do not duplicate it with a toast."
+        }
+      ],
+      "states": [
+        {
+          "id": "default",
+          "key": "sol-v2-default",
+          "title": "Weather card · default",
+          "entry": "Load the committed Lisbon forecast or activate the shown day/unit.",
+          "exit": "Change unit/day, open location search, or refresh. Selecting Today in Celsius returns to default.",
+          "focus": "Keep focus on the activated unit/day control; do not move it to the temperature.",
+          "notes": "Selected day index 0; C; temperatures [28, 29, 27, 26]; sunset 20:58.",
+          "preview": "images/sol-v2-default.png",
+          "data": "state-data/sol-v2-default.json"
+        },
+        {
+          "id": "fahrenheit",
+          "key": "sol-v2-fahrenheit",
+          "title": "Today in Fahrenheit",
+          "entry": "Load the committed Lisbon forecast or activate the shown day/unit.",
+          "exit": "Change unit/day, open location search, or refresh. Selecting Today in Celsius returns to default.",
+          "focus": "Keep focus on the activated unit/day control; do not move it to the temperature.",
+          "notes": "Selected day index 0; F; temperatures [82, 84, 81, 79]; sunset 20:58.",
+          "preview": "images/sol-v2-fahrenheit.png",
+          "data": "state-data/sol-v2-fahrenheit.json"
+        },
+        {
+          "id": "friday",
+          "key": "sol-v2-friday",
+          "title": "Friday forecast",
+          "entry": "Load the committed Lisbon forecast or activate the shown day/unit.",
+          "exit": "Change unit/day, open location search, or refresh. Selecting Today in Celsius returns to default.",
+          "focus": "Keep focus on the activated unit/day control; do not move it to the temperature.",
+          "notes": "Selected day index 1; C; temperatures [28, 29, 27, 26]; sunset 20:59.",
+          "preview": "images/sol-v2-friday.png",
+          "data": "state-data/sol-v2-friday.json"
+        },
+        {
+          "id": "friday-fahrenheit",
+          "key": "sol-v2-friday-fahrenheit",
+          "title": "Friday in Fahrenheit",
+          "entry": "Load the committed Lisbon forecast or activate the shown day/unit.",
+          "exit": "Change unit/day, open location search, or refresh. Selecting Today in Celsius returns to default.",
+          "focus": "Keep focus on the activated unit/day control; do not move it to the temperature.",
+          "notes": "Selected day index 1; F; temperatures [82, 84, 81, 79]; sunset 20:59.",
+          "preview": "images/sol-v2-friday-fahrenheit.png",
+          "data": "state-data/sol-v2-friday-fahrenheit.json"
+        },
+        {
+          "id": "saturday",
+          "key": "sol-v2-saturday",
+          "title": "Saturday forecast",
+          "entry": "Load the committed Lisbon forecast or activate the shown day/unit.",
+          "exit": "Change unit/day, open location search, or refresh. Selecting Today in Celsius returns to default.",
+          "focus": "Keep focus on the activated unit/day control; do not move it to the temperature.",
+          "notes": "Selected day index 2; C; temperatures [28, 29, 27, 26]; sunset 21:00.",
+          "preview": "images/sol-v2-saturday.png",
+          "data": "state-data/sol-v2-saturday.json"
+        },
+        {
+          "id": "saturday-fahrenheit",
+          "key": "sol-v2-saturday-fahrenheit",
+          "title": "Saturday in Fahrenheit",
+          "entry": "Load the committed Lisbon forecast or activate the shown day/unit.",
+          "exit": "Change unit/day, open location search, or refresh. Selecting Today in Celsius returns to default.",
+          "focus": "Keep focus on the activated unit/day control; do not move it to the temperature.",
+          "notes": "Selected day index 2; F; temperatures [82, 84, 81, 79]; sunset 21:00.",
+          "preview": "images/sol-v2-saturday-fahrenheit.png",
+          "data": "state-data/sol-v2-saturday-fahrenheit.json"
+        },
+        {
+          "id": "sunday",
+          "key": "sol-v2-sunday",
+          "title": "Sunday forecast",
+          "entry": "Load the committed Lisbon forecast or activate the shown day/unit.",
+          "exit": "Change unit/day, open location search, or refresh. Selecting Today in Celsius returns to default.",
+          "focus": "Keep focus on the activated unit/day control; do not move it to the temperature.",
+          "notes": "Selected day index 3; C; temperatures [28, 29, 27, 26]; sunset 21:01.",
+          "preview": "images/sol-v2-sunday.png",
+          "data": "state-data/sol-v2-sunday.json"
+        },
+        {
+          "id": "sunday-fahrenheit",
+          "key": "sol-v2-sunday-fahrenheit",
+          "title": "Sunday in Fahrenheit",
+          "entry": "Load the committed Lisbon forecast or activate the shown day/unit.",
+          "exit": "Change unit/day, open location search, or refresh. Selecting Today in Celsius returns to default.",
+          "focus": "Keep focus on the activated unit/day control; do not move it to the temperature.",
+          "notes": "Selected day index 3; F; temperatures [82, 84, 81, 79]; sunset 21:01.",
+          "preview": "images/sol-v2-sunday-fahrenheit.png",
+          "data": "state-data/sol-v2-sunday-fahrenheit.json"
+        },
+        {
+          "id": "refreshing",
+          "key": "sol-v2-refreshing",
+          "title": "Refreshing cached forecast",
+          "entry": "Activate Refresh with a saved forecast.",
+          "exit": "Success → committed forecast; failure → refresh-error.",
+          "focus": "Keep existing focus; announce the outcome. If Retry disappears after success, focus the stable refresh control.",
+          "notes": "Cached weather stays unchanged during refresh. Initial unknown data is rendered as em dashes.",
+          "preview": "images/sol-v2-refreshing.png",
+          "data": "state-data/sol-v2-refreshing.json"
+        },
+        {
+          "id": "refresh-error",
+          "key": "sol-v2-refresh-error",
+          "title": "Refresh failed with cached data",
+          "entry": "The refresh request fails while saved weather exists.",
+          "exit": "Retry → refreshing; success → committed forecast.",
+          "focus": "Keep existing focus; announce the outcome. If Retry disappears after success, focus the stable refresh control.",
+          "notes": "Cached weather stays unchanged during refresh. Initial unknown data is rendered as em dashes.",
+          "preview": "images/sol-v2-refresh-error.png",
+          "data": "state-data/sol-v2-refresh-error.json"
+        },
+        {
+          "id": "first-loading",
+          "key": "sol-v2-first-loading",
+          "title": "First forecast loading",
+          "entry": "Mount with no forecast cache.",
+          "exit": "Success → default (or host-selected location); failure → first-error.",
+          "focus": "Keep existing focus; announce the outcome. If Retry disappears after success, focus the stable refresh control.",
+          "notes": "Cached weather stays unchanged during refresh. Initial unknown data is rendered as em dashes.",
+          "preview": "images/sol-v2-first-loading.png",
+          "data": "state-data/sol-v2-first-loading.json"
+        },
+        {
+          "id": "first-error",
+          "key": "sol-v2-first-error",
+          "title": "First forecast unavailable",
+          "entry": "The initial forecast request fails with no cache.",
+          "exit": "Retry → first-loading; city selection may request another location.",
+          "focus": "Keep existing focus; announce the outcome. If Retry disappears after success, focus the stable refresh control.",
+          "notes": "Cached weather stays unchanged during refresh. Initial unknown data is rendered as em dashes.",
+          "preview": "images/sol-v2-first-error.png",
+          "data": "state-data/sol-v2-first-error.json"
+        },
+        {
+          "id": "location-search",
+          "key": "sol-v2-location-search",
+          "title": "Location search empty",
+          "entry": "Open the city trigger.",
+          "exit": "Type → location-searching; dismiss → committed forecast.",
+          "focus": "Search input.",
+          "notes": "Lisbon remains committed until a matching candidate forecast succeeds.",
+          "preview": "images/sol-v2-location-search.png",
+          "data": "state-data/sol-v2-location-search.json"
+        },
+        {
+          "id": "location-searching",
+          "key": "sol-v2-location-searching",
+          "title": "Searching locations",
+          "entry": "Type Porto and the query request is pending.",
+          "exit": "Results → location-results; none → location-empty; edit → new query; dismiss → committed forecast.",
+          "focus": "Search input; never focus the loading message.",
+          "notes": "Lisbon remains committed until a matching candidate forecast succeeds.",
+          "preview": "images/sol-v2-location-searching.png",
+          "data": "state-data/sol-v2-location-searching.json"
+        },
+        {
+          "id": "location-empty",
+          "key": "sol-v2-location-empty",
+          "title": "No locations found",
+          "entry": "Query Portoo resolves with no matches.",
+          "exit": "Edit query → location-searching; clear → location-search; dismiss → committed forecast.",
+          "focus": "Search input.",
+          "notes": "Lisbon remains committed until a matching candidate forecast succeeds.",
+          "preview": "images/sol-v2-location-empty.png",
+          "data": "state-data/sol-v2-location-empty.json"
+        },
+        {
+          "id": "location-results",
+          "key": "sol-v2-location-results",
+          "title": "Location results",
+          "entry": "Current Porto query resolves with a matching result.",
+          "exit": "Choose Porto → location-loading; edit query → location-searching; dismiss → committed forecast.",
+          "focus": "Input with Porto as active descendant; pointer activation is also allowed.",
+          "notes": "Lisbon remains committed until a matching candidate forecast succeeds.",
+          "preview": "images/sol-v2-location-results.png",
+          "data": "state-data/sol-v2-location-results.json"
+        },
+        {
+          "id": "location-loading",
+          "key": "sol-v2-location-loading",
+          "title": "New location loading",
+          "entry": "Activate Porto result.",
+          "exit": "Success → porto; failure → location-error; cancel → committed Lisbon.",
+          "focus": "Focus Cancel when results are replaced; announce loading.",
+          "notes": "Lisbon remains committed until a matching candidate forecast succeeds.",
+          "preview": "images/sol-v2-location-loading.png",
+          "data": "state-data/sol-v2-location-loading.json"
+        },
+        {
+          "id": "location-error",
+          "key": "sol-v2-location-error",
+          "title": "New location failed",
+          "entry": "Candidate Porto forecast fails.",
+          "exit": "Retry → location-loading; Cancel/close/Escape → committed Lisbon.",
+          "focus": "Keep current focus if it survives; otherwise focus Retry, without trapping the nonmodal panel.",
+          "notes": "Lisbon remains committed until a matching candidate forecast succeeds.",
+          "preview": "images/sol-v2-location-error.png",
+          "data": "state-data/sol-v2-location-error.json"
+        },
+        {
+          "id": "porto",
+          "key": "sol-v2-porto",
+          "title": "Porto forecast committed",
+          "entry": "Porto forecast request succeeds for the current candidate.",
+          "exit": "Refresh Porto, change day/unit, or open search for another city.",
+          "focus": "Restore focus to the city trigger.",
+          "notes": "Commit 23/24/22/21°C, sunset 21:04 and updated 18:05 together.",
+          "preview": "images/sol-v2-porto.png",
+          "data": "state-data/sol-v2-porto.json"
+        },
+        {
+          "id": "focus",
+          "key": "sol-v2-focus",
+          "title": "Day focus without selection",
+          "entry": "Move day-tab focus from Today to Friday without activation.",
+          "exit": "Enter/Space → friday; arrow away → focus another day; Tab leaves Today selected.",
+          "focus": "Keep focus on the activated unit/day control; do not move it to the temperature.",
+          "notes": "Today remains selected; this is not Friday data.",
+          "preview": "images/sol-v2-focus.png",
+          "data": "state-data/sol-v2-focus.json"
+        }
+      ],
+      "read_only": "The sun, condition, sunset and updated timestamp are read-only. The card shell has no click action. Only the city, units, days and explicit refresh/retry/search controls respond.",
+      "default_image": "images/sol-v2-default.png",
+      "rendered_state_count": 20,
+      "control_count": 8,
+      "audit_clarifications": [
+        "Query-service failure is separate from a failed candidate forecast. Keep the query editable; show “Couldn’t search locations” and Retry in the existing search panel. Retry repeats the current trimmed query; editing clears the error and starts the normal 250 ms debounce. Close, Cancel, Escape and outside dismissal retain the committed location. Keep input focus; announce the error once. This exceptional branch has no separate PNG.",
+        "A malformed forecast (missing dates, non-finite temperatures or unusable location ID) follows the existing initial-error, refresh-error or location-error contract according to its request context. Commit no partial location/forecast data. A response arriving after dismissal, changed query or unmount has no visible effect."
+      ]
+    }
+  }
+}

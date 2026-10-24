@@ -1,0 +1,676 @@
+{
+  "date": "2026-10-24",
+  "documentation_version": "3.2",
+  "rendered_states": 93,
+  "control_groups": 41,
+  "required_control_fields": [
+    "semantics",
+    "pointer",
+    "hover",
+    "press",
+    "keyboard",
+    "disabled_or_pending",
+    "result",
+    "return_or_dismiss",
+    "announcement"
+  ],
+  "study_guides": 6,
+  "local_document_links": 779,
+  "standalone_assets": 32,
+  "checks": [
+    {
+      "key": "sol-v2-default",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-fahrenheit",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-friday",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-friday-fahrenheit",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-saturday",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-saturday-fahrenheit",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-sunday",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-sunday-fahrenheit",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-refreshing",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-refresh-error",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-first-loading",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-first-error",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-location-search",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-location-searching",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-location-empty",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-location-results",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-location-loading",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-location-error",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-porto",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "sol-v2-focus",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-default",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-none",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-one",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-two",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-alternate-three",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-four",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-closed-0",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-closed-1",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-closed-2",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-closed-3",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-closed-4",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-saving",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-save-error",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-focus",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-search-result",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "gather-v2-search-empty",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-default",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-rose",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-citron",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-moss",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-burgundy",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-shuffled-clay",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-shuffled-peel",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-shuffled-brick",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-shuffled-plum",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-shuffled-ash",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-undo-apricot",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-undo-moss",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-loading",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-error",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-copied",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-copy-error",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "courtyard-v2-focus",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "roam-v2-default",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "roam-v2-weekender",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "roam-v2-review-weekender",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "roam-v2-confirmed-weekender",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "roam-v2-review-everyday",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "roam-v2-confirmed-everyday",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "roam-v2-worldwide",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "roam-v2-review-worldwide",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "roam-v2-confirmed-worldwide",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "roam-v2-checkout-pending",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "roam-v2-checkout-error",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "roam-v2-cancelled",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "roam-v2-account-sign-in",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "roam-v2-account-error",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "roam-v2-focus",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "kiln-v2-default",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "kiln-v2-previous",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "kiln-v2-week",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "kiln-v2-detail-render",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "kiln-v2-detail-explore",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "kiln-v2-detail-compose",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "kiln-v2-detail-export",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "kiln-v2-loading",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "kiln-v2-error",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "kiln-v2-missing",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "kiln-v2-zero",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "kiln-v2-near-limit",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "kiln-v2-manage",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "kiln-v2-plans-loading",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "kiln-v2-plans-error",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "folio-v2-default",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "folio-v2-explore",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "folio-v2-saved",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "folio-v2-profile",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "folio-v2-focus",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "folio-v2-hover",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "folio-v2-pending",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "folio-v2-error",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "folio-v2-saved-empty",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    },
+    {
+      "key": "folio-v2-profile-signed-out",
+      "image_bytes_unchanged": true,
+      "png_2x_dimensions": true,
+      "portable_svg": true,
+      "state_contract": true
+    }
+  ],
+  "application_code_added": false,
+  "live_interactions_run": false,
+  "result": "Package integrity and authored state coverage verified; documented-only branches identified in AUDIT.md."
+}

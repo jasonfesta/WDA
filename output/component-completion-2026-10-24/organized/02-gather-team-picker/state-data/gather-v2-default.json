@@ -1,0 +1,62 @@
+{
+  "key": "gather-v2-default",
+  "family": "gather",
+  "title": "Team picker · default",
+  "id": "default",
+  "selected_people": [
+    {
+      "name": "Lena Ortiz",
+      "role": "Design lead",
+      "initials": "LO",
+      "color": "#eed9d2"
+    },
+    {
+      "name": "Noah Bell",
+      "role": "Product designer",
+      "initials": "NB",
+      "color": "#f3dfb8"
+    },
+    {
+      "name": "Amara Chen",
+      "role": "Engineer",
+      "initials": "AC",
+      "color": "#e1e5d3"
+    }
+  ],
+  "count": 3,
+  "open": true,
+  "search": "",
+  "saved_count": 3,
+  "width": 400,
+  "height": 484,
+  "svg": "editable-svg/gather-v2-default.svg",
+  "png": "images/gather-v2-default.png",
+  "specification": "state-data/gather-v2-default.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "LO",
+    "NB",
+    "AC",
+    "Project team",
+    "3",
+    "Project team",
+    "Choose who appears on this project.",
+    "Find a teammate…",
+    "LO",
+    "Lena Ortiz",
+    "Design lead",
+    "NB",
+    "Noah Bell",
+    "Product designer",
+    "AC",
+    "Amara Chen",
+    "Engineer",
+    "EB",
+    "Eli Brooks",
+    "Photographer",
+    "3 selected",
+    "Clear",
+    "Selection saved"
+  ],
+  "path_base": "study folder"
+}

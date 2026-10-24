@@ -1,0 +1,43 @@
+{
+  "key": "sol-v2-saturday",
+  "family": "sol",
+  "title": "Saturday forecast",
+  "id": "saturday",
+  "unit": "C",
+  "selected_day": 2,
+  "city": "Lisbon",
+  "temperatures": [
+    28,
+    29,
+    27,
+    26
+  ],
+  "sunset": "21:00",
+  "loading": false,
+  "width": 440,
+  "height": 344,
+  "svg": "editable-svg/sol-v2-saturday.svg",
+  "png": "images/sol-v2-saturday.png",
+  "specification": "state-data/sol-v2-saturday.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Lisbon",
+    "Saturday, 20 June",
+    "°C",
+    "°F",
+    "27°",
+    "Sunny",
+    "Sunset",
+    "21:00",
+    "Today",
+    "28°",
+    "Fri 19",
+    "29°",
+    "Sat 20",
+    "27°",
+    "Sun 21",
+    "26°",
+    "Updated 18:00"
+  ],
+  "path_base": "study folder"
+}

@@ -1,0 +1,52 @@
+{
+  "key": "gather-v2-search-empty",
+  "family": "gather",
+  "title": "No teammates match",
+  "id": "search-empty",
+  "selected_people": [
+    {
+      "name": "Lena Ortiz",
+      "role": "Design lead",
+      "initials": "LO",
+      "color": "#eed9d2"
+    },
+    {
+      "name": "Noah Bell",
+      "role": "Product designer",
+      "initials": "NB",
+      "color": "#f3dfb8"
+    },
+    {
+      "name": "Amara Chen",
+      "role": "Engineer",
+      "initials": "AC",
+      "color": "#e1e5d3"
+    }
+  ],
+  "count": 3,
+  "open": true,
+  "search": "Zoe",
+  "saved_count": 3,
+  "width": 400,
+  "height": 484,
+  "svg": "editable-svg/gather-v2-search-empty.svg",
+  "png": "images/gather-v2-search-empty.png",
+  "specification": "state-data/gather-v2-search-empty.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "LO",
+    "NB",
+    "AC",
+    "Project team",
+    "3",
+    "Project team",
+    "Choose who appears on this project.",
+    "Zoe",
+    "No teammates found",
+    "Try another name.",
+    "3 selected",
+    "Clear",
+    "Selection saved"
+  ],
+  "path_base": "study folder"
+}

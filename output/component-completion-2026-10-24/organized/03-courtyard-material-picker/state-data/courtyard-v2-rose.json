@@ -1,0 +1,60 @@
+{
+  "key": "courtyard-v2-rose",
+  "family": "courtyard",
+  "title": "Rose selected",
+  "id": "rose",
+  "palette": [
+    [
+      "Rose",
+      "Polished ceramic",
+      "#D68C80"
+    ],
+    [
+      "Apricot",
+      "Matte ceramic",
+      "#E9A16D"
+    ],
+    [
+      "Citron",
+      "Textured clay",
+      "#E4C65A"
+    ],
+    [
+      "Moss",
+      "Natural stone",
+      "#797D50"
+    ],
+    [
+      "Burgundy",
+      "Ribbed wood",
+      "#65333C"
+    ]
+  ],
+  "selected": 0,
+  "material": {
+    "name": "Rose",
+    "finish": "Polished ceramic",
+    "hex": "#D68C80"
+  },
+  "width": 640,
+  "height": 304,
+  "svg": "editable-svg/courtyard-v2-rose.svg",
+  "png": "images/courtyard-v2-rose.png",
+  "specification": "state-data/courtyard-v2-rose.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Material",
+    "A finish for your next idea.",
+    "Shuffle",
+    "Rose",
+    "Apricot",
+    "Citron",
+    "Moss",
+    "Burgundy",
+    "Rose",
+    "Polished ceramic",
+    "#D68C80",
+    "Applied to selected object"
+  ],
+  "path_base": "study folder"
+}

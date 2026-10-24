@@ -1,0 +1,22 @@
+{
+  "key": "folio-v2-hover",
+  "family": "folio",
+  "title": "Explore hover",
+  "id": "hover",
+  "current_route": "Studio",
+  "focus_route": null,
+  "hover_route": "Explore",
+  "width": 560,
+  "height": 96,
+  "svg": "editable-svg/folio-v2-hover.svg",
+  "png": "images/folio-v2-hover.png",
+  "specification": "state-data/folio-v2-hover.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Studio",
+    "Explore",
+    "Saved",
+    "Profile"
+  ],
+  "path_base": "study folder"
+}

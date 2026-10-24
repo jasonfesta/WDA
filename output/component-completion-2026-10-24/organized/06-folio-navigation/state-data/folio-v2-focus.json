@@ -1,0 +1,22 @@
+{
+  "key": "folio-v2-focus",
+  "family": "folio",
+  "title": "Keyboard focus on Saved",
+  "id": "focus",
+  "current_route": "Studio",
+  "focus_route": "Saved",
+  "hover_route": null,
+  "width": 560,
+  "height": 96,
+  "svg": "editable-svg/folio-v2-focus.svg",
+  "png": "images/folio-v2-focus.png",
+  "specification": "state-data/folio-v2-focus.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Studio",
+    "Explore",
+    "Saved",
+    "Profile"
+  ],
+  "path_base": "study folder"
+}

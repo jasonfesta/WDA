@@ -1,0 +1,60 @@
+{
+  "key": "courtyard-v2-burgundy",
+  "family": "courtyard",
+  "title": "Burgundy selected",
+  "id": "burgundy",
+  "palette": [
+    [
+      "Rose",
+      "Polished ceramic",
+      "#D68C80"
+    ],
+    [
+      "Apricot",
+      "Matte ceramic",
+      "#E9A16D"
+    ],
+    [
+      "Citron",
+      "Textured clay",
+      "#E4C65A"
+    ],
+    [
+      "Moss",
+      "Natural stone",
+      "#797D50"
+    ],
+    [
+      "Burgundy",
+      "Ribbed wood",
+      "#65333C"
+    ]
+  ],
+  "selected": 4,
+  "material": {
+    "name": "Burgundy",
+    "finish": "Ribbed wood",
+    "hex": "#65333C"
+  },
+  "width": 640,
+  "height": 304,
+  "svg": "editable-svg/courtyard-v2-burgundy.svg",
+  "png": "images/courtyard-v2-burgundy.png",
+  "specification": "state-data/courtyard-v2-burgundy.json",
+  "method": "Native SVG from deterministic fixtures; PNG at 2×",
+  "visible_text": [
+    "Material",
+    "A finish for your next idea.",
+    "Shuffle",
+    "Rose",
+    "Apricot",
+    "Citron",
+    "Moss",
+    "Burgundy",
+    "Burgundy",
+    "Ribbed wood",
+    "#65333C",
+    "Applied to selected object"
+  ],
+  "path_base": "study folder"
+}
