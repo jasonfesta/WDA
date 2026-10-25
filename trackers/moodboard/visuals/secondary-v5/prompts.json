@@ -1,0 +1,654 @@
+{
+  "method": "built-in image_gen",
+  "scope": "36 new static secondary frames; 12 per concept; 3 per surface; components excluded",
+  "jobs": [
+    {
+      "id": "ramp-mobile-01-transactions",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "mobile",
+      "page": "transactions",
+      "label": "Activity",
+      "number": 1,
+      "file": "images/ramp/mobile-01-transactions.png",
+      "anchorRelative": "visuals/round-02/ramp-mobile.png",
+      "anchorSha256": "0c2187eb7faa00fb66e79da0b4b7ee82d116e8aa833d306f2e9368b84f836ae9",
+      "sourceIds": [
+        "ramp-mobile"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Ledger frame exactly: same lowercase ledger wordmark and acid-yellow slash, warm white field, very heavy black grotesk headings, smaller clean sans labels, forest-green data marks, acid-yellow primary controls, soft neutral sidebar. Same sidebar and bottom navigation, icon weight, corner radii, hairline separators and alignment. No new palette, font, card system or illustrations. Keep open flat financial rows. Personal tracker, not business procurement.\nOne native mobile app screenshot, portrait, same aspect and canvas framing as the attached first mobile frame. Status bar and bottom navigation fully visible. Realistic touch controls and readable compact hierarchy. No phone hardware or surrounding presentation board.\nNew secondary page: Activity. Selected transaction review. Heading \"Activity\"; month \"October 2026\"; search and All / Needs review tabs. Open rows for Green Market $48.00, North Coffee $6.00, City Transit $12.00, Everyday Goods $24.50, Home Rent $1,500.00. Select Everyday Goods. Its receipt has subtotal $22.90, tax $1.60, total $24.50, date Oct 23, 2026. Category Shopping, editable memo \"Household supplies\", action \"Save changes\". On mobile use a focused full-page transaction detail with back arrow, prominent $24.50, receipt thumbnail and editable fields; do not squeeze the list alongside it. Desktop and browser use list plus selected detail pane. Activity selected in existing nav.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "0897a9476718ed1af91a3ca74d4c18a77a1f68204ad90d71eb2c5b7b3e7822c9"
+    },
+    {
+      "id": "ramp-mobile-02-budget",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "mobile",
+      "page": "budget",
+      "label": "Groceries budget",
+      "number": 2,
+      "file": "images/ramp/mobile-02-budget.png",
+      "anchorRelative": "visuals/round-02/ramp-mobile.png",
+      "anchorSha256": "0c2187eb7faa00fb66e79da0b4b7ee82d116e8aa833d306f2e9368b84f836ae9",
+      "sourceIds": [
+        "ramp-budget"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Ledger frame exactly: same lowercase ledger wordmark and acid-yellow slash, warm white field, very heavy black grotesk headings, smaller clean sans labels, forest-green data marks, acid-yellow primary controls, soft neutral sidebar. Same sidebar and bottom navigation, icon weight, corner radii, hairline separators and alignment. No new palette, font, card system or illustrations. Keep open flat financial rows. Personal tracker, not business procurement.\nOne native mobile app screenshot, portrait, same aspect and canvas framing as the attached first mobile frame. Status bar and bottom navigation fully visible. Realistic touch controls and readable compact hierarchy. No phone hardware or surrounding presentation board.\nNew secondary page: Groceries budget. Category detail, breadcrumb Budget / Groceries, title \"Groceries\". October 2026. Clear $420 spent of $650 and $230 remaining, 65% rounded. One shared green utilization bar and four weekly columns W1 $120 W2 $95 W3 $157 W4 $48. Flat transaction rows with matching amounts. A compact \"Monthly limit\" field $650 with \"Save limit\" action, never a new checkout. Show a legible trend and complete category context rather than unrelated metric cards. Budget selected in existing nav.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "0d637782c9d9fa83f6c972817d42e6afd53996429c0b9df01e04c2eb326c3b14"
+    },
+    {
+      "id": "ramp-mobile-03-recurring",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "mobile",
+      "page": "recurring",
+      "label": "Upcoming bills",
+      "number": 3,
+      "file": "images/ramp/mobile-03-recurring.png",
+      "anchorRelative": "visuals/round-02/ramp-mobile.png",
+      "anchorSha256": "0c2187eb7faa00fb66e79da0b4b7ee82d116e8aa833d306f2e9368b84f836ae9",
+      "sourceIds": [
+        "ramp-expenses"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Ledger frame exactly: same lowercase ledger wordmark and acid-yellow slash, warm white field, very heavy black grotesk headings, smaller clean sans labels, forest-green data marks, acid-yellow primary controls, soft neutral sidebar. Same sidebar and bottom navigation, icon weight, corner radii, hairline separators and alignment. No new palette, font, card system or illustrations. Keep open flat financial rows. Personal tracker, not business procurement.\nOne native mobile app screenshot, portrait, same aspect and canvas framing as the attached first mobile frame. Status bar and bottom navigation fully visible. Realistic touch controls and readable compact hierarchy. No phone hardware or surrounding presentation board.\nNew secondary page: Upcoming bills. Recurring payments schedule, title \"Coming up\". \"3 payments \u00b7 $580 total\". Three airy rows: Utilities $180 due Nov 12, Internet $80 due Nov 15, Insurance $320 due Nov 28. A clear upcoming timeline for November and a selected Internet detail section: Monthly, next payment Nov 15, $80, paid from Checking \u2022\u20222048, reminder 3 days before. \"Edit reminder\" primary. Desktop/browser Recurring selected; mobile accessible as Accounts / Recurring, preserving original bottom nav. These are scheduled items, not paid confirmations.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "d08dc6e6742fb03c76a612f1ce1c1feb583f6e2ba0f5d8b671db8ce346cc354a"
+    },
+    {
+      "id": "ramp-desktop-01-transactions",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "desktop",
+      "page": "transactions",
+      "label": "Activity",
+      "number": 1,
+      "file": "images/ramp/desktop-01-transactions.png",
+      "anchorRelative": "visuals/round-02/ramp-desktop.png",
+      "anchorSha256": "91ec5c06383ebb5642893ca69ae4fc1a64390f318fb7113f09ec9167c957efcc",
+      "sourceIds": [
+        "ramp-mobile"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Ledger frame exactly: same lowercase ledger wordmark and acid-yellow slash, warm white field, very heavy black grotesk headings, smaller clean sans labels, forest-green data marks, acid-yellow primary controls, soft neutral sidebar. Same sidebar and bottom navigation, icon weight, corner radii, hairline separators and alignment. No new palette, font, card system or illustrations. Keep open flat financial rows. Personal tracker, not business procurement.\nOne native desktop app window, landscape 3:2, same macOS titlebar, sidebar width, navigation placement and typography as the attached first desktop frame. All content fits one screen with purposeful whitespace. No browser address bar, no device hardware.\nNew secondary page: Activity. Selected transaction review. Heading \"Activity\"; month \"October 2026\"; search and All / Needs review tabs. Open rows for Green Market $48.00, North Coffee $6.00, City Transit $12.00, Everyday Goods $24.50, Home Rent $1,500.00. Select Everyday Goods. Its receipt has subtotal $22.90, tax $1.60, total $24.50, date Oct 23, 2026. Category Shopping, editable memo \"Household supplies\", action \"Save changes\". On mobile use a focused full-page transaction detail with back arrow, prominent $24.50, receipt thumbnail and editable fields; do not squeeze the list alongside it. Desktop and browser use list plus selected detail pane. Activity selected in existing nav.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "a13e678784812263e6e536fe12c1703c7810e0676e00a054e74885e6fbd1bc96"
+    },
+    {
+      "id": "ramp-desktop-02-budget",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "desktop",
+      "page": "budget",
+      "label": "Groceries budget",
+      "number": 2,
+      "file": "images/ramp/desktop-02-budget.png",
+      "anchorRelative": "visuals/round-02/ramp-desktop.png",
+      "anchorSha256": "91ec5c06383ebb5642893ca69ae4fc1a64390f318fb7113f09ec9167c957efcc",
+      "sourceIds": [
+        "ramp-budget"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Ledger frame exactly: same lowercase ledger wordmark and acid-yellow slash, warm white field, very heavy black grotesk headings, smaller clean sans labels, forest-green data marks, acid-yellow primary controls, soft neutral sidebar. Same sidebar and bottom navigation, icon weight, corner radii, hairline separators and alignment. No new palette, font, card system or illustrations. Keep open flat financial rows. Personal tracker, not business procurement.\nOne native desktop app window, landscape 3:2, same macOS titlebar, sidebar width, navigation placement and typography as the attached first desktop frame. All content fits one screen with purposeful whitespace. No browser address bar, no device hardware.\nNew secondary page: Groceries budget. Category detail, breadcrumb Budget / Groceries, title \"Groceries\". October 2026. Clear $420 spent of $650 and $230 remaining, 65% rounded. One shared green utilization bar and four weekly columns W1 $120 W2 $95 W3 $157 W4 $48. Flat transaction rows with matching amounts. A compact \"Monthly limit\" field $650 with \"Save limit\" action, never a new checkout. Show a legible trend and complete category context rather than unrelated metric cards. Budget selected in existing nav.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "7fbd4bc71a40a1bc4e879f34578e689dfa148d0343a58fadcb98b238c330e7c8"
+    },
+    {
+      "id": "ramp-desktop-03-recurring",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "desktop",
+      "page": "recurring",
+      "label": "Upcoming bills",
+      "number": 3,
+      "file": "images/ramp/desktop-03-recurring.png",
+      "anchorRelative": "visuals/round-02/ramp-desktop.png",
+      "anchorSha256": "91ec5c06383ebb5642893ca69ae4fc1a64390f318fb7113f09ec9167c957efcc",
+      "sourceIds": [
+        "ramp-expenses"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Ledger frame exactly: same lowercase ledger wordmark and acid-yellow slash, warm white field, very heavy black grotesk headings, smaller clean sans labels, forest-green data marks, acid-yellow primary controls, soft neutral sidebar. Same sidebar and bottom navigation, icon weight, corner radii, hairline separators and alignment. No new palette, font, card system or illustrations. Keep open flat financial rows. Personal tracker, not business procurement.\nOne native desktop app window, landscape 3:2, same macOS titlebar, sidebar width, navigation placement and typography as the attached first desktop frame. All content fits one screen with purposeful whitespace. No browser address bar, no device hardware.\nNew secondary page: Upcoming bills. Recurring payments schedule, title \"Coming up\". \"3 payments \u00b7 $580 total\". Three airy rows: Utilities $180 due Nov 12, Internet $80 due Nov 15, Insurance $320 due Nov 28. A clear upcoming timeline for November and a selected Internet detail section: Monthly, next payment Nov 15, $80, paid from Checking \u2022\u20222048, reminder 3 days before. \"Edit reminder\" primary. Desktop/browser Recurring selected; mobile accessible as Accounts / Recurring, preserving original bottom nav. These are scheduled items, not paid confirmations.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "c8c1106faee8b814e2acc36a2e04216ab3138cd2ad24c477259485dfbead42bb"
+    },
+    {
+      "id": "ramp-web-app-01-transactions",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "web-app",
+      "page": "transactions",
+      "label": "Activity",
+      "number": 1,
+      "file": "images/ramp/web-app-01-transactions.png",
+      "anchorRelative": "visuals/round-02/ramp-web-app.png",
+      "anchorSha256": "163c179c3f4636be0efe429438ef0cc3015c0fc3ede620b098a996ea036e9669",
+      "sourceIds": [
+        "ramp-mobile"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Ledger frame exactly: same lowercase ledger wordmark and acid-yellow slash, warm white field, very heavy black grotesk headings, smaller clean sans labels, forest-green data marks, acid-yellow primary controls, soft neutral sidebar. Same sidebar and bottom navigation, icon weight, corner radii, hairline separators and alignment. No new palette, font, card system or illustrations. Keep open flat financial rows. Personal tracker, not business procurement.\nOne browser-based application screenshot, landscape 3:2, same browser chrome and application navigation as the attached first web app frame. Keep the content dense enough to be useful and the selected state clear. No surrounding presentation frame.\nNew secondary page: Activity. Selected transaction review. Heading \"Activity\"; month \"October 2026\"; search and All / Needs review tabs. Open rows for Green Market $48.00, North Coffee $6.00, City Transit $12.00, Everyday Goods $24.50, Home Rent $1,500.00. Select Everyday Goods. Its receipt has subtotal $22.90, tax $1.60, total $24.50, date Oct 23, 2026. Category Shopping, editable memo \"Household supplies\", action \"Save changes\". On mobile use a focused full-page transaction detail with back arrow, prominent $24.50, receipt thumbnail and editable fields; do not squeeze the list alongside it. Desktop and browser use list plus selected detail pane. Activity selected in existing nav.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "1c7b562d42ddf747e099a34c62e893ca58c4eace61b3e38533d1c893d8ecfe52"
+    },
+    {
+      "id": "ramp-web-app-02-budget",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "web-app",
+      "page": "budget",
+      "label": "Groceries budget",
+      "number": 2,
+      "file": "images/ramp/web-app-02-budget.png",
+      "anchorRelative": "visuals/round-02/ramp-web-app.png",
+      "anchorSha256": "163c179c3f4636be0efe429438ef0cc3015c0fc3ede620b098a996ea036e9669",
+      "sourceIds": [
+        "ramp-budget"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Ledger frame exactly: same lowercase ledger wordmark and acid-yellow slash, warm white field, very heavy black grotesk headings, smaller clean sans labels, forest-green data marks, acid-yellow primary controls, soft neutral sidebar. Same sidebar and bottom navigation, icon weight, corner radii, hairline separators and alignment. No new palette, font, card system or illustrations. Keep open flat financial rows. Personal tracker, not business procurement.\nOne browser-based application screenshot, landscape 3:2, same browser chrome and application navigation as the attached first web app frame. Keep the content dense enough to be useful and the selected state clear. No surrounding presentation frame.\nNew secondary page: Groceries budget. Category detail, breadcrumb Budget / Groceries, title \"Groceries\". October 2026. Clear $420 spent of $650 and $230 remaining, 65% rounded. One shared green utilization bar and four weekly columns W1 $120 W2 $95 W3 $157 W4 $48. Flat transaction rows with matching amounts. A compact \"Monthly limit\" field $650 with \"Save limit\" action, never a new checkout. Show a legible trend and complete category context rather than unrelated metric cards. Budget selected in existing nav.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional. Accuracy constraint for transaction rows: show exactly Oct24 Green Market $48; Oct19 Whole Foods $97; Oct16 Local Market $60; Oct11 Trader Joe's $95; Oct4 Safeway $120. Total420, weekly120/95/157/48. No other transactions. Keep dates in descending order.",
+      "status": "generated",
+      "sha256": "3936a3cf8b3baca9c457982bbdd5119cb1519ee2c6da0b69aa97ce75eb329e5b"
+    },
+    {
+      "id": "ramp-web-app-03-recurring",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "web-app",
+      "page": "recurring",
+      "label": "Upcoming bills",
+      "number": 3,
+      "file": "images/ramp/web-app-03-recurring.png",
+      "anchorRelative": "visuals/round-02/ramp-web-app.png",
+      "anchorSha256": "163c179c3f4636be0efe429438ef0cc3015c0fc3ede620b098a996ea036e9669",
+      "sourceIds": [
+        "ramp-expenses"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Ledger frame exactly: same lowercase ledger wordmark and acid-yellow slash, warm white field, very heavy black grotesk headings, smaller clean sans labels, forest-green data marks, acid-yellow primary controls, soft neutral sidebar. Same sidebar and bottom navigation, icon weight, corner radii, hairline separators and alignment. No new palette, font, card system or illustrations. Keep open flat financial rows. Personal tracker, not business procurement.\nOne browser-based application screenshot, landscape 3:2, same browser chrome and application navigation as the attached first web app frame. Keep the content dense enough to be useful and the selected state clear. No surrounding presentation frame.\nNew secondary page: Upcoming bills. Recurring payments schedule, title \"Coming up\". \"3 payments \u00b7 $580 total\". Three airy rows: Utilities $180 due Nov 12, Internet $80 due Nov 15, Insurance $320 due Nov 28. A clear upcoming timeline for November and a selected Internet detail section: Monthly, next payment Nov 15, $80, paid from Checking \u2022\u20222048, reminder 3 days before. \"Edit reminder\" primary. Desktop/browser Recurring selected; mobile accessible as Accounts / Recurring, preserving original bottom nav. These are scheduled items, not paid confirmations.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "67537bd93d9733558644ff21500a5022fd4382e5fecfb2a2a367ba25d626821f"
+    },
+    {
+      "id": "ramp-web-desk-01-budgeting",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "web-desk",
+      "page": "budgeting",
+      "label": "Budgeting feature",
+      "number": 1,
+      "file": "images/ramp/web-desk-01-budgeting.png",
+      "anchorRelative": "visuals/round-02/ramp-web-desk.png",
+      "anchorSha256": "805c32b2fd1617da8a7eda1c85c4c72778f0cabe0f8ffa2c55e155bb2ccf0679",
+      "sourceIds": [
+        "ramp-web"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Ledger frame exactly: same lowercase ledger wordmark and acid-yellow slash, warm white field, very heavy black grotesk headings, smaller clean sans labels, forest-green data marks, acid-yellow primary controls, soft neutral sidebar. Same sidebar and bottom navigation, icon weight, corner radii, hairline separators and alignment. No new palette, font, card system or illustrations. Keep open flat financial rows. Personal tracker, not business procurement.\nOne complete long-form desktop website page from full top navigation to full footer, using the same image aspect ratio and desktop column proportions as the attached first website frame. This is a secondary website page, not a dashboard and not a mobile layout. Four to six carefully paced sections with concise real copy, complete footer and no clipped elements.\nNew secondary page: Budgeting feature. A complete secondary product page reached from Product, not a homepage. Breadcrumb Product / Budgeting. Headline \"A budget with room to live.\" Same oversized Ledger type. Hero shows a large realistic budget-category preview, not a new dashboard style. Three editorial open sections: \"Set a limit that fits\", \"See what is already spoken for\", \"Adjust as life changes\"; each pairs concise copy with original-style product fragments. Include a readable Groceries $420 / $650 sample and $230 remaining, 3-question FAQ, forest-green closing action \"Build your budget\", and full original-style footer.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "3881841bc75219752988d1e7595b4c902cb829092332c93bfa23fa6e3722a55a"
+    },
+    {
+      "id": "ramp-web-desk-02-spending",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "web-desk",
+      "page": "spending",
+      "label": "Spending feature",
+      "number": 2,
+      "file": "images/ramp/web-desk-02-spending.png",
+      "anchorRelative": "visuals/round-02/ramp-web-desk.png",
+      "anchorSha256": "805c32b2fd1617da8a7eda1c85c4c72778f0cabe0f8ffa2c55e155bb2ccf0679",
+      "sourceIds": [
+        "ramp-expenses"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Ledger frame exactly: same lowercase ledger wordmark and acid-yellow slash, warm white field, very heavy black grotesk headings, smaller clean sans labels, forest-green data marks, acid-yellow primary controls, soft neutral sidebar. Same sidebar and bottom navigation, icon weight, corner radii, hairline separators and alignment. No new palette, font, card system or illustrations. Keep open flat financial rows. Personal tracker, not business procurement.\nOne complete long-form desktop website page from full top navigation to full footer, using the same image aspect ratio and desktop column proportions as the attached first website frame. This is a secondary website page, not a dashboard and not a mobile layout. Four to six carefully paced sections with concise real copy, complete footer and no clipped elements.\nNew secondary page: Spending feature. Full secondary product page Product / Spending. Headline \"Every purchase. In context.\" Large original-style activity table with selected receipt as hero, then two alternating explanatory sections \"Keep the details close\" and \"Give every purchase a place\". Show merchant, date, category and memo examples. A broad low-ink comparison of categorized and needs-review states, no fabricated testimonials or metrics. Closing acid-yellow action \"See your spending\", full footer.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "c0f5cee808103f25ea273c270c5da64576d88f203536bbd95077def3deb76c52"
+    },
+    {
+      "id": "ramp-web-desk-03-how-it-works",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "web-desk",
+      "page": "how-it-works",
+      "label": "How it works",
+      "number": 3,
+      "file": "images/ramp/web-desk-03-how-it-works.png",
+      "anchorRelative": "visuals/round-02/ramp-web-desk.png",
+      "anchorSha256": "805c32b2fd1617da8a7eda1c85c4c72778f0cabe0f8ffa2c55e155bb2ccf0679",
+      "sourceIds": [
+        "ramp-web"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Ledger frame exactly: same lowercase ledger wordmark and acid-yellow slash, warm white field, very heavy black grotesk headings, smaller clean sans labels, forest-green data marks, acid-yellow primary controls, soft neutral sidebar. Same sidebar and bottom navigation, icon weight, corner radii, hairline separators and alignment. No new palette, font, card system or illustrations. Keep open flat financial rows. Personal tracker, not business procurement.\nOne complete long-form desktop website page from full top navigation to full footer, using the same image aspect ratio and desktop column proportions as the attached first website frame. This is a secondary website page, not a dashboard and not a mobile layout. Four to six carefully paced sections with concise real copy, complete footer and no clipped elements.\nNew secondary page: How it works. Complete How it works page. Headline \"A clearer month starts here.\" A deliberate 3-step editorial sequence, large 01 02 03 numerals, linked by thin rules: Add your accounts, Set your categories, Review your week. Beside each, a detailed Ledger UI fragment at the same type scale and palette as the first frame. Small section on recurring reminders, a concise useful FAQ and forest-green closing strip \"Make room for what matters.\" Full navigation and footer. No pricing, fabricated integrations or testimonials.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "f77ebd163baba257842024dbdddb5693b5b029b3fb090be098e9372587b19ad7"
+    },
+    {
+      "id": "peloton-mobile-01-classes",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "mobile",
+      "page": "classes",
+      "label": "Class library",
+      "number": 1,
+      "file": "images/peloton/mobile-01-classes.png",
+      "anchorRelative": "visuals/health-peloton-v4/mobile.png",
+      "anchorSha256": "90bb2ccca6a96b516bf15f3ed0c8e7ec257c72b205b6ae36a7834dbeb9b7d934",
+      "sourceIds": [
+        "peloton-classes"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached FORM first frame exactly. Same spaced custom FORM mark, matte near-black/graphite, normal-width white neo-grotesk typography, quiet grey labels, violet completion accents, white pill primary controls. Same fine line icons, sidebar or top/bottom native navigation, generous but compact app spacing. Preserve the fictional Asian female coach Maya Chen, dark athletic clothing, soft lavender-grey studio and natural skin. Do not introduce Peloton logos, new fonts, neon, banking-style charts or a metric-card wall. Photography leads only where the page calls for it.\nOne native mobile app screenshot, portrait, same aspect and canvas framing as the attached first mobile frame. Status bar and bottom navigation fully visible. Realistic touch controls and readable compact hierarchy. No phone hardware or surrounding presentation board.\nNew secondary page: Class library. Library page with title \"Find your next session\", compact search \"Search classes\", discipline tabs All / Strength / Mobility / Run. Filter chips Duration, Equipment, Instructor. Mobility selected. An editorial featured horizontal image \"20 min Mobility\" Maya Chen \u2022 All levels, with two or three flatter rows beneath: 10 min Morning Stretch, 15 min Hips & Back, 30 min Full Body Strength. Human images in exactly the same studio/photo style, duration labels and small bookmark controls. Bottom nav remains Today / Plan / Progress / You on mobile; show back navigation to Today, not a new fifth nav item. Desktop Library is selected; browser use existing top nav with a Library breadcrumb. Native app UI, not a promotional poster.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "46e6f2d87edb94e41f706bd4a86972bfad3d81f70761e74b10a83fbd48b7e060"
+    },
+    {
+      "id": "peloton-mobile-02-session",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "mobile",
+      "page": "session",
+      "label": "Session detail",
+      "number": 2,
+      "file": "images/peloton/mobile-02-session.png",
+      "anchorRelative": "visuals/health-peloton-v4/mobile.png",
+      "anchorSha256": "90bb2ccca6a96b516bf15f3ed0c8e7ec257c72b205b6ae36a7834dbeb9b7d934",
+      "sourceIds": [
+        "peloton-classes"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached FORM first frame exactly. Same spaced custom FORM mark, matte near-black/graphite, normal-width white neo-grotesk typography, quiet grey labels, violet completion accents, white pill primary controls. Same fine line icons, sidebar or top/bottom native navigation, generous but compact app spacing. Preserve the fictional Asian female coach Maya Chen, dark athletic clothing, soft lavender-grey studio and natural skin. Do not introduce Peloton logos, new fonts, neon, banking-style charts or a metric-card wall. Photography leads only where the page calls for it.\nOne native mobile app screenshot, portrait, same aspect and canvas framing as the attached first mobile frame. Status bar and bottom navigation fully visible. Realistic touch controls and readable compact hierarchy. No phone hardware or surrounding presentation board.\nNew secondary page: Session detail. Focused class detail for \"20 min Mobility\" with fictional coach Maya Chen, All levels, No equipment. Same coach in a fresh natural mobility pose in the same studio, editorial photo occupying about 38% of mobile, 45% of wide view. Back and bookmark actions. Under photo/title: short sentence \"A little space to reset.\" Three clear class-plan rows: Warm up 3 min, Mobility flow 14 min, Cool down 3 min (total 20). A coach row and primary white pill \"Start session\", secondary \"Add to plan\". Complete, readable controls inside screen. Do not reuse the original home weekly summary or imply completion.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "daae1e01ed4358337347e6aab5c822985937ade26f18f7ad9649b3c89823024b"
+    },
+    {
+      "id": "peloton-mobile-03-plan",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "mobile",
+      "page": "plan",
+      "label": "Weekly plan",
+      "number": 3,
+      "file": "images/peloton/mobile-03-plan.png",
+      "anchorRelative": "visuals/health-peloton-v4/mobile.png",
+      "anchorSha256": "90bb2ccca6a96b516bf15f3ed0c8e7ec257c72b205b6ae36a7834dbeb9b7d934",
+      "sourceIds": [
+        "peloton-plan"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached FORM first frame exactly. Same spaced custom FORM mark, matte near-black/graphite, normal-width white neo-grotesk typography, quiet grey labels, violet completion accents, white pill primary controls. Same fine line icons, sidebar or top/bottom native navigation, generous but compact app spacing. Preserve the fictional Asian female coach Maya Chen, dark athletic clothing, soft lavender-grey studio and natural skin. Do not introduce Peloton logos, new fonts, neon, banking-style charts or a metric-card wall. Photography leads only where the page calls for it.\nOne native mobile app screenshot, portrait, same aspect and canvas framing as the attached first mobile frame. Status bar and bottom navigation fully visible. Realistic touch controls and readable compact hierarchy. No phone hardware or surrounding presentation board.\nNew secondary page: Weekly plan. Your plan screen for Oct 19\u201325, 2026. Exactly Mon19 45 min Ride completed, Wed21 35 min Strength completed, Sat24 60 min Run completed, Sun25 20 min Mobility planned. Tue20 Thu22 Fri23 rest. Total completed 140 min, 3/4 workouts, 75%; planned mobility excluded. Vertical day agenda on mobile; spacious horizontal day timeline with meaningful session rows on desktop/browser. Small \"Edit schedule\" and contextual Swap control on the Sunday mobility row. Violet checks only Monday Wednesday Saturday; Sunday is outlined. One photographic next-session strip, not a page of big cards. Plan selected in persistent navigation.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "8020b3c3d243f1e621aca3ec46c64ff31eafd9f7a60dbe72e89ed1fcaf6f91cb"
+    },
+    {
+      "id": "peloton-desktop-01-classes",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "desktop",
+      "page": "classes",
+      "label": "Class library",
+      "number": 1,
+      "file": "images/peloton/desktop-01-classes.png",
+      "anchorRelative": "visuals/health-peloton-v4/desktop.png",
+      "anchorSha256": "c0ef6bf02aa622d626795cdc16e25069749736405628c4ccdbe459c61072a639",
+      "sourceIds": [
+        "peloton-classes"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached FORM first frame exactly. Same spaced custom FORM mark, matte near-black/graphite, normal-width white neo-grotesk typography, quiet grey labels, violet completion accents, white pill primary controls. Same fine line icons, sidebar or top/bottom native navigation, generous but compact app spacing. Preserve the fictional Asian female coach Maya Chen, dark athletic clothing, soft lavender-grey studio and natural skin. Do not introduce Peloton logos, new fonts, neon, banking-style charts or a metric-card wall. Photography leads only where the page calls for it.\nOne native desktop app window, landscape 3:2, same macOS titlebar, sidebar width, navigation placement and typography as the attached first desktop frame. All content fits one screen with purposeful whitespace. No browser address bar, no device hardware.\nNew secondary page: Class library. Library page with title \"Find your next session\", compact search \"Search classes\", discipline tabs All / Strength / Mobility / Run. Filter chips Duration, Equipment, Instructor. Mobility selected. An editorial featured horizontal image \"20 min Mobility\" Maya Chen \u2022 All levels, with two or three flatter rows beneath: 10 min Morning Stretch, 15 min Hips & Back, 30 min Full Body Strength. Human images in exactly the same studio/photo style, duration labels and small bookmark controls. Bottom nav remains Today / Plan / Progress / You on mobile; show back navigation to Today, not a new fifth nav item. Desktop Library is selected; browser use existing top nav with a Library breadcrumb. Native app UI, not a promotional poster.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "9c68a2a617220c9d09768f13534e33f417f925a622f3e61a3c9942ed1577055b"
+    },
+    {
+      "id": "peloton-desktop-02-session",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "desktop",
+      "page": "session",
+      "label": "Session detail",
+      "number": 2,
+      "file": "images/peloton/desktop-02-session.png",
+      "anchorRelative": "visuals/health-peloton-v4/desktop.png",
+      "anchorSha256": "c0ef6bf02aa622d626795cdc16e25069749736405628c4ccdbe459c61072a639",
+      "sourceIds": [
+        "peloton-classes"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached FORM first frame exactly. Same spaced custom FORM mark, matte near-black/graphite, normal-width white neo-grotesk typography, quiet grey labels, violet completion accents, white pill primary controls. Same fine line icons, sidebar or top/bottom native navigation, generous but compact app spacing. Preserve the fictional Asian female coach Maya Chen, dark athletic clothing, soft lavender-grey studio and natural skin. Do not introduce Peloton logos, new fonts, neon, banking-style charts or a metric-card wall. Photography leads only where the page calls for it.\nOne native desktop app window, landscape 3:2, same macOS titlebar, sidebar width, navigation placement and typography as the attached first desktop frame. All content fits one screen with purposeful whitespace. No browser address bar, no device hardware.\nNew secondary page: Session detail. Focused class detail for \"20 min Mobility\" with fictional coach Maya Chen, All levels, No equipment. Same coach in a fresh natural mobility pose in the same studio, editorial photo occupying about 38% of mobile, 45% of wide view. Back and bookmark actions. Under photo/title: short sentence \"A little space to reset.\" Three clear class-plan rows: Warm up 3 min, Mobility flow 14 min, Cool down 3 min (total 20). A coach row and primary white pill \"Start session\", secondary \"Add to plan\". Complete, readable controls inside screen. Do not reuse the original home weekly summary or imply completion.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "1f85cfd2062a31ce35b8e3eaaa8fed6cafc4227edd5cdee735d90dcfefabebcd"
+    },
+    {
+      "id": "peloton-desktop-03-plan",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "desktop",
+      "page": "plan",
+      "label": "Weekly plan",
+      "number": 3,
+      "file": "images/peloton/desktop-03-plan.png",
+      "anchorRelative": "visuals/health-peloton-v4/desktop.png",
+      "anchorSha256": "c0ef6bf02aa622d626795cdc16e25069749736405628c4ccdbe459c61072a639",
+      "sourceIds": [
+        "peloton-plan"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached FORM first frame exactly. Same spaced custom FORM mark, matte near-black/graphite, normal-width white neo-grotesk typography, quiet grey labels, violet completion accents, white pill primary controls. Same fine line icons, sidebar or top/bottom native navigation, generous but compact app spacing. Preserve the fictional Asian female coach Maya Chen, dark athletic clothing, soft lavender-grey studio and natural skin. Do not introduce Peloton logos, new fonts, neon, banking-style charts or a metric-card wall. Photography leads only where the page calls for it.\nOne native desktop app window, landscape 3:2, same macOS titlebar, sidebar width, navigation placement and typography as the attached first desktop frame. All content fits one screen with purposeful whitespace. No browser address bar, no device hardware.\nNew secondary page: Weekly plan. Your plan screen for Oct 19\u201325, 2026. Exactly Mon19 45 min Ride completed, Wed21 35 min Strength completed, Sat24 60 min Run completed, Sun25 20 min Mobility planned. Tue20 Thu22 Fri23 rest. Total completed 140 min, 3/4 workouts, 75%; planned mobility excluded. Vertical day agenda on mobile; spacious horizontal day timeline with meaningful session rows on desktop/browser. Small \"Edit schedule\" and contextual Swap control on the Sunday mobility row. Violet checks only Monday Wednesday Saturday; Sunday is outlined. One photographic next-session strip, not a page of big cards. Plan selected in persistent navigation.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "caedb43f20e1ac0004a7ea36de68e2e771834a00a987625445ef922a6dfd52db"
+    },
+    {
+      "id": "peloton-web-app-01-classes",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "web-app",
+      "page": "classes",
+      "label": "Class library",
+      "number": 1,
+      "file": "images/peloton/web-app-01-classes.png",
+      "anchorRelative": "visuals/health-peloton-v4/web-app.png",
+      "anchorSha256": "2624885e962c8fcf033da7f5f2ed0fe7400c44d03807a0eb501fa8765bfd5ce9",
+      "sourceIds": [
+        "peloton-classes"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached FORM first frame exactly. Same spaced custom FORM mark, matte near-black/graphite, normal-width white neo-grotesk typography, quiet grey labels, violet completion accents, white pill primary controls. Same fine line icons, sidebar or top/bottom native navigation, generous but compact app spacing. Preserve the fictional Asian female coach Maya Chen, dark athletic clothing, soft lavender-grey studio and natural skin. Do not introduce Peloton logos, new fonts, neon, banking-style charts or a metric-card wall. Photography leads only where the page calls for it.\nOne browser-based application screenshot, landscape 3:2, same browser chrome and application navigation as the attached first web app frame. Keep the content dense enough to be useful and the selected state clear. No surrounding presentation frame.\nNew secondary page: Class library. Library page with title \"Find your next session\", compact search \"Search classes\", discipline tabs All / Strength / Mobility / Run. Filter chips Duration, Equipment, Instructor. Mobility selected. An editorial featured horizontal image \"20 min Mobility\" Maya Chen \u2022 All levels, with two or three flatter rows beneath: 10 min Morning Stretch, 15 min Hips & Back, 30 min Full Body Strength. Human images in exactly the same studio/photo style, duration labels and small bookmark controls. Bottom nav remains Today / Plan / Progress / You on mobile; show back navigation to Today, not a new fifth nav item. Desktop Library is selected; browser use existing top nav with a Library breadcrumb. Native app UI, not a promotional poster.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional. Set All tab selected, because the result list includes strength and mobility.",
+      "status": "generated",
+      "sha256": "d393982dbfdfa3e2ca44acf4535e7da1bff7460787fe30d3c826de26c32cd085"
+    },
+    {
+      "id": "peloton-web-app-02-session",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "web-app",
+      "page": "session",
+      "label": "Session detail",
+      "number": 2,
+      "file": "images/peloton/web-app-02-session.png",
+      "anchorRelative": "visuals/health-peloton-v4/web-app.png",
+      "anchorSha256": "2624885e962c8fcf033da7f5f2ed0fe7400c44d03807a0eb501fa8765bfd5ce9",
+      "sourceIds": [
+        "peloton-classes"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached FORM first frame exactly. Same spaced custom FORM mark, matte near-black/graphite, normal-width white neo-grotesk typography, quiet grey labels, violet completion accents, white pill primary controls. Same fine line icons, sidebar or top/bottom native navigation, generous but compact app spacing. Preserve the fictional Asian female coach Maya Chen, dark athletic clothing, soft lavender-grey studio and natural skin. Do not introduce Peloton logos, new fonts, neon, banking-style charts or a metric-card wall. Photography leads only where the page calls for it.\nOne browser-based application screenshot, landscape 3:2, same browser chrome and application navigation as the attached first web app frame. Keep the content dense enough to be useful and the selected state clear. No surrounding presentation frame.\nNew secondary page: Session detail. Focused class detail for \"20 min Mobility\" with fictional coach Maya Chen, All levels, No equipment. Same coach in a fresh natural mobility pose in the same studio, editorial photo occupying about 38% of mobile, 45% of wide view. Back and bookmark actions. Under photo/title: short sentence \"A little space to reset.\" Three clear class-plan rows: Warm up 3 min, Mobility flow 14 min, Cool down 3 min (total 20). A coach row and primary white pill \"Start session\", secondary \"Add to plan\". Complete, readable controls inside screen. Do not reuse the original home weekly summary or imply completion.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "6f4de4024716e4bf66bc51e7e856b4cbf6aabc28003cf3d0021ab596ae36f836"
+    },
+    {
+      "id": "peloton-web-app-03-plan",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "web-app",
+      "page": "plan",
+      "label": "Weekly plan",
+      "number": 3,
+      "file": "images/peloton/web-app-03-plan.png",
+      "anchorRelative": "visuals/health-peloton-v4/web-app.png",
+      "anchorSha256": "2624885e962c8fcf033da7f5f2ed0fe7400c44d03807a0eb501fa8765bfd5ce9",
+      "sourceIds": [
+        "peloton-plan"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached FORM first frame exactly. Same spaced custom FORM mark, matte near-black/graphite, normal-width white neo-grotesk typography, quiet grey labels, violet completion accents, white pill primary controls. Same fine line icons, sidebar or top/bottom native navigation, generous but compact app spacing. Preserve the fictional Asian female coach Maya Chen, dark athletic clothing, soft lavender-grey studio and natural skin. Do not introduce Peloton logos, new fonts, neon, banking-style charts or a metric-card wall. Photography leads only where the page calls for it.\nOne browser-based application screenshot, landscape 3:2, same browser chrome and application navigation as the attached first web app frame. Keep the content dense enough to be useful and the selected state clear. No surrounding presentation frame.\nNew secondary page: Weekly plan. Your plan screen for Oct 19\u201325, 2026. Exactly Mon19 45 min Ride completed, Wed21 35 min Strength completed, Sat24 60 min Run completed, Sun25 20 min Mobility planned. Tue20 Thu22 Fri23 rest. Total completed 140 min, 3/4 workouts, 75%; planned mobility excluded. Vertical day agenda on mobile; spacious horizontal day timeline with meaningful session rows on desktop/browser. Small \"Edit schedule\" and contextual Swap control on the Sunday mobility row. Violet checks only Monday Wednesday Saturday; Sunday is outlined. One photographic next-session strip, not a page of big cards. Plan selected in persistent navigation.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "ae060eb680f812e7e7089a9bf4b84b7d6d610b7ed48c83f98a00420af74f212a"
+    },
+    {
+      "id": "peloton-web-desk-01-training",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "web-desk",
+      "page": "training",
+      "label": "Training page",
+      "number": 1,
+      "file": "images/peloton/web-desk-01-training.png",
+      "anchorRelative": "visuals/health-peloton-v4/web-desk.png",
+      "anchorSha256": "15580a90b3a8815bca99cd412aee6bc5bff86d6a8763e1109324fb8f9c9bba1e",
+      "sourceIds": [
+        "peloton-classes"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached FORM first frame exactly. Same spaced custom FORM mark, matte near-black/graphite, normal-width white neo-grotesk typography, quiet grey labels, violet completion accents, white pill primary controls. Same fine line icons, sidebar or top/bottom native navigation, generous but compact app spacing. Preserve the fictional Asian female coach Maya Chen, dark athletic clothing, soft lavender-grey studio and natural skin. Do not introduce Peloton logos, new fonts, neon, banking-style charts or a metric-card wall. Photography leads only where the page calls for it.\nOne complete long-form desktop website page from full top navigation to full footer, using the same image aspect ratio and desktop column proportions as the attached first website frame. This is a secondary website page, not a dashboard and not a mobile layout. Four to six carefully paced sections with concise real copy, complete footer and no clipped elements.\nNew secondary page: Training page. Complete secondary Training / Mobility page, matching the first homepage typography and chapter pacing. Cinematic photo of fictional Maya Chen on the right of a charcoal hero; title \"Make space to move.\" One compact line about flexible mobility sessions and whitepill \"Explore mobility\". Below a light-grey chapter \"Start where you are\" with three class images/durations, a dark two-column \"A little, often\" story pairing weekly plan preview and clear prose, a fictional coach introduction, concise FAQ and full FORM footer. No homepage duplication, no invented medical or performance promises.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "ec4f1ad9e8a69b0a83e56131808474be5a339ffe25d27d1dec17e47ce22dd0b6"
+    },
+    {
+      "id": "peloton-web-desk-02-coach",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "web-desk",
+      "page": "coach",
+      "label": "Coach profile",
+      "number": 2,
+      "file": "images/peloton/web-desk-02-coach.png",
+      "anchorRelative": "visuals/health-peloton-v4/web-desk.png",
+      "anchorSha256": "15580a90b3a8815bca99cd412aee6bc5bff86d6a8763e1109324fb8f9c9bba1e",
+      "sourceIds": [
+        "peloton-coaches"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached FORM first frame exactly. Same spaced custom FORM mark, matte near-black/graphite, normal-width white neo-grotesk typography, quiet grey labels, violet completion accents, white pill primary controls. Same fine line icons, sidebar or top/bottom native navigation, generous but compact app spacing. Preserve the fictional Asian female coach Maya Chen, dark athletic clothing, soft lavender-grey studio and natural skin. Do not introduce Peloton logos, new fonts, neon, banking-style charts or a metric-card wall. Photography leads only where the page calls for it.\nOne complete long-form desktop website page from full top navigation to full footer, using the same image aspect ratio and desktop column proportions as the attached first website frame. This is a secondary website page, not a dashboard and not a mobile layout. Four to six carefully paced sections with concise real copy, complete footer and no clipped elements.\nNew secondary page: Coach profile. Complete secondary Coaches / Maya Chen profile website. Same FORM navigation and white pill controls. Large refined portrait of the exact fictional coach from the anchor; title \"Maya Chen\", disciplines \"Strength \u00b7 Mobility \u00b7 Mindful Movement\". Short original bio \"Move with intention. Build a practice that fits your day.\" A light editorial chapter explaining her approach, three photographic class previews with durations, a dark pull-quote from the fictional coach, a schedule or recommended sessions row and a closing \"Train with Maya\" action. Full footer. This is an original fictional profile, not a claim about a real Peloton instructor.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "b36a75d05a1bde889b76064396503ede669b5db20d9eaeb0b54b46032daeb83f"
+    },
+    {
+      "id": "peloton-web-desk-03-progress",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "web-desk",
+      "page": "progress",
+      "label": "Progress feature",
+      "number": 3,
+      "file": "images/peloton/web-desk-03-progress.png",
+      "anchorRelative": "visuals/health-peloton-v4/web-desk.png",
+      "anchorSha256": "15580a90b3a8815bca99cd412aee6bc5bff86d6a8763e1109324fb8f9c9bba1e",
+      "sourceIds": [
+        "peloton-plan"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached FORM first frame exactly. Same spaced custom FORM mark, matte near-black/graphite, normal-width white neo-grotesk typography, quiet grey labels, violet completion accents, white pill primary controls. Same fine line icons, sidebar or top/bottom native navigation, generous but compact app spacing. Preserve the fictional Asian female coach Maya Chen, dark athletic clothing, soft lavender-grey studio and natural skin. Do not introduce Peloton logos, new fonts, neon, banking-style charts or a metric-card wall. Photography leads only where the page calls for it.\nOne complete long-form desktop website page from full top navigation to full footer, using the same image aspect ratio and desktop column proportions as the attached first website frame. This is a secondary website page, not a dashboard and not a mobile layout. Four to six carefully paced sections with concise real copy, complete footer and no clipped elements.\nNew secondary page: Progress feature. Complete secondary Progress feature page. Headline \"See your consistency take shape.\" Dark graphite hero with wide original-style weekly activity rail, no new ring metric. 3 workouts / 140 min / 3 active days, followed by alternating light and dark editorial chapters on calendar history, individual workout detail and planning the next session. A richly composed coastal running photo in the established style; restrained violet data line and legible units. Finish with \"Keep your next session in sight.\" whitepill \"Explore FORM\" and full footer. No clinical scores or unsupported claims.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "3a34c0ce996e1953941bfe7c3d2d1886d574ee7b8daa40a520da4756f5bacfa8"
+    },
+    {
+      "id": "notion-mobile-01-project",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "mobile",
+      "page": "project",
+      "label": "Project detail",
+      "number": 1,
+      "file": "images/notion/mobile-01-project.png",
+      "anchorRelative": "visuals/round-02/notion-mobile.png",
+      "anchorSha256": "216235c8733c304cc730efb6d75943ee3af141bb20efba9aaebbdfd6a617ebd9",
+      "sourceIds": [
+        "notion-tasks"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Daybook frame exactly: warm white paper-like surface, refined black editorial serif titles and prose, compact neutral sans UI labels, thin grey rules, restrained pale blue/ochre/green property pills, blue small app action buttons and black website buttons. Same tiny botanical Daybook mark, hand-drawn black ink desk/botanical cover art, same sidebar tree and bottom nav. Preserve airy document rhythm and database property alignment. No new brand colors, rounded dashboard cards, oversized gradients or app-wide marketing headline. Original secondary page content, original style.\nOne native mobile app screenshot, portrait, same aspect and canvas framing as the attached first mobile frame. Status bar and bottom navigation fully visible. Realistic touch controls and readable compact hierarchy. No phone hardware or surrounding presentation board.\nNew secondary page: Project detail. Project document \"Studio refresh\" with small folder/page icon and restrained ink-sketch banner. Breadcrumb Personal / Projects / Studio refresh. Properties Status In progress, Due Oct 30, 2026, Owner Alex. Brief sentence \"A focused update to the studio identity and website.\" A compact progress line 2 of 5 tasks done. Linked Tasks table/list with five rows: Gather references Done, Audit current pages Done, Draft project brief In progress 60m due Oct26, Review research Not started 45m due Oct27, Share direction Not started 30m due Oct30. Below a useful short Notes section and related reference document. Mobile compresses properties into readable rows; do not shrink desktop table. Projects selected in desktop sidebar.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "235b11f5dc03cbef199af0ab86f03bb4d698f4dd4cdcad59f1db572923e198ca"
+    },
+    {
+      "id": "notion-mobile-02-task",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "mobile",
+      "page": "task",
+      "label": "Task detail",
+      "number": 2,
+      "file": "images/notion/mobile-02-task.png",
+      "anchorRelative": "visuals/round-02/notion-mobile.png",
+      "anchorSha256": "216235c8733c304cc730efb6d75943ee3af141bb20efba9aaebbdfd6a617ebd9",
+      "sourceIds": [
+        "notion-views"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Daybook frame exactly: warm white paper-like surface, refined black editorial serif titles and prose, compact neutral sans UI labels, thin grey rules, restrained pale blue/ochre/green property pills, blue small app action buttons and black website buttons. Same tiny botanical Daybook mark, hand-drawn black ink desk/botanical cover art, same sidebar tree and bottom nav. Preserve airy document rhythm and database property alignment. No new brand colors, rounded dashboard cards, oversized gradients or app-wide marketing headline. Original secondary page content, original style.\nOne native mobile app screenshot, portrait, same aspect and canvas framing as the attached first mobile frame. Status bar and bottom navigation fully visible. Realistic touch controls and readable compact hierarchy. No phone hardware or surrounding presentation board.\nNew secondary page: Task detail. A focused full task document \"Review research\". Breadcrumb Projects / Studio refresh / Review research. Properties Status Not started, Project Studio refresh, Due Tue Oct27 2026, Estimate 45m. Description \"Compare the reference layouts and note the patterns worth keeping.\" Three subtasks with empty checkboxes: Review application screens, Compare mobile navigation, Summarize findings. Contextual linked file \"Reference notes\" and a short Activity comment from Alex \"Keep the strongest examples together.\" Native mobile page with back/share/more controls and existing bottom toolbar. Desktop full-page detail within same native shell; browser can use a substantial right-side peek with underlying project list still readable. No giant decorative banner on this task detail.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "689b88bf0badc94e09daa46fd93433215c6caac3d067249d475c6dbf8666a2ba"
+    },
+    {
+      "id": "notion-mobile-03-calendar",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "mobile",
+      "page": "calendar",
+      "label": "Week calendar",
+      "number": 3,
+      "file": "images/notion/mobile-03-calendar.png",
+      "anchorRelative": "visuals/round-02/notion-mobile.png",
+      "anchorSha256": "216235c8733c304cc730efb6d75943ee3af141bb20efba9aaebbdfd6a617ebd9",
+      "sourceIds": [
+        "notion-views"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Daybook frame exactly: warm white paper-like surface, refined black editorial serif titles and prose, compact neutral sans UI labels, thin grey rules, restrained pale blue/ochre/green property pills, blue small app action buttons and black website buttons. Same tiny botanical Daybook mark, hand-drawn black ink desk/botanical cover art, same sidebar tree and bottom nav. Preserve airy document rhythm and database property alignment. No new brand colors, rounded dashboard cards, oversized gradients or app-wide marketing headline. Original secondary page content, original style.\nOne native mobile app screenshot, portrait, same aspect and canvas framing as the attached first mobile frame. Status bar and bottom navigation fully visible. Realistic touch controls and readable compact hierarchy. No phone hardware or surrounding presentation board.\nNew secondary page: Week calendar. Weeknotes date view titled \"A week with intention.\" Dates October 26 \u2013 November 1, 2026. Existing List / Calendar / By project view tabs with Calendar selected. Desktop/browser: Monday-start seven-day week grid labeled Mon26 Tue27 Wed28 Thu29 Fri30 Sat31 Sun1, exact dates. Items: Monday Draft project brief 60m and Plan next week 30m; Tuesday Review research 45m; Thursday Set up interviews 60m; Friday Share direction 30m. Empty weekend quiet. Mobile: compact same seven-date strip with Mon26 selected and a readable day agenda, not a compressed desktop grid. Small blue New button, muted project pills, thin rules. Weeknotes selected in sidebar.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional. Monday planned time is exactly 1h 30m (60+30); whole week totals3h45m (225minutes). All calendar date headings must be correct.",
+      "status": "generated",
+      "sha256": "ee20031f0b721107c8b5f7ccd3fcbe149a56967cf0abd6d32aa962608cb22748"
+    },
+    {
+      "id": "notion-desktop-01-project",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "desktop",
+      "page": "project",
+      "label": "Project detail",
+      "number": 1,
+      "file": "images/notion/desktop-01-project.png",
+      "anchorRelative": "visuals/round-02/notion-desktop.png",
+      "anchorSha256": "68a0a73dc6cc95820373346ddf81d714f3c2cbf99b6eb82cc75e8fdb21ea4e72",
+      "sourceIds": [
+        "notion-tasks"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Daybook frame exactly: warm white paper-like surface, refined black editorial serif titles and prose, compact neutral sans UI labels, thin grey rules, restrained pale blue/ochre/green property pills, blue small app action buttons and black website buttons. Same tiny botanical Daybook mark, hand-drawn black ink desk/botanical cover art, same sidebar tree and bottom nav. Preserve airy document rhythm and database property alignment. No new brand colors, rounded dashboard cards, oversized gradients or app-wide marketing headline. Original secondary page content, original style.\nOne native desktop app window, landscape 3:2, same macOS titlebar, sidebar width, navigation placement and typography as the attached first desktop frame. All content fits one screen with purposeful whitespace. No browser address bar, no device hardware.\nNew secondary page: Project detail. Project document \"Studio refresh\" with small folder/page icon and restrained ink-sketch banner. Breadcrumb Personal / Projects / Studio refresh. Properties Status In progress, Due Oct 30, 2026, Owner Alex. Brief sentence \"A focused update to the studio identity and website.\" A compact progress line 2 of 5 tasks done. Linked Tasks table/list with five rows: Gather references Done, Audit current pages Done, Draft project brief In progress 60m due Oct26, Review research Not started 45m due Oct27, Share direction Not started 30m due Oct30. Below a useful short Notes section and related reference document. Mobile compresses properties into readable rows; do not shrink desktop table. Projects selected in desktop sidebar.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "b124e2a74f89b3939c4fc6de65b8529a7d2573346573030aff3a69a5b9351b92"
+    },
+    {
+      "id": "notion-desktop-02-task",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "desktop",
+      "page": "task",
+      "label": "Task detail",
+      "number": 2,
+      "file": "images/notion/desktop-02-task.png",
+      "anchorRelative": "visuals/round-02/notion-desktop.png",
+      "anchorSha256": "68a0a73dc6cc95820373346ddf81d714f3c2cbf99b6eb82cc75e8fdb21ea4e72",
+      "sourceIds": [
+        "notion-views"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Daybook frame exactly: warm white paper-like surface, refined black editorial serif titles and prose, compact neutral sans UI labels, thin grey rules, restrained pale blue/ochre/green property pills, blue small app action buttons and black website buttons. Same tiny botanical Daybook mark, hand-drawn black ink desk/botanical cover art, same sidebar tree and bottom nav. Preserve airy document rhythm and database property alignment. No new brand colors, rounded dashboard cards, oversized gradients or app-wide marketing headline. Original secondary page content, original style.\nOne native desktop app window, landscape 3:2, same macOS titlebar, sidebar width, navigation placement and typography as the attached first desktop frame. All content fits one screen with purposeful whitespace. No browser address bar, no device hardware.\nNew secondary page: Task detail. A focused full task document \"Review research\". Breadcrumb Projects / Studio refresh / Review research. Properties Status Not started, Project Studio refresh, Due Tue Oct27 2026, Estimate 45m. Description \"Compare the reference layouts and note the patterns worth keeping.\" Three subtasks with empty checkboxes: Review application screens, Compare mobile navigation, Summarize findings. Contextual linked file \"Reference notes\" and a short Activity comment from Alex \"Keep the strongest examples together.\" Native mobile page with back/share/more controls and existing bottom toolbar. Desktop full-page detail within same native shell; browser can use a substantial right-side peek with underlying project list still readable. No giant decorative banner on this task detail.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "cfede4785198d91873acc5f172dbdd44d444a90f276be5e563e50065399361da"
+    },
+    {
+      "id": "notion-desktop-03-calendar",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "desktop",
+      "page": "calendar",
+      "label": "Week calendar",
+      "number": 3,
+      "file": "images/notion/desktop-03-calendar.png",
+      "anchorRelative": "visuals/round-02/notion-desktop.png",
+      "anchorSha256": "68a0a73dc6cc95820373346ddf81d714f3c2cbf99b6eb82cc75e8fdb21ea4e72",
+      "sourceIds": [
+        "notion-views"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Daybook frame exactly: warm white paper-like surface, refined black editorial serif titles and prose, compact neutral sans UI labels, thin grey rules, restrained pale blue/ochre/green property pills, blue small app action buttons and black website buttons. Same tiny botanical Daybook mark, hand-drawn black ink desk/botanical cover art, same sidebar tree and bottom nav. Preserve airy document rhythm and database property alignment. No new brand colors, rounded dashboard cards, oversized gradients or app-wide marketing headline. Original secondary page content, original style.\nOne native desktop app window, landscape 3:2, same macOS titlebar, sidebar width, navigation placement and typography as the attached first desktop frame. All content fits one screen with purposeful whitespace. No browser address bar, no device hardware.\nNew secondary page: Week calendar. Weeknotes date view titled \"A week with intention.\" Dates October 26 \u2013 November 1, 2026. Existing List / Calendar / By project view tabs with Calendar selected. Desktop/browser: Monday-start seven-day week grid labeled Mon26 Tue27 Wed28 Thu29 Fri30 Sat31 Sun1, exact dates. Items: Monday Draft project brief 60m and Plan next week 30m; Tuesday Review research 45m; Thursday Set up interviews 60m; Friday Share direction 30m. Empty weekend quiet. Mobile: compact same seven-date strip with Mon26 selected and a readable day agenda, not a compressed desktop grid. Small blue New button, muted project pills, thin rules. Weeknotes selected in sidebar.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional. Monday planned time is exactly 1h 30m (60+30); whole week totals3h45m (225minutes). All calendar date headings must be correct.",
+      "status": "generated",
+      "sha256": "e57eef2a125f4b52a754c24e21937986c872326914665e978bde02dbe6a92476"
+    },
+    {
+      "id": "notion-web-app-01-project",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "web-app",
+      "page": "project",
+      "label": "Project detail",
+      "number": 1,
+      "file": "images/notion/web-app-01-project.png",
+      "anchorRelative": "visuals/round-02/notion-web-app.png",
+      "anchorSha256": "7378cc37c96e0e2a94cf5466dcfaad9afd74bdfeeea20bb9784a0d71ec5ba604",
+      "sourceIds": [
+        "notion-tasks"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Daybook frame exactly: warm white paper-like surface, refined black editorial serif titles and prose, compact neutral sans UI labels, thin grey rules, restrained pale blue/ochre/green property pills, blue small app action buttons and black website buttons. Same tiny botanical Daybook mark, hand-drawn black ink desk/botanical cover art, same sidebar tree and bottom nav. Preserve airy document rhythm and database property alignment. No new brand colors, rounded dashboard cards, oversized gradients or app-wide marketing headline. Original secondary page content, original style.\nOne browser-based application screenshot, landscape 3:2, same browser chrome and application navigation as the attached first web app frame. Keep the content dense enough to be useful and the selected state clear. No surrounding presentation frame.\nNew secondary page: Project detail. Project document \"Studio refresh\" with small folder/page icon and restrained ink-sketch banner. Breadcrumb Personal / Projects / Studio refresh. Properties Status In progress, Due Oct 30, 2026, Owner Alex. Brief sentence \"A focused update to the studio identity and website.\" A compact progress line 2 of 5 tasks done. Linked Tasks table/list with five rows: Gather references Done, Audit current pages Done, Draft project brief In progress 60m due Oct26, Review research Not started 45m due Oct27, Share direction Not started 30m due Oct30. Below a useful short Notes section and related reference document. Mobile compresses properties into readable rows; do not shrink desktop table. Projects selected in desktop sidebar.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "ab7dc7cf2ceabacabc4afc4e6184a3479ea05dbca0620ab10c78bc6e54704ec7"
+    },
+    {
+      "id": "notion-web-app-02-task",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "web-app",
+      "page": "task",
+      "label": "Task detail",
+      "number": 2,
+      "file": "images/notion/web-app-02-task.png",
+      "anchorRelative": "visuals/round-02/notion-web-app.png",
+      "anchorSha256": "7378cc37c96e0e2a94cf5466dcfaad9afd74bdfeeea20bb9784a0d71ec5ba604",
+      "sourceIds": [
+        "notion-views"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Daybook frame exactly: warm white paper-like surface, refined black editorial serif titles and prose, compact neutral sans UI labels, thin grey rules, restrained pale blue/ochre/green property pills, blue small app action buttons and black website buttons. Same tiny botanical Daybook mark, hand-drawn black ink desk/botanical cover art, same sidebar tree and bottom nav. Preserve airy document rhythm and database property alignment. No new brand colors, rounded dashboard cards, oversized gradients or app-wide marketing headline. Original secondary page content, original style.\nOne browser-based application screenshot, landscape 3:2, same browser chrome and application navigation as the attached first web app frame. Keep the content dense enough to be useful and the selected state clear. No surrounding presentation frame.\nNew secondary page: Task detail. A focused full task document \"Review research\". Breadcrumb Projects / Studio refresh / Review research. Properties Status Not started, Project Studio refresh, Due Tue Oct27 2026, Estimate 45m. Description \"Compare the reference layouts and note the patterns worth keeping.\" Three subtasks with empty checkboxes: Review application screens, Compare mobile navigation, Summarize findings. Contextual linked file \"Reference notes\" and a short Activity comment from Alex \"Keep the strongest examples together.\" Native mobile page with back/share/more controls and existing bottom toolbar. Desktop full-page detail within same native shell; browser can use a substantial right-side peek with underlying project list still readable. No giant decorative banner on this task detail.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "25f004294e3a30fd80e75ada62bab30a81cc1494afe26f801778d9ba5dc4bb3f"
+    },
+    {
+      "id": "notion-web-app-03-calendar",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "web-app",
+      "page": "calendar",
+      "label": "Week calendar",
+      "number": 3,
+      "file": "images/notion/web-app-03-calendar.png",
+      "anchorRelative": "visuals/round-02/notion-web-app.png",
+      "anchorSha256": "7378cc37c96e0e2a94cf5466dcfaad9afd74bdfeeea20bb9784a0d71ec5ba604",
+      "sourceIds": [
+        "notion-views"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Daybook frame exactly: warm white paper-like surface, refined black editorial serif titles and prose, compact neutral sans UI labels, thin grey rules, restrained pale blue/ochre/green property pills, blue small app action buttons and black website buttons. Same tiny botanical Daybook mark, hand-drawn black ink desk/botanical cover art, same sidebar tree and bottom nav. Preserve airy document rhythm and database property alignment. No new brand colors, rounded dashboard cards, oversized gradients or app-wide marketing headline. Original secondary page content, original style.\nOne browser-based application screenshot, landscape 3:2, same browser chrome and application navigation as the attached first web app frame. Keep the content dense enough to be useful and the selected state clear. No surrounding presentation frame.\nNew secondary page: Week calendar. Weeknotes date view titled \"A week with intention.\" Dates October 26 \u2013 November 1, 2026. Existing List / Calendar / By project view tabs with Calendar selected. Desktop/browser: Monday-start seven-day week grid labeled Mon26 Tue27 Wed28 Thu29 Fri30 Sat31 Sun1, exact dates. Items: Monday Draft project brief 60m and Plan next week 30m; Tuesday Review research 45m; Thursday Set up interviews 60m; Friday Share direction 30m. Empty weekend quiet. Mobile: compact same seven-date strip with Mon26 selected and a readable day agenda, not a compressed desktop grid. Small blue New button, muted project pills, thin rules. Weeknotes selected in sidebar.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional. Monday planned time is exactly 1h 30m (60+30); whole week totals3h45m (225minutes). All calendar date headings must be correct.",
+      "status": "generated",
+      "sha256": "64750b7af92ef1687ce4f1eade87a563e801a30f9b5ce1af32bf264918519b94"
+    },
+    {
+      "id": "notion-web-desk-01-projects",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "web-desk",
+      "page": "projects",
+      "label": "Projects feature",
+      "number": 1,
+      "file": "images/notion/web-desk-01-projects.png",
+      "anchorRelative": "visuals/round-02/notion-web-desk.png",
+      "anchorSha256": "e6f13d1e2811c98a1c63521d1a762859bc7011919360f54ec9d7e4ea0e6fa574",
+      "sourceIds": [
+        "notion-tasks"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Daybook frame exactly: warm white paper-like surface, refined black editorial serif titles and prose, compact neutral sans UI labels, thin grey rules, restrained pale blue/ochre/green property pills, blue small app action buttons and black website buttons. Same tiny botanical Daybook mark, hand-drawn black ink desk/botanical cover art, same sidebar tree and bottom nav. Preserve airy document rhythm and database property alignment. No new brand colors, rounded dashboard cards, oversized gradients or app-wide marketing headline. Original secondary page content, original style.\nOne complete long-form desktop website page from full top navigation to full footer, using the same image aspect ratio and desktop column proportions as the attached first website frame. This is a secondary website page, not a dashboard and not a mobile layout. Four to six carefully paced sections with concise real copy, complete footer and no clipped elements.\nNew secondary page: Projects feature. Complete secondary Product / Projects page. Editorial serif headline \"A place for the whole project.\" Black ink illustration of open papers and a branch on warm white. Large embedded Daybook project page preview, then three open sections showing linked tasks, useful context and flexible views. The preview includes Studio refresh and realistic properties; maintain exact document UI styling. A small comparison of List and Calendar, closing \"Start with one project.\" black CTA and complete Daybook footer. No invented stats or testimonials.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "2883cc751ac9e358eb51337a197cefe9be983e08708d4099b94f30692e4024dd"
+    },
+    {
+      "id": "notion-web-desk-02-templates",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "web-desk",
+      "page": "templates",
+      "label": "Template directory",
+      "number": 2,
+      "file": "images/notion/web-desk-02-templates.png",
+      "anchorRelative": "visuals/round-02/notion-web-desk.png",
+      "anchorSha256": "e6f13d1e2811c98a1c63521d1a762859bc7011919360f54ec9d7e4ea0e6fa574",
+      "sourceIds": [
+        "notion-templates"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Daybook frame exactly: warm white paper-like surface, refined black editorial serif titles and prose, compact neutral sans UI labels, thin grey rules, restrained pale blue/ochre/green property pills, blue small app action buttons and black website buttons. Same tiny botanical Daybook mark, hand-drawn black ink desk/botanical cover art, same sidebar tree and bottom nav. Preserve airy document rhythm and database property alignment. No new brand colors, rounded dashboard cards, oversized gradients or app-wide marketing headline. Original secondary page content, original style.\nOne complete long-form desktop website page from full top navigation to full footer, using the same image aspect ratio and desktop column proportions as the attached first website frame. This is a secondary website page, not a dashboard and not a mobile layout. Four to six carefully paced sections with concise real copy, complete footer and no clipped elements.\nNew secondary page: Template directory. Complete secondary Templates directory page. Same Daybook website navigation, typography and ink illustration style. Headline \"A thoughtful place to begin.\" Search \"Find a template\", horizontal category filters All / Planning / Projects / Notes. Six refined, airy template previews arranged in desktop 3-column catalogue, without heavy box walls: Weekly planner, Project notebook, Reading list, Daily notes, Research journal, Simple tasks. Each uses a different small ink-sketch and original document thumbnail, short one-line descriptor, understated View template action. End with a light editorial help strip and full footer. Not a new homepage.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "e437f8f2cf5219c3257b650027fba5d023624e705f8f76d8c895fd4811f26616"
+    },
+    {
+      "id": "notion-web-desk-03-template-detail",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "web-desk",
+      "page": "template-detail",
+      "label": "Template detail",
+      "number": 3,
+      "file": "images/notion/web-desk-03-template-detail.png",
+      "anchorRelative": "visuals/round-02/notion-web-desk.png",
+      "anchorSha256": "e6f13d1e2811c98a1c63521d1a762859bc7011919360f54ec9d7e4ea0e6fa574",
+      "sourceIds": [
+        "notion-template-detail"
+      ],
+      "prompt": "Use case: ui-mockup. Create exactly ONE high-end static raster secondary screen, not a collage, not code.\nInput image 1 is the authoritative EXISTING FIRST FRAME for this exact surface. Treat it as a locked design system. The output must look like the next page within this very same designed product, not a reinterpretation or redesign. Reproduce the existing shell, font shapes, weights, type scale, colors, margins, controls, icon vocabulary, image treatment and spacing as closely as possible. Change only selected navigation state and the central content necessary for the specified page. Do not redraw the original home content.\nMatch the attached Daybook frame exactly: warm white paper-like surface, refined black editorial serif titles and prose, compact neutral sans UI labels, thin grey rules, restrained pale blue/ochre/green property pills, blue small app action buttons and black website buttons. Same tiny botanical Daybook mark, hand-drawn black ink desk/botanical cover art, same sidebar tree and bottom nav. Preserve airy document rhythm and database property alignment. No new brand colors, rounded dashboard cards, oversized gradients or app-wide marketing headline. Original secondary page content, original style.\nOne complete long-form desktop website page from full top navigation to full footer, using the same image aspect ratio and desktop column proportions as the attached first website frame. This is a secondary website page, not a dashboard and not a mobile layout. Four to six carefully paced sections with concise real copy, complete footer and no clipped elements.\nNew secondary page: Template detail. Complete Templates / Weekly planner detail page. Same Daybook website shell. Serif title \"Weekly planner\", compact tag Planning, single black \"Use this template\" action. Large legible document preview showing a weekly intention, date-based task list and Notes for later. Small left or right column with \"Inside this template\" listing Weekly intention, Tasks by day, Project links, Reflection notes. A how-to sequence Duplicate / Make it yours / Plan your week. Related templates as two restrained previews, complete footer. Original Daybook design and content, not a copied marketplace creator asset.\nQuality constraints: crisp legible typography; restrained high-end art direction; deliberate alignment; accurate labels and values; no placeholder lorem ipsum; no repeated headings, malformed icons, invented extra stats, feature badges or unnecessary card boxes. Use enough specific content to make this a plausible complete page. Do not add a caption, page number, sheet title, explanatory annotation or watermark outside the interface. The first frame stays unchanged; produce a separate new image. All sample data is fictional.",
+      "status": "generated",
+      "sha256": "780a21e019676b306d36a242983d756b4c7ee5e2634ac5a213d83f099709fcc6"
+    }
+  ]
+}

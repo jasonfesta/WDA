@@ -1,0 +1,485 @@
+{
+  "date": "2026-10-25",
+  "count": 36,
+  "perConcept": {
+    "ramp": 12,
+    "peloton": 12,
+    "notion": 12
+  },
+  "perConceptSurface": {
+    "ramp/mobile": 3,
+    "ramp/desktop": 3,
+    "ramp/web-app": 3,
+    "ramp/web-desk": 3,
+    "peloton/mobile": 3,
+    "peloton/desktop": 3,
+    "peloton/web-app": 3,
+    "peloton/web-desk": 3,
+    "notion/mobile": 3,
+    "notion/desktop": 3,
+    "notion/web-app": 3,
+    "notion/web-desk": 3
+  },
+  "uniqueImages": 36,
+  "unchangedFirstFrames": 12,
+  "firstFrameBaseline": "0ae38ba71f05945ddbe0ce774cc71d778c6368a9",
+  "pngIntegrity": "all pass",
+  "sourceMappings": "all pass",
+  "viewerJavaScriptSyntax": "pass",
+  "visualReview": "All 36 full images reviewed; nine frames received targeted corrections, one with a second pass.",
+  "browserChecks": {
+    "status": "pass",
+    "checks": [
+      {
+        "caption": "FORM / Mobile app / Class library \u00b7 1 of 3 \u00b7 Entire image shown",
+        "images": [
+          {
+            "height": 1672,
+            "loaded": true,
+            "width": 940
+          },
+          {
+            "height": 1672,
+            "loaded": true,
+            "width": 940
+          }
+        ],
+        "overflow": false
+      },
+      {
+        "caption": "FORM / Desktop app / Class library \u00b7 1 of 3 \u00b7 Entire image shown",
+        "images": [
+          {
+            "height": 1024,
+            "loaded": true,
+            "width": 1536
+          },
+          {
+            "height": 1024,
+            "loaded": true,
+            "width": 1536
+          }
+        ],
+        "overflow": false
+      },
+      {
+        "caption": "FORM / Web app / Session detail \u00b7 2 of 3 \u00b7 Entire image shown",
+        "images": [
+          {
+            "height": 1024,
+            "loaded": true,
+            "width": 1536
+          },
+          {
+            "height": 1024,
+            "loaded": true,
+            "width": 1536
+          }
+        ],
+        "overflow": false
+      },
+      {
+        "caption": "FORM / Website / Coach profile \u00b7 2 of 3 \u00b7 Complete page, including footer",
+        "images": [
+          {
+            "height": 1774,
+            "loaded": true,
+            "width": 887
+          },
+          {
+            "height": 1774,
+            "loaded": true,
+            "width": 887
+          }
+        ],
+        "overflow": false
+      },
+      {
+        "caption": "Ledger / Website / Spending feature \u00b7 2 of 3 \u00b7 Complete page, including footer",
+        "images": [
+          {
+            "height": 1536,
+            "loaded": true,
+            "width": 1024
+          }
+        ],
+        "overflow": false
+      },
+      {
+        "caption": "Daybook / Web app / Week calendar \u00b7 3 of 3 \u00b7 Entire image shown",
+        "images": [
+          {
+            "height": 1024,
+            "loaded": true,
+            "width": 1536
+          }
+        ],
+        "nextDisabled": true,
+        "overflow": false
+      }
+    ],
+    "reviewProof": "review-proof.png"
+  },
+  "images": [
+    {
+      "id": "ramp-mobile-01-transactions",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bytes": 1499732,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "ramp-mobile-02-budget",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bytes": 1525393,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "ramp-mobile-03-recurring",
+      "dimensions": [
+        941,
+        1671
+      ],
+      "bytes": 1236025,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "ramp-desktop-01-transactions",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1592672,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "ramp-desktop-02-budget",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1541241,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "ramp-desktop-03-recurring",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1439838,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "ramp-web-app-01-transactions",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1461233,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "ramp-web-app-02-budget",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1421997,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "ramp-web-app-03-recurring",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1417019,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "ramp-web-desk-01-budgeting",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1577029,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "ramp-web-desk-02-spending",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1591081,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "ramp-web-desk-03-how-it-works",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1737283,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "peloton-mobile-01-classes",
+      "dimensions": [
+        940,
+        1672
+      ],
+      "bytes": 1567967,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "peloton-mobile-02-session",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bytes": 1662337,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "peloton-mobile-03-plan",
+      "dimensions": [
+        940,
+        1673
+      ],
+      "bytes": 1479293,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "peloton-desktop-01-classes",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1657590,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "peloton-desktop-02-session",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1595147,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "peloton-desktop-03-plan",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1573297,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "peloton-web-app-01-classes",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1770152,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "peloton-web-app-02-session",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1707273,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "peloton-web-app-03-plan",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1506922,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "peloton-web-desk-01-training",
+      "dimensions": [
+        887,
+        1774
+      ],
+      "bytes": 1927037,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "peloton-web-desk-02-coach",
+      "dimensions": [
+        887,
+        1774
+      ],
+      "bytes": 1937640,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "peloton-web-desk-03-progress",
+      "dimensions": [
+        887,
+        1774
+      ],
+      "bytes": 1892754,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "notion-mobile-01-project",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bytes": 1727371,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "notion-mobile-02-task",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bytes": 1620633,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "notion-mobile-03-calendar",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bytes": 1634925,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "notion-desktop-01-project",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1593074,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "notion-desktop-02-task",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1551209,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "notion-desktop-03-calendar",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1571268,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "notion-web-app-01-project",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1726168,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "notion-web-app-02-task",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1742543,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "notion-web-app-03-calendar",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1652731,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "notion-web-desk-01-projects",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bytes": 1906123,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "notion-web-desk-02-templates",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bytes": 2011475,
+      "pngIntegrity": "pass",
+      "unique": true
+    },
+    {
+      "id": "notion-web-desk-03-template-detail",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bytes": 1906205,
+      "pngIntegrity": "pass",
+      "unique": true
+    }
+  ]
+}

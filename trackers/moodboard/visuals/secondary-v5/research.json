@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-25",
+  "sources": [
+    {
+      "id": "ramp-budget",
+      "brand": "ramp",
+      "title": "Budgets overview and setup",
+      "url": "https://support.ramp.com/budgets-overview-and-setup/",
+      "finding": "Budget details relate planned, actual and committed spend; category rows provide context. Adapt business controls into a personal category budget."
+    },
+    {
+      "id": "ramp-mobile",
+      "brand": "ramp",
+      "title": "Ramp mobile app",
+      "url": "https://support.ramp.com/ramp-mobile-app/",
+      "finding": "Transaction details keep receipts, memos and category fields together. Ramp has no native desktop app; the Ledger desktop concept is an original extension."
+    },
+    {
+      "id": "ramp-web",
+      "brand": "ramp",
+      "title": "Ramp Budgets product page",
+      "url": "https://ramp.com/budgets",
+      "finding": "Feature pages explain the budget workflow with contextual product examples and a closing action."
+    },
+    {
+      "id": "ramp-expenses",
+      "brand": "ramp",
+      "title": "Expense management",
+      "url": "https://ramp.com/expense-management",
+      "finding": "Receipt capture and recurring spend are concrete feature stories. Use those tasks for secondary pages, preserving Ledger styling."
+    },
+    {
+      "id": "peloton-plan",
+      "brand": "peloton",
+      "title": "Personalized workout plans",
+      "url": "https://www.onepeloton.com/blog/personalized-workout-plan",
+      "finding": "Weekly plans use training days, preferred duration and activity; sessions can be swapped or reordered. FORM uses a visible weekly schedule."
+    },
+    {
+      "id": "peloton-classes",
+      "brand": "peloton",
+      "title": "Peloton classes",
+      "url": "https://www.onepeloton.com/classes",
+      "finding": "Class discovery exposes modality, equipment, duration and instructor. Use library and individual class-detail pages."
+    },
+    {
+      "id": "peloton-coaches",
+      "brand": "peloton",
+      "title": "Peloton instructors",
+      "url": "https://www.onepeloton.com/instructors",
+      "finding": "Instructor discovery connects portraits and disciplines. Extend the existing fictional Maya Chen identity for a coach profile."
+    },
+    {
+      "id": "notion-views",
+      "brand": "notion",
+      "title": "Views, filters, sorts and groups",
+      "url": "https://www.notion.com/help/views-filters-and-sorts",
+      "finding": "Task data can be shown as lists or calendars; wide layouts can use side peek, while smaller screens use full-page detail."
+    },
+    {
+      "id": "notion-tasks",
+      "brand": "notion",
+      "title": "Getting started with projects and tasks",
+      "url": "https://www.notion.com/en-gb/help/guides/getting-started-with-projects-and-tasks",
+      "finding": "Projects connect task properties, notes and deadlines. Use project detail, task detail and a date-based week view."
+    },
+    {
+      "id": "notion-templates",
+      "brand": "notion",
+      "title": "Personal planner templates",
+      "url": "https://www.notion.com/templates/category/personal-planner",
+      "finding": "A template directory includes search, category filters, previews and individual detail pages."
+    },
+    {
+      "id": "notion-template-detail",
+      "brand": "notion",
+      "title": "Simple Weekly Planner template",
+      "url": "https://www.notion.com/templates/simple-weekly-planner09",
+      "finding": "Template detail gives a large preview, included sections and a clear use action; create original Daybook content."
+    }
+  ],
+  "assets": [
+    {
+      "file": "references/ramp-budget.png",
+      "url": "https://assets.ramp.com/help-center/budgets-overview-and-setup/_attachments/budget-overview-2026.png"
+    },
+    {
+      "file": "references/peloton-plan.png",
+      "url": "https://images.ctfassets.net/6ilvqec50fal/3KfCiWvHIOOFPRyFcJQXaJ/b7a492ba825bcdbd07fe595d6fa42b0b/new-personalized-plans.png"
+    },
+    {
+      "file": "references/notion-views.png",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/2KRCKUbMb1AYfqJUWafwSr/03dfbdd1149dfbc3525543d373925722/Group_158.png"
+    },
+    {
+      "file": "references/notion-projects.png",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/2wLG1IRp651zLjBdMMFZH9/afc1469dc51b66123b10bf8467bc40ae/projects.png"
+    }
+  ],
+  "limitations": [
+    "Public official guides and publisher images; no signed-in product sessions.",
+    "Mobbin research was unavailable because the connection requires a paid plan.",
+    "Reference research informs page structure; existing first-frame artwork controls every visual style choice."
+  ]
+}

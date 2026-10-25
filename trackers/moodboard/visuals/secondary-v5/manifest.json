@@ -1,0 +1,759 @@
+{
+  "version": 5,
+  "title": "Secondary pages",
+  "date": "2026-10-25",
+  "brands": [
+    {
+      "id": "ramp",
+      "name": "Ledger"
+    },
+    {
+      "id": "peloton",
+      "name": "FORM"
+    },
+    {
+      "id": "notion",
+      "name": "Daybook"
+    }
+  ],
+  "surfaces": [
+    {
+      "id": "mobile",
+      "label": "Mobile app"
+    },
+    {
+      "id": "desktop",
+      "label": "Desktop app"
+    },
+    {
+      "id": "web-app",
+      "label": "Web app"
+    },
+    {
+      "id": "web-desk",
+      "label": "Website"
+    }
+  ],
+  "screens": [
+    {
+      "id": "ramp-mobile-01-transactions",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "mobile",
+      "page": "transactions",
+      "label": "Activity",
+      "number": 1,
+      "file": "images/ramp/mobile-01-transactions.png",
+      "anchorRelative": "visuals/round-02/ramp-mobile.png",
+      "anchorSha256": "0c2187eb7faa00fb66e79da0b4b7ee82d116e8aa833d306f2e9368b84f836ae9",
+      "sourceIds": [
+        "ramp-mobile"
+      ],
+      "status": "generated",
+      "sha256": "0897a9476718ed1af91a3ca74d4c18a77a1f68204ad90d71eb2c5b7b3e7822c9",
+      "width": 941,
+      "height": 1672,
+      "bytes": 1499732
+    },
+    {
+      "id": "ramp-mobile-02-budget",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "mobile",
+      "page": "budget",
+      "label": "Groceries budget",
+      "number": 2,
+      "file": "images/ramp/mobile-02-budget.png",
+      "anchorRelative": "visuals/round-02/ramp-mobile.png",
+      "anchorSha256": "0c2187eb7faa00fb66e79da0b4b7ee82d116e8aa833d306f2e9368b84f836ae9",
+      "sourceIds": [
+        "ramp-budget"
+      ],
+      "status": "generated",
+      "sha256": "0d637782c9d9fa83f6c972817d42e6afd53996429c0b9df01e04c2eb326c3b14",
+      "width": 941,
+      "height": 1672,
+      "bytes": 1525393
+    },
+    {
+      "id": "ramp-mobile-03-recurring",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "mobile",
+      "page": "recurring",
+      "label": "Upcoming bills",
+      "number": 3,
+      "file": "images/ramp/mobile-03-recurring.png",
+      "anchorRelative": "visuals/round-02/ramp-mobile.png",
+      "anchorSha256": "0c2187eb7faa00fb66e79da0b4b7ee82d116e8aa833d306f2e9368b84f836ae9",
+      "sourceIds": [
+        "ramp-expenses"
+      ],
+      "status": "generated",
+      "sha256": "d08dc6e6742fb03c76a612f1ce1c1feb583f6e2ba0f5d8b671db8ce346cc354a",
+      "width": 941,
+      "height": 1671,
+      "bytes": 1236025
+    },
+    {
+      "id": "ramp-desktop-01-transactions",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "desktop",
+      "page": "transactions",
+      "label": "Activity",
+      "number": 1,
+      "file": "images/ramp/desktop-01-transactions.png",
+      "anchorRelative": "visuals/round-02/ramp-desktop.png",
+      "anchorSha256": "91ec5c06383ebb5642893ca69ae4fc1a64390f318fb7113f09ec9167c957efcc",
+      "sourceIds": [
+        "ramp-mobile"
+      ],
+      "status": "generated",
+      "sha256": "a13e678784812263e6e536fe12c1703c7810e0676e00a054e74885e6fbd1bc96",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1592672
+    },
+    {
+      "id": "ramp-desktop-02-budget",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "desktop",
+      "page": "budget",
+      "label": "Groceries budget",
+      "number": 2,
+      "file": "images/ramp/desktop-02-budget.png",
+      "anchorRelative": "visuals/round-02/ramp-desktop.png",
+      "anchorSha256": "91ec5c06383ebb5642893ca69ae4fc1a64390f318fb7113f09ec9167c957efcc",
+      "sourceIds": [
+        "ramp-budget"
+      ],
+      "status": "generated",
+      "sha256": "7fbd4bc71a40a1bc4e879f34578e689dfa148d0343a58fadcb98b238c330e7c8",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1541241
+    },
+    {
+      "id": "ramp-desktop-03-recurring",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "desktop",
+      "page": "recurring",
+      "label": "Upcoming bills",
+      "number": 3,
+      "file": "images/ramp/desktop-03-recurring.png",
+      "anchorRelative": "visuals/round-02/ramp-desktop.png",
+      "anchorSha256": "91ec5c06383ebb5642893ca69ae4fc1a64390f318fb7113f09ec9167c957efcc",
+      "sourceIds": [
+        "ramp-expenses"
+      ],
+      "status": "generated",
+      "sha256": "c8c1106faee8b814e2acc36a2e04216ab3138cd2ad24c477259485dfbead42bb",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1439838
+    },
+    {
+      "id": "ramp-web-app-01-transactions",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "web-app",
+      "page": "transactions",
+      "label": "Activity",
+      "number": 1,
+      "file": "images/ramp/web-app-01-transactions.png",
+      "anchorRelative": "visuals/round-02/ramp-web-app.png",
+      "anchorSha256": "163c179c3f4636be0efe429438ef0cc3015c0fc3ede620b098a996ea036e9669",
+      "sourceIds": [
+        "ramp-mobile"
+      ],
+      "status": "generated",
+      "sha256": "1c7b562d42ddf747e099a34c62e893ca58c4eace61b3e38533d1c893d8ecfe52",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1461233
+    },
+    {
+      "id": "ramp-web-app-02-budget",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "web-app",
+      "page": "budget",
+      "label": "Groceries budget",
+      "number": 2,
+      "file": "images/ramp/web-app-02-budget.png",
+      "anchorRelative": "visuals/round-02/ramp-web-app.png",
+      "anchorSha256": "163c179c3f4636be0efe429438ef0cc3015c0fc3ede620b098a996ea036e9669",
+      "sourceIds": [
+        "ramp-budget"
+      ],
+      "status": "generated",
+      "sha256": "3936a3cf8b3baca9c457982bbdd5119cb1519ee2c6da0b69aa97ce75eb329e5b",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1421997
+    },
+    {
+      "id": "ramp-web-app-03-recurring",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "web-app",
+      "page": "recurring",
+      "label": "Upcoming bills",
+      "number": 3,
+      "file": "images/ramp/web-app-03-recurring.png",
+      "anchorRelative": "visuals/round-02/ramp-web-app.png",
+      "anchorSha256": "163c179c3f4636be0efe429438ef0cc3015c0fc3ede620b098a996ea036e9669",
+      "sourceIds": [
+        "ramp-expenses"
+      ],
+      "status": "generated",
+      "sha256": "67537bd93d9733558644ff21500a5022fd4382e5fecfb2a2a367ba25d626821f",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1417019
+    },
+    {
+      "id": "ramp-web-desk-01-budgeting",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "web-desk",
+      "page": "budgeting",
+      "label": "Budgeting feature",
+      "number": 1,
+      "file": "images/ramp/web-desk-01-budgeting.png",
+      "anchorRelative": "visuals/round-02/ramp-web-desk.png",
+      "anchorSha256": "805c32b2fd1617da8a7eda1c85c4c72778f0cabe0f8ffa2c55e155bb2ccf0679",
+      "sourceIds": [
+        "ramp-web"
+      ],
+      "status": "generated",
+      "sha256": "3881841bc75219752988d1e7595b4c902cb829092332c93bfa23fa6e3722a55a",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1577029
+    },
+    {
+      "id": "ramp-web-desk-02-spending",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "web-desk",
+      "page": "spending",
+      "label": "Spending feature",
+      "number": 2,
+      "file": "images/ramp/web-desk-02-spending.png",
+      "anchorRelative": "visuals/round-02/ramp-web-desk.png",
+      "anchorSha256": "805c32b2fd1617da8a7eda1c85c4c72778f0cabe0f8ffa2c55e155bb2ccf0679",
+      "sourceIds": [
+        "ramp-expenses"
+      ],
+      "status": "generated",
+      "sha256": "c0f5cee808103f25ea273c270c5da64576d88f203536bbd95077def3deb76c52",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1591081
+    },
+    {
+      "id": "ramp-web-desk-03-how-it-works",
+      "brand": "ramp",
+      "product": "Ledger",
+      "surface": "web-desk",
+      "page": "how-it-works",
+      "label": "How it works",
+      "number": 3,
+      "file": "images/ramp/web-desk-03-how-it-works.png",
+      "anchorRelative": "visuals/round-02/ramp-web-desk.png",
+      "anchorSha256": "805c32b2fd1617da8a7eda1c85c4c72778f0cabe0f8ffa2c55e155bb2ccf0679",
+      "sourceIds": [
+        "ramp-web"
+      ],
+      "status": "generated",
+      "sha256": "f77ebd163baba257842024dbdddb5693b5b029b3fb090be098e9372587b19ad7",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1737283
+    },
+    {
+      "id": "peloton-mobile-01-classes",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "mobile",
+      "page": "classes",
+      "label": "Class library",
+      "number": 1,
+      "file": "images/peloton/mobile-01-classes.png",
+      "anchorRelative": "visuals/health-peloton-v4/mobile.png",
+      "anchorSha256": "90bb2ccca6a96b516bf15f3ed0c8e7ec257c72b205b6ae36a7834dbeb9b7d934",
+      "sourceIds": [
+        "peloton-classes"
+      ],
+      "status": "generated",
+      "sha256": "46e6f2d87edb94e41f706bd4a86972bfad3d81f70761e74b10a83fbd48b7e060",
+      "width": 940,
+      "height": 1672,
+      "bytes": 1567967
+    },
+    {
+      "id": "peloton-mobile-02-session",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "mobile",
+      "page": "session",
+      "label": "Session detail",
+      "number": 2,
+      "file": "images/peloton/mobile-02-session.png",
+      "anchorRelative": "visuals/health-peloton-v4/mobile.png",
+      "anchorSha256": "90bb2ccca6a96b516bf15f3ed0c8e7ec257c72b205b6ae36a7834dbeb9b7d934",
+      "sourceIds": [
+        "peloton-classes"
+      ],
+      "status": "generated",
+      "sha256": "daae1e01ed4358337347e6aab5c822985937ade26f18f7ad9649b3c89823024b",
+      "width": 941,
+      "height": 1672,
+      "bytes": 1662337
+    },
+    {
+      "id": "peloton-mobile-03-plan",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "mobile",
+      "page": "plan",
+      "label": "Weekly plan",
+      "number": 3,
+      "file": "images/peloton/mobile-03-plan.png",
+      "anchorRelative": "visuals/health-peloton-v4/mobile.png",
+      "anchorSha256": "90bb2ccca6a96b516bf15f3ed0c8e7ec257c72b205b6ae36a7834dbeb9b7d934",
+      "sourceIds": [
+        "peloton-plan"
+      ],
+      "status": "generated",
+      "sha256": "8020b3c3d243f1e621aca3ec46c64ff31eafd9f7a60dbe72e89ed1fcaf6f91cb",
+      "width": 940,
+      "height": 1673,
+      "bytes": 1479293
+    },
+    {
+      "id": "peloton-desktop-01-classes",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "desktop",
+      "page": "classes",
+      "label": "Class library",
+      "number": 1,
+      "file": "images/peloton/desktop-01-classes.png",
+      "anchorRelative": "visuals/health-peloton-v4/desktop.png",
+      "anchorSha256": "c0ef6bf02aa622d626795cdc16e25069749736405628c4ccdbe459c61072a639",
+      "sourceIds": [
+        "peloton-classes"
+      ],
+      "status": "generated",
+      "sha256": "9c68a2a617220c9d09768f13534e33f417f925a622f3e61a3c9942ed1577055b",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1657590
+    },
+    {
+      "id": "peloton-desktop-02-session",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "desktop",
+      "page": "session",
+      "label": "Session detail",
+      "number": 2,
+      "file": "images/peloton/desktop-02-session.png",
+      "anchorRelative": "visuals/health-peloton-v4/desktop.png",
+      "anchorSha256": "c0ef6bf02aa622d626795cdc16e25069749736405628c4ccdbe459c61072a639",
+      "sourceIds": [
+        "peloton-classes"
+      ],
+      "status": "generated",
+      "sha256": "1f85cfd2062a31ce35b8e3eaaa8fed6cafc4227edd5cdee735d90dcfefabebcd",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1595147
+    },
+    {
+      "id": "peloton-desktop-03-plan",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "desktop",
+      "page": "plan",
+      "label": "Weekly plan",
+      "number": 3,
+      "file": "images/peloton/desktop-03-plan.png",
+      "anchorRelative": "visuals/health-peloton-v4/desktop.png",
+      "anchorSha256": "c0ef6bf02aa622d626795cdc16e25069749736405628c4ccdbe459c61072a639",
+      "sourceIds": [
+        "peloton-plan"
+      ],
+      "status": "generated",
+      "sha256": "caedb43f20e1ac0004a7ea36de68e2e771834a00a987625445ef922a6dfd52db",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1573297
+    },
+    {
+      "id": "peloton-web-app-01-classes",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "web-app",
+      "page": "classes",
+      "label": "Class library",
+      "number": 1,
+      "file": "images/peloton/web-app-01-classes.png",
+      "anchorRelative": "visuals/health-peloton-v4/web-app.png",
+      "anchorSha256": "2624885e962c8fcf033da7f5f2ed0fe7400c44d03807a0eb501fa8765bfd5ce9",
+      "sourceIds": [
+        "peloton-classes"
+      ],
+      "status": "generated",
+      "sha256": "d393982dbfdfa3e2ca44acf4535e7da1bff7460787fe30d3c826de26c32cd085",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1770152
+    },
+    {
+      "id": "peloton-web-app-02-session",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "web-app",
+      "page": "session",
+      "label": "Session detail",
+      "number": 2,
+      "file": "images/peloton/web-app-02-session.png",
+      "anchorRelative": "visuals/health-peloton-v4/web-app.png",
+      "anchorSha256": "2624885e962c8fcf033da7f5f2ed0fe7400c44d03807a0eb501fa8765bfd5ce9",
+      "sourceIds": [
+        "peloton-classes"
+      ],
+      "status": "generated",
+      "sha256": "6f4de4024716e4bf66bc51e7e856b4cbf6aabc28003cf3d0021ab596ae36f836",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1707273
+    },
+    {
+      "id": "peloton-web-app-03-plan",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "web-app",
+      "page": "plan",
+      "label": "Weekly plan",
+      "number": 3,
+      "file": "images/peloton/web-app-03-plan.png",
+      "anchorRelative": "visuals/health-peloton-v4/web-app.png",
+      "anchorSha256": "2624885e962c8fcf033da7f5f2ed0fe7400c44d03807a0eb501fa8765bfd5ce9",
+      "sourceIds": [
+        "peloton-plan"
+      ],
+      "status": "generated",
+      "sha256": "ae060eb680f812e7e7089a9bf4b84b7d6d610b7ed48c83f98a00420af74f212a",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1506922
+    },
+    {
+      "id": "peloton-web-desk-01-training",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "web-desk",
+      "page": "training",
+      "label": "Training page",
+      "number": 1,
+      "file": "images/peloton/web-desk-01-training.png",
+      "anchorRelative": "visuals/health-peloton-v4/web-desk.png",
+      "anchorSha256": "15580a90b3a8815bca99cd412aee6bc5bff86d6a8763e1109324fb8f9c9bba1e",
+      "sourceIds": [
+        "peloton-classes"
+      ],
+      "status": "generated",
+      "sha256": "ec4f1ad9e8a69b0a83e56131808474be5a339ffe25d27d1dec17e47ce22dd0b6",
+      "width": 887,
+      "height": 1774,
+      "bytes": 1927037
+    },
+    {
+      "id": "peloton-web-desk-02-coach",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "web-desk",
+      "page": "coach",
+      "label": "Coach profile",
+      "number": 2,
+      "file": "images/peloton/web-desk-02-coach.png",
+      "anchorRelative": "visuals/health-peloton-v4/web-desk.png",
+      "anchorSha256": "15580a90b3a8815bca99cd412aee6bc5bff86d6a8763e1109324fb8f9c9bba1e",
+      "sourceIds": [
+        "peloton-coaches"
+      ],
+      "status": "generated",
+      "sha256": "b36a75d05a1bde889b76064396503ede669b5db20d9eaeb0b54b46032daeb83f",
+      "width": 887,
+      "height": 1774,
+      "bytes": 1937640
+    },
+    {
+      "id": "peloton-web-desk-03-progress",
+      "brand": "peloton",
+      "product": "FORM",
+      "surface": "web-desk",
+      "page": "progress",
+      "label": "Progress feature",
+      "number": 3,
+      "file": "images/peloton/web-desk-03-progress.png",
+      "anchorRelative": "visuals/health-peloton-v4/web-desk.png",
+      "anchorSha256": "15580a90b3a8815bca99cd412aee6bc5bff86d6a8763e1109324fb8f9c9bba1e",
+      "sourceIds": [
+        "peloton-plan"
+      ],
+      "status": "generated",
+      "sha256": "3a34c0ce996e1953941bfe7c3d2d1886d574ee7b8daa40a520da4756f5bacfa8",
+      "width": 887,
+      "height": 1774,
+      "bytes": 1892754
+    },
+    {
+      "id": "notion-mobile-01-project",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "mobile",
+      "page": "project",
+      "label": "Project detail",
+      "number": 1,
+      "file": "images/notion/mobile-01-project.png",
+      "anchorRelative": "visuals/round-02/notion-mobile.png",
+      "anchorSha256": "216235c8733c304cc730efb6d75943ee3af141bb20efba9aaebbdfd6a617ebd9",
+      "sourceIds": [
+        "notion-tasks"
+      ],
+      "status": "generated",
+      "sha256": "235b11f5dc03cbef199af0ab86f03bb4d698f4dd4cdcad59f1db572923e198ca",
+      "width": 941,
+      "height": 1672,
+      "bytes": 1727371
+    },
+    {
+      "id": "notion-mobile-02-task",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "mobile",
+      "page": "task",
+      "label": "Task detail",
+      "number": 2,
+      "file": "images/notion/mobile-02-task.png",
+      "anchorRelative": "visuals/round-02/notion-mobile.png",
+      "anchorSha256": "216235c8733c304cc730efb6d75943ee3af141bb20efba9aaebbdfd6a617ebd9",
+      "sourceIds": [
+        "notion-views"
+      ],
+      "status": "generated",
+      "sha256": "689b88bf0badc94e09daa46fd93433215c6caac3d067249d475c6dbf8666a2ba",
+      "width": 941,
+      "height": 1672,
+      "bytes": 1620633
+    },
+    {
+      "id": "notion-mobile-03-calendar",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "mobile",
+      "page": "calendar",
+      "label": "Week calendar",
+      "number": 3,
+      "file": "images/notion/mobile-03-calendar.png",
+      "anchorRelative": "visuals/round-02/notion-mobile.png",
+      "anchorSha256": "216235c8733c304cc730efb6d75943ee3af141bb20efba9aaebbdfd6a617ebd9",
+      "sourceIds": [
+        "notion-views"
+      ],
+      "status": "generated",
+      "sha256": "ee20031f0b721107c8b5f7ccd3fcbe149a56967cf0abd6d32aa962608cb22748",
+      "width": 941,
+      "height": 1672,
+      "bytes": 1634925
+    },
+    {
+      "id": "notion-desktop-01-project",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "desktop",
+      "page": "project",
+      "label": "Project detail",
+      "number": 1,
+      "file": "images/notion/desktop-01-project.png",
+      "anchorRelative": "visuals/round-02/notion-desktop.png",
+      "anchorSha256": "68a0a73dc6cc95820373346ddf81d714f3c2cbf99b6eb82cc75e8fdb21ea4e72",
+      "sourceIds": [
+        "notion-tasks"
+      ],
+      "status": "generated",
+      "sha256": "b124e2a74f89b3939c4fc6de65b8529a7d2573346573030aff3a69a5b9351b92",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1593074
+    },
+    {
+      "id": "notion-desktop-02-task",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "desktop",
+      "page": "task",
+      "label": "Task detail",
+      "number": 2,
+      "file": "images/notion/desktop-02-task.png",
+      "anchorRelative": "visuals/round-02/notion-desktop.png",
+      "anchorSha256": "68a0a73dc6cc95820373346ddf81d714f3c2cbf99b6eb82cc75e8fdb21ea4e72",
+      "sourceIds": [
+        "notion-views"
+      ],
+      "status": "generated",
+      "sha256": "cfede4785198d91873acc5f172dbdd44d444a90f276be5e563e50065399361da",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1551209
+    },
+    {
+      "id": "notion-desktop-03-calendar",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "desktop",
+      "page": "calendar",
+      "label": "Week calendar",
+      "number": 3,
+      "file": "images/notion/desktop-03-calendar.png",
+      "anchorRelative": "visuals/round-02/notion-desktop.png",
+      "anchorSha256": "68a0a73dc6cc95820373346ddf81d714f3c2cbf99b6eb82cc75e8fdb21ea4e72",
+      "sourceIds": [
+        "notion-views"
+      ],
+      "status": "generated",
+      "sha256": "e57eef2a125f4b52a754c24e21937986c872326914665e978bde02dbe6a92476",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1571268
+    },
+    {
+      "id": "notion-web-app-01-project",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "web-app",
+      "page": "project",
+      "label": "Project detail",
+      "number": 1,
+      "file": "images/notion/web-app-01-project.png",
+      "anchorRelative": "visuals/round-02/notion-web-app.png",
+      "anchorSha256": "7378cc37c96e0e2a94cf5466dcfaad9afd74bdfeeea20bb9784a0d71ec5ba604",
+      "sourceIds": [
+        "notion-tasks"
+      ],
+      "status": "generated",
+      "sha256": "ab7dc7cf2ceabacabc4afc4e6184a3479ea05dbca0620ab10c78bc6e54704ec7",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1726168
+    },
+    {
+      "id": "notion-web-app-02-task",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "web-app",
+      "page": "task",
+      "label": "Task detail",
+      "number": 2,
+      "file": "images/notion/web-app-02-task.png",
+      "anchorRelative": "visuals/round-02/notion-web-app.png",
+      "anchorSha256": "7378cc37c96e0e2a94cf5466dcfaad9afd74bdfeeea20bb9784a0d71ec5ba604",
+      "sourceIds": [
+        "notion-views"
+      ],
+      "status": "generated",
+      "sha256": "25f004294e3a30fd80e75ada62bab30a81cc1494afe26f801778d9ba5dc4bb3f",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1742543
+    },
+    {
+      "id": "notion-web-app-03-calendar",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "web-app",
+      "page": "calendar",
+      "label": "Week calendar",
+      "number": 3,
+      "file": "images/notion/web-app-03-calendar.png",
+      "anchorRelative": "visuals/round-02/notion-web-app.png",
+      "anchorSha256": "7378cc37c96e0e2a94cf5466dcfaad9afd74bdfeeea20bb9784a0d71ec5ba604",
+      "sourceIds": [
+        "notion-views"
+      ],
+      "status": "generated",
+      "sha256": "64750b7af92ef1687ce4f1eade87a563e801a30f9b5ce1af32bf264918519b94",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1652731
+    },
+    {
+      "id": "notion-web-desk-01-projects",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "web-desk",
+      "page": "projects",
+      "label": "Projects feature",
+      "number": 1,
+      "file": "images/notion/web-desk-01-projects.png",
+      "anchorRelative": "visuals/round-02/notion-web-desk.png",
+      "anchorSha256": "e6f13d1e2811c98a1c63521d1a762859bc7011919360f54ec9d7e4ea0e6fa574",
+      "sourceIds": [
+        "notion-tasks"
+      ],
+      "status": "generated",
+      "sha256": "2883cc751ac9e358eb51337a197cefe9be983e08708d4099b94f30692e4024dd",
+      "width": 941,
+      "height": 1672,
+      "bytes": 1906123
+    },
+    {
+      "id": "notion-web-desk-02-templates",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "web-desk",
+      "page": "templates",
+      "label": "Template directory",
+      "number": 2,
+      "file": "images/notion/web-desk-02-templates.png",
+      "anchorRelative": "visuals/round-02/notion-web-desk.png",
+      "anchorSha256": "e6f13d1e2811c98a1c63521d1a762859bc7011919360f54ec9d7e4ea0e6fa574",
+      "sourceIds": [
+        "notion-templates"
+      ],
+      "status": "generated",
+      "sha256": "e437f8f2cf5219c3257b650027fba5d023624e705f8f76d8c895fd4811f26616",
+      "width": 941,
+      "height": 1672,
+      "bytes": 2011475
+    },
+    {
+      "id": "notion-web-desk-03-template-detail",
+      "brand": "notion",
+      "product": "Daybook",
+      "surface": "web-desk",
+      "page": "template-detail",
+      "label": "Template detail",
+      "number": 3,
+      "file": "images/notion/web-desk-03-template-detail.png",
+      "anchorRelative": "visuals/round-02/notion-web-desk.png",
+      "anchorSha256": "e6f13d1e2811c98a1c63521d1a762859bc7011919360f54ec9d7e4ea0e6fa574",
+      "sourceIds": [
+        "notion-template-detail"
+      ],
+      "status": "generated",
+      "sha256": "780a21e019676b306d36a242983d756b4c7ee5e2634ac5a213d83f099709fcc6",
+      "width": 941,
+      "height": 1672,
+      "bytes": 1906205
+    }
+  ]
+}

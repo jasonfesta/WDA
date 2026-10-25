@@ -1,0 +1,57 @@
+{
+  "method": "built-in image_gen",
+  "note": "Targeted text/data corrections to generated secondary frames, preserving design.",
+  "jobs": [
+    {
+      "id": "notion-mobile-03-calendar",
+      "prompt": "Edit this exact image. Preserve every layout, illustration, font, color, navigation and all content. Only change the small summary at the right of Monday, October 26, 2026 from '2h 15m planned' to '1h 30m planned'. The two tasks are 60m and 30m, totaling 90 minutes. No other changes.",
+      "status": "generated"
+    },
+    {
+      "id": "ramp-mobile-02-budget",
+      "prompt": "Edit this exact image without changing design, shell, typography or layout. Correct only the five transaction rows to be mathematically compatible with weekly spending 120,95,157,48 and as-of October 25. Use: Green Market \u2014 Oct 24, 2026 \u2014 $48.00; Whole Foods \u2014 Oct 19, 2026 \u2014 $97.00; Local Market \u2014 Oct 16, 2026 \u2014 $60.00; Trader Joe's \u2014 Oct 11, 2026 \u2014 $95.00; Safeway \u2014 Oct 4, 2026 \u2014 $120.00. These sum to $420. Preserve all other text, chart and values.",
+      "status": "generated"
+    },
+    {
+      "id": "ramp-desktop-02-budget",
+      "prompt": "Edit this exact image. Preserve every layout, shell, typography and chart. Replace the seven-row Recent transactions table with five spacious rows, preserving its style. Use precisely: Oct 24, 2026 | Green Market | Groceries | \u2212$48.00; Oct 19, 2026 | Whole Foods | Groceries | \u2212$97.00; Oct 16, 2026 | Local Market | Groceries | \u2212$60.00; Oct 11, 2026 | Trader Joe's | Groceries | \u2212$95.00; Oct 4, 2026 | Safeway | Groceries | \u2212$120.00. All dates/amounts now match weekly spending 120,95,157,48, total420. No other change.",
+      "status": "generated"
+    },
+    {
+      "id": "ramp-desktop-01-transactions",
+      "prompt": "Edit this exact image. Preserve every design detail and all amounts. Only correct the dates in the left transaction table into descending order: Green Market Oct 24, 2026; North Coffee Oct 23, 2026; City Transit Oct 23, 2026; Everyday Goods Oct 23, 2026; Home Rent Oct 1, 2026. Keep the receipt and all right panel text unchanged.",
+      "status": "generated"
+    },
+    {
+      "id": "peloton-desktop-01-classes",
+      "prompt": "Edit this exact image and preserve all design and content. Only change the top category tab selected state: 'All' should be selected with the purple underline; 'Mobility' should be unselected with no underline, since the list also contains a strength class. Do not modify anything else.",
+      "status": "generated"
+    },
+    {
+      "id": "peloton-web-desk-03-progress",
+      "prompt": "Edit this exact complete website image, preserving every layout, image style, typography and footer. In the 'A closer look at your workouts' history section, correct only the three rows to match the weekly summary of 140 minutes and the established plan: row1 '35 min Strength' with Maya Chen, Wed Oct 21 2026, right duration35min and small strength photo; row2 '45 min Ride' with Maya Chen, Mon Oct19 2026, right duration45min and small stationary cycling photo; row3 '60 min Run' with Maya Chen, Sat Oct24 2026, right duration60min and small running photo. Keep all other sections and the 20min Mobility next session unchanged.",
+      "status": "generated"
+    },
+    {
+      "id": "notion-web-app-03-calendar",
+      "prompt": "Edit this exact image. Change only the small right panel date rail: the numeral under Wed is incorrect27; replace it with28. The whole seven-day rail must read Mon26 Tue27 Wed28 Thu29 Fri30 Sat31 Sun1. Preserve every other pixel, all content and all layout.",
+      "status": "generated"
+    },
+    {
+      "id": "notion-web-app-02-task",
+      "prompt": "Edit this exact image. Preserve the visual design and right task panel exactly. In the center list change the group heading 'Today \u00b7 3' to 'Next up \u00b7 3'. Change the three Due column entries now reading Today as follows: Draft project brief -> Mon, Oct26; Review research -> Tue, Oct27; Plan next week -> Mon, Oct26. Keep right panel due Tue Oct27 2026 and all other information unchanged.",
+      "status": "generated"
+    },
+    {
+      "id": "ramp-web-desk-03-how-it-works",
+      "prompt": "Edit this exact full website image, preserving all design, data and content. Only correct percentage labels in the small 'This week' module: $420 spent of $610 budget is69% spent, and $190 left is31% remaining. Replace the two instances of68% with69%, and the two instances of32% with31%. Keep $420/$190/$610 unchanged. No other edits.",
+      "status": "generated"
+    },
+    {
+      "id": "ramp-web-desk-03-how-it-works",
+      "prompt": "Single-character correction to this exact full website image. In the 'This week' inset under 'Review your week', directly below $420 and the word Spent, the tiny label still says '68% of budget'. Change exactly that label to '69% of budget'. All other labels now correctly say69% and31%. Preserve absolutely everything else, including full page dimensions and footer.",
+      "status": "generated",
+      "revision": 2
+    }
+  ]
+}
