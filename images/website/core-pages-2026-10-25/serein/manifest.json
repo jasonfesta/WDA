@@ -1,0 +1,445 @@
+{
+  "site": "serein",
+  "name": "Serein",
+  "date": "2026-10-25",
+  "scope": "Three new core page concepts, desktop and continuous mobile; image-only raster mockups.",
+  "status": "accepted after visual review",
+  "format": "PNG",
+  "image_count": 6,
+  "density_note": "Exact native desktop dimensions and final mobile dimensions are recorded below. Desktop is not claimed as 2× at 1440 px. Mobile assembly only proportionally downscales wider parts; no upscaling. Controls and spacing are visual mockups, not measured responsive CSS or working UI.",
+  "identity_reference": "images/website/final-2026-10-24/serein/desktop.png",
+  "identity_sha256": "1713bcdd8ea9f0a8934457f3a9b829eaf7df00e5c109b886e35b6cb399c841b0",
+  "palette": "Pale peach #F6DEC5, light luminous peach #FBECDD and powder blue #D7E6EB; wine #5A303D ink, deep teal accents #155B61. The blue is deliberate, not grey. No beige blanket or stark white page.",
+  "fonts_art_direction": "Newsreader 400/500 display, Manrope 400/500/600 body and UI. Spaced SEREIN serif wordmark.",
+  "facts": "Amber glass with coral tops. Daily Oil: squat amber bottle, rounded shoulders and sculptural coral PUMP, 30 ml / $48. Dew Cleanser: tall amber pump, 150 ml / $32. Cloud Cream: squat amber jar with coral lid, 50 ml / $42. Never dropper, never Petal Oil, no 200 ml cleanser.",
+  "references": [
+    {
+      "url": "https://monasterymade.com/",
+      "observed": "Primary page revisited 25 October: product categories and routine pathways are separate, with making content. Retained visual capture shows botanical imagery and independent object placement.",
+      "decision": "Group by routine role with visible volume/price; use a true vertical routine. No medical, manufacturing or endorsement claims transferred."
+    },
+    {
+      "url": "https://www.botniaskincare.com/",
+      "observed": "Retained 390px WDA browser capture has legible product information, full-width category rows and disclosures.",
+      "decision": "Preserve practical labels and large mobile targets; no shrunken catalogue rows."
+    }
+  ],
+  "production_folder": "output/core-pages-2026-10-25/serein",
+  "pages": [
+    {
+      "id": "01-daily-essentials",
+      "title": "Daily essentials",
+      "type": "routine-led collection",
+      "production_record": "output/core-pages-2026-10-25/serein/records/01-daily-essentials-assembly.json",
+      "qa": {
+        "desktop": "Complete header/footer; three products and correct size/price labels; no clipped images or text. Root independently inspected desktop.",
+        "mobile": "All three products vertically sequenced; 809×3884 continuous image; full footer; clear names and prices; no desktop columns or clipped objects. Both source parts and final composite inspected.",
+        "density": "Native 809 px supports 2× display at up to 404.5 CSS px; no upscaling."
+      },
+      "status": "accepted after visual review",
+      "desktop": {
+        "path": "01-daily-essentials/desktop.png",
+        "repository_path": "images/website/core-pages-2026-10-25/serein/01-daily-essentials/desktop.png",
+        "width": 1024,
+        "height": 1536,
+        "sha256": "b378f079118e3afdc0a2cc2109e03980ba50493031e3ca9247e404998bacef80",
+        "upscaled": false
+      },
+      "mobile": {
+        "path": "01-daily-essentials/mobile.png",
+        "repository_path": "images/website/core-pages-2026-10-25/serein/01-daily-essentials/mobile.png",
+        "width": 809,
+        "height": 3884,
+        "sha256": "89451d8f098d8d0aab57d14cd18ff4b7ed8b363c1431ff316950f8088375550b",
+        "upscaled": false,
+        "max_css_width_at_2x": 404.5
+      },
+      "generation_provenance": [
+        {
+          "site": "serein",
+          "id": "01-daily-essentials",
+          "title": "Daily essentials",
+          "kind": "routine-led collection",
+          "desktop": "An airy editorial catalogue, compact nav, 'Daily essentials.' large left and short 'Three textures for everyday care.' on pale peach. Use a broad two-column composition: dominant tall Dew Cleanser bottle left with 'Dew Cleanser / 150 ml / $32 / Explore →'; right a smaller Daily Oil bottle on powder-blue pool of flat ground, label 'Daily Oil / 30 ml / $48 / Explore →'. No enclosing card borders. A generous horizontal break then Cloud Cream jar alone at larger scale in the lower right with 'Cloud Cream / 50 ml / $42 / Explore →'; left small leaf photograph on the shared pale-blue ground with one short note 'Find a rhythm that feels like you.' and 'Read the routine →'. Product names, sizes, prices outside imagery. Complete footer. No reviews/claims, no repeated split banners.",
+          "upper": "SEREIN, Menu, Bag(0). 'Daily essentials.' and 'Three textures for everyday care.' Light peach. First full-width product moment: tall Dew Cleanser pump; full product visible with space around, 'Dew Cleanser', '150 ml · $32', 'Explore →'. Farther down one independent Daily Oil amber coral pump product image on a powder-blue field, caption 'Daily Oil', '30 ml · $48', 'Explore →'. Keep each photograph and label vertical, no two-column catalogue. End empty powder blue #D7E6EB, no footer.",
+          "lower": "Start empty powder blue #D7E6EB. A large centered Cloud Cream amber jar coral lid with abundant negative space, caption 'Cloud Cream', '50 ml · $42', 'Explore →'. Far below a full-width sharp small-branch botanical photograph with pale yellow-white blossoms against soft daylight; headline 'Find a rhythm that feels like you.' and 'Read the routine →'. Complete spacious mobile footer. No header, no cleanser oroil repeated.",
+          "device": "desktop",
+          "prompt": "Use case: ui-mockup. Create one complete original DESKTOP website page from header to full footer, as a high-end image-only editorial design. Portrait canvas width:height 2:3, target1536x2304 native pixels. This depicts a1440px-wide desktop page, with desktop columns and a clean12column grid, NOT a phone layout. Highest native clarity, sharp natural photography, no browser/device/presentation frame. Image1 is an identity/product/color reference, not a page template. Design a NEW secondary page. Use generous100px desktop side gutters, 120–180px vertical chapter spacing,40px between photo and next group. Body readable, short concise copy, consistent baselines. Air through spacing, variable image scale and fewer containers. No boxy cards, repeated50/50 stripes, heavy borders or giant repeated masthead. Exact productgeometry and factual labels matter. \nBrand: Serein. Amber glass with coral tops. Daily Oil: squat amber bottle, rounded shoulders and sculptural coral PUMP, 30 ml / $48. Dew Cleanser: tall amber pump, 150 ml / $32. Cloud Cream: squat amber jar with coral lid, 50 ml / $42. Never dropper, never Petal Oil, no 200 ml cleanser.\nTypography: Newsreader 400/500 display, Manrope 400/500/600 body and UI. Spaced SEREIN serif wordmark.\nPalette: Pale peach #F6DEC5, light luminous peach #FBECDD and powder blue #D7E6EB; wine #5A303D ink, deep teal accents #155B61. The blue is deliberate, not grey. No beige blanket or stark white page.\nNavigation: Home · Collection · Daily Oil · Our story · Routine · Bag (0). Active destination matches page.\nComposition and exact copy: An airy editorial catalogue, compact nav, 'Daily essentials.' large left and short 'Three textures for everyday care.' on pale peach. Use a broad two-column composition: dominant tall Dew Cleanser bottle left with 'Dew Cleanser / 150 ml / $32 / Explore →'; right a smaller Daily Oil bottle on powder-blue pool of flat ground, label 'Daily Oil / 30 ml / $48 / Explore →'. No enclosing card borders. A generous horizontal break then Cloud Cream jar alone at larger scale in the lower right with 'Cloud Cream / 50 ml / $42 / Explore →'; left small leaf photograph on the shared pale-blue ground with one short note 'Find a rhythm that feels like you.' and 'Read the routine →'. Product names, sizes, prices outside imagery. Complete footer. No reviews/claims, no repeated split banners.\nFooter contents: SEREIN; Home, Collection, Daily Oil, Our story, Routine, Contact, Privacy, Terms, Instagram.\nNo fake offers, claims, endorsements, addresses, awards, shipping promises or extra products. Full page ends cleanly, all footer text within margins. No added review labels.",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/inputs/homepage-identity.png"
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/01-daily-essentials-desktop.png",
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a17383-c44a-7bb1-a0e5-2896186885ee/exec-0a8db3c6-ad79-47f6-879d-1b181e19cd04.png",
+          "native_dimensions": [
+            1024,
+            1536
+          ],
+          "sha256": "b378f079118e3afdc0a2cc2109e03980ba50493031e3ca9247e404998bacef80",
+          "recovery": "Recovered after interruption; identified visually by page content, product geometry and labels matching the saved page job. Original call output receipt was lost.",
+          "status": "accepted after visual review",
+          "visual_review_record": "01-daily-essentials-assembly.json",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/inputs/homepage-identity.png",
+              "role": "saved job brand/product identity reference; original executed call receipt unavailable",
+              "sha256": "1713bcdd8ea9f0a8934457f3a9b829eaf7df00e5c109b886e35b6cb399c841b0",
+              "evidence": "saved job record, not independently recovered execution metadata"
+            }
+          ],
+          "provenance_note": "Prompt and reference list come from the durable pre-interruption job record. The native output was identified by matching page content, product geometry, exact labels and modification chronology; the original tool call receipt was not recovered. Visual QA acceptance does not independently verify executed input metadata."
+        },
+        {
+          "mode": "built-in image_gen",
+          "intent": "generate from identity and layout references",
+          "prompt": "Use case: ui-mockup. Create the LOWER portion of one continuous MOBILE Serein website page: Daily essentials. It will be proportionally joined into a long mobile page. Image1 is the approved identity/product reference. Image2 is this page's complete desktop content and art-direction reference. Image3 if present is its accepted upper portion for exact continuation. Reflow for an actual 390px wide phone, not a miniature desktop. Native portrait aspect 1:2.4, target900x2160 pixels, highest native detail. No device frame, browser, presentation margins or added labels. One column, 28–32 logical px side gutters, 16/24 body, headings32–42px, controls44–48px high. Put80–112 logical px between distinct sections and28–40px between image/caption/action. Content can breathe and page can scroll. No cards, no checkerboard bands, no ornamental borders. All products and typography fully visible and undistorted.\nIdentity: Amber glass with coral tops. Daily Oil: squat amber bottle, rounded shoulders and sculptural coral PUMP, 30 ml / $48. Dew Cleanser: tall amber pump, 150 ml / $32. Cloud Cream: squat amber jar with coral lid, 50 ml / $42. Never dropper, never Petal Oil, no 200 ml cleanser.\nFonts: Newsreader 400/500 display, Manrope 400/500/600 body and UI. Spaced SEREIN serif wordmark.\nPalette: Pale peach #F6DEC5, light luminous peach #FBECDD and powder blue #D7E6EB; wine #5A303D ink, deep teal accents #155B61. The blue is deliberate, not grey. No beige blanket or stark white page.\nNO header, NO repeated page title, NO repeated upper content. The prior upper image supplies typography, palette and continuation scale.\nRender ONLY this assigned content in order:\nStart empty powder blue #D7E6EB. A large centered Cloud Cream amber jar coral lid with abundant negative space, caption 'Cloud Cream', '50 ml · $42', 'Explore →'. Far below a full-width sharp small-branch botanical photograph with pale yellow-white blossoms against soft daylight; headline 'Find a rhythm that feels like you.' and 'Read the routine →'. Complete spacious mobile footer. No header, no cleanser oroil repeated.\nComplete readable footer: SEREIN; Home, Collection, Daily Oil, Our story, Routine, Contact, Privacy, Terms, Instagram. Keep generous space before and within the footer, all bottom content visible.\nBegin with empty flat #D7E6EB ground if lower, matching upper ending. Preserve exact words, names, prices and units. No unsupported claims, offers, reviews, addresses or invented products. Mobile numbered guides are strictly VERTICAL, one full-width chapter after another. Design with abundant space and strong clean aligned margins. Entire output is one rectangular design image.",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "1713bcdd8ea9f0a8934457f3a9b829eaf7df00e5c109b886e35b6cb399c841b0"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/01-daily-essentials-desktop.png",
+              "order": 2,
+              "role": "same-page desktop art direction and content",
+              "sha256": "b378f079118e3afdc0a2cc2109e03980ba50493031e3ca9247e404998bacef80"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/01-daily-essentials-upper.png",
+              "order": 3,
+              "role": "upper mobile continuation",
+              "sha256": "35dc2727ad0213e2e69ab397d82193cda89608a5af550cff383636ee819c2694"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-b8e02a7e-df21-4964-bd92-30ddc358e3ef.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/01-daily-essentials-lower.png",
+          "native_dimensions": [
+            809,
+            1942
+          ],
+          "sha256": "524ef4157f4e389f1759c40c06685a1df4553711b33ed92c688b5f08b27d3630",
+          "status": "accepted after visual review",
+          "visual_review_record": "01-daily-essentials-assembly.json"
+        },
+        {
+          "mode": "built-in image_gen",
+          "intent": "generate from identity and layout references",
+          "prompt": "Use case: ui-mockup. Create the UPPER portion of one continuous MOBILE Serein website page: Daily essentials. It will be proportionally joined into a long mobile page. Image1 is the approved identity/product reference. Image2 is this page's complete desktop content and art-direction reference. Image3 if present is its accepted upper portion for exact continuation. Reflow for an actual 390px wide phone, not a miniature desktop. Native portrait aspect 1:2.4, target900x2160 pixels, highest native detail. No device frame, browser, presentation margins or added labels. One column, 28–32 logical px side gutters, 16/24 body, headings32–42px, controls44–48px high. Put80–112 logical px between distinct sections and28–40px between image/caption/action. Content can breathe and page can scroll. No cards, no checkerboard bands, no ornamental borders. All products and typography fully visible and undistorted.\nIdentity: Amber glass with coral tops. Daily Oil: squat amber bottle, rounded shoulders and sculptural coral PUMP, 30 ml / $48. Dew Cleanser: tall amber pump, 150 ml / $32. Cloud Cream: squat amber jar with coral lid, 50 ml / $42. Never dropper, never Petal Oil, no 200 ml cleanser.\nFonts: Newsreader 400/500 display, Manrope 400/500/600 body and UI. Spaced SEREIN serif wordmark.\nPalette: Pale peach #F6DEC5, light luminous peach #FBECDD and powder blue #D7E6EB; wine #5A303D ink, deep teal accents #155B61. The blue is deliberate, not grey. No beige blanket or stark white page.\nA compact Serein wordmark, Menu and Bag (0) only at the top.\nRender ONLY this assigned content in order:\nSEREIN, Menu, Bag(0). 'Daily essentials.' and 'Three textures for everyday care.' Light peach. First full-width product moment: tall Dew Cleanser pump; full product visible with space around, 'Dew Cleanser', '150 ml · $32', 'Explore →'. Farther down one independent Daily Oil amber coral pump product image on a powder-blue field, caption 'Daily Oil', '30 ml · $48', 'Explore →'. Keep each photograph and label vertical, no two-column catalogue. End empty powder blue #D7E6EB, no footer.\nNo footer. End with 50 logical px of empty flat #D7E6EB ground.\nBegin with empty flat #D7E6EB ground if lower, matching upper ending. Preserve exact words, names, prices and units. No unsupported claims, offers, reviews, addresses or invented products. Mobile numbered guides are strictly VERTICAL, one full-width chapter after another. Design with abundant space and strong clean aligned margins. Entire output is one rectangular design image.",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "1713bcdd8ea9f0a8934457f3a9b829eaf7df00e5c109b886e35b6cb399c841b0"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/01-daily-essentials-desktop.png",
+              "order": 2,
+              "role": "same-page desktop art direction and content",
+              "sha256": "b378f079118e3afdc0a2cc2109e03980ba50493031e3ca9247e404998bacef80"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-eb80aa5c-3ffe-41ee-807d-6cb5a838c82f.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/01-daily-essentials-upper.png",
+          "native_dimensions": [
+            809,
+            1942
+          ],
+          "sha256": "35dc2727ad0213e2e69ab397d82193cda89608a5af550cff383636ee819c2694",
+          "status": "accepted after visual review",
+          "visual_review_record": "01-daily-essentials-assembly.json"
+        }
+      ]
+    },
+    {
+      "id": "02-daily-oil",
+      "title": "Daily Oil",
+      "type": "product detail",
+      "production_record": "output/core-pages-2026-10-25/serein/records/02-daily-oil-assembly.json",
+      "qa": {
+        "desktop": "Visual inspection passed: correct coral pump,30ml/$48, quantity1/Add48; complete gallery, usage sentence, disclosures and footer.",
+        "mobile": "Source parts and continuous final inspected: single-column full-width image and controls, exact usage text, generous gap before texture image, aligned disclosure endpoints and complete footer.",
+        "density": "809 px final width;2× at404.5 CSSpx; no upscale."
+      },
+      "status": "accepted after visual review",
+      "desktop": {
+        "path": "02-daily-oil/desktop.png",
+        "repository_path": "images/website/core-pages-2026-10-25/serein/02-daily-oil/desktop.png",
+        "width": 1024,
+        "height": 1536,
+        "sha256": "c61366b09e7c12844bb337d46569511a9c38598b4bf9df9614d9c3be206f57cf",
+        "upscaled": false
+      },
+      "mobile": {
+        "path": "02-daily-oil/mobile.png",
+        "repository_path": "images/website/core-pages-2026-10-25/serein/02-daily-oil/mobile.png",
+        "width": 809,
+        "height": 3886,
+        "sha256": "558d788b8b76205f97a42a18297f7bc863f13c20d5347f6eeed91f465baa3044",
+        "upscaled": false,
+        "max_css_width_at_2x": 404.5
+      },
+      "generation_provenance": [
+        {
+          "mode": "built-in image_gen",
+          "intent": "generate from identity and layout references",
+          "prompt": "Use case: ui-mockup. Create one complete original DESKTOP website page from header to full footer, as a high-end image-only editorial design. Portrait canvas width:height 2:3, target1536x2304 native pixels. This depicts a1440px-wide desktop page, with desktop columns and a clean12column grid, NOT a phone layout. Highest native clarity, sharp natural photography, no browser/device/presentation frame. Image1 is an identity/product/color reference, not a page template. Design a NEW secondary page. Use generous100px desktop side gutters, 120–180px vertical chapter spacing,40px between photo and next group. Body readable, short concise copy, consistent baselines. Air through spacing, variable image scale and fewer containers. No boxy cards, repeated50/50 stripes, heavy borders or giant repeated masthead. Exact productgeometry and factual labels matter. \nBrand: Serein. Amber glass with coral tops. Daily Oil: squat amber bottle, rounded shoulders and sculptural coral PUMP, 30 ml / $48. Dew Cleanser: tall amber pump, 150 ml / $32. Cloud Cream: squat amber jar with coral lid, 50 ml / $42. Never dropper, never Petal Oil, no 200 ml cleanser.\nTypography: Newsreader 400/500 display, Manrope 400/500/600 body and UI. Spaced SEREIN serif wordmark.\nPalette: Pale peach #F6DEC5, light luminous peach #FBECDD and powder blue #D7E6EB; wine #5A303D ink, deep teal accents #155B61. The blue is deliberate, not grey. No beige blanket or stark white page.\nNavigation: Home · Collection · Daily Oil · Our story · Routine · Bag (0). Active destination matches page.\nComposition and exact copy: Task-first Daily Oil page. Compact nav and Home / Collection / Daily Oil breadcrumb. Huge squat amber Daily Oil bottle with correct coral PUMP on powder-blue ground left; product purchase details right: 'Daily Oil', '30 ml · $48', 'A few drops. A quieter moment.', quantity minus 1 plus, clear 'Add to bag — $48'. Small secondary image of oil resting on adult fingertips below bottle, separated by broad negative space. Lower pale-peach reading field contains a large close-up of amber oil texture and small 'A softer finish.' then a concise usage passage 'Warm a few drops between your palms. Press gently into skin.' with 'See the daily routine →'. Two aligned disclosure rows 'Ingredients +' and 'Use & care +' without invented lists. Complete footer. No medical claims, no testimonials, no giant campaign portrait.\nFooter contents: SEREIN; Home, Collection, Daily Oil, Our story, Routine, Contact, Privacy, Terms, Instagram.\nNo fake offers, claims, endorsements, addresses, awards, shipping promises or extra products. Full page ends cleanly, all footer text within margins. No added review labels.",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "1713bcdd8ea9f0a8934457f3a9b829eaf7df00e5c109b886e35b6cb399c841b0"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-ebc5ddbd-08b4-4859-b303-7d418201c349.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/02-daily-oil-desktop.png",
+          "native_dimensions": [
+            1024,
+            1536
+          ],
+          "sha256": "c61366b09e7c12844bb337d46569511a9c38598b4bf9df9614d9c3be206f57cf",
+          "status": "accepted after visual review",
+          "visual_review_record": "02-daily-oil-assembly.json"
+        },
+        {
+          "mode": "built-in image_gen",
+          "intent": "generate from identity and layout references",
+          "prompt": "Use case: ui-mockup. Create the LOWER portion of one continuous MOBILE Serein website page: Daily Oil. It will be proportionally joined into a long mobile page. Image1 is the approved identity/product reference. Image2 is this page's complete desktop content and art-direction reference. Image3 if present is its accepted upper portion for exact continuation. Reflow for an actual 390px wide phone, not a miniature desktop. Native portrait aspect 1:2.4, target900x2160 pixels, highest native detail. No device frame, browser, presentation margins or added labels. One column, 28–32 logical px side gutters, 16/24 body, headings32–42px, controls44–48px high. Put80–112 logical px between distinct sections and28–40px between image/caption/action. Content can breathe and page can scroll. No cards, no checkerboard bands, no ornamental borders. All products and typography fully visible and undistorted.\nIdentity: Amber glass with coral tops. Daily Oil: squat amber bottle, rounded shoulders and sculptural coral PUMP, 30 ml / $48. Dew Cleanser: tall amber pump, 150 ml / $32. Cloud Cream: squat amber jar with coral lid, 50 ml / $42. Never dropper, never Petal Oil, no 200 ml cleanser.\nFonts: Newsreader 400/500 display, Manrope 400/500/600 body and UI. Spaced SEREIN serif wordmark.\nPalette: Pale peach #F6DEC5, light luminous peach #FBECDD and powder blue #D7E6EB; wine #5A303D ink, deep teal accents #155B61. The blue is deliberate, not grey. No beige blanket or stark white page.\nNO header, NO repeated page title, NO repeated upper content. The prior upper image supplies typography, palette and continuation scale.\nRender ONLY this assigned content in order:\nStart empty powder blue #D7E6EB. Broad negative space and large macro photograph of amber oil texture. Warm pale-peach passage underneath, heading 'A softer finish.' and exact body 'Warm a few drops between your palms. Press gently into skin.' Link 'See the daily routine →'. Fine full-width disclosures 'Ingredients +' and 'Use & care +', generous row spacing. Complete mobile footer. No header, no medical claims, no duplicated purchase module.\nComplete readable footer: SEREIN; Home, Collection, Daily Oil, Our story, Routine, Contact, Privacy, Terms, Instagram. Keep generous space before and within the footer, all bottom content visible.\nBegin with empty flat #D7E6EB ground if lower, matching upper ending. Preserve exact words, names, prices and units. No unsupported claims, offers, reviews, addresses or invented products. Mobile numbered guides are strictly VERTICAL, one full-width chapter after another. Design with abundant space and strong clean aligned margins. Entire output is one rectangular design image.",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "1713bcdd8ea9f0a8934457f3a9b829eaf7df00e5c109b886e35b6cb399c841b0"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/02-daily-oil-desktop.png",
+              "order": 2,
+              "role": "same-page desktop art direction and content",
+              "sha256": "c61366b09e7c12844bb337d46569511a9c38598b4bf9df9614d9c3be206f57cf"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/02-daily-oil-upper.png",
+              "order": 3,
+              "role": "upper mobile continuation",
+              "sha256": "8193ca8faf43283d7df0dde1a37b41a45d60edb0383e3e6d84160f51d334b788"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-34dd77fc-974c-41a9-808b-57a6b99116df.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/02-daily-oil-lower.png",
+          "native_dimensions": [
+            809,
+            1944
+          ],
+          "sha256": "eee6c959fa681a135d717d68dd625950319d1f1fd7e6af7534e7df83461e5a72",
+          "status": "accepted after visual review",
+          "visual_review_record": "02-daily-oil-assembly.json"
+        },
+        {
+          "mode": "built-in image_gen",
+          "intent": "generate from identity and layout references",
+          "prompt": "Use case: ui-mockup. Create the UPPER portion of one continuous MOBILE Serein website page: Daily Oil. It will be proportionally joined into a long mobile page. Image1 is the approved identity/product reference. Image2 is this page's complete desktop content and art-direction reference. Image3 if present is its accepted upper portion for exact continuation. Reflow for an actual 390px wide phone, not a miniature desktop. Native portrait aspect 1:2.4, target900x2160 pixels, highest native detail. No device frame, browser, presentation margins or added labels. One column, 28–32 logical px side gutters, 16/24 body, headings32–42px, controls44–48px high. Put80–112 logical px between distinct sections and28–40px between image/caption/action. Content can breathe and page can scroll. No cards, no checkerboard bands, no ornamental borders. All products and typography fully visible and undistorted.\nIdentity: Amber glass with coral tops. Daily Oil: squat amber bottle, rounded shoulders and sculptural coral PUMP, 30 ml / $48. Dew Cleanser: tall amber pump, 150 ml / $32. Cloud Cream: squat amber jar with coral lid, 50 ml / $42. Never dropper, never Petal Oil, no 200 ml cleanser.\nFonts: Newsreader 400/500 display, Manrope 400/500/600 body and UI. Spaced SEREIN serif wordmark.\nPalette: Pale peach #F6DEC5, light luminous peach #FBECDD and powder blue #D7E6EB; wine #5A303D ink, deep teal accents #155B61. The blue is deliberate, not grey. No beige blanket or stark white page.\nA compact Serein wordmark, Menu and Bag (0) only at the top.\nRender ONLY this assigned content in order:\nSEREIN, Menu, Bag(0). Home / Collection / Daily Oil. 'Daily Oil', '30 ml · $48'. A large fully visible squat amber bottle with coral PUMP on powder blue, high clarity label. Below 'A few drops. A quieter moment.' Quantity minus1plus and full-width 'Add to bag — $48'. Then a quiet image of oil on adult fingertips with no clutter. End empty powder blue #D7E6EB, no footer.\nNo footer. End with 50 logical px of empty flat #D7E6EB ground.\nBegin with empty flat #D7E6EB ground if lower, matching upper ending. Preserve exact words, names, prices and units. No unsupported claims, offers, reviews, addresses or invented products. Mobile numbered guides are strictly VERTICAL, one full-width chapter after another. Design with abundant space and strong clean aligned margins. Entire output is one rectangular design image.",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "1713bcdd8ea9f0a8934457f3a9b829eaf7df00e5c109b886e35b6cb399c841b0"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/02-daily-oil-desktop.png",
+              "order": 2,
+              "role": "same-page desktop art direction and content",
+              "sha256": "c61366b09e7c12844bb337d46569511a9c38598b4bf9df9614d9c3be206f57cf"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-f9dcecfe-f566-41c7-ba43-994dcb3b5ca1.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/02-daily-oil-upper.png",
+          "native_dimensions": [
+            809,
+            1942
+          ],
+          "sha256": "8193ca8faf43283d7df0dde1a37b41a45d60edb0383e3e6d84160f51d334b788",
+          "status": "accepted after visual review",
+          "visual_review_record": "02-daily-oil-assembly.json"
+        }
+      ]
+    },
+    {
+      "id": "03-daily-routine",
+      "title": "Daily routine",
+      "type": "vertical routine guide",
+      "production_record": "output/core-pages-2026-10-25/serein/records/03-daily-routine-assembly.json",
+      "qa": {
+        "desktop": "Revised desktop inspected: open powder-blue guide, distinct numbered chapters, correct pump products and150ml/$32,30ml/$48,50ml/$42. Removed incidental dropper and touching tile rows. Complete footer.",
+        "mobile": "Both native source parts and final inspected:01Cleanse,02Nourish,03Pause vertically stacked with full-width images; correct labels/prices; long open pause between chapters, full footer. No horizontal step cards or cropped text.",
+        "density": "809px final width and3884px height; both native parts809×1942 directly joined, no upscale or resampling."
+      },
+      "status": "accepted after visual review",
+      "desktop": {
+        "path": "03-daily-routine/desktop.png",
+        "repository_path": "images/website/core-pages-2026-10-25/serein/03-daily-routine/desktop.png",
+        "width": 1024,
+        "height": 1536,
+        "sha256": "8d34c920c7b2213dc1382339dc1c934412a5be16520e9b992d44a1b3940457de",
+        "upscaled": false
+      },
+      "mobile": {
+        "path": "03-daily-routine/mobile.png",
+        "repository_path": "images/website/core-pages-2026-10-25/serein/03-daily-routine/mobile.png",
+        "width": 809,
+        "height": 3884,
+        "sha256": "b690a0022947567f8bcbd6419fd1694d3ea3ca310b8fd93c7e5c29947dd85155",
+        "upscaled": false,
+        "max_css_width_at_2x": 404.5
+      },
+      "generation_provenance": [
+        {
+          "mode": "built-in image_gen",
+          "intent": "layout and product-usage correction",
+          "prompt": "Use case: ui-mockup. EDIT the second reference, the SEREIN Daily Routine DESKTOP page, to correct its material spacing problem. Reference1 is approved brand/product identity; reference2 is the existing complete routine page. Output one complete desktop website mockup, native1024x1536 or highest available comparable portrait canvas. Keep compact SEREIN desktop header/navigation and complete footer. Preserve exact three product names, packaging, volumes and prices. Daily Oil is an amber bottle with sculptural CORAL PUMP, never a dropper. Preserve peach/powder-blue/wine/teal identity. No new claims.\nRECOMPOSE as an airy open editorial process page, NOT touching rectangular image tiles or checkerboard rows. A single continuous pale powder-blue background. Compact header, then a spacious typographic introduction 'Cleanse. Nourish. Pause.' and 'A simple rhythm for everyday care.' Remove the large face hero and redundant top CTA to make actual vertical room. Three sequential numbered chapters spaced at least70native pixels apart, with generous50px outer margins and clear aligned edges. Each chapter is an open horizontal desktop editorial composition with a small number/heading/text column LEFT and a broad photograph RIGHT. Never put images against page edge or against neighboring images. Do not box captions. No ornamental vertical divider bars. Three large photographs only, each shows the correct bottle/jar together with the use moment in the same elegant daylight still life.\n01 Cleanse. Copy 'Begin with a gentle cleanse.' 'Dew Cleanser' '150 ml · $32'. Right photograph tall amber coral-pump cleanser on pale peach stone next to hands holding water.\n02 Nourish. Copy 'Warm a few drops. Press gently into skin.' 'Daily Oil' '30 ml · $48'. Right photograph correct squat amber coral-pump oil bottle next to an open palm with a few shining drops of oil. NO pipette, dropper, pouring spout or new tool.\n03 Pause. Copy 'Finish with a little comfort.' 'Cloud Cream' '50 ml · $42'. Right photograph amber cream jar with coral lid beside a modest cream texture swirl.\nAfter a generous open interval, one simple action 'Explore the essentials →'. Complete footer SEREIN; Home, Collection, Daily Oil, Our story, Routine, Contact, Privacy, Terms, Instagram. All visible with breathable bottom padding. No hero landing page repetition, no external presentation frame, no phone mockup, no side by side device comp. This is a complete desktop guide with clean grid and visually generous air.\n",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "1713bcdd8ea9f0a8934457f3a9b829eaf7df00e5c109b886e35b6cb399c841b0"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/03-daily-routine-desktop.png",
+              "order": 2,
+              "role": "same-page desktop art direction and content",
+              "sha256": "9005df15d0449c32b5702f349e10e764953cf079932a027c1a4e6a65094eb271"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-51079e47-31fb-47ea-b522-9993d61998b4.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/03-daily-routine-desktop-v2.png",
+          "native_dimensions": [
+            1024,
+            1536
+          ],
+          "sha256": "8d34c920c7b2213dc1382339dc1c934412a5be16520e9b992d44a1b3940457de",
+          "status": "accepted after visual review",
+          "qa": "Open blue ground replaces touching tile rows; product facts preserved, pump remains, no pipette, all three steps readable and complete footer.",
+          "visual_review_record": "03-daily-routine-assembly.json"
+        },
+        {
+          "mode": "built-in image_gen",
+          "intent": "generate from identity and layout references",
+          "prompt": "Use case: ui-mockup. Create one complete original DESKTOP website page from header to full footer, as a high-end image-only editorial design. Portrait canvas width:height 2:3, target1536x2304 native pixels. This depicts a1440px-wide desktop page, with desktop columns and a clean12column grid, NOT a phone layout. Highest native clarity, sharp natural photography, no browser/device/presentation frame. Image1 is an identity/product/color reference, not a page template. Design a NEW secondary page. Use generous100px desktop side gutters, 120–180px vertical chapter spacing,40px between photo and next group. Body readable, short concise copy, consistent baselines. Air through spacing, variable image scale and fewer containers. No boxy cards, repeated50/50 stripes, heavy borders or giant repeated masthead. Exact productgeometry and factual labels matter. \nBrand: Serein. Amber glass with coral tops. Daily Oil: squat amber bottle, rounded shoulders and sculptural coral PUMP, 30 ml / $48. Dew Cleanser: tall amber pump, 150 ml / $32. Cloud Cream: squat amber jar with coral lid, 50 ml / $42. Never dropper, never Petal Oil, no 200 ml cleanser.\nTypography: Newsreader 400/500 display, Manrope 400/500/600 body and UI. Spaced SEREIN serif wordmark.\nPalette: Pale peach #F6DEC5, light luminous peach #FBECDD and powder blue #D7E6EB; wine #5A303D ink, deep teal accents #155B61. The blue is deliberate, not grey. No beige blanket or stark white page.\nNavigation: Home · Collection · Daily Oil · Our story · Routine · Bag (0). Active destination matches page.\nComposition and exact copy: A calm routine guide with compact nav and typographic opening 'Cleanse. Nourish. Pause.' on powder blue; small 'A simple rhythm for everyday care.' A delicate vertical 01 02 03 reading axis, NOT cards. 01 'Cleanse' with tall Dew Cleanser bottle and watery hand photograph, 'Dew Cleanser · 150 ml · $32' and 'Begin with a gentle cleanse.' 02 'Nourish' with squat Daily Oil pump bottle, independent close view of oil in adult palm, 'Daily Oil · 30 ml · $48', 'Warm a few drops. Press gently into skin.' 03 'Pause' with Cloud Cream jar and open texture photograph, 'Cloud Cream · 50 ml · $42', 'Finish with a little comfort.' Use varied image sizes and large deliberate gaps, no three identical horizontal boxes. One 'Explore the essentials →' closing action and complete footer. No treatment or diagnostic claims.\nFooter contents: SEREIN; Home, Collection, Daily Oil, Our story, Routine, Contact, Privacy, Terms, Instagram.\nNo fake offers, claims, endorsements, addresses, awards, shipping promises or extra products. Full page ends cleanly, all footer text within margins. No added review labels.",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "1713bcdd8ea9f0a8934457f3a9b829eaf7df00e5c109b886e35b6cb399c841b0"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-fee7967c-d74e-42b2-8a17-f0daa796dc61.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/03-daily-routine-desktop.png",
+          "native_dimensions": [
+            1024,
+            1536
+          ],
+          "sha256": "9005df15d0449c32b5702f349e10e764953cf079932a027c1a4e6a65094eb271",
+          "status": "superseded by desktop-v2: open chapter spacing and remove incidental dropper",
+          "visual_review_record": "03-daily-routine-assembly.json"
+        },
+        {
+          "mode": "built-in image_gen",
+          "intent": "generate from identity and layout references",
+          "prompt": "Use case: ui-mockup. Create the LOWER portion of one continuous MOBILE Serein website page: Daily routine. It will be proportionally joined into a long mobile page. Image1 is the approved identity/product reference. Image2 is this page's complete desktop content and art-direction reference. Image3 if present is its accepted upper portion for exact continuation. Reflow for an actual 390px wide phone, not a miniature desktop. Native portrait aspect 1:2.4, target900x2160 pixels, highest native detail. No device frame, browser, presentation margins or added labels. One column, 28–32 logical px side gutters, 16/24 body, headings32–42px, controls44–48px high. Put80–112 logical px between distinct sections and28–40px between image/caption/action. Content can breathe and page can scroll. No cards, no checkerboard bands, no ornamental borders. All products and typography fully visible and undistorted.\nIdentity: Amber glass with coral tops. Daily Oil: squat amber bottle, rounded shoulders and sculptural coral PUMP, 30 ml / $48. Dew Cleanser: tall amber pump, 150 ml / $32. Cloud Cream: squat amber jar with coral lid, 50 ml / $42. Never dropper, never Petal Oil, no 200 ml cleanser.\nFonts: Newsreader 400/500 display, Manrope 400/500/600 body and UI. Spaced SEREIN serif wordmark.\nPalette: Pale peach #F6DEC5, light luminous peach #FBECDD and powder blue #D7E6EB; wine #5A303D ink, deep teal accents #155B61. The blue is deliberate, not grey. No beige blanket or stark white page.\nNO header, NO repeated page title, NO repeated upper content. The prior upper image supplies typography, palette and continuation scale.\nRender ONLY this assigned content in order:\nStart empty powder-blue #D7E6EB ground. Step '03 Pause', large amber Cloud Cream jar with coral lid and a small delicate cream texture placed independently with lots of air. Exact caption 'Cloud Cream · 50 ml · $42', 'Finish with a little comfort.' Later a serene phone portrait photograph of a clean sink, fresh branch and folded towel, headline 'A little room for yourself.' and 'Explore the essentials →'. Complete airy mobile footer. Single vertical flow, no header or repeated 01/02.\nComplete readable footer: SEREIN; Home, Collection, Daily Oil, Our story, Routine, Contact, Privacy, Terms, Instagram. Keep generous space before and within the footer, all bottom content visible.\nBegin with empty flat #D7E6EB ground if lower, matching upper ending. Preserve exact words, names, prices and units. No unsupported claims, offers, reviews, addresses or invented products. Mobile numbered guides are strictly VERTICAL, one full-width chapter after another. Design with abundant space and strong clean aligned margins. Entire output is one rectangular design image.",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "1713bcdd8ea9f0a8934457f3a9b829eaf7df00e5c109b886e35b6cb399c841b0"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/03-daily-routine-desktop-v2.png",
+              "order": 2,
+              "role": "same-page desktop art direction and content",
+              "sha256": "8d34c920c7b2213dc1382339dc1c934412a5be16520e9b992d44a1b3940457de"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/03-daily-routine-upper.png",
+              "order": 3,
+              "role": "upper mobile continuation",
+              "sha256": "abc2e65e8288b5f5d4a5daa824781b3a1c85eb012ebe07f6eb5622fc0ea4ad86"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-382304c9-94d1-4c19-860c-aadbeeb76143.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/03-daily-routine-lower.png",
+          "native_dimensions": [
+            809,
+            1942
+          ],
+          "sha256": "ebea7f81ba70d5fffe3db0e7be41335c0014746e358ee4f8c7150caaff21796e",
+          "status": "accepted after visual review",
+          "visual_review_record": "03-daily-routine-assembly.json"
+        },
+        {
+          "mode": "built-in image_gen",
+          "intent": "generate from identity and layout references",
+          "prompt": "Use case: ui-mockup. Create the UPPER portion of one continuous MOBILE Serein website page: Daily routine. It will be proportionally joined into a long mobile page. Image1 is the approved identity/product reference. Image2 is this page's complete desktop content and art-direction reference. Image3 if present is its accepted upper portion for exact continuation. Reflow for an actual 390px wide phone, not a miniature desktop. Native portrait aspect 1:2.4, target900x2160 pixels, highest native detail. No device frame, browser, presentation margins or added labels. One column, 28–32 logical px side gutters, 16/24 body, headings32–42px, controls44–48px high. Put80–112 logical px between distinct sections and28–40px between image/caption/action. Content can breathe and page can scroll. No cards, no checkerboard bands, no ornamental borders. All products and typography fully visible and undistorted.\nIdentity: Amber glass with coral tops. Daily Oil: squat amber bottle, rounded shoulders and sculptural coral PUMP, 30 ml / $48. Dew Cleanser: tall amber pump, 150 ml / $32. Cloud Cream: squat amber jar with coral lid, 50 ml / $42. Never dropper, never Petal Oil, no 200 ml cleanser.\nFonts: Newsreader 400/500 display, Manrope 400/500/600 body and UI. Spaced SEREIN serif wordmark.\nPalette: Pale peach #F6DEC5, light luminous peach #FBECDD and powder blue #D7E6EB; wine #5A303D ink, deep teal accents #155B61. The blue is deliberate, not grey. No beige blanket or stark white page.\nA compact Serein wordmark, Menu and Bag (0) only at the top.\nRender ONLY this assigned content in order:\nSEREIN, Menu, Bag(0). 'Cleanse. Nourish. Pause.' and 'A simple rhythm for everyday care.' Powder-blue ground. Then step '01 Cleanse', large tall Dew Cleanser photograph, 'Dew Cleanser · 150 ml · $32', 'Begin with a gentle cleanse.' Full-width single-column chapter with 28px gutters, huge space. Then '02 Nourish' with one full-width photograph showing correct squat Daily Oil coral pump bottle and adult hand with oil, caption 'Daily Oil · 30 ml · $48', 'Warm a few drops. Press gently into skin.' Never side-by-side step cards or mini-photos. End blank powder-blue ground. No footer.\nNo footer. End with 50 logical px of empty flat #D7E6EB ground.\nBegin with empty flat #D7E6EB ground if lower, matching upper ending. Preserve exact words, names, prices and units. No unsupported claims, offers, reviews, addresses or invented products. Mobile numbered guides are strictly VERTICAL, one full-width chapter after another. Design with abundant space and strong clean aligned margins. Entire output is one rectangular design image.",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "1713bcdd8ea9f0a8934457f3a9b829eaf7df00e5c109b886e35b6cb399c841b0"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/03-daily-routine-desktop-v2.png",
+              "order": 2,
+              "role": "same-page desktop art direction and content",
+              "sha256": "8d34c920c7b2213dc1382339dc1c934412a5be16520e9b992d44a1b3940457de"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-839965f3-6cac-4506-88da-37f531870c66.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/serein/sources/03-daily-routine-upper.png",
+          "native_dimensions": [
+            809,
+            1942
+          ],
+          "sha256": "abc2e65e8288b5f5d4a5daa824781b3a1c85eb012ebe07f6eb5622fc0ea4ad86",
+          "status": "accepted after visual review",
+          "visual_review_record": "03-daily-routine-assembly.json"
+        }
+      ]
+    }
+  ],
+  "final_collection_review": {
+    "01-daily-essentials": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Three correct identities, volumes and prices; mobile products stacked vertically with complete footer.",
+      "hashes": {
+        "desktop": "b378f079118e3afdc0a2cc2109e03980ba50493031e3ca9247e404998bacef80",
+        "mobile": "89451d8f098d8d0aab57d14cd18ff4b7ed8b363c1431ff316950f8088375550b"
+      }
+    },
+    "02-daily-oil": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Correct coral pump30ml48, functional-state visuals match, full-width mobile controls and aligned detail rows.",
+      "hashes": {
+        "desktop": "c61366b09e7c12844bb337d46569511a9c38598b4bf9df9614d9c3be206f57cf",
+        "mobile": "558d788b8b76205f97a42a18297f7bc863f13c20d5347f6eeed91f465baa3044"
+      }
+    },
+    "03-daily-routine": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Cleanse/Nourish/Pause correct products, volumes and prices, allmobile steps vertical, pump retained and full footer.",
+      "hashes": {
+        "desktop": "8d34c920c7b2213dc1382339dc1c934412a5be16520e9b992d44a1b3940457de",
+        "mobile": "b690a0022947567f8bcbd6419fd1694d3ea3ca310b8fd93c7e5c29947dd85155"
+      }
+    }
+  }
+}

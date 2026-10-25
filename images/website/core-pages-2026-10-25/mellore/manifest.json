@@ -1,0 +1,797 @@
+{
+  "site": "MELLORE",
+  "date": "2026-10-25",
+  "delivery": "Three new core pages; six final raster PNGs. No website implementation.",
+  "identity": "Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.",
+  "art_direction": {
+    "palette": "powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.",
+    "typography_direction": "Cormorant Garamond 500/600 and Manrope 400/500",
+    "selected_homepage": "MELLORE option A — Open horizon"
+  },
+  "research_sources": [
+    {
+      "title": "Polène Numéro Dix product architecture",
+      "url": "https://eng.polene-paris.com/products/numero-dix-textured-plum"
+    },
+    {
+      "title": "HEREU craftsmanship",
+      "url": "https://hereustudio.com/pages/craftmanship"
+    },
+    {
+      "title": "Chloé collection archive",
+      "url": "https://www.chloe.com/"
+    }
+  ],
+  "limitations": "Generated design images. Native and final dimensions are exact; no upscaling. Grid, spacing and type instructions are visual targets, not measured CSS, accessibility conformance or a retina guarantee. Products, purchasing and care states are concept mockups; making imagery does not assert actual manufacturing provenance.",
+  "pages": [
+    {
+      "id": "01-collection",
+      "title": "For the open day",
+      "purpose": "catalogue",
+      "reference_observation_and_authored_decision": "Polène object catalogue supplies useful visible product labels; Mirazur landscape archive and selected MELLORE A supply expansive sea-and-sky pauses. Authored catalogue uses one lead product, then two supporting choices.",
+      "views": {
+        "desktop": {
+          "file": "01-collection/desktop.png",
+          "width": 1086,
+          "height": 1448,
+          "sha256": "6d65bfc91b877c0638196cb68e37b9c5897146dc8e47dbc8d12a5d037667b198",
+          "bytes": 1987448
+        },
+        "mobile": {
+          "file": "01-collection/mobile.png",
+          "width": 809,
+          "height": 3886,
+          "sha256": "8d13902ee3ee1a661bcb7655cea9fb224cd1fbc585353aa8df10ada6df510780",
+          "bytes": 3342398
+        }
+      },
+      "accepted_generation_records": {
+        "desktop": {
+          "site": "mellore",
+          "page": "01-collection",
+          "part": "desktop",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Edit image1, a complete DESKTOP MELLORE collection page; image2 is product/brand fidelity reference. Keep the complete page, powder-blue identity, all accurate copy and product geometry: Sway Chestnut $440, Dayline Black $520, Pocket Ivory $320, 3 pieces, Bag (0), all footer links. Keep upper and lower full-bleed coastal photography as deliberate full-width images. Correct ONLY grid and vertical breathing space. The Dayline/Pocket inset row currently has 18px gaps and misaligned inset edges. Give all inset content the SAME ~6% side gutters as header/text. Leave a full 120 logical px empty BLUE space before this two-product row and 120 logical px after it. Give these two images a broad gutter ~64logicalpx; captions remain readable. Use visibly different image scales but aligned grid edges. Each product full and undistorted. Reduce the closing panorama height if necessary to make room for this air, but do not cut footer or labels. Maintain complete desktop multi-column architecture; NOT a phone or a stack of boxed marketing cards. Large clean open sky-blue canvas, no beige, no whitewash, no borders. Complete 3:4 portrait desktop page, native target1536x2048; avoid dense strips. Exact copy and compact wordmark preserved. 'All' only underlined, not the word selected. Highest native photo/type clarity. No source-site logos, new offers, claims, specs, or unrelated content.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/01-collection-desktop-v2.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-desktop-recovered.png",
+              "role": "edit target; correct spacing and gutters only",
+              "sha256": "5890796170e2c795d8faa69c412ccee77800d38638def7c3db58c1f197a5fd74"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/inputs/selected-desktop.png",
+              "role": "approved brand and Sway product identity",
+              "sha256": "63408dfa4afd62eb39f343f6a4ff6b60d935f00deeb8edd81089da55d1adfed7"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-desktop-v2.png",
+          "qa_status": "visual inspection passed; final paired images available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-11888c42-7bce-4696-b0d8-4407e581c01c.png",
+          "native_width": 1086,
+          "native_height": 1448,
+          "sha256": "6d65bfc91b877c0638196cb68e37b9c5897146dc8e47dbc8d12a5d037667b198",
+          "qa_notes": "Inspected: widened shared inset gutters and blue breathing space; full-bleed coastal imagery intentional; Sway440/Dayline520/Pocket320 and footer correct."
+        },
+        "upper": {
+          "site": "mellore",
+          "page": "01-collection",
+          "part": "upper",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end MELLORE website catalogue page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.\nTypography direction: Cormorant Garamond 500/600 and Manrope 400/500; exact serif or condensed brand identity stays consistent. Palette: powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: For the open day. Content below is exact and complete; don't add unrelated filler. Polène object catalogue supplies useful visible product labels; Mirazur landscape archive and selected MELLORE A supply expansive sea-and-sky pauses. Authored catalogue uses one lead product, then two supporting choices.\nFORMAT: UPPER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160. It represents390logical px width and936logicalpx height. Real narrow-phone reflow, not compressed desktop. 28px side gutters, body16/24, headings32–42, touch controls44–48, 80–112logicalpx between groups. ONE column. Use the tall canvas to give photos and labels room; don't cram. This is a production fragment that will be joined to a lower half, so no footer and no continuation label.\nHeader: compact MELLORE, Menu, Bag (0), one row with generous safe whitespace. Small eyebrow \"Collection\".\nRENDER ONLY:\nSmall “Collection” then title “For the open day.” Very short subline “Room for the things you take with you.” Text filters “All” selected / “Shoulder” / “Totes” / “Small bags”, with “3 pieces”. Generous blue-ground full Sway still-life, softly triangular chestnut bag on a coastal stone ledge with bright sea behind it, caption “Sway” / “Chestnut · $440” / “Discover Sway →”. A separate unboxed clean dark black rectangular Dayline tote full view on sea-mist ground, “Dayline” / “Black · $520” / “Explore Dayline →”. On desktop a wide lead product and a smaller square companion on a controlled grid; mobile single column.\nFinish with 56logicalpx of FLAT main background color from the palette, empty. No footer, no invented content, no cutoff.\nImage1 is the matching accepted desktop. Preserve products/copy and blue identity while reflowing to a true narrow phone. Use ONE column with 80 logical px between products and readable 16px body at 390 logical width. Only underline the word All; do not write selected.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/01-collection-upper.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-desktop-v2.png",
+              "role": "matching desktop and product identities",
+              "sha256": "6d65bfc91b877c0638196cb68e37b9c5897146dc8e47dbc8d12a5d037667b198"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/inputs/selected-desktop.png",
+              "role": "selected identity",
+              "sha256": "63408dfa4afd62eb39f343f6a4ff6b60d935f00deeb8edd81089da55d1adfed7"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-upper.png",
+          "qa_status": "visual inspection passed; final paired images available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-bbf51ded-daae-4455-ae2d-9b893826da1a.png",
+          "native_width": 809,
+          "native_height": 1942,
+          "sha256": "6839ccb2e436c6a825074dc6fa94d50604bf2e91245714099120c658b5df7f11"
+        },
+        "lower": {
+          "site": "mellore",
+          "page": "01-collection",
+          "part": "lower",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end MELLORE website catalogue page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.\nTypography direction: Cormorant Garamond 500/600 and Manrope 400/500; exact serif or condensed brand identity stays consistent. Palette: powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: For the open day. Content below is exact and complete; don't add unrelated filler. Polène object catalogue supplies useful visible product labels; Mirazur landscape archive and selected MELLORE A supply expansive sea-and-sky pauses. Authored catalogue uses one lead product, then two supporting choices.\nFORMAT: LOWER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160;390logicalpx wide,936logicalpx high. Real phone reflow. 28px side gutters, body16/24, headings28–36, controls44–48, 80–112logicalpx between distinct groups. ONE column; all steps vertically. No header, no repeated page title, no fragment label. Image2 when attached is the upper-half typography/palette continuation reference; image1 identity is authoritative. Begin with56logicalpx of FLAT main palette background, empty, matching upper ending. Don't repeat upper content.\nRENDER ONLY:\nThird product “Pocket” / “Ivory · $320” / “Explore Pocket →”, small full ivory crossbody on a powder-blue textile with complete shoulder strap neatly looped. Leave substantial whitespace. Then one quiet coastal panoramic horizon photograph, minimal caption “Take the day with you.” and link “Care for your carry →”. Complete footer.\nFOOTER exact useful links: MELLORE / Collection / Sway / Our story / Care / Contact / Privacy / Terms. Compact footer wordmark once; links readable in two calm columns or stacked small groups, Privacy/Terms last. Full finished bottom edge, no clipped type. No newsletter block or social strip.\nImage1 is the exact accepted desktop with correct ivory Pocket; Image2 is the upper mobile continuation. Keep the exact same blue, lettering style and 7% side gutters. Footer must be two narrow-mobile columns, not a desktop three-column grid. Long generous vertical page.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/01-collection-lower.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-desktop-v2.png",
+              "role": "matching desktop and product identity",
+              "sha256": "6d65bfc91b877c0638196cb68e37b9c5897146dc8e47dbc8d12a5d037667b198"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-upper.png",
+              "role": "upper-half continuation",
+              "sha256": "6839ccb2e436c6a825074dc6fa94d50604bf2e91245714099120c658b5df7f11"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-lower.png",
+          "qa_status": "visual inspection passed; final paired images available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-37e11f83-2d8b-42cd-a3bd-d3ac8a365887.png",
+          "native_width": 809,
+          "native_height": 1944,
+          "sha256": "026e221c26817f156c30935b2fc0f5fbc83f179454e8f6791fab7c9717a07f0c"
+        }
+      },
+      "assembly": {
+        "page": "01-collection",
+        "assembly": "Uniform proportional downscale to narrowest native section, then direct vertical concatenation. No upscaling or artwork/text changes.",
+        "parts": [
+          {
+            "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-upper.png",
+            "native_dimensions": [
+              809,
+              1942
+            ],
+            "output_dimensions": [
+              809,
+              1942
+            ],
+            "scale": 1.0,
+            "offset_y": 0,
+            "sha256": "6839ccb2e436c6a825074dc6fa94d50604bf2e91245714099120c658b5df7f11"
+          },
+          {
+            "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-lower.png",
+            "native_dimensions": [
+              809,
+              1944
+            ],
+            "output_dimensions": [
+              809,
+              1944
+            ],
+            "scale": 1.0,
+            "offset_y": 1942,
+            "sha256": "026e221c26817f156c30935b2fc0f5fbc83f179454e8f6791fab7c9717a07f0c"
+          }
+        ],
+        "final_dimensions": [
+          809,
+          3886
+        ],
+        "qa": "Native fragments inspected: blue horizon identity, Sway440/Dayline520/Pocket320, real vertical mobile product flow, complete readable footer. Corrected desktop has aligned inset gutters. Full join pending review.",
+        "desktop_source": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-desktop-v2.png"
+      }
+    },
+    {
+      "id": "02-sway",
+      "title": "Sway",
+      "purpose": "product",
+      "reference_observation_and_authored_decision": "Polène purchase page separates immediate selection from detail disclosures; the selected horizon direction gives MELLORE a travel context without turning this product page into another campaign.",
+      "views": {
+        "desktop": {
+          "file": "02-sway/desktop.png",
+          "width": 971,
+          "height": 1619,
+          "sha256": "2f611e4e2f6a73711839141244df3b8bb2689c8feed6d433f767aa98e3e2ebcc",
+          "bytes": 1990696
+        },
+        "mobile": {
+          "file": "02-sway/mobile.png",
+          "width": 809,
+          "height": 3884,
+          "sha256": "3f4735d14f5dd21c7d587fe140b7ec962e0559cb502e6d057976874c3e754322",
+          "bytes": 3167495
+        }
+      },
+      "accepted_generation_records": {
+        "desktop": {
+          "site": "mellore",
+          "page": "02-sway",
+          "part": "desktop",
+          "mode": "built-in image_gen",
+          "prompt": "Edit image1 with one material correction only: the Sway purchase panel must show EXACTLY ONE chestnut color swatch (selected). Remove the black and ivory extra swatches completely and let that area remain powder-blue empty space. Preserve every other element: layout, generous whitespace, typography, text, price $440, bag geometry, full single strap, natural blue coast photographs, footer and native image aspect ratio. Image2 is product identity reference. No new copy or claims.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/02-sway-desktop-v2.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-desktop.png",
+              "role": "exact edit target",
+              "sha256": "32f79492fe2d8ec5cab6364dd83b4f29e915d0b36339628b547199761e7478de"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/inputs/selected-desktop.png",
+              "role": "selected product identity",
+              "sha256": "63408dfa4afd62eb39f343f6a4ff6b60d935f00deeb8edd81089da55d1adfed7"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-desktop-v2.png",
+          "qa_status": "visual inspection passed; final paired images available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-65033b3a-a843-4be0-bd00-6ec07224d789.png",
+          "native_width": 971,
+          "native_height": 1619,
+          "sha256": "2f611e4e2f6a73711839141244df3b8bb2689c8feed6d433f767aa98e3e2ebcc",
+          "qa_notes": "Inspected: extra color swatches removed; exactly one selected chestnut, $440 and full Sway single strap correct; photographs and footer complete."
+        },
+        "upper": {
+          "site": "mellore",
+          "page": "02-sway",
+          "part": "upper",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end MELLORE website product page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.\nTypography direction: Cormorant Garamond 500/600 and Manrope 400/500; exact serif or condensed brand identity stays consistent. Palette: powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Sway. Content below is exact and complete; don't add unrelated filler. Polène purchase page separates immediate selection from detail disclosures; the selected horizon direction gives MELLORE a travel context without turning this product page into another campaign.\nFORMAT: UPPER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160. It represents390logical px width and936logicalpx height. Real narrow-phone reflow, not compressed desktop. 28px side gutters, body16/24, headings32–42, touch controls44–48, 80–112logicalpx between groups. ONE column. Use the tall canvas to give photos and labels room; don't cram. This is a production fragment that will be joined to a lower half, so no footer and no continuation label.\nHeader: compact MELLORE, Menu, Bag (0), one row with generous safe whitespace. Small eyebrow \"Collection / Sway\".\nRENDER ONLY:\nFull large chestnut Sway product photograph on a clean powder-blue field, softly triangular slouch and full single strap. Buying rail on desktop, beneath photograph on mobile: “Sway”, “Chestnut”, “$440”, “Softly held. Ready to go.” Chestnut swatch selected, quantity “−  1  +”, dark brown button “Add to bag — $440”. “Details +” / “Delivery & returns +”. Bag (0) untouched. No invented specs.\nFinish with 56logicalpx of FLAT main background color from the palette, empty. No footer, no invented content, no cutoff.\nImage1 is accepted desktop of this exact page; match blue and typography while reflowing one column. Exactly ONE selected chestnut swatch; no alternative colors. All text at mobile-readable scale, footer omitted in this upper fragment.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/02-sway-upper.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-desktop-v2.png",
+              "role": "matching product desktop",
+              "sha256": "2f611e4e2f6a73711839141244df3b8bb2689c8feed6d433f767aa98e3e2ebcc"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/inputs/selected-desktop.png",
+              "role": "selected identity",
+              "sha256": "63408dfa4afd62eb39f343f6a4ff6b60d935f00deeb8edd81089da55d1adfed7"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-upper.png",
+          "qa_status": "visual inspection passed; final paired images available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-c093f2f1-be12-48d7-905f-4292fc8f6a16.png",
+          "native_width": 809,
+          "native_height": 1942,
+          "sha256": "849ab1cc0b69743c1547a51e131614ce8a0cede7443c9b39d27f318159b9387c"
+        },
+        "lower": {
+          "site": "mellore",
+          "page": "02-sway",
+          "part": "lower",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end MELLORE website product page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.\nTypography direction: Cormorant Garamond 500/600 and Manrope 400/500; exact serif or condensed brand identity stays consistent. Palette: powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Sway. Content below is exact and complete; don't add unrelated filler. Polène purchase page separates immediate selection from detail disclosures; the selected horizon direction gives MELLORE a travel context without turning this product page into another campaign.\nFORMAT: LOWER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160;390logicalpx wide,936logicalpx high. Real phone reflow. 28px side gutters, body16/24, headings28–36, controls44–48, 80–112logicalpx between distinct groups. ONE column; all steps vertically. No header, no repeated page title, no fragment label. Image2 when attached is the upper-half typography/palette continuation reference; image1 identity is authoritative. Begin with56logicalpx of FLAT main palette background, empty, matching upper ending. Don't repeat upper content.\nRENDER ONLY:\nTwo supporting photographic passages, one large on-shoulder adult cropped torso wearing white linen by a blue coast with full Sway visible, caption “A shape for the open day.”; one smaller close-up showing strap, seam and chestnut leather surface on blue textile, caption “The quiet details.” Airy closed disclosure “Materials & care +”, link “Carry it longer →”, then complete footer.\nFOOTER exact useful links: MELLORE / Collection / Sway / Our story / Care / Contact / Privacy / Terms. Compact footer wordmark once; links readable in two calm columns or stacked small groups, Privacy/Terms last. Full finished bottom edge, no clipped type. No newsletter block or social strip.\nImage1 is the matching product desktop. Keep full bag and strap correct. Follow Image2 mobile type and7% side gutters. Put at least70logicalpx open blue after first photo caption before next photo. Footer logo on own line then two columns of links in readable16logicalpx type. No tiny desktop-style footer. Use tall native1:2.4 composition.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/02-sway-lower.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-desktop-v2.png",
+              "role": "matching product desktop",
+              "sha256": "2f611e4e2f6a73711839141244df3b8bb2689c8feed6d433f767aa98e3e2ebcc"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-upper.png",
+              "role": "upper mobile continuation",
+              "sha256": "849ab1cc0b69743c1547a51e131614ce8a0cede7443c9b39d27f318159b9387c"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-lower.png",
+          "qa_status": "visual inspection passed; final paired images available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-204ba16b-f134-482c-93ff-6b43c387edb2.png",
+          "native_width": 809,
+          "native_height": 1942,
+          "sha256": "5b7cca5eb8b2e021e15041360b5bda16eb09006d66e0a514b941eade00bbae61"
+        }
+      },
+      "assembly": {
+        "page": "02-sway",
+        "assembly": "Uniform proportional downscale to narrowest native section, then direct vertical concatenation. No upscaling or artwork/text changes.",
+        "parts": [
+          {
+            "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-upper.png",
+            "native_dimensions": [
+              809,
+              1942
+            ],
+            "output_dimensions": [
+              809,
+              1942
+            ],
+            "scale": 1.0,
+            "offset_y": 0,
+            "sha256": "849ab1cc0b69743c1547a51e131614ce8a0cede7443c9b39d27f318159b9387c"
+          },
+          {
+            "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-lower.png",
+            "native_dimensions": [
+              809,
+              1942
+            ],
+            "output_dimensions": [
+              809,
+              1942
+            ],
+            "scale": 1.0,
+            "offset_y": 1942,
+            "sha256": "5b7cca5eb8b2e021e15041360b5bda16eb09006d66e0a514b941eade00bbae61"
+          }
+        ],
+        "final_dimensions": [
+          809,
+          3884
+        ],
+        "qa": "Inspected: consistent chestnut Sway geometry and full single strap, single chestnut swatch, $440 and quantity1; real vertical mobile purchase, two large supporting photographs and complete two-column readable footer.",
+        "desktop_source": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-desktop-v2.png"
+      }
+    },
+    {
+      "id": "03-care",
+      "title": "Carry it longer",
+      "purpose": "guide",
+      "reference_observation_and_authored_decision": "Mulberry care-and-repair reference is retained WDA evidence; live fetch unavailable 25 Oct. We borrow the useful separation of everyday maintenance and help, not proprietary instructions or service promises. This concept uses conservative illustrative guidance.",
+      "views": {
+        "desktop": {
+          "file": "03-care/desktop.png",
+          "width": 1086,
+          "height": 1448,
+          "sha256": "d96b5cfd2ddc547c9e1dbc2158a417e650be35339b3f2b88ca18d4c196f1e2a3",
+          "bytes": 1843927
+        },
+        "mobile": {
+          "file": "03-care/mobile.png",
+          "width": 809,
+          "height": 3884,
+          "sha256": "5366ae067709e9c7257c17e5895ad186e660b3847b26f6bcc78f110c4c94082b",
+          "bytes": 3014312
+        }
+      },
+      "accepted_generation_records": {
+        "desktop": {
+          "site": "mellore",
+          "page": "03-care",
+          "part": "desktop",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end MELLORE website guide page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.\nTypography direction: Cormorant Garamond 500/600 and Manrope 400/500; exact serif or condensed brand identity stays consistent. Palette: powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Carry it longer. Content below is exact and complete; don't add unrelated filler. Mulberry care-and-repair reference is retained WDA evidence; live fetch unavailable 25 Oct. We borrow the useful separation of everyday maintenance and help, not proprietary instructions or service promises. This concept uses conservative illustrative guidance.\nFORMAT: complete DESKTOP webpage from top header through bottom footer. Portrait 3:4 (target1536x2048 native); design is 1440 logical px wide, with desktop multi-column hierarchy and 96px side gutters. 120–180px vertical pauses between distinct compositions; 28–40px inside groups. This is a long desktop page, not a mobile page. Keep the page sparse enough for native clarity.\nHEADER: compact MELLORE mark left; Collection / Our story / Care / Menu / Bag (0) right; primary navigation active for this destination where present. Header background matches page, no giant wordmark.\nPAGE CONTENT IN ORDER:\nType-led useful care guide on powder-blue field. “Carry it longer.” / “Small habits for the pieces you live with.” Tall photograph of chestnut Sway on a blue-covered table with a soft clean dry cloth, complete strap visible. Under it “01 / Wipe gently” and short copy “Use a soft, dry cloth for everyday dust.” Do not depict water pouring or chemicals. Keep first step prominent and uncluttered.\nContinue vertical steps: “02 / Give it time” with separate photograph of full Sway resting away from direct sun in a softly lit blue room, copy “If damp, let it dry naturally, away from heat.” Then “03 / Put it away well” with separate photograph of Sway beside an unbranded plain fabric storage bag, copy “Keep its shape and store with space around it.” Below: “Need a closer look?” / “Ask about care →”. Footer. No guaranteed repair service, cleaning claims, warranty or actual contact address. Desktop may use side notes but mobile MUST vertical 01 then02 then03 with full-width images and 88px logical pauses.\nFOOTER: after100logicalpx open space, compact wordmark and useful links exactly MELLORE / Collection / Sway / Our story / Care / Contact / Privacy / Terms; Privacy and Terms readable. No newsletter block unless specified, no repeated social strip. Full finished bottom edge. Use a varied, authored editorial composition, with the most useful task obvious.\nAll inset photographs and text share6% outer gutters. Between adjacent photos at least56logicalpx. This guide is open editorial typography and beautiful blue color, not a grid of cards.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/03-care-desktop.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/inputs/selected-desktop.png",
+              "role": "selected brand identity",
+              "sha256": "63408dfa4afd62eb39f343f6a4ff6b60d935f00deeb8edd81089da55d1adfed7"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-desktop-v2.png",
+              "role": "verified Sway geometry and product",
+              "sha256": "2f611e4e2f6a73711839141244df3b8bb2689c8feed6d433f767aa98e3e2ebcc"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/03-care-desktop.png",
+          "qa_status": "visual inspection passed; final paired images available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-d3bde3b9-47e4-4398-8641-bb856a9f8490.png",
+          "native_width": 1086,
+          "native_height": 1448,
+          "sha256": "d96b5cfd2ddc547c9e1dbc2158a417e650be35339b3f2b88ca18d4c196f1e2a3"
+        },
+        "upper": {
+          "site": "mellore",
+          "page": "03-care",
+          "part": "upper",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end MELLORE website guide page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.\nTypography direction: Cormorant Garamond 500/600 and Manrope 400/500; exact serif or condensed brand identity stays consistent. Palette: powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Carry it longer. Content below is exact and complete; don't add unrelated filler. Mulberry care-and-repair reference is retained WDA evidence; live fetch unavailable 25 Oct. We borrow the useful separation of everyday maintenance and help, not proprietary instructions or service promises. This concept uses conservative illustrative guidance.\nFORMAT: UPPER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160. It represents390logical px width and936logicalpx height. Real narrow-phone reflow, not compressed desktop. 28px side gutters, body16/24, headings32–42, touch controls44–48, 80–112logicalpx between groups. ONE column. Use the tall canvas to give photos and labels room; don't cram. This is a production fragment that will be joined to a lower half, so no footer and no continuation label.\nHeader: compact MELLORE, Menu, Bag (0), one row with generous safe whitespace. Small eyebrow \"Care notes\".\nRENDER ONLY:\nType-led useful care guide on powder-blue field. “Carry it longer.” / “Small habits for the pieces you live with.” Tall photograph of chestnut Sway on a blue-covered table with a soft clean dry cloth, complete strap visible. Under it “01 / Wipe gently” and short copy “Use a soft, dry cloth for everyday dust.” Do not depict water pouring or chemicals. Keep first step prominent and uncluttered.\nFinish with 56logicalpx of FLAT main background color from the palette, empty. No footer, no invented content, no cutoff.\nImage1 is the exact matching desktop care guide. ONE mobile column with title then product photograph then step01 text, no tiny split column. Match Sway shape, typography and blue. Footer will be in lower section. Show the entire single strap. Large readable16logicalpx body text at390width.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/03-care-upper.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/03-care-desktop.png",
+              "role": "matching care desktop",
+              "sha256": "d96b5cfd2ddc547c9e1dbc2158a417e650be35339b3f2b88ca18d4c196f1e2a3"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/inputs/selected-desktop.png",
+              "role": "selected brand identity",
+              "sha256": "63408dfa4afd62eb39f343f6a4ff6b60d935f00deeb8edd81089da55d1adfed7"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/03-care-upper.png",
+          "qa_status": "visual inspection passed; final paired images available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-f86548df-31e8-4257-8c55-4d4af893d99a.png",
+          "native_width": 809,
+          "native_height": 1942,
+          "sha256": "9e644da85ba7d70ebb8943add990639485261b7055fe70bdec8fb34589f9693b"
+        },
+        "lower": {
+          "site": "mellore",
+          "page": "03-care",
+          "part": "lower",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end MELLORE website guide page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.\nTypography direction: Cormorant Garamond 500/600 and Manrope 400/500; exact serif or condensed brand identity stays consistent. Palette: powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Carry it longer. Content below is exact and complete; don't add unrelated filler. Mulberry care-and-repair reference is retained WDA evidence; live fetch unavailable 25 Oct. We borrow the useful separation of everyday maintenance and help, not proprietary instructions or service promises. This concept uses conservative illustrative guidance.\nFORMAT: LOWER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160;390logicalpx wide,936logicalpx high. Real phone reflow. 28px side gutters, body16/24, headings28–36, controls44–48, 80–112logicalpx between distinct groups. ONE column; all steps vertically. No header, no repeated page title, no fragment label. Image2 when attached is the upper-half typography/palette continuation reference; image1 identity is authoritative. Begin with56logicalpx of FLAT main palette background, empty, matching upper ending. Don't repeat upper content.\nRENDER ONLY:\nContinue vertical steps: “02 / Give it time” with separate photograph of full Sway resting away from direct sun in a softly lit blue room, copy “If damp, let it dry naturally, away from heat.” Then “03 / Put it away well” with separate photograph of Sway beside an unbranded plain fabric storage bag, copy “Keep its shape and store with space around it.” Below: “Need a closer look?” / “Ask about care →”. Footer. No guaranteed repair service, cleaning claims, warranty or actual contact address. Desktop may use side notes but mobile MUST vertical 01 then02 then03 with full-width images and 88px logical pauses.\nFOOTER exact useful links: MELLORE / Collection / Sway / Our story / Care / Contact / Privacy / Terms. Compact footer wordmark once; links readable in two calm columns or stacked small groups, Privacy/Terms last. Full finished bottom edge, no clipped type. No newsletter block or social strip.\nImage1 is exact desktop care guide; Image2 is upper mobile continuation. Two numbered steps02 and03 must read VERTICALLY, one photo then its text, then next photo/text. Type large, equal to upper body. Give at least72logicalpx blue space between complete steps. Footer logo on own line, then2columns of readable links. Preserve Sway full strap. Target portrait1:2.4, native900x2160, no frame.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/03-care-lower.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/03-care-desktop.png",
+              "role": "matching care desktop",
+              "sha256": "d96b5cfd2ddc547c9e1dbc2158a417e650be35339b3f2b88ca18d4c196f1e2a3"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/03-care-upper.png",
+              "role": "upper mobile continuation",
+              "sha256": "9e644da85ba7d70ebb8943add990639485261b7055fe70bdec8fb34589f9693b"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/03-care-lower.png",
+          "qa_status": "visual inspection passed; final paired images available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-64cda9d7-fc8b-45ab-8de7-1b799ae728e6.png",
+          "native_width": 809,
+          "native_height": 1942,
+          "sha256": "872c713c2c0fec164fc8f9a887d9aee3c6c482185d8f0393e7bbbd6cc78d7bf0"
+        }
+      },
+      "assembly": {
+        "page": "03-care",
+        "assembly": "Uniform proportional downscale to narrowest native section, then direct vertical concatenation. No upscaling or artwork/text changes.",
+        "parts": [
+          {
+            "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/03-care-upper.png",
+            "native_dimensions": [
+              809,
+              1942
+            ],
+            "output_dimensions": [
+              809,
+              1942
+            ],
+            "scale": 1.0,
+            "offset_y": 0,
+            "sha256": "9e644da85ba7d70ebb8943add990639485261b7055fe70bdec8fb34589f9693b"
+          },
+          {
+            "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/03-care-lower.png",
+            "native_dimensions": [
+              809,
+              1942
+            ],
+            "output_dimensions": [
+              809,
+              1942
+            ],
+            "scale": 1.0,
+            "offset_y": 1942,
+            "sha256": "872c713c2c0fec164fc8f9a887d9aee3c6c482185d8f0393e7bbbd6cc78d7bf0"
+          }
+        ],
+        "final_dimensions": [
+          809,
+          3884
+        ],
+        "qa": "Inspected: numbered 01/02/03 care text matches desktop; all photographs preserve full single-strapped Sway, mobile steps flow vertically with readable text and blue open space. Complete footer.",
+        "desktop_source": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/03-care-desktop.png"
+      }
+    }
+  ],
+  "revision_records": [
+    {
+      "page": "01-collection",
+      "device": "desktop",
+      "status": "recovered candidate; spacing correction required",
+      "recovery": "Recovered from previous interrupted agent ImageGen directory. Visual content matches the saved MELLORE collection plan. Original pending call result was not retained; do not infer its exact attachments from this candidate.",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a17383-48e9-7451-861c-697b9907eaa9/exec-c035dcb9-ecb9-4fb8-8a92-3da752834f5a.png",
+      "output": "output/core-pages-2026-10-25/mellore/sources/01-collection-desktop-recovered.png",
+      "width": 971,
+      "height": 1619,
+      "sha256": "5890796170e2c795d8faa69c412ccee77800d38638def7c3db58c1f197a5fd74",
+      "planned_prompt_file": "prompts/01-collection-desktop.txt",
+      "qa_notes": [
+        "Correct Sway440, Dayline520, Pocket320 and blue identity",
+        "Inset gutters too narrow and photographic chapters too tightly spaced; correct before final acceptance"
+      ]
+    },
+    {
+      "site": "mellore",
+      "page": "01-collection",
+      "part": "desktop",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Edit image1, a complete DESKTOP MELLORE collection page; image2 is product/brand fidelity reference. Keep the complete page, powder-blue identity, all accurate copy and product geometry: Sway Chestnut $440, Dayline Black $520, Pocket Ivory $320, 3 pieces, Bag (0), all footer links. Keep upper and lower full-bleed coastal photography as deliberate full-width images. Correct ONLY grid and vertical breathing space. The Dayline/Pocket inset row currently has 18px gaps and misaligned inset edges. Give all inset content the SAME ~6% side gutters as header/text. Leave a full 120 logical px empty BLUE space before this two-product row and 120 logical px after it. Give these two images a broad gutter ~64logicalpx; captions remain readable. Use visibly different image scales but aligned grid edges. Each product full and undistorted. Reduce the closing panorama height if necessary to make room for this air, but do not cut footer or labels. Maintain complete desktop multi-column architecture; NOT a phone or a stack of boxed marketing cards. Large clean open sky-blue canvas, no beige, no whitewash, no borders. Complete 3:4 portrait desktop page, native target1536x2048; avoid dense strips. Exact copy and compact wordmark preserved. 'All' only underlined, not the word selected. Highest native photo/type clarity. No source-site logos, new offers, claims, specs, or unrelated content.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/01-collection-desktop-v2.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-desktop-recovered.png",
+          "role": "edit target; correct spacing and gutters only",
+          "sha256": "5890796170e2c795d8faa69c412ccee77800d38638def7c3db58c1f197a5fd74"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/inputs/selected-desktop.png",
+          "role": "approved brand and Sway product identity",
+          "sha256": "63408dfa4afd62eb39f343f6a4ff6b60d935f00deeb8edd81089da55d1adfed7"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-desktop-v2.png",
+      "qa_status": "accepted visual inspection",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-11888c42-7bce-4696-b0d8-4407e581c01c.png",
+      "native_width": 1086,
+      "native_height": 1448,
+      "sha256": "6d65bfc91b877c0638196cb68e37b9c5897146dc8e47dbc8d12a5d037667b198",
+      "qa_notes": "Inspected: widened shared inset gutters and blue breathing space; full-bleed coastal imagery intentional; Sway440/Dayline520/Pocket320 and footer correct."
+    },
+    {
+      "site": "mellore",
+      "page": "01-collection",
+      "part": "lower",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end MELLORE website catalogue page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.\nTypography direction: Cormorant Garamond 500/600 and Manrope 400/500; exact serif or condensed brand identity stays consistent. Palette: powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: For the open day. Content below is exact and complete; don't add unrelated filler. Polène object catalogue supplies useful visible product labels; Mirazur landscape archive and selected MELLORE A supply expansive sea-and-sky pauses. Authored catalogue uses one lead product, then two supporting choices.\nFORMAT: LOWER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160;390logicalpx wide,936logicalpx high. Real phone reflow. 28px side gutters, body16/24, headings28–36, controls44–48, 80–112logicalpx between distinct groups. ONE column; all steps vertically. No header, no repeated page title, no fragment label. Image2 when attached is the upper-half typography/palette continuation reference; image1 identity is authoritative. Begin with56logicalpx of FLAT main palette background, empty, matching upper ending. Don't repeat upper content.\nRENDER ONLY:\nThird product “Pocket” / “Ivory · $320” / “Explore Pocket →”, small full ivory crossbody on a powder-blue textile with complete shoulder strap neatly looped. Leave substantial whitespace. Then one quiet coastal panoramic horizon photograph, minimal caption “Take the day with you.” and link “Care for your carry →”. Complete footer.\nFOOTER exact useful links: MELLORE / Collection / Sway / Our story / Care / Contact / Privacy / Terms. Compact footer wordmark once; links readable in two calm columns or stacked small groups, Privacy/Terms last. Full finished bottom edge, no clipped type. No newsletter block or social strip.\nImage1 is the exact accepted desktop with correct ivory Pocket; Image2 is the upper mobile continuation. Keep the exact same blue, lettering style and 7% side gutters. Footer must be two narrow-mobile columns, not a desktop three-column grid. Long generous vertical page.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/01-collection-lower.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-desktop-v2.png",
+          "role": "matching desktop and product identity",
+          "sha256": "6d65bfc91b877c0638196cb68e37b9c5897146dc8e47dbc8d12a5d037667b198"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-upper.png",
+          "role": "upper-half continuation",
+          "sha256": "6839ccb2e436c6a825074dc6fa94d50604bf2e91245714099120c658b5df7f11"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-lower.png",
+      "qa_status": "pending visual review",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-37e11f83-2d8b-42cd-a3bd-d3ac8a365887.png",
+      "native_width": 809,
+      "native_height": 1944,
+      "sha256": "026e221c26817f156c30935b2fc0f5fbc83f179454e8f6791fab7c9717a07f0c"
+    },
+    {
+      "site": "mellore",
+      "page": "01-collection",
+      "part": "upper",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end MELLORE website catalogue page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.\nTypography direction: Cormorant Garamond 500/600 and Manrope 400/500; exact serif or condensed brand identity stays consistent. Palette: powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: For the open day. Content below is exact and complete; don't add unrelated filler. Polène object catalogue supplies useful visible product labels; Mirazur landscape archive and selected MELLORE A supply expansive sea-and-sky pauses. Authored catalogue uses one lead product, then two supporting choices.\nFORMAT: UPPER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160. It represents390logical px width and936logicalpx height. Real narrow-phone reflow, not compressed desktop. 28px side gutters, body16/24, headings32–42, touch controls44–48, 80–112logicalpx between groups. ONE column. Use the tall canvas to give photos and labels room; don't cram. This is a production fragment that will be joined to a lower half, so no footer and no continuation label.\nHeader: compact MELLORE, Menu, Bag (0), one row with generous safe whitespace. Small eyebrow \"Collection\".\nRENDER ONLY:\nSmall “Collection” then title “For the open day.” Very short subline “Room for the things you take with you.” Text filters “All” selected / “Shoulder” / “Totes” / “Small bags”, with “3 pieces”. Generous blue-ground full Sway still-life, softly triangular chestnut bag on a coastal stone ledge with bright sea behind it, caption “Sway” / “Chestnut · $440” / “Discover Sway →”. A separate unboxed clean dark black rectangular Dayline tote full view on sea-mist ground, “Dayline” / “Black · $520” / “Explore Dayline →”. On desktop a wide lead product and a smaller square companion on a controlled grid; mobile single column.\nFinish with 56logicalpx of FLAT main background color from the palette, empty. No footer, no invented content, no cutoff.\nImage1 is the matching accepted desktop. Preserve products/copy and blue identity while reflowing to a true narrow phone. Use ONE column with 80 logical px between products and readable 16px body at 390 logical width. Only underline the word All; do not write selected.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/01-collection-upper.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-desktop-v2.png",
+          "role": "matching desktop and product identities",
+          "sha256": "6d65bfc91b877c0638196cb68e37b9c5897146dc8e47dbc8d12a5d037667b198"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/inputs/selected-desktop.png",
+          "role": "selected identity",
+          "sha256": "63408dfa4afd62eb39f343f6a4ff6b60d935f00deeb8edd81089da55d1adfed7"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/01-collection-upper.png",
+      "qa_status": "pending visual review",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-bbf51ded-daae-4455-ae2d-9b893826da1a.png",
+      "native_width": 809,
+      "native_height": 1942,
+      "sha256": "6839ccb2e436c6a825074dc6fa94d50604bf2e91245714099120c658b5df7f11"
+    },
+    {
+      "site": "mellore",
+      "page": "02-sway",
+      "part": "desktop",
+      "mode": "built-in image_gen",
+      "prompt": "Edit image1 with one material correction only: the Sway purchase panel must show EXACTLY ONE chestnut color swatch (selected). Remove the black and ivory extra swatches completely and let that area remain powder-blue empty space. Preserve every other element: layout, generous whitespace, typography, text, price $440, bag geometry, full single strap, natural blue coast photographs, footer and native image aspect ratio. Image2 is product identity reference. No new copy or claims.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/02-sway-desktop-v2.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-desktop.png",
+          "role": "exact edit target",
+          "sha256": "32f79492fe2d8ec5cab6364dd83b4f29e915d0b36339628b547199761e7478de"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/inputs/selected-desktop.png",
+          "role": "selected product identity",
+          "sha256": "63408dfa4afd62eb39f343f6a4ff6b60d935f00deeb8edd81089da55d1adfed7"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-desktop-v2.png",
+      "qa_status": "accepted visual inspection",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-65033b3a-a843-4be0-bd00-6ec07224d789.png",
+      "native_width": 971,
+      "native_height": 1619,
+      "sha256": "2f611e4e2f6a73711839141244df3b8bb2689c8feed6d433f767aa98e3e2ebcc",
+      "qa_notes": "Inspected: extra color swatches removed; exactly one selected chestnut, $440 and full Sway single strap correct; photographs and footer complete."
+    },
+    {
+      "site": "mellore",
+      "page": "02-sway",
+      "part": "desktop",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end MELLORE website product page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.\nTypography direction: Cormorant Garamond 500/600 and Manrope 400/500; exact serif or condensed brand identity stays consistent. Palette: powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Sway. Content below is exact and complete; don't add unrelated filler. Polène purchase page separates immediate selection from detail disclosures; the selected horizon direction gives MELLORE a travel context without turning this product page into another campaign.\nFORMAT: complete DESKTOP webpage from top header through bottom footer. Tall portrait 3:5 (target1536x2560 native); design is 1440 logical px wide, with desktop multi-column hierarchy and 96px side gutters. 120–180px vertical pauses between distinct compositions; 28–40px inside groups. This is a long desktop page, not a mobile page. Keep the page sparse enough for native clarity.\nHEADER: compact MELLORE mark left; Collection / Our story / Care / Menu / Bag (0) right; primary navigation active for this destination where present. Header background matches page, no giant wordmark.\nPAGE CONTENT IN ORDER:\nFull large chestnut Sway product photograph on a clean powder-blue field, softly triangular slouch and full single strap. Buying rail on desktop, beneath photograph on mobile: “Sway”, “Chestnut”, “$440”, “Softly held. Ready to go.” Chestnut swatch selected, quantity “−  1  +”, dark brown button “Add to bag — $440”. “Details +” / “Delivery & returns +”. Bag (0) untouched. No invented specs.\nTwo supporting photographic passages, one large on-shoulder adult cropped torso wearing white linen by a blue coast with full Sway visible, caption “A shape for the open day.”; one smaller close-up showing strap, seam and chestnut leather surface on blue textile, caption “The quiet details.” Airy closed disclosure “Materials & care +”, link “Carry it longer →”, then complete footer.\nFOOTER: after100logicalpx open space, compact wordmark and useful links exactly MELLORE / Collection / Sway / Our story / Care / Contact / Privacy / Terms; Privacy and Terms readable. No newsletter block unless specified, no repeated social strip. Full finished bottom edge. Use a varied, authored editorial composition, with the most useful task obvious.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/02-sway-desktop.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/inputs/selected-desktop.png",
+          "role": "brand/product reference",
+          "sha256": "63408dfa4afd62eb39f343f6a4ff6b60d935f00deeb8edd81089da55d1adfed7"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-desktop.png",
+      "qa_status": "pending visual review",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-4977c5d1-31ff-422e-b241-8ca8dd60a002.png",
+      "native_width": 971,
+      "native_height": 1620,
+      "sha256": "32f79492fe2d8ec5cab6364dd83b4f29e915d0b36339628b547199761e7478de"
+    },
+    {
+      "site": "mellore",
+      "page": "02-sway",
+      "part": "lower",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end MELLORE website product page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.\nTypography direction: Cormorant Garamond 500/600 and Manrope 400/500; exact serif or condensed brand identity stays consistent. Palette: powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Sway. Content below is exact and complete; don't add unrelated filler. Polène purchase page separates immediate selection from detail disclosures; the selected horizon direction gives MELLORE a travel context without turning this product page into another campaign.\nFORMAT: LOWER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160;390logicalpx wide,936logicalpx high. Real phone reflow. 28px side gutters, body16/24, headings28–36, controls44–48, 80–112logicalpx between distinct groups. ONE column; all steps vertically. No header, no repeated page title, no fragment label. Image2 when attached is the upper-half typography/palette continuation reference; image1 identity is authoritative. Begin with56logicalpx of FLAT main palette background, empty, matching upper ending. Don't repeat upper content.\nRENDER ONLY:\nTwo supporting photographic passages, one large on-shoulder adult cropped torso wearing white linen by a blue coast with full Sway visible, caption “A shape for the open day.”; one smaller close-up showing strap, seam and chestnut leather surface on blue textile, caption “The quiet details.” Airy closed disclosure “Materials & care +”, link “Carry it longer →”, then complete footer.\nFOOTER exact useful links: MELLORE / Collection / Sway / Our story / Care / Contact / Privacy / Terms. Compact footer wordmark once; links readable in two calm columns or stacked small groups, Privacy/Terms last. Full finished bottom edge, no clipped type. No newsletter block or social strip.\nImage1 is the matching product desktop. Keep full bag and strap correct. Follow Image2 mobile type and7% side gutters. Put at least70logicalpx open blue after first photo caption before next photo. Footer logo on own line then two columns of links in readable16logicalpx type. No tiny desktop-style footer. Use tall native1:2.4 composition.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/02-sway-lower.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-desktop-v2.png",
+          "role": "matching product desktop",
+          "sha256": "2f611e4e2f6a73711839141244df3b8bb2689c8feed6d433f767aa98e3e2ebcc"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-upper.png",
+          "role": "upper mobile continuation",
+          "sha256": "849ab1cc0b69743c1547a51e131614ce8a0cede7443c9b39d27f318159b9387c"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-lower.png",
+      "qa_status": "pending visual review",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-204ba16b-f134-482c-93ff-6b43c387edb2.png",
+      "native_width": 809,
+      "native_height": 1942,
+      "sha256": "5b7cca5eb8b2e021e15041360b5bda16eb09006d66e0a514b941eade00bbae61"
+    },
+    {
+      "site": "mellore",
+      "page": "02-sway",
+      "part": "upper",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end MELLORE website product page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.\nTypography direction: Cormorant Garamond 500/600 and Manrope 400/500; exact serif or condensed brand identity stays consistent. Palette: powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Sway. Content below is exact and complete; don't add unrelated filler. Polène purchase page separates immediate selection from detail disclosures; the selected horizon direction gives MELLORE a travel context without turning this product page into another campaign.\nFORMAT: UPPER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160. It represents390logical px width and936logicalpx height. Real narrow-phone reflow, not compressed desktop. 28px side gutters, body16/24, headings32–42, touch controls44–48, 80–112logicalpx between groups. ONE column. Use the tall canvas to give photos and labels room; don't cram. This is a production fragment that will be joined to a lower half, so no footer and no continuation label.\nHeader: compact MELLORE, Menu, Bag (0), one row with generous safe whitespace. Small eyebrow \"Collection / Sway\".\nRENDER ONLY:\nFull large chestnut Sway product photograph on a clean powder-blue field, softly triangular slouch and full single strap. Buying rail on desktop, beneath photograph on mobile: “Sway”, “Chestnut”, “$440”, “Softly held. Ready to go.” Chestnut swatch selected, quantity “−  1  +”, dark brown button “Add to bag — $440”. “Details +” / “Delivery & returns +”. Bag (0) untouched. No invented specs.\nFinish with 56logicalpx of FLAT main background color from the palette, empty. No footer, no invented content, no cutoff.\nImage1 is accepted desktop of this exact page; match blue and typography while reflowing one column. Exactly ONE selected chestnut swatch; no alternative colors. All text at mobile-readable scale, footer omitted in this upper fragment.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/02-sway-upper.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-desktop-v2.png",
+          "role": "matching product desktop",
+          "sha256": "2f611e4e2f6a73711839141244df3b8bb2689c8feed6d433f767aa98e3e2ebcc"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/inputs/selected-desktop.png",
+          "role": "selected identity",
+          "sha256": "63408dfa4afd62eb39f343f6a4ff6b60d935f00deeb8edd81089da55d1adfed7"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-upper.png",
+      "qa_status": "pending visual review",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-c093f2f1-be12-48d7-905f-4292fc8f6a16.png",
+      "native_width": 809,
+      "native_height": 1942,
+      "sha256": "849ab1cc0b69743c1547a51e131614ce8a0cede7443c9b39d27f318159b9387c"
+    },
+    {
+      "site": "mellore",
+      "page": "03-care",
+      "part": "desktop",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end MELLORE website guide page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.\nTypography direction: Cormorant Garamond 500/600 and Manrope 400/500; exact serif or condensed brand identity stays consistent. Palette: powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Carry it longer. Content below is exact and complete; don't add unrelated filler. Mulberry care-and-repair reference is retained WDA evidence; live fetch unavailable 25 Oct. We borrow the useful separation of everyday maintenance and help, not proprietary instructions or service promises. This concept uses conservative illustrative guidance.\nFORMAT: complete DESKTOP webpage from top header through bottom footer. Portrait 3:4 (target1536x2048 native); design is 1440 logical px wide, with desktop multi-column hierarchy and 96px side gutters. 120–180px vertical pauses between distinct compositions; 28–40px inside groups. This is a long desktop page, not a mobile page. Keep the page sparse enough for native clarity.\nHEADER: compact MELLORE mark left; Collection / Our story / Care / Menu / Bag (0) right; primary navigation active for this destination where present. Header background matches page, no giant wordmark.\nPAGE CONTENT IN ORDER:\nType-led useful care guide on powder-blue field. “Carry it longer.” / “Small habits for the pieces you live with.” Tall photograph of chestnut Sway on a blue-covered table with a soft clean dry cloth, complete strap visible. Under it “01 / Wipe gently” and short copy “Use a soft, dry cloth for everyday dust.” Do not depict water pouring or chemicals. Keep first step prominent and uncluttered.\nContinue vertical steps: “02 / Give it time” with separate photograph of full Sway resting away from direct sun in a softly lit blue room, copy “If damp, let it dry naturally, away from heat.” Then “03 / Put it away well” with separate photograph of Sway beside an unbranded plain fabric storage bag, copy “Keep its shape and store with space around it.” Below: “Need a closer look?” / “Ask about care →”. Footer. No guaranteed repair service, cleaning claims, warranty or actual contact address. Desktop may use side notes but mobile MUST vertical 01 then02 then03 with full-width images and 88px logical pauses.\nFOOTER: after100logicalpx open space, compact wordmark and useful links exactly MELLORE / Collection / Sway / Our story / Care / Contact / Privacy / Terms; Privacy and Terms readable. No newsletter block unless specified, no repeated social strip. Full finished bottom edge. Use a varied, authored editorial composition, with the most useful task obvious.\nAll inset photographs and text share6% outer gutters. Between adjacent photos at least56logicalpx. This guide is open editorial typography and beautiful blue color, not a grid of cards.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/03-care-desktop.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/inputs/selected-desktop.png",
+          "role": "selected brand identity",
+          "sha256": "63408dfa4afd62eb39f343f6a4ff6b60d935f00deeb8edd81089da55d1adfed7"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/02-sway-desktop-v2.png",
+          "role": "verified Sway geometry and product",
+          "sha256": "2f611e4e2f6a73711839141244df3b8bb2689c8feed6d433f767aa98e3e2ebcc"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/03-care-desktop.png",
+      "qa_status": "pending visual review",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-d3bde3b9-47e4-4398-8641-bb856a9f8490.png",
+      "native_width": 1086,
+      "native_height": 1448,
+      "sha256": "d96b5cfd2ddc547c9e1dbc2158a417e650be35339b3f2b88ca18d4c196f1e2a3"
+    },
+    {
+      "site": "mellore",
+      "page": "03-care",
+      "part": "lower",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end MELLORE website guide page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.\nTypography direction: Cormorant Garamond 500/600 and Manrope 400/500; exact serif or condensed brand identity stays consistent. Palette: powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Carry it longer. Content below is exact and complete; don't add unrelated filler. Mulberry care-and-repair reference is retained WDA evidence; live fetch unavailable 25 Oct. We borrow the useful separation of everyday maintenance and help, not proprietary instructions or service promises. This concept uses conservative illustrative guidance.\nFORMAT: LOWER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160;390logicalpx wide,936logicalpx high. Real phone reflow. 28px side gutters, body16/24, headings28–36, controls44–48, 80–112logicalpx between distinct groups. ONE column; all steps vertically. No header, no repeated page title, no fragment label. Image2 when attached is the upper-half typography/palette continuation reference; image1 identity is authoritative. Begin with56logicalpx of FLAT main palette background, empty, matching upper ending. Don't repeat upper content.\nRENDER ONLY:\nContinue vertical steps: “02 / Give it time” with separate photograph of full Sway resting away from direct sun in a softly lit blue room, copy “If damp, let it dry naturally, away from heat.” Then “03 / Put it away well” with separate photograph of Sway beside an unbranded plain fabric storage bag, copy “Keep its shape and store with space around it.” Below: “Need a closer look?” / “Ask about care →”. Footer. No guaranteed repair service, cleaning claims, warranty or actual contact address. Desktop may use side notes but mobile MUST vertical 01 then02 then03 with full-width images and 88px logical pauses.\nFOOTER exact useful links: MELLORE / Collection / Sway / Our story / Care / Contact / Privacy / Terms. Compact footer wordmark once; links readable in two calm columns or stacked small groups, Privacy/Terms last. Full finished bottom edge, no clipped type. No newsletter block or social strip.\nImage1 is exact desktop care guide; Image2 is upper mobile continuation. Two numbered steps02 and03 must read VERTICALLY, one photo then its text, then next photo/text. Type large, equal to upper body. Give at least72logicalpx blue space between complete steps. Footer logo on own line, then2columns of readable links. Preserve Sway full strap. Target portrait1:2.4, native900x2160, no frame.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/03-care-lower.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/03-care-desktop.png",
+          "role": "matching care desktop",
+          "sha256": "d96b5cfd2ddc547c9e1dbc2158a417e650be35339b3f2b88ca18d4c196f1e2a3"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/03-care-upper.png",
+          "role": "upper mobile continuation",
+          "sha256": "9e644da85ba7d70ebb8943add990639485261b7055fe70bdec8fb34589f9693b"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/03-care-lower.png",
+      "qa_status": "pending visual review",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-64cda9d7-fc8b-45ab-8de7-1b799ae728e6.png",
+      "native_width": 809,
+      "native_height": 1942,
+      "sha256": "872c713c2c0fec164fc8f9a887d9aee3c6c482185d8f0393e7bbbd6cc78d7bf0"
+    },
+    {
+      "site": "mellore",
+      "page": "03-care",
+      "part": "upper",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end MELLORE website guide page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Sway $440 is chestnut softly triangular slouch leather shoulder hobo with single complete shoulder strap, exactly reference. Dayline $520 is black rectangular double-handle tote. Pocket $320 is ivory small crossbody. Compact refined serif MELLORE.\nTypography direction: Cormorant Garamond 500/600 and Manrope 400/500; exact serif or condensed brand identity stays consistent. Palette: powder sky blue #DCEBF2 main, airy sea mist #EDF4F5 secondary, brief warm shell #F3E2DC accents, deep brown #49312F ink. Blue remains visibly present throughout. No beige page background.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Carry it longer. Content below is exact and complete; don't add unrelated filler. Mulberry care-and-repair reference is retained WDA evidence; live fetch unavailable 25 Oct. We borrow the useful separation of everyday maintenance and help, not proprietary instructions or service promises. This concept uses conservative illustrative guidance.\nFORMAT: UPPER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160. It represents390logical px width and936logicalpx height. Real narrow-phone reflow, not compressed desktop. 28px side gutters, body16/24, headings32–42, touch controls44–48, 80–112logicalpx between groups. ONE column. Use the tall canvas to give photos and labels room; don't cram. This is a production fragment that will be joined to a lower half, so no footer and no continuation label.\nHeader: compact MELLORE, Menu, Bag (0), one row with generous safe whitespace. Small eyebrow \"Care notes\".\nRENDER ONLY:\nType-led useful care guide on powder-blue field. “Carry it longer.” / “Small habits for the pieces you live with.” Tall photograph of chestnut Sway on a blue-covered table with a soft clean dry cloth, complete strap visible. Under it “01 / Wipe gently” and short copy “Use a soft, dry cloth for everyday dust.” Do not depict water pouring or chemicals. Keep first step prominent and uncluttered.\nFinish with 56logicalpx of FLAT main background color from the palette, empty. No footer, no invented content, no cutoff.\nImage1 is the exact matching desktop care guide. ONE mobile column with title then product photograph then step01 text, no tiny split column. Match Sway shape, typography and blue. Footer will be in lower section. Show the entire single strap. Large readable16logicalpx body text at390width.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/prompts/03-care-upper.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/03-care-desktop.png",
+          "role": "matching care desktop",
+          "sha256": "d96b5cfd2ddc547c9e1dbc2158a417e650be35339b3f2b88ca18d4c196f1e2a3"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/inputs/selected-desktop.png",
+          "role": "selected brand identity",
+          "sha256": "63408dfa4afd62eb39f343f6a4ff6b60d935f00deeb8edd81089da55d1adfed7"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/mellore/sources/03-care-upper.png",
+      "qa_status": "pending visual review",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-f86548df-31e8-4257-8c55-4d4af893d99a.png",
+      "native_width": 809,
+      "native_height": 1942,
+      "sha256": "9e644da85ba7d70ebb8943add990639485261b7055fe70bdec8fb34589f9693b"
+    }
+  ],
+  "final_collection_review": {
+    "01-collection": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Expanded blue gutters, correct three products/prices; mobile one-column catalogue, complete footer.",
+      "hashes": {
+        "desktop": "6d65bfc91b877c0638196cb68e37b9c5897146dc8e47dbc8d12a5d037667b198",
+        "mobile": "8d13902ee3ee1a661bcb7655cea9fb224cd1fbc585353aa8df10ada6df510780"
+      }
+    },
+    "02-sway": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Correct Sway chestnut440, single selected swatch, full shoulder identity, matching purchase state and vertical mobile studies.",
+      "hashes": {
+        "desktop": "2f611e4e2f6a73711839141244df3b8bb2689c8feed6d433f767aa98e3e2ebcc",
+        "mobile": "3f4735d14f5dd21c7d587fe140b7ec962e0559cb502e6d057976874c3e754322"
+      }
+    },
+    "03-care": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Three clear care stages; consistent Sway photography, vertical numbered mobile guide, complete footer.",
+      "hashes": {
+        "desktop": "d96b5cfd2ddc547c9e1dbc2158a417e650be35339b3f2b88ca18d4c196f1e2a3",
+        "mobile": "5366ae067709e9c7257c17e5895ad186e660b3847b26f6bcc78f110c4c94082b"
+      }
+    }
+  }
+}

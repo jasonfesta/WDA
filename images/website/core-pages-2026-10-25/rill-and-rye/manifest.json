@@ -1,0 +1,649 @@
+{
+  "schema_version": 1,
+  "site": "rill-and-rye",
+  "name": "Rill & Rye",
+  "batch": "core-pages-2026-10-25",
+  "deliverable": "Three new core pages, desktop and continuous mobile; six raster mockups; no webpage implementation",
+  "status": "complete images; root review in progress",
+  "approved_homepage_reference": "/Users/jasonfesta/Documents/ChatGPT/wda/images/website/final-2026-10-24/rill-and-rye/desktop.png",
+  "selected_homepage_option": "B",
+  "design": {
+    "font": "Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.",
+    "color": "Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.",
+    "identity": "Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only."
+  },
+  "native_resolution_note": "Native generated desktop sizes are approximately1024px wide. Mobile finals preserve approximately2x pixel density at390 logicalpx. No artificial enlargement; exact dimensions and proportional assembly recorded. These are image mockups, not tested functional responsive websites.",
+  "pages": [
+    {
+      "id": "01-todays-bake",
+      "title": "Today's bake",
+      "page_type": "menu",
+      "files": {
+        "desktop": {
+          "path": "images/website/core-pages-2026-10-25/rill-and-rye/01-todays-bake/desktop.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "90c9c16df3b48b15dd031f893fb206207b5aa444e325739628352dab4d5f4dca",
+          "bytes": 2156842,
+          "upsampled": false
+        },
+        "mobile": {
+          "path": "images/website/core-pages-2026-10-25/rill-and-rye/01-todays-bake/mobile.png",
+          "width": 809,
+          "height": 3886,
+          "sha256": "c4905cf35ff86463c38e1412e99cac28856b3a2a210ce9700f1cabeb2858dfc1",
+          "bytes": 3309161,
+          "upsampled": false
+        }
+      },
+      "generations": {
+        "desktop": {
+          "site": "rill-and-rye",
+          "page": "01-todays-bake",
+          "part": "desktop",
+          "prompt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact RILL & RYE / ORCHARD BAKERY, Today's bake, Collect an order, Visit us. Selectedpageunderlineonly, no oversizedhomepagewordmark.\nPAGE: A beautiful bakery menu with generous typographicmenu space and sculpturalfoodphotographs; NOT cards orcheckout. Compactheader then 'Today’s bake.' and 'A small menu, made for the table.' Lefttwo-thirds: a wide photographofcutrusticsourdoughonlightcitronlinen withcrumbanddappledleafshadows; right a clear sparsemenu heading 'From the oven' with3verticallyspacedentries 'Sourdough loaf' / 'A deep crust and an open crumb.'; 'Apricot bun' / 'Soft dough, fruit at the centre.'; 'Coffee' / 'A warm companion.' No prices/unverifiedavailability. Secondchapter on samecitronfield: two unboxedphotos ofa glossyapricotbunonplate and a smallcoffeecup; differentimagedimensions,captionscleanbaseline, generousmargins. Then a quietaction 'Planning a collection?' / 'Send a collection request →'. Smallnote 'Menu and collection details are confirmed by the bakery.' Completefooter. Practicalclearlabelsdominatecopy; no fakeopeninghours/address.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter.",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/01-todays-bake-desktop.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png"
+          ],
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-66aa9f1d-2553-4495-82d5-852508b02c4f.png",
+          "native_dimensions": [
+            1024,
+            1536
+          ],
+          "sha256": "90c9c16df3b48b15dd031f893fb206207b5aa444e325739628352dab4d5f4dca",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/rill-and-rye/records/01-todays-bake-desktop.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact RILL & RYE / ORCHARD BAKERY, Today's bake, Collect an order, Visit us. Selectedpageunderlineonly, no oversizedhomepagewordmark.\nPAGE: A beautiful bakery menu with generous typographicmenu space and sculpturalfoodphotographs; NOT cards orcheckout. Compactheader then 'Today’s bake.' and 'A small menu, made for the table.' Lefttwo-thirds: a wide photographofcutrusticsourdoughonlightcitronlinen withcrumbanddappledleafshadows; right a clear sparsemenu heading 'From the oven' with3verticallyspacedentries 'Sourdough loaf' / 'A deep crust and an open crumb.'; 'Apricot bun' / 'Soft dough, fruit at the centre.'; 'Coffee' / 'A warm companion.' No prices/unverifiedavailability. Secondchapter on samecitronfield: two unboxedphotos ofa glossyapricotbunonplate and a smallcoffeecup; differentimagedimensions,captionscleanbaseline, generousmargins. Then a quietaction 'Planning a collection?' / 'Send a collection request →'. Smallnote 'Menu and collection details are confirmed by the bakery.' Completefooter. Practicalclearlabelsdominatecopy; no fakeopeninghours/address.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter.",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/rill-and-rye/inputs/archived/98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324.png"
+            }
+          ]
+        },
+        "upper": {
+          "mode": "built-in image_gen edit",
+          "exact_prompt": "Edit this image-only MOBILE page mockup. Preserve the existing header, exact RILL & RYE wordmark, Today’s bake title, subtitle, citron/rust/leaf palette, full-width sourdough hero and Sourdough loaf caption exactly. Correct ONLY the menu below the hero: remove all three thumbnail photographs in the From the oven section. This is a narrow 390px mobile page, so the three menu entries are full-width, one after another, LEFT aligned to the shared 60-native-pixel text gutter. There must be ZERO side-by-side photo/text rows. Keep From the oven heading. Under it, Sourdough loaf on one line and beneath it A deep crust and an open crumb. Then 90 native pixels of empty citron; Apricot bun and beneath it Soft dough, fruit at the centre. Then 90 native pixels of empty citron; Coffee and beneath it A warm companion. Body labels at least34 native pixels, warm readable serif item titles around42px. Exact spelling. All three descriptions must fit in full. Preserve airy space and total tall portrait proportions; bottom quiet flat citron for continuation. No footer, no new copy, no cards, no lines, no icons. Only one food photograph—the existing large hero—in this upper segment. Do not change any other element.",
+          "source_path": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-bf0ce994-267c-457f-8b73-1c9266a9cd89.png",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/01-todays-bake-upper-v1.png",
+              "sha256": "47e55e44197883b5a80f8056c9552cfa7562f0491c188f289d7b9f5f804f29ef",
+              "role": "target existing upper mobile segment"
+            }
+          ],
+          "native_dimensions": [
+            809,
+            1944
+          ],
+          "sha256": "f6176f85eb10f7a9c9f6befb0e4eaf324fa3d909477ef4ddc7d94916b2fcebcc",
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/rill-and-rye/records/01-todays-bake-upper.json",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/01-todays-bake-upper-v1.png",
+              "sha256": "47e55e44197883b5a80f8056c9552cfa7562f0491c188f289d7b9f5f804f29ef",
+              "role": "target existing upper mobile segment",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/rill-and-rye/inputs/archived/47e55e44197883b5a80f8056c9552cfa7562f0491c188f289d7b9f5f804f29ef.png"
+            }
+          ]
+        },
+        "lower": {
+          "site": "rill-and-rye",
+          "page": "01-todays-bake",
+          "part": "lower",
+          "prompt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptycitron. Largephotoofglossyapricotbunonplate, caption 'Apricot bun'. Longpause. Smallercenteredcoffeecupphotowithgenerouscitronspace, caption 'Coffee'. Longpause. 'Planning a collection?' / 'Send a collection request →'. Helper 'Menu and collection details are confirmed by the bakery.' Completefooter. Norepeatedheader/menu.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/01-todays-bake-lower.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-9cec7866-d437-4043-8348-a465da84218b.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png",
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/01-todays-bake-upper.png"
+          ],
+          "native_dimensions": [
+            809,
+            1942
+          ],
+          "sha256": "c5e52018ac5a0a1869b6fe2e24f98d48f35bd2bea6c951e925b27a11c139d1e7",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/01-todays-bake-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "47e55e44197883b5a80f8056c9552cfa7562f0491c188f289d7b9f5f804f29ef"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/rill-and-rye/records/01-todays-bake-lower.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptycitron. Largephotoofglossyapricotbunonplate, caption 'Apricot bun'. Longpause. Smallercenteredcoffeecupphotowithgenerouscitronspace, caption 'Coffee'. Longpause. 'Planning a collection?' / 'Send a collection request →'. Helper 'Menu and collection details are confirmed by the bakery.' Completefooter. Norepeatedheader/menu.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/rill-and-rye/inputs/archived/98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324.png"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/01-todays-bake-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "47e55e44197883b5a80f8056c9552cfa7562f0491c188f289d7b9f5f804f29ef",
+              "order": 2,
+              "immutable_input_copy": "output/core-pages-2026-10-25/rill-and-rye/inputs/archived/47e55e44197883b5a80f8056c9552cfa7562f0491c188f289d7b9f5f804f29ef.png"
+            }
+          ]
+        }
+      },
+      "mobile_assembly": {
+        "site": "rill-and-rye",
+        "page": "01-todays-bake",
+        "method": "Proportional downscale of each mobile part to minimum native width, then edge-to-edge vertical concatenation; no crop, warp or upscale.",
+        "source_dimensions": [
+          [
+            809,
+            1944
+          ],
+          [
+            809,
+            1942
+          ]
+        ],
+        "scales": [
+          1.0,
+          1.0
+        ],
+        "final_mobile_dimensions": [
+          809,
+          3886
+        ],
+        "source_sha256": {
+          "desktop": "90c9c16df3b48b15dd031f893fb206207b5aa444e325739628352dab4d5f4dca",
+          "upper": "f6176f85eb10f7a9c9f6befb0e4eaf324fa3d909477ef4ddc7d94916b2fcebcc",
+          "lower": "c5e52018ac5a0a1869b6fe2e24f98d48f35bd2bea6c951e925b27a11c139d1e7"
+        },
+        "visual_qa": "pending full-page inspection"
+      },
+      "qa": {
+        "status": "production visual inspection complete; root review pending",
+        "checks": [
+          "Header and footer present; no clipping",
+          "Desktop and mobile share brand, palette, content and imagery",
+          "Mobile is one continuous vertical image, not a scaled desktop",
+          "Image captions and semantic order checked",
+          "Forms remain blank and request-only where applicable",
+          "No invented addresses, hours, prices or confirmed transactions"
+        ],
+        "notes": [
+          "Mobile menu corrected through ImageGen to full-width vertical text entries."
+        ]
+      }
+    },
+    {
+      "id": "02-collect-an-order",
+      "title": "Collect an order",
+      "page_type": "form",
+      "files": {
+        "desktop": {
+          "path": "images/website/core-pages-2026-10-25/rill-and-rye/02-collect-an-order/desktop.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "a5f3b1b6271b0bb5274f6e07b027ce140474931e36822494911671547353816d",
+          "bytes": 2174831,
+          "upsampled": false
+        },
+        "mobile": {
+          "path": "images/website/core-pages-2026-10-25/rill-and-rye/02-collect-an-order/mobile.png",
+          "width": 809,
+          "height": 3884,
+          "sha256": "5668b11e29dc3235bb62a701fd6213bdd01336054f8c33c7e677b5277a57a01a",
+          "bytes": 3069536,
+          "upsampled": false
+        }
+      },
+      "generations": {
+        "desktop": {
+          "site": "rill-and-rye",
+          "page": "02-collect-an-order",
+          "part": "desktop",
+          "prompt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact RILL & RYE / ORCHARD BAKERY, Today's bake, Collect an order, Visit us. Selectedpageunderlineonly, no oversizedhomepagewordmark.\nPAGE: A task-first bakery collection REQUEST form, notcheckout. Compactheader then 'Bring something to the table.' Shortline 'Tell us what you would like to collect.' Maincompositionwide formleft and an intimate tall stilllifeofrusticsourdoughwrappedinpaperwithapricotbunright. Formissharedcitronbackground, no enclosingcard; labelledblankfields 'Name', 'Email', 'Requested collection date' placeholder 'Choose a date', 'Your order' multilineplaceholder 'Items and quantities', 'Anything else?' multilineblank. Under fields button 'Send collection request →'. Clear helper 'This is a request, not a confirmed order. The bakery will confirm availability and collection details.' Allfieldsaligned, generous56px rowheight and 24px labelspacing. Next a quiet shortnotewithsmallorchardtablephoto: 'For a shared table.' / 'Start with a loaf, then add something sweet.' Link 'See today’s bake →'. Completefooter. No prices,checkout,payment,total,addresses,hoursorbookingconfirmation.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter.",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/02-collect-an-order-desktop.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-f362dfd8-4923-456b-86c9-4cebb8fa7765.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png"
+          ],
+          "native_dimensions": [
+            1024,
+            1536
+          ],
+          "sha256": "a5f3b1b6271b0bb5274f6e07b027ce140474931e36822494911671547353816d",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/rill-and-rye/records/02-collect-an-order-desktop.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact RILL & RYE / ORCHARD BAKERY, Today's bake, Collect an order, Visit us. Selectedpageunderlineonly, no oversizedhomepagewordmark.\nPAGE: A task-first bakery collection REQUEST form, notcheckout. Compactheader then 'Bring something to the table.' Shortline 'Tell us what you would like to collect.' Maincompositionwide formleft and an intimate tall stilllifeofrusticsourdoughwrappedinpaperwithapricotbunright. Formissharedcitronbackground, no enclosingcard; labelledblankfields 'Name', 'Email', 'Requested collection date' placeholder 'Choose a date', 'Your order' multilineplaceholder 'Items and quantities', 'Anything else?' multilineblank. Under fields button 'Send collection request →'. Clear helper 'This is a request, not a confirmed order. The bakery will confirm availability and collection details.' Allfieldsaligned, generous56px rowheight and 24px labelspacing. Next a quiet shortnotewithsmallorchardtablephoto: 'For a shared table.' / 'Start with a loaf, then add something sweet.' Link 'See today’s bake →'. Completefooter. No prices,checkout,payment,total,addresses,hoursorbookingconfirmation.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter.",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/rill-and-rye/inputs/archived/98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324.png"
+            }
+          ]
+        },
+        "upper": {
+          "mode": "built-in image_gen edit",
+          "exact_prompt": "Targeted correction to this image-only MOBILE bakery collection request page. Preserve exact RILL & RYE / ORCHARD BAKERY branding, citron ground, rust serif headings, leaf green body type and all form content. REMOVE THE LARGE FOOD PHOTOGRAPH ENTIRELY from above the title. This is a task-first narrow mobile form: compact header immediately followed by 'Bring something to the table.' on two lines and 'Tell us what you would like to collect.' Then ENTIRE form one column. Approximately809px-wide portrait canvas. Shared60px native side gutters. All labels and placeholders at least36nativepixels (17px at390logicalpx), helper32px. In exact order: Name empty input; Email empty input; Requested collection date input 'Choose a date' with calendar icon; Your order textarea 'Items and quantities'; Anything else? empty textarea. Single-line input boxes at least96nativepixels tall, distinct48px gaps between groups, textareas180nativepixels. Then full-width rust button 'Send collection request →' at least100nativepixels tall. Helper below in two or three readable lines: 'This is a request, not a confirmed order. The bakery will confirm availability and collection details.' Use freed photograph space for readable text, large controls and generous breathing room, without introducing new content or decoration. No photographs in this upper segment, no footer. Finish130nativepixels below helper with matching flat citron ground; approximately809x1942 canvas, all content visible. Nothing above title except compactheader.",
+          "source_path": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-1d93f68f-8bbd-4854-9997-5c4a2bdd2cd4.png",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/02-collect-an-order-upper-v1.png",
+              "sha256": "1973251be484922293478f71c355b622a7f1893a71036b404408a8b14f3b1f9d",
+              "role": "target upper mobile form segment"
+            }
+          ],
+          "native_dimensions": [
+            809,
+            1942
+          ],
+          "sha256": "2c65d7b4c6e222522e6d3789c3f4b3bef47f29a655924dde815211a72caa72df",
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/rill-and-rye/records/02-collect-an-order-upper.json",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/02-collect-an-order-upper-v1.png",
+              "sha256": "1973251be484922293478f71c355b622a7f1893a71036b404408a8b14f3b1f9d",
+              "role": "target upper mobile form segment",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/rill-and-rye/inputs/archived/1973251be484922293478f71c355b622a7f1893a71036b404408a8b14f3b1f9d.png"
+            }
+          ]
+        },
+        "lower": {
+          "site": "rill-and-rye",
+          "page": "02-collect-an-order",
+          "part": "lower",
+          "prompt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Begin with ample citron space then full-width tall still life of rustic sourdough wrapped in paper and apricot bun. Long pause. Title 'For a shared table.' Text 'Start with a loaf, then add something sweet.' Link 'See today’s bake →'. A second smaller orchard-table photograph, with empty citron surrounding it. Long pause and complete footer. No repeated form, header or send button; no confirmed state, payment, hours or address.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/02-collect-an-order-lower.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-3d36f44b-f1d4-45eb-b7f0-4ec5971529f9.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png",
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/02-collect-an-order-upper.png"
+          ],
+          "native_dimensions": [
+            809,
+            1942
+          ],
+          "sha256": "a124c66d396ebdb4cbac6db8f1a688b01a0fa854930d30434392093f89916d7f",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/02-collect-an-order-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "1973251be484922293478f71c355b622a7f1893a71036b404408a8b14f3b1f9d"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/rill-and-rye/records/02-collect-an-order-lower.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Begin with ample citron space then full-width tall still life of rustic sourdough wrapped in paper and apricot bun. Long pause. Title 'For a shared table.' Text 'Start with a loaf, then add something sweet.' Link 'See today’s bake →'. A second smaller orchard-table photograph, with empty citron surrounding it. Long pause and complete footer. No repeated form, header or send button; no confirmed state, payment, hours or address.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/rill-and-rye/inputs/archived/98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324.png"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/02-collect-an-order-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "1973251be484922293478f71c355b622a7f1893a71036b404408a8b14f3b1f9d",
+              "order": 2,
+              "immutable_input_copy": "output/core-pages-2026-10-25/rill-and-rye/inputs/archived/1973251be484922293478f71c355b622a7f1893a71036b404408a8b14f3b1f9d.png"
+            }
+          ]
+        }
+      },
+      "mobile_assembly": {
+        "site": "rill-and-rye",
+        "page": "02-collect-an-order",
+        "method": "Proportional downscale of each mobile part to minimum native width, then edge-to-edge vertical concatenation; no crop, warp or upscale.",
+        "source_dimensions": [
+          [
+            809,
+            1942
+          ],
+          [
+            809,
+            1942
+          ]
+        ],
+        "scales": [
+          1.0,
+          1.0
+        ],
+        "final_mobile_dimensions": [
+          809,
+          3884
+        ],
+        "source_sha256": {
+          "desktop": "a5f3b1b6271b0bb5274f6e07b027ce140474931e36822494911671547353816d",
+          "upper": "2c65d7b4c6e222522e6d3789c3f4b3bef47f29a655924dde815211a72caa72df",
+          "lower": "a124c66d396ebdb4cbac6db8f1a688b01a0fa854930d30434392093f89916d7f"
+        },
+        "visual_qa": "pending full-page inspection"
+      },
+      "qa": {
+        "status": "production visual inspection complete; root review pending",
+        "checks": [
+          "Header and footer present; no clipping",
+          "Desktop and mobile share brand, palette, content and imagery",
+          "Mobile is one continuous vertical image, not a scaled desktop",
+          "Image captions and semantic order checked",
+          "Forms remain blank and request-only where applicable",
+          "No invented addresses, hours, prices or confirmed transactions"
+        ],
+        "notes": [
+          "Mobile form corrected through ImageGen: removed hero before task and enlarged labels and controls."
+        ]
+      }
+    },
+    {
+      "id": "03-visit-the-orchard",
+      "title": "Visit the orchard",
+      "page_type": "visit",
+      "files": {
+        "desktop": {
+          "path": "images/website/core-pages-2026-10-25/rill-and-rye/03-visit-the-orchard/desktop.png",
+          "width": 1024,
+          "height": 1535,
+          "sha256": "29058ddfbc6137e1caf2dcd2f1c1533dc3001408467c17311e70b533580808fe",
+          "bytes": 2465459,
+          "upsampled": false
+        },
+        "mobile": {
+          "path": "images/website/core-pages-2026-10-25/rill-and-rye/03-visit-the-orchard/mobile.png",
+          "width": 797,
+          "height": 3889,
+          "sha256": "05d06469e96f256975f59be071f8017fd7a9b2331b60057146f696c4a82bee1d",
+          "bytes": 3671891,
+          "upsampled": false
+        }
+      },
+      "generations": {
+        "desktop": {
+          "page": "03-visit-the-orchard",
+          "site": "rill-and-rye",
+          "part": "desktop",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact RILL & RYE / ORCHARD BAKERY, Today's bake, Collect an order, Visit us. Selectedpageunderlineonly, no oversizedhomepagewordmark.\nPAGE: A cinematic but practical bakery visitpage. Compactheaderonlightcitron, then restrainedtitle 'A seat in the shade.' Oneverywidephotographoforchardtablesbeneathapricotbranches, naturaldappledshadows, oldbakerykioskwithsubtleroseawninginthedistance, nothotel/resort. Underimage smallcaption 'The orchard at Rill & Rye'. Broadopenreadingcomposition: leftshorttitle 'Before you come.' and rightthreeairytextrows 'Plan your visit' / 'Ask us about opening days and access.'; 'Come for the bake' / 'See what is coming from the oven.'; 'Collect for later' / 'Send a request before making a special trip.' Eachactionconcreteunderlinelink respectively 'Contact the bakery →', 'Today’s bake →', 'Collect an order →'. No inventedcontactinfoorhours. Belowonewideclosephotographofbreadandcoffeeonorchardtable then smallerportraitofsunlitapricotbranches,off-setwithalignedgridedgesandlotsofemptycitron. Tinycaption 'Bread, coffee, a little time.' Completefooter. Pageclearlyvisits notgenericstory, nofake map.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter.\nFinal art-direction emphasis: leave genuinely EMPTY light-color space. At an approximately 1024px wide desktop image, show 80–120px visible empty-color pauses between the photographic chapters. Inset images, captions and divider endpoints share the same gutters; do not turn everything into packed photographic panels. Keep every supplied fact and label exact. Do not add undocumented colors, product variants or prices. No badges or annotations. The output is artwork only.\n",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/root-page03-identity.png",
+              "role": "approved brand and photographic identity only; not a layout template",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324"
+            }
+          ],
+          "status": "pending visual review",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a16fe8-d258-74b1-8527-c3d7cdc594fe/exec-d7b61f92-b4ff-4cbd-b8ee-493b99cbc98d.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/03-visit-the-orchard-desktop-root.png",
+          "native_width": 1024,
+          "native_height": 1535,
+          "sha256": "29058ddfbc6137e1caf2dcd2f1c1533dc3001408467c17311e70b533580808fe",
+          "record_path": "output/core-pages-2026-10-25/rill-and-rye/records/03-visit-the-orchard-desktop-root.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact RILL & RYE / ORCHARD BAKERY, Today's bake, Collect an order, Visit us. Selectedpageunderlineonly, no oversizedhomepagewordmark.\nPAGE: A cinematic but practical bakery visitpage. Compactheaderonlightcitron, then restrainedtitle 'A seat in the shade.' Oneverywidephotographoforchardtablesbeneathapricotbranches, naturaldappledshadows, oldbakerykioskwithsubtleroseawninginthedistance, nothotel/resort. Underimage smallcaption 'The orchard at Rill & Rye'. Broadopenreadingcomposition: leftshorttitle 'Before you come.' and rightthreeairytextrows 'Plan your visit' / 'Ask us about opening days and access.'; 'Come for the bake' / 'See what is coming from the oven.'; 'Collect for later' / 'Send a request before making a special trip.' Eachactionconcreteunderlinelink respectively 'Contact the bakery →', 'Today’s bake →', 'Collect an order →'. No inventedcontactinfoorhours. Belowonewideclosephotographofbreadandcoffeeonorchardtable then smallerportraitofsunlitapricotbranches,off-setwithalignedgridedgesandlotsofemptycitron. Tinycaption 'Bread, coffee, a little time.' Completefooter. Pageclearlyvisits notgenericstory, nofake map.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter.\nFinal art-direction emphasis: leave genuinely EMPTY light-color space. At an approximately 1024px wide desktop image, show 80–120px visible empty-color pauses between the photographic chapters. Inset images, captions and divider endpoints share the same gutters; do not turn everything into packed photographic panels. Keep every supplied fact and label exact. Do not add undocumented colors, product variants or prices. No badges or annotations. The output is artwork only.\n",
+          "actual_inputs_ordered": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/root-page03-identity.png",
+              "role": "approved brand and photographic identity only; not a layout template",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324",
+              "immutable_input_copy": "output/core-pages-2026-10-25/rill-and-rye/inputs/archived/98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324.png"
+            }
+          ]
+        },
+        "upper": {
+          "page": "03-visit-the-orchard",
+          "site": "rill-and-rye",
+          "part": "upper",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: CompactheaderRILL & RYE / ORCHARD BAKERY, Menu. Title 'A seat in the shade.' Full-widthtallphotooforchardtablesbeneathapricotbranches andoldbakerykioskwithsubtleroseawningintheback. Caption 'The orchard at Rill & Rye'. Longpause thenheading 'Before you come.' Firstpracticalsection 'Plan your visit' / 'Ask us about opening days and access.' / 'Contact the bakery →'. Endquietcitron.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n\nFinal art-direction emphasis: leave genuinely EMPTY light-color space. At an approximately 1024px wide desktop image, show 80–120px visible empty-color pauses between the photographic chapters. Inset images, captions and divider endpoints share the same gutters; do not turn everything into packed photographic panels. Keep every supplied fact and label exact. Do not add undocumented colors, product variants or prices. No badges or annotations. The output is artwork only.\nMobile has only one reading column; labels and captions must be below their associated photographs. Never squeeze step numbers 01, 02, 03 into a row. Preserve large readable typography, spacious touch actions and generous vertical pauses. This part will be joined with another; do not compress it to fit a whole page.\n\nImage 2 is the completed desktop content reference. Preserve its identity and exact product geometry while reflowing into the specified one-column mobile.",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/root-page03-identity.png",
+              "role": "approved brand and photographic identity only; not a layout template",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324"
+            }
+          ],
+          "status": "pending visual review",
+          "references": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/root-page03-identity.png",
+              "role": "approved homepage identity",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/03-visit-the-orchard-desktop-root.png",
+              "role": "desktop content reference",
+              "sha256": "29058ddfbc6137e1caf2dcd2f1c1533dc3001408467c17311e70b533580808fe"
+            }
+          ],
+          "original": "/Users/jasonfesta/.codex/generated_images/01a16fe8-d258-74b1-8527-c3d7cdc594fe/exec-48fcc723-3152-4cab-bab0-f93a6caca54d.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/03-visit-the-orchard-upper-root.png",
+          "native_width": 797,
+          "native_height": 1973,
+          "sha256": "07749eea01b94d49c75d1e63c7f42650c8aad08914ff235a6bb39c788ad78020",
+          "record_path": "output/core-pages-2026-10-25/rill-and-rye/records/03-visit-the-orchard-upper-root.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: CompactheaderRILL & RYE / ORCHARD BAKERY, Menu. Title 'A seat in the shade.' Full-widthtallphotooforchardtablesbeneathapricotbranches andoldbakerykioskwithsubtleroseawningintheback. Caption 'The orchard at Rill & Rye'. Longpause thenheading 'Before you come.' Firstpracticalsection 'Plan your visit' / 'Ask us about opening days and access.' / 'Contact the bakery →'. Endquietcitron.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n\nFinal art-direction emphasis: leave genuinely EMPTY light-color space. At an approximately 1024px wide desktop image, show 80–120px visible empty-color pauses between the photographic chapters. Inset images, captions and divider endpoints share the same gutters; do not turn everything into packed photographic panels. Keep every supplied fact and label exact. Do not add undocumented colors, product variants or prices. No badges or annotations. The output is artwork only.\nMobile has only one reading column; labels and captions must be below their associated photographs. Never squeeze step numbers 01, 02, 03 into a row. Preserve large readable typography, spacious touch actions and generous vertical pauses. This part will be joined with another; do not compress it to fit a whole page.\n\nImage 2 is the completed desktop content reference. Preserve its identity and exact product geometry while reflowing into the specified one-column mobile.",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/root-page03-identity.png",
+              "role": "approved homepage identity",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/rill-and-rye/inputs/archived/98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324.png"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/03-visit-the-orchard-desktop-root.png",
+              "role": "desktop content reference",
+              "sha256": "29058ddfbc6137e1caf2dcd2f1c1533dc3001408467c17311e70b533580808fe",
+              "order": 2,
+              "immutable_input_copy": "output/core-pages-2026-10-25/rill-and-rye/inputs/archived/29058ddfbc6137e1caf2dcd2f1c1533dc3001408467c17311e70b533580808fe.png"
+            }
+          ]
+        },
+        "lower": {
+          "page": "03-visit-the-orchard",
+          "site": "rill-and-rye",
+          "part": "lower",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptycitron. PracticalsectionsVERTICALwithlargepauses: 'Come for the bake' / 'See what is coming from the oven.' / 'Today’s bake →'; then 'Collect for later' / 'Send a request before making a special trip.' / 'Collect an order →'. Belowlongpause full-widthbreadandcoffeetablephoto, then separate smallercenteredapricotbranchphoto. Caption 'Bread, coffee, a little time.' Fullfooter. No headerrepeat, fakeaddress, times,maporcontactinformation.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n\nFinal art-direction emphasis: leave genuinely EMPTY light-color space. At an approximately 1024px wide desktop image, show 80–120px visible empty-color pauses between the photographic chapters. Inset images, captions and divider endpoints share the same gutters; do not turn everything into packed photographic panels. Keep every supplied fact and label exact. Do not add undocumented colors, product variants or prices. No badges or annotations. The output is artwork only.\nMobile has only one reading column; labels and captions must be below their associated photographs. Never squeeze step numbers 01, 02, 03 into a row. Preserve large readable typography, spacious touch actions and generous vertical pauses. This part will be joined with another; do not compress it to fit a whole page.\n",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/root-page03-identity.png",
+              "role": "approved brand and photographic identity only; not a layout template",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324"
+            }
+          ],
+          "status": "pending visual review",
+          "references": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/root-page03-identity.png",
+              "role": "approved homepage identity",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/03-visit-the-orchard-desktop-root.png",
+              "role": "desktop content reference",
+              "sha256": "29058ddfbc6137e1caf2dcd2f1c1533dc3001408467c17311e70b533580808fe"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/03-visit-the-orchard-upper-root.png",
+              "role": "mobile upper continuation",
+              "sha256": "07749eea01b94d49c75d1e63c7f42650c8aad08914ff235a6bb39c788ad78020"
+            }
+          ],
+          "original": "/Users/jasonfesta/.codex/generated_images/01a16fe8-d258-74b1-8527-c3d7cdc594fe/exec-2927dd29-af6a-4ee4-a25d-298b6ae8fbf0.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/03-visit-the-orchard-lower-root.png",
+          "native_width": 809,
+          "native_height": 1945,
+          "sha256": "f881dc24329601e15be29b2f2ddae23c6e82eb4ea4671f4feca636ce1af2f742",
+          "record_path": "output/core-pages-2026-10-25/rill-and-rye/records/03-visit-the-orchard-lower-root.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptycitron. PracticalsectionsVERTICALwithlargepauses: 'Come for the bake' / 'See what is coming from the oven.' / 'Today’s bake →'; then 'Collect for later' / 'Send a request before making a special trip.' / 'Collect an order →'. Belowlongpause full-widthbreadandcoffeetablephoto, then separate smallercenteredapricotbranchphoto. Caption 'Bread, coffee, a little time.' Fullfooter. No headerrepeat, fakeaddress, times,maporcontactinformation.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n\nFinal art-direction emphasis: leave genuinely EMPTY light-color space. At an approximately 1024px wide desktop image, show 80–120px visible empty-color pauses between the photographic chapters. Inset images, captions and divider endpoints share the same gutters; do not turn everything into packed photographic panels. Keep every supplied fact and label exact. Do not add undocumented colors, product variants or prices. No badges or annotations. The output is artwork only.\nMobile has only one reading column; labels and captions must be below their associated photographs. Never squeeze step numbers 01, 02, 03 into a row. Preserve large readable typography, spacious touch actions and generous vertical pauses. This part will be joined with another; do not compress it to fit a whole page.\n",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/inputs/root-page03-identity.png",
+              "role": "approved homepage identity",
+              "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/rill-and-rye/inputs/archived/98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324.png"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/03-visit-the-orchard-desktop-root.png",
+              "role": "desktop content reference",
+              "sha256": "29058ddfbc6137e1caf2dcd2f1c1533dc3001408467c17311e70b533580808fe",
+              "order": 2,
+              "immutable_input_copy": "output/core-pages-2026-10-25/rill-and-rye/inputs/archived/29058ddfbc6137e1caf2dcd2f1c1533dc3001408467c17311e70b533580808fe.png"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/03-visit-the-orchard-upper-root.png",
+              "role": "mobile upper continuation",
+              "sha256": "07749eea01b94d49c75d1e63c7f42650c8aad08914ff235a6bb39c788ad78020",
+              "order": 3,
+              "immutable_input_copy": "output/core-pages-2026-10-25/rill-and-rye/inputs/archived/07749eea01b94d49c75d1e63c7f42650c8aad08914ff235a6bb39c788ad78020.png"
+            }
+          ]
+        }
+      },
+      "mobile_assembly": {
+        "site": "rill-and-rye",
+        "page": "03-visit-the-orchard",
+        "method": "Proportional downscale to minimum native width and direct vertical concatenation. No cropping, painting, or upscaling.",
+        "parts": [
+          {
+            "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/03-visit-the-orchard-upper-root.png",
+            "native_width": 797,
+            "native_height": 1973,
+            "scale": 1.0,
+            "assembled_height": 1973,
+            "sha256": "07749eea01b94d49c75d1e63c7f42650c8aad08914ff235a6bb39c788ad78020"
+          },
+          {
+            "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/rill-and-rye/sources/03-visit-the-orchard-lower-root.png",
+            "native_width": 809,
+            "native_height": 1945,
+            "scale": 0.9851668726823238,
+            "assembled_height": 1916,
+            "sha256": "f881dc24329601e15be29b2f2ddae23c6e82eb4ea4671f4feca636ce1af2f742"
+          }
+        ],
+        "final_width": 797,
+        "final_height": 3889,
+        "output": "/Users/jasonfesta/Documents/ChatGPT/wda/images/website/core-pages-2026-10-25/rill-and-rye/03-visit-the-orchard/mobile.png",
+        "sha256": "05d06469e96f256975f59be071f8017fd7a9b2331b60057146f696c4a82bee1d",
+        "qa": "Pending final visual check"
+      },
+      "qa": {
+        "status": "root reviewed; accepted for image-only handoff",
+        "checks": [
+          "Header and footer present; no clipping",
+          "Desktop and mobile share brand, palette, content and imagery",
+          "Mobile is one continuous vertical image, not a scaled desktop",
+          "Image captions and semantic order checked",
+          "Forms remain blank and request-only where applicable",
+          "No invented addresses, hours, prices or confirmed transactions"
+        ],
+        "notes": []
+      }
+    }
+  ],
+  "prompt_archive": {
+    "output/core-pages-2026-10-25/rill-and-rye/prompts/01-todays-bake-desktop.prior.txt": "Use case: ui-mockup. Create a polished original COMPLETE DESKTOP website page \"Today's bake\" for Rill & Rye, header to footer, as one raster image. Image1 is reference for brand/product/setting only. This is a NEW secondary page, not a recolored homepage.\nOutput: portrait width:height 2:3, target 1536x2304 native pixels, maximum crisp detail. Design at desktop 1440 logical width with multi-column compositions and comfortably readable body. No phone layout, device shell, browser, review labels or outside padding.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nInvariants: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nHeader: Compact RILL & RYE / ORCHARD BAKERY, Today's bake, Collect an order, Visit us. Selectedpageunderlineonly, no oversizedhomepagewordmark.\nComposition/content: A beautiful bakery menu with generous typographicmenu space and sculpturalfoodphotographs; NOT cards orcheckout. Compactheader then 'Today’s bake.' and 'A small menu, made for the table.' Lefttwo-thirds: a wide photographofcutrusticsourdoughonlightcitronlinen withcrumbanddappledleafshadows; right a clear sparsemenu heading 'From the oven' with3verticallyspacedentries 'Sourdough loaf' / 'A deep crust and an open crumb.'; 'Apricot bun' / 'Soft dough, fruit at the centre.'; 'Coffee' / 'A warm companion.' No prices/unverifiedavailability. Secondchapter on samecitronfield: two unboxedphotos ofa glossyapricotbunonplate and a smallcoffeecup; differentimagedimensions,captionscleanbaseline, generousmargins. Then a quietaction 'Planning a collection?' / 'Send a collection request →'. Smallnote 'Menu and collection details are confirmed by the bakery.' Completefooter. Practicalclearlabelsdominatecopy; no fakeopeninghours/address.\nFooter: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter.\nArt direction: distinctly high-end editorial design; generous air, refined purposeful asymmetry on a consistent grid. 80–96 logical px side gutters; 120–180px pauses between groups; 24–32px within groups. Long gaps and light color do real work. Fewer larger images. No rounded cards, box outlines, equal promotional tiles, checkerboard bands, decorative waves, busy scraps, inventedquotes/reviews. Rules if any precisely meet content edges. Natural high resolution photography; rectangles remain geometrically correct. Match ALL specified words accurately. No invented factualclaims. Preserve natural product/material color. Every visible element should feel deliberately aligned and comfortably spaced.\n",
+    "output/core-pages-2026-10-25/rill-and-rye/prompts/01-todays-bake-desktop.txt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact RILL & RYE / ORCHARD BAKERY, Today's bake, Collect an order, Visit us. Selectedpageunderlineonly, no oversizedhomepagewordmark.\nPAGE: A beautiful bakery menu with generous typographicmenu space and sculpturalfoodphotographs; NOT cards orcheckout. Compactheader then 'Today’s bake.' and 'A small menu, made for the table.' Lefttwo-thirds: a wide photographofcutrusticsourdoughonlightcitronlinen withcrumbanddappledleafshadows; right a clear sparsemenu heading 'From the oven' with3verticallyspacedentries 'Sourdough loaf' / 'A deep crust and an open crumb.'; 'Apricot bun' / 'Soft dough, fruit at the centre.'; 'Coffee' / 'A warm companion.' No prices/unverifiedavailability. Secondchapter on samecitronfield: two unboxedphotos ofa glossyapricotbunonplate and a smallcoffeecup; differentimagedimensions,captionscleanbaseline, generousmargins. Then a quietaction 'Planning a collection?' / 'Send a collection request →'. Smallnote 'Menu and collection details are confirmed by the bakery.' Completefooter. Practicalclearlabelsdominatecopy; no fakeopeninghours/address.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter.",
+    "output/core-pages-2026-10-25/rill-and-rye/prompts/01-todays-bake-lower.txt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptycitron. Largephotoofglossyapricotbunonplate, caption 'Apricot bun'. Longpause. Smallercenteredcoffeecupphotowithgenerouscitronspace, caption 'Coffee'. Longpause. 'Planning a collection?' / 'Send a collection request →'. Helper 'Menu and collection details are confirmed by the bakery.' Completefooter. Norepeatedheader/menu.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+    "output/core-pages-2026-10-25/rill-and-rye/prompts/01-todays-bake-upper-v2.txt": "Edit this image-only MOBILE page mockup. Preserve the existing header, exact RILL & RYE wordmark, Today’s bake title, subtitle, citron/rust/leaf palette, full-width sourdough hero and Sourdough loaf caption exactly. Correct ONLY the menu below the hero: remove all three thumbnail photographs in the From the oven section. This is a narrow 390px mobile page, so the three menu entries are full-width, one after another, LEFT aligned to the shared 60-native-pixel text gutter. There must be ZERO side-by-side photo/text rows. Keep From the oven heading. Under it, Sourdough loaf on one line and beneath it A deep crust and an open crumb. Then 90 native pixels of empty citron; Apricot bun and beneath it Soft dough, fruit at the centre. Then 90 native pixels of empty citron; Coffee and beneath it A warm companion. Body labels at least34 native pixels, warm readable serif item titles around42px. Exact spelling. All three descriptions must fit in full. Preserve airy space and total tall portrait proportions; bottom quiet flat citron for continuation. No footer, no new copy, no cards, no lines, no icons. Only one food photograph—the existing large hero—in this upper segment. Do not change any other element.",
+    "output/core-pages-2026-10-25/rill-and-rye/prompts/01-todays-bake-upper.txt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: CompactheaderRILL & RYE / ORCHARD BAKERY, Menu. Title 'Today’s bake.' Text 'A small menu, made for the table.' Tallfull-widthcutrusticsourdoughphotooncitronlinenwithleafshadows. Caption 'Sourdough loaf'. Longpause. 'From the oven' and3VERTICALmenuentries with generous48pxgaps: 'Sourdough loaf' / 'A deep crust and an open crumb.'; 'Apricot bun' / 'Soft dough, fruit at the centre.'; 'Coffee' / 'A warm companion.' No prices. Endquietcitron.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+    "output/core-pages-2026-10-25/rill-and-rye/prompts/02-collect-an-order-desktop.txt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact RILL & RYE / ORCHARD BAKERY, Today's bake, Collect an order, Visit us. Selectedpageunderlineonly, no oversizedhomepagewordmark.\nPAGE: A task-first bakery collection REQUEST form, notcheckout. Compactheader then 'Bring something to the table.' Shortline 'Tell us what you would like to collect.' Maincompositionwide formleft and an intimate tall stilllifeofrusticsourdoughwrappedinpaperwithapricotbunright. Formissharedcitronbackground, no enclosingcard; labelledblankfields 'Name', 'Email', 'Requested collection date' placeholder 'Choose a date', 'Your order' multilineplaceholder 'Items and quantities', 'Anything else?' multilineblank. Under fields button 'Send collection request →'. Clear helper 'This is a request, not a confirmed order. The bakery will confirm availability and collection details.' Allfieldsaligned, generous56px rowheight and 24px labelspacing. Next a quiet shortnotewithsmallorchardtablephoto: 'For a shared table.' / 'Start with a loaf, then add something sweet.' Link 'See today’s bake →'. Completefooter. No prices,checkout,payment,total,addresses,hoursorbookingconfirmation.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter.",
+    "output/core-pages-2026-10-25/rill-and-rye/prompts/02-collect-an-order-lower.txt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Begin with ample citron space then full-width tall still life of rustic sourdough wrapped in paper and apricot bun. Long pause. Title 'For a shared table.' Text 'Start with a loaf, then add something sweet.' Link 'See today’s bake →'. A second smaller orchard-table photograph, with empty citron surrounding it. Long pause and complete footer. No repeated form, header or send button; no confirmed state, payment, hours or address.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+    "output/core-pages-2026-10-25/rill-and-rye/prompts/02-collect-an-order-upper-v2.txt": "Targeted correction to this image-only MOBILE bakery collection request page. Preserve exact RILL & RYE / ORCHARD BAKERY branding, citron ground, rust serif headings, leaf green body type and all form content. REMOVE THE LARGE FOOD PHOTOGRAPH ENTIRELY from above the title. This is a task-first narrow mobile form: compact header immediately followed by 'Bring something to the table.' on two lines and 'Tell us what you would like to collect.' Then ENTIRE form one column. Approximately809px-wide portrait canvas. Shared60px native side gutters. All labels and placeholders at least36nativepixels (17px at390logicalpx), helper32px. In exact order: Name empty input; Email empty input; Requested collection date input 'Choose a date' with calendar icon; Your order textarea 'Items and quantities'; Anything else? empty textarea. Single-line input boxes at least96nativepixels tall, distinct48px gaps between groups, textareas180nativepixels. Then full-width rust button 'Send collection request →' at least100nativepixels tall. Helper below in two or three readable lines: 'This is a request, not a confirmed order. The bakery will confirm availability and collection details.' Use freed photograph space for readable text, large controls and generous breathing room, without introducing new content or decoration. No photographs in this upper segment, no footer. Finish130nativepixels below helper with matching flat citron ground; approximately809x1942 canvas, all content visible. Nothing above title except compactheader.",
+    "output/core-pages-2026-10-25/rill-and-rye/prompts/02-collect-an-order-upper.txt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: Compact header RILL & RYE / ORCHARD BAKERY, Menu. Title 'Bring something to the table.' Short line 'Tell us what you would like to collect.' Single-column blank request form on shared citron: Name, Email, Requested collection date dropdown 'Choose a date', Your order multiline blank 'Items and quantities', Anything else? multiline blank. Large labels and aligned field rules. Below form, button 'Send collection request →'. Clear helper 'This is a request, not a confirmed order. The bakery will confirm availability and collection details.' Keep action with form. End empty citron, no footer.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+    "output/core-pages-2026-10-25/rill-and-rye/prompts/03-visit-the-orchard-desktop-root.txt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact RILL & RYE / ORCHARD BAKERY, Today's bake, Collect an order, Visit us. Selectedpageunderlineonly, no oversizedhomepagewordmark.\nPAGE: A cinematic but practical bakery visitpage. Compactheaderonlightcitron, then restrainedtitle 'A seat in the shade.' Oneverywidephotographoforchardtablesbeneathapricotbranches, naturaldappledshadows, oldbakerykioskwithsubtleroseawninginthedistance, nothotel/resort. Underimage smallcaption 'The orchard at Rill & Rye'. Broadopenreadingcomposition: leftshorttitle 'Before you come.' and rightthreeairytextrows 'Plan your visit' / 'Ask us about opening days and access.'; 'Come for the bake' / 'See what is coming from the oven.'; 'Collect for later' / 'Send a request before making a special trip.' Eachactionconcreteunderlinelink respectively 'Contact the bakery →', 'Today’s bake →', 'Collect an order →'. No inventedcontactinfoorhours. Belowonewideclosephotographofbreadandcoffeeonorchardtable then smallerportraitofsunlitapricotbranches,off-setwithalignedgridedgesandlotsofemptycitron. Tinycaption 'Bread, coffee, a little time.' Completefooter. Pageclearlyvisits notgenericstory, nofake map.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter.\nFinal art-direction emphasis: leave genuinely EMPTY light-color space. At an approximately 1024px wide desktop image, show 80–120px visible empty-color pauses between the photographic chapters. Inset images, captions and divider endpoints share the same gutters; do not turn everything into packed photographic panels. Keep every supplied fact and label exact. Do not add undocumented colors, product variants or prices. No badges or annotations. The output is artwork only.\n\n",
+    "output/core-pages-2026-10-25/rill-and-rye/prompts/03-visit-the-orchard-desktop.txt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact RILL & RYE / ORCHARD BAKERY, Today's bake, Collect an order, Visit us. Selectedpageunderlineonly, no oversizedhomepagewordmark.\nPAGE: A cinematic but practical bakery visitpage. Compactheaderonlightcitron, then restrainedtitle 'A seat in the shade.' Oneverywidephotographoforchardtablesbeneathapricotbranches, naturaldappledshadows, oldbakerykioskwithsubtleroseawninginthedistance, nothotel/resort. Underimage smallcaption 'The orchard at Rill & Rye'. Broadopenreadingcomposition: leftshorttitle 'Before you come.' and rightthreeairytextrows 'Plan your visit' / 'Ask us about opening days and access.'; 'Come for the bake' / 'See what is coming from the oven.'; 'Collect for later' / 'Send a request before making a special trip.' Eachactionconcreteunderlinelink respectively 'Contact the bakery →', 'Today’s bake →', 'Collect an order →'. No inventedcontactinfoorhours. Belowonewideclosephotographofbreadandcoffeeonorchardtable then smallerportraitofsunlitapricotbranches,off-setwithalignedgridedgesandlotsofemptycitron. Tinycaption 'Bread, coffee, a little time.' Completefooter. Pageclearlyvisits notgenericstory, nofake map.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter.",
+    "output/core-pages-2026-10-25/rill-and-rye/prompts/03-visit-the-orchard-lower-root.txt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptycitron. PracticalsectionsVERTICALwithlargepauses: 'Come for the bake' / 'See what is coming from the oven.' / 'Today’s bake →'; then 'Collect for later' / 'Send a request before making a special trip.' / 'Collect an order →'. Belowlongpause full-widthbreadandcoffeetablephoto, then separate smallercenteredapricotbranchphoto. Caption 'Bread, coffee, a little time.' Fullfooter. No headerrepeat, fakeaddress, times,maporcontactinformation.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n\nFinal art-direction emphasis: leave genuinely EMPTY light-color space. At an approximately 1024px wide desktop image, show 80–120px visible empty-color pauses between the photographic chapters. Inset images, captions and divider endpoints share the same gutters; do not turn everything into packed photographic panels. Keep every supplied fact and label exact. Do not add undocumented colors, product variants or prices. No badges or annotations. The output is artwork only.\nMobile has only one reading column; labels and captions must be below their associated photographs. Never squeeze step numbers 01, 02, 03 into a row. Preserve large readable typography, spacious touch actions and generous vertical pauses. This part will be joined with another; do not compress it to fit a whole page.\n\n",
+    "output/core-pages-2026-10-25/rill-and-rye/prompts/03-visit-the-orchard-lower.txt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptycitron. PracticalsectionsVERTICALwithlargepauses: 'Come for the bake' / 'See what is coming from the oven.' / 'Today’s bake →'; then 'Collect for later' / 'Send a request before making a special trip.' / 'Collect an order →'. Belowlongpause full-widthbreadandcoffeetablephoto, then separate smallercenteredapricotbranchphoto. Caption 'Bread, coffee, a little time.' Fullfooter. No headerrepeat, fakeaddress, times,maporcontactinformation.\nFOOTER: RILL & RYE. Home · Today's bake · Collect an order · Visit us. Contact · Privacy · Terms. Airy smallfooter. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+    "output/core-pages-2026-10-25/rill-and-rye/prompts/03-visit-the-orchard-upper-root.txt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: CompactheaderRILL & RYE / ORCHARD BAKERY, Menu. Title 'A seat in the shade.' Full-widthtallphotooforchardtablesbeneathapricotbranches andoldbakerykioskwithsubtleroseawningintheback. Caption 'The orchard at Rill & Rye'. Longpause thenheading 'Before you come.' Firstpracticalsection 'Plan your visit' / 'Ask us about opening days and access.' / 'Contact the bakery →'. Endquietcitron.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n\nFinal art-direction emphasis: leave genuinely EMPTY light-color space. At an approximately 1024px wide desktop image, show 80–120px visible empty-color pauses between the photographic chapters. Inset images, captions and divider endpoints share the same gutters; do not turn everything into packed photographic panels. Keep every supplied fact and label exact. Do not add undocumented colors, product variants or prices. No badges or annotations. The output is artwork only.\nMobile has only one reading column; labels and captions must be below their associated photographs. Never squeeze step numbers 01, 02, 03 into a row. Preserve large readable typography, spacious touch actions and generous vertical pauses. This part will be joined with another; do not compress it to fit a whole page.\n\nImage 2 is the completed desktop content reference. Preserve its identity and exact product geometry while reflowing into the specified one-column mobile.\n",
+    "output/core-pages-2026-10-25/rill-and-rye/prompts/03-visit-the-orchard-upper.txt": "Use case: ui-mockup. Create an original high-end Rill & Rye secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact 'RILL & RYE' small uppercase spaced wordmark with tiny 'ORCHARD BAKERY'. Rustic sourdoughloaf, glossyapricotbun, coffee, dappledleaves, orchardtable; preservechosenoptionBsoftsunlitphotographypremisebutdistinct secondarypagearchitecture. Original roseawningmayappearinvisitphotograph only.\nTypography: Cormorant Garamond 500/600 uppercase spaced RILL & RYE and warm editorial serif titles; Manrope400/500 for readable labels and forms.\nPalette: Light citron #F2EDB9 and #FBF7D9 with leaf green #667342 in smallaccentareas and warmrust #9C3C1E for type. Selected orchardtablephotography with citronlinen. Not beige/taupe, pinkwash or allwhite.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: CompactheaderRILL & RYE / ORCHARD BAKERY, Menu. Title 'A seat in the shade.' Full-widthtallphotooforchardtablesbeneathapricotbranches andoldbakerykioskwithsubtleroseawningintheback. Caption 'The orchard at Rill & Rye'. Longpause thenheading 'Before you come.' Firstpracticalsection 'Plan your visit' / 'Ask us about opening days and access.' / 'Contact the bakery →'. Endquietcitron.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n"
+  },
+  "revision_records": [
+    "output/core-pages-2026-10-25/rill-and-rye/records/01-todays-bake-upper-v1.json",
+    "output/core-pages-2026-10-25/rill-and-rye/records/02-collect-an-order-upper-v1.json",
+    "output/core-pages-2026-10-25/rill-and-rye/records/03-visit-the-orchard-desktop-root.json",
+    "output/core-pages-2026-10-25/rill-and-rye/records/03-visit-the-orchard-lower-root.json",
+    "output/core-pages-2026-10-25/rill-and-rye/records/03-visit-the-orchard-mobile-final-root.json",
+    "output/core-pages-2026-10-25/rill-and-rye/records/03-visit-the-orchard-upper-root.json"
+  ],
+  "final_collection_review": {
+    "03-visit-the-orchard": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Desktop visit planning and photos; mobile three practical sections vertical. No fabricated address/hours, complete footer.",
+      "hashes": {
+        "desktop": "29058ddfbc6137e1caf2dcd2f1c1533dc3001408467c17311e70b533580808fe",
+        "mobile": "05d06469e96f256975f59be071f8017fd7a9b2331b60057146f696c4a82bee1d"
+      }
+    },
+    "01-todays-bake": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Three correct menu items, genuinely vertical mobile menu, no invented prices, collection request action.",
+      "hashes": {
+        "desktop": "90c9c16df3b48b15dd031f893fb206207b5aa444e325739628352dab4d5f4dca",
+        "mobile": "c4905cf35ff86463c38e1412e99cac28856b3a2a210ce9700f1cabeb2858dfc1"
+      }
+    },
+    "02-collect-an-order": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Matching blank request fields, mobile form first with adequate controls, request not confirmed-order state.",
+      "hashes": {
+        "desktop": "a5f3b1b6271b0bb5274f6e07b027ce140474931e36822494911671547353816d",
+        "mobile": "5668b11e29dc3235bb62a701fd6213bdd01336054f8c33c7e677b5277a57a01a"
+      }
+    }
+  }
+}

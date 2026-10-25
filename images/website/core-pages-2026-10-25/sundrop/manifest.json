@@ -1,0 +1,445 @@
+{
+  "site": "sundrop",
+  "name": "Sundrop",
+  "date": "2026-10-25",
+  "scope": "Three new core page concepts, desktop and continuous mobile; image-only raster mockups.",
+  "status": "accepted after visual review",
+  "format": "PNG",
+  "image_count": 6,
+  "density_note": "Exact native desktop dimensions and final mobile dimensions are recorded below. Desktop is not claimed as 2× at 1440 px. Mobile assembly only proportionally downscales wider parts; no upscaling. Controls and spacing are visual mockups, not measured responsive CSS or working UI.",
+  "identity_reference": "images/website/final-2026-10-24/sundrop/desktop.png",
+  "identity_sha256": "0d5163f17bbd3fc84183618c5ec99f04be61071fe2a54d9aa96fde916e0a7043",
+  "palette": "Light apricot #F9D5B6, pale peach #FCE6CF, lemon #F4E9B6 and burgundy #742B2E ink. Sunny light colors with actual hue, not beige or white wash. Natural vivid orange drink.",
+  "fonts_art_direction": "Barlow Condensed 500/600 expressive uppercase display; DM Sans 400/500 body and UI. Spaced SUNDROP small sunburst logo.",
+  "facts": "Orange slim can exact label SUNDROP / APRICOT APERITIF / 200 ml / 8% ALC/VOL. 4 cans $24, 8 cans $44, 12 cans $60. Alcoholic, never alcohol-free. Adult people only. Coupe and orange aperitif with apricots retain natural geometry.",
+  "references": [
+    {
+      "url": "https://drinkghia.com/",
+      "observed": "Retained desktop and 390px mobile captures: category selection, explicit pack quantities, large product imagery and recipe pathways. Current primary homepage rechecked by parent on 25 October.",
+      "decision": "Separate choosing a pack, evaluating the drink and learning to serve. Keep chosen pack and price clear, vertical steps on phone. Nonalcoholic reference claims do not transfer."
+    },
+    {
+      "url": "https://drinkghia.com/pages/recipes",
+      "observed": "25 October text fetch inaccessible; not treated as live visual evidence.",
+      "decision": "Serving layout derives from retained WDA recipe/task research and original hierarchy, not an invented current site observation."
+    }
+  ],
+  "production_folder": "output/core-pages-2026-10-25/sundrop",
+  "pages": [
+    {
+      "id": "01-shop-packs",
+      "title": "Shop packs",
+      "type": "commerce catalogue",
+      "production_record": "output/core-pages-2026-10-25/sundrop/records/01-shop-packs-assembly.json",
+      "qa": {
+        "desktop": "Complete pack selector with4/$24 selected,8/$44 and12/$60; targeted photo revision replaces ambiguous count clusters with one can beside labeled cartons; exact200ml/8%ALC/VOL.",
+        "mobile": "Source parts and long final visually inspected. Four loose cans match4-can carton; lower8-can carton with one sample. Vertical selector, quantity1 andAdd24 agree. Full footer and seamless lemon pause.",
+        "density": "809 px native final width supports2× display at404.5 CSSpx; no upscale."
+      },
+      "status": "accepted after visual review",
+      "desktop": {
+        "path": "01-shop-packs/desktop.png",
+        "repository_path": "images/website/core-pages-2026-10-25/sundrop/01-shop-packs/desktop.png",
+        "width": 1024,
+        "height": 1536,
+        "sha256": "b15f4de17c542821347308a9c25b7e7d27d9294364f0eb0647574f5d462ec32e",
+        "upscaled": false
+      },
+      "mobile": {
+        "path": "01-shop-packs/mobile.png",
+        "repository_path": "images/website/core-pages-2026-10-25/sundrop/01-shop-packs/mobile.png",
+        "width": 809,
+        "height": 3884,
+        "sha256": "3e1c95c11f6e5381697e85458d0e13c401c9f2ef50ddb9d2be755d6beb7d5816",
+        "upscaled": false,
+        "max_css_width_at_2x": 404.5
+      },
+      "generation_provenance": [
+        {
+          "mode": "built-in image_gen",
+          "intent": "precise-object-edit",
+          "prompt": "Use case: precise-object-edit. Image1 is brand/product reference. Image2 is the desktop SHOP PACKS image to edit. Preserve all typography, exact prices, pack radio choices, footer, grid, margins and overall 1024x1536 composition. Correct ONLY the photography of pack presentations: in the TOP purchase photograph replace the confusing cluster of five cans beside the 4-can carton with ONE single sharp orange SUNDROP can beside the existing carton labeled 4 CANS. The carton contains the pack; only one sample can is outside. In the middle 8-can chapter likewise replace the loose group of cans with ONE single sample can beside the 8 CANS carton. Keep the two cartons, their existing correct pack labels, and all other photography exactly as designed. No implied visible-count mismatch. Original can exact label SUNDROP / APRICOT APERITIF / 200 ml / 8% ALC/VOL. This is a precise image edit, do not redesign or add content.\n",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "0d5163f17bbd3fc84183618c5ec99f04be61071fe2a54d9aa96fde916e0a7043"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/01-shop-packs-desktop.png",
+              "order": 2,
+              "role": "same-page desktop art direction and content",
+              "sha256": "a0b923eb9eb5b238a0c2b342089d73aa8cd173382f2d54201821eec5da223895"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-dabf753e-0218-4be7-9bca-de0c0d22615a.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/01-shop-packs-desktop-v2.png",
+          "native_dimensions": [
+            1024,
+            1536
+          ],
+          "sha256": "b15f4de17c542821347308a9c25b7e7d27d9294364f0eb0647574f5d462ec32e",
+          "status": "accepted after visual review",
+          "qa": "Accepted targeted edit: one sample can beside each labeled carton eliminates ambiguous visible can counts; 4/8/12 pack prices and selected4/add24 remain correct.",
+          "visual_review_record": "01-shop-packs-assembly.json"
+        },
+        {
+          "mode": "built-in image_gen",
+          "intent": "generate from identity and layout references",
+          "prompt": "Use case: ui-mockup. Create one complete original DESKTOP website page from header to full footer, as a high-end image-only editorial design. Portrait canvas width:height 2:3, target1536x2304 native pixels. This depicts a1440px-wide desktop page, with desktop columns and a clean12column grid, NOT a phone layout. Highest native clarity, sharp natural photography, no browser/device/presentation frame. Image1 is an identity/product/color reference, not a page template. Design a NEW secondary page. Use generous100px desktop side gutters, 120–180px vertical chapter spacing,40px between photo and next group. Body readable, short concise copy, consistent baselines. Air through spacing, variable image scale and fewer containers. No boxy cards, repeated50/50 stripes, heavy borders or giant repeated masthead. Exact productgeometry and factual labels matter. \nBrand: Sundrop. Orange slim can exact label SUNDROP / APRICOT APERITIF / 200 ml / 8% ALC/VOL. 4 cans $24, 8 cans $44, 12 cans $60. Alcoholic, never alcohol-free. Adult people only. Coupe and orange aperitif with apricots retain natural geometry.\nTypography: Barlow Condensed 500/600 expressive uppercase display; DM Sans 400/500 body and UI. Spaced SUNDROP small sunburst logo.\nPalette: Light apricot #F9D5B6, pale peach #FCE6CF, lemon #F4E9B6 and burgundy #742B2E ink. Sunny light colors with actual hue, not beige or white wash. Natural vivid orange drink.\nNavigation: Home · Shop packs · Apricot Aperitif · Our story · Serving guide · Bag (0). Active destination matches page.\nComposition and exact copy: A useful pack-selection page, not a campaign landing. Compact header, small breadcrumb Home / Shop packs, large left headline 'GOOD COMPANY. BY THE PACK.' with one quiet line 'Apricot Aperitif · 200 ml · 8% ALC/VOL'. Opening composition: on the left a large sharp still-life of four orange cans and their pale-apricot carton, on the right an airy vertical pack selector with radio rows '4 cans — $24' (selected), '8 cans — $44', '12 cans — $60'. Below selector: 'Quantity' with minus 1 plus; button 'Add to bag — $24'. Large unoccupied air around controls. Lower shared lemon ground: an oblique photograph of the 8-can arrangement at smaller scale with caption 'A few more to share.' then much wider adult gathering/table detail with small 'Chill. Pour. Settle in.' and link 'Read the serving guide →'. Complete concise footer. This is catalogue architecture, with pack choice primary. No subscription or delivery promises.\nFooter contents: SUNDROP; Home, Shop packs, Apricot Aperitif, Our story, Serving guide, Contact, Privacy, Terms, Instagram. 200 ml · 8% ALC/VOL.\nNo fake offers, claims, endorsements, addresses, awards, shipping promises or extra products. Full page ends cleanly, all footer text within margins. No added review labels.",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "0d5163f17bbd3fc84183618c5ec99f04be61071fe2a54d9aa96fde916e0a7043"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-bb8a9cb7-7c86-4f7d-9c69-427ffcaf8078.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/01-shop-packs-desktop.png",
+          "native_dimensions": [
+            1024,
+            1536
+          ],
+          "sha256": "a0b923eb9eb5b238a0c2b342089d73aa8cd173382f2d54201821eec5da223895",
+          "status": "superseded by desktop-v2 after can-count correction",
+          "visual_review_record": "01-shop-packs-assembly.json"
+        },
+        {
+          "mode": "built-in image_gen",
+          "intent": "generate from identity and layout references",
+          "prompt": "Use case: ui-mockup. Create the LOWER portion of one continuous MOBILE Sundrop website page: Shop packs. It will be proportionally joined into a long mobile page. Image1 is the approved identity/product reference. Image2 is this page's complete desktop content and art-direction reference. Image3 if present is its accepted upper portion for exact continuation. Reflow for an actual 390px wide phone, not a miniature desktop. Native portrait aspect 1:2.4, target900x2160 pixels, highest native detail. No device frame, browser, presentation margins or added labels. One column, 28–32 logical px side gutters, 16/24 body, headings32–42px, controls44–48px high. Put80–112 logical px between distinct sections and28–40px between image/caption/action. Content can breathe and page can scroll. No cards, no checkerboard bands, no ornamental borders. All products and typography fully visible and undistorted.\nIdentity: Orange slim can exact label SUNDROP / APRICOT APERITIF / 200 ml / 8% ALC/VOL. 4 cans $24, 8 cans $44, 12 cans $60. Alcoholic, never alcohol-free. Adult people only. Coupe and orange aperitif with apricots retain natural geometry.\nFonts: Barlow Condensed 500/600 expressive uppercase display; DM Sans 400/500 body and UI. Spaced SUNDROP small sunburst logo.\nPalette: Light apricot #F9D5B6, pale peach #FCE6CF, lemon #F4E9B6 and burgundy #742B2E ink. Sunny light colors with actual hue, not beige or white wash. Natural vivid orange drink.\nNO header, NO repeated page title, NO repeated upper content. The prior upper image supplies typography, palette and continuation scale.\nRender ONLY this assigned content in order:\nStart on empty lemon #F4E9B6. An unboxed large photograph of the exact 8 CANS labeled carton with ONE single orange sample can beside it, matching the supplied desktop. Do not make a cluster of loose cans. Caption 'A few more to share.' Allow wide space. Then a phone portrait table photograph with adults' hands and amber coupe drinks, orange cans and apricots. Below 'Chill. Pour. Settle in.' and 'Read the serving guide →'. End with a complete generously spaced mobile footer. No header, no repeated pack selector.\nComplete readable footer: SUNDROP; Home, Shop packs, Apricot Aperitif, Our story, Serving guide, Contact, Privacy, Terms, Instagram. 200 ml · 8% ALC/VOL. Keep generous space before and within the footer, all bottom content visible.\nBegin with empty flat #F4E9B6 ground if lower, matching upper ending. Preserve exact words, names, prices and units. No unsupported claims, offers, reviews, addresses or invented products. Mobile numbered guides are strictly VERTICAL, one full-width chapter after another. Design with abundant space and strong clean aligned margins. Entire output is one rectangular design image.",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "0d5163f17bbd3fc84183618c5ec99f04be61071fe2a54d9aa96fde916e0a7043"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/01-shop-packs-desktop-v2.png",
+              "order": 2,
+              "role": "same-page desktop art direction and content",
+              "sha256": "b15f4de17c542821347308a9c25b7e7d27d9294364f0eb0647574f5d462ec32e"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/01-shop-packs-upper.png",
+              "order": 3,
+              "role": "upper mobile continuation",
+              "sha256": "bf7a7a032784bf6ef3134ccc871873cde90403ef90a587152c565513aabfb757"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-766547b4-56a3-4cac-868a-a6d627232a5e.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/01-shop-packs-lower.png",
+          "native_dimensions": [
+            809,
+            1942
+          ],
+          "sha256": "b0c4157305e07d89a9f88d76d642aa118ee541c445b77e78cc7167136290b990",
+          "status": "accepted after visual review",
+          "visual_review_record": "01-shop-packs-assembly.json"
+        },
+        {
+          "mode": "built-in image_gen",
+          "intent": "generate from identity and layout references",
+          "prompt": "Use case: ui-mockup. Create the UPPER portion of one continuous MOBILE Sundrop website page: Shop packs. It will be proportionally joined into a long mobile page. Image1 is the approved identity/product reference. Image2 is this page's complete desktop content and art-direction reference. Image3 if present is its accepted upper portion for exact continuation. Reflow for an actual 390px wide phone, not a miniature desktop. Native portrait aspect 1:2.4, target900x2160 pixels, highest native detail. No device frame, browser, presentation margins or added labels. One column, 28–32 logical px side gutters, 16/24 body, headings32–42px, controls44–48px high. Put80–112 logical px between distinct sections and28–40px between image/caption/action. Content can breathe and page can scroll. No cards, no checkerboard bands, no ornamental borders. All products and typography fully visible and undistorted.\nIdentity: Orange slim can exact label SUNDROP / APRICOT APERITIF / 200 ml / 8% ALC/VOL. 4 cans $24, 8 cans $44, 12 cans $60. Alcoholic, never alcohol-free. Adult people only. Coupe and orange aperitif with apricots retain natural geometry.\nFonts: Barlow Condensed 500/600 expressive uppercase display; DM Sans 400/500 body and UI. Spaced SUNDROP small sunburst logo.\nPalette: Light apricot #F9D5B6, pale peach #FCE6CF, lemon #F4E9B6 and burgundy #742B2E ink. Sunny light colors with actual hue, not beige or white wash. Natural vivid orange drink.\nA compact Sundrop wordmark, Menu and Bag (0) only at the top.\nRender ONLY this assigned content in order:\nHeader SUNDROP, Menu, Bag (0). Breadcrumb Home / Shop packs. 'GOOD COMPANY. BY THE PACK.' and 'Apricot Aperitif · 200 ml · 8% ALC/VOL'. One wide phone-composed clear image of FOUR orange cans and pale-apricot carton. Below, generous vertical radio rows '4 cans — $24' selected, '8 cans — $44', '12 cans — $60', then Quantity minus 1 plus and full-width 'Add to bag — $24'. No lower editorial or footer. End on an empty lemon #F4E9B6 ground.\nNo footer. End with 50 logical px of empty flat #F4E9B6 ground.\nBegin with empty flat #F4E9B6 ground if lower, matching upper ending. Preserve exact words, names, prices and units. No unsupported claims, offers, reviews, addresses or invented products. Mobile numbered guides are strictly VERTICAL, one full-width chapter after another. Design with abundant space and strong clean aligned margins. Entire output is one rectangular design image.",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "0d5163f17bbd3fc84183618c5ec99f04be61071fe2a54d9aa96fde916e0a7043"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/01-shop-packs-desktop-v2.png",
+              "order": 2,
+              "role": "same-page desktop art direction and content",
+              "sha256": "b15f4de17c542821347308a9c25b7e7d27d9294364f0eb0647574f5d462ec32e"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-2d3fcb38-1411-4f92-9a28-90dcf20aa235.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/01-shop-packs-upper.png",
+          "native_dimensions": [
+            809,
+            1942
+          ],
+          "sha256": "bf7a7a032784bf6ef3134ccc871873cde90403ef90a587152c565513aabfb757",
+          "status": "accepted after visual review",
+          "visual_review_record": "01-shop-packs-assembly.json"
+        }
+      ]
+    },
+    {
+      "id": "02-apricot-aperitif",
+      "title": "Apricot Aperitif",
+      "type": "product detail",
+      "production_record": "output/core-pages-2026-10-25/sundrop/records/02-apricot-aperitif-assembly.json",
+      "qa": {
+        "desktop": "Inspected complete product page with correct can,200ml/8%ALC/VOL,4/$24 selected,8/$44,12/$60, quantity1/Add24, flavor macro, disclosures and footer.",
+        "mobile": "Both source parts and final inspected: actual single-column product selection flow, consistent state/price labels, wide lemon pause before flavor imagery, aligned disclosure endpoints and complete footer.",
+        "density": "806px final width supports2× at403 CSSpx. Lower proportionally downscaled from809; no upscale."
+      },
+      "status": "accepted after visual review",
+      "desktop": {
+        "path": "02-apricot-aperitif/desktop.png",
+        "repository_path": "images/website/core-pages-2026-10-25/sundrop/02-apricot-aperitif/desktop.png",
+        "width": 1024,
+        "height": 1536,
+        "sha256": "7316f8a9d2c5254a03b07a06f89572de20c799f6e482b0123e790a20152e6580",
+        "upscaled": false
+      },
+      "mobile": {
+        "path": "02-apricot-aperitif/mobile.png",
+        "repository_path": "images/website/core-pages-2026-10-25/sundrop/02-apricot-aperitif/mobile.png",
+        "width": 806,
+        "height": 3887,
+        "sha256": "713e9944dfa4e3f67acf29ade296962eec98b47b3c2a72a31e76f4a5e35cd37b",
+        "upscaled": false,
+        "max_css_width_at_2x": 403.0
+      },
+      "generation_provenance": [
+        {
+          "mode": "built-in image_gen",
+          "intent": "generate from identity and layout references",
+          "prompt": "Use case: ui-mockup. Create one complete original DESKTOP website page from header to full footer, as a high-end image-only editorial design. Portrait canvas width:height 2:3, target1536x2304 native pixels. This depicts a1440px-wide desktop page, with desktop columns and a clean12column grid, NOT a phone layout. Highest native clarity, sharp natural photography, no browser/device/presentation frame. Image1 is an identity/product/color reference, not a page template. Design a NEW secondary page. Use generous100px desktop side gutters, 120–180px vertical chapter spacing,40px between photo and next group. Body readable, short concise copy, consistent baselines. Air through spacing, variable image scale and fewer containers. No boxy cards, repeated50/50 stripes, heavy borders or giant repeated masthead. Exact productgeometry and factual labels matter. \nBrand: Sundrop. Orange slim can exact label SUNDROP / APRICOT APERITIF / 200 ml / 8% ALC/VOL. 4 cans $24, 8 cans $44, 12 cans $60. Alcoholic, never alcohol-free. Adult people only. Coupe and orange aperitif with apricots retain natural geometry.\nTypography: Barlow Condensed 500/600 expressive uppercase display; DM Sans 400/500 body and UI. Spaced SUNDROP small sunburst logo.\nPalette: Light apricot #F9D5B6, pale peach #FCE6CF, lemon #F4E9B6 and burgundy #742B2E ink. Sunny light colors with actual hue, not beige or white wash. Natural vivid orange drink.\nNavigation: Home · Shop packs · Apricot Aperitif · Our story · Serving guide · Bag (0). Active destination matches page.\nComposition and exact copy: Product evaluation first. Compact nav and Home / Shop packs / Apricot Aperitif breadcrumb. Tall single orange can with condensation dominates left two-thirds on light apricot shared ground, small inset macro of label underneath. Right purchase column begins 'APRICOT APERITIF', 'Apricot, bitter orange and a little sparkle.', '200 ml · 8% ALC/VOL', '4 cans · $24', swappable pack lines 4 cans24 selected /8cans44 /12cans60, Quantity minus1plus and 'Add to bag — $24'. Below a long pause: one large close-up of a coupe's amber surface and floating orange slice on lemon ground; quiet tasting words 'Apricot. Bitter orange. Gentle sparkle.' aligned alongside without cards. Separate small apricot still-life with visible fruit flesh. Finish with understated disclosure rows 'Ingredients +' and 'Serving +' and link 'How we pour →', then complete footer. No claim that actual ingredient list is supplied. No reviews or badges.\nFooter contents: SUNDROP; Home, Shop packs, Apricot Aperitif, Our story, Serving guide, Contact, Privacy, Terms, Instagram. 200 ml · 8% ALC/VOL.\nNo fake offers, claims, endorsements, addresses, awards, shipping promises or extra products. Full page ends cleanly, all footer text within margins. No added review labels.",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "0d5163f17bbd3fc84183618c5ec99f04be61071fe2a54d9aa96fde916e0a7043"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-b0d02d46-bce5-4395-b352-1e7cbf3ed09a.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/02-apricot-aperitif-desktop.png",
+          "native_dimensions": [
+            1024,
+            1536
+          ],
+          "sha256": "7316f8a9d2c5254a03b07a06f89572de20c799f6e482b0123e790a20152e6580",
+          "status": "accepted after visual review",
+          "visual_review_record": "02-apricot-aperitif-assembly.json"
+        },
+        {
+          "mode": "built-in image_gen",
+          "intent": "generate from identity and layout references",
+          "prompt": "Use case: ui-mockup. Create the LOWER portion of one continuous MOBILE Sundrop website page: Apricot Aperitif. It will be proportionally joined into a long mobile page. Image1 is the approved identity/product reference. Image2 is this page's complete desktop content and art-direction reference. Image3 if present is its accepted upper portion for exact continuation. Reflow for an actual 390px wide phone, not a miniature desktop. Native portrait aspect 1:2.4, target900x2160 pixels, highest native detail. No device frame, browser, presentation margins or added labels. One column, 28–32 logical px side gutters, 16/24 body, headings32–42px, controls44–48px high. Put80–112 logical px between distinct sections and28–40px between image/caption/action. Content can breathe and page can scroll. No cards, no checkerboard bands, no ornamental borders. All products and typography fully visible and undistorted.\nIdentity: Orange slim can exact label SUNDROP / APRICOT APERITIF / 200 ml / 8% ALC/VOL. 4 cans $24, 8 cans $44, 12 cans $60. Alcoholic, never alcohol-free. Adult people only. Coupe and orange aperitif with apricots retain natural geometry.\nFonts: Barlow Condensed 500/600 expressive uppercase display; DM Sans 400/500 body and UI. Spaced SUNDROP small sunburst logo.\nPalette: Light apricot #F9D5B6, pale peach #FCE6CF, lemon #F4E9B6 and burgundy #742B2E ink. Sunny light colors with actual hue, not beige or white wash. Natural vivid orange drink.\nNO header, NO repeated page title, NO repeated upper content. The prior upper image supplies typography, palette and continuation scale.\nRender ONLY this assigned content in order:\nLemon ground at top. One full-width intimate coupe surface photograph with amber liquid and orange slice. Long pause then heading 'Apricot. Bitter orange. Gentle sparkle.' Tiny concise text 'A slower sip for a brighter afternoon.' Separate apricot fruit still-life lower, with lots of space, not in a box. Then wide fine disclosure rows 'Ingredients +' and 'Serving +' with lines on the same 28px gutter; 'How we pour →'. Complete mobile footer, no second header or purchase block.\nComplete readable footer: SUNDROP; Home, Shop packs, Apricot Aperitif, Our story, Serving guide, Contact, Privacy, Terms, Instagram. 200 ml · 8% ALC/VOL. Keep generous space before and within the footer, all bottom content visible.\nBegin with empty flat #F4E9B6 ground if lower, matching upper ending. Preserve exact words, names, prices and units. No unsupported claims, offers, reviews, addresses or invented products. Mobile numbered guides are strictly VERTICAL, one full-width chapter after another. Design with abundant space and strong clean aligned margins. Entire output is one rectangular design image.",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "0d5163f17bbd3fc84183618c5ec99f04be61071fe2a54d9aa96fde916e0a7043"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/02-apricot-aperitif-desktop.png",
+              "order": 2,
+              "role": "same-page desktop art direction and content",
+              "sha256": "7316f8a9d2c5254a03b07a06f89572de20c799f6e482b0123e790a20152e6580"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/02-apricot-aperitif-upper.png",
+              "order": 3,
+              "role": "upper mobile continuation",
+              "sha256": "e8e3730cc4d15b6d30cbf7c0d9734b021221bdbfe2f987cd17c6573e3c8a519e"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-16124fbd-61ba-4ea2-9379-66ae8005755e.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/02-apricot-aperitif-lower.png",
+          "native_dimensions": [
+            809,
+            1942
+          ],
+          "sha256": "a1bf0477138bcd55914bad50d5ea675db0c8184199c5d8b8701197f1528e0378",
+          "status": "accepted after visual review",
+          "visual_review_record": "02-apricot-aperitif-assembly.json"
+        },
+        {
+          "mode": "built-in image_gen",
+          "intent": "generate from identity and layout references",
+          "prompt": "Use case: ui-mockup. Create the UPPER portion of one continuous MOBILE Sundrop website page: Apricot Aperitif. It will be proportionally joined into a long mobile page. Image1 is the approved identity/product reference. Image2 is this page's complete desktop content and art-direction reference. Image3 if present is its accepted upper portion for exact continuation. Reflow for an actual 390px wide phone, not a miniature desktop. Native portrait aspect 1:2.4, target900x2160 pixels, highest native detail. No device frame, browser, presentation margins or added labels. One column, 28–32 logical px side gutters, 16/24 body, headings32–42px, controls44–48px high. Put80–112 logical px between distinct sections and28–40px between image/caption/action. Content can breathe and page can scroll. No cards, no checkerboard bands, no ornamental borders. All products and typography fully visible and undistorted.\nIdentity: Orange slim can exact label SUNDROP / APRICOT APERITIF / 200 ml / 8% ALC/VOL. 4 cans $24, 8 cans $44, 12 cans $60. Alcoholic, never alcohol-free. Adult people only. Coupe and orange aperitif with apricots retain natural geometry.\nFonts: Barlow Condensed 500/600 expressive uppercase display; DM Sans 400/500 body and UI. Spaced SUNDROP small sunburst logo.\nPalette: Light apricot #F9D5B6, pale peach #FCE6CF, lemon #F4E9B6 and burgundy #742B2E ink. Sunny light colors with actual hue, not beige or white wash. Natural vivid orange drink.\nA compact Sundrop wordmark, Menu and Bag (0) only at the top.\nRender ONLY this assigned content in order:\nCompact SUNDROP Menu Bag(0), Home / Apricot Aperitif breadcrumb, 'APRICOT APERITIF'. One tall portrait of the orange can, complete can within generous pale-apricot area. Then short 'Apricot, bitter orange and a little sparkle.', '200 ml · 8% ALC/VOL'. Generous vertical pack rows 4 cans — $24 selected, 8 cans — $44, 12 cans — $60. Quantity minus1plus, full-width 'Add to bag — $24'. End on lemon ground. No footer.\nNo footer. End with 50 logical px of empty flat #F4E9B6 ground.\nBegin with empty flat #F4E9B6 ground if lower, matching upper ending. Preserve exact words, names, prices and units. No unsupported claims, offers, reviews, addresses or invented products. Mobile numbered guides are strictly VERTICAL, one full-width chapter after another. Design with abundant space and strong clean aligned margins. Entire output is one rectangular design image.",
+          "inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/inputs/homepage-identity.png",
+              "order": 1,
+              "role": "brand and product identity",
+              "sha256": "0d5163f17bbd3fc84183618c5ec99f04be61071fe2a54d9aa96fde916e0a7043"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/02-apricot-aperitif-desktop.png",
+              "order": 2,
+              "role": "same-page desktop art direction and content",
+              "sha256": "7316f8a9d2c5254a03b07a06f89572de20c799f6e482b0123e790a20152e6580"
+            }
+          ],
+          "original_output": "/Users/jasonfesta/.codex/generated_images/01a1738f-dd3c-77c3-bedf-dde34b03d7e5/exec-7ffa8587-312f-4959-8493-8dd5889d65b1.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/02-apricot-aperitif-upper.png",
+          "native_dimensions": [
+            806,
+            1952
+          ],
+          "sha256": "e8e3730cc4d15b6d30cbf7c0d9734b021221bdbfe2f987cd17c6573e3c8a519e",
+          "status": "accepted after visual review",
+          "visual_review_record": "02-apricot-aperitif-assembly.json"
+        }
+      ]
+    },
+    {
+      "id": "03-serving-guide",
+      "title": "Serving guide",
+      "type": "vertical serving instructions",
+      "production_record": "output/core-pages-2026-10-25/sundrop/records/03-serving-guide-assembly.json",
+      "qa": {
+        "desktop": "Root generated and visually inspected; explicitly approved in agent report.",
+        "mobile": "Root inspected both native mobile parts and joined continuous image; vertical01Chill/02Pour/03Settlein and full footer approved in agent report.",
+        "reviewer": "root",
+        "density": "809px final width; no upscale; native parts809×1944 and812×1937."
+      },
+      "status": "accepted after visual review",
+      "desktop": {
+        "path": "03-serving-guide/desktop.png",
+        "repository_path": "images/website/core-pages-2026-10-25/sundrop/03-serving-guide/desktop.png",
+        "width": 1024,
+        "height": 1536,
+        "sha256": "81aa2381aa68bae8956dd862dabf1a0ec354c3003dbd531a0c384e84618d0149",
+        "upscaled": false
+      },
+      "mobile": {
+        "path": "03-serving-guide/mobile.png",
+        "repository_path": "images/website/core-pages-2026-10-25/sundrop/03-serving-guide/mobile.png",
+        "width": 809,
+        "height": 3874,
+        "sha256": "0619fd83df9b8c9ad238d30a5fe9af37ca19ba6d9742ca26be795c0ac4fa1fcf",
+        "upscaled": false,
+        "max_css_width_at_2x": 404.5
+      },
+      "generation_provenance": [
+        {
+          "page": "03-serving-guide",
+          "site": "sundrop",
+          "part": "desktop",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create one complete original DESKTOP website page from header to full footer, as a high-end image-only editorial design. Portrait canvas width:height 2:3, target1536x2304 native pixels. This depicts a1440px-wide desktop page, with desktop columns and a clean12column grid, NOT a phone layout. Highest native clarity, sharp natural photography, no browser/device/presentation frame. Image1 is an identity/product/color reference, not a page template. Design a NEW secondary page. Use generous100px desktop side gutters, 120–180px vertical chapter spacing,40px between photo and next group. Body readable, short concise copy, consistent baselines. Air through spacing, variable image scale and fewer containers. No boxy cards, repeated50/50 stripes, heavy borders or giant repeated masthead. Exact productgeometry and factual labels matter. \nBrand: Sundrop. Orange slim can exact label SUNDROP / APRICOT APERITIF / 200 ml / 8% ALC/VOL. 4 cans $24, 8 cans $44, 12 cans $60. Alcoholic, never alcohol-free. Adult people only. Coupe and orange aperitif with apricots retain natural geometry.\nTypography: Barlow Condensed 500/600 expressive uppercase display; DM Sans 400/500 body and UI. Spaced SUNDROP small sunburst logo.\nPalette: Light apricot #F9D5B6, pale peach #FCE6CF, lemon #F4E9B6 and burgundy #742B2E ink. Sunny light colors with actual hue, not beige or white wash. Natural vivid orange drink.\nNavigation: Home · Shop packs · Apricot Aperitif · Our story · Serving guide · Bag (0). Active destination matches page.\nComposition and exact copy: A spare editorial serving guide. Compact header and 'HOW WE POUR', enormous but brief title 'CHILL. POUR. SETTLE IN.' on light lemon, tiny 'Apricot Aperitif · 200 ml · 8% ALC/VOL'. First instruction 01 CHILL occupies left content column with a large photograph of orange can standing in clear ice and short 'Start with a well-chilled can.' Right of this is intentionally empty lemon space, plus a small frosted-can close-up. Second instruction 02 POUR is a wider landscape photograph of hand tipping original can into a clear glass over ice, with 'Pour over ice in your favorite glass.' below. Third 03 SETTLE IN is a shorter adult tabletop gathering photograph with 'Take your time. Enjoy the company.' outside image. This is an asymmetric photographic instruction essay, not three boxed cards. Far apart chapters, complete footer, 'Find your pack →'.\nFooter contents: SUNDROP; Home, Shop packs, Apricot Aperitif, Our story, Serving guide, Contact, Privacy, Terms, Instagram. 200 ml · 8% ALC/VOL.\nNo fake offers, claims, endorsements, addresses, awards, shipping promises or extra products. Full page ends cleanly, all footer text within margins. No added review labels.\nFinal art-direction emphasis: leave genuinely EMPTY light-color space. At an approximately 1024px wide desktop image, show 80–120px visible empty-color pauses between the photographic chapters. Inset images, captions and divider endpoints share the same gutters; do not turn everything into packed photographic panels. Keep every supplied fact and label exact. Do not add undocumented colors, product variants or prices. No badges or annotations. The output is artwork only.\n",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/inputs/root-page03-identity.png",
+              "role": "approved brand and photographic identity only; not a layout template",
+              "sha256": "0d5163f17bbd3fc84183618c5ec99f04be61071fe2a54d9aa96fde916e0a7043"
+            }
+          ],
+          "status": "accepted after visual review",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a16fe8-d258-74b1-8527-c3d7cdc594fe/exec-e9de6739-e0c9-428a-b6b5-24add0b81a8b.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/03-serving-guide-desktop-root.png",
+          "native_width": 1024,
+          "native_height": 1536,
+          "sha256": "81aa2381aa68bae8956dd862dabf1a0ec354c3003dbd531a0c384e84618d0149",
+          "visual_review_record": "03-serving-guide-assembly.json"
+        },
+        {
+          "page": "03-serving-guide",
+          "site": "sundrop",
+          "part": "lower",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create the LOWER portion of one continuous MOBILE Sundrop website page: Serving guide. It will be proportionally joined into a long mobile page. Image1 is the approved identity/product reference. Image2 is this page's complete desktop content and art-direction reference. Image3 if present is its accepted upper portion for exact continuation. Reflow for an actual 390px wide phone, not a miniature desktop. Native portrait aspect 1:2.4, target900x2160 pixels, highest native detail. No device frame, browser, presentation margins or added labels. One column, 28–32 logical px side gutters, 16/24 body, headings32–42px, controls44–48px high. Put80–112 logical px between distinct sections and28–40px between image/caption/action. Content can breathe and page can scroll. No cards, no checkerboard bands, no ornamental borders. All products and typography fully visible and undistorted.\nIdentity: Orange slim can exact label SUNDROP / APRICOT APERITIF / 200 ml / 8% ALC/VOL. 4 cans $24, 8 cans $44, 12 cans $60. Alcoholic, never alcohol-free. Adult people only. Coupe and orange aperitif with apricots retain natural geometry.\nFonts: Barlow Condensed 500/600 expressive uppercase display; DM Sans 400/500 body and UI. Spaced SUNDROP small sunburst logo.\nPalette: Light apricot #F9D5B6, pale peach #FCE6CF, lemon #F4E9B6 and burgundy #742B2E ink. Sunny light colors with actual hue, not beige or white wash. Natural vivid orange drink.\nNO header, NO repeated page title, NO repeated upper content. The prior upper image supplies typography, palette and continuation scale.\nRender ONLY this assigned content in order:\nEmpty lemon ground at top, then '03 SETTLE IN', generous photo of adult hands at a sunlit table with apricots, orange can and coupe glasses, caption 'Take your time. Enjoy the company.' A long quiet pause, a smaller unboxed can-and-glass still-life, and 'Your next afternoon, sorted.' with 'Find your pack →'. All content one vertical column, no repeated steps 01 or02. Complete airy mobile footer, no new top header.\nComplete readable footer: SUNDROP; Home, Shop packs, Apricot Aperitif, Our story, Serving guide, Contact, Privacy, Terms, Instagram. 200 ml · 8% ALC/VOL. Keep generous space before and within the footer, all bottom content visible.\nBegin with empty flat #F4E9B6 ground if lower, matching upper ending. Preserve exact words, names, prices and units. No unsupported claims, offers, reviews, addresses or invented products. Mobile numbered guides are strictly VERTICAL, one full-width chapter after another. Design with abundant space and strong clean aligned margins. Entire output is one rectangular design image.\nFinal art-direction emphasis: leave genuinely EMPTY light-color space. At an approximately 1024px wide desktop image, show 80–120px visible empty-color pauses between the photographic chapters. Inset images, captions and divider endpoints share the same gutters; do not turn everything into packed photographic panels. Keep every supplied fact and label exact. Do not add undocumented colors, product variants or prices. No badges or annotations. The output is artwork only.\nMobile has only one reading column; labels and captions must be below their associated photographs. Never squeeze step numbers 01, 02, 03 into a row. Preserve large readable typography, spacious touch actions and generous vertical pauses. This part will be joined with another; do not compress it to fit a whole page.\n",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/inputs/root-page03-identity.png",
+              "role": "approved brand and photographic identity only; not a layout template",
+              "sha256": "0d5163f17bbd3fc84183618c5ec99f04be61071fe2a54d9aa96fde916e0a7043"
+            }
+          ],
+          "status": "accepted after visual review",
+          "references": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/inputs/root-page03-identity.png",
+              "role": "approved homepage identity",
+              "sha256": "0d5163f17bbd3fc84183618c5ec99f04be61071fe2a54d9aa96fde916e0a7043"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/03-serving-guide-desktop-root.png",
+              "role": "desktop content reference",
+              "sha256": "81aa2381aa68bae8956dd862dabf1a0ec354c3003dbd531a0c384e84618d0149"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/03-serving-guide-upper-root.png",
+              "role": "mobile upper continuation",
+              "sha256": "1e3587edf0ab3812e830c89f8e56708d23dfed3025168323b20e6717cf0381b0"
+            }
+          ],
+          "original": "/Users/jasonfesta/.codex/generated_images/01a16fe8-d258-74b1-8527-c3d7cdc594fe/exec-481a8a5e-b9cc-4e3c-8d4d-7d770b3807e1.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/03-serving-guide-lower-root.png",
+          "native_width": 812,
+          "native_height": 1937,
+          "sha256": "5100edffbf687f7d38dc5a697ad7cf299c0da8cc106f9699fbeb7e9a79d1504d",
+          "visual_review_record": "03-serving-guide-assembly.json"
+        },
+        {
+          "page": "03-serving-guide",
+          "site": "sundrop",
+          "part": "upper",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create the UPPER portion of one continuous MOBILE Sundrop website page: Serving guide. It will be proportionally joined into a long mobile page. Image1 is the approved identity/product reference. Image2 is this page's complete desktop content and art-direction reference. Image3 if present is its accepted upper portion for exact continuation. Reflow for an actual 390px wide phone, not a miniature desktop. Native portrait aspect 1:2.4, target900x2160 pixels, highest native detail. No device frame, browser, presentation margins or added labels. One column, 28–32 logical px side gutters, 16/24 body, headings32–42px, controls44–48px high. Put80–112 logical px between distinct sections and28–40px between image/caption/action. Content can breathe and page can scroll. No cards, no checkerboard bands, no ornamental borders. All products and typography fully visible and undistorted.\nIdentity: Orange slim can exact label SUNDROP / APRICOT APERITIF / 200 ml / 8% ALC/VOL. 4 cans $24, 8 cans $44, 12 cans $60. Alcoholic, never alcohol-free. Adult people only. Coupe and orange aperitif with apricots retain natural geometry.\nFonts: Barlow Condensed 500/600 expressive uppercase display; DM Sans 400/500 body and UI. Spaced SUNDROP small sunburst logo.\nPalette: Light apricot #F9D5B6, pale peach #FCE6CF, lemon #F4E9B6 and burgundy #742B2E ink. Sunny light colors with actual hue, not beige or white wash. Natural vivid orange drink.\nA compact Sundrop wordmark, Menu and Bag (0) only at the top.\nRender ONLY this assigned content in order:\nCompact SUNDROP, Menu, Bag (0). Small 'HOW WE POUR', headline 'CHILL. POUR. SETTLE IN.' and '200 ml · 8% ALC/VOL'. Then step '01 CHILL' in its own full-width vertical chapter: large sharp photograph of one orange can in clear ice, caption 'Start with a well-chilled can.' Wide generous separation. Then start next chapter with only '02 POUR' and one large photo of hand tipping the orange can into a glass over ice; its caption 'Pour over ice in your favorite glass.' below. Both steps must stack VERTICALLY, photos full width within 28px gutters. No side-by-side text/image strips. End empty lemon ground, no footer.\nNo footer. End with 50 logical px of empty flat #F4E9B6 ground.\nBegin with empty flat #F4E9B6 ground if lower, matching upper ending. Preserve exact words, names, prices and units. No unsupported claims, offers, reviews, addresses or invented products. Mobile numbered guides are strictly VERTICAL, one full-width chapter after another. Design with abundant space and strong clean aligned margins. Entire output is one rectangular design image.\nFinal art-direction emphasis: leave genuinely EMPTY light-color space. At an approximately 1024px wide desktop image, show 80–120px visible empty-color pauses between the photographic chapters. Inset images, captions and divider endpoints share the same gutters; do not turn everything into packed photographic panels. Keep every supplied fact and label exact. Do not add undocumented colors, product variants or prices. No badges or annotations. The output is artwork only.\nMobile has only one reading column; labels and captions must be below their associated photographs. Never squeeze step numbers 01, 02, 03 into a row. Preserve large readable typography, spacious touch actions and generous vertical pauses. This part will be joined with another; do not compress it to fit a whole page.\n\nImage 2 is the completed desktop content reference. Preserve its identity and exact product geometry while reflowing into the specified one-column mobile.",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/inputs/root-page03-identity.png",
+              "role": "approved brand and photographic identity only; not a layout template",
+              "sha256": "0d5163f17bbd3fc84183618c5ec99f04be61071fe2a54d9aa96fde916e0a7043"
+            }
+          ],
+          "status": "accepted after visual review",
+          "references": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/inputs/root-page03-identity.png",
+              "role": "approved homepage identity",
+              "sha256": "0d5163f17bbd3fc84183618c5ec99f04be61071fe2a54d9aa96fde916e0a7043"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/03-serving-guide-desktop-root.png",
+              "role": "desktop content reference",
+              "sha256": "81aa2381aa68bae8956dd862dabf1a0ec354c3003dbd531a0c384e84618d0149"
+            }
+          ],
+          "original": "/Users/jasonfesta/.codex/generated_images/01a16fe8-d258-74b1-8527-c3d7cdc594fe/exec-da5df4f0-f87c-4f37-99da-cc8c72b52e0a.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/sundrop/sources/03-serving-guide-upper-root.png",
+          "native_width": 809,
+          "native_height": 1944,
+          "sha256": "1e3587edf0ab3812e830c89f8e56708d23dfed3025168323b20e6717cf0381b0",
+          "visual_review_record": "03-serving-guide-assembly.json"
+        }
+      ]
+    }
+  ],
+  "final_collection_review": {
+    "01-shop-packs": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Correct4/8/12 can prices, consistent selected4-can purchase, mobile stacked and complete footer.",
+      "hashes": {
+        "desktop": "b15f4de17c542821347308a9c25b7e7d27d9294364f0eb0647574f5d462ec32e",
+        "mobile": "3e1c95c11f6e5381697e85458d0e13c401c9f2ef50ddb9d2be755d6beb7d5816"
+      }
+    },
+    "03-serving-guide": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Chill/Pour/Settle in explicitly vertical mobile, label200ml8% correct, complete desktop and footer.",
+      "hashes": {
+        "desktop": "81aa2381aa68bae8956dd862dabf1a0ec354c3003dbd531a0c384e84618d0149",
+        "mobile": "0619fd83df9b8c9ad238d30a5fe9af37ca19ba6d9742ca26be795c0ac4fa1fcf"
+      }
+    },
+    "02-apricot-aperitif": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Exact volume/ABV and4/8/12packprices; wide mobile controls, readable taste chapter and aligned disclosures.",
+      "hashes": {
+        "desktop": "7316f8a9d2c5254a03b07a06f89572de20c799f6e482b0123e790a20152e6580",
+        "mobile": "713e9944dfa4e3f67acf29ade296962eec98b47b3c2a72a31e76f4a5e35cd37b"
+      }
+    }
+  }
+}

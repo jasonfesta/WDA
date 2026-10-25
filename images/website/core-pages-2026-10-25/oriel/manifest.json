@@ -1,0 +1,672 @@
+{
+  "schema_version": 1,
+  "site": "oriel",
+  "name": "Oriel",
+  "batch": "core-pages-2026-10-25",
+  "deliverable": "Three new core pages, desktop and continuous mobile; six raster mockups; no webpage implementation",
+  "status": "complete images; root review in progress",
+  "approved_homepage_reference": "/Users/jasonfesta/Documents/ChatGPT/wda/images/website/final-2026-10-24/oriel/desktop.png",
+  "selected_homepage_option": "existing approved direction",
+  "design": {
+    "font": "Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.",
+    "color": "Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.",
+    "identity": "Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size."
+  },
+  "native_resolution_note": "Native generated desktop sizes are approximately1024px wide. Mobile finals preserve approximately2x pixel density at390 logicalpx. No artificial enlargement; exact dimensions and proportional assembly recorded. These are image mockups, not tested functional responsive websites.",
+  "pages": [
+    {
+      "id": "01-project-index",
+      "title": "Project index",
+      "page_type": "catalogue",
+      "files": {
+        "desktop": {
+          "path": "images/website/core-pages-2026-10-25/oriel/01-project-index/desktop.png",
+          "width": 971,
+          "height": 1619,
+          "sha256": "88be599383aeda99cc13524b80231cfb16401679833a8a6791d77545f4aeb4c8",
+          "bytes": 1943925,
+          "upsampled": false
+        },
+        "mobile": {
+          "path": "images/website/core-pages-2026-10-25/oriel/01-project-index/mobile.png",
+          "width": 814,
+          "height": 3648,
+          "sha256": "d5dbe467fcb578daa0fc7d23c5a2624d9740cbef1afe4679c39a5cf3dfd7a50f",
+          "bytes": 3095503,
+          "upsampled": false
+        }
+      },
+      "generations": {
+        "desktop": {
+          "site": "oriel",
+          "page": "01-project-index",
+          "part": "desktop",
+          "prompt": "Use case: ui-mockup. Edit Image1, this complete Oriel project-index DESKTOP image. Keep its exact brand, three named projects, architectural imagery, colors, all copy/actions and hierarchy. Correct only spacing and the grid: expand canvas height as needed so all three photographs' left/right edges and their captions sit on the SAME 7% side gutters as the header and title. Give the lead image 100 logicalpx of open ochre above and below. Put at least140logicalpx of airy empty ochre between the leadphoto caption and the lower unequal two-photo row. The two lower photos share their top baseline and have a48px logical centralgutter; captions align exactly leftbelow each photo with24px gap. There must be large open ochre pauses before closing invitation and footer. Keep text modest, photos natural, no stretch, no huge wordmark, no new boxes. Keep full completefooter PrivacyTerms. Higher native clarity, 1536x2560 target, tall desktop1440logicalpxwide layout, not mobile. Preserve lightwarmochre andapricot andoriginalpictures. Do not omit projects or add unrelatedcontent. Image1 is edit target. NO beige wash.",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/01-project-index-desktop.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/01-project-index-desktop-v1.png"
+          ],
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-5521fcc6-1bc7-438e-bcce-b4dded848b83.png",
+          "native_dimensions": [
+            971,
+            1619
+          ],
+          "sha256": "88be599383aeda99cc13524b80231cfb16401679833a8a6791d77545f4aeb4c8",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/01-project-index-desktop-v1.png",
+              "role": "edit target",
+              "sha256": "652165e065803752c3c51a8046e5dfe51a59c9c7d8cdce1f6c1e73ffcf17f3bd"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/oriel/records/01-project-index-desktop.json",
+          "exact_prompt": "Use case: ui-mockup. Edit Image1, this complete Oriel project-index DESKTOP image. Keep its exact brand, three named projects, architectural imagery, colors, all copy/actions and hierarchy. Correct only spacing and the grid: expand canvas height as needed so all three photographs' left/right edges and their captions sit on the SAME 7% side gutters as the header and title. Give the lead image 100 logicalpx of open ochre above and below. Put at least140logicalpx of airy empty ochre between the leadphoto caption and the lower unequal two-photo row. The two lower photos share their top baseline and have a48px logical centralgutter; captions align exactly leftbelow each photo with24px gap. There must be large open ochre pauses before closing invitation and footer. Keep text modest, photos natural, no stretch, no huge wordmark, no new boxes. Keep full completefooter PrivacyTerms. Higher native clarity, 1536x2560 target, tall desktop1440logicalpxwide layout, not mobile. Preserve lightwarmochre andapricot andoriginalpictures. Do not omit projects or add unrelatedcontent. Image1 is edit target. NO beige wash.",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/01-project-index-desktop-v1.png",
+              "role": "edit target",
+              "sha256": "652165e065803752c3c51a8046e5dfe51a59c9c7d8cdce1f6c1e73ffcf17f3bd",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/oriel/inputs/archived/652165e065803752c3c51a8046e5dfe51a59c9c7d8cdce1f6c1e73ffcf17f3bd.png"
+            }
+          ]
+        },
+        "upper": {
+          "site": "oriel",
+          "page": "01-project-index",
+          "part": "upper",
+          "prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: Compact header oriel, Menu. Modest title 'Selected places.' Filter row 'All' selected, 'Culture', 'Living'. Three VERTICAL textindexrows '01 Willow Hall', 'Culture & community'; '02 River Rooms', 'Living'; '03 Foundry Commons', 'Gathering'. Only one aligned divider ifuseful. Longpause then a full-width tallphoto of WillowHall ovalclayopening with caption '01 — Willow Hall'. Endemptyochreground.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/01-project-index-upper.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-ba1e0c02-d6b7-44c5-a25a-52c6a91bb8c4.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/01-project-index-desktop.png"
+          ],
+          "native_dimensions": [
+            864,
+            1821
+          ],
+          "sha256": "d2ad3b39fedf009467fb43f0832651e7d675827c65b2df2df77330d20b2d9f47",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/01-project-index-desktop.png",
+              "role": "desktop content and identity reference",
+              "sha256": "88be599383aeda99cc13524b80231cfb16401679833a8a6791d77545f4aeb4c8"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/oriel/records/01-project-index-upper.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: Compact header oriel, Menu. Modest title 'Selected places.' Filter row 'All' selected, 'Culture', 'Living'. Three VERTICAL textindexrows '01 Willow Hall', 'Culture & community'; '02 River Rooms', 'Living'; '03 Foundry Commons', 'Gathering'. Only one aligned divider ifuseful. Longpause then a full-width tallphoto of WillowHall ovalclayopening with caption '01 — Willow Hall'. Endemptyochreground.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/oriel/inputs/archived/64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0.png"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/01-project-index-desktop.png",
+              "role": "desktop content and identity reference",
+              "sha256": "88be599383aeda99cc13524b80231cfb16401679833a8a6791d77545f4aeb4c8",
+              "order": 2,
+              "immutable_input_copy": "output/core-pages-2026-10-25/oriel/inputs/archived/88be599383aeda99cc13524b80231cfb16401679833a8a6791d77545f4aeb4c8.png"
+            }
+          ]
+        },
+        "lower": {
+          "site": "oriel",
+          "page": "01-project-index",
+          "part": "lower",
+          "prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptyochre. Full-widthphotograph of RiverRooms wood-and-linenbedroom lookingtowater;caption '02 — River Rooms' and 'Living'. 96pxgap. Full-widthwidephotoofFoundryCommons openoakgatheringhall;caption '03 — Foundry Commons' and 'Gathering'. Longpause then 'Have a place in mind?' / 'Start a conversation ↗'. Fullfooter. Noheaderorindexrepeat.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/01-project-index-lower.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-2cf9ebc7-dde2-423a-ae5b-14f537462dbd.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/01-project-index-upper.png"
+          ],
+          "native_dimensions": [
+            814,
+            1932
+          ],
+          "sha256": "1b4ed6b5298e96b22e503528768e5150bd211d1e7b9b980b85f85af4e40b8244",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/01-project-index-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "d2ad3b39fedf009467fb43f0832651e7d675827c65b2df2df77330d20b2d9f47"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/oriel/records/01-project-index-lower.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptyochre. Full-widthphotograph of RiverRooms wood-and-linenbedroom lookingtowater;caption '02 — River Rooms' and 'Living'. 96pxgap. Full-widthwidephotoofFoundryCommons openoakgatheringhall;caption '03 — Foundry Commons' and 'Gathering'. Longpause then 'Have a place in mind?' / 'Start a conversation ↗'. Fullfooter. Noheaderorindexrepeat.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/oriel/inputs/archived/64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0.png"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/01-project-index-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "d2ad3b39fedf009467fb43f0832651e7d675827c65b2df2df77330d20b2d9f47",
+              "order": 2,
+              "immutable_input_copy": "output/core-pages-2026-10-25/oriel/inputs/archived/d2ad3b39fedf009467fb43f0832651e7d675827c65b2df2df77330d20b2d9f47.png"
+            }
+          ]
+        }
+      },
+      "mobile_assembly": {
+        "site": "oriel",
+        "page": "01-project-index",
+        "method": "Proportional downscale of each mobile part to minimum native width, then edge-to-edge vertical concatenation; no crop, warp or upscale.",
+        "source_dimensions": [
+          [
+            864,
+            1821
+          ],
+          [
+            814,
+            1932
+          ]
+        ],
+        "scales": [
+          0.9421296296296297,
+          1.0
+        ],
+        "final_mobile_dimensions": [
+          814,
+          3648
+        ],
+        "source_sha256": {
+          "desktop": "88be599383aeda99cc13524b80231cfb16401679833a8a6791d77545f4aeb4c8",
+          "upper": "d2ad3b39fedf009467fb43f0832651e7d675827c65b2df2df77330d20b2d9f47",
+          "lower": "1b4ed6b5298e96b22e503528768e5150bd211d1e7b9b980b85f85af4e40b8244"
+        },
+        "visual_qa": "pending full-page inspection"
+      },
+      "qa": {
+        "status": "root reviewed; accepted for image-only handoff",
+        "checks": [
+          "Header and footer present; no clipping",
+          "Desktop and mobile share brand, palette, content and imagery",
+          "Mobile is one continuous vertical image, not a scaled desktop",
+          "Image captions and semantic order checked",
+          "Forms remain blank and request-only where applicable",
+          "No invented addresses, hours, prices or confirmed transactions"
+        ],
+        "notes": [
+          "Desktop photo chapter gaps enlarged; purposeful photo rail accepted by root visual review."
+        ]
+      }
+    },
+    {
+      "id": "02-willow-hall",
+      "title": "Willow Hall",
+      "page_type": "project",
+      "files": {
+        "desktop": {
+          "path": "images/website/core-pages-2026-10-25/oriel/02-willow-hall/desktop.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "c2fbf54236fa010d5505547b4c417b11f1164b842b5434846b56bb01f52a2a60",
+          "bytes": 2154657,
+          "upsampled": false
+        },
+        "mobile": {
+          "path": "images/website/core-pages-2026-10-25/oriel/02-willow-hall/mobile.png",
+          "width": 801,
+          "height": 3885,
+          "sha256": "0506198cce561f7dc7301d354e92869476f4e80f3e25692937d834c05e0179d5",
+          "bytes": 3651595,
+          "upsampled": false
+        }
+      },
+      "generations": {
+        "desktop": {
+          "site": "oriel",
+          "page": "02-willow-hall",
+          "part": "desktop",
+          "prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact lowercase oriel left, Projects, Approach, Start a project right. Selected page clear; never giant homepagewordmark.\nPAGE: A cinematic architectural project dossier. Smallheader, title 'Willow Hall', subtitle 'A former foundry, opened to community.' Entire first photographic chapter is a full-width landscape interior of the immense oval terracottaopening, oak diningtable and brasslights, framingthecourtyard; no title overphoto. Tinycaption 'Culture & community'. Largegap then a quiet two-column readingcomposition: shortleftparagraph 'Clay, oak and brass bring a softer rhythm to a place built for making.' and a muchlargerphoto right ofthe communal oak table underbrasslights, withnopeople. Next a smaller 35%width illustrative floor-plan diagram (caption 'Spatial study') offsetunderleftcolumn alongside oneclosematerialphotoofclay+oak+brass onright. Lotsunoccupiedapricotspacearoundthisspread. Caption 'Matter. Light. Belonging.' Quietending 'Next: River Rooms ↗' and 'Start a conversation ↗'. Completefooter. No measuredplan claims or inventedprojectfacts.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer.",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/02-willow-hall-desktop.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-7b7e9374-eb53-4f15-999e-7fc651539a63.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png"
+          ],
+          "native_dimensions": [
+            1024,
+            1536
+          ],
+          "sha256": "c2fbf54236fa010d5505547b4c417b11f1164b842b5434846b56bb01f52a2a60",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/oriel/records/02-willow-hall-desktop.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact lowercase oriel left, Projects, Approach, Start a project right. Selected page clear; never giant homepagewordmark.\nPAGE: A cinematic architectural project dossier. Smallheader, title 'Willow Hall', subtitle 'A former foundry, opened to community.' Entire first photographic chapter is a full-width landscape interior of the immense oval terracottaopening, oak diningtable and brasslights, framingthecourtyard; no title overphoto. Tinycaption 'Culture & community'. Largegap then a quiet two-column readingcomposition: shortleftparagraph 'Clay, oak and brass bring a softer rhythm to a place built for making.' and a muchlargerphoto right ofthe communal oak table underbrasslights, withnopeople. Next a smaller 35%width illustrative floor-plan diagram (caption 'Spatial study') offsetunderleftcolumn alongside oneclosematerialphotoofclay+oak+brass onright. Lotsunoccupiedapricotspacearoundthisspread. Caption 'Matter. Light. Belonging.' Quietending 'Next: River Rooms ↗' and 'Start a conversation ↗'. Completefooter. No measuredplan claims or inventedprojectfacts.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer.",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/oriel/inputs/archived/64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0.png"
+            }
+          ]
+        },
+        "upper": {
+          "site": "oriel",
+          "page": "02-willow-hall",
+          "part": "upper",
+          "prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: CompactheaderorielandMenu. 'Willow Hall' title, subtitle 'A former foundry, opened to community.' Full-widthverticalphotoofovalterracottaopening,oaktableandbrasslights framedcourtyard. Tinycaption 'Culture & community'. Longpause thenparagraph 'Clay, oak and brass bring a softer rhythm to a place built for making.' Endquietochreground.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/02-willow-hall-upper.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-3d47ee00-51f1-4d7c-a302-8aab71aef81b.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/02-willow-hall-desktop.png"
+          ],
+          "native_dimensions": [
+            809,
+            1942
+          ],
+          "sha256": "eb3038e4aa475f879816103d735fa22abc4b4a4b50ba90033e10e10d09c7b8d4",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/02-willow-hall-desktop.png",
+              "role": "desktop content and identity reference",
+              "sha256": "c2fbf54236fa010d5505547b4c417b11f1164b842b5434846b56bb01f52a2a60"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/oriel/records/02-willow-hall-upper.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: CompactheaderorielandMenu. 'Willow Hall' title, subtitle 'A former foundry, opened to community.' Full-widthverticalphotoofovalterracottaopening,oaktableandbrasslights framedcourtyard. Tinycaption 'Culture & community'. Longpause thenparagraph 'Clay, oak and brass bring a softer rhythm to a place built for making.' Endquietochreground.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/oriel/inputs/archived/64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0.png"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/02-willow-hall-desktop.png",
+              "role": "desktop content and identity reference",
+              "sha256": "c2fbf54236fa010d5505547b4c417b11f1164b842b5434846b56bb01f52a2a60",
+              "order": 2,
+              "immutable_input_copy": "output/core-pages-2026-10-25/oriel/inputs/archived/c2fbf54236fa010d5505547b4c417b11f1164b842b5434846b56bb01f52a2a60.png"
+            }
+          ]
+        },
+        "lower": {
+          "site": "oriel",
+          "page": "02-willow-hall",
+          "part": "lower",
+          "prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptyochre. Full-width communal oak tablephoto underbrasslights, nopeople. Longpause then a small illustrative floor-plan drawing at70%contentwidth, caption 'Spatial study'. Below at a separate interval a full-width close material photograph ofclay+oak+brass, caption 'Matter. Light. Belonging.' Longpause then 'Next: River Rooms ↗' and 'Start a conversation ↗', completefooter. Norepeatedheader/title.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/02-willow-hall-lower.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-948dfc06-0cea-46ad-b78e-cf3ccfa3804a.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/02-willow-hall-upper.png"
+          ],
+          "native_dimensions": [
+            801,
+            1962
+          ],
+          "sha256": "57ab2be63dee36b38f14c99db550587ff49d0ade4fc8655136f55528bea82555",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/02-willow-hall-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "eb3038e4aa475f879816103d735fa22abc4b4a4b50ba90033e10e10d09c7b8d4"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/oriel/records/02-willow-hall-lower.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptyochre. Full-width communal oak tablephoto underbrasslights, nopeople. Longpause then a small illustrative floor-plan drawing at70%contentwidth, caption 'Spatial study'. Below at a separate interval a full-width close material photograph ofclay+oak+brass, caption 'Matter. Light. Belonging.' Longpause then 'Next: River Rooms ↗' and 'Start a conversation ↗', completefooter. Norepeatedheader/title.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/oriel/inputs/archived/64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0.png"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/02-willow-hall-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "eb3038e4aa475f879816103d735fa22abc4b4a4b50ba90033e10e10d09c7b8d4",
+              "order": 2,
+              "immutable_input_copy": "output/core-pages-2026-10-25/oriel/inputs/archived/eb3038e4aa475f879816103d735fa22abc4b4a4b50ba90033e10e10d09c7b8d4.png"
+            }
+          ]
+        }
+      },
+      "mobile_assembly": {
+        "site": "oriel",
+        "page": "02-willow-hall",
+        "method": "Proportional downscale of each mobile part to minimum native width, then edge-to-edge vertical concatenation; no crop, warp or upscale.",
+        "source_dimensions": [
+          [
+            809,
+            1942
+          ],
+          [
+            801,
+            1962
+          ]
+        ],
+        "scales": [
+          0.9901112484548825,
+          1.0
+        ],
+        "final_mobile_dimensions": [
+          801,
+          3885
+        ],
+        "source_sha256": {
+          "desktop": "c2fbf54236fa010d5505547b4c417b11f1164b842b5434846b56bb01f52a2a60",
+          "upper": "eb3038e4aa475f879816103d735fa22abc4b4a4b50ba90033e10e10d09c7b8d4",
+          "lower": "57ab2be63dee36b38f14c99db550587ff49d0ade4fc8655136f55528bea82555"
+        },
+        "visual_qa": "pending full-page inspection"
+      },
+      "qa": {
+        "status": "production visual inspection complete; root review pending",
+        "checks": [
+          "Header and footer present; no clipping",
+          "Desktop and mobile share brand, palette, content and imagery",
+          "Mobile is one continuous vertical image, not a scaled desktop",
+          "Image captions and semantic order checked",
+          "Forms remain blank and request-only where applicable",
+          "No invented addresses, hours, prices or confirmed transactions"
+        ],
+        "notes": []
+      }
+    },
+    {
+      "id": "03-approach",
+      "title": "Approach",
+      "page_type": "story",
+      "files": {
+        "desktop": {
+          "path": "images/website/core-pages-2026-10-25/oriel/03-approach/desktop.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "69f1ea4954e260d6a469b48f932f48b5c7f8f3e2efba5c9ad5342953ccf7afc6",
+          "bytes": 2045180,
+          "upsampled": false
+        },
+        "mobile": {
+          "path": "images/website/core-pages-2026-10-25/oriel/03-approach/mobile.png",
+          "width": 808,
+          "height": 3887,
+          "sha256": "2423400e76c89d73fbebef1760bf39bfdf29835d95e809f267fa88c5b2f3d23b",
+          "bytes": 3593897,
+          "upsampled": false
+        }
+      },
+      "generations": {
+        "desktop": {
+          "site": "oriel",
+          "page": "03-approach",
+          "part": "desktop",
+          "prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact lowercase oriel left, Projects, Approach, Start a project right. Selected page clear; never giant homepagewordmark.\nPAGE: A text-led architectural practice essay with surprising image scale, not cardservices. Smallheader and modesteyebrow 'OUR APPROACH'. Largeclearstatement 'Begin with what is here.' Shortparagraph 'We look closely at a place, its materials, and the people who will use it.' Largebreathingroom. One broad deskphotographofhandsonroughclay,oakoffcuts,brasssampleandarchitecturalsketches;label 'Material conversations'. Then three spacious numberedreadingpassages on sameochreground with small imagery alternating in scale but not equalboxes: '01 Listen' / 'Understand the place and its people.' plus tinyfieldnotebookphoto; '02 Reuse' / 'Work with what is already there.' plus widerclaywalltexturephoto; '03 Inhabit' / 'Make room for everyday life.' plus largeunboxedcommunalhallphoto. Numbersequencecanbedesktopacrossonlyifroomy andnotcards; prefer differentimagewidths. Clearconclusion 'What could this place become?' with 'Start a conversation ↗'. Fullfooter.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer.",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/03-approach-desktop.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-43ff2d92-59f7-4b14-b8a0-502789b6b8c4.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png"
+          ],
+          "native_dimensions": [
+            1024,
+            1536
+          ],
+          "sha256": "69f1ea4954e260d6a469b48f932f48b5c7f8f3e2efba5c9ad5342953ccf7afc6",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/oriel/records/03-approach-desktop.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact lowercase oriel left, Projects, Approach, Start a project right. Selected page clear; never giant homepagewordmark.\nPAGE: A text-led architectural practice essay with surprising image scale, not cardservices. Smallheader and modesteyebrow 'OUR APPROACH'. Largeclearstatement 'Begin with what is here.' Shortparagraph 'We look closely at a place, its materials, and the people who will use it.' Largebreathingroom. One broad deskphotographofhandsonroughclay,oakoffcuts,brasssampleandarchitecturalsketches;label 'Material conversations'. Then three spacious numberedreadingpassages on sameochreground with small imagery alternating in scale but not equalboxes: '01 Listen' / 'Understand the place and its people.' plus tinyfieldnotebookphoto; '02 Reuse' / 'Work with what is already there.' plus widerclaywalltexturephoto; '03 Inhabit' / 'Make room for everyday life.' plus largeunboxedcommunalhallphoto. Numbersequencecanbedesktopacrossonlyifroomy andnotcards; prefer differentimagewidths. Clearconclusion 'What could this place become?' with 'Start a conversation ↗'. Fullfooter.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer.",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/oriel/inputs/archived/64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0.png"
+            }
+          ]
+        },
+        "upper": {
+          "site": "oriel",
+          "page": "03-approach",
+          "part": "upper",
+          "prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: CompactheaderorielandMenu. Eyebrow 'OUR APPROACH', heading 'Begin with what is here.' Paragraph 'We look closely at a place, its materials, and the people who will use it.' Full-widthworktablephotoofclay,oak,brassandsketches, caption 'Material conversations'. Longpausethen '01 Listen', text 'Understand the place and its people.' and a separatelyspacedfieldnotebookphoto. Endquietochreground.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/03-approach-upper.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-ed650787-02d6-4ea0-8b2e-979ee03cecac.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/03-approach-desktop.png"
+          ],
+          "native_dimensions": [
+            808,
+            1947
+          ],
+          "sha256": "074a4a2bc72d9f50d6cd42aa67ef90ea7928827e8c4bcfd6fbfcd631af4e04cf",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/03-approach-desktop.png",
+              "role": "desktop content and identity reference",
+              "sha256": "69f1ea4954e260d6a469b48f932f48b5c7f8f3e2efba5c9ad5342953ccf7afc6"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/oriel/records/03-approach-upper.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: CompactheaderorielandMenu. Eyebrow 'OUR APPROACH', heading 'Begin with what is here.' Paragraph 'We look closely at a place, its materials, and the people who will use it.' Full-widthworktablephotoofclay,oak,brassandsketches, caption 'Material conversations'. Longpausethen '01 Listen', text 'Understand the place and its people.' and a separatelyspacedfieldnotebookphoto. Endquietochreground.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/oriel/inputs/archived/64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0.png"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/03-approach-desktop.png",
+              "role": "desktop content and identity reference",
+              "sha256": "69f1ea4954e260d6a469b48f932f48b5c7f8f3e2efba5c9ad5342953ccf7afc6",
+              "order": 2,
+              "immutable_input_copy": "output/core-pages-2026-10-25/oriel/inputs/archived/69f1ea4954e260d6a469b48f932f48b5c7f8f3e2efba5c9ad5342953ccf7afc6.png"
+            }
+          ]
+        },
+        "lower": {
+          "site": "oriel",
+          "page": "03-approach",
+          "part": "lower",
+          "prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptyochre. '02 Reuse', text 'Work with what is already there.' Full-widthclaywalltexturephoto. Long96pxpause. '03 Inhabit', text 'Make room for everyday life.' Full-widthcommunalhallphoto, allnumbersVERTICALinreadingorder. Longpause. 'What could this place become?' and 'Start a conversation ↗'. Fullfooter. Norepeatedheader.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/03-approach-lower.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-041a2a1a-9e73-413c-8c66-6c7c0a9cde1b.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/03-approach-upper.png"
+          ],
+          "native_dimensions": [
+            809,
+            1942
+          ],
+          "sha256": "1493ff8640367b2edb21f1a98879544b76d4cec8b302156b13589b6b096e2593",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/03-approach-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "074a4a2bc72d9f50d6cd42aa67ef90ea7928827e8c4bcfd6fbfcd631af4e04cf"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/oriel/records/03-approach-lower.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptyochre. '02 Reuse', text 'Work with what is already there.' Full-widthclaywalltexturephoto. Long96pxpause. '03 Inhabit', text 'Make room for everyday life.' Full-widthcommunalhallphoto, allnumbersVERTICALinreadingorder. Longpause. 'What could this place become?' and 'Start a conversation ↗'. Fullfooter. Norepeatedheader.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/oriel/inputs/archived/64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0.png"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/oriel/sources/03-approach-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "074a4a2bc72d9f50d6cd42aa67ef90ea7928827e8c4bcfd6fbfcd631af4e04cf",
+              "order": 2,
+              "immutable_input_copy": "output/core-pages-2026-10-25/oriel/inputs/archived/074a4a2bc72d9f50d6cd42aa67ef90ea7928827e8c4bcfd6fbfcd631af4e04cf.png"
+            }
+          ]
+        }
+      },
+      "mobile_assembly": {
+        "site": "oriel",
+        "page": "03-approach",
+        "method": "Proportional downscale of each mobile part to minimum native width, then edge-to-edge vertical concatenation; no crop, warp or upscale.",
+        "source_dimensions": [
+          [
+            808,
+            1947
+          ],
+          [
+            809,
+            1942
+          ]
+        ],
+        "scales": [
+          1.0,
+          0.9987639060568603
+        ],
+        "final_mobile_dimensions": [
+          808,
+          3887
+        ],
+        "source_sha256": {
+          "desktop": "69f1ea4954e260d6a469b48f932f48b5c7f8f3e2efba5c9ad5342953ccf7afc6",
+          "upper": "074a4a2bc72d9f50d6cd42aa67ef90ea7928827e8c4bcfd6fbfcd631af4e04cf",
+          "lower": "1493ff8640367b2edb21f1a98879544b76d4cec8b302156b13589b6b096e2593"
+        },
+        "visual_qa": "pending full-page inspection"
+      },
+      "qa": {
+        "status": "production visual inspection complete; root review pending",
+        "checks": [
+          "Header and footer present; no clipping",
+          "Desktop and mobile share brand, palette, content and imagery",
+          "Mobile is one continuous vertical image, not a scaled desktop",
+          "Image captions and semantic order checked",
+          "Forms remain blank and request-only where applicable",
+          "No invented addresses, hours, prices or confirmed transactions"
+        ],
+        "notes": []
+      }
+    }
+  ],
+  "prompt_archive": {
+    "output/core-pages-2026-10-25/oriel/prompts/01-project-index-desktop-v2.txt": "Use case: ui-mockup. Edit Image1, this complete Oriel project-index DESKTOP image. Keep its exact brand, three named projects, architectural imagery, colors, all copy/actions and hierarchy. Correct only spacing and the grid: expand canvas height as needed so all three photographs' left/right edges and their captions sit on the SAME 7% side gutters as the header and title. Give the lead image 100 logicalpx of open ochre above and below. Put at least140logicalpx of airy empty ochre between the leadphoto caption and the lower unequal two-photo row. The two lower photos share their top baseline and have a48px logical centralgutter; captions align exactly leftbelow each photo with24px gap. There must be large open ochre pauses before closing invitation and footer. Keep text modest, photos natural, no stretch, no huge wordmark, no new boxes. Keep full completefooter PrivacyTerms. Higher native clarity, 1536x2560 target, tall desktop1440logicalpxwide layout, not mobile. Preserve lightwarmochre andapricot andoriginalpictures. Do not omit projects or add unrelatedcontent. Image1 is edit target. NO beige wash.",
+    "output/core-pages-2026-10-25/oriel/prompts/01-project-index-desktop.prior.txt": "Use case: ui-mockup. Create a polished original COMPLETE DESKTOP website page \"Project index\" for Oriel, header to footer, as one raster image. Image1 is reference for brand/product/setting only. This is a NEW secondary page, not a recolored homepage.\nOutput: portrait width:height 2:3, target 1536x2304 native pixels, maximum crisp detail. Design at desktop 1440 logical width with multi-column compositions and comfortably readable body. No phone layout, device shell, browser, review labels or outside padding.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nInvariants: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nHeader: Compact lowercase oriel left, Projects, Approach, Start a project right. Selected page clear; never giant homepagewordmark.\nComposition/content: An architecture project index with a strict broad grid, not a magazine landing page. Compactheader then modest title 'Selected places.' with a quiet filter row 'All' selected, 'Culture', 'Living'. One elegant horizontal three-entry text index: '01 Willow Hall — Culture & community', '02 River Rooms — Living', '03 Foundry Commons — Gathering'. Use small metadata, align number/name to consistent columns and a single restrained rule whose endpoints equal content margins. Under long empty pause place a very wide landscape photograph of Willow Hall oval clay opening with smallcaption '01 — Willow Hall'. Next unequal two-photo row: RiverRooms tall water-viewbedroom onleft at40% width and FoundryCommons wide open oak gatheringhall onright60%, generous horizontalgap; externalcaptions '02 — River Rooms' and '03 — Foundry Commons'. End 'Have a place in mind?' / 'Start a conversation ↗' thenfooter. Threeprojectphotographs; no generic featurecards or repeatedhero.\nFooter: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer.\nArt direction: distinctly high-end editorial design; generous air, refined purposeful asymmetry on a consistent grid. 80–96 logical px side gutters; 120–180px pauses between groups; 24–32px within groups. Long gaps and light color do real work. Fewer larger images. No rounded cards, box outlines, equal promotional tiles, checkerboard bands, decorative waves, busy scraps, inventedquotes/reviews. Rules if any precisely meet content edges. Natural high resolution photography; rectangles remain geometrically correct. Match ALL specified words accurately. No invented factualclaims. Preserve natural product/material color. Every visible element should feel deliberately aligned and comfortably spaced.\n",
+    "output/core-pages-2026-10-25/oriel/prompts/01-project-index-desktop.txt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact lowercase oriel left, Projects, Approach, Start a project right. Selected page clear; never giant homepagewordmark.\nPAGE: An architecture project index with a strict broad grid, not a magazine landing page. Compactheader then modest title 'Selected places.' with a quiet filter row 'All' selected, 'Culture', 'Living'. One elegant horizontal three-entry text index: '01 Willow Hall — Culture & community', '02 River Rooms — Living', '03 Foundry Commons — Gathering'. Use small metadata, align number/name to consistent columns and a single restrained rule whose endpoints equal content margins. Under long empty pause place a very wide landscape photograph of Willow Hall oval clay opening with smallcaption '01 — Willow Hall'. Next unequal two-photo row: RiverRooms tall water-viewbedroom onleft at40% width and FoundryCommons wide open oak gatheringhall onright60%, generous horizontalgap; externalcaptions '02 — River Rooms' and '03 — Foundry Commons'. End 'Have a place in mind?' / 'Start a conversation ↗' thenfooter. Threeprojectphotographs; no generic featurecards or repeatedhero.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer.",
+    "output/core-pages-2026-10-25/oriel/prompts/01-project-index-lower.txt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptyochre. Full-widthphotograph of RiverRooms wood-and-linenbedroom lookingtowater;caption '02 — River Rooms' and 'Living'. 96pxgap. Full-widthwidephotoofFoundryCommons openoakgatheringhall;caption '03 — Foundry Commons' and 'Gathering'. Longpause then 'Have a place in mind?' / 'Start a conversation ↗'. Fullfooter. Noheaderorindexrepeat.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+    "output/core-pages-2026-10-25/oriel/prompts/01-project-index-upper.txt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: Compact header oriel, Menu. Modest title 'Selected places.' Filter row 'All' selected, 'Culture', 'Living'. Three VERTICAL textindexrows '01 Willow Hall', 'Culture & community'; '02 River Rooms', 'Living'; '03 Foundry Commons', 'Gathering'. Only one aligned divider ifuseful. Longpause then a full-width tallphoto of WillowHall ovalclayopening with caption '01 — Willow Hall'. Endemptyochreground.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+    "output/core-pages-2026-10-25/oriel/prompts/02-willow-hall-desktop.txt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact lowercase oriel left, Projects, Approach, Start a project right. Selected page clear; never giant homepagewordmark.\nPAGE: A cinematic architectural project dossier. Smallheader, title 'Willow Hall', subtitle 'A former foundry, opened to community.' Entire first photographic chapter is a full-width landscape interior of the immense oval terracottaopening, oak diningtable and brasslights, framingthecourtyard; no title overphoto. Tinycaption 'Culture & community'. Largegap then a quiet two-column readingcomposition: shortleftparagraph 'Clay, oak and brass bring a softer rhythm to a place built for making.' and a muchlargerphoto right ofthe communal oak table underbrasslights, withnopeople. Next a smaller 35%width illustrative floor-plan diagram (caption 'Spatial study') offsetunderleftcolumn alongside oneclosematerialphotoofclay+oak+brass onright. Lotsunoccupiedapricotspacearoundthisspread. Caption 'Matter. Light. Belonging.' Quietending 'Next: River Rooms ↗' and 'Start a conversation ↗'. Completefooter. No measuredplan claims or inventedprojectfacts.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer.",
+    "output/core-pages-2026-10-25/oriel/prompts/02-willow-hall-lower.txt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptyochre. Full-width communal oak tablephoto underbrasslights, nopeople. Longpause then a small illustrative floor-plan drawing at70%contentwidth, caption 'Spatial study'. Below at a separate interval a full-width close material photograph ofclay+oak+brass, caption 'Matter. Light. Belonging.' Longpause then 'Next: River Rooms ↗' and 'Start a conversation ↗', completefooter. Norepeatedheader/title.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+    "output/core-pages-2026-10-25/oriel/prompts/02-willow-hall-upper.txt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: CompactheaderorielandMenu. 'Willow Hall' title, subtitle 'A former foundry, opened to community.' Full-widthverticalphotoofovalterracottaopening,oaktableandbrasslights framedcourtyard. Tinycaption 'Culture & community'. Longpause thenparagraph 'Clay, oak and brass bring a softer rhythm to a place built for making.' Endquietochreground.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+    "output/core-pages-2026-10-25/oriel/prompts/03-approach-desktop.txt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Compact lowercase oriel left, Projects, Approach, Start a project right. Selected page clear; never giant homepagewordmark.\nPAGE: A text-led architectural practice essay with surprising image scale, not cardservices. Smallheader and modesteyebrow 'OUR APPROACH'. Largeclearstatement 'Begin with what is here.' Shortparagraph 'We look closely at a place, its materials, and the people who will use it.' Largebreathingroom. One broad deskphotographofhandsonroughclay,oakoffcuts,brasssampleandarchitecturalsketches;label 'Material conversations'. Then three spacious numberedreadingpassages on sameochreground with small imagery alternating in scale but not equalboxes: '01 Listen' / 'Understand the place and its people.' plus tinyfieldnotebookphoto; '02 Reuse' / 'Work with what is already there.' plus widerclaywalltexturephoto; '03 Inhabit' / 'Make room for everyday life.' plus largeunboxedcommunalhallphoto. Numbersequencecanbedesktopacrossonlyifroomy andnotcards; prefer differentimagewidths. Clearconclusion 'What could this place become?' with 'Start a conversation ↗'. Fullfooter.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer.",
+    "output/core-pages-2026-10-25/oriel/prompts/03-approach-lower.txt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Startwith64logicalpxemptyochre. '02 Reuse', text 'Work with what is already there.' Full-widthclaywalltexturephoto. Long96pxpause. '03 Inhabit', text 'Make room for everyday life.' Full-widthcommunalhallphoto, allnumbersVERTICALinreadingorder. Longpause. 'What could this place become?' and 'Start a conversation ↗'. Fullfooter. Norepeatedheader.\nFOOTER: oriel. Home · Projects · Approach · Start a project. Contact · Privacy · Terms. Restrained spacious footer. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+    "output/core-pages-2026-10-25/oriel/prompts/03-approach-upper.txt": "Use case: ui-mockup. Create an original high-end Oriel secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Small bold lowercase 'oriel', small 'SPATIAL PRACTICE'. Willow Hall is a former foundry for culture and community: monumental oval opening, natural terracotta/clay walls, oak panels and brass pendants. River Rooms is a wood-and-linen bedroom by water; Foundry Commons an open gathering hall. No fictionallocation/date/size.\nTypography: Archivo 400/600/700 for compact lowercase oriel wordmark and strong restrained headlines; DM Sans 400/500 for body and metadata.\nPalette: Pale ochre #F3DDB0 and light apricot #EFCDB9 with a small pale golden #FAEBD0 reading field and warm charcoal #46372B. Keep perceptible chromatic light warm color, not beige/taupe or stark-white wash.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: CompactheaderorielandMenu. Eyebrow 'OUR APPROACH', heading 'Begin with what is here.' Paragraph 'We look closely at a place, its materials, and the people who will use it.' Full-widthworktablephotoofclay,oak,brassandsketches, caption 'Material conversations'. Longpausethen '01 Listen', text 'Understand the place and its people.' and a separatelyspacedfieldnotebookphoto. Endquietochreground.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n"
+  },
+  "revision_records": [],
+  "final_collection_review": {
+    "01-project-index": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Three projects match; deliberate separate text/photo rails and correct caption/divider alignment. Mobile vertical sequence.",
+      "hashes": {
+        "desktop": "88be599383aeda99cc13524b80231cfb16401679833a8a6791d77545f4aeb4c8",
+        "mobile": "d5dbe467fcb578daa0fc7d23c5a2624d9740cbef1afe4679c39a5cf3dfd7a50f"
+      }
+    },
+    "02-willow-hall": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Willow clay/oak/brass identity; desktop image pair is a tight intentional study group, mobile studies vertical with project actions.",
+      "hashes": {
+        "desktop": "c2fbf54236fa010d5505547b4c417b11f1164b842b5434846b56bb01f52a2a60",
+        "mobile": "0506198cce561f7dc7301d354e92869476f4e80f3e25692937d834c05e0179d5"
+      }
+    },
+    "03-approach": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Listen/Reuse/Inhabit clearly sequenced, mobile numbers vertical, aligned photos and footer rule.",
+      "hashes": {
+        "desktop": "69f1ea4954e260d6a469b48f932f48b5c7f8f3e2efba5c9ad5342953ccf7afc6",
+        "mobile": "2423400e76c89d73fbebef1760bf39bfdf29835d95e809f267fa88c5b2f3d23b"
+      }
+    }
+  }
+}

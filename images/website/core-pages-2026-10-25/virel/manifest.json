@@ -1,0 +1,812 @@
+{
+  "site": "VIREL",
+  "date": "2026-10-25",
+  "delivery": "Three new core pages; six final raster PNGs. No website implementation.",
+  "identity": "Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.",
+  "art_direction": {
+    "palette": "pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.",
+    "typography_direction": "Cormorant Garamond 500/600 and DM Sans 400/500",
+    "selected_homepage": "VIREL option B — Passing frame"
+  },
+  "research_sources": [
+    {
+      "title": "Chloé bags",
+      "url": "https://www.chloe.com/"
+    },
+    {
+      "title": "Polène Numéro Dix",
+      "url": "https://eng.polene-paris.com/products/numero-dix-textured-plum"
+    },
+    {
+      "title": "HEREU craftsmanship",
+      "url": "https://hereustudio.com/pages/craftmanship"
+    }
+  ],
+  "limitations": "Generated design images. Native and final dimensions are exact; no upscaling. Grid, spacing and type instructions are visual targets, not measured responsive CSS, accessibility conformance or a retina guarantee. Product and purchase states are concept mockups; guide imagery is conceptual, not a claim about actual manufacturing.",
+  "pages": [
+    {
+      "id": "01-collection",
+      "title": "Objects in motion",
+      "purpose": "catalogue",
+      "reference_observation_and_authored_decision": "Chloé collection archive: distinguish silhouettes and separate filter controls; authored use is three unequal object studies and a single movement photograph, without cards.",
+      "views": {
+        "desktop": {
+          "file": "01-collection/desktop.png",
+          "width": 1086,
+          "height": 1448,
+          "sha256": "89415e145c236a4b7d9bf86c7cb388ab3e0fd73f819b507ca23e89dec4577cf5",
+          "bytes": 1673623
+        },
+        "mobile": {
+          "file": "01-collection/mobile.png",
+          "width": 809,
+          "height": 3342,
+          "sha256": "2fe7207f26943b9d55ad32dc7a3ffa82d068c999794e3c282ffd352de19c1305",
+          "bytes": 2556191
+        }
+      },
+      "accepted_generation_records": {
+        "desktop": {
+          "site": "virel",
+          "page": "01-collection",
+          "part": "desktop",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end VIREL website catalogue page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Objects in motion. Content below is exact and complete; don't add unrelated filler. Chloé collection archive: distinguish silhouettes and separate filter controls; authored use is three unequal object studies and a single movement photograph, without cards.\nFORMAT: complete DESKTOP webpage from top header through bottom footer. Portrait 3:4 aspect ratio (target1536x2048 native); design is 1440 logical px wide, with desktop multi-column hierarchy and 96px side gutters. 120–180px vertical pauses between distinct compositions; 28–40px inside groups. This is a long desktop page, not a mobile page. Keep the page sparse enough for native clarity.\nHEADER: compact VIREL mark left; Collection / Our story / Care / Menu / Bag (0) right; primary navigation active for this destination where present. Header background matches page, no giant wordmark.\nPAGE CONTENT IN ORDER:\nTitle “Objects in motion”. Short subline “Three silhouettes. A language of curves.” Underline the label All (do not write the word selected), Shoulder, Small objects, with “3 pieces” at right. An airy collection: generous isolated Gesture product photograph on sage, caption “Gesture” / “Burgundy · $480” / “Discover Gesture →”; a separate isolated Cove cylinder on lighter sage, caption “Cove” / “Dark brown · $420” / “Explore Cove →”. Each product fully visible. On desktop use one larger first object and a smaller second object in an aligned unequal two-column composition; on mobile stack them with 96px logical pauses.\nA third isolated Trace tan oblong flap bag photograph, caption “Trace” / “Tan · $360” / “Explore Trace →”. Then one wide atmospheric crop of the adult woman in ivory blouse/plum trousers in the pale sage gallery carrying Gesture, caption “Objects, in motion.” / “Read the form study →”. This is a short campaign pause after the useful catalogue, not a second homepage hero. No filters repeated. Footer follows with clear generous spacing.\nFOOTER: after100logicalpx open space, compact wordmark and useful links exactly VIREL / Collection / Gesture / Form study / Care / Contact / Privacy / Terms; Privacy and Terms readable. No newsletter block unless specified, no repeated social strip. Full finished bottom edge. Use a varied, authored editorial composition, with the most useful task obvious.\nCRITICAL COMPOSITION OVERRIDE: A true unboxed catalogue, not a left/right/left checkerboard. First row: full Gesture and full Cove each photographed as an isolated object on the SAME pale sage continuous field in TWO columns, same baseline, with their name/price/link BELOW each photograph. Second row: Trace isolated object on left with its name/price/link BELOW; a differently scaled tall moving-figure photograph on the right with caption BELOW. No boxed backgrounds behind products, no separate rectangular object-photo slabs, no text beside the products, no full-width image/text alternating bands. Broad empty sage gutters of96logicalpx; 140logicalpx vertical air between rows; a generous empty interval before footer. Three actual products and one editorial image only. No decorative presentation frame. Exactly text filter 'All', underline it; never 'All selected'.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/01-collection-desktop-v2.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-desktop.png",
+              "role": "edit target; replace checkerboard catalogue composition",
+              "sha256": "2976919683b0b05b278dd529973add1eb0450c4b10b3966c16a3280dcf9c8bf8"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/inputs/selected-desktop.png",
+              "role": "approved brand and Gesture identity",
+              "sha256": "45773d1632f7a42ab5831567e363cd8b770013913c33b14b155dd58fe8b2dcaa"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-desktop-v2.png",
+          "qa_status": "visual inspection passed; full paired image available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-66e074e0-f6e7-452a-8bc3-ac9a2238610b.png",
+          "native_width": 1086,
+          "native_height": 1448,
+          "sha256": "89415e145c236a4b7d9bf86c7cb388ab3e0fd73f819b507ca23e89dec4577cf5",
+          "qa_notes": "Accepted by root visual QA: authored two-column catalogue, All label, caption alignment, correct product geometry/prices, full footer."
+        },
+        "upper": {
+          "page": "01-collection",
+          "device": "upper",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end VIREL website catalogue page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Objects in motion. Content below is exact and complete; don't add unrelated filler. Chloé collection archive: distinguish silhouettes and separate filter controls; authored use is three unequal object studies and a single movement photograph, without cards.\nFORMAT: UPPER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160. It represents390logical px width and936logicalpx height. Real narrow-phone reflow, not compressed desktop. 28px side gutters, body16/24, headings32–42, touch controls44–48, 80–112logicalpx between groups. ONE column. Use the tall canvas to give photos and labels room; don't cram. This is a production fragment that will be joined to a lower half, so no footer and no continuation label.\nHeader: compact VIREL, Menu, Bag (0), one row with generous safe whitespace. Small eyebrow \"Collection\".\nRENDER ONLY:\nTitle “Objects in motion”. Short subline “Three silhouettes. A language of curves.” Underline All selected, Shoulder, Small objects, with “3 pieces” at right. An airy collection: generous isolated Gesture product photograph on sage, caption “Gesture” / “Burgundy · $480” / “Discover Gesture →”; a separate isolated Cove cylinder on lighter sage, caption “Cove” / “Dark brown · $420” / “Explore Cove →”. Each product fully visible. On desktop use one larger first object and a smaller second object in an aligned unequal two-column composition; on mobile stack them with 96px logical pauses.\nFinish with 56logicalpx of FLAT main background color from the palette, empty. No footer, no invented content, no cutoff.",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/inputs/selected-desktop.png",
+              "role": "selected brand and product reference",
+              "sha256": "45773d1632f7a42ab5831567e363cd8b770013913c33b14b155dd58fe8b2dcaa"
+            }
+          ],
+          "original": "/Users/jasonfesta/.codex/generated_images/01a17383-48e9-7451-861c-697b9907eaa9/exec-a30e63e3-5221-4f53-bc38-75df1e364465.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-upper.png",
+          "native_width": 954,
+          "native_height": 1649,
+          "sha256": "1bd36500457097692d13fb1fe658fce456576e845a1de552778e0003592bf3d9",
+          "qa_status": "visual inspection passed; full paired image available for root QA"
+        },
+        "lower": {
+          "site": "virel",
+          "page": "01-collection",
+          "part": "lower",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: precise-object-edit. Edit image1, a mobile website lower portion. Image2 shows the correct Trace bag in its lower-left catalogue entry. IMPORTANT: the tan bag at TOP of image1 is WRONG: it borrowed Gesture's gold curved clasp. Replace ONLY that tan bag with the exact Trace from image2: a horizontally oblong RECTANGULAR tan leather shoulder bag, broad rectangular fold-over flap with rounded lower corners, NO exterior central gold clasp, single short shoulder strap. Preserve Trace label, Tan · $360, Explore Trace →, the entire lower burgundy Gesture walking photograph, all typography, sage ground, footer, margins and proportions. Do not change Gesture in the lower photograph. Don't add header. Keep complete same mobile image and native clarity. Target same809x1942 aspect. Only tan product identity correction; no other redesign.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/01-collection-lower-v2.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-lower.png",
+              "role": "edit target; correct Trace product shape only",
+              "sha256": "817656126a115d8a20f5174732b8e4ef9494dc29d0158e1771af469e1cc1304d"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-desktop-v2.png",
+              "role": "authoritative Trace geometry shown in lower-left of desktop catalogue",
+              "sha256": "89415e145c236a4b7d9bf86c7cb388ab3e0fd73f819b507ca23e89dec4577cf5"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-lower-v2.png",
+          "qa_status": "visual inspection passed; full paired image available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-6c726479-999e-40aa-9d1f-49401d3f5e7a.png",
+          "native_width": 809,
+          "native_height": 1944,
+          "sha256": "c79504d7885a35416994f119b6471d413c58adc453edd9db62d7842974d3088e",
+          "qa_notes": "Accepted fragment visual QA: Trace oblong flap and no central gold clasp; Gesture walking photo, footer and sage ground correct."
+        }
+      },
+      "assembly": {
+        "page": "01-collection",
+        "assembly": "Proportional downscale to narrowest native fragment; direct vertical concatenation. No upscaling, no photo/text alterations.",
+        "parts": [
+          {
+            "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-upper.png",
+            "native_dimensions": [
+              954,
+              1649
+            ],
+            "output_dimensions": [
+              809,
+              1398
+            ],
+            "scale": 0.8480083857442348,
+            "offset_y": 0,
+            "sha256": "1bd36500457097692d13fb1fe658fce456576e845a1de552778e0003592bf3d9"
+          },
+          {
+            "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-lower-v2.png",
+            "native_dimensions": [
+              809,
+              1944
+            ],
+            "output_dimensions": [
+              809,
+              1944
+            ],
+            "scale": 1.0,
+            "offset_y": 1398,
+            "sha256": "c79504d7885a35416994f119b6471d413c58adc453edd9db62d7842974d3088e"
+          }
+        ],
+        "final_dimensions": [
+          809,
+          3342
+        ],
+        "qa": "Native fragments inspected. Trace plain flap corrected; all three names, prices, page sequence and footer match desktop. Full joined mobile pending root visual QA."
+      }
+    },
+    {
+      "id": "02-gesture",
+      "title": "Gesture",
+      "purpose": "product",
+      "reference_observation_and_authored_decision": "Polène Numéro Dix product page: distinct photo gallery, color choice, purchasing controls and secondary detail disclosure. Our layout uses larger negative space and retained original Gesture identity.",
+      "views": {
+        "desktop": {
+          "file": "02-gesture/desktop.png",
+          "width": 1086,
+          "height": 1448,
+          "sha256": "c3ec05dba0d94dae41713cec0d66414e5c0bb00850495b5276824962b90764ad",
+          "bytes": 1854876
+        },
+        "mobile": {
+          "file": "02-gesture/mobile.png",
+          "width": 771,
+          "height": 3890,
+          "sha256": "5c4ba2a5ebfc4a6beb4601e91ef96bea0e1b1ea9a5618fdb9a793da19f313995",
+          "bytes": 2777122
+        }
+      },
+      "accepted_generation_records": {
+        "desktop": {
+          "site": "virel",
+          "page": "02-gesture",
+          "part": "desktop",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end VIREL website product page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Gesture. Content below is exact and complete; don't add unrelated filler. Polène Numéro Dix product page: distinct photo gallery, color choice, purchasing controls and secondary detail disclosure. Our layout uses larger negative space and retained original Gesture identity.\nFORMAT: complete DESKTOP webpage from top header through bottom footer. Portrait 3:4 (target1536x2048 native); design is 1440 logical px wide, with desktop multi-column hierarchy and 96px side gutters. 120–180px vertical pauses between distinct compositions; 28–40px inside groups. This is a long desktop page, not a mobile page. Keep the page sparse enough for native clarity.\nHEADER: compact VIREL mark left; Collection / Our story / Care / Menu / Bag (0) right; primary navigation active for this destination where present. Header background matches page, no giant wordmark.\nPAGE CONTENT IN ORDER:\nPurchase-focused opening. Large isolated three-quarter product photograph of full burgundy Gesture with full strap and curved clasp. Beside it on desktop, beneath it on mobile, show exact title “Gesture”, “Burgundy”, “$480”, “A curved form, carried close.” One burgundy swatch selected; quantity “−  1  +”; prominent dark-plum “Add to bag — $480”. Small links “Details +” and “Delivery & returns +”. Do not show a cart subtotal. Bag (0) still empty before action. Second small gallery thumbnail only if plenty of room; not required.\nTwo beautifully separated photographic studies: full bag at hip on the same walking adult ivory/plum outfit in sage gallery, caption “Carried close.”; then macro of the actual single curved gold clasp and burgundy flap, caption “A curve, held in place.” A clean row “Materials & care +”, then “Explore the collection →”. No new specifications, dimensions, reviews, discount, delivery promises. Footer.\nFOOTER: after100logicalpx open space, compact wordmark and useful links exactly VIREL / Collection / Gesture / Form study / Care / Contact / Privacy / Terms; Privacy and Terms readable. No newsletter block unless specified, no repeated social strip. Full finished bottom edge. Use a varied, authored editorial composition, with the most useful task obvious.\nShow exactly ONE Burgundy color swatch, no additional or unnamed colors.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/02-gesture-desktop.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/inputs/selected-desktop.png",
+              "role": "brand/product reference",
+              "sha256": "45773d1632f7a42ab5831567e363cd8b770013913c33b14b155dd58fe8b2dcaa"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-desktop.png",
+          "qa_status": "visual inspection passed; full paired image available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-2ad337dc-a82b-43a6-9c21-de6cf810cc3f.png",
+          "native_width": 1086,
+          "native_height": 1448,
+          "sha256": "c3ec05dba0d94dae41713cec0d66414e5c0bb00850495b5276824962b90764ad",
+          "qa_notes": "Inspected: correct Gesture crescent/flap/gold-clasp geometry, one Burgundy swatch, quantity1 and $480 consistent, complete task-first purchase layout and footer."
+        },
+        "upper": {
+          "site": "virel",
+          "page": "02-gesture",
+          "part": "upper",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end VIREL website product page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Gesture. Content below is exact and complete; don't add unrelated filler. Polène Numéro Dix product page: distinct photo gallery, color choice, purchasing controls and secondary detail disclosure. Our layout uses larger negative space and retained original Gesture identity.\nFORMAT: UPPER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160. It represents390logical px width and936logicalpx height. Real narrow-phone reflow, not compressed desktop. 28px side gutters, body16/24, headings32–42, touch controls44–48, 80–112logicalpx between groups. ONE column. Use the tall canvas to give photos and labels room; don't cram. This is a production fragment that will be joined to a lower half, so no footer and no continuation label.\nHeader: compact VIREL, Menu, Bag (0), one row with generous safe whitespace. Small eyebrow \"Collection / Gesture\".\nRENDER ONLY:\nPurchase-focused opening. Large isolated three-quarter product photograph of full burgundy Gesture with full strap and curved clasp. Beside it on desktop, beneath it on mobile, show exact title “Gesture”, “Burgundy”, “$480”, “A curved form, carried close.” One burgundy swatch selected; quantity “−  1  +”; prominent dark-plum “Add to bag — $480”. Small links “Details +” and “Delivery & returns +”. Do not show a cart subtotal. Bag (0) still empty before action. Second small gallery thumbnail only if plenty of room; not required.\nFinish with 56logicalpx of FLAT main background color from the palette, empty. No footer, no invented content, no cutoff.\nImage1 is the accepted desktop of this very page. Match its Gesture geometry, copy, type and sage exactly while genuinely reflowing to ONE mobile column. Exactly ONE burgundy swatch; no other colors. Make the touch controls generous and content airy.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/02-gesture-upper.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-desktop.png",
+              "role": "matching desktop page and exact product",
+              "sha256": "c3ec05dba0d94dae41713cec0d66414e5c0bb00850495b5276824962b90764ad"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/inputs/selected-desktop.png",
+              "role": "selected identity",
+              "sha256": "45773d1632f7a42ab5831567e363cd8b770013913c33b14b155dd58fe8b2dcaa"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-upper.png",
+          "qa_status": "visual inspection passed; full paired image available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-2d906cf4-832c-4e7a-8ea6-74a7fac72a54.png",
+          "native_width": 809,
+          "native_height": 1942,
+          "sha256": "051a6f09d8ab7a3cdcf1bfdde8b51162a131b8a972d432231cff9b75b43c5b04",
+          "qa_notes": "Inspected: genuine one-column mobile product with full strap, ample air, one selected burgundy swatch, readable price/quantity/button/disclosures."
+        },
+        "lower": {
+          "site": "virel",
+          "page": "02-gesture",
+          "part": "lower",
+          "mode": "built-in image_gen",
+          "prompt": "Edit image1, the LOWER continuation of a genuine 390logicalpx mobile product page. Preserve photographs, exact bag geometry, all copy, sage and plum palette. Correct the cramped small footer and mobile gutters. Use the same 7.5% side gutters as image2 for all inset photographs and text. Footer should have VIREL alone, generous vertical gap, then TWO columns of links: left Collection / Gesture / Form study / Care; right Contact / Privacy / Terms. Make footer link type the SAME comfortably readable mobile scale as 'Materials & care' (about16logicalpx; no microtype). Keep photo captions 'Carried close.' and 'A curve, held in place.' Increase the empty sage space AFTER 'Carried close.' before the clasp image to at least70logicalpx. Give the footer generous breathing space. Preserve row divider endpoints on the same left/right text grid. The page may become taller to fit; target portrait1:2.4, native900x2160. No header, no repeated purchase, no new words, no device frame. Maintain a flat sage56logicalpx empty band at top for joining. This is a raster mobile page fragment.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/02-gesture-lower-v2.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-lower.png",
+              "role": "edit lower mobile section",
+              "sha256": "9a5b795967241f33b16ddb39b9b2caf692ec5e0b3b92b82af21535c777b1ebf5"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-upper.png",
+              "role": "accepted upper mobile typography and gutters",
+              "sha256": "051a6f09d8ab7a3cdcf1bfdde8b51162a131b8a972d432231cff9b75b43c5b04"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-lower-v2.png",
+          "qa_status": "visual inspection passed; full paired image available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-d378f22c-c0c1-450f-b414-08c98d348c6d.png",
+          "native_width": 771,
+          "native_height": 2039,
+          "sha256": "33894f2a2b4ca900cb82589806dfe68f94dd0f7e5e1abee5efe26a77ba41f1ca"
+        }
+      },
+      "assembly": {
+        "page": "02-gesture",
+        "assembly": "Uniform proportional downscale to narrowest native section, then direct vertical concatenation. No upscaling or artwork/text changes.",
+        "parts": [
+          {
+            "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-upper.png",
+            "native_dimensions": [
+              809,
+              1942
+            ],
+            "output_dimensions": [
+              771,
+              1851
+            ],
+            "scale": 0.9530284301606922,
+            "offset_y": 0,
+            "sha256": "051a6f09d8ab7a3cdcf1bfdde8b51162a131b8a972d432231cff9b75b43c5b04"
+          },
+          {
+            "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-lower-v2.png",
+            "native_dimensions": [
+              771,
+              2039
+            ],
+            "output_dimensions": [
+              771,
+              2039
+            ],
+            "scale": 1.0,
+            "offset_y": 1851,
+            "sha256": "33894f2a2b4ca900cb82589806dfe68f94dd0f7e5e1abee5efe26a77ba41f1ca"
+          }
+        ],
+        "final_dimensions": [
+          771,
+          3890
+        ],
+        "qa": "Inspected sources: correct Gesture geometry, burgundy single swatch, $480, one-column purchase. Lower corrected shared gutters, larger caption pause, readable two-column footer. Actual771px wide output accepted by root; no upscaling.",
+        "desktop_source": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-desktop.png"
+      }
+    },
+    {
+      "id": "03-form-study",
+      "title": "A line becomes a gesture",
+      "purpose": "essay",
+      "reference_observation_and_authored_decision": "HEREU retained craft study distinguishes materials, tools and making as visual evidence; Chloé campaign archive supports the clothing-and-object scale. This is an authored concept essay, not a claimed real manufacturing process.",
+      "views": {
+        "desktop": {
+          "file": "03-form-study/desktop.png",
+          "width": 1086,
+          "height": 1448,
+          "sha256": "432aa2736ab53d208e90e46b69c0de34a693d9e15fa8afc836c6d18bf2932d19",
+          "bytes": 1946164
+        },
+        "mobile": {
+          "file": "03-form-study/mobile.png",
+          "width": 809,
+          "height": 3808,
+          "sha256": "c97c5127f33a2261fb67c3ae6c51d8e03ef5dd2942c55796c82565459e8f4e9e",
+          "bytes": 3440187
+        }
+      },
+      "accepted_generation_records": {
+        "desktop": {
+          "site": "virel",
+          "page": "03-form-study",
+          "part": "desktop",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end VIREL website essay page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: A line becomes a gesture. Content below is exact and complete; don't add unrelated filler. HEREU retained craft study distinguishes materials, tools and making as visual evidence; Chloé campaign archive supports the clothing-and-object scale. This is an authored concept essay, not a claimed real manufacturing process.\nFORMAT: complete DESKTOP webpage from top header through bottom footer. Portrait 3:4 (target1536x2048 native); design is 1440 logical px wide, with desktop multi-column hierarchy and 96px side gutters. 120–180px vertical pauses between distinct compositions; 28–40px inside groups. This is a long desktop page, not a mobile page. Keep the page sparse enough for native clarity.\nHEADER: compact VIREL mark left; Collection / Our story / Care / Menu / Bag (0) right; primary navigation active for this destination where present. Header background matches page, no giant wordmark.\nPAGE CONTENT IN ORDER:\nType-led opening on pale sage, compact title “A line becomes a gesture.” Two quiet sentences “A curve takes shape through movement. The object follows the hand.” Large editorial photograph of a hand holding a curved burgundy leather pattern on a light sage worktable, tracing-paper pencil arcs beside it. No claims about country, craftsmanship certifications or production history. Small caption “01 / The line”.\nTwo differently scaled image studies with generous pauses: close-up of the curved gold clasp resting next to burgundy leather, caption “02 / The turn”; then an adult in ivory blouse/plum trousers passing through sage gallery with the complete Gesture bag, caption “03 / The gesture”. Closing single line “Form is something you carry.” and “Discover Gesture — $480 →”. Photographs are original conceptual design studies. Footer. On mobile 01,02,03 occupy full width vertically with long gaps; do not combine into a horizontal process.\nFOOTER: after100logicalpx open space, compact wordmark and useful links exactly VIREL / Collection / Gesture / Form study / Care / Contact / Privacy / Terms; Privacy and Terms readable. No newsletter block unless specified, no repeated social strip. Full finished bottom edge. Use a varied, authored editorial composition, with the most useful task obvious.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/03-form-study-desktop.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/inputs/selected-desktop.png",
+              "role": "selected brand identity",
+              "sha256": "45773d1632f7a42ab5831567e363cd8b770013913c33b14b155dd58fe8b2dcaa"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-desktop.png",
+              "role": "verified Gesture product geometry",
+              "sha256": "c3ec05dba0d94dae41713cec0d66414e5c0bb00850495b5276824962b90764ad"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/03-form-study-desktop.png",
+          "qa_status": "visual inspection passed; full paired image available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-b7204ef0-d4a8-451b-9e78-61a95e1ccda3.png",
+          "native_width": 1086,
+          "native_height": 1448,
+          "sha256": "432aa2736ab53d208e90e46b69c0de34a693d9e15fa8afc836c6d18bf2932d19",
+          "qa_notes": "Inspected: original process essay architecture, 01/02/03 imagery and text correct, actual Gesture identity and $480 preserved; complete footer."
+        },
+        "upper": {
+          "site": "virel",
+          "page": "03-form-study",
+          "part": "upper",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end VIREL website essay page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: A line becomes a gesture. Content below is exact and complete; don't add unrelated filler. HEREU retained craft study distinguishes materials, tools and making as visual evidence; Chloé campaign archive supports the clothing-and-object scale. This is an authored concept essay, not a claimed real manufacturing process.\nFORMAT: UPPER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160. It represents390logical px width and936logicalpx height. Real narrow-phone reflow, not compressed desktop. 28px side gutters, body16/24, headings32–42, touch controls44–48, 80–112logicalpx between groups. ONE column. Use the tall canvas to give photos and labels room; don't cram. This is a production fragment that will be joined to a lower half, so no footer and no continuation label.\nHeader: compact VIREL, Menu, Bag (0), one row with generous safe whitespace. Small eyebrow \"Form study / 01\".\nRENDER ONLY:\nType-led opening on pale sage, compact title “A line becomes a gesture.” Two quiet sentences “A curve takes shape through movement. The object follows the hand.” Large editorial photograph of a hand holding a curved burgundy leather pattern on a light sage worktable, tracing-paper pencil arcs beside it. No claims about country, craftsmanship certifications or production history. Small caption “01 / The line”.\nFinish with 56logicalpx of FLAT main background color from the palette, empty. No footer, no invented content, no cutoff.\nImage1 is the exact matching desktop article; preserve correct crescent Gesture cutting pattern. Reflow into true mobile ONE column. First 01 label and content vertical. Keep caption spacing large; body at least 16px at 390logical width, not tiny desktop labels.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/03-form-study-upper.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/03-form-study-desktop.png",
+              "role": "matching desktop article",
+              "sha256": "432aa2736ab53d208e90e46b69c0de34a693d9e15fa8afc836c6d18bf2932d19"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/inputs/selected-desktop.png",
+              "role": "selected product identity",
+              "sha256": "45773d1632f7a42ab5831567e363cd8b770013913c33b14b155dd58fe8b2dcaa"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/03-form-study-upper.png",
+          "qa_status": "visual inspection passed; full paired image available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-eb499d3f-4dcf-492d-bb1e-a49d239b7e82.png",
+          "native_width": 809,
+          "native_height": 1942,
+          "sha256": "099d0b0799850eec8c3de719861e8f9a663936dfc2e35790a3d4ef1c45d38832"
+        },
+        "lower": {
+          "site": "virel",
+          "page": "03-form-study",
+          "part": "lower",
+          "mode": "built-in image_gen",
+          "prompt": "Use case: ui-mockup. Create an original high-end VIREL website essay page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: A line becomes a gesture. Content below is exact and complete; don't add unrelated filler. HEREU retained craft study distinguishes materials, tools and making as visual evidence; Chloé campaign archive supports the clothing-and-object scale. This is an authored concept essay, not a claimed real manufacturing process.\nFORMAT: LOWER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160;390logicalpx wide,936logicalpx high. Real phone reflow. 28px side gutters, body16/24, headings28–36, controls44–48, 80–112logicalpx between distinct groups. ONE column; all steps vertically. No header, no repeated page title, no fragment label. Image2 when attached is the upper-half typography/palette continuation reference; image1 identity is authoritative. Begin with56logicalpx of FLAT main palette background, empty, matching upper ending. Don't repeat upper content.\nRENDER ONLY:\nTwo differently scaled image studies with generous pauses: close-up of the curved gold clasp resting next to burgundy leather, caption “02 / The turn”; then an adult in ivory blouse/plum trousers passing through sage gallery with the complete Gesture bag, caption “03 / The gesture”. Closing single line “Form is something you carry.” and “Discover Gesture — $480 →”. Photographs are original conceptual design studies. Footer. On mobile 01,02,03 occupy full width vertically with long gaps; do not combine into a horizontal process.\nFOOTER exact useful links: VIREL / Collection / Gesture / Form study / Care / Contact / Privacy / Terms. Compact footer wordmark once; links readable in two calm columns or stacked small groups, Privacy/Terms last. Full finished bottom edge, no clipped type. No newsletter block or social strip.\nMatch Image2 mobile type size. The two numbered photographs are VERTICAL, 02 then03, one per row. Use 70–90logicalpx of sage between distinct image studies, 24logicalpx caption spacing, and readable footer links (16logicalpx), with wordmark on its own line above two link columns. No microscopic desktop footer.",
+          "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/03-form-study-lower.txt",
+          "inputs": [
+            {
+              "order": 1,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/03-form-study-desktop.png",
+              "role": "matching desktop and exact Gesture",
+              "sha256": "432aa2736ab53d208e90e46b69c0de34a693d9e15fa8afc836c6d18bf2932d19"
+            },
+            {
+              "order": 2,
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/03-form-study-upper.png",
+              "role": "upper mobile continuation",
+              "sha256": "099d0b0799850eec8c3de719861e8f9a663936dfc2e35790a3d4ef1c45d38832"
+            }
+          ],
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/03-form-study-lower.png",
+          "qa_status": "visual inspection passed; full paired image available for root QA",
+          "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-052327bb-49c8-4937-828f-ee89870e25e0.png",
+          "native_width": 826,
+          "native_height": 1905,
+          "sha256": "86dd06660a98e566b82843f4b507a5d947e1960e102dd55c0bdd9d2422b35470"
+        }
+      },
+      "assembly": {
+        "page": "03-form-study",
+        "assembly": "Uniform proportional downscale to narrowest native section, then direct vertical concatenation. No upscaling or artwork/text changes.",
+        "parts": [
+          {
+            "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/03-form-study-upper.png",
+            "native_dimensions": [
+              809,
+              1942
+            ],
+            "output_dimensions": [
+              809,
+              1942
+            ],
+            "scale": 1.0,
+            "offset_y": 0,
+            "sha256": "099d0b0799850eec8c3de719861e8f9a663936dfc2e35790a3d4ef1c45d38832"
+          },
+          {
+            "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/03-form-study-lower.png",
+            "native_dimensions": [
+              826,
+              1905
+            ],
+            "output_dimensions": [
+              809,
+              1866
+            ],
+            "scale": 0.9794188861985472,
+            "offset_y": 1942,
+            "sha256": "86dd06660a98e566b82843f4b507a5d947e1960e102dd55c0bdd9d2422b35470"
+          }
+        ],
+        "final_dimensions": [
+          809,
+          3808
+        ],
+        "qa": "Inspected: actual design essay, 01 The line /02 The turn /03 The gesture; mobile studies vertical, bag shape and $480 consistent, complete footer, source content matches desktop.",
+        "desktop_source": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/03-form-study-desktop.png"
+      }
+    }
+  ],
+  "revision_records": [
+    {
+      "site": "virel",
+      "page": "01-collection",
+      "part": "desktop",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end VIREL website catalogue page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Objects in motion. Content below is exact and complete; don't add unrelated filler. Chloé collection archive: distinguish silhouettes and separate filter controls; authored use is three unequal object studies and a single movement photograph, without cards.\nFORMAT: complete DESKTOP webpage from top header through bottom footer. Portrait 3:4 aspect ratio (target1536x2048 native); design is 1440 logical px wide, with desktop multi-column hierarchy and 96px side gutters. 120–180px vertical pauses between distinct compositions; 28–40px inside groups. This is a long desktop page, not a mobile page. Keep the page sparse enough for native clarity.\nHEADER: compact VIREL mark left; Collection / Our story / Care / Menu / Bag (0) right; primary navigation active for this destination where present. Header background matches page, no giant wordmark.\nPAGE CONTENT IN ORDER:\nTitle “Objects in motion”. Short subline “Three silhouettes. A language of curves.” Underline the label All (do not write the word selected), Shoulder, Small objects, with “3 pieces” at right. An airy collection: generous isolated Gesture product photograph on sage, caption “Gesture” / “Burgundy · $480” / “Discover Gesture →”; a separate isolated Cove cylinder on lighter sage, caption “Cove” / “Dark brown · $420” / “Explore Cove →”. Each product fully visible. On desktop use one larger first object and a smaller second object in an aligned unequal two-column composition; on mobile stack them with 96px logical pauses.\nA third isolated Trace tan oblong flap bag photograph, caption “Trace” / “Tan · $360” / “Explore Trace →”. Then one wide atmospheric crop of the adult woman in ivory blouse/plum trousers in the pale sage gallery carrying Gesture, caption “Objects, in motion.” / “Read the form study →”. This is a short campaign pause after the useful catalogue, not a second homepage hero. No filters repeated. Footer follows with clear generous spacing.\nFOOTER: after100logicalpx open space, compact wordmark and useful links exactly VIREL / Collection / Gesture / Form study / Care / Contact / Privacy / Terms; Privacy and Terms readable. No newsletter block unless specified, no repeated social strip. Full finished bottom edge. Use a varied, authored editorial composition, with the most useful task obvious.\nCRITICAL COMPOSITION OVERRIDE: A true unboxed catalogue, not a left/right/left checkerboard. First row: full Gesture and full Cove each photographed as an isolated object on the SAME pale sage continuous field in TWO columns, same baseline, with their name/price/link BELOW each photograph. Second row: Trace isolated object on left with its name/price/link BELOW; a differently scaled tall moving-figure photograph on the right with caption BELOW. No boxed backgrounds behind products, no separate rectangular object-photo slabs, no text beside the products, no full-width image/text alternating bands. Broad empty sage gutters of96logicalpx; 140logicalpx vertical air between rows; a generous empty interval before footer. Three actual products and one editorial image only. No decorative presentation frame. Exactly text filter 'All', underline it; never 'All selected'.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/01-collection-desktop-v2.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-desktop.png",
+          "role": "edit target; replace checkerboard catalogue composition",
+          "sha256": "2976919683b0b05b278dd529973add1eb0450c4b10b3966c16a3280dcf9c8bf8"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/inputs/selected-desktop.png",
+          "role": "approved brand and Gesture identity",
+          "sha256": "45773d1632f7a42ab5831567e363cd8b770013913c33b14b155dd58fe8b2dcaa"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-desktop-v2.png",
+      "qa_status": "accepted visual inspection",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-66e074e0-f6e7-452a-8bc3-ac9a2238610b.png",
+      "native_width": 1086,
+      "native_height": 1448,
+      "sha256": "89415e145c236a4b7d9bf86c7cb388ab3e0fd73f819b507ca23e89dec4577cf5",
+      "qa_notes": "Accepted by root visual QA: authored two-column catalogue, All label, caption alignment, correct product geometry/prices, full footer."
+    },
+    {
+      "page": "01-collection",
+      "device": "desktop",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end VIREL website catalogue page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Objects in motion. Content below is exact and complete; don't add unrelated filler. Chloé collection archive: distinguish silhouettes and separate filter controls; authored use is three unequal object studies and a single movement photograph, without cards.\nFORMAT: complete DESKTOP webpage from top header through bottom footer. Tall portrait 3:5 (target1536x2560 native); design is 1440 logical px wide, with desktop multi-column hierarchy and 96px side gutters. 120–180px vertical pauses between distinct compositions; 28–40px inside groups. This is a long desktop page, not a mobile page. Keep the page sparse enough for native clarity.\nHEADER: compact VIREL mark left; Collection / Our story / Care / Menu / Bag (0) right; primary navigation active for this destination where present. Header background matches page, no giant wordmark.\nPAGE CONTENT IN ORDER:\nTitle “Objects in motion”. Short subline “Three silhouettes. A language of curves.” Underline All selected, Shoulder, Small objects, with “3 pieces” at right. An airy collection: generous isolated Gesture product photograph on sage, caption “Gesture” / “Burgundy · $480” / “Discover Gesture →”; a separate isolated Cove cylinder on lighter sage, caption “Cove” / “Dark brown · $420” / “Explore Cove →”. Each product fully visible. On desktop use one larger first object and a smaller second object in an aligned unequal two-column composition; on mobile stack them with 96px logical pauses.\nA third isolated Trace tan oblong flap bag photograph, caption “Trace” / “Tan · $360” / “Explore Trace →”. Then one wide atmospheric crop of the adult woman in ivory blouse/plum trousers in the pale sage gallery carrying Gesture, caption “Objects, in motion.” / “Read the form study →”. This is a short campaign pause after the useful catalogue, not a second homepage hero. No filters repeated. Footer follows with clear generous spacing.\nFOOTER: after100logicalpx open space, compact wordmark and useful links exactly VIREL / Collection / Gesture / Form study / Care / Contact / Privacy / Terms; Privacy and Terms readable. No newsletter block unless specified, no repeated social strip. Full finished bottom edge. Use a varied, authored editorial composition, with the most useful task obvious.",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/inputs/selected-desktop.png",
+          "role": "selected brand and product reference",
+          "sha256": "45773d1632f7a42ab5831567e363cd8b770013913c33b14b155dd58fe8b2dcaa"
+        }
+      ],
+      "original": "/Users/jasonfesta/.codex/generated_images/01a17383-48e9-7451-861c-697b9907eaa9/exec-9edc0dde-8577-416a-8177-dac2c8f45344.png",
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-desktop.png",
+      "native_width": 793,
+      "native_height": 1983,
+      "sha256": "2976919683b0b05b278dd529973add1eb0450c4b10b3966c16a3280dcf9c8bf8",
+      "qa_status": "pending visual review"
+    },
+    {
+      "site": "virel",
+      "page": "01-collection",
+      "part": "lower",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: precise-object-edit. Edit image1, a mobile website lower portion. Image2 shows the correct Trace bag in its lower-left catalogue entry. IMPORTANT: the tan bag at TOP of image1 is WRONG: it borrowed Gesture's gold curved clasp. Replace ONLY that tan bag with the exact Trace from image2: a horizontally oblong RECTANGULAR tan leather shoulder bag, broad rectangular fold-over flap with rounded lower corners, NO exterior central gold clasp, single short shoulder strap. Preserve Trace label, Tan · $360, Explore Trace →, the entire lower burgundy Gesture walking photograph, all typography, sage ground, footer, margins and proportions. Do not change Gesture in the lower photograph. Don't add header. Keep complete same mobile image and native clarity. Target same809x1942 aspect. Only tan product identity correction; no other redesign.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/01-collection-lower-v2.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-lower.png",
+          "role": "edit target; correct Trace product shape only",
+          "sha256": "817656126a115d8a20f5174732b8e4ef9494dc29d0158e1771af469e1cc1304d"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-desktop-v2.png",
+          "role": "authoritative Trace geometry shown in lower-left of desktop catalogue",
+          "sha256": "89415e145c236a4b7d9bf86c7cb388ab3e0fd73f819b507ca23e89dec4577cf5"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-lower-v2.png",
+      "qa_status": "accepted visual inspection",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-6c726479-999e-40aa-9d1f-49401d3f5e7a.png",
+      "native_width": 809,
+      "native_height": 1944,
+      "sha256": "c79504d7885a35416994f119b6471d413c58adc453edd9db62d7842974d3088e",
+      "qa_notes": "Accepted fragment visual QA: Trace oblong flap and no central gold clasp; Gesture walking photo, footer and sage ground correct."
+    },
+    {
+      "site": "virel",
+      "page": "01-collection",
+      "part": "lower",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end VIREL website catalogue page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Objects in motion. Content below is exact and complete; don't add unrelated filler. Chloé collection archive: distinguish silhouettes and separate filter controls; authored use is three unequal object studies and a single movement photograph, without cards.\nFORMAT: LOWER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160;390logicalpx wide,936logicalpx high. Real phone reflow. 28px side gutters, body16/24, headings28–36, controls44–48, 80–112logicalpx between distinct groups. ONE column; all steps vertically. No header, no repeated page title, no fragment label. Image2 when attached is the upper-half typography/palette continuation reference; image1 identity is authoritative. Begin with56logicalpx of FLAT main palette background, empty, matching upper ending. Don't repeat upper content.\nRENDER ONLY:\nA third isolated Trace tan oblong flap bag photograph, caption “Trace” / “Tan · $360” / “Explore Trace →”. Then one wide atmospheric crop of the adult woman in ivory blouse/plum trousers in the pale sage gallery carrying Gesture, caption “Objects, in motion.” / “Read the form study →”. This is a short campaign pause after the useful catalogue, not a second homepage hero. No filters repeated. Footer follows with clear generous spacing.\nFOOTER exact useful links: VIREL / Collection / Gesture / Form study / Care / Contact / Privacy / Terms. Compact footer wordmark once; links readable in two calm columns or stacked small groups, Privacy/Terms last. Full finished bottom edge, no clipped type. No newsletter block or social strip.\nMatch actual upper image2's scale and type. Trace photo is full-width vertical mobile; NO header or filters, no repeated Gesture or Cove entry.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/01-collection-lower.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/inputs/selected-desktop.png",
+          "role": "approved brand and Gesture identity",
+          "sha256": "45773d1632f7a42ab5831567e363cd8b770013913c33b14b155dd58fe8b2dcaa"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-upper.png",
+          "role": "mobile upper continuity reference",
+          "sha256": "1bd36500457097692d13fb1fe658fce456576e845a1de552778e0003592bf3d9"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-lower.png",
+      "qa_status": "pending visual review",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-3cd07c98-5b4d-4456-9b42-621c493199f8.png",
+      "native_width": 809,
+      "native_height": 1942,
+      "sha256": "817656126a115d8a20f5174732b8e4ef9494dc29d0158e1771af469e1cc1304d"
+    },
+    {
+      "page": "01-collection",
+      "device": "upper",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end VIREL website catalogue page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Objects in motion. Content below is exact and complete; don't add unrelated filler. Chloé collection archive: distinguish silhouettes and separate filter controls; authored use is three unequal object studies and a single movement photograph, without cards.\nFORMAT: UPPER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160. It represents390logical px width and936logicalpx height. Real narrow-phone reflow, not compressed desktop. 28px side gutters, body16/24, headings32–42, touch controls44–48, 80–112logicalpx between groups. ONE column. Use the tall canvas to give photos and labels room; don't cram. This is a production fragment that will be joined to a lower half, so no footer and no continuation label.\nHeader: compact VIREL, Menu, Bag (0), one row with generous safe whitespace. Small eyebrow \"Collection\".\nRENDER ONLY:\nTitle “Objects in motion”. Short subline “Three silhouettes. A language of curves.” Underline All selected, Shoulder, Small objects, with “3 pieces” at right. An airy collection: generous isolated Gesture product photograph on sage, caption “Gesture” / “Burgundy · $480” / “Discover Gesture →”; a separate isolated Cove cylinder on lighter sage, caption “Cove” / “Dark brown · $420” / “Explore Cove →”. Each product fully visible. On desktop use one larger first object and a smaller second object in an aligned unequal two-column composition; on mobile stack them with 96px logical pauses.\nFinish with 56logicalpx of FLAT main background color from the palette, empty. No footer, no invented content, no cutoff.",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/inputs/selected-desktop.png",
+          "role": "selected brand and product reference",
+          "sha256": "45773d1632f7a42ab5831567e363cd8b770013913c33b14b155dd58fe8b2dcaa"
+        }
+      ],
+      "original": "/Users/jasonfesta/.codex/generated_images/01a17383-48e9-7451-861c-697b9907eaa9/exec-a30e63e3-5221-4f53-bc38-75df1e364465.png",
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/01-collection-upper.png",
+      "native_width": 954,
+      "native_height": 1649,
+      "sha256": "1bd36500457097692d13fb1fe658fce456576e845a1de552778e0003592bf3d9",
+      "qa_status": "pending visual review"
+    },
+    {
+      "site": "virel",
+      "page": "02-gesture",
+      "part": "desktop",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end VIREL website product page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Gesture. Content below is exact and complete; don't add unrelated filler. Polène Numéro Dix product page: distinct photo gallery, color choice, purchasing controls and secondary detail disclosure. Our layout uses larger negative space and retained original Gesture identity.\nFORMAT: complete DESKTOP webpage from top header through bottom footer. Portrait 3:4 (target1536x2048 native); design is 1440 logical px wide, with desktop multi-column hierarchy and 96px side gutters. 120–180px vertical pauses between distinct compositions; 28–40px inside groups. This is a long desktop page, not a mobile page. Keep the page sparse enough for native clarity.\nHEADER: compact VIREL mark left; Collection / Our story / Care / Menu / Bag (0) right; primary navigation active for this destination where present. Header background matches page, no giant wordmark.\nPAGE CONTENT IN ORDER:\nPurchase-focused opening. Large isolated three-quarter product photograph of full burgundy Gesture with full strap and curved clasp. Beside it on desktop, beneath it on mobile, show exact title “Gesture”, “Burgundy”, “$480”, “A curved form, carried close.” One burgundy swatch selected; quantity “−  1  +”; prominent dark-plum “Add to bag — $480”. Small links “Details +” and “Delivery & returns +”. Do not show a cart subtotal. Bag (0) still empty before action. Second small gallery thumbnail only if plenty of room; not required.\nTwo beautifully separated photographic studies: full bag at hip on the same walking adult ivory/plum outfit in sage gallery, caption “Carried close.”; then macro of the actual single curved gold clasp and burgundy flap, caption “A curve, held in place.” A clean row “Materials & care +”, then “Explore the collection →”. No new specifications, dimensions, reviews, discount, delivery promises. Footer.\nFOOTER: after100logicalpx open space, compact wordmark and useful links exactly VIREL / Collection / Gesture / Form study / Care / Contact / Privacy / Terms; Privacy and Terms readable. No newsletter block unless specified, no repeated social strip. Full finished bottom edge. Use a varied, authored editorial composition, with the most useful task obvious.\nShow exactly ONE Burgundy color swatch, no additional or unnamed colors.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/02-gesture-desktop.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/inputs/selected-desktop.png",
+          "role": "brand/product reference",
+          "sha256": "45773d1632f7a42ab5831567e363cd8b770013913c33b14b155dd58fe8b2dcaa"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-desktop.png",
+      "qa_status": "accepted visual inspection",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-2ad337dc-a82b-43a6-9c21-de6cf810cc3f.png",
+      "native_width": 1086,
+      "native_height": 1448,
+      "sha256": "c3ec05dba0d94dae41713cec0d66414e5c0bb00850495b5276824962b90764ad",
+      "qa_notes": "Inspected: correct Gesture crescent/flap/gold-clasp geometry, one Burgundy swatch, quantity1 and $480 consistent, complete task-first purchase layout and footer."
+    },
+    {
+      "site": "virel",
+      "page": "02-gesture",
+      "part": "lower",
+      "mode": "built-in image_gen",
+      "prompt": "Edit image1, the LOWER continuation of a genuine 390logicalpx mobile product page. Preserve photographs, exact bag geometry, all copy, sage and plum palette. Correct the cramped small footer and mobile gutters. Use the same 7.5% side gutters as image2 for all inset photographs and text. Footer should have VIREL alone, generous vertical gap, then TWO columns of links: left Collection / Gesture / Form study / Care; right Contact / Privacy / Terms. Make footer link type the SAME comfortably readable mobile scale as 'Materials & care' (about16logicalpx; no microtype). Keep photo captions 'Carried close.' and 'A curve, held in place.' Increase the empty sage space AFTER 'Carried close.' before the clasp image to at least70logicalpx. Give the footer generous breathing space. Preserve row divider endpoints on the same left/right text grid. The page may become taller to fit; target portrait1:2.4, native900x2160. No header, no repeated purchase, no new words, no device frame. Maintain a flat sage56logicalpx empty band at top for joining. This is a raster mobile page fragment.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/02-gesture-lower-v2.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-lower.png",
+          "role": "edit lower mobile section",
+          "sha256": "9a5b795967241f33b16ddb39b9b2caf692ec5e0b3b92b82af21535c777b1ebf5"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-upper.png",
+          "role": "accepted upper mobile typography and gutters",
+          "sha256": "051a6f09d8ab7a3cdcf1bfdde8b51162a131b8a972d432231cff9b75b43c5b04"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-lower-v2.png",
+      "qa_status": "pending visual review",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-d378f22c-c0c1-450f-b414-08c98d348c6d.png",
+      "native_width": 771,
+      "native_height": 2039,
+      "sha256": "33894f2a2b4ca900cb82589806dfe68f94dd0f7e5e1abee5efe26a77ba41f1ca"
+    },
+    {
+      "site": "virel",
+      "page": "02-gesture",
+      "part": "lower",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end VIREL website product page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Gesture. Content below is exact and complete; don't add unrelated filler. Polène Numéro Dix product page: distinct photo gallery, color choice, purchasing controls and secondary detail disclosure. Our layout uses larger negative space and retained original Gesture identity.\nFORMAT: LOWER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160;390logicalpx wide,936logicalpx high. Real phone reflow. 28px side gutters, body16/24, headings28–36, controls44–48, 80–112logicalpx between distinct groups. ONE column; all steps vertically. No header, no repeated page title, no fragment label. Image2 when attached is the upper-half typography/palette continuation reference; image1 identity is authoritative. Begin with56logicalpx of FLAT main palette background, empty, matching upper ending. Don't repeat upper content.\nRENDER ONLY:\nTwo beautifully separated photographic studies: full bag at hip on the same walking adult ivory/plum outfit in sage gallery, caption “Carried close.”; then macro of the actual single curved gold clasp and burgundy flap, caption “A curve, held in place.” A clean row “Materials & care +”, then “Explore the collection →”. No new specifications, dimensions, reviews, discount, delivery promises. Footer.\nFOOTER exact useful links: VIREL / Collection / Gesture / Form study / Care / Contact / Privacy / Terms. Compact footer wordmark once; links readable in two calm columns or stacked small groups, Privacy/Terms last. Full finished bottom edge, no clipped type. No newsletter block or social strip.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/02-gesture-lower.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-desktop.png",
+          "role": "exact matching desktop and Gesture identity",
+          "sha256": "c3ec05dba0d94dae41713cec0d66414e5c0bb00850495b5276824962b90764ad"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-upper.png",
+          "role": "upper-half continuation",
+          "sha256": "051a6f09d8ab7a3cdcf1bfdde8b51162a131b8a972d432231cff9b75b43c5b04"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-lower.png",
+      "qa_status": "pending visual review",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-ba5beae7-d647-4290-b6ed-de59b7ed43a8.png",
+      "native_width": 905,
+      "native_height": 1737,
+      "sha256": "9a5b795967241f33b16ddb39b9b2caf692ec5e0b3b92b82af21535c777b1ebf5"
+    },
+    {
+      "site": "virel",
+      "page": "02-gesture",
+      "part": "upper",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end VIREL website product page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: Gesture. Content below is exact and complete; don't add unrelated filler. Polène Numéro Dix product page: distinct photo gallery, color choice, purchasing controls and secondary detail disclosure. Our layout uses larger negative space and retained original Gesture identity.\nFORMAT: UPPER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160. It represents390logical px width and936logicalpx height. Real narrow-phone reflow, not compressed desktop. 28px side gutters, body16/24, headings32–42, touch controls44–48, 80–112logicalpx between groups. ONE column. Use the tall canvas to give photos and labels room; don't cram. This is a production fragment that will be joined to a lower half, so no footer and no continuation label.\nHeader: compact VIREL, Menu, Bag (0), one row with generous safe whitespace. Small eyebrow \"Collection / Gesture\".\nRENDER ONLY:\nPurchase-focused opening. Large isolated three-quarter product photograph of full burgundy Gesture with full strap and curved clasp. Beside it on desktop, beneath it on mobile, show exact title “Gesture”, “Burgundy”, “$480”, “A curved form, carried close.” One burgundy swatch selected; quantity “−  1  +”; prominent dark-plum “Add to bag — $480”. Small links “Details +” and “Delivery & returns +”. Do not show a cart subtotal. Bag (0) still empty before action. Second small gallery thumbnail only if plenty of room; not required.\nFinish with 56logicalpx of FLAT main background color from the palette, empty. No footer, no invented content, no cutoff.\nImage1 is the accepted desktop of this very page. Match its Gesture geometry, copy, type and sage exactly while genuinely reflowing to ONE mobile column. Exactly ONE burgundy swatch; no other colors. Make the touch controls generous and content airy.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/02-gesture-upper.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-desktop.png",
+          "role": "matching desktop page and exact product",
+          "sha256": "c3ec05dba0d94dae41713cec0d66414e5c0bb00850495b5276824962b90764ad"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/inputs/selected-desktop.png",
+          "role": "selected identity",
+          "sha256": "45773d1632f7a42ab5831567e363cd8b770013913c33b14b155dd58fe8b2dcaa"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-upper.png",
+      "qa_status": "accepted visual inspection",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-2d906cf4-832c-4e7a-8ea6-74a7fac72a54.png",
+      "native_width": 809,
+      "native_height": 1942,
+      "sha256": "051a6f09d8ab7a3cdcf1bfdde8b51162a131b8a972d432231cff9b75b43c5b04",
+      "qa_notes": "Inspected: genuine one-column mobile product with full strap, ample air, one selected burgundy swatch, readable price/quantity/button/disclosures."
+    },
+    {
+      "site": "virel",
+      "page": "03-form-study",
+      "part": "desktop",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end VIREL website essay page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: A line becomes a gesture. Content below is exact and complete; don't add unrelated filler. HEREU retained craft study distinguishes materials, tools and making as visual evidence; Chloé campaign archive supports the clothing-and-object scale. This is an authored concept essay, not a claimed real manufacturing process.\nFORMAT: complete DESKTOP webpage from top header through bottom footer. Portrait 3:4 (target1536x2048 native); design is 1440 logical px wide, with desktop multi-column hierarchy and 96px side gutters. 120–180px vertical pauses between distinct compositions; 28–40px inside groups. This is a long desktop page, not a mobile page. Keep the page sparse enough for native clarity.\nHEADER: compact VIREL mark left; Collection / Our story / Care / Menu / Bag (0) right; primary navigation active for this destination where present. Header background matches page, no giant wordmark.\nPAGE CONTENT IN ORDER:\nType-led opening on pale sage, compact title “A line becomes a gesture.” Two quiet sentences “A curve takes shape through movement. The object follows the hand.” Large editorial photograph of a hand holding a curved burgundy leather pattern on a light sage worktable, tracing-paper pencil arcs beside it. No claims about country, craftsmanship certifications or production history. Small caption “01 / The line”.\nTwo differently scaled image studies with generous pauses: close-up of the curved gold clasp resting next to burgundy leather, caption “02 / The turn”; then an adult in ivory blouse/plum trousers passing through sage gallery with the complete Gesture bag, caption “03 / The gesture”. Closing single line “Form is something you carry.” and “Discover Gesture — $480 →”. Photographs are original conceptual design studies. Footer. On mobile 01,02,03 occupy full width vertically with long gaps; do not combine into a horizontal process.\nFOOTER: after100logicalpx open space, compact wordmark and useful links exactly VIREL / Collection / Gesture / Form study / Care / Contact / Privacy / Terms; Privacy and Terms readable. No newsletter block unless specified, no repeated social strip. Full finished bottom edge. Use a varied, authored editorial composition, with the most useful task obvious.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/03-form-study-desktop.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/inputs/selected-desktop.png",
+          "role": "selected brand identity",
+          "sha256": "45773d1632f7a42ab5831567e363cd8b770013913c33b14b155dd58fe8b2dcaa"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/02-gesture-desktop.png",
+          "role": "verified Gesture product geometry",
+          "sha256": "c3ec05dba0d94dae41713cec0d66414e5c0bb00850495b5276824962b90764ad"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/03-form-study-desktop.png",
+      "qa_status": "accepted visual inspection",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-b7204ef0-d4a8-451b-9e78-61a95e1ccda3.png",
+      "native_width": 1086,
+      "native_height": 1448,
+      "sha256": "432aa2736ab53d208e90e46b69c0de34a693d9e15fa8afc836c6d18bf2932d19",
+      "qa_notes": "Inspected: original process essay architecture, 01/02/03 imagery and text correct, actual Gesture identity and $480 preserved; complete footer."
+    },
+    {
+      "site": "virel",
+      "page": "03-form-study",
+      "part": "lower",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end VIREL website essay page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: A line becomes a gesture. Content below is exact and complete; don't add unrelated filler. HEREU retained craft study distinguishes materials, tools and making as visual evidence; Chloé campaign archive supports the clothing-and-object scale. This is an authored concept essay, not a claimed real manufacturing process.\nFORMAT: LOWER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160;390logicalpx wide,936logicalpx high. Real phone reflow. 28px side gutters, body16/24, headings28–36, controls44–48, 80–112logicalpx between distinct groups. ONE column; all steps vertically. No header, no repeated page title, no fragment label. Image2 when attached is the upper-half typography/palette continuation reference; image1 identity is authoritative. Begin with56logicalpx of FLAT main palette background, empty, matching upper ending. Don't repeat upper content.\nRENDER ONLY:\nTwo differently scaled image studies with generous pauses: close-up of the curved gold clasp resting next to burgundy leather, caption “02 / The turn”; then an adult in ivory blouse/plum trousers passing through sage gallery with the complete Gesture bag, caption “03 / The gesture”. Closing single line “Form is something you carry.” and “Discover Gesture — $480 →”. Photographs are original conceptual design studies. Footer. On mobile 01,02,03 occupy full width vertically with long gaps; do not combine into a horizontal process.\nFOOTER exact useful links: VIREL / Collection / Gesture / Form study / Care / Contact / Privacy / Terms. Compact footer wordmark once; links readable in two calm columns or stacked small groups, Privacy/Terms last. Full finished bottom edge, no clipped type. No newsletter block or social strip.\nMatch Image2 mobile type size. The two numbered photographs are VERTICAL, 02 then03, one per row. Use 70–90logicalpx of sage between distinct image studies, 24logicalpx caption spacing, and readable footer links (16logicalpx), with wordmark on its own line above two link columns. No microscopic desktop footer.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/03-form-study-lower.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/03-form-study-desktop.png",
+          "role": "matching desktop and exact Gesture",
+          "sha256": "432aa2736ab53d208e90e46b69c0de34a693d9e15fa8afc836c6d18bf2932d19"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/03-form-study-upper.png",
+          "role": "upper mobile continuation",
+          "sha256": "099d0b0799850eec8c3de719861e8f9a663936dfc2e35790a3d4ef1c45d38832"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/03-form-study-lower.png",
+      "qa_status": "pending visual review",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-052327bb-49c8-4937-828f-ee89870e25e0.png",
+      "native_width": 826,
+      "native_height": 1905,
+      "sha256": "86dd06660a98e566b82843f4b507a5d947e1960e102dd55c0bdd9d2422b35470"
+    },
+    {
+      "site": "virel",
+      "page": "03-form-study",
+      "part": "upper",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: ui-mockup. Create an original high-end VIREL website essay page as a raster design image. Preserve the selected identity and product of image1 but NOT its homepage composition. Gesture $480 is burgundy asymmetric crescent shoulder bag with curved overlapping flap and one curved gold clasp, exactly the reference, not gathered. Cove $420 is a dark brown upright cylinder bag. Trace $360 is a tan oblong flap bag. Compact spaced serif VIREL wordmark.\nTypography direction: Cormorant Garamond 500/600 and DM Sans 400/500; exact serif or condensed brand identity stays consistent. Palette: pale sage #E4EBDF main, luminous pale saffron #F8ECC0 secondary, plum #4A2B38 ink. Use a fresh visibly sage canvas, never beige. Photography retains natural colors.\nAir and precision: disciplined alignment, abundant open colored ground, no ornamental borders, no rounded cards, no checkerboard template, no arbitrary divider. All photographs natural editorial realism, geometry undistorted, products fully visible. Text crisp and correctly spelled. No device/browser/presentation frame. No fabricated awards, discounts, warranties, shipping promises, specifications, origin claims, dates or testimonials. Body and controls remain legible.\nPage: A line becomes a gesture. Content below is exact and complete; don't add unrelated filler. HEREU retained craft study distinguishes materials, tools and making as visual evidence; Chloé campaign archive supports the clothing-and-object scale. This is an authored concept essay, not a claimed real manufacturing process.\nFORMAT: UPPER HALF of one continuous mobile webpage. Native portrait width:height1:2.4 target900x2160. It represents390logical px width and936logicalpx height. Real narrow-phone reflow, not compressed desktop. 28px side gutters, body16/24, headings32–42, touch controls44–48, 80–112logicalpx between groups. ONE column. Use the tall canvas to give photos and labels room; don't cram. This is a production fragment that will be joined to a lower half, so no footer and no continuation label.\nHeader: compact VIREL, Menu, Bag (0), one row with generous safe whitespace. Small eyebrow \"Form study / 01\".\nRENDER ONLY:\nType-led opening on pale sage, compact title “A line becomes a gesture.” Two quiet sentences “A curve takes shape through movement. The object follows the hand.” Large editorial photograph of a hand holding a curved burgundy leather pattern on a light sage worktable, tracing-paper pencil arcs beside it. No claims about country, craftsmanship certifications or production history. Small caption “01 / The line”.\nFinish with 56logicalpx of FLAT main background color from the palette, empty. No footer, no invented content, no cutoff.\nImage1 is the exact matching desktop article; preserve correct crescent Gesture cutting pattern. Reflow into true mobile ONE column. First 01 label and content vertical. Keep caption spacing large; body at least 16px at 390logical width, not tiny desktop labels.",
+      "prompt_file": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/prompts/03-form-study-upper.txt",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/03-form-study-desktop.png",
+          "role": "matching desktop article",
+          "sha256": "432aa2736ab53d208e90e46b69c0de34a693d9e15fa8afc836c6d18bf2932d19"
+        },
+        {
+          "order": 2,
+          "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/inputs/selected-desktop.png",
+          "role": "selected product identity",
+          "sha256": "45773d1632f7a42ab5831567e363cd8b770013913c33b14b155dd58fe8b2dcaa"
+        }
+      ],
+      "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/virel/sources/03-form-study-upper.png",
+      "qa_status": "pending visual review",
+      "original": "/Users/jasonfesta/.codex/generated_images/01a1738f-7a4f-7331-891b-5b3364f00eb1/exec-eb499d3f-4dcf-492d-bb1e-a49d239b7e82.png",
+      "native_width": 809,
+      "native_height": 1942,
+      "sha256": "099d0b0799850eec8c3de719861e8f9a663936dfc2e35790a3d4ef1c45d38832"
+    }
+  ],
+  "final_collection_review": {
+    "01-collection": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Desktop v2 unboxed catalogue; mobile correct Gesture, Cove, plain Trace and prices. Complete continuous flow.",
+      "hashes": {
+        "desktop": "89415e145c236a4b7d9bf86c7cb388ab3e0fd73f819b507ca23e89dec4577cf5",
+        "mobile": "2fe7207f26943b9d55ad32dc7a3ffa82d068c999794e3c282ffd352de19c1305"
+      }
+    },
+    "02-gesture": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Correct Burgundy Gesture480, one swatch, clean divider alignment and full-width mobile purchase.",
+      "hashes": {
+        "desktop": "c3ec05dba0d94dae41713cec0d66414e5c0bb00850495b5276824962b90764ad",
+        "mobile": "5c4ba2a5ebfc4a6beb4601e91ef96bea0e1b1ea9a5618fdb9a793da19f313995"
+      }
+    },
+    "03-form-study": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Line, turn and gesture sequence; consistent clasp/body, mobile strictlyvertical and complete.",
+      "hashes": {
+        "desktop": "432aa2736ab53d208e90e46b69c0de34a693d9e15fa8afc836c6d18bf2932d19",
+        "mobile": "c97c5127f33a2261fb67c3ae6c51d8e03ef5dd2942c55796c82565459e8f4e9e"
+      }
+    }
+  }
+}

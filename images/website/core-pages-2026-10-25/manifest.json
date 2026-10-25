@@ -1,0 +1,918 @@
+{
+  "collection": "WDA core page images",
+  "date": "2026-10-25",
+  "scope": "Three new core pages for each of nine active websites, each desktop and continuous mobile. AVELA unchanged.",
+  "page_count": 27,
+  "image_count": 54,
+  "implementation": "Raster images only; no website implementation.",
+  "processing": "Original generation plus documented proportional assembly where required; native detail is not created by upscaling.",
+  "release_download": "https://github.com/jasonfesta/WDA/releases/download/website-core-pages-2026-10-25/wda-core-pages-2026-10-25-images.zip",
+  "archive": {
+    "filename": "wda-core-pages-2026-10-25-images.zip",
+    "image_count": 54,
+    "bytes": 145997455,
+    "sha256": "5e6ea3e8479438ad050cd68da8142a480b1e95e65326ff56e365d2cb17136ab9"
+  },
+  "websites": [
+    {
+      "id": "room-and-ritual",
+      "name": "Room & Ritual",
+      "pages": [
+        {
+          "id": "01-projects",
+          "title": "Projects",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Correct golden apricot identity, aligned desktop composition, excessive mobile tail shortened and complete vertical projects. Final color-continuity correction re-inspected.",
+            "hashes": {
+              "desktop": "ebd0d42c43602ef1da549549f03807552e1e3adf900c417e6b06e16c5c451651",
+              "mobile": "e97ce6a37ac7b31fe025c9b1dd26b3ecb6be896bb0442d06d2b4b1a45ad196ee"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "room-and-ritual/01-projects/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 2301951,
+              "sha256": "ebd0d42c43602ef1da549549f03807552e1e3adf900c417e6b06e16c5c451651",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/room-and-ritual/01-projects/desktop.png"
+            },
+            "mobile": {
+              "file": "room-and-ritual/01-projects/mobile.png",
+              "width": 819,
+              "height": 3489,
+              "bytes": 3708175,
+              "sha256": "e97ce6a37ac7b31fe025c9b1dd26b3ecb6be896bb0442d06d2b4b1a45ad196ee",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/room-and-ritual/01-projects/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "02-courtyard-house",
+          "title": "The Courtyard House",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Courtyard identity and photo sequence match, continuous mobile project narrative, aligned photo/caption edges.",
+            "hashes": {
+              "desktop": "107175f317d26359aaf8cf58961a5147568d00fb83e302d1e079b444e5ffcf44",
+              "mobile": "b3f46d381d3a92e18c611a4b0e39aa7d94ddacfd9cb22eb7fffbca60cc9660d1"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "room-and-ritual/02-courtyard-house/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 2369155,
+              "sha256": "107175f317d26359aaf8cf58961a5147568d00fb83e302d1e079b444e5ffcf44",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/room-and-ritual/02-courtyard-house/desktop.png"
+            },
+            "mobile": {
+              "file": "room-and-ritual/02-courtyard-house/mobile.png",
+              "width": 804,
+              "height": 3908,
+              "bytes": 4065690,
+              "sha256": "b3f46d381d3a92e18c611a4b0e39aa7d94ddacfd9cb22eb7fffbca60cc9660d1",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/room-and-ritual/02-courtyard-house/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "03-start-a-project",
+          "title": "Start a project",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Matching inquiry fields; mobile form leads, clear labels and unselected consent. Full-width submission and complete footer.",
+            "hashes": {
+              "desktop": "d1402c0aed8f92929905927570246b879f9c80136db5ecee3968e3bf8625873a",
+              "mobile": "dd522b2c825c90e32e3292ddbb61d7544cf387492c73b0c0b5132981cd676122"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "room-and-ritual/03-start-a-project/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 1910480,
+              "sha256": "d1402c0aed8f92929905927570246b879f9c80136db5ecee3968e3bf8625873a",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/room-and-ritual/03-start-a-project/desktop.png"
+            },
+            "mobile": {
+              "file": "room-and-ritual/03-start-a-project/mobile.png",
+              "width": 812,
+              "height": 3854,
+              "bytes": 3110537,
+              "sha256": "dd522b2c825c90e32e3292ddbb61d7544cf387492c73b0c0b5132981cd676122",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/room-and-ritual/03-start-a-project/mobile.png"
+            }
+          }
+        }
+      ],
+      "provenance": "room-and-ritual/manifest.json"
+    },
+    {
+      "id": "oriel",
+      "name": "Oriel",
+      "pages": [
+        {
+          "id": "01-project-index",
+          "title": "Project index",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Three projects match; deliberate separate text/photo rails and correct caption/divider alignment. Mobile vertical sequence.",
+            "hashes": {
+              "desktop": "88be599383aeda99cc13524b80231cfb16401679833a8a6791d77545f4aeb4c8",
+              "mobile": "d5dbe467fcb578daa0fc7d23c5a2624d9740cbef1afe4679c39a5cf3dfd7a50f"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "oriel/01-project-index/desktop.png",
+              "width": 971,
+              "height": 1619,
+              "bytes": 1943925,
+              "sha256": "88be599383aeda99cc13524b80231cfb16401679833a8a6791d77545f4aeb4c8",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/oriel/01-project-index/desktop.png"
+            },
+            "mobile": {
+              "file": "oriel/01-project-index/mobile.png",
+              "width": 814,
+              "height": 3648,
+              "bytes": 3095503,
+              "sha256": "d5dbe467fcb578daa0fc7d23c5a2624d9740cbef1afe4679c39a5cf3dfd7a50f",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/oriel/01-project-index/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "02-willow-hall",
+          "title": "Willow Hall",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Willow clay/oak/brass identity; desktop image pair is a tight intentional study group, mobile studies vertical with project actions.",
+            "hashes": {
+              "desktop": "c2fbf54236fa010d5505547b4c417b11f1164b842b5434846b56bb01f52a2a60",
+              "mobile": "0506198cce561f7dc7301d354e92869476f4e80f3e25692937d834c05e0179d5"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "oriel/02-willow-hall/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 2154657,
+              "sha256": "c2fbf54236fa010d5505547b4c417b11f1164b842b5434846b56bb01f52a2a60",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/oriel/02-willow-hall/desktop.png"
+            },
+            "mobile": {
+              "file": "oriel/02-willow-hall/mobile.png",
+              "width": 801,
+              "height": 3885,
+              "bytes": 3651595,
+              "sha256": "0506198cce561f7dc7301d354e92869476f4e80f3e25692937d834c05e0179d5",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/oriel/02-willow-hall/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "03-approach",
+          "title": "Approach",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Listen/Reuse/Inhabit clearly sequenced, mobile numbers vertical, aligned photos and footer rule.",
+            "hashes": {
+              "desktop": "69f1ea4954e260d6a469b48f932f48b5c7f8f3e2efba5c9ad5342953ccf7afc6",
+              "mobile": "2423400e76c89d73fbebef1760bf39bfdf29835d95e809f267fa88c5b2f3d23b"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "oriel/03-approach/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 2045180,
+              "sha256": "69f1ea4954e260d6a469b48f932f48b5c7f8f3e2efba5c9ad5342953ccf7afc6",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/oriel/03-approach/desktop.png"
+            },
+            "mobile": {
+              "file": "oriel/03-approach/mobile.png",
+              "width": 808,
+              "height": 3887,
+              "bytes": 3593897,
+              "sha256": "2423400e76c89d73fbebef1760bf39bfdf29835d95e809f267fa88c5b2f3d23b",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/oriel/03-approach/mobile.png"
+            }
+          }
+        }
+      ],
+      "provenance": "oriel/manifest.json"
+    },
+    {
+      "id": "sundrop",
+      "name": "Sundrop",
+      "pages": [
+        {
+          "id": "01-shop-packs",
+          "title": "Shop packs",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Correct4/8/12 can prices, consistent selected4-can purchase, mobile stacked and complete footer.",
+            "hashes": {
+              "desktop": "b15f4de17c542821347308a9c25b7e7d27d9294364f0eb0647574f5d462ec32e",
+              "mobile": "3e1c95c11f6e5381697e85458d0e13c401c9f2ef50ddb9d2be755d6beb7d5816"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "sundrop/01-shop-packs/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 2075162,
+              "sha256": "b15f4de17c542821347308a9c25b7e7d27d9294364f0eb0647574f5d462ec32e",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/sundrop/01-shop-packs/desktop.png"
+            },
+            "mobile": {
+              "file": "sundrop/01-shop-packs/mobile.png",
+              "width": 809,
+              "height": 3884,
+              "bytes": 3540894,
+              "sha256": "3e1c95c11f6e5381697e85458d0e13c401c9f2ef50ddb9d2be755d6beb7d5816",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/sundrop/01-shop-packs/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "02-apricot-aperitif",
+          "title": "Apricot Aperitif",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Exact volume/ABV and4/8/12packprices; wide mobile controls, readable taste chapter and aligned disclosures.",
+            "hashes": {
+              "desktop": "7316f8a9d2c5254a03b07a06f89572de20c799f6e482b0123e790a20152e6580",
+              "mobile": "713e9944dfa4e3f67acf29ade296962eec98b47b3c2a72a31e76f4a5e35cd37b"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "sundrop/02-apricot-aperitif/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 2137866,
+              "sha256": "7316f8a9d2c5254a03b07a06f89572de20c799f6e482b0123e790a20152e6580",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/sundrop/02-apricot-aperitif/desktop.png"
+            },
+            "mobile": {
+              "file": "sundrop/02-apricot-aperitif/mobile.png",
+              "width": 806,
+              "height": 3887,
+              "bytes": 3444278,
+              "sha256": "713e9944dfa4e3f67acf29ade296962eec98b47b3c2a72a31e76f4a5e35cd37b",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/sundrop/02-apricot-aperitif/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "03-serving-guide",
+          "title": "Serving guide",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Chill/Pour/Settle in explicitly vertical mobile, label200ml8% correct, complete desktop and footer.",
+            "hashes": {
+              "desktop": "81aa2381aa68bae8956dd862dabf1a0ec354c3003dbd531a0c384e84618d0149",
+              "mobile": "0619fd83df9b8c9ad238d30a5fe9af37ca19ba6d9742ca26be795c0ac4fa1fcf"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "sundrop/03-serving-guide/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 2218178,
+              "sha256": "81aa2381aa68bae8956dd862dabf1a0ec354c3003dbd531a0c384e84618d0149",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/sundrop/03-serving-guide/desktop.png"
+            },
+            "mobile": {
+              "file": "sundrop/03-serving-guide/mobile.png",
+              "width": 809,
+              "height": 3874,
+              "bytes": 3550714,
+              "sha256": "0619fd83df9b8c9ad238d30a5fe9af37ca19ba6d9742ca26be795c0ac4fa1fcf",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/sundrop/03-serving-guide/mobile.png"
+            }
+          }
+        }
+      ],
+      "provenance": "sundrop/manifest.json"
+    },
+    {
+      "id": "serein",
+      "name": "Serein",
+      "pages": [
+        {
+          "id": "01-daily-essentials",
+          "title": "Daily essentials",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Three correct identities, volumes and prices; mobile products stacked vertically with complete footer.",
+            "hashes": {
+              "desktop": "b378f079118e3afdc0a2cc2109e03980ba50493031e3ca9247e404998bacef80",
+              "mobile": "89451d8f098d8d0aab57d14cd18ff4b7ed8b363c1431ff316950f8088375550b"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "serein/01-daily-essentials/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 2119709,
+              "sha256": "b378f079118e3afdc0a2cc2109e03980ba50493031e3ca9247e404998bacef80",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/serein/01-daily-essentials/desktop.png"
+            },
+            "mobile": {
+              "file": "serein/01-daily-essentials/mobile.png",
+              "width": 809,
+              "height": 3884,
+              "bytes": 3486395,
+              "sha256": "89451d8f098d8d0aab57d14cd18ff4b7ed8b363c1431ff316950f8088375550b",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/serein/01-daily-essentials/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "02-daily-oil",
+          "title": "Daily Oil",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Correct coral pump30ml48, functional-state visuals match, full-width mobile controls and aligned detail rows.",
+            "hashes": {
+              "desktop": "c61366b09e7c12844bb337d46569511a9c38598b4bf9df9614d9c3be206f57cf",
+              "mobile": "558d788b8b76205f97a42a18297f7bc863f13c20d5347f6eeed91f465baa3044"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "serein/02-daily-oil/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 1825549,
+              "sha256": "c61366b09e7c12844bb337d46569511a9c38598b4bf9df9614d9c3be206f57cf",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/serein/02-daily-oil/desktop.png"
+            },
+            "mobile": {
+              "file": "serein/02-daily-oil/mobile.png",
+              "width": 809,
+              "height": 3886,
+              "bytes": 2999142,
+              "sha256": "558d788b8b76205f97a42a18297f7bc863f13c20d5347f6eeed91f465baa3044",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/serein/02-daily-oil/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "03-daily-routine",
+          "title": "Routine",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Cleanse/Nourish/Pause correct products, volumes and prices, allmobile steps vertical, pump retained and full footer.",
+            "hashes": {
+              "desktop": "8d34c920c7b2213dc1382339dc1c934412a5be16520e9b992d44a1b3940457de",
+              "mobile": "b690a0022947567f8bcbd6419fd1694d3ea3ca310b8fd93c7e5c29947dd85155"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "serein/03-daily-routine/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 1847582,
+              "sha256": "8d34c920c7b2213dc1382339dc1c934412a5be16520e9b992d44a1b3940457de",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/serein/03-daily-routine/desktop.png"
+            },
+            "mobile": {
+              "file": "serein/03-daily-routine/mobile.png",
+              "width": 809,
+              "height": 3884,
+              "bytes": 3371520,
+              "sha256": "b690a0022947567f8bcbd6419fd1694d3ea3ca310b8fd93c7e5c29947dd85155",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/serein/03-daily-routine/mobile.png"
+            }
+          }
+        }
+      ],
+      "provenance": "serein/manifest.json"
+    },
+    {
+      "id": "vellune",
+      "name": "Vellune",
+      "pages": [
+        {
+          "id": "01-family-of-forms",
+          "title": "A family of forms",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Gathered Crescent, cylinder Column and Sillage match across views; prices and labels correct. Native mobile776 wide, no upscale.",
+            "hashes": {
+              "desktop": "c58882b2ed9fad209cf5146a94d2e53c04c176ddca79afd2d508e8feabe7a2e1",
+              "mobile": "db157cb18d2ff335c037c02aaed29dc5cf81cbb6b5bcd980270258dedb16a108"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "vellune/01-family-of-forms/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 2076044,
+              "sha256": "c58882b2ed9fad209cf5146a94d2e53c04c176ddca79afd2d508e8feabe7a2e1",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/vellune/01-family-of-forms/desktop.png"
+            },
+            "mobile": {
+              "file": "vellune/01-family-of-forms/mobile.png",
+              "width": 776,
+              "height": 3892,
+              "bytes": 3553296,
+              "sha256": "db157cb18d2ff335c037c02aaed29dc5cf81cbb6b5bcd980270258dedb16a108",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/vellune/01-family-of-forms/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "02-crescent",
+          "title": "Crescent",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Correct gathered Oxblood bag460, single swatch, unclipped shoulder identity, vertical photo details.",
+            "hashes": {
+              "desktop": "4f446a167782b0a466d17918496781d7a0d290cf167ae2ec75c1d70be7715c6e",
+              "mobile": "0a39e1ba2d8a2fc2de9117b46dca9ccf85f72523760f70af41ad732c7556d3a2"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "vellune/02-crescent/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 2261600,
+              "sha256": "4f446a167782b0a466d17918496781d7a0d290cf167ae2ec75c1d70be7715c6e",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/vellune/02-crescent/desktop.png"
+            },
+            "mobile": {
+              "file": "vellune/02-crescent/mobile.png",
+              "width": 793,
+              "height": 3889,
+              "bytes": 3111880,
+              "sha256": "0a39e1ba2d8a2fc2de9117b46dca9ccf85f72523760f70af41ad732c7556d3a2",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/vellune/02-crescent/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "03-atelier",
+          "title": "Atelier",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Concept sketch, gather detail and finished Crescent match; full-width narrow mobile reflow and complete footer.",
+            "hashes": {
+              "desktop": "d02283e21aa997480ace8d52457794d6066eab371e90a4e5c2be242b074bfda5",
+              "mobile": "76b6f341a3375224f17d298107ecac95936b1071affe9531bcc4b82b90660259"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "vellune/03-atelier/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 2215608,
+              "sha256": "d02283e21aa997480ace8d52457794d6066eab371e90a4e5c2be242b074bfda5",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/vellune/03-atelier/desktop.png"
+            },
+            "mobile": {
+              "file": "vellune/03-atelier/mobile.png",
+              "width": 809,
+              "height": 3647,
+              "bytes": 3405344,
+              "sha256": "76b6f341a3375224f17d298107ecac95936b1071affe9531bcc4b82b90660259",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/vellune/03-atelier/mobile.png"
+            }
+          }
+        }
+      ],
+      "provenance": "vellune/manifest.json"
+    },
+    {
+      "id": "virel",
+      "name": "VIREL",
+      "pages": [
+        {
+          "id": "01-collection",
+          "title": "Objects in motion",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Desktop v2 unboxed catalogue; mobile correct Gesture, Cove, plain Trace and prices. Complete continuous flow.",
+            "hashes": {
+              "desktop": "89415e145c236a4b7d9bf86c7cb388ab3e0fd73f819b507ca23e89dec4577cf5",
+              "mobile": "2fe7207f26943b9d55ad32dc7a3ffa82d068c999794e3c282ffd352de19c1305"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "virel/01-collection/desktop.png",
+              "width": 1086,
+              "height": 1448,
+              "bytes": 1673623,
+              "sha256": "89415e145c236a4b7d9bf86c7cb388ab3e0fd73f819b507ca23e89dec4577cf5",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/virel/01-collection/desktop.png"
+            },
+            "mobile": {
+              "file": "virel/01-collection/mobile.png",
+              "width": 809,
+              "height": 3342,
+              "bytes": 2556191,
+              "sha256": "2fe7207f26943b9d55ad32dc7a3ffa82d068c999794e3c282ffd352de19c1305",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/virel/01-collection/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "02-gesture",
+          "title": "Gesture",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Correct Burgundy Gesture480, one swatch, clean divider alignment and full-width mobile purchase.",
+            "hashes": {
+              "desktop": "c3ec05dba0d94dae41713cec0d66414e5c0bb00850495b5276824962b90764ad",
+              "mobile": "5c4ba2a5ebfc4a6beb4601e91ef96bea0e1b1ea9a5618fdb9a793da19f313995"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "virel/02-gesture/desktop.png",
+              "width": 1086,
+              "height": 1448,
+              "bytes": 1854876,
+              "sha256": "c3ec05dba0d94dae41713cec0d66414e5c0bb00850495b5276824962b90764ad",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/virel/02-gesture/desktop.png"
+            },
+            "mobile": {
+              "file": "virel/02-gesture/mobile.png",
+              "width": 771,
+              "height": 3890,
+              "bytes": 2777122,
+              "sha256": "5c4ba2a5ebfc4a6beb4601e91ef96bea0e1b1ea9a5618fdb9a793da19f313995",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/virel/02-gesture/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "03-form-study",
+          "title": "Form study",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Line, turn and gesture sequence; consistent clasp/body, mobile strictlyvertical and complete.",
+            "hashes": {
+              "desktop": "432aa2736ab53d208e90e46b69c0de34a693d9e15fa8afc836c6d18bf2932d19",
+              "mobile": "c97c5127f33a2261fb67c3ae6c51d8e03ef5dd2942c55796c82565459e8f4e9e"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "virel/03-form-study/desktop.png",
+              "width": 1086,
+              "height": 1448,
+              "bytes": 1946164,
+              "sha256": "432aa2736ab53d208e90e46b69c0de34a693d9e15fa8afc836c6d18bf2932d19",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/virel/03-form-study/desktop.png"
+            },
+            "mobile": {
+              "file": "virel/03-form-study/mobile.png",
+              "width": 809,
+              "height": 3808,
+              "bytes": 3440187,
+              "sha256": "c97c5127f33a2261fb67c3ae6c51d8e03ef5dd2942c55796c82565459e8f4e9e",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/virel/03-form-study/mobile.png"
+            }
+          }
+        }
+      ],
+      "provenance": "virel/manifest.json"
+    },
+    {
+      "id": "mellore",
+      "name": "MELLORE",
+      "pages": [
+        {
+          "id": "01-collection",
+          "title": "For the open day",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Expanded blue gutters, correct three products/prices; mobile one-column catalogue, complete footer.",
+            "hashes": {
+              "desktop": "6d65bfc91b877c0638196cb68e37b9c5897146dc8e47dbc8d12a5d037667b198",
+              "mobile": "8d13902ee3ee1a661bcb7655cea9fb224cd1fbc585353aa8df10ada6df510780"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "mellore/01-collection/desktop.png",
+              "width": 1086,
+              "height": 1448,
+              "bytes": 1987448,
+              "sha256": "6d65bfc91b877c0638196cb68e37b9c5897146dc8e47dbc8d12a5d037667b198",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/mellore/01-collection/desktop.png"
+            },
+            "mobile": {
+              "file": "mellore/01-collection/mobile.png",
+              "width": 809,
+              "height": 3886,
+              "bytes": 3342398,
+              "sha256": "8d13902ee3ee1a661bcb7655cea9fb224cd1fbc585353aa8df10ada6df510780",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/mellore/01-collection/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "02-sway",
+          "title": "Sway",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Correct Sway chestnut440, single selected swatch, full shoulder identity, matching purchase state and vertical mobile studies.",
+            "hashes": {
+              "desktop": "2f611e4e2f6a73711839141244df3b8bb2689c8feed6d433f767aa98e3e2ebcc",
+              "mobile": "3f4735d14f5dd21c7d587fe140b7ec962e0559cb502e6d057976874c3e754322"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "mellore/02-sway/desktop.png",
+              "width": 971,
+              "height": 1619,
+              "bytes": 1990696,
+              "sha256": "2f611e4e2f6a73711839141244df3b8bb2689c8feed6d433f767aa98e3e2ebcc",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/mellore/02-sway/desktop.png"
+            },
+            "mobile": {
+              "file": "mellore/02-sway/mobile.png",
+              "width": 809,
+              "height": 3884,
+              "bytes": 3167495,
+              "sha256": "3f4735d14f5dd21c7d587fe140b7ec962e0559cb502e6d057976874c3e754322",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/mellore/02-sway/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "03-care",
+          "title": "Carry it longer",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Three clear care stages; consistent Sway photography, vertical numbered mobile guide, complete footer.",
+            "hashes": {
+              "desktop": "d96b5cfd2ddc547c9e1dbc2158a417e650be35339b3f2b88ca18d4c196f1e2a3",
+              "mobile": "5366ae067709e9c7257c17e5895ad186e660b3847b26f6bcc78f110c4c94082b"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "mellore/03-care/desktop.png",
+              "width": 1086,
+              "height": 1448,
+              "bytes": 1843927,
+              "sha256": "d96b5cfd2ddc547c9e1dbc2158a417e650be35339b3f2b88ca18d4c196f1e2a3",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/mellore/03-care/desktop.png"
+            },
+            "mobile": {
+              "file": "mellore/03-care/mobile.png",
+              "width": 809,
+              "height": 3884,
+              "bytes": 3014312,
+              "sha256": "5366ae067709e9c7257c17e5895ad186e660b3847b26f6bcc78f110c4c94082b",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/mellore/03-care/mobile.png"
+            }
+          }
+        }
+      ],
+      "provenance": "mellore/manifest.json"
+    },
+    {
+      "id": "rill-and-rye",
+      "name": "Rill & Rye",
+      "pages": [
+        {
+          "id": "01-todays-bake",
+          "title": "Today's bake",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Three correct menu items, genuinely vertical mobile menu, no invented prices, collection request action.",
+            "hashes": {
+              "desktop": "90c9c16df3b48b15dd031f893fb206207b5aa444e325739628352dab4d5f4dca",
+              "mobile": "c4905cf35ff86463c38e1412e99cac28856b3a2a210ce9700f1cabeb2858dfc1"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "rill-and-rye/01-todays-bake/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 2156842,
+              "sha256": "90c9c16df3b48b15dd031f893fb206207b5aa444e325739628352dab4d5f4dca",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/rill-and-rye/01-todays-bake/desktop.png"
+            },
+            "mobile": {
+              "file": "rill-and-rye/01-todays-bake/mobile.png",
+              "width": 809,
+              "height": 3886,
+              "bytes": 3309161,
+              "sha256": "c4905cf35ff86463c38e1412e99cac28856b3a2a210ce9700f1cabeb2858dfc1",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/rill-and-rye/01-todays-bake/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "02-collect-an-order",
+          "title": "Collect an order",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Matching blank request fields, mobile form first with adequate controls, request not confirmed-order state.",
+            "hashes": {
+              "desktop": "a5f3b1b6271b0bb5274f6e07b027ce140474931e36822494911671547353816d",
+              "mobile": "5668b11e29dc3235bb62a701fd6213bdd01336054f8c33c7e677b5277a57a01a"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "rill-and-rye/02-collect-an-order/desktop.png",
+              "width": 1024,
+              "height": 1536,
+              "bytes": 2174831,
+              "sha256": "a5f3b1b6271b0bb5274f6e07b027ce140474931e36822494911671547353816d",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/rill-and-rye/02-collect-an-order/desktop.png"
+            },
+            "mobile": {
+              "file": "rill-and-rye/02-collect-an-order/mobile.png",
+              "width": 809,
+              "height": 3884,
+              "bytes": 3069536,
+              "sha256": "5668b11e29dc3235bb62a701fd6213bdd01336054f8c33c7e677b5277a57a01a",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/rill-and-rye/02-collect-an-order/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "03-visit-the-orchard",
+          "title": "Visit the orchard",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Desktop visit planning and photos; mobile three practical sections vertical. No fabricated address/hours, complete footer.",
+            "hashes": {
+              "desktop": "29058ddfbc6137e1caf2dcd2f1c1533dc3001408467c17311e70b533580808fe",
+              "mobile": "05d06469e96f256975f59be071f8017fd7a9b2331b60057146f696c4a82bee1d"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "rill-and-rye/03-visit-the-orchard/desktop.png",
+              "width": 1024,
+              "height": 1535,
+              "bytes": 2465459,
+              "sha256": "29058ddfbc6137e1caf2dcd2f1c1533dc3001408467c17311e70b533580808fe",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/rill-and-rye/03-visit-the-orchard/desktop.png"
+            },
+            "mobile": {
+              "file": "rill-and-rye/03-visit-the-orchard/mobile.png",
+              "width": 797,
+              "height": 3889,
+              "bytes": 3671891,
+              "sha256": "05d06469e96f256975f59be071f8017fd7a9b2331b60057146f696c4a82bee1d",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/rill-and-rye/03-visit-the-orchard/mobile.png"
+            }
+          }
+        }
+      ],
+      "provenance": "rill-and-rye/manifest.json"
+    },
+    {
+      "id": "terreno",
+      "name": "Terreno",
+      "pages": [
+        {
+          "id": "01-collection",
+          "title": "Choose your carry",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Three correct olive woven products/prices, unboxed desktop; vertical mobile catalogue with handle clear of prior CTA.",
+            "hashes": {
+              "desktop": "874d97a5f690c4af79f3b0eb28d78113f865647bc5bd81d6c4f440dde66b6d99",
+              "mobile": "fdcc52de2a2ba61f2def8abf6078f16f2706cdb1dcfef3ef7eda83e42fa20629"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "terreno/01-collection/desktop.png",
+              "width": 1086,
+              "height": 1449,
+              "bytes": 2160907,
+              "sha256": "874d97a5f690c4af79f3b0eb28d78113f865647bc5bd81d6c4f440dde66b6d99",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/terreno/01-collection/desktop.png"
+            },
+            "mobile": {
+              "file": "terreno/01-collection/mobile.png",
+              "width": 786,
+              "height": 3659,
+              "bytes": 3143819,
+              "sha256": "fdcc52de2a2ba61f2def8abf6078f16f2706cdb1dcfef3ef7eda83e42fa20629",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/terreno/01-collection/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "02-loom-tote",
+          "title": "Loom Tote",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Correct olive Loom Tote390 with fixedlonghandles, matching selected swatch and quantity1, vertical interior/macro views.",
+            "hashes": {
+              "desktop": "011fc1efd8ae15f049cae506cb7a18381760d236eb66b85cf20301661f5457c4",
+              "mobile": "a9a30ae50a7194f75a5e5d4a01a573f3d480b268510c6464755c26ba33f2779d"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "terreno/02-loom-tote/desktop.png",
+              "width": 1086,
+              "height": 1448,
+              "bytes": 2099834,
+              "sha256": "011fc1efd8ae15f049cae506cb7a18381760d236eb66b85cf20301661f5457c4",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/terreno/02-loom-tote/desktop.png"
+            },
+            "mobile": {
+              "file": "terreno/02-loom-tote/mobile.png",
+              "width": 809,
+              "height": 3884,
+              "bytes": 3248981,
+              "sha256": "a9a30ae50a7194f75a5e5d4a01a573f3d480b268510c6464755c26ba33f2779d",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/terreno/02-loom-tote/mobile.png"
+            }
+          }
+        },
+        {
+          "id": "03-making",
+          "title": "From strip to weave",
+          "visual_review": {
+            "desktop": "pass",
+            "mobile": "pass",
+            "notes": "Three stages preserve olive leather identity and completed Loom Tote390. Mobile one column; duplicate sentence corrected.",
+            "hashes": {
+              "desktop": "610991d8208cdb4745d26ddef6f27036494a7ab4d9c707cf63ee34ead4df80ba",
+              "mobile": "f5e2cd381781d35f9c1be297f781b4715c93f65726367af1970da77aecc19004"
+            }
+          },
+          "views": {
+            "desktop": {
+              "file": "terreno/03-making/desktop.png",
+              "width": 971,
+              "height": 1619,
+              "bytes": 2225494,
+              "sha256": "610991d8208cdb4745d26ddef6f27036494a7ab4d9c707cf63ee34ead4df80ba",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/terreno/03-making/desktop.png"
+            },
+            "mobile": {
+              "file": "terreno/03-making/mobile.png",
+              "width": 864,
+              "height": 3642,
+              "bytes": 3476939,
+              "sha256": "f5e2cd381781d35f9c1be297f781b4715c93f65726367af1970da77aecc19004",
+              "url": "https://jasonfesta.github.io/WDA/images/website/core-pages-2026-10-25/terreno/03-making/mobile.png"
+            }
+          }
+        }
+      ],
+      "provenance": "terreno/manifest.json"
+    }
+  ]
+}

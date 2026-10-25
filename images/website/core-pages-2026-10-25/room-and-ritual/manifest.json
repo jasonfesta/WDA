@@ -1,0 +1,636 @@
+{
+  "schema_version": 1,
+  "site": "room-and-ritual",
+  "name": "Room & Ritual",
+  "batch": "core-pages-2026-10-25",
+  "deliverable": "Three new core pages, desktop and continuous mobile; six raster mockups; no webpage implementation",
+  "status": "complete images; root review in progress",
+  "approved_homepage_reference": "/Users/jasonfesta/Documents/ChatGPT/wda/images/website/final-2026-10-24/room-and-ritual/desktop.png",
+  "selected_homepage_option": "existing approved direction",
+  "design": {
+    "font": "Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.",
+    "color": "Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.",
+    "identity": "Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout."
+  },
+  "native_resolution_note": "Native generated desktop sizes are approximately1024px wide. Mobile finals preserve approximately2x pixel density at390 logicalpx. No artificial enlargement; exact dimensions and proportional assembly recorded. These are image mockups, not tested functional responsive websites.",
+  "pages": [
+    {
+      "id": "01-projects",
+      "title": "Projects",
+      "page_type": "catalogue",
+      "files": {
+        "desktop": {
+          "path": "images/website/core-pages-2026-10-25/room-and-ritual/01-projects/desktop.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "ebd0d42c43602ef1da549549f03807552e1e3adf900c417e6b06e16c5c451651",
+          "bytes": 2301951,
+          "upsampled": false
+        },
+        "mobile": {
+          "path": "images/website/core-pages-2026-10-25/room-and-ritual/01-projects/mobile.png",
+          "width": 819,
+          "height": 3489,
+          "sha256": "e97ce6a37ac7b31fe025c9b1dd26b3ecb6be896bb0442d06d2b4b1a45ad196ee",
+          "bytes": 3708175,
+          "upsampled": false
+        }
+      },
+      "generations": {
+        "desktop": {
+          "site": "room-and-ritual",
+          "page": "01-projects",
+          "part": "desktop",
+          "prompt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Small Room & Ritual left. Projects (selected for first two pages), Studio, Start a project right. No huge homepage masthead.\nPAGE: An airy curated interior project catalogue. Start with compact header, then title 'Rooms for living.' and short line 'A selection of homes and everyday places.' Generous empty golden ground. First project: a wide landscaped photo of a new-angle Courtyard House living room looking outward through black-framed arch, olive curved sofa and orange lamp; below caption '01 — The Courtyard House', 'Open to light, built for living.' and 'Explore the house ↗'. After a large pause, a two-column aligned row with unequal image widths (same upper baseline): a wide leafy outdoor timber table caption '02 — Olive Terrace' / 'Gathering, outdoors.' and smaller tall wood-and-linen bedroom caption '03 — Cedar Rooms' / 'A quieter place to rest.' Do not mix captions. Align captions with photo left edges. Then a concise invitation 'What would home feel like?' with 'Start a project →', and complete footer. Exactly three project photos, no more promotional panels.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible.",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/01-projects-desktop.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png"
+          ],
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-319863b9-55c9-45bc-bb76-d39d113abda7.png",
+          "native_dimensions": [
+            1024,
+            1536
+          ],
+          "sha256": "ebd0d42c43602ef1da549549f03807552e1e3adf900c417e6b06e16c5c451651",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/room-and-ritual/records/01-projects-desktop.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Small Room & Ritual left. Projects (selected for first two pages), Studio, Start a project right. No huge homepage masthead.\nPAGE: An airy curated interior project catalogue. Start with compact header, then title 'Rooms for living.' and short line 'A selection of homes and everyday places.' Generous empty golden ground. First project: a wide landscaped photo of a new-angle Courtyard House living room looking outward through black-framed arch, olive curved sofa and orange lamp; below caption '01 — The Courtyard House', 'Open to light, built for living.' and 'Explore the house ↗'. After a large pause, a two-column aligned row with unequal image widths (same upper baseline): a wide leafy outdoor timber table caption '02 — Olive Terrace' / 'Gathering, outdoors.' and smaller tall wood-and-linen bedroom caption '03 — Cedar Rooms' / 'A quieter place to rest.' Do not mix captions. Align captions with photo left edges. Then a concise invitation 'What would home feel like?' with 'Start a project →', and complete footer. Exactly three project photos, no more promotional panels.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible.",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/room-and-ritual/inputs/archived/1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab.png"
+            }
+          ]
+        },
+        "upper": {
+          "mode": "built-in image_gen edit",
+          "exact_prompt": "Extremely narrow image edit. Keep every element of this Room & Ritual mobile screenshot pixel-position equivalent: same906x1736canvas, same header/title/photo/type/CTA/gaps. ONLY correct the background surface color: the flat golden-apricot background surrounding all content must be #FAE6C5 (RGB250,230,197), especially along the ENTIRE BOTTOM EDGE. No gradient or grain in bottom200px, perfectly uniform #FAE6C5; blend imperceptibly to existing background higher up if needed. This allows seamless continuation with another screenshot. Do not add a stripe, line, footer or any new content. Do not recolor photo, text, logo or link. Do not resize or crop anything.",
+          "source_path": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-205f0234-5838-474b-acd5-9d2ff4ad4dcc.png",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/01-projects-upper-v2.png",
+              "sha256": "f4602d7c40c7fca41c5792ce1c4a1b10b6f2420ea10a9a2d2a3c47f51511acbc",
+              "role": "target upper mobile surface correction"
+            }
+          ],
+          "native_dimensions": [
+            906,
+            1736
+          ],
+          "sha256": "d3b5bbb2719feec9bd132b52b4d0399f60eab9aa7158889a1da7f7f41577325d",
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/room-and-ritual/records/01-projects-upper.json",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/01-projects-upper-v2.png",
+              "sha256": "f4602d7c40c7fca41c5792ce1c4a1b10b6f2420ea10a9a2d2a3c47f51511acbc",
+              "role": "target upper mobile surface correction",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/room-and-ritual/inputs/archived/f4602d7c40c7fca41c5792ce1c4a1b10b6f2420ea10a9a2d2a3c47f51511acbc.png"
+            }
+          ]
+        },
+        "lower": {
+          "site": "room-and-ritual",
+          "page": "01-projects",
+          "part": "lower",
+          "prompt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Start with 64 logical px of empty golden ground. Full-width leafy outdoor timber-table photo; caption '02 — Olive Terrace', 'Gathering, outdoors.' Long 96px pause. Full-width wood-and-linen bedroom photo; caption '03 — Cedar Rooms', 'A quieter place to rest.' Long pause. 'What would home feel like?' and 'Start a project →'. Complete footer. No repeated header, no duplicated first project.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/01-projects-lower.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-9efae366-340a-464f-92d6-b7c1ebffb777.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/01-projects-upper.png"
+          ],
+          "native_dimensions": [
+            819,
+            1920
+          ],
+          "sha256": "e2f1e9bf9f66543320188dd3ace660318614a63d0a3d5a40f65aeb6f11286974",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/01-projects-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "430e0d800b9e59cb88cbdbef6f0e2e2baab627c262b04f49d776ffe0c883ec53"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/room-and-ritual/records/01-projects-lower.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Start with 64 logical px of empty golden ground. Full-width leafy outdoor timber-table photo; caption '02 — Olive Terrace', 'Gathering, outdoors.' Long 96px pause. Full-width wood-and-linen bedroom photo; caption '03 — Cedar Rooms', 'A quieter place to rest.' Long pause. 'What would home feel like?' and 'Start a project →'. Complete footer. No repeated header, no duplicated first project.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/room-and-ritual/inputs/archived/1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab.png"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/01-projects-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "430e0d800b9e59cb88cbdbef6f0e2e2baab627c262b04f49d776ffe0c883ec53",
+              "order": 2,
+              "immutable_input_copy": "output/core-pages-2026-10-25/room-and-ritual/inputs/archived/430e0d800b9e59cb88cbdbef6f0e2e2baab627c262b04f49d776ffe0c883ec53.png"
+            }
+          ]
+        }
+      },
+      "mobile_assembly": {
+        "site": "room-and-ritual",
+        "page": "01-projects",
+        "method": "Proportional downscale of each mobile part to minimum native width, then edge-to-edge vertical concatenation; no crop, warp or upscale.",
+        "source_dimensions": [
+          [
+            906,
+            1736
+          ],
+          [
+            819,
+            1920
+          ]
+        ],
+        "scales": [
+          0.9039735099337748,
+          1.0
+        ],
+        "final_mobile_dimensions": [
+          819,
+          3489
+        ],
+        "source_sha256": {
+          "desktop": "ebd0d42c43602ef1da549549f03807552e1e3adf900c417e6b06e16c5c451651",
+          "upper": "d3b5bbb2719feec9bd132b52b4d0399f60eab9aa7158889a1da7f7f41577325d",
+          "lower": "e2f1e9bf9f66543320188dd3ace660318614a63d0a3d5a40f65aeb6f11286974"
+        },
+        "visual_qa": "pending full-page inspection"
+      },
+      "qa": {
+        "status": "root reviewed; accepted for image-only handoff",
+        "checks": [
+          "Header and footer present; no clipping",
+          "Desktop and mobile share brand, palette, content and imagery",
+          "Mobile is one continuous vertical image, not a scaled desktop",
+          "Image captions and semantic order checked",
+          "Forms remain blank and request-only where applicable",
+          "No invented addresses, hours, prices or confirmed transactions"
+        ],
+        "notes": [
+          "Excess upper tail shortened through ImageGen; final color match edit completed after root tail review."
+        ]
+      }
+    },
+    {
+      "id": "02-courtyard-house",
+      "title": "The Courtyard House",
+      "page_type": "project",
+      "files": {
+        "desktop": {
+          "path": "images/website/core-pages-2026-10-25/room-and-ritual/02-courtyard-house/desktop.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "107175f317d26359aaf8cf58961a5147568d00fb83e302d1e079b444e5ffcf44",
+          "bytes": 2369155,
+          "upsampled": false
+        },
+        "mobile": {
+          "path": "images/website/core-pages-2026-10-25/room-and-ritual/02-courtyard-house/mobile.png",
+          "width": 804,
+          "height": 3908,
+          "sha256": "b3f46d381d3a92e18c611a4b0e39aa7d94ddacfd9cb22eb7fffbca60cc9660d1",
+          "bytes": 4065690,
+          "upsampled": false
+        }
+      },
+      "generations": {
+        "desktop": {
+          "site": "room-and-ritual",
+          "page": "02-courtyard-house",
+          "part": "desktop",
+          "prompt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Small Room & Ritual left. Projects (selected for first two pages), Studio, Start a project right. No huge homepage masthead.\nPAGE: A photographed residence essay, different from the project catalogue. Compact header then tiny 'PROJECT 01' and title 'The Courtyard House'. Short descriptor 'Interiors shaped around a garden.' Opening is one enormous horizontal photograph from the dining room toward the leafy courtyard, walnut table and black-framed arched doors, original room identity. Photo caption 'Living with the light.' After 150 logicalpx of air, a modest paragraph 'A curved sofa, a generous table, and rooms that open to the outdoors.' Put one quiet portrait photograph of the olive sofa and orange mushroom lamp on the right of this reading area, occupying only half the page width, no enclosing panel. Next a full-width close material photograph of walnut, woven linen and warm ceramics with small caption 'Texture, in the everyday.' Then quiet links 'Next project: Olive Terrace ↗' and 'Start a project →', followed by complete footer. Three original photographs, no fake project size, location, date or client credits.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible.",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/02-courtyard-house-desktop.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-90e4ede8-62ba-4981-8985-6901daa44821.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png"
+          ],
+          "native_dimensions": [
+            1024,
+            1536
+          ],
+          "sha256": "107175f317d26359aaf8cf58961a5147568d00fb83e302d1e079b444e5ffcf44",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/room-and-ritual/records/02-courtyard-house-desktop.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Small Room & Ritual left. Projects (selected for first two pages), Studio, Start a project right. No huge homepage masthead.\nPAGE: A photographed residence essay, different from the project catalogue. Compact header then tiny 'PROJECT 01' and title 'The Courtyard House'. Short descriptor 'Interiors shaped around a garden.' Opening is one enormous horizontal photograph from the dining room toward the leafy courtyard, walnut table and black-framed arched doors, original room identity. Photo caption 'Living with the light.' After 150 logicalpx of air, a modest paragraph 'A curved sofa, a generous table, and rooms that open to the outdoors.' Put one quiet portrait photograph of the olive sofa and orange mushroom lamp on the right of this reading area, occupying only half the page width, no enclosing panel. Next a full-width close material photograph of walnut, woven linen and warm ceramics with small caption 'Texture, in the everyday.' Then quiet links 'Next project: Olive Terrace ↗' and 'Start a project →', followed by complete footer. Three original photographs, no fake project size, location, date or client credits.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible.",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/room-and-ritual/inputs/archived/1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab.png"
+            }
+          ]
+        },
+        "upper": {
+          "site": "room-and-ritual",
+          "page": "02-courtyard-house",
+          "part": "upper",
+          "prompt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: Compact header with Room & Ritual and Menu. Tiny 'PROJECT 01', then 'The Courtyard House'. Descriptor 'Interiors shaped around a garden.' A generous tall photograph from the dining room toward leafy courtyard through black-framed arch, walnut table. Caption 'Living with the light.' Then large breathing space and paragraph 'A curved sofa, a generous table, and rooms that open to the outdoors.' End on quiet golden ground.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/02-courtyard-house-upper.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-b8a8722c-2d72-49d8-bff0-b6cc81c1afa2.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/02-courtyard-house-desktop.png"
+          ],
+          "native_dimensions": [
+            804,
+            1956
+          ],
+          "sha256": "cbf32a191dd213f2a0fac8a9bd64587abbaf9ff0f5a84fb5e2fb878f1487f861",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/02-courtyard-house-desktop.png",
+              "role": "desktop content and identity reference",
+              "sha256": "107175f317d26359aaf8cf58961a5147568d00fb83e302d1e079b444e5ffcf44"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/room-and-ritual/records/02-courtyard-house-upper.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: Compact header with Room & Ritual and Menu. Tiny 'PROJECT 01', then 'The Courtyard House'. Descriptor 'Interiors shaped around a garden.' A generous tall photograph from the dining room toward leafy courtyard through black-framed arch, walnut table. Caption 'Living with the light.' Then large breathing space and paragraph 'A curved sofa, a generous table, and rooms that open to the outdoors.' End on quiet golden ground.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/room-and-ritual/inputs/archived/1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab.png"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/02-courtyard-house-desktop.png",
+              "role": "desktop content and identity reference",
+              "sha256": "107175f317d26359aaf8cf58961a5147568d00fb83e302d1e079b444e5ffcf44",
+              "order": 2,
+              "immutable_input_copy": "output/core-pages-2026-10-25/room-and-ritual/inputs/archived/107175f317d26359aaf8cf58961a5147568d00fb83e302d1e079b444e5ffcf44.png"
+            }
+          ]
+        },
+        "lower": {
+          "site": "room-and-ritual",
+          "page": "02-courtyard-house",
+          "part": "lower",
+          "prompt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Start with 64 logicalpx quiet golden ground. Tall full-width photograph of olive curved sofa and orange mushroom lamp in same house. Long pause. Full-width close photograph of walnut, woven linen and warm ceramics; small caption 'Texture, in the everyday.' Long pause. Links 'Next project: Olive Terrace ↗' and 'Start a project →'. Complete footer. No duplicated title or header.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/02-courtyard-house-lower.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-fea999c2-2d43-41a2-98c6-d1f69fac8520.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/02-courtyard-house-upper.png"
+          ],
+          "native_dimensions": [
+            805,
+            1954
+          ],
+          "sha256": "7e251f160adfb59271fd0dad59617b9574e9ff1d1bd93e1082dd125a0e34c2b6",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/02-courtyard-house-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "cbf32a191dd213f2a0fac8a9bd64587abbaf9ff0f5a84fb5e2fb878f1487f861"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/room-and-ritual/records/02-courtyard-house-lower.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Start with 64 logicalpx quiet golden ground. Tall full-width photograph of olive curved sofa and orange mushroom lamp in same house. Long pause. Full-width close photograph of walnut, woven linen and warm ceramics; small caption 'Texture, in the everyday.' Long pause. Links 'Next project: Olive Terrace ↗' and 'Start a project →'. Complete footer. No duplicated title or header.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/room-and-ritual/inputs/archived/1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab.png"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/02-courtyard-house-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "cbf32a191dd213f2a0fac8a9bd64587abbaf9ff0f5a84fb5e2fb878f1487f861",
+              "order": 2,
+              "immutable_input_copy": "output/core-pages-2026-10-25/room-and-ritual/inputs/archived/cbf32a191dd213f2a0fac8a9bd64587abbaf9ff0f5a84fb5e2fb878f1487f861.png"
+            }
+          ]
+        }
+      },
+      "mobile_assembly": {
+        "site": "room-and-ritual",
+        "page": "02-courtyard-house",
+        "method": "Proportional downscale of each mobile part to minimum native width, then edge-to-edge vertical concatenation; no crop, warp or upscale.",
+        "source_dimensions": [
+          [
+            804,
+            1956
+          ],
+          [
+            805,
+            1954
+          ]
+        ],
+        "scales": [
+          1.0,
+          0.9987577639751553
+        ],
+        "final_mobile_dimensions": [
+          804,
+          3908
+        ],
+        "source_sha256": {
+          "desktop": "107175f317d26359aaf8cf58961a5147568d00fb83e302d1e079b444e5ffcf44",
+          "upper": "cbf32a191dd213f2a0fac8a9bd64587abbaf9ff0f5a84fb5e2fb878f1487f861",
+          "lower": "7e251f160adfb59271fd0dad59617b9574e9ff1d1bd93e1082dd125a0e34c2b6"
+        },
+        "visual_qa": "pending full-page inspection"
+      },
+      "qa": {
+        "status": "production visual inspection complete; root review pending",
+        "checks": [
+          "Header and footer present; no clipping",
+          "Desktop and mobile share brand, palette, content and imagery",
+          "Mobile is one continuous vertical image, not a scaled desktop",
+          "Image captions and semantic order checked",
+          "Forms remain blank and request-only where applicable",
+          "No invented addresses, hours, prices or confirmed transactions"
+        ],
+        "notes": []
+      }
+    },
+    {
+      "id": "03-start-a-project",
+      "title": "Start a project",
+      "page_type": "form",
+      "files": {
+        "desktop": {
+          "path": "images/website/core-pages-2026-10-25/room-and-ritual/03-start-a-project/desktop.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "d1402c0aed8f92929905927570246b879f9c80136db5ecee3968e3bf8625873a",
+          "bytes": 1910480,
+          "upsampled": false
+        },
+        "mobile": {
+          "path": "images/website/core-pages-2026-10-25/room-and-ritual/03-start-a-project/mobile.png",
+          "width": 812,
+          "height": 3854,
+          "sha256": "dd522b2c825c90e32e3292ddbb61d7544cf387492c73b0c0b5132981cd676122",
+          "bytes": 3110537,
+          "upsampled": false
+        }
+      },
+      "generations": {
+        "desktop": {
+          "site": "room-and-ritual",
+          "page": "03-start-a-project",
+          "part": "desktop",
+          "prompt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Small Room & Ritual left. Projects (selected for first two pages), Studio, Start a project right. No huge homepage masthead.\nPAGE: A beautifully calm inquiry page led by the FORM, not another hero. Compact header. Large title 'Tell us about your place.' Short sentence 'A few details to begin a conversation.' Main two-column composition: left one tall natural photograph of a studio worktable with walnut, olive fabric, terracotta and pencil sketches, followed by small caption 'Start with what matters to you.' Right a broad, very readable blank inquiry form on the shared light golden surface, no enclosing card: labelled Name, Email, Project location, Project type with placeholder 'Choose a type', Project notes large multiline blank field. Inputs simple thin horizontal bottom rules all exactly same width; at least56px vertical room each. Below an unchecked optional box 'I would like occasional studio notes.' Primary button 'Send inquiry →'. Small status helper 'An inquiry starts a conversation; it does not confirm a booking.' After large pause, short preparation note title 'Bring a little context.' and text 'Share the spaces you use, the changes you hope for, and the pieces you want to keep.' One small material detail crop alongside this note. Complete footer. No personal data, dates, budgets, prices or response-time promises; no lorem ipsum; no success state.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible.",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/03-start-a-project-desktop.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-5843fc78-857a-43b5-a7dd-4da3c73d3777.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png"
+          ],
+          "native_dimensions": [
+            1024,
+            1536
+          ],
+          "sha256": "d1402c0aed8f92929905927570246b879f9c80136db5ecee3968e3bf8625873a",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/room-and-ritual/records/03-start-a-project-desktop.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Small Room & Ritual left. Projects (selected for first two pages), Studio, Start a project right. No huge homepage masthead.\nPAGE: A beautifully calm inquiry page led by the FORM, not another hero. Compact header. Large title 'Tell us about your place.' Short sentence 'A few details to begin a conversation.' Main two-column composition: left one tall natural photograph of a studio worktable with walnut, olive fabric, terracotta and pencil sketches, followed by small caption 'Start with what matters to you.' Right a broad, very readable blank inquiry form on the shared light golden surface, no enclosing card: labelled Name, Email, Project location, Project type with placeholder 'Choose a type', Project notes large multiline blank field. Inputs simple thin horizontal bottom rules all exactly same width; at least56px vertical room each. Below an unchecked optional box 'I would like occasional studio notes.' Primary button 'Send inquiry →'. Small status helper 'An inquiry starts a conversation; it does not confirm a booking.' After large pause, short preparation note title 'Bring a little context.' and text 'Share the spaces you use, the changes you hope for, and the pieces you want to keep.' One small material detail crop alongside this note. Complete footer. No personal data, dates, budgets, prices or response-time promises; no lorem ipsum; no success state.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible.",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/room-and-ritual/inputs/archived/1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab.png"
+            }
+          ]
+        },
+        "upper": {
+          "mode": "built-in image_gen edit",
+          "exact_prompt": "Targeted correction to this image-only MOBILE inquiry page. Preserve the exact Room & Ritual branding, warm golden-apricot ground, brown typography and form content. REMOVE THE LARGE ROOM PHOTOGRAPH ENTIRELY from above the title. This is a task-first narrow mobile form, with compact header immediately followed by title 'Tell us about your place.' wrapping on two lines if necessary, subtitle 'A few details to begin a conversation.' Then the ENTIRE form in one column. Enlarge all form labels to at least36 native pixels in an approximately816px-wide image (16px at390logicalpx), placeholders36px, helper32px. Shared52px native side gutters. Fields in exact order: Name blank single line; Email blank single line; Project location blank single line; Project type with 'Choose a type' and small down chevron; Project notes generous empty textarea. Inputs at least96nativepixels tall, with distinct48px gaps between groups. Then unchecked checkbox with 'I would like occasional studio notes.' Then full-width brown rounded 'Send inquiry →' button at least100nativepixels tall. Then exact helper 'An inquiry starts a conversation; it does not confirm a booking.' Render helper on two or three comfortably readable lines. Use the freed photograph space for clear type, taller controls and breathing room; no new illustration or image, no card container, no footer. Finish130nativepixels below the helper on matching golden-apricot ground. Keep mobile portrait canvas about816x1928, all content uncut. Nothing above the title except the compact header.",
+          "source_path": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-38e68418-2d13-4679-b243-8898fd5811c3.png",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/03-start-a-project-upper-v1.png",
+              "sha256": "44c722fb153f6ca2c0e20a88b91179a1071aa95fd12c470aa2486d1cad133c8e",
+              "role": "target upper mobile form segment"
+            }
+          ],
+          "native_dimensions": [
+            816,
+            1928
+          ],
+          "sha256": "7569513b890c984c5530cb78ae11614864c19b415cee32e7335e411a887de2d4",
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/room-and-ritual/records/03-start-a-project-upper.json",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/03-start-a-project-upper-v1.png",
+              "sha256": "44c722fb153f6ca2c0e20a88b91179a1071aa95fd12c470aa2486d1cad133c8e",
+              "role": "target upper mobile form segment",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/room-and-ritual/inputs/archived/44c722fb153f6ca2c0e20a88b91179a1071aa95fd12c470aa2486d1cad133c8e.png"
+            }
+          ]
+        },
+        "lower": {
+          "site": "room-and-ritual",
+          "page": "03-start-a-project",
+          "part": "lower",
+          "prompt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Begin with ample golden space then a full-width tall studio worktable photograph with walnut, olive fabric, terracotta and pencil sketches. Separate small caption 'Start with what matters to you.' Long open pause. Title 'Bring a little context.' Text 'Share the spaces you use, the changes you hope for, and the pieces you want to keep.' Below, one small standalone material detail photograph with large golden margins. Finish with complete spacious footer. No form, header or button repetition.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "identity": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+          "output": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/03-start-a-project-lower.png",
+          "source": "/Users/jasonfesta/.codex/generated_images/01a17390-4ace-74a3-9b6b-879160fe7e5c/exec-577eeea7-d5c7-4f1b-a184-479330dde230.png",
+          "refs": [
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+            "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/03-start-a-project-upper.png"
+          ],
+          "native_dimensions": [
+            812,
+            1935
+          ],
+          "sha256": "bff56137051714dd278ff19320e6bc28521661796e07f0a1b0c9324f0aa79c3a",
+          "mode": "built-in image_gen",
+          "actual_inputs": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/03-start-a-project-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "44c722fb153f6ca2c0e20a88b91179a1071aa95fd12c470aa2486d1cad133c8e"
+            }
+          ],
+          "qa": "pending visual inspection",
+          "record_path": "output/core-pages-2026-10-25/room-and-ritual/records/03-start-a-project-lower.json",
+          "exact_prompt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Begin with ample golden space then a full-width tall studio worktable photograph with walnut, olive fabric, terracotta and pencil sketches. Separate small caption 'Start with what matters to you.' Long open pause. Title 'Bring a little context.' Text 'Share the spaces you use, the changes you hope for, and the pieces you want to keep.' Below, one small standalone material detail photograph with large golden margins. Finish with complete spacious footer. No form, header or button repetition.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+          "actual_inputs_ordered": [
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/inputs/homepage-reference.png",
+              "role": "brand identity reference",
+              "sha256": "1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab",
+              "order": 1,
+              "immutable_input_copy": "output/core-pages-2026-10-25/room-and-ritual/inputs/archived/1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab.png"
+            },
+            {
+              "path": "/Users/jasonfesta/Documents/ChatGPT/wda/output/core-pages-2026-10-25/room-and-ritual/sources/03-start-a-project-upper.png",
+              "role": "mobile upper continuation reference",
+              "sha256": "44c722fb153f6ca2c0e20a88b91179a1071aa95fd12c470aa2486d1cad133c8e",
+              "order": 2,
+              "immutable_input_copy": "output/core-pages-2026-10-25/room-and-ritual/inputs/archived/44c722fb153f6ca2c0e20a88b91179a1071aa95fd12c470aa2486d1cad133c8e.png"
+            }
+          ]
+        }
+      },
+      "mobile_assembly": {
+        "site": "room-and-ritual",
+        "page": "03-start-a-project",
+        "method": "Proportional downscale of each mobile part to minimum native width, then edge-to-edge vertical concatenation; no crop, warp or upscale.",
+        "source_dimensions": [
+          [
+            816,
+            1928
+          ],
+          [
+            812,
+            1935
+          ]
+        ],
+        "scales": [
+          0.9950980392156863,
+          1.0
+        ],
+        "final_mobile_dimensions": [
+          812,
+          3854
+        ],
+        "source_sha256": {
+          "desktop": "d1402c0aed8f92929905927570246b879f9c80136db5ecee3968e3bf8625873a",
+          "upper": "7569513b890c984c5530cb78ae11614864c19b415cee32e7335e411a887de2d4",
+          "lower": "bff56137051714dd278ff19320e6bc28521661796e07f0a1b0c9324f0aa79c3a"
+        },
+        "visual_qa": "pending full-page inspection"
+      },
+      "qa": {
+        "status": "production visual inspection complete; root review pending",
+        "checks": [
+          "Header and footer present; no clipping",
+          "Desktop and mobile share brand, palette, content and imagery",
+          "Mobile is one continuous vertical image, not a scaled desktop",
+          "Image captions and semantic order checked",
+          "Forms remain blank and request-only where applicable",
+          "No invented addresses, hours, prices or confirmed transactions"
+        ],
+        "notes": [
+          "Mobile form corrected through ImageGen: removed hero before task and enlarged labels and controls."
+        ]
+      }
+    }
+  ],
+  "prompt_archive": {
+    "output/core-pages-2026-10-25/room-and-ritual/prompts/01-projects-desktop.prior.txt": "Use case: ui-mockup. Create a polished original COMPLETE DESKTOP website page \"Projects\" for Room & Ritual, header to footer, as one raster image. Image1 is reference for brand/product/setting only. This is a NEW secondary page, not a recolored homepage.\nOutput: portrait width:height 2:3, target 1536x2304 native pixels, maximum crisp detail. Design at desktop 1440 logical width with multi-column compositions and comfortably readable body. No phone layout, device shell, browser, review labels or outside padding.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nInvariants: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nHeader: Small Room & Ritual left. Projects (selected for first two pages), Studio, Start a project right. No huge homepage masthead.\nComposition/content: An airy curated interior project catalogue. Start with compact header, then title 'Rooms for living.' and short line 'A selection of homes and everyday places.' Generous empty golden ground. First project: a wide landscaped photo of a new-angle Courtyard House living room looking outward through black-framed arch, olive curved sofa and orange lamp; below caption '01 — The Courtyard House', 'Open to light, built for living.' and 'Explore the house ↗'. After a large pause, a two-column aligned row with unequal image widths (same upper baseline): a wide leafy outdoor timber table caption '02 — Olive Terrace' / 'Gathering, outdoors.' and smaller tall wood-and-linen bedroom caption '03 — Cedar Rooms' / 'A quieter place to rest.' Do not mix captions. Align captions with photo left edges. Then a concise invitation 'What would home feel like?' with 'Start a project →', and complete footer. Exactly three project photos, no more promotional panels.\nFooter: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible.\nArt direction: distinctly high-end editorial design; generous air, refined purposeful asymmetry on a consistent grid. 80–96 logical px side gutters; 120–180px pauses between groups; 24–32px within groups. Long gaps and light color do real work. Fewer larger images. No rounded cards, box outlines, equal promotional tiles, checkerboard bands, decorative waves, busy scraps, inventedquotes/reviews. Rules if any precisely meet content edges. Natural high resolution photography; rectangles remain geometrically correct. Match ALL specified words accurately. No invented factualclaims. Preserve natural product/material color. Every visible element should feel deliberately aligned and comfortably spaced.\n",
+    "output/core-pages-2026-10-25/room-and-ritual/prompts/01-projects-desktop.txt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Small Room & Ritual left. Projects (selected for first two pages), Studio, Start a project right. No huge homepage masthead.\nPAGE: An airy curated interior project catalogue. Start with compact header, then title 'Rooms for living.' and short line 'A selection of homes and everyday places.' Generous empty golden ground. First project: a wide landscaped photo of a new-angle Courtyard House living room looking outward through black-framed arch, olive curved sofa and orange lamp; below caption '01 — The Courtyard House', 'Open to light, built for living.' and 'Explore the house ↗'. After a large pause, a two-column aligned row with unequal image widths (same upper baseline): a wide leafy outdoor timber table caption '02 — Olive Terrace' / 'Gathering, outdoors.' and smaller tall wood-and-linen bedroom caption '03 — Cedar Rooms' / 'A quieter place to rest.' Do not mix captions. Align captions with photo left edges. Then a concise invitation 'What would home feel like?' with 'Start a project →', and complete footer. Exactly three project photos, no more promotional panels.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible.",
+    "output/core-pages-2026-10-25/room-and-ritual/prompts/01-projects-lower.txt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Start with 64 logical px of empty golden ground. Full-width leafy outdoor timber-table photo; caption '02 — Olive Terrace', 'Gathering, outdoors.' Long 96px pause. Full-width wood-and-linen bedroom photo; caption '03 — Cedar Rooms', 'A quieter place to rest.' Long pause. 'What would home feel like?' and 'Start a project →'. Complete footer. No repeated header, no duplicated first project.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+    "output/core-pages-2026-10-25/room-and-ritual/prompts/01-projects-upper-v2.txt": "Targeted image edit. Image 1 is the UPPER section of a Room & Ritual mobile page. Image 2 is the LOWER continuation and is supplied only for exact background-color matching. RETURN ONLY THE EDITED IMAGE 1, never reproduce image 2. Preserve absolutely all content, geometry, typography, header, room photograph, captions, and Explore the house action in image1. ONLY CHANGE the empty trailing background below Explore the house: reduce the existing long blank tail from approximately500nativepixels to approximately130nativepixels. Change the resulting canvas aspect ratio to about814 wide by1560 tall; do not stretch or compress any typography or photo. It should be the same mobile section, simply ending 130nativepixels below the underline. Make the bottom joining color match the exact top flat background of image2, with no visible seam and no color band. Use a subtle uniform warm golden-apricot ground consistent with image2. No new content, no footer, no cropping of any existing content. Preserve photo quality and clean margins.",
+    "output/core-pages-2026-10-25/room-and-ritual/prompts/01-projects-upper-v3.txt": "Extremely narrow image edit. Keep every element of this Room & Ritual mobile screenshot pixel-position equivalent: same906x1736canvas, same header/title/photo/type/CTA/gaps. ONLY correct the background surface color: the flat golden-apricot background surrounding all content must be #FAE6C5 (RGB250,230,197), especially along the ENTIRE BOTTOM EDGE. No gradient or grain in bottom200px, perfectly uniform #FAE6C5; blend imperceptibly to existing background higher up if needed. This allows seamless continuation with another screenshot. Do not add a stripe, line, footer or any new content. Do not recolor photo, text, logo or link. Do not resize or crop anything.",
+    "output/core-pages-2026-10-25/room-and-ritual/prompts/01-projects-upper.txt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: Compact header with Room & Ritual and Menu. Title 'Rooms for living.' Short line 'A selection of homes and everyday places.' Large vertical breathing space. Single full-width photo of Courtyard House living room, black-framed arch, olive curved sofa and orange lamp, composed for phone. Caption '01 — The Courtyard House', 'Open to light, built for living.' Link 'Explore the house ↗'. End with quiet empty golden ground; no next project yet.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+    "output/core-pages-2026-10-25/room-and-ritual/prompts/02-courtyard-house-desktop.txt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Small Room & Ritual left. Projects (selected for first two pages), Studio, Start a project right. No huge homepage masthead.\nPAGE: A photographed residence essay, different from the project catalogue. Compact header then tiny 'PROJECT 01' and title 'The Courtyard House'. Short descriptor 'Interiors shaped around a garden.' Opening is one enormous horizontal photograph from the dining room toward the leafy courtyard, walnut table and black-framed arched doors, original room identity. Photo caption 'Living with the light.' After 150 logicalpx of air, a modest paragraph 'A curved sofa, a generous table, and rooms that open to the outdoors.' Put one quiet portrait photograph of the olive sofa and orange mushroom lamp on the right of this reading area, occupying only half the page width, no enclosing panel. Next a full-width close material photograph of walnut, woven linen and warm ceramics with small caption 'Texture, in the everyday.' Then quiet links 'Next project: Olive Terrace ↗' and 'Start a project →', followed by complete footer. Three original photographs, no fake project size, location, date or client credits.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible.",
+    "output/core-pages-2026-10-25/room-and-ritual/prompts/02-courtyard-house-lower.txt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Start with 64 logicalpx quiet golden ground. Tall full-width photograph of olive curved sofa and orange mushroom lamp in same house. Long pause. Full-width close photograph of walnut, woven linen and warm ceramics; small caption 'Texture, in the everyday.' Long pause. Links 'Next project: Olive Terrace ↗' and 'Start a project →'. Complete footer. No duplicated title or header.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+    "output/core-pages-2026-10-25/room-and-ritual/prompts/02-courtyard-house-upper.txt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: Compact header with Room & Ritual and Menu. Tiny 'PROJECT 01', then 'The Courtyard House'. Descriptor 'Interiors shaped around a garden.' A generous tall photograph from the dining room toward leafy courtyard through black-framed arch, walnut table. Caption 'Living with the light.' Then large breathing space and paragraph 'A curved sofa, a generous table, and rooms that open to the outdoors.' End on quiet golden ground.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+    "output/core-pages-2026-10-25/room-and-ritual/prompts/03-start-a-project-desktop.txt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: complete DESKTOP website from header to footer, tall portrait width:height 2:3, native target1536x2304. It represents1440logicalpx-wide desktop, real multi-column layout. 96logicalpx side margins; all content/photo edges share the main grid. 120–180logicalpx vertical pauses between chapters, 32px between images and captions/links. DO NOT pack to fill; open colored ground is welcome. Highest native clarity.\nHEADER: Small Room & Ritual left. Projects (selected for first two pages), Studio, Start a project right. No huge homepage masthead.\nPAGE: A beautifully calm inquiry page led by the FORM, not another hero. Compact header. Large title 'Tell us about your place.' Short sentence 'A few details to begin a conversation.' Main two-column composition: left one tall natural photograph of a studio worktable with walnut, olive fabric, terracotta and pencil sketches, followed by small caption 'Start with what matters to you.' Right a broad, very readable blank inquiry form on the shared light golden surface, no enclosing card: labelled Name, Email, Project location, Project type with placeholder 'Choose a type', Project notes large multiline blank field. Inputs simple thin horizontal bottom rules all exactly same width; at least56px vertical room each. Below an unchecked optional box 'I would like occasional studio notes.' Primary button 'Send inquiry →'. Small status helper 'An inquiry starts a conversation; it does not confirm a booking.' After large pause, short preparation note title 'Bring a little context.' and text 'Share the spaces you use, the changes you hope for, and the pieces you want to keep.' One small material detail crop alongside this note. Complete footer. No personal data, dates, budgets, prices or response-time promises; no lorem ipsum; no success state.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible.",
+    "output/core-pages-2026-10-25/room-and-ritual/prompts/03-start-a-project-lower.txt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: LOWER production section continuing ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, 28logicalpx gutters,body16/24,headings28–36,controls44–48high,80–112logicalpx pauses. Image2 is the accepted upper MOBILE section: match exact type scale and ground colors; DO NOT repeat its header,title,images or content. Start with56logicalpx empty FLAT matching main palette ground.\nRENDER ONLY: Begin with ample golden space then a full-width tall studio worktable photograph with walnut, olive fabric, terracotta and pencil sketches. Separate small caption 'Start with what matters to you.' Long open pause. Title 'Bring a little context.' Text 'Share the spaces you use, the changes you hope for, and the pieces you want to keep.' Below, one small standalone material detail photograph with large golden margins. Finish with complete spacious footer. No form, header or button repetition.\nFOOTER: Room & Ritual. Home · Projects · Studio · Start a project. Privacy · Terms. Compact and spacious, fully visible. Footer links need large vertical separation and readable type, not a tiny dense strip. Full bottom edge, no clipping.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n",
+    "output/core-pages-2026-10-25/room-and-ritual/prompts/03-start-a-project-upper-v2.txt": "Targeted correction to this image-only MOBILE inquiry page. Preserve the exact Room & Ritual branding, warm golden-apricot ground, brown typography and form content. REMOVE THE LARGE ROOM PHOTOGRAPH ENTIRELY from above the title. This is a task-first narrow mobile form, with compact header immediately followed by title 'Tell us about your place.' wrapping on two lines if necessary, subtitle 'A few details to begin a conversation.' Then the ENTIRE form in one column. Enlarge all form labels to at least36 native pixels in an approximately816px-wide image (16px at390logicalpx), placeholders36px, helper32px. Shared52px native side gutters. Fields in exact order: Name blank single line; Email blank single line; Project location blank single line; Project type with 'Choose a type' and small down chevron; Project notes generous empty textarea. Inputs at least96nativepixels tall, with distinct48px gaps between groups. Then unchecked checkbox with 'I would like occasional studio notes.' Then full-width brown rounded 'Send inquiry →' button at least100nativepixels tall. Then exact helper 'An inquiry starts a conversation; it does not confirm a booking.' Render helper on two or three comfortably readable lines. Use the freed photograph space for clear type, taller controls and breathing room; no new illustration or image, no card container, no footer. Finish130nativepixels below the helper on matching golden-apricot ground. Keep mobile portrait canvas about816x1928, all content uncut. Nothing above the title except the compact header.",
+    "output/core-pages-2026-10-25/room-and-ritual/prompts/03-start-a-project-upper.txt": "Use case: ui-mockup. Create an original high-end Room & Ritual secondary website page, image-only. Image 1 is the approved BRAND/PHOTOGRAPHIC IDENTITY reference, not a layout template. Brand identity: Exact compact mixed-case 'Room & Ritual' with a restrained same-font ampersand. Olive curved sofa, orange mushroom lamp, walnut, black-framed arches, sunlit courtyard. Do not clone the homepage layout.\nTypography: Fraunces 500/600 for compact mixed-case wordmark and expressive headlines; Manrope 400/500 for navigation and body.\nPalette: Light golden apricot #F7DFB9 and lighter golden #FCF0DA, subtle golden #F2D39D with dark warm brown #5B3523. Visibly warm golden, not pink or beige/taupe. Selective warm off-white is okay.\nClean grid and air are critical: no decorative boxes/cards, no repeated alternating bands. Align all photographs and captions to purposeful grid edges. Natural photo geometry. No invented factual claims, testimonials, locations, times or specifications. Fewer elements, elegantly composed, crisp readable text. No browser/device/presentation frame.\nFORMAT: UPPER production section of ONE long mobile website. Native portrait width:height1:2.4 target900x2160, depicting390logicalpx phone width. ONE column, no miniature desktop. 28logicalpx consistent side gutters; body16/24, headings32–40; controls44–48high; 80–112logicalpx pauses between major groups. Let layout breathe. Image2 if attached is the generated DESKTOP CONTENT/IDENTITY reference; reflow from scratch.\nRENDER ONLY: Compact header Room & Ritual and Menu. Title 'Tell us about your place.' Sentence 'A few details to begin a conversation.' Form first in a SINGLE column: labelled blank fields Name, Email, Project location, Project type dropdown 'Choose a type', and broad multiline Project notes. Inputs have consistent generous height with aligned rules. Below the form, unchecked optional box 'I would like occasional studio notes.' Large primary button 'Send inquiry →'. Helper 'An inquiry starts a conversation; it does not confirm a booking.' This all belongs together without a large gap between the last field and the action. Finish on golden ground, no footer yet.\nNo footer. Finish with56logicalpx empty FLAT main palette background for continuation, no edge decorations, no bottom overlay.\nVisible pixel targets: at an approximately900px native width, body labels should be at least36px tall, footer links32px; use150–220px of clearly empty colored space between distinct story/photo groups. Form labels/fields/actions stay grouped more closely. This must feel like a real 390px phone layout, not tiny desktop typography.\n"
+  },
+  "revision_records": [
+    "output/core-pages-2026-10-25/room-and-ritual/records/01-projects-upper-v1.json",
+    "output/core-pages-2026-10-25/room-and-ritual/records/01-projects-upper-v2.json",
+    "output/core-pages-2026-10-25/room-and-ritual/records/03-start-a-project-upper-v1.json"
+  ],
+  "final_collection_review": {
+    "01-projects": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Correct golden apricot identity, aligned desktop composition, excessive mobile tail shortened and complete vertical projects. Final color-continuity correction re-inspected.",
+      "hashes": {
+        "desktop": "ebd0d42c43602ef1da549549f03807552e1e3adf900c417e6b06e16c5c451651",
+        "mobile": "e97ce6a37ac7b31fe025c9b1dd26b3ecb6be896bb0442d06d2b4b1a45ad196ee"
+      }
+    },
+    "02-courtyard-house": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Courtyard identity and photo sequence match, continuous mobile project narrative, aligned photo/caption edges.",
+      "hashes": {
+        "desktop": "107175f317d26359aaf8cf58961a5147568d00fb83e302d1e079b444e5ffcf44",
+        "mobile": "b3f46d381d3a92e18c611a4b0e39aa7d94ddacfd9cb22eb7fffbca60cc9660d1"
+      }
+    },
+    "03-start-a-project": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "notes": "Matching inquiry fields; mobile form leads, clear labels and unselected consent. Full-width submission and complete footer.",
+      "hashes": {
+        "desktop": "d1402c0aed8f92929905927570246b879f9c80136db5ecee3968e3bf8625873a",
+        "mobile": "dd522b2c825c90e32e3292ddbb61d7544cf387492c73b0c0b5132981cd676122"
+      }
+    }
+  }
+}
