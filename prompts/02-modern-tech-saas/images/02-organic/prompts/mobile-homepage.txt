@@ -1,0 +1,53 @@
+EXACT ORIGINAL PROMPT: mobile-top
+
+Use case: ui-mockup
+Create the MOBILE TOP section of the attached NERAL website, NEW responsive composition. Portrait about1:2.4 high native detail, a narrow390logical-pixel column, fullbleed squarecanvas no phoneframe. Input1 is accepted NERAL desktop top for exact identity/content. Reflow, do not shrink desktop. This first segment includes opening, comparison detail and method; end after Review method step. No footer yet.
+Plain text NERAL wordmark only. Retain quiet regular Inter400/500 headings, Source Serif4 short reading prose, IBM Plex Mono IDs, white#FAFAF8 charcoal#252525 neutralgray rules with muted sage/amber status. Heading30logicalpx, body17logicalpx; restrained size, no boldoverscaling. Compact top nav NERAL left and Menu right.24logicalpx sidepadding.
+One-column opening: small "MODEL EVALUATION, TOGETHER" then regularsans headline "Make the next model decision a clear one.". Serif paragraph "Design evaluations, compare experiments, and bring the evidence into one shared review." Dark modest "Explore the workspace →" button, underlined "See the method" below.
+Single responsive comparison panel below with fineborder, 4pxcorners, no shadow. "SAMPLE EVALUATION", "Support answers", "EV-024 · 120 cases". Two stacked result rows: Baseline A /96 /120 accepted /80%; Candidate B /108 /120 accepted /90%. Slim80%gray and90%mutedsage bars on matching fullwidth tracks. "+10 percentage points", "6 regressions to inspect", and subtleamber "Evidence review pending". All values exactly same as desktop. No logos/proof/customers.
+Below natural whitespace and one fine rule, method narrative heading "A score is a starting point.". Short serif paragraph "Decide what good means. Compare the same cases. Leave a decision your team can trace.". Then three vertically stacked lightweight text steps, NOT cards and NOT large numbers: "Define" / "Choose the cases and criteria"; "Compare" / "Inspect gains and regressions"; "Review" / "Approve the evidence together". A small vertical spacing rhythm, no desktop arrows forced sideways. End after complete Reviewstep with smallnormalmargin. Everything readable and inbounds. No repeated comparison, no logo symbol, no oldVector brand/coding/PRs, no left rail, no purple/slateblue/neon/gradients.
+
+
+EXACT ORIGINAL PROMPT: mobile-bottom
+
+Use case: ui-mockup
+Create the MOBILE BOTTOM continuation for the NEW NERAL homepage, tall portrait about1:2.4 highnative detail (rough820x1920). Fullbleed squarecanvas, one390logical-pixel column, no phoneframe. Input1 is accepted NERAL mobile top, primary exact mobile typography/padding/palette continuity; input2 is NERAL desktop bottom for content and responsive evidence/footer, not to shrink. Start at the evidence section; do not repeat nav/hero/comparison scorecard/method.
+Plain text NERAL wordmark only, Inter400/500 regular modest headings, SourceSerif4 readingtext, IBMPlexMono utility. White#FAFAF8, charcoal, warmgray lines, muted sage/amber data.24logicalpxsidepadding, body17logicalpx. No logo symbol or vendor/customermarks, no purple/neon/slate/glow, no exaggeratedbold type.
+First regular sans heading "Evidence keeps the exceptions visible." and short serif "Compare paired cases before deciding what moves forward.". Small "SAMPLE EVALUATION · EV-024" and "120 paired cases". Then single fullwidth horizontal stackedbar with correctproportions75%neutralgray /15%mutedsage /5%mutedamber /5%lightgray. Four readable legend items in a2column by2row layout below, not tiny fouracross: "Both accepted 90", "Improved 18", "Regressed 6", "Both flagged 6". These four countstotal120.
+Below modestspace, one simple bordered case detail reflows into a singlecolumn. "CASE043 · Return policy exception" then smallamber "One of six regressions". Label Baseline A, serifexcerpt "Returns within 30 days, except final-sale items.". Divider. Label Candidate B, serifexcerpt "Returns within 30 days.". Smallnote "Candidate omits the final-sale exception.". No newscorecardmetrics here.
+A pale neutral invitationblock below with regularsans "Bring your next evaluation into focus." then serif "Start with a dataset and a question." and charcoal "Create a workspace →" button. Keep complete and readable with naturalspace.
+Complete CUSTOM mobile footer on white: plain NERAL, then "Evidence, shared."; a prominent textlink "Contact the team →"; thin divider; utilitylinks Documentation, Privacy, Security, Status in two readable rows maximum2columns; final "©2026 NERAL". Minimal usefulfooter no sourcecompanylinkgroups, no articles/hiring/newsletter/logo strip. Finish with modestbottommargin, no truncation or clippedcopyright. All contentmatchesdesktop, legitimate narrowresponsivepage with same newNERAL identity.
+
+
+EXACT TARGETED EDIT PROMPT: mobile-bar-geometry-repair
+
+Use case: precise-object-edit
+Input1 is the sole edit target, NERAL's existing mobile homepage BOTTOM segment. Preserve the ENTIRE image, typography, copy, layout, colors, card, invitation and footer exactly. Change only the widths of the four existing colored segments inside the single horizontal paired-outcome stacked bar near the top. The bar represents120cases:90bothaccepted,18improved,6regressed,6bothflagged. Therefore the segment widths MUST be75%,15%,5%,5% of the unchanged overall bar length.
+Keep the overall existing bar position, height, total width, rounded outer corners, colors and existing legend identical. Move only the three internal boundaries. First gray section ends at exactly75% of total bar length; second mutedgreen section ends at90%; third amber section ends at95%; last lightgray section fills final5%. The first section should be THREE QUARTERS of the whole bar. Last two sections should be EQUAL small widths, each one third of the green section. Keep the separators as existing thin white lines. Do not add labels inside the bar or change any text/counts.
+On this821x1915image, bar spans approximatelyx66through756. Move internal boundaries to approximatelyx584,x687,x722. Do not move bar edges.
+No other edits, no redesign, no crop/rescale, no extra graphics, no font/color changes, preserve native canvas dimensions.
+
+
+EXACT TARGETED EDIT PROMPT: mobile-bar-geometry-repair-2
+
+Use case: precise-object-edit
+Image1 is edit target: NERAL mobile lower webpage. Image2 is supporting bar proportion reference: corrected desktop lower webpage. Change ONLY the single horizontal stacked bar in image1. Preserve everything else pixel-faithfully including wording, counts, typography, position and footer.
+The mobile bar is still incorrect: its first gray boundary is nearx540 but must movex584, distinctly RIGHT by44pixels. Its second boundary nearx659 must moveRIGHTtox687. Its third boundary nearx705 must moveRIGHTtox722. Overall bar leftx66 rightx756 staysfixed. Canvas821wide. Bar verticalposition/heightfixed. Precisely redraw ONLY the colored interiors to these horizontalextents:
+Gray bothaccepted: x66 to584 (518pixels).
+Sage improved: x584 to687 (103pixels).
+Amber regressed: x687 to722 (35pixels).
+Lightgray bothflagged: x722 to756 (34pixels).
+Keep thin white separators, same colors and outerroundedcorners. This is a measurable correction, not a conceptualstylechange. Image2 illustrates correct three-quarter gray, fifteen-percentgreen and equalfive-percent finalsegments. Make the gray visibly LONGER than image1. Do not move any text, label, card, heading, invitation or footer. Return entire mobileimage with originalcanvas, no crop, scale, padding or otherchanges.
+
+
+EXACT TARGETED EDIT PROMPT: mobile-evidence-tally-repair
+
+Use case: precise-object-edit
+Input1 is NERAL's mobile lower-page edit target. Make one local responsive evidence visualization change, preserving all other page content, headings, case detail, invitation, wordmark, footer and overall canvas.
+REMOVE the single horizontal colored stacked bar AND its current four-item legend. In the SAME region between "120 paired cases" and the case-detail card, replace that chart with a quiet simple TWO BY TWO CATEGORY COUNT DISPLAY on the existing white background. This is a categorical tally, NOT a proportion/area chart. No bars, tracks, progress indicators or variable widths anywhere in this region.
+Top-left smallgraymarker and label "Both accepted", below regular sans number "90" at readable32px.
+Top-right smallsage marker and label "Improved", below number "18".
+Bottom-left smallamber marker and label "Regressed", below number "6".
+Bottom-right smalllightgray marker and label "Both flagged", below number "6".
+Align the four equal-sized text groups cleanly in two columns, with gentle space and optional single thin horizontal separator between rows. They must be equal categorical groups; do not imply area proportionality. All four counts sum120. Keep labels exactly. This should occupy about the same region as the removedbar+legend, with no giantgap. NO STACKED BAR survives. Do not change anything else, no new copy or graphiclogo, no footer changes, no crop/rescale/padding. Keep original821wideportraitcanvas.
+

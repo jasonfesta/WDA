@@ -1,0 +1,129 @@
+:root {
+  --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --bg-ground: #FAFBF9;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #F7F9F7;
+  --bg-sidebar: #F2F5F2;
+
+  --ink-primary: #111412;
+  --ink-charcoal: #273028;
+  --ink-secondary: #515852;
+  --ink-muted: #767E78;
+  --ink-faint: #A8B0A9;
+
+  --rule-fine: #EBEEEC;
+  --rule-card: #D9DFDA;
+
+  --sage-fill: #E3EDE0;
+  --sage-soft: #EEF6EF;
+  --sage-border: #ADC4B0;
+  --sage-ink: #1B3621;
+
+  --pass-ink: #276738;
+  --pass-bg: #EBF5ED;
+  --pass-border: #C4DFCA;
+
+  --wait-ink: #664D14;
+  --wait-bg: #FDF6E4;
+  --wait-border: #E8D5A5;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.45;
+  background-color: var(--bg-ground);
+  color: var(--ink-charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.scaled-stage-outer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-ground);
+  overflow-x: hidden;
+}
+
+.scaled-stage-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.scaled-stage-inner {
+  transform-origin: top left;
+  position: relative;
+}
+
+/* Status Pills */
+.av-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 5px 9px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.av-pill-amber {
+  background: var(--wait-bg);
+  border-color: var(--wait-border);
+  color: var(--wait-ink);
+  letter-spacing: 0.03em;
+}
+.av-pill-sage {
+  background: #F4F8F4;
+  border-color: #C7D7C9;
+  color: #2A4730;
+  font-family: var(--font-sans);
+}
+.av-pill-green {
+  background: var(--pass-bg);
+  border-color: var(--pass-border);
+  color: var(--pass-ink);
+  font-family: var(--font-sans);
+}
+.av-pill-neutral {
+  background: #F4F6F5;
+  border-color: #DFE3E0;
+  color: #454C47;
+}
+
+.av-dot-green {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #4C8C5A;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Interactive hover polish */
+.av-interactive {
+  cursor: pointer;
+  transition: filter 0.14s ease, border-color 0.14s ease, background-color 0.14s ease;
+}
+.av-interactive:hover {
+  filter: brightness(0.98);
+}
