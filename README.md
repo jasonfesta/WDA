@@ -1,5 +1,11 @@
 # WDA
 
+## Website image selections — 24 October 2026
+
+[Browse all ten desktop/mobile pairs](images/website/final-2026-10-24/README.md) · [Download the 20 image files](https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/wda-website-images-2026-10-24.zip)
+
+Includes VIREL B, MELLORE A, Terreno A and Rill & Rye B, alongside the current homepage pairs and unchanged AVELA artwork. The four new directions are opening and first-scroll studies. Image files and an inventory only; no website implementation is included.
+
 ## Warm moodboard
 
 [Live moodboard](https://warm-moodboard.vercel.app) · [App source](warm/moodboard/) · [Build brief](warm-moodboard-build-brief.md)

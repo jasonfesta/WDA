@@ -1,0 +1,286 @@
+{
+  "collection": "WDA website image selections",
+  "date": "2026-10-24",
+  "repository": "jasonfesta/WDA",
+  "asset_count": 20,
+  "website_count": 10,
+  "publication_scope": "Existing selected raster images only. No implementation code. Four selected directions are opening studies, not complete homepages. This is not the earlier five-page-per-website completion milestone.",
+  "image_processing": "Byte-for-byte copies; no regeneration, resizing, upscaling, or recompression.",
+  "resolution_note": "Actual dimensions are recorded per file. Nine active mobile images exceed 780px width; the preserved AVELA mobile is 390px. Desktop files are below 2880px (2x1440px). No blanket retina or production-readiness claim.",
+  "archive": {
+    "file": "wda-website-images-2026-10-24.zip",
+    "bytes": 60093179,
+    "sha256": "32f184e6679a7e9ab1b13904b570ebbfb49fca8b80ca66bdcd7a60878b075c52",
+    "contents": "20 image files only"
+  },
+  "websites": [
+    {
+      "id": "virel",
+      "name": "VIREL",
+      "scope": "opening and first scroll transition",
+      "status": "direction selected by Jason Festa on 2026-10-24",
+      "option": "B",
+      "direction": "Passing frame",
+      "desktop": {
+        "file": "virel/desktop.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 1814256,
+        "sha256": "45773d1632f7a42ab5831567e363cd8b770013913c33b14b155dd58fe8b2dcaa",
+        "source": "output/website-completion-2026-10-24/homepage-review/photographic-options/images/virel-b-desktop.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/virel/desktop.png",
+        "byte_identical_to_source": true
+      },
+      "mobile": {
+        "file": "virel/mobile.png",
+        "width": 864,
+        "height": 1821,
+        "bytes": 1815070,
+        "sha256": "51266d05775b5ce35888943fbfd4c9d69b6bb07dfff5cdcd4ab1cd475045ca6f",
+        "source": "output/website-completion-2026-10-24/homepage-review/photographic-options/images/virel-b-mobile.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/virel/mobile.png",
+        "byte_identical_to_source": true
+      }
+    },
+    {
+      "id": "mellore",
+      "name": "MELLORE",
+      "scope": "opening and first scroll transition",
+      "status": "direction selected by Jason Festa on 2026-10-24",
+      "option": "A",
+      "direction": "Open horizon",
+      "desktop": {
+        "file": "mellore/desktop.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2177274,
+        "sha256": "63408dfa4afd62eb39f343f6a4ff6b60d935f00deeb8edd81089da55d1adfed7",
+        "source": "output/website-completion-2026-10-24/homepage-review/photographic-options/images/mellore-a-desktop.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/mellore/desktop.png",
+        "byte_identical_to_source": true
+      },
+      "mobile": {
+        "file": "mellore/mobile.png",
+        "width": 820,
+        "height": 1918,
+        "bytes": 1848431,
+        "sha256": "1a1638ed54fbc7a93ba52271a3a98cd206c8adc6579935ae9e594989f0a33f1f",
+        "source": "output/website-completion-2026-10-24/homepage-review/photographic-options/images/mellore-a-mobile.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/mellore/mobile.png",
+        "byte_identical_to_source": true
+      }
+    },
+    {
+      "id": "terreno",
+      "name": "Terreno",
+      "scope": "opening and first scroll transition",
+      "status": "direction selected by Jason Festa on 2026-10-24",
+      "option": "A",
+      "direction": "Into the field",
+      "desktop": {
+        "file": "terreno/desktop.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2615824,
+        "sha256": "94f80aabf2415c04f469ceedccae6b2158ac889f42bca91c40dcf3c6628cfc5c",
+        "source": "output/website-completion-2026-10-24/homepage-review/photographic-options/images/terreno-a-desktop.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/terreno/desktop.png",
+        "byte_identical_to_source": true
+      },
+      "mobile": {
+        "file": "terreno/mobile.png",
+        "width": 809,
+        "height": 1942,
+        "bytes": 2549882,
+        "sha256": "1732174757f42cfec50475f48c59b8fc186a5903445a3634427789326924b8b3",
+        "source": "output/website-completion-2026-10-24/homepage-review/photographic-options/images/terreno-a-mobile.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/terreno/mobile.png",
+        "byte_identical_to_source": true
+      }
+    },
+    {
+      "id": "rill-and-rye",
+      "name": "Rill & Rye",
+      "scope": "opening and first scroll transition",
+      "status": "direction selected by Jason Festa on 2026-10-24",
+      "option": "B",
+      "direction": "A table in the orchard",
+      "desktop": {
+        "file": "rill-and-rye/desktop.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2921174,
+        "sha256": "98ba86fe2396c0395801ee0bb9823e7b876f515d3f86c49df2dd3aab976ec324",
+        "source": "output/website-completion-2026-10-24/homepage-review/photographic-options/images/rill-and-rye-b-desktop.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/rill-and-rye/desktop.png",
+        "byte_identical_to_source": true
+      },
+      "mobile": {
+        "file": "rill-and-rye/mobile.png",
+        "width": 864,
+        "height": 1821,
+        "bytes": 2703257,
+        "sha256": "13d004d2612c5f02f99138e08091974049fc38eb4f1b35ceec2c1fb3d6f4b7d1",
+        "source": "output/website-completion-2026-10-24/homepage-review/photographic-options/images/rill-and-rye-b-mobile.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/rill-and-rye/mobile.png",
+        "byte_identical_to_source": true
+      }
+    },
+    {
+      "id": "room-and-ritual",
+      "name": "Room & Ritual",
+      "scope": "full homepage image",
+      "status": "current homepage review artwork, retained unchanged",
+      "desktop": {
+        "file": "room-and-ritual/desktop.png",
+        "width": 819,
+        "height": 1920,
+        "bytes": 2377373,
+        "sha256": "1021c3beac88c7fa0dd412da0b2937ea7dc2797e39bf3b5dd1f7f5456da580ab",
+        "source": "output/website-completion-2026-10-24/homepage-review/revision-2/desktop/room-and-ritual.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/room-and-ritual/desktop.png",
+        "byte_identical_to_source": true
+      },
+      "mobile": {
+        "file": "room-and-ritual/mobile.png",
+        "width": 809,
+        "height": 7768,
+        "bytes": 6960670,
+        "sha256": "84cafab1211442c4ccc1bc638da245c146fadc383a0930abcb569d396c16e89e",
+        "source": "output/website-completion-2026-10-24/homepage-review/revision-2/mobile/room-and-ritual.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/room-and-ritual/mobile.png",
+        "byte_identical_to_source": true
+      }
+    },
+    {
+      "id": "oriel",
+      "name": "Oriel",
+      "scope": "full homepage image",
+      "status": "current homepage review artwork, retained unchanged",
+      "desktop": {
+        "file": "oriel/desktop.png",
+        "width": 808,
+        "height": 1947,
+        "bytes": 2203454,
+        "sha256": "64fbf0cc091ec58ba8460049c6016bc0c017e8895149fc1ecb8412dd007fcaf0",
+        "source": "output/website-completion-2026-10-24/homepage-review/revision-2/desktop/oriel.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/oriel/desktop.png",
+        "byte_identical_to_source": true
+      },
+      "mobile": {
+        "file": "oriel/mobile.png",
+        "width": 809,
+        "height": 7018,
+        "bytes": 5510280,
+        "sha256": "fdd7eb6e49c5518c5496f8d01eb328be3f25f90911ebd32054e3b6acef696ff0",
+        "source": "output/website-completion-2026-10-24/homepage-review/revision-2/mobile/oriel.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/oriel/mobile.png",
+        "byte_identical_to_source": true
+      }
+    },
+    {
+      "id": "sundrop",
+      "name": "Sundrop",
+      "scope": "full homepage image",
+      "status": "current homepage review artwork, retained unchanged",
+      "desktop": {
+        "file": "sundrop/desktop.png",
+        "width": 815,
+        "height": 1930,
+        "bytes": 2104891,
+        "sha256": "0d5163f17bbd3fc84183618c5ec99f04be61071fe2a54d9aa96fde916e0a7043",
+        "source": "output/website-completion-2026-10-24/homepage-review/revision-2/desktop/sundrop.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/sundrop/desktop.png",
+        "byte_identical_to_source": true
+      },
+      "mobile": {
+        "file": "sundrop/mobile.png",
+        "width": 828,
+        "height": 6647,
+        "bytes": 5447757,
+        "sha256": "2e40d8c39239e0829b49524dac76511773b21e58d185ebe52bb27f50892798dc",
+        "source": "output/website-completion-2026-10-24/homepage-review/revision-2/mobile/sundrop.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/sundrop/mobile.png",
+        "byte_identical_to_source": true
+      }
+    },
+    {
+      "id": "serein",
+      "name": "Serein",
+      "scope": "full homepage image",
+      "status": "current homepage review artwork, retained unchanged",
+      "desktop": {
+        "file": "serein/desktop.png",
+        "width": 807,
+        "height": 1950,
+        "bytes": 2057409,
+        "sha256": "1713bcdd8ea9f0a8934457f3a9b829eaf7df00e5c109b886e35b6cb399c841b0",
+        "source": "output/website-completion-2026-10-24/homepage-review/revision-2/desktop/serein.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/serein/desktop.png",
+        "byte_identical_to_source": true
+      },
+      "mobile": {
+        "file": "serein/mobile.png",
+        "width": 809,
+        "height": 7294,
+        "bytes": 4982090,
+        "sha256": "a4c830ef0c8b91097ca3f9cb1c47b3a3f846b68829aaa99269d5c143d16627d8",
+        "source": "output/website-completion-2026-10-24/homepage-review/revision-2/mobile/serein.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/serein/mobile.png",
+        "byte_identical_to_source": true
+      }
+    },
+    {
+      "id": "vellune",
+      "name": "Vellune",
+      "scope": "full homepage image",
+      "status": "current homepage review artwork, retained unchanged",
+      "desktop": {
+        "file": "vellune/desktop.png",
+        "width": 806,
+        "height": 1951,
+        "bytes": 2211452,
+        "sha256": "d4c3e2f07ca5c5448895efb3eb84f8b801659305c896c82f740ceceb4b112bde",
+        "source": "output/website-completion-2026-10-24/homepage-review/revision-2/desktop/vellune.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/vellune/desktop.png",
+        "byte_identical_to_source": true
+      },
+      "mobile": {
+        "file": "vellune/mobile.png",
+        "width": 809,
+        "height": 7531,
+        "bytes": 5394490,
+        "sha256": "835f3e7a6109dbfc949997190c24d6798769084992d691995535518b529ff128",
+        "source": "output/website-completion-2026-10-24/homepage-review/revision-2/mobile/vellune.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/vellune/mobile.png",
+        "byte_identical_to_source": true
+      }
+    },
+    {
+      "id": "avela",
+      "name": "AVELA",
+      "scope": "full homepage image",
+      "status": "existing frozen artwork, copied unchanged",
+      "desktop": {
+        "file": "avela/desktop.png",
+        "width": 725,
+        "height": 2170,
+        "bytes": 2171541,
+        "sha256": "5cd261a3aec378c9e87c63f346369c9af302182bdf85cbe45a3f9abfb406b78e",
+        "source": "homepage-study/images/desktop/01-avela.png",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/avela/desktop.png",
+        "byte_identical_to_source": true
+      },
+      "mobile": {
+        "file": "avela/mobile.jpg",
+        "width": 390,
+        "height": 3210,
+        "bytes": 224298,
+        "sha256": "d39b8f19be3ae2d7fe00da94c15ce92bf436545bdd0b3d64dc69176347b6c3b2",
+        "source": "homepage-study/images/mobile/01-avela.jpg",
+        "hosted_url": "https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/avela/mobile.jpg",
+        "byte_identical_to_source": true
+      }
+    }
+  ]
+}
