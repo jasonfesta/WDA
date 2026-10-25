@@ -1,0 +1,8 @@
+Use case: ui-mockup.
+Asset type: final full-screen pre-mission loadout and level briefing screen, BUNNY ROYALE, 16:9.
+Image 1: canonical revised Fortnite-like CARROT COVE neighborhood map. Use it prominently on the right two-thirds, preserving blue wooden house, red-brick corner market, roads, broad grass, trees, fenced service yard and the three labeled regions. No island resort, no carrot tower, no ocean.
+Image 2: approved PIP full-body and canonical weapon identity, keep unchanged.
+Image 3: canonical PIP gear details, match exact CARROT CARBINE and armor.
+Image 4: revised flat compact UI styling, no glossy metallic toy panels.
+Composition: dedicated pre-mission preparation screen. Isometric neighborhood map dominates the right two-thirds, with small numbered navy/cyan labels "01 NEIGHBORHOOD", "02 MARKET", "03 SERVICE YARD". Dotted white route through the map linking these three spaces, ending at existing EXIT gate. On left, medium full-body PIP stands on a simple unobtrusive blue character-selection floor circle against a muted navy gradient; he holds his actual teal/orange carbine.
+Top left readable large white title "LEVEL 01" and "CARROT COVE". Small label below character "PIP / SCOUT". Upper right compact objective card "CLEAR 3 WAVES" and "DEFEAT THE FOREMAN". Bottom row three small navy loadout tiles with rendered correct item icons, exact labels "CARROT CARBINE", "DOUBLE HOP", "LIGHT ARMOR". Bottom-right orange flat angled button "START LEVEL"; bottom-left small "BACK". White condensed type and teal accents consistent with revised game UI. No giant persistent inspector/sidebar, no extra text, no substituted weapon or character, no photoreal glossy detailing.

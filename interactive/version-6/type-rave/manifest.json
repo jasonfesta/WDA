@@ -1,0 +1,36 @@
+{
+  "project": "Type Rave",
+  "collectionVersion": 6,
+  "date": "2026-10-25",
+  "status": "Selected concept art and specifications; no product implementation",
+  "scope": "Current selected assets, exact prompts, nine specifications and credited source references.",
+  "documents": [
+    "README.md",
+    "PRODUCT.md",
+    "EXPERIENCE.md",
+    "VISUAL-DIRECTION.md",
+    "INTERACTION-STATES.md",
+    "CONTENT-ASSETS.md",
+    "TECHNICAL-PLAN.md",
+    "ACCEPTANCE.md",
+    "SOURCES.md"
+  ],
+  "assets": [],
+  "references": [
+    {
+      "id": "dia-atrak-published-reference",
+      "file": "references/dia-atrak-published-reference.jpg",
+      "title": "DIA / A-Trak published visual reference",
+      "kind": "Published reference",
+      "width": 1920,
+      "height": 1536,
+      "bytes": 531485,
+      "sha256": "57ea5ae3183a13bf1ab42efd26bb5c8e97aede372fae1c8d055f75f4bffb5dee",
+      "alpha": false,
+      "caption": "Existing A-Trak typographic artwork by DIA. Reference for disciplined expressive type; not a new Type Rave screen.",
+      "credit": "DIA; published image via GoodFromYou",
+      "source": "https://www.goodfromyou.com/you/2017/8/9/a-trak-dynamic-type",
+      "primarySource": "https://dia.tv/project/a-trak/"
+    }
+  ]
+}

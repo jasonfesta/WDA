@@ -1,0 +1,35 @@
+{
+  "project": "Jet Ski POV",
+  "collectionVersion": 6,
+  "date": "2026-10-25",
+  "status": "Selected concept art and specifications; no product implementation",
+  "scope": "Current selected assets, exact prompts, nine specifications and credited source references.",
+  "documents": [
+    "README.md",
+    "PRODUCT.md",
+    "EXPERIENCE.md",
+    "VISUAL-DIRECTION.md",
+    "INTERACTION-STATES.md",
+    "CONTENT-ASSETS.md",
+    "TECHNICAL-PLAN.md",
+    "ACCEPTANCE.md",
+    "SOURCES.md"
+  ],
+  "assets": [],
+  "references": [
+    {
+      "id": "jet-ski-pov-photograph",
+      "file": "references/jet-ski-pov-photograph.jpg",
+      "title": "Existing POV photographic reference",
+      "kind": "Published reference",
+      "width": 2500,
+      "height": 1875,
+      "bytes": 903535,
+      "sha256": "92e145ff7240d11a588e8024db8218454cdcc3d7e6719217c08d48c9643641b3",
+      "alpha": false,
+      "caption": "Existing photograph used for handlebars, water and horizon framing. Proposed simulation remains unimplemented.",
+      "credit": "Published via Uptown Jet Skis; individual photographer not identified in retained source",
+      "source": "https://www.uptownjetskis.com/"
+    }
+  ]
+}

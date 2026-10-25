@@ -1,0 +1,131 @@
+{
+  "project": "Track Atlas",
+  "collectionVersion": 6,
+  "date": "2026-10-25",
+  "status": "Selected concept art and specifications; no product implementation",
+  "scope": "Current selected assets, exact prompts, nine specifications and credited source references.",
+  "documents": [
+    "README.md",
+    "PRODUCT.md",
+    "EXPERIENCE.md",
+    "VISUAL-DIRECTION.md",
+    "INTERACTION-STATES.md",
+    "CONTENT-ASSETS.md",
+    "TECHNICAL-PLAN.md",
+    "ACCEPTANCE.md",
+    "SOURCES.md"
+  ],
+  "assets": [
+    {
+      "id": "ink-score-desktop-v2",
+      "file": "assets/ink-score-desktop-v2.png",
+      "title": "Ink Score / Desktop",
+      "kind": "Generated concept art",
+      "width": 1585,
+      "height": 992,
+      "bytes": 3285890,
+      "sha256": "afcb0b5bc4137f6771830e1775cbb494cef0b882ba4e42ff37418247c1ed7c85",
+      "alpha": false,
+      "status": "generated spec art",
+      "prompt": "prompts/ink-score-desktop-v2.txt",
+      "promptSha256": "269ddb046aa06de1e62ebba8c4f6cfd24050636efcb5a8784c52b1f0fb733082"
+    },
+    {
+      "id": "ink-score-mobile-v2",
+      "file": "assets/ink-score-mobile-v2.png",
+      "title": "Ink Score / Mobile",
+      "kind": "Generated concept art",
+      "width": 851,
+      "height": 1847,
+      "bytes": 3403164,
+      "sha256": "f8f048b62fdbee07c3d7a0afde4b087d9d6cefb6e4b1c5ee951d99de27005709",
+      "alpha": false,
+      "status": "generated spec art",
+      "prompt": "prompts/ink-score-mobile-v2.txt",
+      "promptSha256": "82623a8ee994d8f12e363e896b41bd99a2e00af7d391ff9a6caea4000d9ca588"
+    },
+    {
+      "id": "kinetic-poster-desktop-v2",
+      "file": "assets/kinetic-poster-desktop-v2.png",
+      "title": "Kinetic Poster / Desktop",
+      "kind": "Generated concept art",
+      "width": 1586,
+      "height": 992,
+      "bytes": 3306817,
+      "sha256": "57b0201b071935a8b9d70343b297036472b80206317cb3b9538bb593817f24c5",
+      "alpha": false,
+      "status": "generated spec art",
+      "prompt": "prompts/kinetic-poster-desktop-v2.txt",
+      "promptSha256": "fc744719943c991479f5c10c29f4434b2b575ead78775f7b0bbad5ec507b5099"
+    },
+    {
+      "id": "kinetic-poster-mobile-v2",
+      "file": "assets/kinetic-poster-mobile-v2.png",
+      "title": "Kinetic Poster / Mobile",
+      "kind": "Generated concept art",
+      "width": 853,
+      "height": 1844,
+      "bytes": 3417489,
+      "sha256": "0514e8299b97ed720b4f69a372106987bd4e65d08d268c4093a9636d0860a312",
+      "alpha": false,
+      "status": "generated spec art",
+      "prompt": "prompts/kinetic-poster-mobile-v2.txt",
+      "promptSha256": "64d6c573bc83f4fc5fde03dca4f753f22dc1485ec1ce1d2285cdef80ed239c60"
+    },
+    {
+      "id": "listening-diary-desktop-v2",
+      "file": "assets/listening-diary-desktop-v2.png",
+      "title": "Listening Diary / Desktop",
+      "kind": "Generated concept art",
+      "width": 1586,
+      "height": 992,
+      "bytes": 3025947,
+      "sha256": "cd45dbd21a58305839379a024912b5f806411083789f8a5fde89f14c0d720ebd",
+      "alpha": false,
+      "status": "generated spec art",
+      "prompt": "prompts/listening-diary-desktop-v2.txt",
+      "promptSha256": "bb0fc87a0f35ab4a445d8088eb1019ae45df373382627595959eac5c458feefd"
+    },
+    {
+      "id": "listening-diary-mobile-v2",
+      "file": "assets/listening-diary-mobile-v2.png",
+      "title": "Listening Diary / Mobile",
+      "kind": "Generated concept art",
+      "width": 851,
+      "height": 1848,
+      "bytes": 3121475,
+      "sha256": "9a4a245507a7359d09bdc89f9f91fe616ec252bf3d89bff8b9b82bee7d734da0",
+      "alpha": false,
+      "status": "generated spec art",
+      "prompt": "prompts/listening-diary-mobile-v2.txt",
+      "promptSha256": "506a5ce71a1b1872d605d75cd273c8c18f3f776caf453d2814fb840d8fced90a"
+    },
+    {
+      "id": "shared-controls-v2",
+      "file": "assets/shared-controls-v2.png",
+      "title": "Shared controls and states",
+      "kind": "Generated concept art",
+      "width": 1586,
+      "height": 992,
+      "bytes": 2253028,
+      "sha256": "0650db086528cd6b9ed6dfeede6f8a8fce433b0c965de992b90f7d235d5ce559",
+      "alpha": false,
+      "status": "generated spec art",
+      "prompt": "prompts/shared-controls-v2.txt",
+      "promptSha256": "a22310911d4215109a6bb0c09f3ba27021a53c7160f8b1ff383e41617b9ea8f0"
+    }
+  ],
+  "references": [],
+  "modes": [
+    "Ink Score",
+    "Kinetic Poster",
+    "Listening Diary"
+  ],
+  "track": {
+    "title": "Quiet Current",
+    "artist": "Demo track",
+    "bpm": 96,
+    "duration": "03:12",
+    "status": "Fictional concept metadata; no audio analyzed"
+  }
+}

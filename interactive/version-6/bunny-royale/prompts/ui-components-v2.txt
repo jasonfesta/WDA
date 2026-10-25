@@ -1,0 +1,10 @@
+Use case: ui-mockup.
+Asset type: final transparent raster game HUD/UI kit for BUNNY ROYALE. Fortnite-like functional game interface aesthetic: flat, crisp, athletic, compact. It must NOT look like a glossy toy mobile game.
+Primary request: Create a clean professional landscape sprite-study sheet, true transparent background, showing individually separated UI elements for a third-person cartoon shooter. Strict 2D flat styling: navy translucent rectangular panels with slight angled corners, solid white condensed sans serif text, teal status accents, orange selected/action state. NO 3D bevels, NO thick metallic frames, NO glossy gradients, NO bloom or drop shadows, NO illustrated backdrop.
+Layout in five balanced rows, enough space to isolate every component:
+Row 1: three plain portrait card frames (empty normal, orange selected, gray locked); three rectangular button states reading exactly PLAY, SELECTED, LOCKED.
+Row 2: compact green health bar with heart and 100; compact cyan shield bar with shield and 50; ammo type exact 30 / 120; a slim empty progress bar.
+Row 3: three small square inventory slots with number keys 1, 2, 3; first orange outline, remaining navy; simple flat white icons for compact carbine, seed cannon, fork energy blaster inside them.
+Row 4: small white flat silhouette icons of carrot currency, rabbit double-hop, ground-slam impact, disc drone, gear, sound, back arrow, fullscreen, pause, tiny dot crosshair and four-tick aiming reticle.
+Row 5: narrow banner WAVE 1 / 3; compact objective text card CLEAR THE MARKET; orange READY button; reload circle and loading spinner.
+No additional text. No logo or character art. Crisp small-game-HUD proportions, subtle rounding only where useful, never a heavy full-height panel. Show final visual UI assets on transparent alpha, not a documentation board or web page.

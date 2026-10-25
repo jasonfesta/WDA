@@ -1,0 +1,14 @@
+Use case: ui-mockup.
+Asset type: convincing in-game third-person gameplay art screenshot, BUNNY ROYALE first level, landscape 16:9.
+Reference image 1: exact current Fortnite-style suburban environment, retain asphalt street, blue siding house, red-brick MARKET, yellow parked car, pickup, pines, broad bright grass, matte simplified game textures and blue-violet sky. No resort or miniature diorama.
+Reference image 2: approved PIP turnaround, preserve his body/armor/ears and carrot backpack when viewed from behind.
+Reference image 3: approved PIP gear, use this exact teal/orange CARROT CARBINE with orange glowing magazine.
+Reference image 4: enemy roster, use exactly two small RAIDER rabbits and one HOPPER ahead in the midground; no boss yet.
+Reference image 5: flat compact UI styling.
+Main scene: camera just behind and above PIP's right shoulder, PIP occupies lower-left quarter, visible torso/legs and aiming his carbine down the street. Readable action lane open through center. Two raiders behind wooden cover crates near market, one hopper crossing the street; one short orange energy shot travels forward, tiny stylized impact spark on cover, no gore. The player is actively fighting, not posing for a poster. Characters should match reference design but rendered in actual Fortnite-like game lighting and proportion to houses.
+HUD extremely restrained, edge-only:
+top center small white "WAVE 1 / 3" with smaller "CLEAR THE MARKET" below; tiny thin compass ticks above.
+bottom left two slim horizontal bars, green health "100", cyan shield "50", small PIP portrait;
+bottom right white ammo "30 / 120", three small square weapon slots with keys 1 2 3, first contains carbine and orange selection outline; small double-hop icon;
+tiny white four-tick crosshair exactly center.
+Optional top-right compact square minimap only 10% screen width. No giant logo, no menu buttons, no full-height sidebar, no large panels obscuring street, no damage numbers over faces, no extra text. The game world must occupy at least 85 percent of the frame.

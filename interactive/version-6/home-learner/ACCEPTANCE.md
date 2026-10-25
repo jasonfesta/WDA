@@ -1,0 +1,30 @@
+# Acceptance and decision gates
+
+## Concept review now
+
+The current handoff is complete when the hero unmistakably shows teaching from home, the phone is understood as companion/controller, all three source options are visible, and review separates observations from approved labels. A reviewer should be able to explain why Dataset 03 can coexist with Model 02. All generated screens must be labeled as illustrative; the earlier Model Workshop study must remain identifiable as earlier work.
+
+The document pack must state one useful bounded lesson, the model capability required, correction behavior, an unseen test, capture choices and the future status of device workers. A reader must not infer that the app autonomously learns arbitrary household tasks or that a working headcam connection has been demonstrated.
+
+## Future experience validation
+
+Ask participants to plan Pack my bag, choose a source, define the intended outcome and identify where the media will be kept. Observe whether they can pause, discard an accidental segment and correct a wrong observation without help. Test whether they distinguish object visible from object packed. Record misunderstandings as design findings rather than counting taps as success.
+
+Use a new session with changed perspective, lighting and object placement for evaluation. Keep the entire test session outside training. Report performance by label and scenario, with failure examples, sample counts and abstentions. A single overall accuracy figure is insufficient when adjacent frames or one easy class dominate.
+
+## Future technical checks
+
+Verify source disconnects, missing permission, denied audio, rotation, background suspension, storage limits and incomplete files. The UI must represent actual saved material and release capture resources when stopped. Check that a dataset edit cannot mutate the inputs recorded for an earlier training run.
+
+Cancellation must preserve the prior usable model. Export/reload must maintain labels, preprocessing and artifact lineage. If any cloud option is proposed, verify the visible processing choice against actual network behavior. If workers are introduced, test opt-in, version matching, lease expiry, duplicate results and leaving mid-job before making performance claims.
+
+## Definition of done and open decisions
+
+For a future bounded prototype, done means capture or import, human review, versioned examples, a supported learning step, honest testing and correction all work on the nominated device set. Temporal understanding and distributed learning require separate evidence.
+
+Open decisions include the final name, first supported headcam path, native versus web companion, observation model, retention default, household-sharing roles and whether cloud processing is necessary. The next approved step should resolve these choices; this pack does not authorize development.
+
+
+## Android V2 review gate
+
+Review the current four files for clear Android identity, consistent Head cam provenance, sparse charcoal/citron controls and readable evidence rows. Confirm there is no superseded blue styling, iPhone Dynamic Island, unexplained Webcam source change or oversized card stack. Later usability checks must include 48 dp touch targets, large font settings, gesture and three-button navigation, system Back and TalkBack reading order.

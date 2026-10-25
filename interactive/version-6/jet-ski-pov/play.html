@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Jet Ski POV — 3D Ocean &amp; Aerial Trick Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="sim-container">
+    <canvas id="ocean-canvas"></canvas>
+    <canvas id="cockpit-canvas"></canvas>
+
+    <!-- =================================================================== -->
+    <!-- STUDIO TOP BAR (Minimal, Translucent Glass)                         -->
+    <!-- =================================================================== -->
+    <header class="studio-top-bar">
+      <div class="studio-brand">
+        <span class="studio-eyebrow">RETINA 3D SIMULATOR · AERIAL STUNTS &amp; ARCHIPELAGO</span>
+        <span class="studio-title">YAMAHA WAVERUNNER FX · ARABIAN GULF &amp; SAIL TOWER</span>
+      </div>
+
+      <div class="studio-Presets">
+        <button class="preset-pill active" data-preset="photo">01 · PHOTO MATCH (TURQUOISE CHOP)</button>
+        <button class="preset-pill" data-preset="swell">02 · BIG AIR OFFSHORE SWELL</button>
+        <button class="preset-pill" data-preset="glassy">03 · GLASSY LAGOON MORNING</button>
+        <button class="preset-pill" data-preset="golden">04 · GOLDEN HOUR SUN</button>
+      </div>
+
+      <div class="studio-actions">
+        <button id="btn-jump-flip" class="studio-btn trick-action-btn" title="Launch Jump &amp; Backflip [SPACE / F]">🚀 [SPACE] JUMP / [F] FLIP</button>
+        <button id="btn-toggle-cockpit" class="studio-btn active" title="Toggle 3D Jet Ski Rig [C]">[C] 3D JET SKI FRONT: ON</button>
+        <button id="btn-toggle-ref" class="studio-btn" title="Hold or Click to Compare Reference Photo [R]">[R] COMPARE PHOTO</button>
+        <button id="btn-toggle-tuning" class="studio-btn" title="Toggle Ocean Shader Tuning Drawer [T]">⚙ TUNING</button>
+        <a href="index.html" class="studio-link">Docs</a>
+      </div>
+    </header>
+
+    <!-- Dynamic Aerial Trick & Stunt Telemetry Banner -->
+    <div id="trick-hud-banner" class="trick-hud-banner hidden">
+      <div class="trick-hud-badge" id="trick-hud-title">360° BACKFLIP!</div>
+      <div class="trick-hud-sub" id="trick-hud-meta">AIR TIME 1.6s · ALT 18 FT · +1,500 PTS</div>
+    </div>
+
+    <!-- Reference Photograph Comparison Overlay (Toggled via [R] or button) -->
+    <div id="ref-compare-overlay" class="ref-overlay hidden">
+      <img src="references/jet-ski-pov-photograph.jpg" alt="Reference POV Photograph">
+      <div class="ref-badge">REFERENCE PHOTOGRAPH (HOLD/CLICK [R] TO TOGGLE)</div>
+    </div>
+
+    <!-- Collapsible Shader Tuning Drawer -->
+    <aside id="tuning-drawer" class="tuning-drawer hidden">
+      <div class="drawer-header">
+        <span>GPU OCEAN SHADER PARAMETERS</span>
+        <button id="btn-close-tuning" class="drawer-close">✕</button>
+      </div>
+
+      <div class="tuning-row">
+        <label for="sl-chop">Wave Chop &amp; Crest Sharpness</label>
+        <input type="range" id="sl-chop" min="20" max="180" value="100">
+        <span id="val-chop" class="tuning-val">1.00</span>
+      </div>
+
+      <div class="tuning-row">
+        <label for="sl-height">Swell Amplitude</label>
+        <input type="range" id="sl-height" min="15" max="180" value="85">
+        <span id="val-height" class="tuning-val">0.85</span>
+      </div>
+
+      <div class="tuning-row">
+        <label for="sl-speed">Glide Speed (KTS)</label>
+        <input type="range" id="sl-speed" min="0" max="65" value="28">
+        <span id="val-speed" class="tuning-val">28 KTS</span>
+      </div>
+
+      <div class="tuning-row">
+        <label for="sl-sun-elev">Sun Elevation</label>
+        <input type="range" id="sl-sun-elev" min="6" max="68" value="22">
+        <span id="val-sun-elev" class="tuning-val">22°</span>
+      </div>
+
+      <div class="tuning-row">
+        <label for="sl-sun-azim">Sun Azimuth</label>
+        <input type="range" id="sl-sun-azim" min="-180" max="180" value="-18">
+        <span id="val-sun-azim" class="tuning-val">-18°</span>
+      </div>
+
+      <div class="tuning-row">
+        <label for="sl-haze">Horizon Coastal Haze</label>
+        <input type="range" id="sl-haze" min="10" max="100" value="35">
+        <span id="val-haze" class="tuning-val">35%</span>
+      </div>
+
+      <div class="tuning-row">
+        <label for="sl-turq">Subsurface Turquoise</label>
+        <input type="range" id="sl-turq" min="10" max="150" value="100">
+        <span id="val-turq" class="tuning-val">100%</span>
+      </div>
+    </aside>
+
+    <!-- Subtle Bottom-Left Telemetry & Controls Hint -->
+    <footer class="studio-bottom-bar">
+      <div class="telemetry-readout">
+        <span id="readout-speed">28 KTS (32 MPH)</span>
+        <span class="sep">·</span>
+        <span id="readout-landmark">SAIL TOWER: 520M N</span>
+        <span class="sep">·</span>
+        <span id="readout-depth">SURFACE CONTACT LOCKED · SCORE 0</span>
+        <span class="sep">·</span>
+        <span id="readout-heading">HDG 000°</span>
+      </div>
+      <div class="controls-hint">
+        <span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Drive &amp; Air Flip/Roll</span>
+        <span><kbd>SPACE</kbd> Launch Jump / Double-Tap Flip</span>
+        <span><kbd>F</kbd> Backflip</span>
+        <span><kbd>Q</kbd><kbd>E</kbd><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> Stunt Tricks</span>
+        <span><kbd>V</kbd> Dive</span>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="src/main.js?v=19"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Proposed experience — Imaginal Portal
+
+## Arrival
+
+The opening composition presents an apricot sky, lavender terrain and a distant liquid-chrome disc. Small figures and winged-eye sculptures belong to the edges of the landscape. The artist name, “Image” and one primary play action establish the session. A compact preparation layer can offer difficulty and sound; it closes before the game begins. There is no permanent control column covering the world.
+
+The scene draws the eye toward the central portal and the three targets below it. A short practice phrase introduces the relationship between approaching notes and the fixed hit line. Desktop hints show D, F and J; mobile uses the pads directly. Early practice inputs can illuminate the controls without scoring a miss. The first scored note should arrive only after a clear countdown.
+
+## Musical passage
+
+Notes travel down the three-lane causeway at a predictable visual speed. The introductory passage uses separated taps, followed by cross-lane sequences. The rendered long ribbon illustrates a possible hold note, but whether holds appear in the first chart remains open. A chorus can increase density; a quieter passage should leave space rather than filling every beat with activity.
+
+Successful hits briefly illuminate the matching pad and produce concise feedback near the line. Combo supports the sense of continuity without becoming a giant headline. Misses should break the sequence cleanly while keeping the next note readable. Avoid shaking the camera, deforming the playfield or flooding the foreground with particles.
+
+## The world performs around the player
+
+The environment should evolve at phrase boundaries. A portal reflection can change, distant clouds can brighten, a winged eye can pass along an outer arc, and the horizon can reveal a new layer. These are proposed choreography cues, not a literal frequency-spectrum display. The characters remain small scenic cameos; they never expand into portrait wallpaper.
+
+World motion is slower and less contrast-heavy than gameplay. The center corridor retains its calm smoky-lavender surface. Reduced motion would keep the same composition with a static environment and restrained target feedback. Neither setting may change note times, judgment rules or hit-target positions.
+
+## Completion and interruption
+
+The final note resolves before a compact results layer appears. The portal remains visible behind score, accuracy, best combo and Retry. A later practice mode might replay a difficult passage, but no such function is delivered now. Pausing, focus loss and orientation changes should lead to recoverable states rather than silent misses.
+
+Desktop uses a wide world around a mathematically centered runway. Mobile compresses the scene into vertical depth: artist identification above, portal in the middle distance, notes below, broad thumb targets near the bottom. These stills communicate the active-play moment; the surrounding sequence is a specification for future review.

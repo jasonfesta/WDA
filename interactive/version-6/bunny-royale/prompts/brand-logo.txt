@@ -1,0 +1,6 @@
+Use case: logo-brand.
+Asset type: final raster game logo on a genuinely transparent background.
+Primary request: Create the polished launch wordmark for an original playful stylized 3D rabbit arena shooter called BUNNY ROYALE.
+Text (verbatim): "BUNNY" on first line, "ROYALE" on second line. Only these two words; spell them exactly.
+Style: strong condensed chunky custom white 3D lettering with broad midnight-navy bevel/outline and a restrained orange lower extrusion. Two simple white rabbit ears integrated above the letters, one ear with a small bent tip. Very readable at thumbnail size. Energetic, confident, cheeky AAA family-action game identity. Subtle perspective and clean flat front faces rather than excessive texture.
+Composition: centered single two-line logo, roughly wide 3:2 footprint, comfortable transparent padding on every side. No mockup, no backdrop, no panel, no checkerboard rendered into artwork, no extra icons or characters, no watermark. Preserve actual transparent alpha.

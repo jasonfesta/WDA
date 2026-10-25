@@ -1,0 +1,8 @@
+Use case: precise-object-edit.
+Asset type: final pause and settings menu screen, BUNNY ROYALE, landscape 16:9.
+Image 1 is the exact V2 gameplay screenshot. Keep the same neighborhood, player, enemies, camera and placement; freeze the action and dim/soften the background uniformly so it is clearly paused. Image 2 is the revised compact flat navy/orange UI styling.
+Create a deliberate centered pause modal occupying about 50 percent width and 68 percent height. This is a temporary pause state, not an always-open gameplay sidebar. Dark navy flat panel, very thin cyan edge, clean bold white condensed typography.
+At top exact heading "PAUSED", small location "CARROT COVE · WAVE 1".
+Inside left half three stacked compact flat buttons: orange selected "RESUME", navy "RESTART LEVEL", navy "MAIN MENU".
+Inside right half exact heading "SETTINGS", three simple horizontal sliders labelled "MASTER 80", "MUSIC 60", "SFX 90"; one additional slider "AIM SENSITIVITY 50"; a small checkbox row "REDUCED MOTION".
+Along modal bottom a thin control guide with keycaps and exact text: "WASD MOVE", "MOUSE AIM", "SPACE HOP", "Q ABILITY", "ESC RESUME". Keep labels readable and aligned, generous internal spacing, restrained flat UI. Hide the active combat HUD while paused. Keep the full neighborhood background visible around all four edges. No logo dominating, no thick glossy mobile-game bevels, no unrelated art or extra text.

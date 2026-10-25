@@ -1,0 +1,775 @@
+/* Track Atlas V2 — 02 / Kinetic Poster Stylesheet
+ * Calibrated 1:1 to assets/kinetic-poster-desktop-v2.png,
+ * assets/kinetic-poster-mobile-v2.png, and assets/shared-controls-v2.png
+ */
+
+:root {
+  --color-paper: #F4EFE4;
+  --color-paper-card: rgba(248, 243, 233, 0.96);
+  --color-ink-black: #17181A;
+  --color-ink-secondary: #2B2A28;
+  --color-ink-muted: #6E6A63;
+  --color-hairline: rgba(23, 24, 26, 0.28);
+  --color-hairline-subtle: rgba(23, 24, 26, 0.16);
+  --color-orange-accent: #E85B26;
+  --color-indigo: #173452;
+  --color-teal: #2F6678;
+  --color-terracotta: #C65935;
+  --color-ochre: #DB9B3B;
+  --color-moss: #486342;
+
+  --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: "Fraunces", "Playfair Display", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--color-paper);
+  color: var(--color-ink-black);
+  font-family: var(--font-ui);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#app-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--color-paper);
+}
+
+/* Full-Bleed Canvas Viewport */
+#canvas-viewport {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#render-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  outline: none;
+}
+
+#render-canvas:active {
+  cursor: grabbing;
+}
+
+#render-canvas:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--color-orange-accent);
+}
+
+/* Top Edge Header — Open Paper Margin Layout (No Heavy Chrome) */
+#top-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 23px 2.95vw 0 2.95vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.top-left-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  pointer-events: auto;
+}
+
+.brand-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--color-ink-black);
+}
+
+.current-mode-badge {
+  margin-top: 45px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--color-ink-secondary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  pointer-events: auto;
+}
+
+.btn-header {
+  background: none;
+  border: none;
+  padding: 4px 2px;
+  min-height: 32px;
+  font-family: var(--font-ui);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--color-ink-black);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-header:hover {
+  color: var(--color-orange-accent);
+}
+
+.btn-header:focus-visible {
+  outline: 2px solid var(--color-orange-accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.btn-header.subtle-action {
+  font-size: 11.5px;
+  color: var(--color-ink-muted);
+  opacity: 0;
+  transition: opacity 0.18s ease, color 0.15s ease;
+}
+
+#top-header:hover .btn-header.subtle-action,
+.header-actions:focus-within .btn-header.subtle-action,
+.btn-header.subtle-action:hover,
+.btn-header.subtle-action:focus-visible,
+.btn-header.subtle-action[aria-pressed="true"] {
+  opacity: 0.85;
+  color: var(--color-ink-black);
+}
+
+.btn-header.subtle-action[aria-pressed="true"] {
+  opacity: 1;
+  color: var(--color-orange-accent);
+  font-weight: 600;
+}
+
+.btn-header.contextual-action {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--color-terracotta);
+  border-bottom: 1px solid rgba(198, 89, 53, 0.45);
+  padding-bottom: 1px;
+}
+
+/* Lower Left Helper Prompt & Mode Indicator Strip (Above Hairline) */
+#lower-edge-bar {
+  position: absolute;
+  left: 3.02vw;
+  bottom: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.canvas-hint-line {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  color: var(--color-ink-secondary);
+  line-height: 1;
+}
+
+.modes-row {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  pointer-events: auto;
+}
+
+.mode-tab {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 2px 0 7px 0;
+  font-family: var(--font-ui);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-secondary);
+  cursor: default;
+  line-height: 1;
+}
+
+.mode-tab.disabled-mode {
+  opacity: 0.85;
+}
+
+.mode-tab.active {
+  font-weight: 700;
+  color: var(--color-ink-black);
+  cursor: pointer;
+}
+
+/* Warm terracotta/ochre watercolor wash behind active KINETIC POSTER tab (shared-controls-v2.png) */
+.mode-wash-bg {
+  position: absolute;
+  inset: -8px -18px -4px -18px;
+  background: radial-gradient(ellipse at 50% 52%, rgba(232, 134, 72, 0.24) 0%, rgba(219, 155, 59, 0.14) 52%, rgba(244, 239, 228, 0) 78%);
+  border-radius: 50%;
+  filter: blur(2px);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.mode-tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--color-ink-black);
+}
+
+/* Bottom Edge Transport Strip — Full-Width Hairline Divider (y=911 on 1586x992) */
+#bottom-controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 81px;
+  border-top: 1px solid var(--color-hairline);
+  padding: 0 3.02vw;
+  display: flex;
+  align-items: center;
+  z-index: 30;
+  background: linear-gradient(to bottom, rgba(244, 239, 228, 0.45), rgba(244, 239, 228, 0.82));
+}
+
+.transport-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.transport-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+/* Play / Pause Solid Icon Button (Matches kinetic-poster-desktop-v2.png & shared-controls-v2.png) */
+.btn-play {
+  width: 36px;
+  height: 44px;
+  background: none;
+  border: none;
+  color: var(--color-ink-black);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  transition: transform 0.12s ease, color 0.15s ease;
+}
+
+.btn-play:hover {
+  color: var(--color-orange-accent);
+  transform: scale(1.06);
+}
+
+.btn-play:focus-visible {
+  outline: 2px solid var(--color-orange-accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.btn-play svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.transport-sep {
+  display: inline-block;
+  width: 1px;
+  height: 30px;
+  background-color: rgba(23, 24, 26, 0.36);
+  flex-shrink: 0;
+}
+
+.track-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+  min-width: 112px;
+}
+
+.track-title {
+  font-size: 14.5px;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  color: var(--color-ink-black);
+  line-height: 1.15;
+}
+
+.track-subtitle {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--color-ink-muted);
+  line-height: 1.15;
+}
+
+/* Fine Vertical-Bar Waveform Scrubber */
+.scrubber-container {
+  flex: 1;
+  height: 54px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  min-width: 200px;
+  outline: none;
+}
+
+.scrubber-container:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-orange-accent);
+  border-radius: 4px;
+}
+
+.waveform-canvas {
+  width: 100%;
+  height: 54px;
+  display: block;
+}
+
+/* Right Transport Controls */
+.transport-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.time-readout {
+  font-size: 12px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-black);
+  white-space: nowrap;
+}
+
+.bpm-badge {
+  background: none;
+  border: none;
+  padding: 4px 2px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-black);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.bpm-badge:hover {
+  color: var(--color-orange-accent);
+}
+
+.btn-loop {
+  width: 34px;
+  height: 44px;
+  background: none;
+  border: none;
+  color: var(--color-ink-black);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.btn-loop:hover {
+  color: var(--color-orange-accent);
+}
+
+.btn-loop.active,
+.btn-loop[aria-pressed="true"] {
+  color: var(--color-orange-accent);
+}
+
+.btn-loop:focus-visible {
+  outline: 2px solid var(--color-orange-accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Frame Saved Confirmation Card (Matches shared-controls-v2.png "Frame saved") */
+#toast {
+  position: fixed;
+  right: 2.95vw;
+  bottom: 92px;
+  width: 210px;
+  background: var(--color-paper-card);
+  border: 1px solid var(--color-hairline);
+  border-radius: 6px;
+  padding: 12px 14px 10px 14px;
+  box-shadow: 0 12px 28px rgba(23, 24, 26, 0.12);
+  z-index: 200;
+  opacity: 0;
+  transform: translateY(14px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#toast.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.toast-header {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-ink-black);
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
+
+.toast-thumb-wrap {
+  position: relative;
+  width: 100%;
+  height: 104px;
+  border-radius: 4px;
+  overflow: visible;
+  background: var(--color-paper);
+  border: 1px solid var(--color-hairline-subtle);
+}
+
+#toast-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+  display: block;
+}
+
+/* Solid dark circle checkmark in top-right corner of thumbnail (shared-controls-v2.png) */
+.toast-check-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-ink-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22);
+}
+
+.toast-meta {
+  margin-top: 7px;
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--color-ink-muted);
+  letter-spacing: 0.02em;
+}
+
+/* Modal Dialogs */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(23, 24, 26, 0.38);
+  backdrop-filter: blur(3px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-card {
+  background-color: #F7F2E8;
+  border: 1px solid var(--color-hairline);
+  border-radius: 6px;
+  width: 92%;
+  max-width: 420px;
+  padding: 22px 24px;
+  box-shadow: 0 18px 40px rgba(23, 24, 26, 0.16);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.modal-header h3 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-black);
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--color-ink-muted);
+  line-height: 1;
+}
+
+.modal-body {
+  margin-bottom: 18px;
+  font-size: 12.5px;
+  color: var(--color-ink-secondary);
+  line-height: 1.5;
+}
+
+.field-label {
+  display: block;
+  margin-top: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+.input-styled {
+  width: 100%;
+  padding: 9px 11px;
+  margin-top: 5px;
+  border: 1px solid var(--color-hairline);
+  border-radius: 4px;
+  background-color: #FCF9F2;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  color: var(--color-ink-black);
+}
+
+.error-banner {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  background: rgba(198, 89, 53, 0.12);
+  border: 1px solid rgba(198, 89, 53, 0.4);
+  color: #8E3317;
+  font-size: 11.5px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-secondary {
+  background: none;
+  border: 1px solid var(--color-hairline);
+  padding: 7px 13px;
+  border-radius: 4px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-ink-black);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-ink-black);
+  color: var(--color-paper);
+  border: none;
+  padding: 7px 15px;
+  border-radius: 4px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Portrait / Mobile Responsive Layout — Calibrated 1:1 to assets/kinetic-poster-mobile-v2.png (853x1844) */
+@media (max-aspect-ratio: 10/11), (max-width: 760px) {
+  #top-header {
+    padding: 1.95vh 5.6vw 0 5.6vw;
+  }
+
+  .brand-title {
+    font-size: clamp(12px, 3.1vw, 19px);
+  }
+
+  .current-mode-badge {
+    margin-top: 2.35vh;
+    font-size: clamp(11px, 2.75vw, 17px);
+  }
+
+  .header-actions {
+    gap: 3.4vw;
+  }
+
+  .btn-header {
+    font-size: clamp(12px, 2.9vw, 18px);
+  }
+
+  .btn-header.subtle-action {
+    display: none;
+  }
+
+  #lower-edge-bar {
+    left: 5.6vw;
+    right: 5.6vw;
+    bottom: 12.2vh;
+    gap: 1.8vh;
+  }
+
+  .canvas-hint-line {
+    font-size: clamp(11px, 2.7vw, 17px);
+  }
+
+  .modes-row {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 6.5vw;
+  }
+
+  .mode-tab {
+    font-size: clamp(10.5px, 2.6vw, 16px);
+    padding-bottom: 0.45vh;
+  }
+
+  #bottom-controls {
+    height: 11.4vh;
+    min-height: 96px;
+    padding: 1.1vh 5.6vw 1.2vh 5.6vw;
+    align-items: stretch;
+  }
+
+  /* 3-row mobile transport grid matching kinetic-poster-mobile-v2.png:
+   * Row 1: Play | Quiet Current / Demo track ........ Loop icon
+   * Row 2: Full-width slim waveform scrubber
+   * Row 3: 01:24 / 03:12 ............................ 96 BPM
+   */
+  .transport-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 38% 36% 26%;
+    gap: 0;
+    align-items: center;
+  }
+
+  .transport-left {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    gap: 3.2vw;
+  }
+
+  .btn-play {
+    width: clamp(26px, 6vw, 42px);
+    height: clamp(30px, 6.5vw, 46px);
+  }
+
+  .btn-play svg {
+    width: clamp(18px, 4.4vw, 28px);
+    height: clamp(18px, 4.4vw, 28px);
+  }
+
+  .transport-sep {
+    height: clamp(22px, 2.6vh, 38px);
+  }
+
+  .track-title {
+    font-size: clamp(13.5px, 3.3vw, 21px);
+  }
+
+  .track-subtitle {
+    font-size: clamp(10.5px, 2.5vw, 15.5px);
+  }
+
+  .scrubber-container {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    height: 100%;
+    min-width: 0;
+  }
+
+  .waveform-canvas {
+    height: 100%;
+  }
+
+  .transport-right {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+    position: relative;
+  }
+
+  .transport-right .sep-right {
+    display: none;
+  }
+
+  .time-readout {
+    font-size: clamp(11.5px, 2.8vw, 17.5px);
+  }
+
+  .bpm-badge {
+    font-size: clamp(11.5px, 2.8vw, 17.5px);
+    margin-left: auto;
+  }
+
+  .btn-loop {
+    position: absolute;
+    right: 0;
+    bottom: 205%;
+    height: clamp(30px, 6.5vw, 46px);
+    width: clamp(30px, 6.5vw, 46px);
+  }
+
+  .btn-loop svg {
+    width: clamp(18px, 4.2vw, 26px);
+    height: clamp(18px, 4.2vw, 26px);
+  }
+
+  #toast {
+    right: 5.6vw;
+    bottom: 13vh;
+  }
+}

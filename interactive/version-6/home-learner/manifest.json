@@ -1,0 +1,83 @@
+{
+  "project": "Home Learner",
+  "collectionVersion": 6,
+  "date": "2026-10-25",
+  "status": "Selected concept art and specifications; no product implementation",
+  "scope": "Current selected assets, exact prompts, nine specifications and credited source references.",
+  "documents": [
+    "README.md",
+    "PRODUCT.md",
+    "EXPERIENCE.md",
+    "VISUAL-DIRECTION.md",
+    "INTERACTION-STATES.md",
+    "CONTENT-ASSETS.md",
+    "TECHNICAL-PLAN.md",
+    "ACCEPTANCE.md",
+    "SOURCES.md"
+  ],
+  "assets": [
+    {
+      "id": "android-hero-v2",
+      "file": "assets/android-hero-v2.png",
+      "title": "Android device hero: home head-camera teaching with the phone as companion",
+      "kind": "Generated concept art",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2260120,
+      "sha256": "8e5efb99104f19f221122f4261445f09aae2886db65de2b140b59d91f667c3a3",
+      "alpha": false,
+      "notes": "Head cam remains the lesson source throughout. All people, camera feeds, connections, labels and version numbers are illustrative. No capture, pairing or training performed.",
+      "status": "Current generated concept art; awaiting design review; not implemented",
+      "prompt": "prompts/android-hero-v2.txt",
+      "promptSha256": "f6c452a68ece456b62be9878682090fdc9c26bc5caae02e1956a66f2c04f2c33"
+    },
+    {
+      "id": "android-setup-v2",
+      "file": "assets/android-setup-v2.png",
+      "title": "Android lesson setup: Head cam selected, local lesson and visual-cue model choices",
+      "kind": "Generated concept art",
+      "width": 841,
+      "height": 1870,
+      "bytes": 1732523,
+      "sha256": "f92b4da9fa0f2746eedc82bf23244aa87e66a3f1bfa762dd5330d319958f9d49",
+      "alpha": false,
+      "notes": "Head cam remains the lesson source throughout. All people, camera feeds, connections, labels and version numbers are illustrative. No capture, pairing or training performed.",
+      "status": "Current generated concept art; awaiting design review; not implemented",
+      "prompt": "prompts/android-setup-v2.txt",
+      "promptSha256": "8273e514cdffd874b6d30ac2e81d73bd5eb44b52350d255524e49d0164bad677"
+    },
+    {
+      "id": "android-capture-v2",
+      "file": "assets/android-capture-v2.png",
+      "title": "Android capture: edge-to-edge Head cam canvas and shallow charcoal/citron dock",
+      "kind": "Generated concept art",
+      "width": 841,
+      "height": 1870,
+      "bytes": 2158801,
+      "sha256": "867e19910b870afe77d93b8fda8d287c9b6c6676886ddd2845b0b80e82427c47",
+      "alpha": false,
+      "notes": "Head cam remains the lesson source throughout. All people, camera feeds, connections, labels and version numbers are illustrative. No capture, pairing or training performed.",
+      "status": "Current generated concept art; awaiting design review; not implemented",
+      "prompt": "prompts/android-capture-v2.txt",
+      "promptSha256": "3312800eca7bb1dc1809664d8047ebe2dbaec037868d914d4f335975eda4505c"
+    },
+    {
+      "id": "android-review-v2",
+      "file": "assets/android-review-v2.png",
+      "title": "Android evidence review: same Head cam source, human correction, dataset/model distinction",
+      "kind": "Generated concept art",
+      "width": 841,
+      "height": 1870,
+      "bytes": 1757971,
+      "sha256": "bde8b607ac617d934f7afddc8d836830d2ce01c7a03214e8e3297a669b1de091",
+      "alpha": false,
+      "notes": "Head cam remains the lesson source throughout. All people, camera feeds, connections, labels and version numbers are illustrative. No capture, pairing or training performed.",
+      "status": "Current generated concept art; awaiting design review; not implemented",
+      "prompt": "prompts/android-review-v2.txt",
+      "promptSha256": "b9141881911a34c4df0d2bf3a1926a5dce2840b87f2940f8f31a1a513585fc7a"
+    }
+  ],
+  "references": [],
+  "platform": "Android",
+  "workingTitle": true
+}

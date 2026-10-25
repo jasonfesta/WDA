@@ -1,0 +1,12 @@
+TRACK ATLAS — V2 / WATERCOLOR ILLUSTRATION
+User revision: more illustration, almost like watercolor illustration. This replaces the dry monochrome graphic study as current art.
+
+One project, three modes. Same track Quiet Current / Demo track, same playhead 01:24 / 03:12, 96 BPM. The interface stays precise and quiet: small black Inter-style type, TRACK ATLAS wordmark, Open track / Save frame, three mode labels, shallow bottom playback strip. No persistent sidebar.
+
+Actual watercolor illustration is the central artwork, not merely a paper texture. Rich translucent pigment washes, blooms, visible brush edges, softly bleeding color, dry-brush flecks and occasional ink contours. Shared palette: deep indigo and muted teal, terracotta, golden ochre, softened moss, warm uncoated paper. Preserve generous breathing room around interface controls.
+
+INK SCORE: flowing watercolor brush forms suggest an expressive river-and-hills soundscape; small rhythmic ink sketches and score marks trace the movement through the illustration. The same music moment becomes a painted landscape of rhythm.
+KINETIC POSTER: large hand-painted QUIET CURRENT letterforms integrated with watercolor arcs, washes and botanical motion. Typography and illustration are one composition; preserve recognizable track words, precise interface text and limited color family.
+LISTENING DIARY: genuine painted listening-memory vignettes, such as a pool of sound, rustling stems and an open horizon, linked by hand annotations pulse / lift / space and small timestamps. Human visual diary, not a technical chart.
+
+Deliver three desktop screens, three separately recomposed portrait mobile screens and one shared watercolor-aware controls sheet. Raster spec art only; no working audio implementation. Mobile keeps identical metadata and mode labels with compact controls in the safe area. Exact prompts saved alongside each PNG.

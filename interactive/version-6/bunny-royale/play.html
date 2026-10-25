@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bunny Royale — Level 01: Carrot Cove</title>
+  <script>
+    if (window.location.protocol === 'file:') {
+      window.location.replace('http://127.0.0.1:5199/interactive/version-6/bunny-royale/play.html');
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/hudStyles.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./src/vendor/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+
+    <!-- Floating Comic Combat Text Container -->
+    <div id="damage-numbers-layer"></div>
+
+    <!-- Directional Damage Hit Indicator -->
+    <div id="damage-vignette" class="hidden"></div>
+
+    <!-- Center Crosshair & Hit Marker -->
+    <div id="crosshair-container">
+      <div id="crosshair">
+        <div class="reticle-dot"></div>
+        <div class="reticle-line top"></div>
+        <div class="reticle-line bottom"></div>
+        <div class="reticle-line left"></div>
+        <div class="reticle-line right"></div>
+      </div>
+      <div id="hit-marker" class="hidden"></div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- 04 / ACTIVE IN-GAME HUD (Matches ui-gameplay-v2.png 1:1)   -->
+    <!-- ========================================================== -->
+    <div id="hud-overlay" class="hidden">
+
+      <!-- Top-Left Compact Camera Switcher & Pause Controls -->
+      <div id="hud-camera-bar">
+        <button class="cam-pill active" data-cam="ots" title="Over-The-Shoulder 3rd Person [V]">[V] OTS</button>
+        <button class="cam-pill" data-cam="map_overview" title="Tactical Map Overview [M]">[M] MAP</button>
+        <button class="cam-pill" data-cam="zone_1" title="Zone 01 Neighborhood Camera">Z1</button>
+        <button class="cam-pill" data-cam="zone_2" title="Zone 02 Market Camera">Z2</button>
+        <button class="cam-pill" data-cam="zone_3" title="Zone 03 Service Yard Camera">Z3</button>
+        <button class="cam-pill" data-cam="first_person" title="First-Person POV">1P</button>
+        <button class="cam-pill pause-pill" id="btn-hud-pause" title="Pause [ESC]">⏸ ESC</button>
+      </div>
+
+      <!-- Top-Center Compass & Wave / Objective Header -->
+      <div id="hud-top-center">
+        <div id="hud-compass-strip">
+          <span class="comp-deg">270</span>
+          <span class="comp-dir">W</span>
+          <span class="comp-deg">285</span>
+          <span class="comp-deg">300</span>
+          <span class="comp-dir">NW</span>
+          <span class="comp-deg">330</span>
+          <span class="comp-deg">345</span>
+          <span class="comp-dir comp-north" id="compass-center-label">N</span>
+          <span class="comp-deg">15</span>
+          <span class="comp-deg">30</span>
+          <span class="comp-dir">NE</span>
+          <span class="comp-deg">60</span>
+        </div>
+        <div class="compass-ticks"></div>
+        <div id="hud-wave-title">WAVE 1 / 3</div>
+        <div id="current-zone-label">CLEAR THE MARKET</div>
+
+        <!-- Foreman Boss Health Bar (Visible in Wave 3) -->
+        <div id="boss-hp-container" class="hidden">
+          <div class="boss-hp-label">FOREMAN BOSS</div>
+          <div class="boss-hp-track">
+            <div id="boss-hp-fill" style="width: 100%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top-Right Square Chamfered Minimap -->
+      <div id="hud-minimap-container">
+        <div class="minimap-frame">
+          <img src="assets/env-map-v2.png" alt="Carrot Cove Map" class="minimap-img">
+          <canvas id="minimap-canvas" width="160" height="160"></canvas>
+        </div>
+      </div>
+
+      <!-- Bottom-Left Fighter Portrait + Health & Shield Bars -->
+      <div id="hud-bottom-left">
+        <div class="fighter-portrait-box" id="hud-portrait-container">
+          <img id="hud-fighter-img" src="assets/char-pip-beauty.png" alt="Fighter">
+        </div>
+        <div class="vitals-panel">
+          <div class="vital-row">
+            <span class="vital-icon heart-icon">♥</span>
+            <div class="stat-bar health-bar">
+              <div class="stat-bar-fill" id="health-fill" style="width: 100%;"></div>
+            </div>
+            <span class="vital-num" id="health-val">100</span>
+          </div>
+          <div class="vital-row">
+            <span class="vital-icon shield-icon">🛡</span>
+            <div class="stat-bar shield-bar">
+              <div class="stat-bar-fill" id="shield-fill" style="width: 100%;"></div>
+            </div>
+            <span class="vital-num" id="shield-val">50</span>
+          </div>
+        </div>
+        <div id="hud-vitals-pills">
+          <div class="vital-stat-pill carrot-pill" title="Collected Carrots">
+            <span class="vital-pill-icon">🥕</span>
+            <span class="vital-pill-val" id="carrot-count">0</span>
+          </div>
+          <div class="vital-stat-pill elim-pill" title="Eliminations">
+            <span class="vital-pill-icon">🎯</span>
+            <span class="vital-pill-val" id="elim-count">0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center-Bottom Combat Notification & Hidden Legacy Hooks -->
+      <div id="hud-bottom-center">
+        <div id="game-notification" class="notification-text"></div>
+        <span id="stat-elim-count" class="sr-only">0 ELIMINATIONS</span>
+        <span id="weapon-name" class="sr-only">CARROT CARBINE</span>
+        <span id="weapon-type" class="sr-only">RAPID ENERGY BLASTER</span>
+        <img id="weapon-preview-img" src="assets/gear-pip-weapon.png" alt="" class="sr-only">
+      </div>
+
+      <!-- Bottom-Right Ammo Counter, 3 Weapon/Fighter Slots, & Q Ability -->
+      <div id="hud-bottom-right">
+        <div class="ammo-cluster">
+          <div class="bullet-icons" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="ammo-counter">
+            <span class="ammo-cur" id="ammo-cur">30</span>
+            <span class="ammo-div">/</span>
+            <span class="ammo-max" id="ammo-max">120</span>
+          </div>
+        </div>
+
+        <div class="inventory-slots">
+          <div class="slot-wrapper">
+            <button class="slot active" id="slot-pip" data-fighter="pip" title="1: Pip / Carrot Carbine">
+              <img src="assets/gear-pip-weapon.png" alt="Carrot Carbine" class="slot-weapon-img">
+            </button>
+            <span class="slot-keycap">1</span>
+          </div>
+          <div class="slot-wrapper">
+            <button class="slot" id="slot-bruno" data-fighter="bruno" title="2: Bruno / Seed Thumper">
+              <img src="assets/gear-bruno-weapon.png" alt="Seed Thumper" class="slot-weapon-img">
+            </button>
+            <span class="slot-keycap">2</span>
+          </div>
+          <div class="slot-wrapper">
+            <button class="slot" id="slot-volt" data-fighter="volt" title="3: Volt / Arc Fork">
+              <img src="assets/gear-volt-weapon.png" alt="Arc Fork" class="slot-weapon-img">
+            </button>
+            <span class="slot-keycap">3</span>
+          </div>
+        </div>
+
+        <div class="ability-wrapper" id="ability-card" title="Use Hero Ability [Q]">
+          <div class="ability-box" id="ability-slot">
+            <svg viewBox="0 0 64 64" class="ability-svg-icon">
+              <path d="M40 12c2-6 7-8 9-6 2 2-1 8-4 11 4 2 7 6 6 11-1 5-6 8-12 9l-6 9h-8l3-8c-5-1-9-4-10-8-1-5 3-9 8-10 2-6 6-10 10-8 2-4 2-7 4-10z" fill="#ffffff"/>
+              <ellipse cx="28" cy="54" rx="18" ry="4" fill="none" stroke="#ffffff" stroke-width="3"/>
+            </svg>
+            <div class="cooldown-overlay" id="cooldown-overlay"></div>
+          </div>
+          <span class="slot-keycap" id="ability-key">Q</span>
+          <span id="ability-name" class="sr-only">DOUBLE HOP</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- 01 / MAIN MENU SCREEN (Real Interactive V2 Game Menu)      -->
+    <!-- ========================================================== -->
+    <div id="screen-main-menu" class="game-screen">
+      <!-- Scenic Carrot Cove Backdrop + Live WebGL Blend + Floating Pollen Particles -->
+      <div class="menu-scenic-backdrop" id="menu-bg-layer">
+        <div class="scenic-suburb-img"></div>
+        <div class="scenic-atmosphere-glow"></div>
+        <canvas id="menu-particles-canvas" class="menu-particles-canvas"></canvas>
+      </div>
+
+      <!-- Right-Center Foreground Hero Showcase -->
+      <div class="menu-hero-showcase" id="menu-hero-showcase">
+        <div class="hero-ground-shadow"></div>
+        <div class="hero-rim-aura"></div>
+        <img id="menu-hero-img" src="assets/char-pip-beauty.png" alt="Selected Fighter" class="menu-hero-render">
+        <div class="menu-hero-tag-pill" id="menu-hero-tag">
+          <span class="tag-dot"></span>
+          <span id="menu-hero-tag-text">PIP • SCOUT</span>
+        </div>
+      </div>
+
+      <!-- Top-Left Brand Logo & Level 01 Badge -->
+      <div class="menu-brand-cluster">
+        <div class="brand-logo-wrap">
+          <img src="assets/brand-logo.png" alt="Bunny Royale" class="brand-logo-img" id="menu-brand-logo">
+        </div>
+        <div class="level-pill-badge chamfer-badge-navy">
+          <span class="badge-bracket left"></span>
+          <span class="level-pill-text">LEVEL 01 &nbsp;•&nbsp; CARROT COVE</span>
+          <span class="badge-bracket right"></span>
+        </div>
+      </div>
+
+      <!-- Lower-Left Real Chamfered Game Button Stack -->
+      <nav class="menu-button-stack" aria-label="Main Menu Navigation">
+        <button id="btn-menu-play" class="chamfer-game-btn btn-primary-orange" aria-label="PLAY">
+          <span class="btn-side-notch left"></span>
+          <span class="btn-shine-sweep"></span>
+          <span class="btn-label-text">PLAY</span>
+          <span class="btn-side-notch right"></span>
+        </button>
+
+        <button id="btn-menu-select" class="chamfer-game-btn btn-secondary-navy" aria-label="CHOOSE RABBIT">
+          <span class="btn-corner-accent tl"></span>
+          <span class="btn-label-text">CHOOSE RABBIT</span>
+          <span class="btn-corner-accent br"></span>
+        </button>
+
+        <button id="btn-menu-settings" class="chamfer-game-btn btn-secondary-navy" aria-label="SETTINGS">
+          <span class="btn-corner-accent tl"></span>
+          <span class="btn-label-text">SETTINGS</span>
+          <span class="btn-corner-accent br"></span>
+        </button>
+      </nav>
+
+      <!-- Bottom-Right Utility Icon Buttons (Live Mute & Fullscreen SVGs) -->
+      <div class="menu-utility-icons">
+        <button id="btn-menu-BackdropToggle" class="utility-icon-btn live-cam-toggle" title="Toggle Live 3D Arena View">
+          <span class="live-cam-label">3D VIEW</span>
+        </button>
+        <button id="btn-menu-mute" class="utility-icon-btn" title="Toggle Audio" aria-label="Toggle Audio">
+          <!-- Unmuted Speaker SVG -->
+          <svg class="svg-icon icon-unmuted" viewBox="0 0 24 24" fill="none">
+            <path d="M11 5L6 9H2V15H6L11 19V5Z" fill="currentColor"/>
+            <path d="M15.54 8.46C16.4774 9.39764 17.004 10.6692 17.004 11.995C17.004 13.3208 16.4774 14.5924 15.54 15.53" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M19.07 4.93C20.9447 6.80528 21.9979 9.34836 21.9979 12C21.9979 14.6516 20.9447 17.1947 19.07 19.07" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <!-- Muted Speaker SVG -->
+          <svg class="svg-icon icon-muted hidden" viewBox="0 0 24 24" fill="none">
+            <path d="M11 5L6 9H2V15H6L11 19V5Z" fill="currentColor"/>
+            <path d="M22 9L16 15M16 9L22 15" stroke="#ff5252" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button id="btn-menu-fullscreen" class="utility-icon-btn" title="Toggle Fullscreen" aria-label="Toggle Fullscreen">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none">
+            <path d="M8 3H5C3.89543 3 3 3.89543 3 5V8M21 8V5C21 3.89543 20.1046 3 19 3H16M16 21H19C20.1046 21 21 20.1046 21 19V16M3 16V19C3 20.1046 3.89543 21 5 21H8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- 02 / CHOOSE YOUR RABBIT (Real Interactive Locker Screen)   -->
+    <!-- ========================================================== -->
+    <div id="screen-char-select" class="game-screen hidden">
+      <!-- Clean Carrot Cove Street Stage Background -->
+      <div class="menu-scenic-backdrop char-select-backdrop">
+        <div class="scenic-suburb-img"></div>
+        <div class="scenic-stage-vignette"></div>
+      </div>
+
+      <!-- Legacy dynamic layer hook kept harmlessly in DOM -->
+      <div id="char-select-dynamic-layer" class="sr-only"></div>
+
+      <!-- Top-Left Brand Logo -->
+      <div class="char-select-logo-wrap">
+        <img src="assets/brand-logo.png" alt="Bunny Royale" class="char-select-logo">
+      </div>
+
+      <!-- Top-Center Chamfered Header Banner -->
+      <header class="char-select-header-banner">
+        <span class="banner-cyan-bracket left"></span>
+        <div class="banner-inner">
+          <h1 class="banner-title">CHOOSE YOUR RABBIT</h1>
+          <div class="banner-orange-underline"></div>
+        </div>
+        <span class="banner-cyan-bracket right"></span>
+      </header>
+
+      <!-- Center Stage Animated Hero Showcase (Interactive Drag/Inspect) -->
+      <div class="center-hero-stage" id="char-stage-interactive" title="Drag or Move Mouse to Inspect Fighter">
+        <div class="stage-holo-ring">
+          <div class="stage-ring-inner"></div>
+          <div class="stage-ground-shadow"></div>
+        </div>
+        <div class="stage-hero-figure-wrap" id="stage-hero-figure-wrap">
+          <img id="stage-hero-img" src="assets/char-pip-beauty.png" alt="Selected Rabbit" draggable="false">
+        </div>
+      </div>
+
+      <!-- Right-Side Chamfered Summary Card (Always Visible for All 3 Fighters) -->
+      <aside class="char-summary-card" id="char-summary-card">
+        <span class="card-corner-bracket tl"></span>
+        <span class="card-corner-bracket tr"></span>
+        <span class="card-corner-bracket bl"></span>
+        <span class="card-corner-bracket br"></span>
+
+        <div class="summary-header-block">
+          <h2 id="stage-hero-name" class="summary-name">PIP</h2>
+          <div id="stage-hero-title" class="summary-role">SCOUT</div>
+        </div>
+
+        <div class="summary-divider"></div>
+
+        <!-- Weapon Row -->
+        <div class="summary-loadout-row">
+          <div class="summary-icon-box weapon-icon-box">
+            <img id="stage-weapon-icon" src="assets/gear-pip-weapon.png" alt="Weapon">
+          </div>
+          <div class="summary-loadout-meta">
+            <span class="loadout-meta-sub">PRIMARY WEAPON</span>
+            <span id="stage-weapon-title" class="summary-item-text">CARROT CARBINE</span>
+          </div>
+        </div>
+
+        <!-- Ability Row -->
+        <div class="summary-loadout-row">
+          <div class="summary-icon-box ability-icon-box" id="stage-ability-icon-box">
+            <svg viewBox="0 0 36 36" class="summary-ability-svg">
+              <path d="M7 22L18 11L29 22" stroke="#ffffff" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <path d="M7 30L18 19L29 30" stroke="#00e5ff" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="summary-loadout-meta">
+            <span class="loadout-meta-sub">Q ABILITY</span>
+            <span id="stage-ability-title" class="summary-item-text">DOUBLE HOP</span>
+          </div>
+        </div>
+
+        <div class="summary-divider"></div>
+
+        <!-- Animated Fighter Stat Bars -->
+        <div class="summary-stats-block">
+          <div class="summary-stat-row">
+            <span class="stat-lbl">SPEED</span>
+            <div class="stat-track">
+              <div id="stat-speed-fill" class="stat-fill speed-fill" style="width: 95%;"></div>
+            </div>
+            <span id="stat-speed-val" class="stat-num">95</span>
+          </div>
+          <div class="summary-stat-row">
+            <span class="stat-lbl">POWER</span>
+            <div class="stat-track">
+              <div id="stat-power-fill" class="stat-fill power-fill" style="width: 68%;"></div>
+            </div>
+            <span id="stat-power-val" class="stat-num">68</span>
+          </div>
+          <div class="summary-stat-row">
+            <span class="stat-lbl">TECH</span>
+            <div class="stat-track">
+              <div id="stat-tech-fill" class="stat-fill tech-fill" style="width: 75%;"></div>
+            </div>
+            <span id="stat-tech-val" class="stat-num">75</span>
+          </div>
+        </div>
+
+        <p id="stage-hero-desc" class="summary-desc-text">Mobility &amp; Rapid Fire — Mid-air teal spring ring burst &amp; forward rocket leap.</p>
+      </aside>
+
+      <!-- Bottom Row: 3 Real Chamfered Portrait Cards -->
+      <div class="char-cards-row" role="radiogroup" aria-label="Rabbit Roster">
+        <div class="roster-card active" data-char="pip" role="radio" aria-checked="true" tabindex="0" title="Select Pip / Scout [1]">
+          <div class="roster-card-frame">
+            <div class="roster-sky-bg pip-sky"></div>
+            <div class="roster-portrait-wrap">
+              <img src="assets/char-pip-beauty.png" alt="Pip / Scout" class="roster-portrait-img">
+            </div>
+            <div class="roster-footer-bar">
+              <span class="roster-footer-text">PIP / SCOUT</span>
+            </div>
+            <span class="roster-corner-tri bl"></span>
+            <span class="roster-corner-tri br"></span>
+          </div>
+          <span class="selected-pill">SELECTED</span>
+        </div>
+
+        <div class="roster-card" data-char="bruno" role="radio" aria-checked="false" tabindex="0" title="Select Bruno / Heavy [2]">
+          <div class="roster-card-frame">
+            <div class="roster-sky-bg bruno-sky"></div>
+            <div class="roster-portrait-wrap">
+              <img src="assets/char-bruno-beauty.png" alt="Bruno / Heavy" class="roster-portrait-img">
+            </div>
+            <div class="roster-footer-bar">
+              <span class="roster-footer-text">BRUNO / HEAVY</span>
+            </div>
+            <span class="roster-corner-tri bl"></span>
+            <span class="roster-corner-tri br"></span>
+          </div>
+          <span class="selected-pill">SELECTED</span>
+        </div>
+
+        <div class="roster-card" data-char="volt" role="radio" aria-checked="false" tabindex="0" title="Select Volt / Tech [3]">
+          <div class="roster-card-frame">
+            <div class="roster-sky-bg volt-sky"></div>
+            <div class="roster-portrait-wrap">
+              <img src="assets/char-volt-beauty.png" alt="Volt / Tech" class="roster-portrait-img">
+            </div>
+            <div class="roster-footer-bar">
+              <span class="roster-footer-text">VOLT / TECH</span>
+            </div>
+            <span class="roster-corner-tri bl"></span>
+            <span class="roster-corner-tri br"></span>
+          </div>
+          <span class="selected-pill">SELECTED</span>
+        </div>
+      </div>
+
+      <!-- Bottom-Left < BACK & Bottom-Right READY > Buttons -->
+      <button id="btn-select-back" class="chamfer-game-btn btn-secondary-navy nav-back-btn" aria-label="BACK">
+        <span class="btn-corner-accent tl"></span>
+        <span class="btn-chevron">‹</span>
+        <span class="btn-label-text">BACK</span>
+        <span class="btn-corner-accent br"></span>
+      </button>
+
+      <button id="btn-select-confirm" class="chamfer-game-btn btn-primary-orange nav-ready-btn" aria-label="READY">
+        <span class="btn-side-notch left"></span>
+        <span class="btn-shine-sweep"></span>
+        <span id="btn-lock-in" class="btn-hit-delegate">
+          <span class="btn-label-text">READY</span>
+          <span class="btn-chevron-right">›</span>
+        </span>
+        <span class="btn-side-notch right"></span>
+      </button>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- 03 / LEVEL BRIEFING (Real Interactive Tactical Briefing)   -->
+    <!-- ========================================================== -->
+    <div id="screen-briefing" class="game-screen hidden">
+      <div id="screen-level-briefing" class="briefing-layout-shell">
+
+        <!-- Right Two-Thirds Interactive Tactical Map Container -->
+        <div class="briefing-map-viewport" id="briefing-map-viewport">
+          <img src="assets/env-map-v2.png" alt="Carrot Cove Tactical Map" class="briefing-map-img">
+          <div class="briefing-map-left-fade"></div>
+          <div class="briefing-map-bottom-fade"></div>
+
+          <!-- Animated SVG Dashed Route Overlay -->
+          <svg class="briefing-route-svg" viewBox="0 0 1672 941" preserveAspectRatio="none">
+            <defs>
+              <filter id="routeGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="4" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <!-- Outer Cyan Glow Path -->
+            <path class="route-glow-path" d="M 634 686 C 745 676, 868 628, 978 518 C 1020 474, 1018 398, 986 342 C 1058 340, 1130 330, 1146 286 C 1152 246, 1190 218, 1228 197 M 1362 362 C 1425 322, 1456 292, 1454 252 L 1516 206" fill="none" stroke="#00e5ff" stroke-width="10" stroke-opacity="0.35" stroke-linecap="round"/>
+            <!-- Animated Marching White Dashed Line -->
+            <path class="route-dash-path" d="M 634 686 C 745 676, 868 628, 978 518 C 1020 474, 1018 398, 986 342 C 1058 340, 1130 330, 1146 286 C 1152 246, 1190 218, 1228 197 M 1362 362 C 1425 322, 1456 292, 1454 252 L 1516 206" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-dasharray="16 12" stroke-linecap="round" filter="url(#routeGlow)"/>
+            <!-- Waypoint Nodes -->
+            <circle class="route-node-ring" cx="634" cy="686" r="13" fill="#0077ff" stroke="#ffffff" stroke-width="4"/>
+            <circle class="route-node-ring" cx="986" cy="342" r="12" fill="#0077ff" stroke="#ffffff" stroke-width="4"/>
+            <circle class="route-node-ring" cx="1228" cy="197" r="12" fill="#0077ff" stroke="#ffffff" stroke-width="4"/>
+            <polygon points="1522,202 1495,206 1510,224" fill="#ffffff"/>
+          </svg>
+
+          <!-- 4 Interactive Zone Callout Badges (Aligned 1:1 over env-map-v2.png badges) -->
+          <button class="briefing-zone-pin active" data-zone="01" style="left: 9.1%; top: 82.6%;" aria-label="Zone 01 Neighborhood">
+            <span class="zone-pin-num">01</span>
+            <span class="zone-pin-name">NEIGHBORHOOD</span>
+          </button>
+
+          <button class="briefing-zone-pin" data-zone="02" style="left: 44.5%; top: 23.0%;" aria-label="Zone 02 Market">
+            <span class="zone-pin-num">02</span>
+            <span class="zone-pin-name">MARKET</span>
+          </button>
+
+          <button class="briefing-zone-pin" data-zone="03" style="left: 59.8%; top: 14.2%;" aria-label="Zone 03 Service Yard">
+            <span class="zone-pin-num">03</span>
+            <span class="zone-pin-name">SERVICE YARD</span>
+          </button>
+
+          <button class="briefing-zone-pin exit-pin" data-zone="exit" style="left: 85.8%; top: 14.2%;" aria-label="Extraction Gate Exit">
+            <span class="zone-pin-name">EXIT &rarr;</span>
+          </button>
+
+          <!-- Interactive Tactical Tooltip Card -->
+          <div class="briefing-map-tooltip" id="briefing-map-tooltip">
+            <div class="tooltip-header">
+              <span class="tooltip-zone-tag" id="tooltip-zone-tag">ZONE 01 • DROP POINT</span>
+              <span class="tooltip-wave-pill" id="tooltip-wave-pill">WAVE 1 / 3</span>
+            </div>
+            <div class="tooltip-title" id="tooltip-title">Wave 1: Clear Raider Patrol</div>
+            <div class="tooltip-desc" id="tooltip-desc">Eliminate Raider scouts patrolling the suburban cul-de-sac and advance toward the Carrot Market.</div>
+          </div>
+        </div>
+
+        <!-- Left Column: Header + Hero Holo-Pedestal + < BACK -->
+        <div class="briefing-left-column">
+          <div class="briefing-title-block">
+            <div class="briefing-title-bar"></div>
+            <div class="briefing-title-text">
+              <div class="briefing-lvl-num">LEVEL 01</div>
+              <h1 class="briefing-lvl-name">CARROT COVE</h1>
+            </div>
+            <div class="briefing-cyan-parallelogram"></div>
+          </div>
+
+          <!-- Selected Hero on Glowing Cyan Circular Holo-Pedestal -->
+          <div class="briefing-hero-pedestal-stage">
+            <div class="briefing-hero-figure">
+              <img id="briefing-hero-img" src="assets/char-pip-beauty.png" alt="Selected Fighter">
+            </div>
+            <div class="holo-pedestal-disc">
+              <div class="holo-ring outer"></div>
+              <div class="holo-ring inner"></div>
+              <div class="holo-core-glow"></div>
+            </div>
+            <div class="briefing-hero-label-pill">
+              <span class="pill-angle left">‹</span>
+              <span id="briefing-hero-label">PIP / SCOUT</span>
+              <span class="pill-angle right">›</span>
+            </div>
+          </div>
+
+          <!-- Legacy hidden hook for main.js compatibility -->
+          <div id="briefing-fighter-pill" class="sr-only">
+            <span id="briefing-fighter-label">PIP / SCOUT</span>
+          </div>
+
+          <button id="btn-briefing-back" class="chamfer-game-btn btn-secondary-navy briefing-back-btn" aria-label="BACK">
+            <span class="btn-corner-accent tl"></span>
+            <span class="btn-chevron">‹</span>
+            <span class="btn-label-text">BACK</span>
+            <span class="btn-corner-accent br"></span>
+          </button>
+        </div>
+
+        <!-- Top-Right Objective Card -->
+        <div class="briefing-objective-card">
+          <span class="card-corner-bracket tl"></span>
+          <span class="card-corner-bracket br"></span>
+          <div class="obj-reticle-box">
+            <svg viewBox="0 0 48 48" class="obj-reticle-svg">
+              <circle cx="24" cy="24" r="14" stroke="#00e5ff" stroke-width="3.5" fill="none"/>
+              <circle cx="24" cy="24" r="5" fill="#00e5ff"/>
+              <line x1="24" y1="3" x2="24" y2="11" stroke="#00e5ff" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="24" y1="37" x2="24" y2="45" stroke="#00e5ff" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="3" y1="24" x2="11" y2="24" stroke="#00e5ff" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="37" y1="24" x2="45" y2="24" stroke="#00e5ff" stroke-width="3.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="obj-vert-sep"></div>
+          <div class="obj-text-col">
+            <div class="obj-primary-line">CLEAR 3 WAVES</div>
+            <div class="obj-secondary-line">DEFEAT THE FOREMAN</div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar: 3 Real Chamfered Loadout Cards + START LEVEL > -->
+        <div class="briefing-bottom-dock">
+          <div class="briefing-loadout-cards">
+            <!-- Card 1: Weapon -->
+            <div class="briefing-loadout-card active-weapon-card" data-slot="1" title="Primary Weapon">
+              <span class="loadout-corner-badge badge-orange">1</span>
+              <div class="loadout-visual-wrap">
+                <img id="briefing-weapon-img" src="assets/gear-pip-weapon.png" alt="Primary Weapon">
+              </div>
+              <div class="loadout-card-label" id="briefing-weapon-label">CARROT CARBINE</div>
+            </div>
+
+            <!-- Card 2: Ability -->
+            <div class="briefing-loadout-card" data-slot="2" title="Hero Q Ability">
+              <span class="loadout-corner-badge badge-cyan">2</span>
+              <div class="loadout-visual-wrap" id="briefing-ability-visual">
+                <svg viewBox="0 0 120 80" class="briefing-ability-svg" id="briefing-ability-svg">
+                  <!-- Spring Rings -->
+                  <ellipse cx="42" cy="64" rx="28" ry="7" fill="none" stroke="#00e5ff" stroke-width="3.5"/>
+                  <ellipse cx="42" cy="56" rx="20" ry="5" fill="none" stroke="#80f4ff" stroke-width="2.5"/>
+                  <path d="M35 58 Q48 28 66 24" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+                  <!-- Leaping Bunny Silhouette -->
+                  <path d="M78 16 C82 6 89 4 91 7 C93 10 88 16 84 20 C90 22 94 27 92 33 C90 39 83 42 75 43 L66 54 L58 52 L63 42 C56 41 51 37 51 31 C51 25 56 21 63 20 C67 13 72 10 76 13 C77 9 77 12 78 16 Z" fill="#ffffff"/>
+                </svg>
+              </div>
+              <div class="loadout-card-label" id="briefing-ability-label">DOUBLE HOP</div>
+            </div>
+
+            <!-- Card 3: Armor -->
+            <div class="briefing-loadout-card" data-slot="3" title="Tactical Armor Class">
+              <span class="loadout-corner-badge badge-cyan">3</span>
+              <div class="loadout-visual-wrap" id="briefing-armor-visual">
+                <svg viewBox="0 0 100 84" class="briefing-armor-svg" id="briefing-armor-svg">
+                  <!-- Stylized Tactical Armor Vest -->
+                  <path d="M26 16 L38 10 L50 18 L62 10 L74 16 L84 30 L76 44 L72 72 L28 72 L24 44 L16 30 Z" fill="#1b8a84" stroke="#0d253c" stroke-width="3"/>
+                  <path d="M34 12 C42 20 58 20 66 12 L72 22 C60 32 40 32 28 22 Z" fill="#ff6b00"/>
+                  <polygon points="44,34 56,34 50,44" fill="#ff7700"/>
+                  <rect x="32" y="48" width="36" height="14" rx="3" fill="#136360" stroke="#00e5ff" stroke-width="1.5"/>
+                  <rect x="22" y="56" width="10" height="14" rx="2" fill="#ff6b00"/>
+                  <rect x="68" y="56" width="10" height="14" rx="2" fill="#ff6b00"/>
+                </svg>
+              </div>
+              <div class="loadout-card-label" id="briefing-armor-label">LIGHT ARMOR</div>
+            </div>
+          </div>
+
+          <!-- Bottom-Right Large Chamfered Orange START LEVEL > Button -->
+          <button id="btn-briefing-deploy" class="chamfer-game-btn btn-primary-orange briefing-deploy-btn" aria-label="START LEVEL">
+            <span class="btn-side-notch left"></span>
+            <span class="btn-shine-sweep"></span>
+            <span id="btn-launch-drop" class="btn-hit-delegate">
+              <span class="btn-label-text">START LEVEL</span>
+              <span class="btn-chevron-right">›</span>
+            </span>
+            <span class="btn-side-notch right"></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- 05 / PAUSE & SETTINGS MODAL (Matches ui-pause-settings-v2.png) -->
+    <!-- ========================================================== -->
+    <div id="screen-pause" class="game-screen hidden">
+      <div class="pause-dim-backdrop"></div>
+
+      <div class="chamfer-pause-modal">
+        <span class="corner-bracket tl"></span>
+        <span class="corner-bracket tr"></span>
+        <span class="corner-bracket bl"></span>
+        <span class="corner-bracket br"></span>
+
+        <div class="pause-header">
+          <h1 class="pause-title">PAUSED</h1>
+          <div class="pause-subtitle" id="pause-wave-subtitle">CARROT COVE &nbsp;•&nbsp; WAVE 1</div>
+        </div>
+
+        <div class="pause-divider"></div>
+
+        <div class="pause-columns">
+          <!-- Left Column: Action Buttons -->
+          <div class="pause-left-col">
+            <button id="btn-resume-game" class="chamfer-btn chamfer-orange">RESUME</button>
+            <button id="btn-restart-game" class="chamfer-btn chamfer-navy">RESTART LEVEL</button>
+            <button id="btn-return-menu" class="chamfer-btn chamfer-navy">MAIN MENU</button>
+          </div>
+
+          <div class="pause-vert-divider"></div>
+
+          <!-- Right Column: Settings Sliders -->
+          <div class="pause-right-col">
+            <h2 class="settings-heading">SETTINGS</h2>
+
+            <div class="slider-row">
+              <label for="slider-volume">MASTER</label>
+              <input type="range" id="slider-volume" min="0" max="100" value="80">
+              <span class="slider-val" id="val-volume">80</span>
+            </div>
+
+            <div class="slider-row">
+              <label for="slider-music">MUSIC</label>
+              <input type="range" id="slider-music" min="0" max="100" value="60">
+              <span class="slider-val" id="val-music">60</span>
+            </div>
+
+            <div class="slider-row">
+              <label for="slider-sfx">SFX</label>
+              <input type="range" id="slider-sfx" min="0" max="100" value="90">
+              <span class="slider-val" id="val-sfx">90</span>
+            </div>
+
+            <div class="settings-sub-divider"></div>
+
+            <div class="slider-row">
+              <label for="slider-sensitivity">AIM SENSITIVITY</label>
+              <input type="range" id="slider-sensitivity" min="1" max="100" value="50">
+              <span class="slider-val" id="val-sensitivity">50</span>
+            </div>
+
+            <label class="checkbox-row">
+              <input type="checkbox" id="chk-reduced-motion">
+              <span class="custom-chk"></span>
+              <span class="chk-text">REDUCED MOTION</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="pause-divider"></div>
+
+        <!-- Bottom Keycap Bar -->
+        <div class="pause-keybinds-bar">
+          <div class="kb-group">
+            <span class="keycap">W</span><span class="keycap">A</span><span class="keycap">S</span><span class="keycap">D</span>
+            <span class="kb-label">MOVE</span>
+          </div>
+          <div class="kb-group">
+            <span class="keycap mouse-cap">🖱</span>
+            <span class="kb-label">AIM</span>
+          </div>
+          <div class="kb-group">
+            <span class="keycap wide-cap">SPACE</span>
+            <span class="kb-label">SHOOT</span>
+          </div>
+          <div class="kb-group">
+            <span class="keycap wide-cap">SHIFT</span>
+            <span class="kb-label">HOP</span>
+          </div>
+          <div class="kb-group">
+            <span class="keycap">Q</span>
+            <span class="kb-label">ABILITY</span>
+          </div>
+          <div class="kb-group">
+            <span class="keycap wide-cap">ESC</span>
+            <span class="kb-label">RESUME</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- 06 / VICTORY SCREEN (Real Interactive Victory Screen)      -->
+    <!-- ========================================================== -->
+    <div id="screen-victory" class="game-screen hidden">
+      <div class="menu-scenic-backdrop victory-backdrop">
+        <div class="scenic-suburb-img"></div>
+        <div class="victory-sunburst-glow"></div>
+        <canvas id="victory-confetti-canvas" class="victory-confetti-canvas"></canvas>
+      </div>
+
+      <!-- Right-Side Victorious Hero Render -->
+      <div class="result-hero-showcase victory-hero-wrap">
+        <div class="hero-ground-shadow"></div>
+        <div class="hero-rim-aura victory-aura"></div>
+        <img id="victory-hero-img" src="assets/char-pip-beauty.png" alt="Victorious Rabbit" class="result-hero-img">
+      </div>
+
+      <!-- Left-Side Victory Banner, Accomplishment Rows & Actions -->
+      <div class="victory-left-content">
+        <div class="victory-banner-stack">
+          <div class="victory-title-badge">
+            <div class="victory-word-level">LEVEL</div>
+            <div class="victory-word-complete">COMPLETE</div>
+          </div>
+          <div class="victory-sub-pill">
+            <span class="badge-bracket left"></span>
+            <span class="victory-sub-text">CARROT COVE</span>
+            <span class="badge-bracket right"></span>
+          </div>
+        </div>
+
+        <!-- 3 Chamfered Accomplishment Rows -->
+        <div class="victory-acc-list">
+          <div class="victory-acc-row">
+            <span class="acc-icon-check">✓</span>
+            <span class="acc-row-sep"></span>
+            <span class="acc-row-text">3 WAVES CLEARED</span>
+          </div>
+          <div class="victory-acc-row">
+            <span class="acc-icon-check">✓</span>
+            <span class="acc-row-sep"></span>
+            <span class="acc-row-text">FOREMAN DEFEATED</span>
+          </div>
+          <div class="victory-acc-row">
+            <span class="acc-icon-carrot">🥕</span>
+            <span class="acc-row-sep"></span>
+            <span class="acc-row-text">CARROTS +250</span>
+          </div>
+        </div>
+
+        <!-- Live Combat Telemetry Pill -->
+        <div class="victory-telemetry-bar">
+          <div class="telemetry-chip">
+            <span class="tel-lbl">ELIMINATIONS</span>
+            <span class="tel-val" id="victory-elims">12</span>
+          </div>
+          <div class="telemetry-chip">
+            <span class="tel-lbl">ACCURACY</span>
+            <span class="tel-val" id="victory-acc">92%</span>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="victory-actions-row">
+          <button id="btn-victory-continue" class="chamfer-game-btn btn-primary-orange victory-continue-btn" aria-label="CONTINUE">
+            <span class="btn-side-notch left"></span>
+            <span class="btn-shine-sweep"></span>
+            <span class="btn-label-text">CONTINUE</span>
+            <span class="btn-side-notch right"></span>
+          </button>
+
+          <button id="btn-victory-replay" class="chamfer-game-btn btn-secondary-navy victory-replay-btn" aria-label="REPLAY">
+            <span class="btn-corner-accent tl"></span>
+            <span class="btn-label-text">REPLAY</span>
+            <span class="btn-corner-accent br"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Hidden live stat hooks for automated tests -->
+      <span id="res-damage" class="sr-only">0</span>
+      <span id="res-elims" class="sr-only">0</span>
+      <span id="res-hits" class="sr-only">0</span>
+      <span id="res-carrots" class="sr-only">0</span>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- 07 / DEFEAT SCREEN (Real Interactive Defeat Screen)        -->
+    <!-- ========================================================== -->
+    <div id="screen-defeat" class="game-screen hidden">
+      <div class="menu-scenic-backdrop defeat-backdrop">
+        <div class="scenic-suburb-img defeat-dusk-grade"></div>
+        <div class="defeat-twilight-vignette"></div>
+      </div>
+
+      <!-- Right-Side Defeat Hero Render -->
+      <div class="result-hero-showcase defeat-hero-wrap">
+        <div class="hero-ground-shadow"></div>
+        <div class="hero-rim-aura defeat-aura"></div>
+        <img id="defeat-hero-img" src="assets/char-pip-beauty.png" alt="Fallen Rabbit" class="result-hero-img">
+      </div>
+
+      <!-- Left-Side Defeat Header & Action Row -->
+      <div class="defeat-left-content">
+        <div class="defeat-title-wrap">
+          <span class="defeat-bracket tl"></span>
+          <h1 class="defeat-main-title">HOP BACK IN</h1>
+          <span class="defeat-bracket br"></span>
+        </div>
+
+        <div class="defeat-wave-pill">
+          <span class="badge-bracket left"></span>
+          <span id="defeat-wave-label">WAVE 2 / 3</span>
+          <span class="badge-bracket right"></span>
+        </div>
+
+        <div class="defeat-motto-sub">ONE MORE TRY</div>
+
+        <div class="defeat-actions-row">
+          <button id="btn-defeat-retry" class="chamfer-game-btn btn-primary-orange defeat-retry-btn" aria-label="RETRY">
+            <span class="btn-side-notch left"></span>
+            <span class="btn-shine-sweep"></span>
+            <span class="btn-label-text">RETRY</span>
+            <span class="btn-side-notch right"></span>
+          </button>
+
+          <button id="btn-defeat-change" class="chamfer-game-btn btn-secondary-navy defeat-secondary-btn" aria-label="CHANGE RABBIT">
+            <span class="btn-corner-accent tl"></span>
+            <span class="btn-label-text">CHANGE RABBIT</span>
+            <span class="btn-corner-accent br"></span>
+          </button>
+
+          <button id="btn-defeat-menu" class="chamfer-game-btn btn-secondary-navy defeat-secondary-btn" aria-label="MAIN MENU">
+            <span class="btn-corner-accent tl"></span>
+            <span class="btn-label-text">MAIN MENU</span>
+            <span class="btn-corner-accent br"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/menuController.js"></script>
+</body>
+</html>

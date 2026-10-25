@@ -1,0 +1,69 @@
+{
+  "project": "Beatframe",
+  "collectionVersion": 6,
+  "date": "2026-10-25",
+  "status": "Selected concept art and specifications; no product implementation",
+  "scope": "Current selected assets, exact prompts, nine specifications and credited source references.",
+  "documents": [
+    "README.md",
+    "PRODUCT.md",
+    "EXPERIENCE.md",
+    "VISUAL-DIRECTION.md",
+    "INTERACTION-STATES.md",
+    "CONTENT-ASSETS.md",
+    "TECHNICAL-PLAN.md",
+    "ACCEPTANCE.md",
+    "SOURCES.md"
+  ],
+  "assets": [
+    {
+      "id": "magdalena-bay-desktop-v2",
+      "file": "art/magdalena-bay-desktop-v2.png",
+      "title": "Desktop V2 — Imaginal Portal",
+      "kind": "Generated concept art",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2718594,
+      "sha256": "04c8e2cfc90e31895128993a7a0cbc6f4a56a696299bbd6365130ecd100270e2",
+      "alpha": false,
+      "caption": "Unofficial BEATFRAME V2 concept — Magdalena Bay / Imaginal Portal. Generated screen design informed by Ian Grandjean's official Imaginal Disk poster. UI values are illustrative; no artist endorsement or playable recording is represented.",
+      "prompt": "prompts/magdalena-bay-desktop-v2.txt",
+      "promptSha256": "a4120ee07ba8f312b35d560eafcd18c8fd403204f5e1fff66219aa9b79993cc1"
+    },
+    {
+      "id": "magdalena-bay-mobile-v2",
+      "file": "art/magdalena-bay-mobile-v2.png",
+      "title": "Mobile V2 — Imaginal Portal",
+      "kind": "Generated concept art",
+      "width": 863,
+      "height": 1823,
+      "bytes": 2574994,
+      "sha256": "a4ad85867ed3d36080acfffe62e60cf09828ac18e2f54506b64dccf7223223fc",
+      "alpha": false,
+      "caption": "Unofficial BEATFRAME V2 concept — Magdalena Bay / Imaginal Portal. Generated screen design informed by Ian Grandjean's official Imaginal Disk poster. UI values are illustrative; no artist endorsement or playable recording is represented.",
+      "prompt": "prompts/magdalena-bay-mobile-v2.txt",
+      "promptSha256": "3a52cda2c0e6e493a3d448fae8b4b77d2a0a4b4949c734039289d230e8da1456"
+    }
+  ],
+  "references": [
+    {
+      "id": "magdalena-bay-imaginal-disk-poster",
+      "file": "artist-references/magdalena-bay-imaginal-disk-poster.png",
+      "title": "Imaginal Disk / official poster",
+      "kind": "Official published reference",
+      "width": 1000,
+      "height": 1000,
+      "bytes": 1005499,
+      "sha256": "da453937a9f8d2a63a8d33f8807cb52c6225623342a4470b21a2ec3592e1fa9c",
+      "alpha": true,
+      "credit": "Ian Grandjean / Magdalena Bay — official Imaginal Disk poster",
+      "source": "https://magdalenabay.8merch.com/products/imaginal-disk-poster?variant=55080334491990"
+    }
+  ],
+  "artist": "Magdalena Bay",
+  "direction": "Imaginal Portal",
+  "track": {
+    "title": "Image",
+    "status": "Catalog title used as concept copy; no recording or chart delivered"
+  }
+}
