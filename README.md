@@ -1,5 +1,11 @@
 # WDA
 
+## Premium tech concepts — Version 6
+
+[Browse the 16 selected V6 images](images/tech/version-6/README.md): Rillset, Avenor,
+Neral and Oriel. Each company includes a full desktop homepage, full mobile homepage,
+app screen and component, with exact prompt text and an image manifest.
+
 ## Website image selections — 24 October 2026
 
 [Browse all ten desktop/mobile pairs](images/website/final-2026-10-24/README.md) · [Download the 20 image files](https://jasonfesta.github.io/WDA/images/website/final-2026-10-24/wda-website-images-2026-10-24.zip)

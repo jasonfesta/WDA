@@ -1,0 +1,789 @@
+{
+  "collection": "WDA premium tech concepts",
+  "version": 6,
+  "date": "2026-10-25",
+  "scope": "Selected V6 images and exact prompt text only. Earlier concepts, references, native segment drafts and source attachments remain in the separate local study archive.",
+  "localStudyArchive": "tech/moodboard-v6/",
+  "assets": [
+    {
+      "id": "neral-desktop-homepage",
+      "version": 6,
+      "company": "Neral",
+      "companySlug": "neral",
+      "product": "Model evaluation review workspace",
+      "view": "desktop-homepage",
+      "imagePath": "neral/desktop-homepage.png",
+      "promptPath": "neral/prompts/desktop-homepage.txt",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "97bdb0c5e893e07566cb4f87d22a361373a692fb6d0096d12219733d2f536c83",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Restrained regular sans wordmark, headings, navigation and readable product interface."
+        },
+        {
+          "family": "Source Serif 4",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Source+Serif+4",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Short explanatory reading prose and evaluation response excerpts."
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "Courier New, monospace",
+          "role": "Small experiment IDs, case identifiers and metadata."
+        }
+      ]
+    },
+    {
+      "id": "neral-mobile-homepage",
+      "version": 6,
+      "company": "Neral",
+      "companySlug": "neral",
+      "product": "Model evaluation review workspace",
+      "view": "mobile-homepage",
+      "imagePath": "neral/mobile-homepage.png",
+      "promptPath": "neral/prompts/mobile-homepage.txt",
+      "width": 821,
+      "height": 3831,
+      "sha256": "42b33552035e4e8aaaf9319fb96c08157e5b336aa8db2e1d8e663a484c3aa4bc",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Restrained regular sans wordmark, headings, navigation and readable product interface."
+        },
+        {
+          "family": "Source Serif 4",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Source+Serif+4",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Short explanatory reading prose and evaluation response excerpts."
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "Courier New, monospace",
+          "role": "Small experiment IDs, case identifiers and metadata."
+        }
+      ]
+    },
+    {
+      "id": "neral-app",
+      "version": 6,
+      "company": "Neral",
+      "companySlug": "neral",
+      "product": "Model evaluation review workspace",
+      "view": "app",
+      "imagePath": "neral/app.png",
+      "promptPath": "neral/prompts/app.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "3a198174a54348db8339e7eb8fcde5b421f3ac131ac4dc365b4bff7f51e2e156",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Restrained regular sans wordmark, headings, navigation and readable product interface."
+        },
+        {
+          "family": "Source Serif 4",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Source+Serif+4",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Short explanatory reading prose and evaluation response excerpts."
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "Courier New, monospace",
+          "role": "Small experiment IDs, case identifiers and metadata."
+        }
+      ]
+    },
+    {
+      "id": "neral-component",
+      "version": 6,
+      "company": "Neral",
+      "companySlug": "neral",
+      "product": "Model evaluation review workspace",
+      "view": "component",
+      "imagePath": "neral/component.png",
+      "promptPath": "neral/prompts/component.txt",
+      "width": 1376,
+      "height": 1143,
+      "sha256": "e24edbc48f1d0f1f6bb73282e0e80bf4e97cc8ae0032bd40c8dd81139482f421",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Restrained regular sans wordmark, headings, navigation and readable product interface."
+        },
+        {
+          "family": "Source Serif 4",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Source+Serif+4",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Short explanatory reading prose and evaluation response excerpts."
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "Courier New, monospace",
+          "role": "Small experiment IDs, case identifiers and metadata."
+        }
+      ]
+    },
+    {
+      "id": "avenor-desktop-homepage",
+      "version": 6,
+      "company": "Avenor",
+      "companySlug": "avenor",
+      "product": "Release coordination for infrastructure teams",
+      "view": "desktop-homepage",
+      "imagePath": "avenor/desktop-homepage.png",
+      "promptPath": "avenor/prompts/desktop-homepage.txt",
+      "width": 1390,
+      "height": 3122,
+      "sha256": "19e82ecf06cfd85756a00190c357c7e8f2febcec7f6958548fc8a1da5ebde7f7",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500,
+            700
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "style": "normal"
+        },
+        {
+          "family": "Geist Mono",
+          "weights": [
+            400,
+            500
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "\"Courier New\", monospace",
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "id": "avenor-mobile-homepage",
+      "version": 6,
+      "company": "Avenor",
+      "companySlug": "avenor",
+      "product": "Release coordination for infrastructure teams",
+      "view": "mobile-homepage",
+      "imagePath": "avenor/mobile-homepage.png",
+      "promptPath": "avenor/prompts/mobile-homepage.txt",
+      "width": 855,
+      "height": 7067,
+      "sha256": "0caf5a5fc96ec3f9af2b3cd9ce1fedba583ccaae06b1e182f7e32bd938d18668",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500,
+            700
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "style": "normal"
+        },
+        {
+          "family": "Geist Mono",
+          "weights": [
+            400,
+            500
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "\"Courier New\", monospace",
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "id": "avenor-app",
+      "version": 6,
+      "company": "Avenor",
+      "companySlug": "avenor",
+      "product": "Release coordination for infrastructure teams",
+      "view": "app",
+      "imagePath": "avenor/app.png",
+      "promptPath": "avenor/prompts/app.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "6661f33c454c4c86c79c6dfec8349a61ed2fffb1d9c68b062084f1418a88fd7c",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500,
+            700
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "style": "normal"
+        },
+        {
+          "family": "Geist Mono",
+          "weights": [
+            400,
+            500
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "\"Courier New\", monospace",
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "id": "avenor-component",
+      "version": 6,
+      "company": "Avenor",
+      "companySlug": "avenor",
+      "product": "Release coordination for infrastructure teams",
+      "view": "component",
+      "imagePath": "avenor/component.png",
+      "promptPath": "avenor/prompts/component.txt",
+      "width": 1176,
+      "height": 1337,
+      "sha256": "76a0ef7f9ba66b57099385be9c57d6c7e8595f139bcaa6f4a8f31b0025262760",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500,
+            700
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "style": "normal"
+        },
+        {
+          "family": "Geist Mono",
+          "weights": [
+            400,
+            500
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "\"Courier New\", monospace",
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "id": "rillset-desktop-homepage",
+      "version": 6,
+      "company": "Rillset",
+      "companySlug": "rillset",
+      "product": "Dataset publication workspace",
+      "view": "desktop-homepage",
+      "imagePath": "rillset/desktop-homepage.png",
+      "promptPath": "rillset/prompts/desktop-homepage.txt",
+      "width": 1536,
+      "height": 3072,
+      "sha256": "f06e7ca311117ea35064759e2dd94e6428f54ca6c32c63e982e48848eec85f9f",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/Geist",
+          "fallback": "Arial, Helvetica, sans-serif"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "\"Courier New\", monospace"
+        }
+      ]
+    },
+    {
+      "id": "rillset-mobile-homepage",
+      "version": 6,
+      "company": "Rillset",
+      "companySlug": "rillset",
+      "product": "Dataset publication workspace",
+      "view": "mobile-homepage",
+      "imagePath": "rillset/mobile-homepage.png",
+      "promptPath": "rillset/prompts/mobile-homepage.txt",
+      "width": 819,
+      "height": 5120,
+      "sha256": "b1f885a2cfead845bf642f897524c1b4d1e03593843f14fb647a302ec28d9bb1",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/Geist",
+          "fallback": "Arial, Helvetica, sans-serif"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "\"Courier New\", monospace"
+        }
+      ]
+    },
+    {
+      "id": "rillset-app",
+      "version": 6,
+      "company": "Rillset",
+      "companySlug": "rillset",
+      "product": "Dataset publication workspace",
+      "view": "app",
+      "imagePath": "rillset/app.png",
+      "promptPath": "rillset/prompts/app.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "af0fded1062f43b53ddaecd1853d9f5a94a22accb4254448529bf8554aa72307",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/Geist",
+          "fallback": "Arial, Helvetica, sans-serif"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "\"Courier New\", monospace"
+        }
+      ]
+    },
+    {
+      "id": "rillset-component",
+      "version": 6,
+      "company": "Rillset",
+      "companySlug": "rillset",
+      "product": "Dataset publication workspace",
+      "view": "component",
+      "imagePath": "rillset/component.png",
+      "promptPath": "rillset/prompts/component.txt",
+      "width": 1135,
+      "height": 1386,
+      "sha256": "ca84e438edbcb4c1226cadffe34468a3b3d333c1fb4079115eebc7bbe97c1aa8",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/Geist",
+          "fallback": "Arial, Helvetica, sans-serif"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "\"Courier New\", monospace"
+        }
+      ]
+    },
+    {
+      "id": "oriel-desktop-homepage",
+      "version": 6,
+      "company": "Oriel",
+      "companySlug": "oriel",
+      "product": "Product update publishing workspace",
+      "view": "desktop-homepage",
+      "imagePath": "oriel/desktop-homepage.png",
+      "promptPath": "oriel/prompts/desktop-homepage.txt",
+      "width": 1254,
+      "height": 2508,
+      "sha256": "9227f47c4eb675fccc00deb93acce0a2ca20165417e367e8e249fd47aaed54dd",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Instrument Serif",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Instrument+Serif",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Restrained marketing headings only"
+        },
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500,
+            600
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Body, controls, app and component"
+        }
+      ],
+      "stateData": {
+        "company": "Oriel",
+        "fictional": true,
+        "workspace": "Mica",
+        "entry": "upd_072",
+        "title": "A faster way to find your work",
+        "status": "Scheduled",
+        "scheduledAt": "28 Oct 2026 · 09:00 UTC",
+        "destination": "Public changelog",
+        "author": "Nina Cole",
+        "reviewer": "Sam Lee",
+        "approval": "Approved",
+        "otherEntries": [
+          {
+            "title": "Shared views for every team",
+            "status": "Draft"
+          },
+          {
+            "title": "More control over exports",
+            "status": "In review"
+          }
+        ],
+        "componentPurpose": "Review the scheduled publication and choose Edit schedule or View preview; not published yet"
+      }
+    },
+    {
+      "id": "oriel-mobile-homepage",
+      "version": 6,
+      "company": "Oriel",
+      "companySlug": "oriel",
+      "product": "Product update publishing workspace",
+      "view": "mobile-homepage",
+      "imagePath": "oriel/mobile-homepage.png",
+      "promptPath": "oriel/prompts/mobile-homepage.txt",
+      "width": 948,
+      "height": 4740,
+      "sha256": "a84a20cd1d9506cd292730caa0c06acadeccb5a56f570446733a5bcff3a6d9d0",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Instrument Serif",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Instrument+Serif",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Restrained marketing headings only"
+        },
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500,
+            600
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Body, controls, app and component"
+        }
+      ],
+      "stateData": {
+        "company": "Oriel",
+        "fictional": true,
+        "workspace": "Mica",
+        "entry": "upd_072",
+        "title": "A faster way to find your work",
+        "status": "Scheduled",
+        "scheduledAt": "28 Oct 2026 · 09:00 UTC",
+        "destination": "Public changelog",
+        "author": "Nina Cole",
+        "reviewer": "Sam Lee",
+        "approval": "Approved",
+        "otherEntries": [
+          {
+            "title": "Shared views for every team",
+            "status": "Draft"
+          },
+          {
+            "title": "More control over exports",
+            "status": "In review"
+          }
+        ],
+        "componentPurpose": "Review the scheduled publication and choose Edit schedule or View preview; not published yet"
+      }
+    },
+    {
+      "id": "oriel-app",
+      "version": 6,
+      "company": "Oriel",
+      "companySlug": "oriel",
+      "product": "Product update publishing workspace",
+      "view": "app",
+      "imagePath": "oriel/app.png",
+      "promptPath": "oriel/prompts/app.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "03bf3cffd421f83e251a2bc8138a2d215749aa2ebf12e5cfa3a861c231452886",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Instrument Serif",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Instrument+Serif",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Restrained marketing headings only"
+        },
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500,
+            600
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Body, controls, app and component"
+        }
+      ],
+      "stateData": {
+        "company": "Oriel",
+        "fictional": true,
+        "workspace": "Mica",
+        "entry": "upd_072",
+        "title": "A faster way to find your work",
+        "status": "Scheduled",
+        "scheduledAt": "28 Oct 2026 · 09:00 UTC",
+        "destination": "Public changelog",
+        "author": "Nina Cole",
+        "reviewer": "Sam Lee",
+        "approval": "Approved",
+        "otherEntries": [
+          {
+            "title": "Shared views for every team",
+            "status": "Draft"
+          },
+          {
+            "title": "More control over exports",
+            "status": "In review"
+          }
+        ],
+        "componentPurpose": "Review the scheduled publication and choose Edit schedule or View preview; not published yet"
+      }
+    },
+    {
+      "id": "oriel-component",
+      "version": 6,
+      "company": "Oriel",
+      "companySlug": "oriel",
+      "product": "Product update publishing workspace",
+      "view": "component",
+      "imagePath": "oriel/component.png",
+      "promptPath": "oriel/prompts/component.txt",
+      "width": 1295,
+      "height": 1214,
+      "sha256": "7c49e9d7ef4f87c6db7246e20b0c84166557d85581e9f9c8f4af8675c28e29f6",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Instrument Serif",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Instrument+Serif",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Restrained marketing headings only"
+        },
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500,
+            600
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Body, controls, app and component"
+        }
+      ],
+      "stateData": {
+        "company": "Oriel",
+        "fictional": true,
+        "workspace": "Mica",
+        "entry": "upd_072",
+        "title": "A faster way to find your work",
+        "status": "Scheduled",
+        "scheduledAt": "28 Oct 2026 · 09:00 UTC",
+        "destination": "Public changelog",
+        "author": "Nina Cole",
+        "reviewer": "Sam Lee",
+        "approval": "Approved",
+        "otherEntries": [
+          {
+            "title": "Shared views for every team",
+            "status": "Draft"
+          },
+          {
+            "title": "More control over exports",
+            "status": "In review"
+          }
+        ],
+        "componentPurpose": "Review the scheduled publication and choose Edit schedule or View preview; not published yet"
+      }
+    }
+  ]
+}
