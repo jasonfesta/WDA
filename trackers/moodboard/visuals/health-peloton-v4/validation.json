@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-25",
+  "checks": {
+    "all15ManifestAssetsPresent": true,
+    "allLocalViewerLinksPresent": true,
+    "fiveFinalImageHashesMatchSelectedDrafts": true,
+    "jsonValid": true,
+    "viewerJavaScriptSyntaxValid": true,
+    "pelotonMobileDesktopComponentLoadedInCompareView": true,
+    "pelotonWebDeskAndWebAppLoaded": true,
+    "previousV3SectionOpensWithFiveLinks": true,
+    "browserConsoleErrors": []
+  },
+  "proof": "review-proof.jpg"
+}

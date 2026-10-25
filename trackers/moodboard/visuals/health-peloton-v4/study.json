@@ -1,0 +1,112 @@
+{
+  "title": "Peloton product study → FORM / health v4",
+  "date": "2026-10-25",
+  "scope": "Public official website and product imagery; not an authenticated account audit.",
+  "mode": "Built-in image_gen. Five static bitmap concepts. Viewer only is HTML.",
+  "versioning": "v3 and v2 preserved. Finance and to-do unchanged.",
+  "observations": [
+    {
+      "product": "Peloton homepage",
+      "source": "https://www.onepeloton.com/",
+      "files": [
+        "references/home-viewport.jpg"
+      ],
+      "observed": "Dark navigation, dominant moving human imagery, white pill actions, moderate sentence-case headings. The imagery carries the energy.",
+      "decision": "Full-width movement photography and generous editorial pacing for the website."
+    },
+    {
+      "product": "Peloton App",
+      "source": "https://www.onepeloton.com/app",
+      "files": [
+        "references/app-home-workout.png"
+      ],
+      "observed": "Published app composition shows black surfaces, violet week markers, orange/blue/magenta activity targets, prominent instructor imagery and persistent bottom navigation.",
+      "decision": "Graphite application foundation, visible weekly rhythm and one next session. Compress metrics into an open strip to meet the user's no-card-wall constraint."
+    },
+    {
+      "product": "Strength+",
+      "source": "https://www.onepeloton.com/strength-plus-app?locale=en-us",
+      "files": [
+        "references/strength-viewport.jpg",
+        "references/strength-workout.png",
+        "references/strength-tracking.png"
+      ],
+      "observed": "A focused exercise screen gives the demonstration most of the space; time, sets, reps and next move remain close to the action. Progress charts are spare and contextual.",
+      "decision": "The session and its actionable next step lead. The web app reviews one workout with readable units and a supporting time series."
+    },
+    {
+      "product": "Cross Training Bike+",
+      "source": "https://www.onepeloton.com/bike-plus",
+      "files": [
+        "references/bike-iq-viewport.jpg"
+      ],
+      "observed": "Quiet grey stage, large human movement, compact workout customization. Duration and muscle focus are directly tied to the workout.",
+      "decision": "Maintain a clear plan → session → review sequence instead of unrelated dashboard metrics."
+    },
+    {
+      "product": "Tread Vision",
+      "source": "https://www.onepeloton.com/tread",
+      "files": [
+        "references/tread-viewport.jpg"
+      ],
+      "observed": "Large athlete imagery in a sparse field; training and movement feedback are associated with a person and exercise rather than abstract gauges.",
+      "decision": "Use natural movement photography and restrained supporting measurements, without invented readiness or clinical scores."
+    },
+    {
+      "product": "Cross Training Row+",
+      "source": "https://www.onepeloton.com/row-plus",
+      "files": [
+        "references/row-viewport.jpg"
+      ],
+      "observed": "The website shares Bike+'s generous neutral stage, rounded actions and calm typography.",
+      "decision": "Keep a coherent design family across product sizes; do not use unrelated stylistic treatments for each screen."
+    },
+    {
+      "product": "Peloton IQ",
+      "source": "https://www.onepeloton.com/peloton-iq",
+      "files": [
+        "references/iq-viewport.jpg",
+        "references/personalized-plan.png"
+      ],
+      "observed": "Personal plans, exercise selection and contextual guidance connect the product story. Dark translucent overlays sit against rich movement photography.",
+      "decision": "A prominent next planned session connects progress to action. A subtle photo fade supports contrast; no decorative glass or glow."
+    }
+  ],
+  "interpretation": "The charcoal/violet FORM direction is a selective interpretation of the public app references, not a claim that every Peloton product uses this palette. The site retains dark/light editorial chapter changes. No logo or real instructor is reproduced.",
+  "style": "Original fitness tracker named FORM, informed by a visual study of current Peloton App, Strength+, Bike+, Row, Tread and Peloton IQ. Matte graphite #15171B and near-black #0B0C0F, off-white type, subtle charcoal divisions, gentle 14px corners. Contemporary readable neo-grotesk typography, medium weight, sentence case, tabular metrics. Normal width typography, no condensed display fonts. Photography is the hero: richly detailed editorial real human movement, premium dark studio with soft light, natural skin, calm confidence, no dystopian neon. White pill primary controls. Purple #8068EF is reserved for completed days and progress; small peach accents for time. Accent colors are functional, not glowing. Cohesive open sections and an uninterrupted weekly rhythm rather than a wall of dashboard cards. No banking ledger aesthetic, no white dashboard, no neon-green recovery dial, no circular score as centerpiece, no chrome/gloss/3D bevels, no generic SaaS gradient blobs. Icons are small consistent line icons. All text crisp and readable with deliberate padding. This is an original concept, not a fake official Peloton screenshot; use FORM wordmark, no Peloton logo or real instructor identity.",
+  "data": "Fictional date Sunday Oct 25, 2026, selected week Oct 19–25. Completed: Mon19 45min Ride, Wed21 35min Strength, Sat24 60min Run. Total 140min, 3active days,3of4 weekly workouts complete. Tue20,Thu22,Fri23 Rest. Sun25 has planned 20min Mobility, still not completed and not included in totals. Violet completed checkmarks only Mon19/Wed21/Sat24; Sunday an outlined selection. Coach Maya Chen is fictional. Latest run 60min,7.2km,8:20/km,avgHR134bpm.",
+  "screenPlan": [
+    {
+      "surface": "Mobile",
+      "purpose": "Weekly progress and today's planned recovery session."
+    },
+    {
+      "surface": "Desktop",
+      "purpose": "Native home view with complete recent activity and a larger upcoming session."
+    },
+    {
+      "surface": "Web desk",
+      "purpose": "Full desktop homepage from navigation to footer."
+    },
+    {
+      "surface": "Web app",
+      "purpose": "A selected completed run: distance, duration, pace, heart rate and time series."
+    },
+    {
+      "surface": "Component",
+      "purpose": "One weekly training module centered on a neutral presentation canvas."
+    }
+  ],
+  "limitations": [
+    "Public marketing compositions contain interface examples, not directly captured signed-in apps.",
+    "Photographs, names and training data in the concepts are fictional.",
+    "Charts are illustrative raster drawings; the review page implements no tracker functionality."
+  ],
+  "acceptance": [
+    "Five images exactly for health.",
+    "Progress has 3 completed workouts totaling 140 minutes.",
+    "75% weekly workout target, Sunday mobility still planned.",
+    "No eight-card dashboard; one integrated time axis and an obvious next action.",
+    "New visual family distinct from white Ramp finance and old neon WHOOP."
+  ]
+}

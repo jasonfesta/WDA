@@ -1,0 +1,45 @@
+{
+  "version": 4,
+  "date": "2026-10-25",
+  "status": "Finalized for publication at the user\u2019s request",
+  "scope": "Five Peloton-informed FORM images; existing Ramp and Notion directions carried forward unchanged.",
+  "history": "These saved images were previously paused drafts. The user has now requested finalizing and publishing visuals version 4. Earlier local pages and draft files are preserved.",
+  "mode": "Static raster concepts generated earlier with built-in image_gen; HTML is only the review viewer.",
+  "healthImages": [
+    {
+      "surface": "mobile",
+      "file": "mobile.png",
+      "sourceDraft": "mobile.png",
+      "sha256": "90bb2ccca6a96b516bf15f3ed0c8e7ec257c72b205b6ae36a7834dbeb9b7d934"
+    },
+    {
+      "surface": "desktop",
+      "file": "desktop.png",
+      "sourceDraft": "desktop-unapproved.png",
+      "sha256": "c0ef6bf02aa622d626795cdc16e25069749736405628c4ccdbe459c61072a639"
+    },
+    {
+      "surface": "web-desk",
+      "file": "web-desk.png",
+      "sourceDraft": "web-desk-unapproved.png",
+      "sha256": "15580a90b3a8815bca99cd412aee6bc5bff86d6a8763e1109324fb8f9c9bba1e"
+    },
+    {
+      "surface": "web-app",
+      "file": "web-app.png",
+      "sourceDraft": "web-app-unapproved.png",
+      "sha256": "2624885e962c8fcf033da7f5f2ed0fe7400c44d03807a0eb501fa8765bfd5ce9"
+    },
+    {
+      "surface": "component",
+      "file": "component.png",
+      "sourceDraft": "component-unapproved.png",
+      "sha256": "b995906499febceeb07ed03df736dbfea523418d3d4feab07491fed8609eab57"
+    }
+  ],
+  "limitations": [
+    "Original concepts, not official Peloton product screenshots.",
+    "Fictional people and activity data; charts are illustrative.",
+    "Controls inside each bitmap are visual only."
+  ]
+}

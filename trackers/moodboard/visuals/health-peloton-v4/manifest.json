@@ -1,0 +1,189 @@
+{
+  "round": "Visuals version 4",
+  "date": "2026-10-25",
+  "method": "Existing built-in image_gen outputs; no new images generated for publication",
+  "surfaces": [
+    {
+      "id": "mobile",
+      "label": "Mobile",
+      "description": "Native mobile app"
+    },
+    {
+      "id": "desktop",
+      "label": "Desktop",
+      "description": "Native desktop app"
+    },
+    {
+      "id": "web-desk",
+      "label": "Web desk",
+      "description": "Complete desktop website homepage"
+    },
+    {
+      "id": "web-app",
+      "label": "Web app",
+      "description": "Browser-based tracker"
+    },
+    {
+      "id": "component",
+      "label": "Component",
+      "description": "One detailed component, centered on a screen"
+    }
+  ],
+  "directions": [
+    {
+      "id": "ramp",
+      "name": "Finance / Ramp",
+      "product": "Ledger",
+      "title": "Clarity with an edge.",
+      "summary": "A personal ledger with bold financial typography, forest data bars and a sharp yellow accent. Budget, commitments and available money share one readable structure.",
+      "rules": [
+        "Flat rows and tabular figures",
+        "One budget runway instead of separate stat cards",
+        "A detail pane for exceptions"
+      ],
+      "sources": [
+        [
+          "Ramp expense management",
+          "https://ramp.com/expense-management"
+        ],
+        [
+          "Ramp mobile",
+          "https://ramp.com/mobile-app"
+        ]
+      ],
+      "reference": "../round-02/references/ramp-budget.webp",
+      "screens": [
+        {
+          "id": "mobile",
+          "label": "Mobile",
+          "file": "../round-02/ramp-mobile.png"
+        },
+        {
+          "id": "desktop",
+          "label": "Desktop",
+          "file": "../round-02/ramp-desktop.png"
+        },
+        {
+          "id": "web-desk",
+          "label": "Web desk",
+          "file": "../round-02/ramp-web-desk.png"
+        },
+        {
+          "id": "web-app",
+          "label": "Web app",
+          "file": "../round-02/ramp-web-app.png"
+        },
+        {
+          "id": "component",
+          "label": "Component",
+          "file": "../round-02/ramp-component.png"
+        }
+      ]
+    },
+    {
+      "id": "peloton",
+      "name": "Health / Peloton",
+      "product": "FORM",
+      "title": "Your week, in motion.",
+      "summary": "A graphite training app with a shared weekly rhythm, violet completion markers and photography that gives the next session priority. Native navigation, open activity rows and clear units make progress easy to read.",
+      "rules": [
+        "One weekly rail connects completed workouts with the next planned session",
+        "Graphite surfaces, normal-width type and white primary controls",
+        "Native app navigation and contextual activity detail; no wall of metric cards"
+      ],
+      "sources": [
+        [
+          "Peloton App",
+          "https://www.onepeloton.com/app"
+        ],
+        [
+          "Peloton Strength+",
+          "https://www.onepeloton.com/strength-plus-app"
+        ],
+        [
+          "Peloton IQ",
+          "https://www.onepeloton.com/peloton-iq"
+        ]
+      ],
+      "reference": "references/app-home-workout.png",
+      "screens": [
+        {
+          "id": "mobile",
+          "label": "Mobile",
+          "file": "mobile.png"
+        },
+        {
+          "id": "desktop",
+          "label": "Desktop",
+          "file": "desktop.png"
+        },
+        {
+          "id": "web-desk",
+          "label": "Web desk",
+          "file": "web-desk.png"
+        },
+        {
+          "id": "web-app",
+          "label": "Web app",
+          "file": "web-app.png"
+        },
+        {
+          "id": "component",
+          "label": "Component",
+          "file": "component.png"
+        }
+      ]
+    },
+    {
+      "id": "notion",
+      "name": "To-do / Notion",
+      "product": "Daybook",
+      "title": "A document with a point of view.",
+      "summary": "A personal planning page with an editorial serif setting, ink illustration and a detailed task database. Tasks keep their notes, properties and context close by.",
+      "rules": [
+        "A page tree and document rhythm",
+        "Task properties and inline subtasks",
+        "Serif page titles, restrained property colors"
+      ],
+      "sources": [
+        [
+          "Notion projects",
+          "https://www.notion.com/product/projects"
+        ],
+        [
+          "Notion projects and tasks guide",
+          "https://www.notion.com/en-gb/help/guides/getting-started-with-projects-and-tasks"
+        ]
+      ],
+      "reference": "../round-02/references/notion-database.png",
+      "screens": [
+        {
+          "id": "mobile",
+          "label": "Mobile",
+          "file": "../round-02/notion-mobile.png"
+        },
+        {
+          "id": "desktop",
+          "label": "Desktop",
+          "file": "../round-02/notion-desktop.png"
+        },
+        {
+          "id": "web-desk",
+          "label": "Web desk",
+          "file": "../round-02/notion-web-desk.png"
+        },
+        {
+          "id": "web-app",
+          "label": "Web app",
+          "file": "../round-02/notion-web-app.png"
+        },
+        {
+          "id": "component",
+          "label": "Component",
+          "file": "../round-02/notion-component.png"
+        }
+      ]
+    }
+  ],
+  "status": "Finalized static image release"
+}
