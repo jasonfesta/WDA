@@ -1,0 +1,8 @@
+2026-10-25 — Reference-led Version 2 ready for review.
+
+16 raster images: Supper, Fieldwork, Wayfar, Stillhouse, each with desktop website, mobile website, app showcase and component.
+Each image is paired with its source reference. The approved market gallery arrangement is preserved; comparison switches and full-image inspection are available.
+All 16 images loaded in the browser. Gallery and viewer reference switching verified. Phone viewport 390×844 verified with no horizontal page overflow; close control remains separate.
+
+Initial editorial drafts were rejected and are not used. V1 and market references remain preserved.
+This covers the approved four-area arrangement, not all states in the earlier 32-screen flow plan.

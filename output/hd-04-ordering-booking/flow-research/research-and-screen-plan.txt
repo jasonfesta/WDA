@@ -1,0 +1,321 @@
+MOODBOARD 4 — ORDERING & BOOKING
+Research, four flow maps and the image production plan
+Research dates: October 24–25, 2026
+
+CURRENT SCOPE
+
+Jason confirmed: “Yes—four flows, four steps each.”
+The four flows are restaurant delivery, grocery delivery, flight booking and hotel booking. Each has four primary screen states, with a desktop and responsive mobile composition for every state: 16 states, 32 original screen images. Eight long storyboards will assemble those images into complete journeys, one per flow and device.
+
+This is research and image design. The latest instruction stops page-building and application development. The overview is a raster image displayed directly in the right-hand browser panel. No ordering, checkout or booking application is being implemented.
+
+STATUS
+
+Completed: adjacent-reference research, live reference captures, official publisher examples, four proposed flow maps and the screen-by-screen plan below.
+Created: boards/00-four-flow-overview.png, using the built-in image-generation tool. Its exact prompt is saved beside it.
+Next: the 32 original screen designs, evaluation and revision, and eight assembled storyboards. They have NOT yet been produced.
+Earlier designs and retail Version 1 / Version 2 remain untouched. The earlier homepage + app + component interpretation is superseded by the four-flow scope.
+
+HOW TO READ THE EVIDENCE
+
+Three brands were inspected live: DoorDash, KAYAK and Mr & Mrs Smith. Instacart images are official Storefront documentation examples, not a live capture of its consumer Marketplace. Four adjacent reference families were reviewed through official documentation: Uber Eats, Amazon Fresh / Whole Foods, Google Flights and Airbnb.
+
+The maps are our proposed four-stage design structures. They do not claim each reference uses exactly four screens. Search, editing and supporting sheets can remain within a primary stage. No purchase or booking was completed. Confirmation screens in this plan are proposed states.
+
+The captured prices and availability are dated reference examples, not recommended purchases or fixed values for our original designs. Two undersized mobile captures were excluded from the selected evidence because they did not establish a proper responsive view.
+
+RESEARCH — THE NAMED EXAMPLES AND THE ADJACENT COMPARISONS
+
+1. RESTAURANT DELIVERY: DOORDASH + UBER EATS
+
+Observed in DoorDash's Sweetgreen store: category navigation leads into a dedicated item editor. Modifier groups, quantities and the add-to-cart price are visible together. The mobile editor reserves navigation space above the content and a separate action area below it. The long menu and recommendation groups also show where a study could become crowded.
+
+Uber Eats' official ordering guide provides a cross-check of the sequence: address, restaurant, items, cart, checkout review, order and tracking. Its accessibility guide identifies address, timing, items and payment as review content.
+
+Design transfer: make the meal card concise; give customization a whole stage; distinguish required and optional choices; preserve selections when going back. Keep upsells secondary. Give Back, title and Close a dedicated header. Finish with an actual order reference, ETA and tracking action.
+
+Evidence boundary: DoorDash menu and customization were captured. Automatic approval review blocked adding the sample item to the cart because it would change external cart state during a research task. Later checkout and tracking steps are informed by official documentation, not a live completed order. No Uber Eats live capture is claimed.
+
+Sources:
+https://www.doordash.com/store/sweetgreen-new-york-52008/
+https://help.doordash.com/en-us/consumers/article/doubledash
+https://help.uber.com/en-AU/ubereats/restaurants/article/how-to-place-an-order-on-uber-eats/?nodeId=509d1b2f-087c-4dac-9e94-6ab248e87491
+https://help.uber.com/en/ubereats/stores/article/accessibility-how-to-use-voiceover?nodeId=df749409-0954-4118-ab9e-f8df76ce05fb
+
+Selected images:
+captures/doordash-menu-desktop.jpg — 1440 × 9123, long live menu.
+captures/doordash-menu-mobile.jpg — 390 × 844, responsive viewport only.
+captures/doordash-customize-desktop.jpg — 1440 × 1000, item editor.
+captures/doordash-customize-mobile.jpg — 390 × 844, mobile item editor.
+
+2. GROCERY DELIVERY: INSTACART + AMAZON FRESH / WHOLE FOODS
+
+Instacart's Storefront documentation separates the basket, replacement preferences and delivery checkout. The replacement example offers specific backups, best match or refund. The checkout example groups address, delivery options, payment and an order summary; the visible primary action in that example is Continue, so it is not proof of a completed order.
+
+Amazon's grocery help describes a separate grocery cart and reserving a delivery slot while shopping. Whole Foods help describes substitution preferences and accepting or declining replacements. These add recovery cases to the plan: a slot can expire, an item can become unavailable, and a replacement may need a response.
+
+Design transfer: show package size and unit price without crowding the product name. Make replacement choices visible before ordering. Label estimated weighted-item costs. If a delivery window becomes unavailable, preserve the basket and offer replacement windows with clear fees.
+
+Evidence boundary: the four selected images are publisher examples. They are not a matched desktop/mobile capture of the live Instacart Marketplace. Amazon and Whole Foods contribute documented behavior; no live checkout screenshots are claimed.
+
+Sources:
+https://docs.instacart.com/storefront/cart_and_checkout/cart/
+https://docs.instacart.com/storefront/cart_and_checkout/checkout_page
+https://docs.instacart.com/storefront/products/replacement_instructions
+https://digprjsurvey.amazon.com/csad/help/node/GQDB7EYYPKGLNG34
+https://wfm.amazon.com/customer-service/topics
+https://digprjsurvey.amazon.com/csad/help/node/G4UTCUKAQHK57KKX
+
+Selected images:
+captures/instacart-checkout-1.png — 1500 × 1056, delivery checkout example.
+captures/instacart-replacements-1.png — 1502 × 3248, mobile replacement example.
+captures/instacart-cart-2.png — 1030 × 2158, tall basket example.
+captures/instacart-checkout-2.png — 1554 × 1166, pickup comparison example.
+Asset URLs and publisher descriptions are preserved in official-examples.json. Those publisher descriptions are not substituted for visual inspection.
+
+3. FLIGHT BOOKING: KAYAK + GOOGLE FLIGHTS
+
+Observed in KAYAK: route, dates and travelers are grouped at search. Desktop results use a filter rail and comparison rows; mobile uses compact filters and stacked results. Details separate both flight legs, fare families and booking providers. The captured mobile details include both View deal and Instant Book options.
+
+KAYAK's official help distinguishes booking on a provider's site from provider-fulfilled bookings within KAYAK. Google Flights' help similarly separates search, selection and the booking option, and discusses separate-ticket / self-transfer implications.
+
+Design transfer: compare the whole round trip, not an ambiguous one-way price. Keep local times, dates, stops and baggage readable. Make fare conditions and the booking provider explicit. Stage three of our plan is a proposed provider checkout, rather than a claim that we captured a native KAYAK payment screen.
+
+Evidence boundary: search, results and itinerary/fare states were captured. The desktop expanded detail is a sponsored Delta result; the mobile detail is a British Airways itinerary. They demonstrate layout behavior, not a single continuous booking across devices. No traveler payment or ticket issuance was tested. The original studies must use one consistent fictional trip across all screens.
+
+Sources:
+https://www.kayak.com/flights/JFK-LHR/2026-11-12/2026-11-19?sort=bestflight_a
+https://www.kayak.com/news/booking-through-kayak/
+https://www.kayak.com/c/help/bookings/
+https://support.google.com/travel/answer/2475306?hl=en
+
+Selected images:
+captures/kayak-results-desktop-long.jpg — 1280 × 14507, full results.
+captures/kayak-results-mobile-long.jpg — 390 × 15445, full responsive results.
+captures/kayak-detail-desktop.jpg — 1440 × 1000, expanded sponsored result.
+captures/kayak-detail-mobile.jpg — 390 × 844, itinerary, fares and providers.
+captures/kayak-search-desktop.jpg — 1440 × 1000, trip search.
+captures/kayak-results-mobile.jpg — 390 × 844, native-scale result viewport.
+
+4. HOTEL BOOKING: MR & MRS SMITH + AIRBNB
+
+Observed in Mr & Mrs Smith's Aman New York room selection: room photography and description sit apart from rate inclusions and policy detail. Cancellation, deposit, tax and additional charges can be expanded. The basket carries the room, dates and guests into a Choose → Confirm → Pay progression. Total stay cost and amount due now are distinct.
+
+Airbnb's official booking guidance emphasizes accurate dates and guest count, reviewing rules and cancellation terms, and distinguishing an immediate booking from a request awaiting acceptance.
+
+Design transfer: treat room selection and rate selection as related but separate decisions. Reconcile mandatory fees into a clear total. Place cancellation terms and due-now / due-later amounts before commitment. A request awaiting acceptance must not look like a confirmed reservation.
+
+Evidence boundary: rooms, rate details and a pre-payment basket were captured. A sample room was added while following a booking link, then removed; the empty basket was verified. No guest details, payment or confirmed reservation was submitted. Some offscreen photography in long captures may be lazy-loaded. Airbnb is a documented comparison, not a live checkout capture.
+
+Sources:
+https://www.mrandmrssmith.com/luxury-hotels/aman-new-york/rooms
+https://www.mrandmrssmith.com/luxury-hotels/aman-new-york/offers/93161/93161-advance-reservation
+https://www.mrandmrssmith.com/faqs
+https://www.airbnb.com/help/article/380
+https://www.airbnb.com/help/article/124
+
+Selected images:
+captures/smith-rooms-desktop-long.jpg — 1440 × 23009, full room/rate list.
+captures/smith-rooms-mobile-long.jpg — 390 × 23451, responsive room/rate list.
+captures/smith-policy-desktop.jpg — 1440 × 1000, expanded rate policy.
+captures/smith-policy-mobile.jpg — 390 × 844, compact rate card.
+captures/smith-basket-desktop-long.jpg — 1440 × 2071, pre-payment basket.
+captures/smith-basket-mobile-long.jpg — 390 × 2719, pre-payment basket.
+
+THE 16 PRIMARY STATES — EACH PRODUCES A DESKTOP AND MOBILE IMAGE
+
+FD-01 — CHOOSE A MEAL
+Content: editable delivery location and time, menu categories, clean meal cards with image/name/price and one action.
+Desktop: menu grid with category navigation and compact order context.
+Mobile: a single-column meal list with location/time easy to edit.
+Forward action: Customize meal.
+Carry forward: restaurant, fulfillment mode, delivery location and selected dish.
+Recovery annotation: resolve a closed restaurant or unsupported address before selection.
+
+FD-02 — CUSTOMIZE
+Content: required and optional modifier groups, selected values, quantity, running line price, dedicated Back/title/Close row.
+Desktop: focused item editor with the image beside choices and a stable summary/action area.
+Mobile: full-screen editor, dedicated top navigation and bottom quantity/action bar; content clears the fixed controls.
+Forward action: Add & review basket.
+Carry forward: dish, modifiers, quantity and line total.
+Recovery annotation: identify an incomplete required group inline while preserving other choices.
+
+FD-03 — REVIEW & ORDER
+Content: editable basket, address, instructions, arrival estimate, payment, tip, subtotal, fees, tax and total.
+Desktop: review column with a total and final action in a summary rail.
+Mobile: stacked review sections, expandable item summary and reserved bottom action area.
+Forward action: Place order, with the final amount visible.
+Carry forward: exact selected items, delivery details and checked arithmetic.
+Recovery annotation: failed payment preserves details and offers a retry without implying a duplicate order.
+
+FD-04 — ORDER CONFIRMED
+Content: order number, ETA, preparation/delivery status, receipt and support.
+Desktop: arrival status with order details and help alongside.
+Mobile: ETA and current status first; receipt and support below.
+Forward action: Track order.
+Carry forward: same meal, modifiers, quantity, delivery details and paid total.
+Recovery annotation: delayed delivery updates the ETA and offers help.
+
+GR-01 — BUILD BASKET
+Content: store, location, search/categories, package size, unit price, availability and quantity controls.
+Desktop: product grid with categories and compact basket rail.
+Mobile: at most two columns where labels remain readable; clear quantity and basket actions.
+Forward action: Review basket.
+Carry forward: product, package, quantity and estimated line cost.
+Recovery annotation: unavailable product shows comparable alternatives.
+
+GR-02 — BASKET & REPLACEMENTS
+Content: editable product quantities and visible specific-backup / best-match / refund preference for each item.
+Desktop: basket rows alongside the selected item's replacement editor and summary.
+Mobile: basket list; a full-screen replacement sheet with its own navigation and Save action.
+Forward action: Choose delivery.
+Carry forward: quantities and every replacement preference.
+Recovery annotation: unavailable backup respects the refund instruction or requests a new choice.
+
+GR-03 — DELIVERY & PAYMENT
+Content: address, available windows and fees, substitution recap, payment, tip, estimated item cost and final-cost explanation.
+Desktop: address, scheduling and payment sections with an estimated total rail.
+Mobile: vertically stacked slots and form sections, with the active field kept clear of the keyboard/action area.
+Forward action: Place grocery order.
+Carry forward: selected window, product preferences, fees and estimated total.
+Recovery annotation: an expired slot opens new options without losing the basket.
+
+GR-04 — ORDER & SHOPPER STATUS
+Content: reference, delivery window, shopping/delivery progress, replacement requests, receipt and help.
+Desktop: progress and any response request alongside the basket summary.
+Mobile: the current task is first—status, or a replacement needing an answer.
+Forward action: View order updates; a pending replacement has its own contextual response action.
+Carry forward: distinguish estimated cost from accepted adjustments.
+Recovery annotation: a proposed replacement and an accepted change look different.
+
+FL-01 — SEARCH & COMPARE
+Content: route, dates, traveler count, cabin, round-trip price, duration, stops and comparable bag information.
+Desktop: filters, compact search header and aligned comparison rows.
+Mobile: editable trip summary, filter sheet and stacked results.
+Forward action: View itinerary.
+Carry forward: route, dates, travelers and cabin.
+Recovery annotation: no results offers changes to individual criteria without clearing the whole search.
+
+FL-02 — ITINERARY & FARE
+Content: outbound and return, local times and overnight markers, fare options, bag/seat/refund conditions and provider identity.
+Desktop: itinerary left; fare and provider choice right.
+Mobile: stacked legs and readable fare cards, avoiding a shrunken comparison table.
+Forward action: Continue with the named provider.
+Carry forward: both flights, selected fare, bags and total.
+Recovery annotation: a changed fare shows the difference and asks for a new selection.
+
+FL-03 — TRAVELER & PAYMENT
+Content: named booking provider, traveler/contact information, optional extras, final itinerary, conditions and total.
+Desktop: traveler form beside itinerary and cost summary.
+Mobile: one-column form with clear progress, review and reserved action area.
+Forward action: Pay & book, with the final amount visible.
+Carry forward: passenger details, route, dates, bag allowance and total.
+Recovery annotation: payment failure or pending ticket issuance retains details and shows the true state.
+Boundary: this is our proposed provider checkout, not a captured KAYAK payment screen.
+
+FL-04 — BOOKING CONFIRMED
+Content: booking reference, ticket/issuance status, both legs, bags, receipt, provider support and next travel action.
+Desktop: ticket state and itinerary with management actions alongside.
+Mobile: reference and ticket status first, followed by distinct flight-leg sections.
+Forward action: Manage booking; show the next check-in step when relevant.
+Carry forward: same selected itinerary and named responsible provider.
+Recovery annotation: pending issuance uses a pending state, never a false issued-ticket confirmation.
+
+HT-01 — FIND A STAY
+Content: destination, dates, guests, availability and comparable whole-stay totals.
+Desktop: search/filters above property rows; map is secondary.
+Mobile: stacked property cards with dates and stay total visible.
+Forward action: View rooms.
+Carry forward: destination, dates, nights, occupancy and property.
+Recovery annotation: alternate dates are explicit and trigger repricing.
+
+HT-02 — CHOOSE ROOM & RATE
+Content: room type/capacity, inclusions, refundable versus advance rates, cancellation deadline, stay total and due-now amount.
+Desktop: room photography/details paired with rate options and cost summary.
+Mobile: room followed by rate choices; policy sheet has its own header and close area.
+Forward action: Reserve selected rate.
+Carry forward: room and rate determine terms and payment schedule.
+Recovery annotation: sold-out rate keeps dates and guests while prompting a new choice.
+
+HT-03 — GUEST DETAILS & REVIEW
+Content: guest/contact and payment fields, dates/room recap, cancellation terms, full cost, due now and due later.
+Desktop: form with persistent stay, policy and payment summary.
+Mobile: one-column review; stay total and immediate charge remain distinct above the action.
+Forward action: Confirm & pay, showing the amount charged now.
+Carry forward: room, rate, nights, guests, policy deadline and payment amounts.
+Recovery annotation: changes to dates or occupancy require repricing and renewed review.
+
+HT-04 — RESERVATION CONFIRMED
+Content: reference, stay dates, room, hotel address, check-in, cancellation deadline and payment schedule.
+Desktop: stay receipt with arrival information and future-payment details.
+Mobile: confirmation and dates first, arrival and management below.
+Forward action: Manage reservation.
+Carry forward: exact room/rate and payment schedule.
+Recovery annotation: a request awaiting acceptance requires a separate pending state. This main story uses immediate confirmation.
+
+RESPONSIVE AND COMPONENT RULES
+
+Plan desktop at a 1440-pixel logical width and mobile at 390 pixels. Review the composition at 768 and 320 pixels as well. Export detailed raster images at the best native resolution available. Do not upscale merely to claim additional detail.
+
+Mobile is a separate composition with the same essential decisions. Do not shrink a desktop page into a phone outline. Use full-height views for scrolling content. Avoid decorative device frames that make the actual interface too small to assess.
+
+Reserve a header for Back, title and Close. Close, quantity and primary actions should have at least 44-pixel target areas in the intended design. Keep controls off photographs, badges, card content and fields. Sticky actions need content padding and safe-area allowance. Keyboard states must not hide the active field.
+
+Cards should prioritize the decision: product/property/itinerary, essential comparison facts, price or availability, and one main action. Modifiers, policies and secondary details belong in the appropriate stage. Use progressive disclosure without concealing required costs or conditions.
+
+Named steps, a clear current state and a separate Back action make the sequence legible. Back preserves selections. Final commitment uses a clear verb and amount. Confirmation needs a reference and a useful next action.
+
+Components are designed within these screen images: item cards, modifier groups, quantity controls, replacement choices, time slots, flight legs, fare options, room/rate pairs, payment summaries and status timelines. They are not additional application implementations or extra required primary screens.
+
+ART DIRECTION — PROPOSALS FOR THE NEXT IMAGE PASS
+
+Restaurant: warm ivory with a restrained tomato accent, excellent food photography and simple controls.
+Grocery: warm white and leaf green, precise packshots, readable unit pricing and generous rows.
+Flights: ink and pale blue, crisp dividers and tabular prices/times; comparison takes precedence over destination decoration.
+Hotels: warm stone and deep pine, considered room photography, restrained serif identity and a legible sans serif for forms/prices.
+
+These are proposed directions, not user-approved brands. “High-end” means a calm, carefully resolved transaction experience here; it does not claim that every reference is a luxury service.
+
+PRODUCTION ORDER AND REVIEW GATES
+
+1. FIX THE STORY DATA
+Choose four fictional scenarios. Lock names, items, modifiers, quantities, dates, policies and arithmetic. Restaurant: one meal with selected options, quantity two. Grocery: six products, one weighted item and explicit replacements. Flights: one adult, one JFK–LHR round trip, one fare/provider. Hotel: two adults, two nights, one room and selected refundable rate.
+Pass condition: all four stages describe the same transaction. No real personal or payment information is needed.
+
+2. COMPOSE THE FOUR MOBILE JOURNEYS
+Create four mobile states per flow, evaluated together as a sequence. Include the whole scrolling screen where necessary.
+Pass condition: primary decision, price/condition and next action are readable at phone scale; close controls never overlap content.
+
+3. CREATE THE MATCHING DESKTOP JOURNEYS
+Use the same story data. Use available width for comparison and persistent summaries.
+Pass condition: desktop and mobile expose the same essential choices and totals, while each uses an appropriate layout.
+
+4. EVALUATE AND REVISE AGAINST THE REFERENCES
+Compare each stage to the relevant live capture or publisher example. Record what was retained, improved and intentionally different. Check card density, modifier completeness, sequencing, responsive hierarchy, fees/policies, selection continuity and confirmation truthfulness.
+Pass condition: no overlapping close, unreadable card, missing required condition, inconsistent amount or premature confirmation. These are design review criteria, not evidence of user testing.
+
+5. PACKAGE THE RANGE
+Deliver 32 individual image files and eight long storyboards, with references alongside and native-size access. Keep the earlier designs available as history. Later image revisions should be siblings rather than overwriting a retained version.
+
+EXPORT MATRIX — PLANNED, NOT CREATED
+
+Restaurant: FD-01 desktop/mobile; FD-02 desktop/mobile; FD-03 desktop/mobile; FD-04 desktop/mobile.
+Grocery: GR-01 desktop/mobile; GR-02 desktop/mobile; GR-03 desktop/mobile; GR-04 desktop/mobile.
+Flights: FL-01 desktop/mobile; FL-02 desktop/mobile; FL-03 desktop/mobile; FL-04 desktop/mobile.
+Hotels: HT-01 desktop/mobile; HT-02 desktop/mobile; HT-03 desktop/mobile; HT-04 desktop/mobile.
+
+Individual filename pattern: [flow]/[01–04]-[desktop|mobile].png.
+Storyboard pattern: [flow]/[desktop|mobile]-complete-flow.png.
+The eight storyboards are assemblies of the same 32 screens, not 32 additional states.
+
+PRESERVED EARLIER WORK
+
+Retail Version 1: http://127.0.0.1:5194/hd-04-image-range/?version=v1
+Retail Version 2 draft: http://127.0.0.1:5194/hd-04-image-range/?version=v2
+Earlier travel image gallery: http://127.0.0.1:5194/hd-04-ordering-booking/
+Recovered travel references: http://127.0.0.1:5194/hd-04-ordering-booking/research.html
+
+Those galleries remain as they were because the latest instruction is to avoid page-building. Their older descriptions are not the current four-flow scope. The current scope is this document and the overview image.
+
+Current overview image:
+http://127.0.0.1:5194/hd-04-ordering-booking/flow-research/boards/00-four-flow-overview.png

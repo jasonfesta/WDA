@@ -1,0 +1,10 @@
+Market reference library — 25 October 2026
+
+Four brands, each with desktop website, mobile website, native-app publisher preview and a focused component excerpt.
+
+This is an image-led HTML research viewer. It is not an implemented ordering or booking application and is not a completed four-step checkout capture.
+
+Native previews: official Apple iTunes lookup screenshot assets. Original URLs and current metadata are retained in apps.json and apple-lookup.json.
+Desktop and mobile web: live browser captures. Instacart and Booking.com mobile: Chrome iPhone 16 device emulation, 393x852. The mobile websites were verified visually. No account creation, purchase, order or booking occurred.
+
+Preserved history: ../visual-studies-v1/ and prior ../index.html were not modified.

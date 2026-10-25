@@ -1,0 +1,130 @@
+[
+  {
+    "brand": "supper",
+    "surface": "desktop",
+    "file": "images/supper/desktop.png",
+    "width": 1504,
+    "height": 1046,
+    "sha256": "038331948a907a9e917fc950375a729b6e12966d85a20a2aabf12690a3c590c5"
+  },
+  {
+    "brand": "supper",
+    "surface": "mobile",
+    "file": "images/supper/mobile.png",
+    "width": 853,
+    "height": 1844,
+    "sha256": "4d76f207e37dd2568498df380c31962505cc66f1a4fe672fe3cab8c95f8455eb"
+  },
+  {
+    "brand": "supper",
+    "surface": "app",
+    "file": "images/supper/app.png",
+    "width": 851,
+    "height": 1849,
+    "sha256": "b5d7a58e9f3a2e196d84d995c9c89642a23e1daa202dc13ec72a45524420217b"
+  },
+  {
+    "brand": "supper",
+    "surface": "component",
+    "file": "images/supper/component.png",
+    "width": 1860,
+    "height": 846,
+    "sha256": "8b69ff3be78fd82c0b22c7aa6773912a04ca76e141b7dc3010b1e52acfde32fe"
+  },
+  {
+    "brand": "fieldwork",
+    "surface": "desktop",
+    "file": "images/fieldwork/desktop.png",
+    "width": 1330,
+    "height": 1182,
+    "sha256": "6509303af3aac5837aa480d756cbd9364b692f7b964a4c68dd9f25a8181fad60"
+  },
+  {
+    "brand": "fieldwork",
+    "surface": "mobile",
+    "file": "images/fieldwork/mobile.png",
+    "width": 851,
+    "height": 1847,
+    "sha256": "e267d4be9a3c24e5c12d9125c70d9341d302165c74645e1a26be71d0b9aca1ca"
+  },
+  {
+    "brand": "fieldwork",
+    "surface": "app",
+    "file": "images/fieldwork/app.png",
+    "width": 852,
+    "height": 1846,
+    "sha256": "c13f49d4431abb612f1c94970b95de1388d6b0711c5bc7891e8a5d907ac0add3"
+  },
+  {
+    "brand": "fieldwork",
+    "surface": "component",
+    "file": "images/fieldwork/component.png",
+    "width": 1330,
+    "height": 1182,
+    "sha256": "1d38cc4543505b8b6521d8ba0ec78c4a6c1a689f78015dec5659bfb2a3112f60"
+  },
+  {
+    "brand": "wayfar",
+    "surface": "desktop",
+    "file": "images/wayfar/desktop.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "7df4d0e0b490ee6858e978a1ee57b1edede443e361dd378cb0c0d1b7b40213da"
+  },
+  {
+    "brand": "wayfar",
+    "surface": "mobile",
+    "file": "images/wayfar/mobile.png",
+    "width": 853,
+    "height": 1844,
+    "sha256": "6d176b84f9e3c105400a5af6bdf8f4dbf86a326a78d16e5ff472c71d666727fe"
+  },
+  {
+    "brand": "wayfar",
+    "surface": "app",
+    "file": "images/wayfar/app.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "6e91ec09f50aaa9e1c07e72df40e78d92779771e0ba26b161f6aeea393518347"
+  },
+  {
+    "brand": "wayfar",
+    "surface": "component",
+    "file": "images/wayfar/component.png",
+    "width": 2079,
+    "height": 756,
+    "sha256": "3c7b0fca679eb56b272c86c6dff986b4a19640493c8552666f5986789b93c6a4"
+  },
+  {
+    "brand": "stillhouse",
+    "surface": "desktop",
+    "file": "images/stillhouse/desktop.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "2959b67d2f57ae5f4b753723120a96d965fd72f2348ee423ea27763080986582"
+  },
+  {
+    "brand": "stillhouse",
+    "surface": "mobile",
+    "file": "images/stillhouse/mobile.png",
+    "width": 851,
+    "height": 1847,
+    "sha256": "20f9bd1f1d4f1a27979c9b2529043b78582b504a4ffb9502368821dc1a0272a6"
+  },
+  {
+    "brand": "stillhouse",
+    "surface": "app",
+    "file": "images/stillhouse/app.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "84b4bc526afdf9e2dfbf6ebfa252c5fbc6f68322c9b0f5cfd7f8564f646c83ee"
+  },
+  {
+    "brand": "stillhouse",
+    "surface": "component",
+    "file": "images/stillhouse/component.png",
+    "width": 2145,
+    "height": 733,
+    "sha256": "3c698cc6f79fbd4890fcf3e144d1f294e167b5eb4f290b3d8050067b6c0af4f8"
+  }
+]

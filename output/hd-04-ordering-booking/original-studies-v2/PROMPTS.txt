@@ -1,0 +1,4 @@
+Final prompts: prompts.json (16 prompts).
+Method: built-in imagegen.
+Each prompt uses a directly paired source screenshot from ../market-references/.
+Rejected initial editorial prompts in desktop-prompts.json are historical only; none of their outputs is used in this gallery.

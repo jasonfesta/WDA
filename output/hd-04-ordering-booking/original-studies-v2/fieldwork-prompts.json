@@ -1,0 +1,32 @@
+[
+  {
+    "id": "fieldwork-mobile",
+    "brand": "fieldwork",
+    "kind": "mobile",
+    "refs": [
+      "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/instacart/mobile-web-home.jpg",
+      "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/original-studies-v2/images/fieldwork/desktop.png"
+    ],
+    "prompt": "Use case: precise-object-edit / ui-mockup. Image 1 is the exact source composition to adapt; image 2 is our approved-direction FIELDWORK brand identity reference, not a layout reference. Produce an original FIELDWORK version of image 1. Preserve its exact screen purpose, composition, spacing, card dimensions, information hierarchy, control positions and visual density. Our brand is fieldwork, confident geometric UI sans, cobalt #3557D8, pale blue #EAF0FF, charcoal text, flat white backgrounds. Match the four-square fieldwork symbol and wordmark in image 2. NO editorial serif, beige, atmospheric photography, added story sections, invented sidebars or new page structure. Keep everything crisp and realistically usable. Replace all Instacart/carrot branding. This is a MOBILE WEBSITE. Keep the entire portrait mobile webpage screenshot composition of image 1. Change dark green hero to deep cobalt and green CTA to brighter cobalt with suitable contrast. Preserve small hamburger and logo row, Log in and Get the app controls, 'Order groceries for delivery or pickup today' heading, one sign-up action, search field, the two rows of retailer icons, filters and vertical retailer list. Replace real retailer logos and names consistently with Market Co., Greenlane, Daybreak, Corner Shop, Well & Co., Daily, Bloom & Co. and PawMart using the identities from image 2. Own clean UI typography at the reference scale. Same portrait aspect ratio. No device frame or outside labels. Do not add content or expand hero."
+  },
+  {
+    "id": "fieldwork-app",
+    "brand": "fieldwork",
+    "kind": "app",
+    "refs": [
+      "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/instacart/app-02.jpg",
+      "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/original-studies-v2/images/fieldwork/desktop.png"
+    ],
+    "prompt": "Use case: precise-object-edit / ui-mockup. Image 1 is the exact source composition to adapt; image 2 is our approved-direction FIELDWORK brand identity reference, not a layout reference. Produce an original FIELDWORK version of image 1. Preserve its exact screen purpose, composition, spacing, card dimensions, information hierarchy, control positions and visual density. Our brand is fieldwork, confident geometric UI sans, cobalt #3557D8, pale blue #EAF0FF, charcoal text, flat white backgrounds. Match the four-square fieldwork symbol and wordmark in image 2. NO editorial serif, beige, atmospheric photography, added story sections, invented sidebars or new page structure. Keep everything crisp and realistically usable. Replace all Instacart/carrot branding. This is the NATIVE APP showcase artwork. Preserve the exact portrait promotional composition of image 1: simple large heading in the upper quarter and the cropped rounded app screen beneath, with the same search, categories, promo rectangle and product shelves. Replace background dark green with deep cobalt; headline 'Groceries & more' is white and geometrically bold. Add a modest fieldwork wordmark above the headline without changing the overall proportion. Inside the phone UI preserve the structure: location/search, five category icons, one compact grocery promotion, Fresh deals near you, product images with plus controls. Replace Instacart bag with a cobalt fieldwork tote, brand controls cobalt. Use new original but similar clean grocery photography, retain real food scale and aligned labels. No extra marketing sections. Precise digital artwork, not a photo of a device."
+  },
+  {
+    "id": "fieldwork-component",
+    "brand": "fieldwork",
+    "kind": "component",
+    "refs": [
+      "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/instacart/app-03.jpg",
+      "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/original-studies-v2/images/fieldwork/desktop.png"
+    ],
+    "prompt": "Use case: precise-object-edit / ui-mockup. Image 1 is the exact source composition to adapt; image 2 is our approved-direction FIELDWORK brand identity reference, not a layout reference. Produce an original FIELDWORK version of image 1. Preserve its exact screen purpose, composition, spacing, card dimensions, information hierarchy, control positions and visual density. Our brand is fieldwork, confident geometric UI sans, cobalt #3557D8, pale blue #EAF0FF, charcoal text, flat white backgrounds. Match the four-square fieldwork symbol and wordmark in image 2. NO editorial serif, beige, atmospheric photography, added story sections, invented sidebars or new page structure. Keep everything crisp and realistically usable. Replace all Instacart/carrot branding. Output ONLY the preference-picker COMPONENT from image 1 as a clean isolated square-ish panel on pale blue, no surrounding phone, promotional headline or large banana background. Preserve its popup interior exactly: heading 'Confirm your preference', subheading 'Your shopper will check for your preference', three photographic bananas with ripeness options 'Not ripe' / 'Almost ripe' / 'Ripe', muted descriptions, selected ring around the middle banana and one full-width 'Confirm' button. Change selected ring and confirm CTA to FIELDWORK cobalt. Use image 2 UI font and original clean banana photographs. Maintain dedicated space around all controls, precise readable typography, no overlapping close. Flat white popup, restrained corners, negligible shadow. This is a focused component detail for the same grocery brand, not a whole screen."
+  }
+]

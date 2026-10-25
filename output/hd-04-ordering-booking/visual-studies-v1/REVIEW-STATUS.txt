@@ -1,0 +1,19 @@
+VISUAL STUDIES — REVIEW CHECKPOINT
+
+LATEST USER DIRECTION: “These are really bad. Let's stop and try to look at our research again for a second.” Stop design generation and HTML changes. The original DoorDash desktop item-editor capture is reopened in the right panel. Reassess the real reference material before another design pass. All generated studies remain unapproved.
+
+Current user direction: show one flow all the way through, desktop on the left and mobile on the right, then decide what comes next.
+
+ACTIVE REVIEW: 01-restaurant-complete-flow.png
+Hearth restaurant delivery: Choose a meal → Customize → Review & order → Confirm & track.
+Each of four stages pairs a landscape desktop composition on the left with a mobile composition on the right.
+The compact first composition is also saved as 01-restaurant-overview.png.
+
+These are generated raster concept boards, created with the built-in image-generation tool. No app or viewer was coded. The source reference captures and earlier designs remain unchanged.
+Prompts are saved as [flow]-prompts.txt.
+
+Other first-pass studies were generated before the user narrowed review to one flow. They are preserved here, but are not the active review and are not approved.
+
+The range is not signed off. These composite studies do not yet constitute 32 separate high-resolution screen exports. Fine typography, precise control placement, navigation/close controls and small copy need further review before final production. The restaurant long-form board uses Back in the customization header; the compact overview retains an explicit Close. Resolve that control choice in the next accepted iteration.
+
+No new design generation is required until the user responds to the restaurant proof.

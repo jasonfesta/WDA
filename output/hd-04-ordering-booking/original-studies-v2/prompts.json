@@ -1,0 +1,159 @@
+{
+  "method": "Built-in imagegen",
+  "count": 16,
+  "constraint": "Adapt the exact source structure. Do not add sections or redesign the hierarchy. Change the original brand identity, type, colors and illustrative content.",
+  "prompts": [
+    {
+      "id": "fieldwork-desktop",
+      "reference": "../market-references/images/instacart/desktop-home.jpg",
+      "prompt": "Use case: precise-object-edit / ui-mockup. EDIT THE ATTACHED REFERENCE SCREENSHOT into an original-brand version. The user REJECTED previous redesigns because they drifted from this reference. Treat this as a precise UI skin adaptation, not an open-ended design exercise. Preserve the source screenshot's canvas aspect, exact header height, left sidebar width, all grid positions, card sizes, typography SCALE, row spacing, alignment, information density, content hierarchy and control placement. Preserve the exact store-selection task and screen state. It must look as polished, crisp and realistic as the source. Do not add any section, banner, hero image, basket sidebar, stepper, marketing story, footer, gradient, grain, texture or serif text.\nAllowed changes only: replace Instacart wordmark/carrot with original 'fieldwork' lowercase wordmark in a confident contemporary geometric UI sans plus tiny original four-square mark. Brand accent cobalt #3557D8 replaces the branded greens in nav/login/wordmark. White canvas #FFFFFF, very light neutral gray header, neutral charcoal text. Use own consistent Inter-like UI typography, modest 20px section headings and normal 14\u201316px labels, not giant type. Replace retailer logos with ORIGINAL clean professional fictional-store logos in the same positions: Market Co., Greenlane, Daybreak, Corner Shop, Well & Co., Daily. Retailer cards preserve the exact visual density: small logo, store name, delivery ETA, pickup line, category line and one short benefit line. Text can be shortened slightly for clarity but cannot move into a different composition. Remove only the over-highlighted yellow marker backgrounds on benefit labels, make them small muted blue text. Top search says 'Search products, stores, and recipes'; cart stays 0. Keep 'Your stores', 'Beyond grocery', 'Popular stores near you' and the same positions. The output should be immediately recognizable as the exact reference pattern with a new original brand and own content, NOT a marketing concept. Pixel-sharp flat digital interface. No extra labels outside the screen."
+    },
+    {
+      "id": "fieldwork-mobile",
+      "brand": "fieldwork",
+      "kind": "mobile",
+      "refs": [
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/instacart/mobile-web-home.jpg",
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/original-studies-v2/images/fieldwork/desktop.png"
+      ],
+      "prompt": "Use case: precise-object-edit / ui-mockup. Image 1 is the exact source composition to adapt; image 2 is our approved-direction FIELDWORK brand identity reference, not a layout reference. Produce an original FIELDWORK version of image 1. Preserve its exact screen purpose, composition, spacing, card dimensions, information hierarchy, control positions and visual density. Our brand is fieldwork, confident geometric UI sans, cobalt #3557D8, pale blue #EAF0FF, charcoal text, flat white backgrounds. Match the four-square fieldwork symbol and wordmark in image 2. NO editorial serif, beige, atmospheric photography, added story sections, invented sidebars or new page structure. Keep everything crisp and realistically usable. Replace all Instacart/carrot branding. This is a MOBILE WEBSITE. Keep the entire portrait mobile webpage screenshot composition of image 1. Change dark green hero to deep cobalt and green CTA to brighter cobalt with suitable contrast. Preserve small hamburger and logo row, Log in and Get the app controls, 'Order groceries for delivery or pickup today' heading, one sign-up action, search field, the two rows of retailer icons, filters and vertical retailer list. Replace real retailer logos and names consistently with Market Co., Greenlane, Daybreak, Corner Shop, Well & Co., Daily, Bloom & Co. and PawMart using the identities from image 2. Own clean UI typography at the reference scale. Same portrait aspect ratio. No device frame or outside labels. Do not add content or expand hero."
+    },
+    {
+      "id": "fieldwork-app",
+      "brand": "fieldwork",
+      "kind": "app",
+      "refs": [
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/instacart/app-02.jpg",
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/original-studies-v2/images/fieldwork/desktop.png"
+      ],
+      "prompt": "Use case: precise-object-edit / ui-mockup. Image 1 is the exact source composition to adapt; image 2 is our approved-direction FIELDWORK brand identity reference, not a layout reference. Produce an original FIELDWORK version of image 1. Preserve its exact screen purpose, composition, spacing, card dimensions, information hierarchy, control positions and visual density. Our brand is fieldwork, confident geometric UI sans, cobalt #3557D8, pale blue #EAF0FF, charcoal text, flat white backgrounds. Match the four-square fieldwork symbol and wordmark in image 2. NO editorial serif, beige, atmospheric photography, added story sections, invented sidebars or new page structure. Keep everything crisp and realistically usable. Replace all Instacart/carrot branding. This is the NATIVE APP showcase artwork. Preserve the exact portrait promotional composition of image 1: simple large heading in the upper quarter and the cropped rounded app screen beneath, with the same search, categories, promo rectangle and product shelves. Replace background dark green with deep cobalt; headline 'Groceries & more' is white and geometrically bold. Add a modest fieldwork wordmark above the headline without changing the overall proportion. Inside the phone UI preserve the structure: location/search, five category icons, one compact grocery promotion, Fresh deals near you, product images with plus controls. Replace Instacart bag with a cobalt fieldwork tote, brand controls cobalt. Use new original but similar clean grocery photography, retain real food scale and aligned labels. No extra marketing sections. Precise digital artwork, not a photo of a device."
+    },
+    {
+      "id": "fieldwork-component",
+      "brand": "fieldwork",
+      "kind": "component",
+      "refs": [
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/instacart/app-03.jpg",
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/original-studies-v2/images/fieldwork/desktop.png"
+      ],
+      "prompt": "Use case: precise-object-edit / ui-mockup. Image 1 is the exact source composition to adapt; image 2 is our approved-direction FIELDWORK brand identity reference, not a layout reference. Produce an original FIELDWORK version of image 1. Preserve its exact screen purpose, composition, spacing, card dimensions, information hierarchy, control positions and visual density. Our brand is fieldwork, confident geometric UI sans, cobalt #3557D8, pale blue #EAF0FF, charcoal text, flat white backgrounds. Match the four-square fieldwork symbol and wordmark in image 2. NO editorial serif, beige, atmospheric photography, added story sections, invented sidebars or new page structure. Keep everything crisp and realistically usable. Replace all Instacart/carrot branding. Output ONLY the preference-picker COMPONENT from image 1 as a clean isolated square-ish panel on pale blue, no surrounding phone, promotional headline or large banana background. Preserve its popup interior exactly: heading 'Confirm your preference', subheading 'Your shopper will check for your preference', three photographic bananas with ripeness options 'Not ripe' / 'Almost ripe' / 'Ripe', muted descriptions, selected ring around the middle banana and one full-width 'Confirm' button. Change selected ring and confirm CTA to FIELDWORK cobalt. Use image 2 UI font and original clean banana photographs. Maintain dedicated space around all controls, precise readable typography, no overlapping close. Flat white popup, restrained corners, negligible shadow. This is a focused component detail for the same grocery brand, not a whole screen."
+    },
+    {
+      "id": "supper-desktop",
+      "brand": "supper",
+      "kind": "desktop",
+      "refs": [
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/doordash/menu-desktop.jpg"
+      ],
+      "prompt": "Use case: precise-object-edit / ui-mockup. The user explicitly rejected open-ended redesigns. Adapt the attached real product reference screen into our original brand version. Preserve the reference's layout, header and navigation sizes, column widths, card geometry, spacing, number of cards, information density, typography scale, control positions and screen purpose. Change only name/brand identity, UI typography, brand colors, and illustrative content/images. Crisp modern product UI, flat white background, highly legible compact sans typography. Do not add a marketing hero, editorial story, footer, progress stepper, new sections, serif headings, textures or atmospheric cream lighting. Output one screenshot, no outside presentation labels. The source is a LONG restaurant menu screenshot. Output ONLY its TOP DESKTOP VIEWPORT, equivalent to its first 1000 pixels of height at 1440 width, approximately a 1440x1000 landscape image. Do NOT squeeze the full long page onto the canvas. Match exactly the top header with search/address/cart, thin icon navigation rail, breadcrumb, restaurant photo banner and address field, restaurant summary column at left, horizontal Featured Items cards and beginning of Reviews below. Replace DoorDash with 'supper' using a clean bold compact UI wordmark and original minimal bowl glyph. Brand violet #6941C6 and pale lilac #F1ECFC replace red accents. Replace Sweetgreen with fictional 'Sunday Table' everywhere, including its circular restaurant logo, and make the food photography new seasonal bowls with the same image proportions and positions. Preserve original ingredient-style meal cards and their concise title, price and little circular plus, no enlarged editorial photography. Replace person names in reviews with fictional examples. All interface content at the SAME scale as the reference. No invented right basket sidebar or other changes. White modern digital product appearance, no gradients or dimensional effects."
+    },
+    {
+      "id": "wayfar-desktop",
+      "brand": "wayfar",
+      "kind": "desktop",
+      "refs": [
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/kayak/results-desktop.jpg"
+      ],
+      "prompt": "Use case: precise-object-edit / ui-mockup. The user explicitly rejected open-ended redesigns. Adapt the attached real product reference screen into our original brand version. Preserve the reference's layout, header and navigation sizes, column widths, card geometry, spacing, number of cards, information density, typography scale, control positions and screen purpose. Change only name/brand identity, UI typography, brand colors, and illustrative content/images. Crisp modern product UI, flat white background, highly legible compact sans typography. Do not add a marketing hero, editorial story, footer, progress stepper, new sections, serif headings, textures or atmospheric cream lighting. Output one screenshot, no outside presentation labels. Keep the source's entire landscape desktop flight-results composition. Replace KAYAK's orange tiles with an original small lowercase 'wayfar' wordmark in a precise geometric UI sans and a simple two-line route glyph. Brand teal #137C76, pale mint #E8F5F2 and neutral charcoal replaces orange accents, white remains white. Preserve top search bar route JFK to LHR, dates Nov12\u201319, traveler1, currency/account controls, thin icon rail, dense but clear filters at left, result cards in center, companion column at right. Preserve flight times, stops, price, itinerary lines and action placements. Change carrier branding to original clean mini logos for Atlas, Northstar and Meridian in the SAME small carrier-image locations. Replace third-party ad art with restrained original wayfar travel-service artwork confined to the SAME ad rectangles, no extra banner. Retain the same hierarchy and compact layout rather than making a spacious generic dashboard. New UI typography resembles a sharp humanist sans, regular body with semibold labels. No serif. No new features. Source image is the strict composition template."
+    },
+    {
+      "id": "stillhouse-desktop",
+      "brand": "stillhouse",
+      "kind": "desktop",
+      "refs": [
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/booking/desktop-results.jpg"
+      ],
+      "prompt": "Use case: precise-object-edit / ui-mockup. The user explicitly rejected open-ended redesigns. Adapt the attached real product reference screen into our original brand version. Preserve the reference's layout, header and navigation sizes, column widths, card geometry, spacing, number of cards, information density, typography scale, control positions and screen purpose. Change only name/brand identity, UI typography, brand colors, and illustrative content/images. Crisp modern product UI, flat white background, highly legible compact sans typography. Do not add a marketing hero, editorial story, footer, progress stepper, new sections, serif headings, textures or atmospheric cream lighting. Output one screenshot, no outside presentation labels. Keep the source's entire landscape hotel-results composition. Replace Booking.com with an original compact bold sans 'stillhouse' wordmark and simple small doorway glyph, not a serif luxury logo. Brand plum #613C73, pale lilac #F3EDF7 and neutral white replace Booking blue/yellow; the search outline is pale mauve, action buttons solid plum. Preserve exactly header height, nav items, search row, dates and travelers, breadcrumb, left map/filter stack, central heading, sort control, first large property result card and partial next card. Main property is 'The Alder House', one-bedroom apartment in Kensington, rating 9.4. Keep a realistic property photo at the SAME size and location, original clean bright contemporary apartment. Keep the same price area and action 'See availability', per-night $210, total $1,470 for7nights, 2adults. Preserve visible text density without adding marketing prose or luxury storytelling. Retain search/result structure exactly, with own clean humanist UI sans at the reference's size. No invented section or layout. No atmospheric beige or big serif headlines."
+    },
+    {
+      "id": "supper-mobile",
+      "brand": "supper",
+      "kind": "mobile",
+      "refs": [
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/doordash/customize-mobile.jpg",
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/original-studies-v2/images/supper/desktop.png"
+      ],
+      "prompt": "Use case: precise-object-edit / ui-mockup. Image 1 is the STRICT screen composition reference. Image 2 gives the new brand identity ONLY. Adapt image 1 into the brand from image 2. User requires exact reference fidelity and rejected editorial redesigns. Preserve image1 layout, spacing, type scale, control placement, card shapes, visual hierarchy and screen purpose. Change ONLY original brand name/logo, font family at same scale, brand colors and illustrative content. Flat crisp modern UI, white stays white. No serif, extra hero, new sections, invented navigation or decorative background. No outside presentation labels. Brand supper, violet #6941C6, pale lilac #F1ECFC, sharp compact sans font from image2. Preserve the source MOBILE WEB item customizer exactly, same portrait aspect ratio: close in a dedicated clear top row, title 'Harvest Bowl', rating and calories, short ingredients, bowl photograph, recommended option cards, customization checkboxes, sticky bottom quantity and Add to cart CTA. Replace photo with an original bowl that matches the Harvest Bowl in image2. Price $16.95 in the bottom action. Wordmark supper may appear very small at center of the header; preserve clear close space. Replace red with violet. Keep large white breathing room and same modest text sizes. No device frame."
+    },
+    {
+      "id": "supper-app",
+      "brand": "supper",
+      "kind": "app",
+      "refs": [
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/doordash/app-02.jpg",
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/original-studies-v2/images/supper/desktop.png"
+      ],
+      "prompt": "Use case: precise-object-edit / ui-mockup. Image 1 is the STRICT screen composition reference. Image 2 gives the new brand identity ONLY. Adapt image 1 into the brand from image 2. User requires exact reference fidelity and rejected editorial redesigns. Preserve image1 layout, spacing, type scale, control placement, card shapes, visual hierarchy and screen purpose. Change ONLY original brand name/logo, font family at same scale, brand colors and illustrative content. Flat crisp modern UI, white stays white. No serif, extra hero, new sections, invented navigation or decorative background. No outside presentation labels. Native-app SHOWCASE matching exactly image1's portrait promotional artwork: big short stacked headline on a solid brand-color field, then cropped phone with delivery app home UI. Replace DoorDash with supper logo/bowl mark from image2, red background with violet #6941C6, headline 'YOUR FAVORITES, AT YOUR DOOR' in bold clean white geometric sans at the SAME heading scale. Preserve phone position, search, horizontal food-category icons, small featured promotion and shopping shelves. Change retail brand logos to fictional small stores Sunday Table, Daily, Corner Shop; replace imagery with original food/grocery shots at the same positions and scale. Keep interface typography matching image2. No new screen structure, no editorial moodboard. Phone remains a clean UI frame within the same source composition."
+    },
+    {
+      "id": "supper-component",
+      "brand": "supper",
+      "kind": "component",
+      "refs": [
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/doordash/customize-desktop.jpg",
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/original-studies-v2/images/supper/desktop.png"
+      ],
+      "prompt": "Use case: precise-object-edit / ui-mockup. Image 1 is the STRICT screen composition reference. Image 2 gives the new brand identity ONLY. Adapt image 1 into the brand from image 2. User requires exact reference fidelity and rejected editorial redesigns. Preserve image1 layout, spacing, type scale, control placement, card shapes, visual hierarchy and screen purpose. Change ONLY original brand name/logo, font family at same scale, brand colors and illustrative content. Flat crisp modern UI, white stays white. No serif, extra hero, new sections, invented navigation or decorative background. No outside presentation labels. Output ONLY the bottom customization/action area from image1's central item modal as a wide standalone COMPONENT, about 2.2:1 aspect ratio. Preserve original geometry: heading 'Customize Harvest Bowl', 'Optional \u00b7 Select up to 6', checkbox rows 'Remove Roasted Sweet Potatoes' and 'Remove Apples' with tiny food thumbnails on the right, then the separated sticky footer with minus, quantity1, plus and the wide Add to cart button. Price $16.95. Change the red action to supper violet #6941C6 and typography to image2's sharp sans. White background and restrained light dividers. No full-screen backdrop, outer browser, whole-phone image, extra explanatory text, brand story or imagined additional cards. Keep compact practical proportions exactly as the component in image1."
+    },
+    {
+      "id": "wayfar-mobile",
+      "brand": "wayfar",
+      "kind": "mobile",
+      "refs": [
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/kayak/results-mobile.jpg",
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/original-studies-v2/images/wayfar/desktop.png"
+      ],
+      "prompt": "Use case: precise-object-edit / ui-mockup. Image 1 is the STRICT screen composition reference. Image 2 gives the new brand identity ONLY. Adapt image 1 into the brand from image 2. User requires exact reference fidelity and rejected editorial redesigns. Preserve image1 layout, spacing, type scale, control placement, card shapes, visual hierarchy and screen purpose. Change ONLY original brand name/logo, font family at same scale, brand colors and illustrative content. Flat crisp modern UI, white stays white. No serif, extra hero, new sections, invented navigation or decorative background. No outside presentation labels. Brand wayfar, teal #137C76, pale mint #E8F5F2, font and route logo from image2. Keep the source MOBILE WEB flight-result screen exactly: very small top route summary, compact horizontal filter chips, result count and Best sort, track-price control, vertically stacked itinerary cards with inbound/outbound times, airline miniature logos, durations and prices. Replace KAYAK mark with tiny wayfar route glyph, replace airline logos with Atlas / Northstar / Meridian from image2. Preserve source prices $820, $815 and lower card partial, and the exact portrait viewport shape. Orange actions become teal. Same label density, line weights, typography sizes and whitespace. No new large trip headline, no photo hero, no phone device frame."
+    },
+    {
+      "id": "wayfar-app",
+      "brand": "wayfar",
+      "kind": "app",
+      "refs": [
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/kayak/app-03.jpg",
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/original-studies-v2/images/wayfar/desktop.png"
+      ],
+      "prompt": "Use case: precise-object-edit / ui-mockup. Image 1 is the STRICT screen composition reference. Image 2 gives the new brand identity ONLY. Adapt image 1 into the brand from image 2. User requires exact reference fidelity and rejected editorial redesigns. Preserve image1 layout, spacing, type scale, control placement, card shapes, visual hierarchy and screen purpose. Change ONLY original brand name/logo, font family at same scale, brand colors and illustrative content. Flat crisp modern UI, white stays white. No serif, extra hero, new sections, invented navigation or decorative background. No outside presentation labels. Native-app SHOWCASE following image1's exact portrait composition: white background, small app marker above the bold two-line heading, phone frame starting at the same vertical position with flight list inside. Replace KAYAK/orange with wayfar route glyph and teal #137C76. Heading 'Search and compare' same wording and approximate size with our clean geometric UI font. Keep same phone outline, filters, two flight cards, exact times, fares, one price-highlight card and View deal controls. Use Atlas and Northstar miniature airline logos from image2 and original teal action style. Keep the showcased screen data and layout consistent with the reference, no added marketing illustrations or extra pages. This is a visual app study, not a fake app store screenshot with platform badges."
+    },
+    {
+      "id": "wayfar-component",
+      "brand": "wayfar",
+      "kind": "component",
+      "refs": [
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/kayak/detail-desktop.jpg",
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/original-studies-v2/images/wayfar/desktop.png"
+      ],
+      "prompt": "Use case: precise-object-edit / ui-mockup. Image 1 is the STRICT screen composition reference. Image 2 gives the new brand identity ONLY. Adapt image 1 into the brand from image 2. User requires exact reference fidelity and rejected editorial redesigns. Preserve image1 layout, spacing, type scale, control placement, card shapes, visual hierarchy and screen purpose. Change ONLY original brand name/logo, font family at same scale, brand colors and illustrative content. Flat crisp modern UI, white stays white. No serif, extra hero, new sections, invented navigation or decorative background. No outside presentation labels. Output ONLY the compact fare-result card near the top-center of image1, not the surrounding filters or expanded itinerary. Wide standalone component around 2.75:1 aspect ratio. Preserve source card structure exactly: a slim sponsored-carrier header; save/share at left; two clear itinerary lines with times, nonstop and duration; baggage symbols; right-hand price column $830, 'Atlas Main Basic', one teal 'View deal' button, small Ad label. Replace Delta with our original Atlas logo from image2, orange with wayfar teal #137C76. Keep original compact spacing and the strict column grid, simple white background, subtle border. No enlarged display headings, no floating pricing panels, no extra rows. Crisp reference-level UI."
+    },
+    {
+      "id": "stillhouse-mobile",
+      "brand": "stillhouse",
+      "kind": "mobile",
+      "refs": [
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/booking/mobile-web-results.jpg",
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/original-studies-v2/images/stillhouse/desktop.png"
+      ],
+      "prompt": "Use case: precise-object-edit / ui-mockup. Image 1 is the STRICT screen composition reference. Image 2 gives the new brand identity ONLY. Adapt image 1 into the brand from image 2. User requires exact reference fidelity and rejected editorial redesigns. Preserve image1 layout, spacing, type scale, control placement, card shapes, visual hierarchy and screen purpose. Change ONLY original brand name/logo, font family at same scale, brand colors and illustrative content. Flat crisp modern UI, white stays white. No serif, extra hero, new sections, invented navigation or decorative background. No outside presentation labels. Brand stillhouse, plum #613C73, pale lilac #F3EDF7, bold compact UI sans wordmark and doorway mark matching image2. Preserve source MOBILE WEB hotel results exactly: compact colored header and category tabs, stacked destination/date/occupancy fields, Search CTA, sort/filter/map row, chips, small disclosure strip and vertically stacked hotel result. Replace Booking.com with stillhouse, blue/yellow with plum/light mauve. Keep London Nov12\u201319 2026,2adults,1room. First hotel 'The Alder House', rating9.4, Kensington London, a new bright apartment photo of the same proportion. Per night $210, total $1,470, 7nights2adults. Keep source card geometry, price emphasis and small labels. Bottom promotion confined to source area, rename it 'Stillhouse Rewards'. Exact portrait aspect, no device frame, no extra content."
+    },
+    {
+      "id": "stillhouse-app",
+      "brand": "stillhouse",
+      "kind": "app",
+      "refs": [
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/booking/app-02.jpg",
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/original-studies-v2/images/stillhouse/desktop.png"
+      ],
+      "prompt": "Use case: precise-object-edit / ui-mockup. Image 1 is the STRICT screen composition reference. Image 2 gives the new brand identity ONLY. Adapt image 1 into the brand from image 2. User requires exact reference fidelity and rejected editorial redesigns. Preserve image1 layout, spacing, type scale, control placement, card shapes, visual hierarchy and screen purpose. Change ONLY original brand name/logo, font family at same scale, brand colors and illustrative content. Flat crisp modern UI, white stays white. No serif, extra hero, new sections, invented navigation or decorative background. No outside presentation labels. Native-app SHOWCASE following exactly source image1: white canvas, short black headline 'Find your next place to stay' at top, cropped phone screen below, a magnified hotel result card overlaid in the same location. Replace Booking.com with stillhouse wordmark from image2, blue/yellow with plum #613C73 and pale lilac #F3EDF7. Match source UI scale and phone frame proportions. Original property names The Alder House, Rowan & Stone, The Marlow, same concise ratings and card rows; use new original hotel photos at the exact reference image locations. Preserve the highlighted search field and floating result-card treatment. Use sharp original UI sans, no serif and no luxury editorial content. No new sections. Every source visual role remains in the same place."
+    },
+    {
+      "id": "stillhouse-component",
+      "brand": "stillhouse",
+      "kind": "component",
+      "refs": [
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/market-references/images/booking/component-result-card.jpg",
+        "/Users/jasonfesta/Documents/ChatGPT/wda/output/hd-04-ordering-booking/original-studies-v2/images/stillhouse/desktop.png"
+      ],
+      "prompt": "Use case: precise-object-edit / ui-mockup. Image 1 is the STRICT screen composition reference. Image 2 gives the new brand identity ONLY. Adapt image 1 into the brand from image 2. User requires exact reference fidelity and rejected editorial redesigns. Preserve image1 layout, spacing, type scale, control placement, card shapes, visual hierarchy and screen purpose. Change ONLY original brand name/logo, font family at same scale, brand colors and illustrative content. Flat crisp modern UI, white stays white. No serif, extra hero, new sections, invented navigation or decorative background. No outside presentation labels. Output the same standalone horizontal hotel-result COMPONENT as image1 with exact proportions and information layout. Use stillhouse plum #613C73 and type matching image2. Left photo same size, original bright contemporary apartment. Property title 'The Alder House'; neighborhood Kensington and Chelsea, London; rating9.4 at upper right; small 'New to stillhouse' tag; one-bedroom apartment facts; right price $210 per night and $1,470 for7nights2adults; bottom-right 'See availability' CTA. Preserve the source card's real-world compact hierarchy and fine dividers. Do not invent a new card layout or remove essential booking facts. White canvas, subtle border, minimal padding outside the actual component, no page background or labels."
+    }
+  ]
+}

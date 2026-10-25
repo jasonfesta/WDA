@@ -1,0 +1,66 @@
+{
+  "version": 2,
+  "approved_arrangement": "../market-references/",
+  "status": "Sixteen reference-led raster studies complete and browser verified; ready for visual review.",
+  "date": "2026-10-25",
+  "scope": "Four original brands \u00d7 desktop website, mobile website, native app, and component. Sixteen image assets in the approved HTML gallery arrangement. No product implementation.",
+  "brands": [
+    {
+      "id": "supper",
+      "reference": "doordash",
+      "name": "Supper",
+      "domain": "Restaurant ordering",
+      "palette": [
+        "#6941C6",
+        "#F1ECFC",
+        "#FFFFFF"
+      ],
+      "type": "Crisp product UI sans typography, matching the functional scale and hierarchy of its reference. No decorative serif headings.",
+      "content": "Restaurant menu, mobile item customization, native app showcase and priced customization action."
+    },
+    {
+      "id": "fieldwork",
+      "reference": "instacart",
+      "name": "Fieldwork",
+      "domain": "Grocery ordering",
+      "palette": [
+        "#3557D8",
+        "#EAF0FF",
+        "#FFFFFF"
+      ],
+      "type": "Crisp product UI sans typography, matching the functional scale and hierarchy of its reference. No decorative serif headings.",
+      "content": "Desktop retailer selection, mobile retailer selection, grocery app showcase and item preference picker."
+    },
+    {
+      "id": "wayfar",
+      "reference": "kayak",
+      "name": "Wayfar",
+      "domain": "Flight booking",
+      "palette": [
+        "#137C76",
+        "#E8F5F2",
+        "#FFFFFF"
+      ],
+      "type": "Crisp product UI sans typography, matching the functional scale and hierarchy of its reference. No decorative serif headings.",
+      "content": "Desktop and mobile flight results, native app showcase and fare card."
+    },
+    {
+      "id": "stillhouse",
+      "reference": "booking",
+      "name": "Stillhouse",
+      "domain": "Hotel booking",
+      "palette": [
+        "#613C73",
+        "#F3EDF7",
+        "#FFFFFF"
+      ],
+      "type": "Crisp product UI sans typography, matching the functional scale and hierarchy of its reference. No decorative serif headings.",
+      "content": "Desktop and mobile hotel results, native app showcase and property card."
+    }
+  ],
+  "latest_user_correction": "Do exactly what is in the references. Preserve layout, card structure, controls, spacing and screen purpose; change only brand identity, type, color and own imagery. No invented banners, editorial stories or extra sections.",
+  "assets": "assets.json",
+  "method": "Built-in imagegen with exact source screenshot and the new brand desktop screen as identity reference.",
+  "prompts": "prompts.json",
+  "completion_boundary": "Four areas per brand, 16 raster assets. The broader 32-screen sequential-flow plan remains separate and is not completed by this set."
+}
