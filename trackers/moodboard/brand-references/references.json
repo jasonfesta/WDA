@@ -1,0 +1,141 @@
+{
+  "status": "Reference review only. New mockups paused by user.",
+  "date": "2026-10-25",
+  "format": "Mood Board 4: desktop website, mobile website, native app, component detail",
+  "brands": [
+    {
+      "id": "ramp",
+      "name": "Ramp",
+      "number": "01",
+      "area": "Finance / Expense management",
+      "subtitle": "The website, mobile product and budget controls in Ramp\u2019s own visual language.",
+      "web": "https://ramp.com/expense-management",
+      "nativeDefault": 1,
+      "component": {
+        "file": "images/ramp/budget-source.webp",
+        "original": [
+          1264,
+          949
+        ],
+        "crop": [
+          192,
+          590,
+          1072,
+          225
+        ],
+        "title": "Budget utilization rows",
+        "description": "Shared columns, inline progress and committed spend.",
+        "caption": "Detail from Ramp\u2019s published budget interface composition. The source itself is cropped."
+      },
+      "sequence": [
+        "Available spend",
+        "Transactions",
+        "Requirements",
+        "Review"
+      ],
+      "takeaway": "Compare the website\u2019s headline scale with the app\u2019s compact labels, spending rows and contextual controls.",
+      "evidence": "Live public expense-management webpage at desktop and 390px mobile widths. Budget detail is a previously collected official product composition, not an authenticated capture. Native app references are official Apple publisher previews. Ramp is a business expense product; it is not presented here as a personal budgeting app.",
+      "desktop": "images/ramp/desktop.jpg",
+      "desktopLong": "images/ramp/desktop-long.jpg",
+      "mobile": "images/ramp/mobile-web.jpg",
+      "desktopAspect": "1.7341",
+      "desktopCaption": "Public product page \u00b7 live desktop capture",
+      "mobileCaption": "Public product page \u00b7 390px responsive website",
+      "mobileSource": "https://ramp.com/expense-management",
+      "mobileLong": "images/ramp/mobile-web-long.jpg",
+      "nativeCount": 7,
+      "appStore": "https://apps.apple.com/us/app/ramp/id1628197245?uo=4",
+      "version": "0.184.0"
+    },
+    {
+      "id": "peloton",
+      "name": "Peloton",
+      "number": "02",
+      "area": "Health / Training and progress",
+      "subtitle": "Real app navigation, progress history and class context before any new health layouts.",
+      "web": "https://www.onepeloton.com/app",
+      "nativeDefault": 2,
+      "component": {
+        "file": "images/peloton/app-05.jpg",
+        "original": [
+          1200,
+          2607
+        ],
+        "crop": [
+          178,
+          960,
+          846,
+          1088
+        ],
+        "title": "Activity calendar",
+        "description": "Active days, daily streak and weekly streak share one calendar.",
+        "caption": "Exact excerpt from official iPhone publisher preview 5. Open it to see the surrounding app.",
+        "square": true
+      },
+      "sequence": [
+        "Home",
+        "Plan",
+        "Workout",
+        "Progress"
+      ],
+      "takeaway": "Inspect the actual navigation, compact search, segmented views, completion marks and metric hierarchy. The progress/calendar preview is available in the app carousel.",
+      "evidence": "Live public Peloton App webpage at desktop and 390px mobile widths. Native images are official publisher previews. Default preview 2 shows Home; preview 3 shows Classes; preview 5 shows Progress. The component is a displayed crop of that original Progress preview. No AI-generated interpretation appears on this board.",
+      "desktop": "images/peloton/desktop.jpg",
+      "desktopLong": "images/peloton/desktop-long.jpg",
+      "mobile": "images/peloton/mobile-web.jpg",
+      "desktopAspect": "1.7341",
+      "desktopCaption": "Public product page \u00b7 live desktop capture",
+      "mobileCaption": "Public product page \u00b7 390px responsive website",
+      "mobileSource": "https://www.onepeloton.com/app",
+      "mobileLong": "images/peloton/mobile-web-long.jpg",
+      "nativeCount": 7,
+      "appStore": "https://apps.apple.com/us/app/peloton-fitness-workouts/id792750948?uo=4",
+      "version": "15.135.0"
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "number": "03",
+      "area": "To-do / Tasks and documents",
+      "subtitle": "Native editing tools, task rows and database controls with the original typography intact.",
+      "web": "https://www.notion.com/product/projects",
+      "nativeDefault": 6,
+      "component": {
+        "file": "images/notion/database-source.png",
+        "original": [
+          1440,
+          804
+        ],
+        "crop": [
+          96,
+          94,
+          934,
+          335
+        ],
+        "title": "Task database",
+        "description": "View tabs, assignment, status and type stay close to each task.",
+        "caption": "Detail from Notion\u2019s published Issue Tracking interface example."
+      },
+      "sequence": [
+        "Page",
+        "Task",
+        "Properties",
+        "Views"
+      ],
+      "takeaway": "Inspect the native editor toolbar and keyboard state, then compare them with the desktop database\u2019s tighter property columns.",
+      "evidence": "Live public Projects webpage at desktop and 390px mobile widths. The full mobile webpage exceeds a single capture limit, so its full-page view is shown in two consecutive original captures. The database is a previously collected official interface example. App previews are publisher artwork; the selected to-do screen contains a keyboard and is not a tested editing session.",
+      "desktop": "images/notion/desktop.jpg",
+      "desktopLong": "images/notion/desktop-long.jpg",
+      "mobile": "images/notion/mobile-web.jpg",
+      "desktopAspect": "1.7341",
+      "desktopCaption": "Public product page \u00b7 live desktop capture",
+      "mobileCaption": "Public product page \u00b7 390px responsive website",
+      "mobileSource": "https://www.notion.com/product/projects",
+      "mobileLong": "images/notion/mobile-web-part-1.jpg",
+      "mobileLongSecond": "images/notion/mobile-web-part-2.jpg",
+      "nativeCount": 7,
+      "appStore": "https://apps.apple.com/us/app/notion-notes-tasks-ai/id1232780281?uo=4",
+      "version": "1.7.349"
+    }
+  ]
+}
