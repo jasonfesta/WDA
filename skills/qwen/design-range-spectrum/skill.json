@@ -1,0 +1,54 @@
+{
+  "id": "design-range-spectrum",
+  "title": "Dynamic Design Range & Interaction Specs (\"Charm\")",
+  "domain": "qwen",
+  "domain_label": "Qwen (Research, Specs & Prompting)",
+  "path": "qwen/design-range-spectrum",
+  "skill_md": "qwen/design-range-spectrum/SKILL.md",
+  "html_page": "qwen/design-range-spectrum/index.html",
+  "cost_tier": "free",
+  "summary": "Parameterize a design category's stylistic spectrum across Minimal, Structured, and Opinionated poles, structure 7-chapter page pacing, and specify section-level micro-interactions and 44x44px touch contracts.",
+  "inputs": [
+    {
+      "name": "category_brief",
+      "type": "string",
+      "required": true,
+      "description": "Category references or brand direction to parameterize."
+    },
+    {
+      "name": "poles",
+      "type": "array",
+      "required": false,
+      "default": [
+        "Minimal",
+        "Structured",
+        "Opinionated"
+      ],
+      "description": "Stylistic poles across the design spectrum."
+    }
+  ],
+  "outputs": [
+    {
+      "path": "specs/design-range.md",
+      "type": "markdown",
+      "required_patterns": [
+        "Minimal",
+        "Structured",
+        "Opinionated",
+        "--surface",
+        "--ink",
+        "--accent",
+        "44",
+        "prefers-reduced-motion"
+      ]
+    }
+  ],
+  "references": [
+    "./references/react-interaction-contract.md",
+    "./references/react-mobile-contract.md"
+  ],
+  "commands": {
+    "prompt": "python3 scripts/harness.py prompt design-range-spectrum --input qwen/design-range-spectrum/evals/smoke.json",
+    "verify": "python3 scripts/harness.py verify design-range-spectrum --smoke"
+  }
+}

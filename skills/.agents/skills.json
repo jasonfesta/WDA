@@ -1,0 +1,19 @@
+{
+  "entries": [
+    {
+      "path": "qwen"
+    },
+    {
+      "path": "typography"
+    },
+    {
+      "path": "image-gen"
+    },
+    {
+      "path": "react"
+    },
+    {
+      "path": "qa-eval"
+    }
+  ]
+}

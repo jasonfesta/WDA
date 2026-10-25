@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cleanup-evaluation-benchmarking — Standalone Antigravity Skill</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --bg: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-hover: #F4F4F6;
+  --surface-raised: #F0F0F4;
+  --ink: #18181B;
+  --ink-Strong: #09090B;
+  --muted: #686873;
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --accent: #09090B;
+  --accent-bg: #F4F4F6;
+  --pill-bg: #F1F1F4;
+  --code-bg: #F4F4F7;
+  --success: #059669;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #000000;
+    --surface: #0A0A0C;
+    --surface-hover: #121216;
+    --surface-raised: #141418;
+    --ink: #F4F4F6;
+    --ink-Strong: #FFFFFF;
+    --muted: #8E8E98;
+    --border: #1F1F26;
+    --border-strong: #2E2E38;
+    --accent: #FFFFFF;
+    --accent-bg: #18181F;
+    --pill-bg: #121217;
+    --code-bg: #08080A;
+    --success: #34D399;
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #0A0A0C;
+  --surface-hover: #121216;
+  --surface-raised: #141418;
+  --ink: #F4F4F6;
+  --ink-Strong: #FFFFFF;
+  --muted: #8E8E98;
+  --border: #1F1F26;
+  --border-strong: #2E2E38;
+  --accent: #FFFFFF;
+  --accent-bg: #18181F;
+  --pill-bg: #121217;
+  --code-bg: #08080A;
+  --success: #34D399;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Google Sans Flex", "Google Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+a {
+  color: var(--ink-Strong);
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms ease;
+}
+
+a:hover {
+  text-decoration-color: var(--ink-Strong);
+}
+
+.shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 28px 96px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.brand strong {
+  color: var(--ink-Strong);
+  font-weight: 600;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill-btn, .nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--pill-bg);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease;
+}
+
+.pill-btn:hover, .nav-pill:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+}
+
+.pill-btn:focus-visible, .nav-pill:focus-visible {
+  outline: 2px solid var(--ink-Strong);
+  outline-offset: 3px;
+}
+
+.meta-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.meta-card {
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.meta-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.meta-value {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: var(--ink-Strong);
+  word-break: break-all;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--success);
+  margin-right: 6px;
+}
+
+article h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--ink-Strong);
+  margin: 0 0 20px;
+}
+
+article h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink-Strong);
+  margin: 44px 0 14px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+article h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink-Strong);
+  margin: 28px 0 10px;
+}
+
+article p {
+  margin: 0 0 16px;
+  color: var(--ink);
+  max-width: 78ch;
+}
+
+article ul, article ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+article li {
+  margin-bottom: 8px;
+  max-width: 78ch;
+}
+
+ul.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin-bottom: 8px;
+}
+
+.check-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid var(--success);
+  background: rgba(52, 211, 153, 0.12);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+}
+
+.check-box::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--success);
+}
+
+code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  color: var(--ink-Strong);
+}
+
+pre {
+  margin: 0 0 22px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 0 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface-raised);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.domain-section {
+  margin-top: 48px;
+}
+
+.domain-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.domain-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  text-decoration: none;
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.skill-card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.skill-id {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--ink-Strong);
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.skill-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink-Strong);
+  margin: 0 0 8px;
+}
+
+.skill-card p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.skill-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-Strong);
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+</style>
+  
+<script>
+(function() {
+  const mqlDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  const saved = localStorage.getItem('antigravity-skills-theme');
+  const initial = saved || (mqlDark && mqlDark.matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', initial);
+  window.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function updateLabel(theme) {
+      btn.textContent = theme === 'dark' ? '☀ Light mode' : '☾ Dark mode';
+      btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+    }
+    updateLabel(document.documentElement.getAttribute('data-theme') || initial);
+    btn.addEventListener('click', function() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('antigravity-skills-theme', next);
+      updateLabel(next);
+    });
+    if (mqlDark && mqlDark.addEventListener) {
+      mqlDark.addEventListener('change', function(e) {
+        if (!localStorage.getItem('antigravity-skills-theme')) {
+          const autoNext = e.matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', autoNext);
+          updateLabel(autoNext);
+        }
+      });
+    }
+  });
+})();
+</script>
+
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="../../index.html">
+        <span>← All Skills</span>
+        <span>/</span>
+        <strong>qa-eval</strong>
+        <span>/</span>
+        <strong>cleanup-evaluation-benchmarking</strong>
+      </a>
+      <div class="topbar-actions">
+        <a class="nav-pill" href="SKILL.md">SKILL.md</a>
+        <a class="nav-pill" href="skill.json">skill.json</a>
+        <a class="nav-pill" href="evals/smoke.json">evals/smoke.json</a>
+        <button type="button" id="theme-toggle" class="pill-btn" aria-label="Toggle light or dark mode">☀ Light mode</button>
+      </div>
+    </header>
+
+    <section class="meta-bar" aria-label="Skill harness metadata">
+      <div class="meta-card">
+        <div class="meta-label">Skill ID</div>
+        <div class="meta-value"><span class="status-dot"></span>cleanup-evaluation-benchmarking</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Domain Folder</div>
+        <div class="meta-value">qa-eval/ (QA Eval)</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Harness Cost Tier</div>
+        <div class="meta-value">free</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Verify Command ($0)</div>
+        <div class="meta-value">python3 scripts/harness.py verify cleanup-evaluation-benchmarking --smoke</div>
+      </div>
+    </section>
+
+    <article>
+      <h1>Cleanup &amp; Evaluation Benchmarking</h1>
+<pre data-lang="text"><code>skill / cleanup-evaluation-benchmarking
+────────────────────────────────────────────────────────────────────
+mode      standalone side-by-side comp evaluation &amp; state-math audit
+input     live React build + source design comps
+output    validation.json + visual &amp; state cleanup refinements</code></pre>
+<p>Pair automated script evaluation (<code>validation.json</code>) with side-by-side browser benchmarking against source design comps to eliminate visual drift, ghosted raster text, clipped descenders, broken links, and state-arithmetic mismatches.</p>
+<h2>Inputs</h2>
+<ul>
+<li>Running React + TypeScript application or component suite and its source design comps.</li>
+<li>Bundled executable workspace validator: <a href="./scripts/validate_workspace.py">validate_workspace.py</a>.</li>
+<li>Canonical verification and build references: <a href="./references/verification.md">verification.md</a>, <a href="./references/warm-moodboard-build-brief.md">warm-moodboard-build-brief.md</a>, and <a href="./references/react-handoff.md">react-handoff.md</a>.</li>
+</ul>
+<h2>Work</h2>
+<ol>
+<li><strong>Run side-by-side visual benchmarking against the source comps.</strong></li>
+</ol>
+<ul>
+<li>Open every route or focused study in the browser alongside its source reference image (using a <code>View reference comparison</code> toggle or split viewport) and verify five visual-fidelity invariants:</li>
+<li><strong>Descender &amp; headline safety</strong>: Large display headlines match reference weight, tracking, and gradient endpoints, with enough <code>line-height</code> and bottom <code>padding-bottom</code> that zero descenders (<code>g</code>, <code>j</code>, <code>p</code>, <code>q</code>, <code>y</code>) are clipped by <code>background-clip: text</code> or overflow containers.</li>
+<li><strong>Zero ghosted raster lettering</strong>: Clean photographic plates (<code>*-clean-photo.png</code>) and CSS/SVG crop windows show zero remnants of baked source lettering underneath live DOM text.</li>
+<li><strong>True circles &amp; aspect-ratio preservation</strong>: Every swatch button, avatar sphere, radio ring, and next-arrow button retains a <code>1:1</code> circle (<code>flex-shrink: 0; aspect-ratio: 1 / 1</code>); every photo crop and upright 3D cutout preserves its natural aspect ratio with zero X/Y distortion or torn collage seams.</li>
+<li><strong>Unboxed floating chrome</strong>: Verify that global floating controls sit directly on the canvas without unrequested enclosing cards, borders, decorative dials, scale sliders, download buttons, or page footers, and that board items show zero reference ID badges (<code>REF-001</code>), tiny below-card captions, or arrows.</li>
+<li><strong>Palette &amp; single-pass grading</strong>: Confirm all clickable palette directions expand their deduplicated semantic UI tokens plus sampled artwork and photo pixel banks (<code>Coral</code> or artwork-only sets omit unused UI tokens). A boundary sweep of <code>270</code> Hue/Warmth/Depth slider combinations (<code>Hue -20..+20</code>, <code>Warmth -30..+30</code>, <code>Depth -25..+25</code>) must keep primary accents within warm material families and clamp raster hue shifts to <code>±7°</code>.</li>
+</ul>
+<ol>
+<li><strong>Verify deterministic state and arithmetic invariants across all interactive modules.</strong></li>
+</ol>
+<ul>
+<li><strong>Commerce &amp; bag persistence</strong>:</li>
+<li>Category filtering and ascending price sorting return the exact expected product order.</li>
+<li>Adding an item (<code>$420</code>), incrementing quantity to <code>2</code> (<code>$840</code> subtotal), reloading the browser (<code>localStorage</code> persistence), and removing the item reconcile across header badge, bag drawer, and checkout summary.</li>
+<li><strong>Component &amp; Mobile state math</strong>:</li>
+<li><em>Multi-select picker</em>: Select/unselect all; checked rows, trigger avatar stack, and footer counts agree at <code>0, 1, 3, 4</code>; failed save exposes <code>retry</code> and <code>revert</code>.</li>
+<li><em>Palette tray</em>: Active ring matches radio selection; <code>shuffle</code> and <code>undo</code> restore the complete prior order and selected material snapshot.</li>
+<li><em>Weather unit conversion</em>: <code>28°C</code> converts to <code>82°F</code>, <code>29°C</code> converts to <code>84°F</code>; switching days updates all date-specific metrics; error state retains truthful stale data with <code>retry</code>.</li>
+<li><em>Membership billing</em>: Plan selection and checkout share one canonical <code>selectedPlanId</code>; annual billing applies exact <code>20%</code> discount; <code>cancel</code> preserves selection; repeat clicks cannot create duplicate checkout sessions.</li>
+<li><em>Usage capacity math</em>: <code>sum(categories) == used == sum(daily)</code>, <code>average == used / days</code>, <code>capacity_percent == (used / limit) * 100</code>, and <code>difference_from_allowance == limit - used</code>.</li>
+<li><em>Navigation dock</em>: Exactly one destination carries <code>aria-current=&quot;page&quot;</code>; browser <code>Back/Forward</code> updates active capsule.</li>
+</ul>
+<ol>
+<li><strong>Run automated repository, checksum, and link validation (<code>validation.json</code>).</strong></li>
+</ol>
+<ul>
+<li>Execute <a href="./scripts/validate_workspace.py">validate_workspace.py</a> (<code>python3 qa-eval/cleanup-evaluation-benchmarking/scripts/validate_workspace.py --root . --out validation.json</code>) to verify:</li>
+<li>Every expected reference ID and route exists.</li>
+<li>Every PNG/JPG binary header dimension (<code>struct.unpack(&#x27;&gt;II&#x27;, raw[16:24])</code>) and <code>hashlib.sha256</code> checksum matches <code>manifest.json</code> / <code>assets.json</code>.</li>
+<li>Every relative <code>href</code>, <code>src</code>, and Markdown link across all <code>.html</code> and <code>.md</code> files resolves (<code>broken_local_links: []</code>).</li>
+<li>Write the machine-readable report to <code>validation.json</code>.</li>
+</ul>
+<h2>Input → Output Example</h2>
+<p><strong>Sample Input</strong>:</p>
+<pre data-lang="text"><code>&quot;Validate the component study repository, verify usage fixture math and PNG SHA-256 hashes, check all HTML/MD relative links, and emit validation.json.&quot;</code></pre>
+<p><strong>Expected Output (<code>validation.json</code>)</strong>:</p>
+<pre data-lang="json"><code>{
+  &quot;status&quot;: &quot;pass&quot;,
+  &quot;date&quot;: &quot;2026-10-21&quot;,
+  &quot;components&quot;: 6,
+  &quot;state_images&quot;: 30,
+  &quot;exact_state_prompts&quot;: 30,
+  &quot;asset_hashes_checked&quot;: 41,
+  &quot;directed_review_actions&quot;: 84,
+  &quot;local_links_checked&quot;: 142,
+  &quot;broken_local_links&quot;: [],
+  &quot;fixture_totals&quot;: &quot;pass&quot;,
+  &quot;errors&quot;: []
+}</code></pre>
+<h2>Result</h2>
+<p>Deliver the cleaned React implementation and <code>validation.json</code> (<code>&quot;status&quot;: &quot;pass&quot;</code>, <code>broken_local_links: []</code>, <code>fixture_totals: &quot;pass&quot;</code>).</p>
+<h3>Verification</h3>
+<ul class="checklist">
+<li><span class="check-box"></span><span>Every route and focused study has been compared side-by-side against its source comp with zero clipped descenders, ghosted raster text, or oval circles.</span></li>
+<li><span class="check-box"></span><span>All shopping-bag, unit-conversion, billing-discount, collaborator-count, and capacity-bar arithmetic invariants pass.</span></li>
+<li><span class="check-box"></span><span><code>validation.json</code> is written to the project root with <code>&quot;status&quot;: &quot;pass&quot;</code> and zero broken local links or SHA-256 mismatches.</span></li>
+</ul>
+    </article>
+
+    <footer class="footer-nav">
+      <a class="nav-pill" href="../../react/code-steering-checkpoints/index.html">← code-steering-checkpoints</a>
+      <a class="nav-pill" href="../../index.html">All 12 Standalone Skills</a>
+      <a class="nav-pill" href="../../qa-eval/viewport-performance-qa/index.html">viewport-performance-qa →</a>
+    </footer>
+  </div>
+</body>
+</html>

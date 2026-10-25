@@ -1,0 +1,19 @@
+{
+  "skill_id": "code-steering-checkpoints",
+  "cost_tier": "free",
+  "input": {
+    "divergences": [
+      {
+        "screen": "Header",
+        "detail": "Model added an enclosing border pill around floating controls and REF-001 captions under tiles."
+      },
+      {
+        "screen": "MaterialScene",
+        "detail": "Model built a real Three.js material area with Stone/Glaze/Linen finishes."
+      }
+    ]
+  },
+  "expected_output_files": {
+    "steering-report.md": "# Code Steering Checkpoint Report\n\n1. **Path A (Revert Drift)**: Stripped enclosing border container and tile reference captions; added negative constraint to build brief.\n2. **Path B (Freeze & Branch)**: Frozen in git worktree and promoted via superseding note:\n\n**Current direction, October 15, 2026:** Build authorized. Proceed with the selected imagery, split React areas among subagents, and include a real, heavily textured WebGL area.\n"
+  }
+}

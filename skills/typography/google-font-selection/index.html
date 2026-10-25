@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>google-font-selection — Standalone Antigravity Skill</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --bg: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-hover: #F4F4F6;
+  --surface-raised: #F0F0F4;
+  --ink: #18181B;
+  --ink-Strong: #09090B;
+  --muted: #686873;
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --accent: #09090B;
+  --accent-bg: #F4F4F6;
+  --pill-bg: #F1F1F4;
+  --code-bg: #F4F4F7;
+  --success: #059669;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #000000;
+    --surface: #0A0A0C;
+    --surface-hover: #121216;
+    --surface-raised: #141418;
+    --ink: #F4F4F6;
+    --ink-Strong: #FFFFFF;
+    --muted: #8E8E98;
+    --border: #1F1F26;
+    --border-strong: #2E2E38;
+    --accent: #FFFFFF;
+    --accent-bg: #18181F;
+    --pill-bg: #121217;
+    --code-bg: #08080A;
+    --success: #34D399;
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #0A0A0C;
+  --surface-hover: #121216;
+  --surface-raised: #141418;
+  --ink: #F4F4F6;
+  --ink-Strong: #FFFFFF;
+  --muted: #8E8E98;
+  --border: #1F1F26;
+  --border-strong: #2E2E38;
+  --accent: #FFFFFF;
+  --accent-bg: #18181F;
+  --pill-bg: #121217;
+  --code-bg: #08080A;
+  --success: #34D399;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Google Sans Flex", "Google Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+a {
+  color: var(--ink-Strong);
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms ease;
+}
+
+a:hover {
+  text-decoration-color: var(--ink-Strong);
+}
+
+.shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 28px 96px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.brand strong {
+  color: var(--ink-Strong);
+  font-weight: 600;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill-btn, .nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--pill-bg);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease;
+}
+
+.pill-btn:hover, .nav-pill:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+}
+
+.pill-btn:focus-visible, .nav-pill:focus-visible {
+  outline: 2px solid var(--ink-Strong);
+  outline-offset: 3px;
+}
+
+.meta-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.meta-card {
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.meta-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.meta-value {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: var(--ink-Strong);
+  word-break: break-all;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--success);
+  margin-right: 6px;
+}
+
+article h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--ink-Strong);
+  margin: 0 0 20px;
+}
+
+article h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink-Strong);
+  margin: 44px 0 14px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+article h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink-Strong);
+  margin: 28px 0 10px;
+}
+
+article p {
+  margin: 0 0 16px;
+  color: var(--ink);
+  max-width: 78ch;
+}
+
+article ul, article ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+article li {
+  margin-bottom: 8px;
+  max-width: 78ch;
+}
+
+ul.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin-bottom: 8px;
+}
+
+.check-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid var(--success);
+  background: rgba(52, 211, 153, 0.12);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+}
+
+.check-box::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--success);
+}
+
+code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  color: var(--ink-Strong);
+}
+
+pre {
+  margin: 0 0 22px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 0 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface-raised);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.domain-section {
+  margin-top: 48px;
+}
+
+.domain-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.domain-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  text-decoration: none;
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.skill-card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.skill-id {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--ink-Strong);
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.skill-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink-Strong);
+  margin: 0 0 8px;
+}
+
+.skill-card p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.skill-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-Strong);
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+</style>
+  
+<script>
+(function() {
+  const mqlDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  const saved = localStorage.getItem('antigravity-skills-theme');
+  const initial = saved || (mqlDark && mqlDark.matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', initial);
+  window.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function updateLabel(theme) {
+      btn.textContent = theme === 'dark' ? '☀ Light mode' : '☾ Dark mode';
+      btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+    }
+    updateLabel(document.documentElement.getAttribute('data-theme') || initial);
+    btn.addEventListener('click', function() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('antigravity-skills-theme', next);
+      updateLabel(next);
+    });
+    if (mqlDark && mqlDark.addEventListener) {
+      mqlDark.addEventListener('change', function(e) {
+        if (!localStorage.getItem('antigravity-skills-theme')) {
+          const autoNext = e.matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', autoNext);
+          updateLabel(autoNext);
+        }
+      });
+    }
+  });
+})();
+</script>
+
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="../../index.html">
+        <span>← All Skills</span>
+        <span>/</span>
+        <strong>typography</strong>
+        <span>/</span>
+        <strong>google-font-selection</strong>
+      </a>
+      <div class="topbar-actions">
+        <a class="nav-pill" href="SKILL.md">SKILL.md</a>
+        <a class="nav-pill" href="skill.json">skill.json</a>
+        <a class="nav-pill" href="evals/smoke.json">evals/smoke.json</a>
+        <button type="button" id="theme-toggle" class="pill-btn" aria-label="Toggle light or dark mode">☀ Light mode</button>
+      </div>
+    </header>
+
+    <section class="meta-bar" aria-label="Skill harness metadata">
+      <div class="meta-card">
+        <div class="meta-label">Skill ID</div>
+        <div class="meta-value"><span class="status-dot"></span>google-font-selection</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Domain Folder</div>
+        <div class="meta-value">typography/ (Typography)</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Harness Cost Tier</div>
+        <div class="meta-value">free</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Verify Command ($0)</div>
+        <div class="meta-value">python3 scripts/harness.py verify google-font-selection --smoke</div>
+      </div>
+    </section>
+
+    <article>
+      <h1>Multimodal Google Font Selection &amp; Top-5 Taste Recommender</h1>
+<pre data-lang="text"><code>skill / google-font-selection
+────────────────────────────────────────────────────────────────────
+mode      direct CLI / agent skill (no web artifact required) + optional specimen.html
+input     any keyword or string (&quot;soft&quot;, &quot;thicken&quot;, &quot;thin&quot;, &quot;warm editorial&quot;) or file (.png, .mp4, .tsx)
+output    Top 5 ranked Google Fonts + 4-Axis Eval Scorecard + specimen URLs + CSS2 tags + downloads</code></pre>
+<p>Pass <strong>any single keyword, descriptive phrase, or design artifact</strong> directly into this skill (<code>--artifact &quot;&lt;keyword-or-string&gt;&quot;</code>) and get <strong>5 Google Font recommendations that are spot-on with typographic taste</strong>—<strong>without needing any web page or HTML artifact at all</strong>.</p>
+<h2>1. Direct Skill Execution (Image Upload or Text Keyword — Without the Web Artifact)</h2>
+<p>You can pass <strong>either a text keyword/phrase OR an uploaded image file (<code>.png</code>, <code>.jpg</code>, <code>.webp</code>, <code>.gif</code>)</strong> directly into this skill:</p>
+<ul>
+<li><strong>In Chat (Image Upload or Text)</strong>:</li>
+<li><strong>Drop/upload any image</strong> (screenshot, moodboard, product photo, poster) or <strong>type any keyword/phrase</strong> (<code>&quot;soft&quot;</code>, <code>&quot;thicken&quot;</code>, <code>&quot;thin hairline&quot;</code>, <code>&quot;warm editorial&quot;</code>, <code>&quot;developer cli&quot;</code>).</li>
+<li>The agent inspects the uploaded image (extracting its visual luminance contrast, color warmth, aspect ratio, and typographic geometry) or text, runs the <strong>4-Axis Font Evaluation Gate</strong>, and outputs the <strong>Top 5 Ranked Google Fonts table</strong> directly in chat—no web artifact required.</li>
+<li><strong>Via CLI (<a href="./scripts/recommend_google_fonts.py">recommend_google_fonts.py</a>)</strong>:</li>
+</ul>
+<p>```bash</p>
+<h1>Pass an uploaded image path (.png / .jpg / .webp) directly:</h1>
+<p>python3 typography/google-font-selection/scripts/recommend_google_fonts.py \</p>
+<p>--artifact &quot;./path/to/uploaded-image.png&quot; \</p>
+<p>--format markdown</p>
+<h1>OR pass any text keyword / phrase directly:</h1>
+<p>python3 typography/google-font-selection/scripts/recommend_google_fonts.py \</p>
+<p>--artifact &quot;soft&quot; \</p>
+<p>--format markdown</p>
+<h1>Run the 7-case automated Font Evaluation Benchmark Suite:</h1>
+<p>python3 typography/google-font-selection/scripts/recommend_google_fonts.py \</p>
+<p>--run-eval-suite</p>
+<p>```</p>
+<p>When an image file is passed to <a href="./scripts/recommend_google_fonts.py">recommend_google_fonts.py</a>, <a href="./scripts/recommend_google_fonts.py"><code>extract_image_pixel_vectors</code></a> decodes the image&#x27;s binary dimensions and pixel stream (<code>contrast</code>, <code>warmth</code>, <code>aperture</code>, <code>proportion</code>, <code>tempo</code>) and blends them with any filename/caption signals before scoring every candidate font through the <strong>4-Axis Font Evaluation Gate</strong>.</p>
+<h2>2. Optional Web Specimen Flow (<code>Empty State → Image Upload or Text → Loading Eval → Top 5 Options</code>)</h2>
+<p>When the user opens the standalone web specimen viewer (<a href="./specimen.html">specimen.html</a>), it supports <strong>both Image Upload (<code>+ Upload Image</code> button &amp; drag-and-drop) and Text Input</strong> in a <strong>3-state flow</strong> on a pure white (<code>#FFFFFF</code>) canvas with no dividers:</p>
+<ol>
+<li><strong>State 1 — Empty Start (<code>#results</code> is empty)</strong>: Starts with a clean, empty input bar, a <strong><code>+ Upload Image</code></strong> button (plus drag-and-drop anywhere on the header), and quick-test chips (<code>&quot;soft&quot;</code>, <code>&quot;thicken&quot;</code>, <code>&quot;thin hairline&quot;</code>, <code>&quot;condensed tall&quot;</code>, <code>&quot;warm editorial&quot;</code>, <code>&quot;developer cli&quot;</code>). Nothing is rendered below yet.</li>
+<li><strong>State 2 — Loading &amp; Evaluating (<code>4-Axis Font Eval Gate</code>)</strong>: When you upload/drop an image (which extracts real <code>&lt;canvas&gt;</code> pixel vectors: luminance contrast, RGB warmth, edge density, and aspect ratio) or submit a text keyword, a 3-step evaluation progress bar appears.</li>
+<li><strong>State 3 — Top 5 Ranked Options Rendered</strong>: After evaluation completes, the Top 5 Google Fonts fade in with their <code>EVAL PASS</code> scorecard, <em>&quot;The quick brown fox jumps over the lazy dog.&quot;</em> across all weights (<code>300 Light</code>, <code>400 Regular</code>, <code>400 Italic</code>, <code>700 Bold</code>), and 1-click <strong>Google Fonts ↗</strong> + <strong>Download (.zip)</strong> buttons.</li>
+</ol>
+<h2>Quick Keyword / String → Top 5 Taste Mapping Reference</h2>
+<p>When a user passes a short keyword or string in chat (like <code>&quot;soft&quot;</code>, <code>&quot;thicken&quot;</code>, <code>&quot;thin&quot;</code>, <code>&quot;condensed&quot;</code>, <code>&quot;luxury&quot;</code>, or <code>&quot;developer cli&quot;</code>), the skill&#x27;s <strong>4-Axis Taste Evaluator</strong> (<code>Trait Alignment 35%</code> + <code>5-Vector Fit 30%</code> + <code>Variable Axes 20%</code> + <code>Optical Legibility 15%</code>) selects these spot-on Top 5 Google Fonts:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Passed Keyword / String</th><th>Top #1 Pick</th><th>#2 Pick</th><th>#3 Pick</th><th>#4 Pick</th><th>#5 Pick</th><th>Why This Taste Profile Works</th></tr></thead>
+<tbody>
+<tr><td><strong><code>&quot;soft&quot;</code></strong> / <code>&quot;rounded&quot;</code> / <code>&quot;gentle&quot;</code> / <code>&quot;plush&quot;</code></td><td><strong>Fraunces</strong> (<code>SOFT 0..100</code> axis)</td><td><strong>Fredoka</strong> (<code>wdth</code>, <code>wght</code>)</td><td><strong>Quicksand</strong> (<code>wght 300..700</code>)</td><td><strong>Comfortaa</strong> (<code>wght 300..700</code>)</td><td><strong>Nunito</strong> (<code>wght 200..1000</code>)</td><td>Combines Google Fonts&#x27; only native <code>SOFT (0..100)</code> variable serif with plush, rounded-terminal geometric sans families.</td></tr>
+<tr><td><strong><code>&quot;thicken&quot;</code></strong> / <code>&quot;thick&quot;</code> / <code>&quot;heavy&quot;</code> / <code>&quot;chunky&quot;</code></td><td><strong>Archivo Black</strong></td><td><strong>Ultra</strong></td><td><strong>Climate Crisis</strong> (<code>YEAR</code> axis)</td><td><strong>Dela Gothic One</strong></td><td><strong>Rubik Mono One</strong></td><td>Maximum ink-density <code>900</code>-black grotesques, fat-face wood-type slabs, and monumental variable display faces.</td></tr>
+<tr><td><strong><code>&quot;thin&quot;</code></strong> / <code>&quot;hairline&quot;</code> / <code>&quot;delicate&quot;</code> / <code>&quot;airy&quot;</code></td><td><strong>Cormorant</strong> (<code>300 Light</code>)</td><td><strong>Josefin Sans</strong> (<code>100 Thin</code>)</td><td><strong>Bodoni Moda</strong> (<code>opsz 6..96</code>)</td><td><strong>Instrument Serif</strong></td><td><strong>Outfit</strong> (<code>100 Thin</code>)</td><td>Gossamer <code>100–300</code> hairlines and extreme Didone stroke contrast (<code>contrast=4.8–5.0/5</code>).</td></tr>
+<tr><td><strong><code>&quot;condensed&quot;</code></strong> / <code>&quot;tall&quot;</code> / <code>&quot;narrow&quot;</code> / <code>&quot;tight&quot;</code></td><td><strong>Big Shoulders Display</strong> (<code>100..900</code>)</td><td><strong>Bebas Neue</strong></td><td><strong>Anton</strong></td><td><strong>Archivo</strong> (<code>wdth 62..125</code>)</td><td><strong>Instrument Sans</strong> (<code>wdth 75..100</code>)</td><td>Tightly-packed vertical display gothics (<code>proportion=1.2–1.6/5</code>) and variable-width grotesques.</td></tr>
+<tr><td><strong><code>&quot;warm editorial&quot;</code></strong> / <code>&quot;leather&quot;</code> / <code>&quot;atelier&quot;</code> / <code>&quot;luxury&quot;</code></td><td><strong>Newsreader</strong> (<code>opsz 6..72</code>)</td><td><strong>Cormorant Garamond</strong></td><td><strong>Libre Baskerville</strong></td><td><strong>Lora</strong></td><td><strong>Fraunces</strong></td><td>High-warmth (<code>4.5–5.0/5</code>) editorial serifs with optical sizing and calligraphic italic rhythm.</td></tr>
+<tr><td><strong><code>&quot;developer cli&quot;</code></strong> / <code>&quot;code&quot;</code> / <code>&quot;telemetry&quot;</code> / <code>&quot;mono&quot;</code></td><td><strong>JetBrains Mono</strong></td><td><strong>Space Grotesk</strong></td><td><strong>IBM Plex Mono</strong></td><td><strong>Fira Code</strong></td><td><strong>IBM Plex Sans</strong></td><td>Zero-ambiguity <code>0/O</code> &amp; <code>1/l/I</code> glyphs, programming ligatures, and crisp <code>tabular-nums</code>.</td></tr>
+<tr><td><strong><code>&quot;kinetic video&quot;</code></strong> / <code>&quot;poster&quot;</code> / <code>&quot;brutalist&quot;</code> / <code>&quot;wide&quot;</code></td><td><strong>Syne</strong> (<code>wght 400..800</code>)</td><td><strong>Unbounded</strong> (<code>wght 200..900</code>)</td><td><strong>Archivo</strong> (<code>wdth 62..125</code>)</td><td><strong>Big Shoulders Display</strong></td><td><strong>Space Grotesk</strong></td><td>High-tempo (<code>4.8–5.0/5</code>) extended and variable-width display faces built for motion title cards.</td></tr>
+</tbody>
+</table></div>
+<h2>Inputs</h2>
+<ul>
+<li><strong>Any engineering or design artifact</strong>:</li>
+<li><strong>Image / Comp / Moodboard</strong> (<code>.png</code>, <code>.jpg</code>, <code>.webp</code>, <code>.svg</code>, <code>.pdf</code>): inspected for stroke contrast, serif bracket geometry, x-height, aperture openness, surface materiality, and color warmth.</li>
+<li><strong>Video / Motion Reel</strong> (<code>.mp4</code>, <code>.mov</code>, <code>.webm</code>, <code>.gif</code>): inspected for cut cadence, camera motion, subtitle/title-card dwell time, aspect ratio (<code>16:9</code>, <code>21:9</code>, <code>9:16</code>), and variable-axis animation potential (<code>wght</code>, <code>wdth</code>, <code>GRAD</code>).</li>
+<li><strong>Code / Document / Text Brief</strong> (<code>.tsx</code>, <code>.css</code>, <code>.md</code>, <code>.json</code>, or natural-language prompt): inspected for domain voice, numeric/tabular density, and hierarchy depth.</li>
+<li>Bundled executable recommender &amp; downloader: <a href="./scripts/recommend_google_fonts.py">recommend_google_fonts.py</a>.</li>
+<li>Full catalog taxonomy &amp; download reference: <a href="./references/google-fonts-taxonomy.md">google-fonts-taxonomy.md</a>.</li>
+</ul>
+<h2>Work</h2>
+<ol>
+<li><strong>Inspect the Input Artifact and Classify the Design Type.</strong></li>
+</ol>
+<ul>
+<li>View the image/video directly or pass the artifact path/brief into <a href="./scripts/recommend_google_fonts.py">recommend_google_fonts.py</a>:</li>
+</ul>
+<p>```bash</p>
+<p>python3 typography/google-font-selection/scripts/recommend_google_fonts.py \</p>
+<p>--artifact &quot;&lt;path-or-description&gt;&quot; \</p>
+<p>--out-md font-recommendations.md \</p>
+<p>--out-json font-recommendations.json \</p>
+<p>--specimen-html font-specimen.html</p>
+<p>```</p>
+<ul>
+<li>Score the artifact along the <strong>5 Typographic Vectors</strong> (<code>contrast</code>, <code>warmth</code>, <code>aperture</code>, <code>proportion</code>, <code>tempo</code> on a <code>1–5</code> scale) and map it to one of the 7 primary <strong>Design Types</strong> defined in <a href="./references/google-fonts-taxonomy.md">google-fonts-taxonomy.md</a>:</li>
+<li><code>warm-editorial-luxury</code> (Atelier fashion, leather goods, hospitality, architecture monographs)</li>
+<li><code>modern-product-ui</code> (Adaptive SaaS shells, AI workspaces, dark/light design systems)</li>
+<li><code>technical-dev-data</code> (Developer tools, CLI/IDEs, telemetry dashboards, WebGL HUDs, FinTech)</li>
+<li><code>tactile-craft-culinary</code> (Bakeries, specialty coffee, botanicals, aperitifs, tactile packaging)</li>
+<li><code>kinetic-video-brutalist</code> (Video title cards, motion reels, festival posters, wide hero grids)</li>
+<li><code>high-contrast-culture</code> (Cultural magazines, monochrome galleries, sharp hairline lookbooks)</li>
+<li><code>longform-documentation</code> (Research publications, essays, documentation portals)</li>
+</ul>
+<ol>
+<li><strong>Query the Full Google Fonts Catalog, Run the 4-Axis Font Evaluation Gate, and Rank the Top 5 Recommendations.</strong></li>
+</ol>
+<ul>
+<li>To refresh the live <code>1,600+</code> family metadata cache from Google&#x27;s public catalog endpoint (<code>https://fonts.google.com/metadata/fonts</code>) when network is available, run:</li>
+</ul>
+<p>```bash</p>
+<p>python3 typography/google-font-selection/scripts/recommend_google_fonts.py --sync-live</p>
+<p>```</p>
+<ul>
+<li>Every candidate font is evaluated through the built-in <strong>4-Axis Font Evaluation Gate</strong> (<code>evaluate_font_candidate</code> in <a href="./scripts/recommend_google_fonts.py">recommend_google_fonts.py</a>) before selecting the Top 5:</li>
+</ul>
+<ol>
+<li><strong>Trait &amp; Semantic Alignment (<code>35%</code> weight)</strong>: Stem and keyword match against physical/visual traits (<code>&quot;soft&quot;</code>, <code>&quot;thicken&quot;</code>, <code>&quot;thin hairline&quot;</code>, <code>&quot;condensed&quot;</code>, <code>&quot;slab&quot;</code>, etc.) and domain archetype.</li>
+<li><strong>5-Vector Euclidean Fit (<code>30%</code> weight)</strong>: Inverse Euclidean distance across <code>contrast</code>, <code>warmth</code>, <code>aperture</code>, <code>proportion</code>, and <code>tempo</code> (<code>100 - Δ × 9.5</code>).</li>
+<li><strong>Variable Axis &amp; Weight Versatility (<code>20%</code> weight)</strong>: Evaluates continuous weight range (<code>wght</code>), optical sizing (<code>opsz</code>), width (<code>wdth</code>), grade (<code>GRAD</code>), softness (<code>SOFT</code>), or roundness (<code>ROND</code>) axes plus true italics (<code>ital</code>).</li>
+<li><strong>Optical Legibility &amp; Pairing Readiness (<code>15%</code> weight)</strong>: Evaluates aperture openness (<code>aperture / 5.0</code>) and verified companion pairings (<code>--font-display</code>, <code>--font-sans</code>, <code>--font-mono</code>).</li>
+</ol>
+<ul>
+<li>Run the built-in <strong>7-case Font Evaluation Benchmark Suite</strong> at any time to verify selection accuracy across physical traits and design archetypes:</li>
+</ul>
+<p>```bash</p>
+<p>python3 typography/google-font-selection/scripts/recommend_google_fonts.py --run-eval-suite</p>
+<p>```</p>
+<ul>
+<li>Rank the <strong>Top 5 Google Fonts</strong> (<code>#1</code> through <code>#5</code>) by composite match &amp; eval score. For every font in the Top 5, report:</li>
+<li><strong>Rank, Match Score (<code>%</code>) &amp; Eval Breakdown (<code>PASS</code> / <code>0–100</code> across Trait, Vector, Axis, and Legibility)</strong></li>
+<li><strong>Category &amp; Variable Axes</strong> (<code>opsz</code>, <code>wdth</code>, <code>wght</code>, <code>GRAD</code>, <code>SOFT</code>, <code>WONK</code>)</li>
+<li><strong>Companion Pairing</strong> (<code>--font-display</code>, <code>--font-sans</code>, <code>--font-mono</code>)</li>
+<li><strong>Design Rationale</strong> explaining why its stroke modulation, x-height, and aperture fit the input artifact.</li>
+</ul>
+<ol>
+<li><strong>Provide Official Google Fonts URLs and 4 Download / Self-Hosting Methods for Every Top-5 Font.</strong></li>
+</ol>
+<ul>
+<li>For each of the Top 5 fonts, output:</li>
+</ul>
+<ol>
+<li><strong>Google Fonts Specimen URL</strong>: <code>https://fonts.google.com/specimen/&lt;Family+Name&gt;</code></li>
+<li><strong>Production Google Fonts CSS2 API URL &amp; <code>&lt;link&gt;</code> Embed</strong> (with <code>&lt;link rel=&quot;preconnect&quot;&gt;</code> and strictly alphabetical axis tags: lowercase <code>ital,opsz,slnt,wdth,wght</code> before uppercase <code>GRAD,ROND,SOFT,WONK</code>).</li>
+<li><strong>How to Download &amp; Self-Host (4 Methods)</strong>:</li>
+</ol>
+<ul>
+<li><strong>Method A — NPM <code>@fontsource</code> (React / Vite / Next.js)</strong>: <code>npm install @fontsource-variable/&lt;slug&gt;</code></li>
+<li><strong>Method B — Direct <code>.woff2</code> Binary Download via <code>curl</code> or <code>--download-dir</code></strong>:</li>
+</ul>
+<p>```bash</p>
+<p>python3 typography/google-font-selection/scripts/recommend_google_fonts.py \</p>
+<p>--artifact &quot;&lt;artifact&gt;&quot; --download-dir ./public/fonts</p>
+<p>```</p>
+<ul>
+<li><strong>Method C — Official Google Fonts GitHub <code>.ttf</code> Source</strong>: <code>https://github.com/google/fonts/tree/main/ofl/&lt;slug&gt;</code></li>
+<li><strong>Method D — Google Webfonts Helper Multi-Weight <code>.zip</code> Archive</strong>: <code>https://gwfh.mranftl.com/api/fonts/&lt;slug&gt;?download=zip&amp;subsets=latin&amp;formats=woff2</code></li>
+</ul>
+<h2>Input → Output Example</h2>
+<p><strong>Sample Input (Any Artifact — Image, Video, Code, or Text Brief)</strong>:</p>
+<pre data-lang="text"><code>Artifact: &quot;Hero campaign image and product brief for Avela leather goods &amp; sunlit stoneware atelier homepage&quot;</code></pre>
+<p><strong>Expected Output (<code>font-recommendations.md</code> &amp; <code>font-recommendations.json</code> excerpt)</strong>:</p>
+<pre data-lang="markdown"><code>| Rank | Google Font Family | Category | Match Score | Variable Axes | Google Fonts Specimen URL | Companion Pairing |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **#1** | **Newsreader** | `SERIF` | `98.2%` | `ital (0..1)`, `opsz (6..72)`, `wght (200..800)` | https://fonts.google.com/specimen/Newsreader | sans: `Plus Jakarta Sans`, mono: `IBM Plex Mono` |
+| **#2** | **Cormorant Garamond** | `SERIF` | `97.3%` | `ital (0..1)`, `wght (300..700)` | https://fonts.google.com/specimen/Cormorant+Garamond | sans: `Plus Jakarta Sans`, mono: `IBM Plex Mono` |
+| **#3** | **Libre Baskerville** | `SERIF` | `96.6%` | `ital (0..1)`, `wght (400;700)` | https://fonts.google.com/specimen/Libre+Baskerville | sans: `Source Sans 3`, mono: `IBM Plex Mono` |
+| **#4** | **Lora** | `SERIF` | `94.3%` | `ital (0..1)`, `wght (400..700)` | https://fonts.google.com/specimen/Lora | sans: `Work Sans`, mono: `IBM Plex Mono` |
+| **#5** | **Fraunces** | `SERIF` | `88.1%` | `ital (0..1)`, `opsz (9..144)`, `wght (100..900)`, `SOFT (0..100)`, `WONK (0..1)` | https://fonts.google.com/specimen/Fraunces | sans: `Work Sans`, mono: `Space Mono` |</code></pre>
+<h2>Result</h2>
+<p>Deliver <code>font-recommendations.md</code>, <code>font-recommendations.json</code>, and <code>font-specimen.html</code> containing the detected <strong>Design Type</strong>, the <strong>Top 5 Ranked Google Fonts</strong>, official specimen and CSS2 URLs, and copy-pasteable download commands.</p>
+<h3>Verification</h3>
+<ul class="checklist">
+<li><span class="check-box"></span><span><code>python3 typography/google-font-selection/scripts/recommend_google_fonts.py --artifact &quot;&lt;input&gt;&quot;</code> exits with code <code>0</code> and returns <code>&quot;status&quot;: &quot;pass&quot;</code> with exactly <code>5</code> ranked recommendations in <code>top_5_recommendations</code>.</span></li>
+<li><span class="check-box"></span><span>Every recommended font includes a valid <code>https://fonts.google.com/specimen/...</code> URL, a valid <code>https://fonts.googleapis.com/css2?family=...</code> URL with alphabetical axis ordering, and all 4 download methods (<code>npm_fontsource</code>, <code>curl_woff2</code>, <code>github_source_ttf</code>, <code>webfonts_helper_zip</code>).</span></li>
+<li><span class="check-box"></span><span>CSS custom properties (<code>--font-display</code>, <code>--font-sans</code>, <code>--font-mono</code>) include metric-compatible fallback stacks (<code>size-adjust</code>, <code>ascent-override</code>).</span></li>
+</ul>
+    </article>
+
+    <footer class="footer-nav">
+      <a class="nav-pill" href="../../qwen/prompt-builder-specs/index.html">← prompt-builder-specs</a>
+      <a class="nav-pill" href="../../index.html">All 12 Standalone Skills</a>
+      <a class="nav-pill" href="../../image-gen/nano-banana-image-gen/index.html">nano-banana-image-gen →</a>
+    </footer>
+  </div>
+</body>
+</html>

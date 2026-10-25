@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Standalone Design & React Skills — Google Antigravity</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --bg: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-hover: #F4F4F6;
+  --surface-raised: #F0F0F4;
+  --ink: #18181B;
+  --ink-Strong: #09090B;
+  --muted: #686873;
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --accent: #09090B;
+  --accent-bg: #F4F4F6;
+  --pill-bg: #F1F1F4;
+  --code-bg: #F4F4F7;
+  --success: #059669;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #000000;
+    --surface: #0A0A0C;
+    --surface-hover: #121216;
+    --surface-raised: #141418;
+    --ink: #F4F4F6;
+    --ink-Strong: #FFFFFF;
+    --muted: #8E8E98;
+    --border: #1F1F26;
+    --border-strong: #2E2E38;
+    --accent: #FFFFFF;
+    --accent-bg: #18181F;
+    --pill-bg: #121217;
+    --code-bg: #08080A;
+    --success: #34D399;
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #0A0A0C;
+  --surface-hover: #121216;
+  --surface-raised: #141418;
+  --ink: #F4F4F6;
+  --ink-Strong: #FFFFFF;
+  --muted: #8E8E98;
+  --border: #1F1F26;
+  --border-strong: #2E2E38;
+  --accent: #FFFFFF;
+  --accent-bg: #18181F;
+  --pill-bg: #121217;
+  --code-bg: #08080A;
+  --success: #34D399;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Google Sans Flex", "Google Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+a {
+  color: var(--ink-Strong);
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms ease;
+}
+
+a:hover {
+  text-decoration-color: var(--ink-Strong);
+}
+
+.shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 28px 96px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.brand strong {
+  color: var(--ink-Strong);
+  font-weight: 600;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill-btn, .nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--pill-bg);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease;
+}
+
+.pill-btn:hover, .nav-pill:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+}
+
+.pill-btn:focus-visible, .nav-pill:focus-visible {
+  outline: 2px solid var(--ink-Strong);
+  outline-offset: 3px;
+}
+
+.meta-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.meta-card {
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.meta-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.meta-value {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: var(--ink-Strong);
+  word-break: break-all;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--success);
+  margin-right: 6px;
+}
+
+article h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--ink-Strong);
+  margin: 0 0 20px;
+}
+
+article h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink-Strong);
+  margin: 44px 0 14px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+article h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink-Strong);
+  margin: 28px 0 10px;
+}
+
+article p {
+  margin: 0 0 16px;
+  color: var(--ink);
+  max-width: 78ch;
+}
+
+article ul, article ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+article li {
+  margin-bottom: 8px;
+  max-width: 78ch;
+}
+
+ul.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin-bottom: 8px;
+}
+
+.check-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid var(--success);
+  background: rgba(52, 211, 153, 0.12);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+}
+
+.check-box::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--success);
+}
+
+code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  color: var(--ink-Strong);
+}
+
+pre {
+  margin: 0 0 22px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 0 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface-raised);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.domain-section {
+  margin-top: 48px;
+}
+
+.domain-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.domain-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  text-decoration: none;
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.skill-card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.skill-id {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--ink-Strong);
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.skill-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink-Strong);
+  margin: 0 0 8px;
+}
+
+.skill-card p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.skill-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-Strong);
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+</style>
+  
+<script>
+(function() {
+  const mqlDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  const saved = localStorage.getItem('antigravity-skills-theme');
+  const initial = saved || (mqlDark && mqlDark.matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', initial);
+  window.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function updateLabel(theme) {
+      btn.textContent = theme === 'dark' ? '☀ Light mode' : '☾ Dark mode';
+      btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+    }
+    updateLabel(document.documentElement.getAttribute('data-theme') || initial);
+    btn.addEventListener('click', function() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('antigravity-skills-theme', next);
+      updateLabel(next);
+    });
+    if (mqlDark && mqlDark.addEventListener) {
+      mqlDark.addEventListener('change', function(e) {
+        if (!localStorage.getItem('antigravity-skills-theme')) {
+          const autoNext = e.matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', autoNext);
+          updateLabel(autoNext);
+        }
+      });
+    }
+  });
+})();
+</script>
+
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <strong>GOOGLE ANTIGRAVITY</strong>
+        <span>/</span>
+        <span>12 Standalone Skills &amp; Harness</span>
+      </div>
+      <div class="topbar-actions">
+        <a class="nav-pill" href="README.md">README.md</a>
+        <a class="nav-pill" href="harness.json">harness.json</a>
+        <a class="nav-pill" href=".agents/skills.json">.agents/skills.json</a>
+        <button type="button" id="theme-toggle" class="pill-btn" aria-label="Toggle light or dark mode">☀ Light mode</button>
+      </div>
+    </header>
+
+    <article>
+      <h1>Standalone Design &amp; React Skills</h1>
+      <p>12 independent, Google Antigravity-verified skills organized by role across 5 folders (<code>qwen/</code>, <code>typography/</code>, <code>image-gen/</code>, <code>react/</code>, <code>qa-eval/</code>). Each skill includes its standalone <code>SKILL.md</code>, a machine-readable <code>skill.json</code> harness contract, a <code>$0</code> smoke fixture (<code>evals/smoke.json</code>), and a clean light/dark HTML reader.</p>
+    </article>
+
+    <section class="meta-bar" aria-label="Workspace summary">
+      <div class="meta-card">
+        <div class="meta-label">Standalone Skills</div>
+        <div class="meta-value"><span class="status-dot"></span>12 Verified (0 Routers)</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Discovery Manifest</div>
+        <div class="meta-value">.agents/skills.json</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Harness Test Runner</div>
+        <div class="meta-value">python3 scripts/harness.py test-all</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">4-Layer $0 Suite</div>
+        <div class="meta-value">python3 scripts/check_skills.py --test-io</div>
+      </div>
+    </section>
+
+    
+    <section class="domain-section">
+      <div class="domain-header">
+        <h2 class="domain-title">Qwen — Research, Design Range &amp; Prompt Specs (<code>qwen/</code>)</h2>
+      </div>
+      <div class="skill-grid">
+        
+        <a class="skill-card" href="qwen/competitor-benchmarking/index.html">
+          <div>
+            <div class="skill-card-top">
+              <span class="skill-id">competitor-benchmarking</span>
+              <span class="badge">browser</span>
+            </div>
+            <h3>Competitor Research Benchmarking</h3>
+            <p>Benchmark 15–25 live category websites and applications by capturing production URLs and full-viewport screenshots and evaluating both Visual Direction and Code/DOM Interactions.</p>
+          </div>
+          <div class="skill-card-footer">
+            <span>qwen/competitor-benchmarking/</span>
+            <span>Open skill →</span>
+          </div>
+        </a>
+        <a class="skill-card" href="qwen/design-range-spectrum/index.html">
+          <div>
+            <div class="skill-card-top">
+              <span class="skill-id">design-range-spectrum</span>
+              <span class="badge">free</span>
+            </div>
+            <h3>Dynamic Design Range &amp; Interaction Specs (&quot;Charm&quot;)</h3>
+            <p>Parameterize a design category&#x27;s stylistic spectrum across Minimal, Structured, and Opinionated poles, structure 7-chapter page pacing, and specify section-level micro-interactions and 44x44px touch contracts.</p>
+          </div>
+          <div class="skill-card-footer">
+            <span>qwen/design-range-spectrum/</span>
+            <span>Open skill →</span>
+          </div>
+        </a>
+        <a class="skill-card" href="qwen/prompt-builder-specs/index.html">
+          <div>
+            <div class="skill-card-top">
+              <span class="skill-id">prompt-builder-specs</span>
+              <span class="badge">free</span>
+            </div>
+            <h3>Structured Markdown Specifications &amp; Nano Banana 2 Prompt Builder</h3>
+            <p>Author structured Markdown design specifications (1x Main Agent .md + 5–10x concept .md files) and 10-point Nano Banana 2 (1K) image generation prompts for expanding websites, mobile apps, or UI components into 5 complete pages, screens, or states.</p>
+          </div>
+          <div class="skill-card-footer">
+            <span>qwen/prompt-builder-specs/</span>
+            <span>Open skill →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="domain-section">
+      <div class="domain-header">
+        <h2 class="domain-title">Typography — Multimodal Google Font Selection &amp; Top-5 Ranking (<code>typography/</code>)</h2>
+      </div>
+      <div class="skill-grid">
+        
+        <a class="skill-card" href="typography/google-font-selection/index.html">
+          <div>
+            <div class="skill-card-top">
+              <span class="skill-id">google-font-selection</span>
+              <span class="badge">free</span>
+            </div>
+            <h3>Multimodal Google Font Selection &amp; Top-5 Recommender</h3>
+            <p>Select and rank the Top 5 Google Fonts for any input artifact (image, video, code, or text brief) by classifying its design type, querying the full Google Fonts catalog, and outputting specimen URLs, CSS2 embed tags, variable axes, and 4 download methods.</p>
+          </div>
+          <div class="skill-card-footer">
+            <span>typography/google-font-selection/</span>
+            <span>Open skill →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="domain-section">
+      <div class="domain-header">
+        <h2 class="domain-title">Image Gen — Nano Banana 2 Comps, Grids &amp; Plates (<code>image-gen/</code>)</h2>
+      </div>
+      <div class="skill-grid">
+        
+        <a class="skill-card" href="image-gen/nano-banana-image-gen/index.html">
+          <div>
+            <div class="skill-card-top">
+              <span class="skill-id">nano-banana-image-gen</span>
+              <span class="badge">paid_api</span>
+            </div>
+            <h3>Iterative Image Generation &amp; Cleanup (Nano Banana 2)</h3>
+            <p>Generate and edit UI screen comps, 4K multi-screen contact grids, targeted cleanup passes (cleanup-brief.md), and clean inpainted photographic background plates (*-clean-photo.png) using Nano Banana 2.</p>
+          </div>
+          <div class="skill-card-footer">
+            <span>image-gen/nano-banana-image-gen/</span>
+            <span>Open skill →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="domain-section">
+      <div class="domain-header">
+        <h2 class="domain-title">React — Design Handoff, Translation &amp; Code Steering (<code>react/</code>)</h2>
+      </div>
+      <div class="skill-grid">
+        
+        <a class="skill-card" href="react/design-package-handoff/index.html">
+          <div>
+            <div class="skill-card-top">
+              <span class="skill-id">design-package-handoff</span>
+              <span class="badge">free</span>
+            </div>
+            <h3>Complete Design Package Handoff</h3>
+            <p>Consolidate research .md files, live reference registers, desktop and mobile breakpoint specs, normalized image crop coordinates, state/data fixtures, and approved screen comps into design-package.md and react-handoff.md.</p>
+          </div>
+          <div class="skill-card-footer">
+            <span>react/design-package-handoff/</span>
+            <span>Open skill →</span>
+          </div>
+        </a>
+        <a class="skill-card" href="react/image-to-react-translation/index.html">
+          <div>
+            <div class="skill-card-top">
+              <span class="skill-id">image-to-react-translation</span>
+              <span class="badge">free</span>
+            </div>
+            <h3>Clean Image-to-React Translation</h3>
+            <p>Translate screen comps, moodboards, or design packages into semantic React, TypeScript, and CSS with live DOM typography and controls, clean inpainted photographic background plates, uniform SVG crops, and on-demand Three.js WebGL scenes.</p>
+          </div>
+          <div class="skill-card-footer">
+            <span>react/image-to-react-translation/</span>
+            <span>Open skill →</span>
+          </div>
+        </a>
+        <a class="skill-card" href="react/code-steering-checkpoints/index.html">
+          <div>
+            <div class="skill-card-top">
+              <span class="skill-id">code-steering-checkpoints</span>
+              <span class="badge">free</span>
+            </div>
+            <h3>Code Steering &amp; Worktree Control</h3>
+            <p>Steer code on foundational React screens before scaling across a multi-page application by classifying divergence from design comps and executing either Path A (Revert Drift to restore strict comp fidelity) or Path B (Freeze &amp; Branch git worktree to capture, analyze, and promote emergent high-craft behavior).</p>
+          </div>
+          <div class="skill-card-footer">
+            <span>react/code-steering-checkpoints/</span>
+            <span>Open skill →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="domain-section">
+      <div class="domain-header">
+        <h2 class="domain-title">QA Eval — Comp QA, Benchmarking, Viewport QA &amp; Packaging (<code>qa-eval/</code>)</h2>
+      </div>
+      <div class="skill-grid">
+        
+        <a class="skill-card" href="qa-eval/grid-comp-qa/index.html">
+          <div>
+            <div class="skill-card-top">
+              <span class="skill-id">grid-comp-qa</span>
+              <span class="badge">free</span>
+            </div>
+            <h3>Grid &amp; Comp Visual QA</h3>
+            <p>Audit generated Nano Banana 2 contact sheets and screen comps for canvas aspect-ratio fidelity (&lt; 0.5% delta), native-pixel typography legibility, cross-screen state continuity, and CSS chapter-spacing overrides.</p>
+          </div>
+          <div class="skill-card-footer">
+            <span>qa-eval/grid-comp-qa/</span>
+            <span>Open skill →</span>
+          </div>
+        </a>
+        <a class="skill-card" href="qa-eval/cleanup-evaluation-benchmarking/index.html">
+          <div>
+            <div class="skill-card-top">
+              <span class="skill-id">cleanup-evaluation-benchmarking</span>
+              <span class="badge">free</span>
+            </div>
+            <h3>Cleanup &amp; Evaluation Benchmarking</h3>
+            <p>Benchmark a live React implementation side-by-side against source design comps and run automated repository, SHA-256 asset checksum, local link, and state-math validation (validation.json).</p>
+          </div>
+          <div class="skill-card-footer">
+            <span>qa-eval/cleanup-evaluation-benchmarking/</span>
+            <span>Open skill →</span>
+          </div>
+        </a>
+        <a class="skill-card" href="qa-eval/viewport-performance-qa/index.html">
+          <div>
+            <div class="skill-card-top">
+              <span class="skill-id">viewport-performance-qa</span>
+              <span class="badge">browser</span>
+            </div>
+            <h3>Viewport &amp; Performance QA</h3>
+            <p>Verify cross-viewport responsiveness across desktop and mobile breakpoints (1440px, 1280px, 768px, 430px, 390px, 320px, and 200% text zoom) with zero horizontal overflow, 60fps scroll and WebGL lifecycle performance, reduced-motion compliance, and automated browser interaction checks (browser-checks.json and docs/verification.md).</p>
+          </div>
+          <div class="skill-card-footer">
+            <span>qa-eval/viewport-performance-qa/</span>
+            <span>Open skill →</span>
+          </div>
+        </a>
+        <a class="skill-card" href="qa-eval/linting-model-safe-packaging/index.html">
+          <div>
+            <div class="skill-card-top">
+              <span class="skill-id">linting-model-safe-packaging</span>
+              <span class="badge">free</span>
+            </div>
+            <h3>Linting &amp; Model-Safe Packaging</h3>
+            <p>Lint and package a React or design-study workspace into a verified single-archive .zip bundle (React Golden Template) with bundle.md and manifest.json, enforcing schema/syntax compliance across routes, .apx files, .js/.ts/.tsx modules, and configs while verifying binary PNG dimensions, SHA-256 hashes, and local links.</p>
+          </div>
+          <div class="skill-card-footer">
+            <span>qa-eval/linting-model-safe-packaging/</span>
+            <span>Open skill →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

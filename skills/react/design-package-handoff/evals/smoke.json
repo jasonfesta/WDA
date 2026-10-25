@@ -1,0 +1,26 @@
+{
+  "skill_id": "design-package-handoff",
+  "cost_tier": "free",
+  "input": {
+    "components": [
+      "WeatherCard",
+      "TeamPicker",
+      "MaterialPalette",
+      "MembershipPanel",
+      "UsagePanel",
+      "NavigationDock"
+    ],
+    "crops": {
+      "02-rill-and-rye-bakery.png": [
+        0.466,
+        0.198,
+        0.518,
+        0.718
+      ]
+    }
+  },
+  "expected_output_files": {
+    "design-package.md": "# Complete Design Package\n\n- **Live DOM Layer**: All typography, prices, links, and controls.\n- **Photographic Layer**: Normalized crop `[0.466, 0.198, 0.518, 0.718]`.\n- **Breakpoints**: Desktop `1440px`, Mobile `390px` (verified at `320px`).\n",
+    "react-handoff.md": "| Component | Authoritative Inputs | Emitted Events | Host-Owned Services | Semantic Primitive |\n| :--- | :--- | :--- | :--- | :--- |\n| `WeatherCard` | `location, selectedDate, unit` | `dateChange, unitChange, retry` | Weather provider & cache | `role=\"tablist\"` (`28\u00b0C \u2194 82\u00b0F`) |\n| `UsagePanel` | `range, categories, dailySeries` | `rangeChange, inspect, retry` | Billing periods & totals | `sum(categories) == used == sum(daily)` |\n"
+  }
+}

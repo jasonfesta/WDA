@@ -1,0 +1,13 @@
+{
+  "skill_id": "image-to-react-translation",
+  "cost_tier": "free",
+  "input": {
+    "design_package": "design-package.md",
+    "clean_plates": [
+      "public/assets/website-layers/avela-clean-photo.png"
+    ]
+  },
+  "expected_output_files": {
+    "src/App.tsx": "export interface AreaProps<T = Record<string, unknown>> { id: string; focused: boolean; state: T; }\nexport function AvelaHero({ bagCount = 1 }: { bagCount?: number }) {\n  return (\n    <section style={{ backgroundImage: 'url(/assets/website-layers/avela-clean-photo.png)' }}>\n      <header><a href=\"#/\">AVELA</a><button type=\"button\">Bag ({bagCount})</button></header>\n      <h1>A softer shape. A longer story.</h1>\n      <div aria-hidden=\"true\">SOFT FORM</div>\n    </section>\n  );\n}\n"
+  }
+}

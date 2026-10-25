@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>design-range-spectrum — Standalone Antigravity Skill</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --bg: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-hover: #F4F4F6;
+  --surface-raised: #F0F0F4;
+  --ink: #18181B;
+  --ink-Strong: #09090B;
+  --muted: #686873;
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --accent: #09090B;
+  --accent-bg: #F4F4F6;
+  --pill-bg: #F1F1F4;
+  --code-bg: #F4F4F7;
+  --success: #059669;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #000000;
+    --surface: #0A0A0C;
+    --surface-hover: #121216;
+    --surface-raised: #141418;
+    --ink: #F4F4F6;
+    --ink-Strong: #FFFFFF;
+    --muted: #8E8E98;
+    --border: #1F1F26;
+    --border-strong: #2E2E38;
+    --accent: #FFFFFF;
+    --accent-bg: #18181F;
+    --pill-bg: #121217;
+    --code-bg: #08080A;
+    --success: #34D399;
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #0A0A0C;
+  --surface-hover: #121216;
+  --surface-raised: #141418;
+  --ink: #F4F4F6;
+  --ink-Strong: #FFFFFF;
+  --muted: #8E8E98;
+  --border: #1F1F26;
+  --border-strong: #2E2E38;
+  --accent: #FFFFFF;
+  --accent-bg: #18181F;
+  --pill-bg: #121217;
+  --code-bg: #08080A;
+  --success: #34D399;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Google Sans Flex", "Google Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+a {
+  color: var(--ink-Strong);
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms ease;
+}
+
+a:hover {
+  text-decoration-color: var(--ink-Strong);
+}
+
+.shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 28px 96px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.brand strong {
+  color: var(--ink-Strong);
+  font-weight: 600;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill-btn, .nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--pill-bg);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease;
+}
+
+.pill-btn:hover, .nav-pill:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+}
+
+.pill-btn:focus-visible, .nav-pill:focus-visible {
+  outline: 2px solid var(--ink-Strong);
+  outline-offset: 3px;
+}
+
+.meta-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.meta-card {
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.meta-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.meta-value {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: var(--ink-Strong);
+  word-break: break-all;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--success);
+  margin-right: 6px;
+}
+
+article h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--ink-Strong);
+  margin: 0 0 20px;
+}
+
+article h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink-Strong);
+  margin: 44px 0 14px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+article h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink-Strong);
+  margin: 28px 0 10px;
+}
+
+article p {
+  margin: 0 0 16px;
+  color: var(--ink);
+  max-width: 78ch;
+}
+
+article ul, article ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+article li {
+  margin-bottom: 8px;
+  max-width: 78ch;
+}
+
+ul.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin-bottom: 8px;
+}
+
+.check-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid var(--success);
+  background: rgba(52, 211, 153, 0.12);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+}
+
+.check-box::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--success);
+}
+
+code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  color: var(--ink-Strong);
+}
+
+pre {
+  margin: 0 0 22px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 0 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface-raised);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.domain-section {
+  margin-top: 48px;
+}
+
+.domain-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.domain-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  text-decoration: none;
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.skill-card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.skill-id {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--ink-Strong);
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.skill-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink-Strong);
+  margin: 0 0 8px;
+}
+
+.skill-card p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.skill-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-Strong);
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+</style>
+  
+<script>
+(function() {
+  const mqlDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  const saved = localStorage.getItem('antigravity-skills-theme');
+  const initial = saved || (mqlDark && mqlDark.matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', initial);
+  window.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function updateLabel(theme) {
+      btn.textContent = theme === 'dark' ? '☀ Light mode' : '☾ Dark mode';
+      btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+    }
+    updateLabel(document.documentElement.getAttribute('data-theme') || initial);
+    btn.addEventListener('click', function() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('antigravity-skills-theme', next);
+      updateLabel(next);
+    });
+    if (mqlDark && mqlDark.addEventListener) {
+      mqlDark.addEventListener('change', function(e) {
+        if (!localStorage.getItem('antigravity-skills-theme')) {
+          const autoNext = e.matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', autoNext);
+          updateLabel(autoNext);
+        }
+      });
+    }
+  });
+})();
+</script>
+
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="../../index.html">
+        <span>← All Skills</span>
+        <span>/</span>
+        <strong>qwen</strong>
+        <span>/</span>
+        <strong>design-range-spectrum</strong>
+      </a>
+      <div class="topbar-actions">
+        <a class="nav-pill" href="SKILL.md">SKILL.md</a>
+        <a class="nav-pill" href="skill.json">skill.json</a>
+        <a class="nav-pill" href="evals/smoke.json">evals/smoke.json</a>
+        <button type="button" id="theme-toggle" class="pill-btn" aria-label="Toggle light or dark mode">☀ Light mode</button>
+      </div>
+    </header>
+
+    <section class="meta-bar" aria-label="Skill harness metadata">
+      <div class="meta-card">
+        <div class="meta-label">Skill ID</div>
+        <div class="meta-value"><span class="status-dot"></span>design-range-spectrum</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Domain Folder</div>
+        <div class="meta-value">qwen/ (Qwen (Research, Specs &amp; Prompting))</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Harness Cost Tier</div>
+        <div class="meta-value">free</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Verify Command ($0)</div>
+        <div class="meta-value">python3 scripts/harness.py verify design-range-spectrum --smoke</div>
+      </div>
+    </section>
+
+    <article>
+      <h1>Dynamic Design Range &amp; Interaction Specs (&quot;Charm&quot;)</h1>
+<pre data-lang="text"><code>skill / design-range-spectrum
+────────────────────────────────────────────────────────────────────
+mode      standalone design-space parameterization &amp; interaction spec
+input     category references / brand brief / design direction
+output    spectrum matrix + 7-chapter pacing plan + &quot;Charm&quot; interaction specs</code></pre>
+<p>Structure a design category across an explicit <strong>Dynamic Design Spectrum</strong> (<code>Minimal → Structured → Opinionated</code>), define <strong>7-chapter editorial page pacing</strong>, and specify section-level micro-interactions, touch targets, and React state ownership (&quot;Charm&quot;).</p>
+<h2>Inputs</h2>
+<ul>
+<li>Category references, mood board, or brand brief.</li>
+<li>Reference interaction and responsive contracts: <a href="./references/react-interaction-contract.md">react-interaction-contract.md</a> and <a href="./references/react-mobile-contract.md">react-mobile-contract.md</a>.</li>
+</ul>
+<h2>Work</h2>
+<h3>A. Parameterize the Dynamic Design Spectrum (<code>Minimal → Structured → Opinionated</code>)</h3>
+<ol>
+<li><strong>Map category archetypes across explicit stylistic poles.</strong></li>
+</ol>
+<p>Define each pole with concrete visual, typographic, grid, and material constraints so concepts never collapse into one generic template:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Spectrum Pole</th><th>Archetype Character</th><th>Grid &amp; Spacing Rhythm</th><th>Typography &amp; Surface Treatment</th></tr></thead>
+<tbody>
+<tr><td><strong>Minimal</strong> (<em>Quiet &amp; Atmospheric</em>)</td><td>Architectural calm, unboxed silhouettes floating on warm paper or ivory, generous empty columns</td><td><code>192–240px</code> desktop chapter gaps (<code>72–96px</code> mobile); asymmetric <code>8/3</code> and <code>9/2</code> splits</td><td>Lowercase monumental or tracked light sans + quiet book serif; subtle hairline rules</td></tr>
+<tr><td><strong>Structured</strong> (<em>Editorial &amp; Systematized</em>)</td><td>Split editorial mastheads, numbered rituals/indexes, ruled schedules, clear tabular hierarchy</td><td><code>144–192px</code> desktop chapter gaps (<code>48–72px</code> mobile); 12-column <code>7/4</code> and <code>7/3/2</code> splits with <code>32–64px</code> intra-chapter gaps</td><td>Expressive roman/italic editorial serif + tracked sans micro-labels (<code>01 / STEP</code>)</td></tr>
+<tr><td><strong>Opinionated</strong> (<em>High-Contrast &amp; Tactile</em>)</td><td>Full-bleed sunlit campaign photography, edge-to-edge lower display lines, rich tactile materials</td><td>Full-viewport hero at natural aspect ratio + bold scale contrast between hero and unboxed touts</td><td>Oversized heavy condensed/wide display + tactile leather, oxblood, amber glass, cocoa</td></tr>
+</tbody>
+</table></div>
+<ol>
+<li><strong>Define authored palette directions and semantic CSS tokens.</strong></li>
+</ol>
+<ul>
+<li>Preserve distinct palette families (such as <strong>Terracotta</strong>, <strong>Orchard</strong>, <strong>Rosette</strong>, <strong>Moss</strong>, <strong>Honey</strong>, <strong>Citron</strong>, <strong>Apricot</strong>, <strong>Burgundy</strong>, <strong>Cocoa</strong>, and <strong>Coral</strong>) rather than flattening warm palettes into uniform beige or sepia.</li>
+<li>Bind every concept&#x27;s UI palette to 8 semantic CSS custom properties:</li>
+<li><code>--surface</code>, <code>--surface-raised</code>, <code>--ink</code>, <code>--muted</code>, <code>--accent</code>, <code>--accent-alt</code>, <code>--on-accent</code>, <code>--border</code></li>
+</ul>
+<ol>
+<li><strong>Consolidate long-scroll page pacing into 7 major compositions (not 10 repetitive bands).</strong></li>
+</ol>
+<ul>
+<li>Keep the hero composition at its natural aspect ratio—never stretch a hero vertically to make a taller page.</li>
+<li>Structure full pages around <strong>7 distinct chapters</strong> with intentional negative space:</li>
+</ul>
+<ol>
+<li><strong>Chapter 01 — Signature Hero</strong>: Natural aspect ratio, brand wordmark, primary story, and core selector/CTA.</li>
+<li><strong>Chapter 02 — Unboxed Product Range or Unequal Project Pair</strong>: Three unboxed product choices on warm surface, or two unequal project photographs (<code>55%</code> primary + offset secondary) followed by a text-only third entry.</li>
+<li><strong>Chapter 03 — Asymmetric Capacity / Ritual / Detail Story</strong>: <code>7/3/2</code> or <code>7/4</code> placement with an intentional empty column.</li>
+<li><strong>Chapter 04 — Material, Craft, or Process Spread</strong>: Tactile close-ups with embedded workshop/approach links.</li>
+<li><strong>Chapter 05 — Offset Editorial / Community Spread</strong>: Magazine-style asymmetric imagery and field notes.</li>
+<li><strong>Chapter 06 — Hairline Care / Help Disclosure Pause</strong>: Native <code>&lt;details&gt;/&lt;summary&gt;</code> rows (<code>48px</code> minimum summary height) with generous breathing room.</li>
+<li><strong>Chapter 07 — Quiet Newsletter &amp; Complete Grounded Footer</strong>: Persistent visible input label, explicit submit, and full route/anchor navigation footer.</li>
+</ol>
+<h3>B. Specify Section-Level Interaction &amp; Touch Areas (&quot;Charm&quot;)</h3>
+<ol>
+<li><strong>Assign deterministic motion, pointer, touch, and state rules per section.</strong></li>
+</ol>
+<ul>
+<li><strong>Native vertical scroll</strong>: No scroll hijacking, no forced horizontal sections, no scroll-triggered selection, no pinned multi-screen scenes, and no auto-advancing carousels.</li>
+<li><strong>Single entrance settle</strong>: Hero, navigation, forms, and essential copy render immediately (<code>opacity: 1</code>). Secondary image/copy groups settle <code>translateY(12px → 0)</code> over <code>600ms</code> with <code>--ease-editorial: cubic-bezier(0.22, 1, 0.36, 1)</code> once at <code>15%</code> viewport visibility (<code>useInView({ once: true, amount: 0.15 })</code>).</li>
+<li><strong>Fine-pointer hover (<code>@media (hover: hover) and (pointer: fine)</code>)</strong>:</li>
+<li>Product tout alternate view crossfades in <code>240ms</code>.</li>
+<li>Project tout photograph scales to <code>1.018</code> over <code>500ms var(--ease-editorial)</code>.</li>
+<li>Directional arrow translates <code>4px</code> in <code>180ms</code>; editorial link underline reveals in <code>180ms</code>.</li>
+<li>Hover previews affordance only and <strong>never</strong> commits data or hides essential copy/prices.</li>
+<li><strong>Touch, keyboard, and reduced-motion parity</strong>:</li>
+<li>Minimum <code>44 × 44 CSS px</code> touch targets (<code>48px</code> row height for disclosures); <code>24px</code> mobile side gutters (<code>20px</code> at <code>320px</code>).</li>
+<li>Visible <code>2px solid currentColor</code> focus ring with <code>4px</code> offset (<code>:focus-visible</code>); focus never auto-selects a product, step, or filter—explicit activation does.</li>
+<li>Never nest <code>&lt;button&gt;</code> swatches inside <code>&lt;a&gt;</code> product cards; keep sibling controls separate in the DOM.</li>
+<li>Under <code>@media (prefers-reduced-motion: reduce)</code>, disable all translate, scale, parallax, and scroll smoothing immediately (<code>transition: none !important; transform: none !important</code>).</li>
+<li><strong>Authoritative React state ownership</strong>:</li>
+<li>Assign one state owner per interactive module (<code>ProductRange</code> → <code>selectedVariantByProduct</code>; <code>PackSelector</code> → <code>selectedPackId</code>; <code>RitualSteps</code> → <code>selectedStepId</code>; <code>ProjectIndex</code> → URL search parameters <code>?category=...&amp;view=list</code>). Derived prices, unit counts, images, and <code>href</code> links are computed from that single state record.</li>
+</ul>
+<h2>Input → Output Example</h2>
+<p><strong>Sample Input</strong>:</p>
+<pre data-lang="text"><code>&quot;Structure our design range across Minimal (Oriel spatial practice), Structured (Rill &amp; Rye bakery), and Opinionated (Avela leather atelier), and specify the Charm interaction rules for the product/pack selectors.&quot;</code></pre>
+<p><strong>Expected Output (Spectrum + Charm Contract Excerpt)</strong>:</p>
+<pre data-lang="markdown"><code>| Concept | Pole | Desktop / Mobile Chapter Gap | Semantic Tokens (`--surface` / `--ink` / `--accent`) | Primary Interactive Owner | Fine-Pointer Hover | Touch / Keyboard Contract |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Oriel** | Minimal | `192–240px` / `72–96px` | `#F6F2EB` / `#1C1917` / `#8C5A3C` | `ProjectIndex` (URL `?category=`) | Photo `scale(1.018)` in `500ms` | `44×44px` filter pills; Back restores URL |
+| **Rill &amp; Rye** | Structured | `144–192px` / `48–72px` | `#FAF6F0` / `#231F1C` / `#B85D3B` | `ReservationPanel` (`selectedLoafId`) | Link underline in `180ms` | Native `&lt;select&gt;` + `44px` button |
+| **Avela** | Opinionated | `144–192px` / `48–72px` | `#F7F3EE` / `#181311` / `#5C1D24` | `ProductRange` (`selectedVariant`) | Alternate bag view in `240ms` | `&lt;fieldset&gt;` radios outside `&lt;a&gt;` card |</code></pre>
+<h2>Result</h2>
+<p>Deliver the <strong>Design Range Spectrum Matrix</strong>, <strong>7-Chapter Pacing Plan</strong>, and <strong>Section-Level &quot;Charm&quot; Interaction Specification</strong>.</p>
+<h3>Verification</h3>
+<ul class="checklist">
+<li><span class="check-box"></span><span>Spectrum poles (<code>Minimal</code>, <code>Structured</code>, <code>Opinionated</code>) are mapped to concrete reference URLs, typography, and <code>--surface</code> / <code>--ink</code> / <code>--accent</code> tokens.</span></li>
+<li><span class="check-box"></span><span>Full-page websites consolidate content into 7 varied compositions with explicit CSS chapter pauses (<code>144–192px</code> desktop / <code>48–72px</code> mobile; <code>192–240px</code> / <code>72–96px</code> for architectural studies).</span></li>
+<li><span class="check-box"></span><span>Every interactive section specifies fine-pointer hover timing, <code>44×44px</code> touch targets, <code>:focus-visible</code> outline, <code>prefers-reduced-motion</code> behavior, semantic HTML primitive, and single-source React state owner.</span></li>
+</ul>
+    </article>
+
+    <footer class="footer-nav">
+      <a class="nav-pill" href="../../qwen/competitor-benchmarking/index.html">← competitor-benchmarking</a>
+      <a class="nav-pill" href="../../index.html">All 12 Standalone Skills</a>
+      <a class="nav-pill" href="../../qwen/prompt-builder-specs/index.html">prompt-builder-specs →</a>
+    </footer>
+  </div>
+</body>
+</html>

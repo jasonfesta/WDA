@@ -1,0 +1,59 @@
+{
+  "id": "google-font-selection",
+  "title": "Multimodal Google Font Selection & Top-5 Recommender",
+  "domain": "typography",
+  "domain_label": "Typography",
+  "path": "typography/google-font-selection",
+  "skill_md": "typography/google-font-selection/SKILL.md",
+  "html_page": "typography/google-font-selection/index.html",
+  "cost_tier": "free",
+  "summary": "Select and rank the Top 5 Google Fonts for any input artifact (image, video, code, or text brief) by classifying its design type, querying the full Google Fonts catalog, and outputting specimen URLs, CSS2 embed tags, variable axes, and 4 download methods.",
+  "inputs": [
+    {
+      "name": "artifact",
+      "type": "string",
+      "required": true,
+      "description": "Any input artifact: image (.png/.jpg/.webp), video (.mp4/.mov/.webm), code file (.tsx/.css), or text brief."
+    },
+    {
+      "name": "design_type",
+      "type": "string",
+      "required": false,
+      "description": "Optional explicit design type override (e.g., warm-editorial-luxury, modern-product-ui, technical-dev-data)."
+    }
+  ],
+  "outputs": [
+    {
+      "path": "font-recommendations.md",
+      "type": "markdown_table",
+      "required_columns": [
+        "Rank",
+        "Google Font Family",
+        "Category",
+        "Match Score",
+        "Variable Axes",
+        "Google Fonts Specimen URL",
+        "Companion Pairing"
+      ]
+    },
+    {
+      "path": "font-recommendations.json",
+      "type": "json",
+      "required_keys": [
+        "status",
+        "catalog_families_indexed",
+        "artifact_analysis",
+        "top_5_recommendations"
+      ]
+    }
+  ],
+  "references": [
+    "./references/google-fonts-taxonomy.md",
+    "./scripts/recommend_google_fonts.py",
+    "./scripts/test_google_font_skill.py"
+  ],
+  "commands": {
+    "prompt": "python3 scripts/harness.py prompt google-font-selection --input typography/google-font-selection/evals/smoke.json",
+    "verify": "python3 scripts/harness.py verify google-font-selection --smoke"
+  }
+}

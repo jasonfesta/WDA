@@ -1,0 +1,60 @@
+{
+  "id": "prompt-builder-specs",
+  "title": "Structured Markdown Specifications & Nano Banana 2 Prompt Builder",
+  "domain": "qwen",
+  "domain_label": "Qwen (Research, Specs & Prompting)",
+  "path": "qwen/prompt-builder-specs",
+  "skill_md": "qwen/prompt-builder-specs/SKILL.md",
+  "html_page": "qwen/prompt-builder-specs/index.html",
+  "cost_tier": "free",
+  "summary": "Author structured Markdown design specifications (1x Main Agent .md + 5\u201310x concept .md files) and 10-point Nano Banana 2 (1K) image generation prompts for expanding websites, mobile apps, or UI components into 5 complete pages, screens, or states.",
+  "inputs": [
+    {
+      "name": "concept_id",
+      "type": "string",
+      "required": true,
+      "description": "Stable concept reference ID (e.g., REF-001)."
+    },
+    {
+      "name": "source_image",
+      "type": "string",
+      "required": true,
+      "description": "Path and dimensions of the seed reference image."
+    },
+    {
+      "name": "category",
+      "type": "string",
+      "required": true,
+      "description": "Category: website, mobile, or component."
+    }
+  ],
+  "outputs": [
+    {
+      "path": "specs/main-agent.md",
+      "type": "markdown",
+      "required_patterns": [
+        "Nano Banana 2",
+        "1K"
+      ]
+    },
+    {
+      "path": "specs/01-concept.md",
+      "type": "markdown",
+      "required_patterns": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "30 \u00d7 22 \u00d7 10 cm"
+      ]
+    }
+  ],
+  "references": [
+    "./references/prompt-builder.md"
+  ],
+  "commands": {
+    "prompt": "python3 scripts/harness.py prompt prompt-builder-specs --input qwen/prompt-builder-specs/evals/smoke.json",
+    "verify": "python3 scripts/harness.py verify prompt-builder-specs --smoke"
+  }
+}

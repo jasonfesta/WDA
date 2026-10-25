@@ -1,0 +1,662 @@
+{
+  "schema_version": "1.0",
+  "name": "standalone-design-react-skills",
+  "google_antigravity_config": ".agents/skills.json",
+  "runner": "python3 scripts/harness.py",
+  "domains": [
+    "qwen",
+    "typography",
+    "image-gen",
+    "react",
+    "qa-eval"
+  ],
+  "skills": [
+    {
+      "id": "competitor-benchmarking",
+      "title": "Competitor Research Benchmarking",
+      "domain": "qwen",
+      "domain_label": "Qwen (Research, Specs & Prompting)",
+      "path": "qwen/competitor-benchmarking",
+      "skill_md": "qwen/competitor-benchmarking/SKILL.md",
+      "html_page": "qwen/competitor-benchmarking/index.html",
+      "cost_tier": "browser",
+      "summary": "Benchmark 15\u201325 live category websites and applications by capturing production URLs and full-viewport screenshots and evaluating both Visual Direction and Code/DOM Interactions.",
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "string",
+          "required": true,
+          "description": "Initial prompt, voice transcript, or seed mood board brief."
+        },
+        {
+          "name": "surface",
+          "type": "string",
+          "required": false,
+          "default": "websites",
+          "description": "Target surface: websites, apps, or components."
+        },
+        {
+          "name": "viewports",
+          "type": "array",
+          "required": false,
+          "default": [
+            "1440x900",
+            "390x844"
+          ],
+          "description": "Desktop and mobile capture viewports."
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/research.md",
+          "type": "markdown",
+          "required_patterns": [
+            "# ",
+            "Visual Direction",
+            "DOM"
+          ]
+        },
+        {
+          "path": "research/live-reference-register.md",
+          "type": "markdown_table",
+          "required_columns": [
+            "Ref ID",
+            "Brand & Production URL",
+            "Inspected",
+            "Archetype Pole",
+            "Evidence Level",
+            "Observed Visual Direction",
+            "Observed DOM / Interaction Pattern",
+            "Fenced-Off Source Claims"
+          ]
+        }
+      ],
+      "references": [
+        "./references/visual-review.md"
+      ],
+      "commands": {
+        "prompt": "python3 scripts/harness.py prompt competitor-benchmarking --input qwen/competitor-benchmarking/evals/smoke.json",
+        "verify": "python3 scripts/harness.py verify competitor-benchmarking --smoke"
+      }
+    },
+    {
+      "id": "design-range-spectrum",
+      "title": "Dynamic Design Range & Interaction Specs (\"Charm\")",
+      "domain": "qwen",
+      "domain_label": "Qwen (Research, Specs & Prompting)",
+      "path": "qwen/design-range-spectrum",
+      "skill_md": "qwen/design-range-spectrum/SKILL.md",
+      "html_page": "qwen/design-range-spectrum/index.html",
+      "cost_tier": "free",
+      "summary": "Parameterize a design category's stylistic spectrum across Minimal, Structured, and Opinionated poles, structure 7-chapter page pacing, and specify section-level micro-interactions and 44x44px touch contracts.",
+      "inputs": [
+        {
+          "name": "category_brief",
+          "type": "string",
+          "required": true,
+          "description": "Category references or brand direction to parameterize."
+        },
+        {
+          "name": "poles",
+          "type": "array",
+          "required": false,
+          "default": [
+            "Minimal",
+            "Structured",
+            "Opinionated"
+          ],
+          "description": "Stylistic poles across the design spectrum."
+        }
+      ],
+      "outputs": [
+        {
+          "path": "specs/design-range.md",
+          "type": "markdown",
+          "required_patterns": [
+            "Minimal",
+            "Structured",
+            "Opinionated",
+            "--surface",
+            "--ink",
+            "--accent",
+            "44",
+            "prefers-reduced-motion"
+          ]
+        }
+      ],
+      "references": [
+        "./references/react-interaction-contract.md",
+        "./references/react-mobile-contract.md"
+      ],
+      "commands": {
+        "prompt": "python3 scripts/harness.py prompt design-range-spectrum --input qwen/design-range-spectrum/evals/smoke.json",
+        "verify": "python3 scripts/harness.py verify design-range-spectrum --smoke"
+      }
+    },
+    {
+      "id": "prompt-builder-specs",
+      "title": "Structured Markdown Specifications & Nano Banana 2 Prompt Builder",
+      "domain": "qwen",
+      "domain_label": "Qwen (Research, Specs & Prompting)",
+      "path": "qwen/prompt-builder-specs",
+      "skill_md": "qwen/prompt-builder-specs/SKILL.md",
+      "html_page": "qwen/prompt-builder-specs/index.html",
+      "cost_tier": "free",
+      "summary": "Author structured Markdown design specifications (1x Main Agent .md + 5\u201310x concept .md files) and 10-point Nano Banana 2 (1K) image generation prompts for expanding websites, mobile apps, or UI components into 5 complete pages, screens, or states.",
+      "inputs": [
+        {
+          "name": "concept_id",
+          "type": "string",
+          "required": true,
+          "description": "Stable concept reference ID (e.g., REF-001)."
+        },
+        {
+          "name": "source_image",
+          "type": "string",
+          "required": true,
+          "description": "Path and dimensions of the seed reference image."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "required": true,
+          "description": "Category: website, mobile, or component."
+        }
+      ],
+      "outputs": [
+        {
+          "path": "specs/main-agent.md",
+          "type": "markdown",
+          "required_patterns": [
+            "Nano Banana 2",
+            "1K"
+          ]
+        },
+        {
+          "path": "specs/01-concept.md",
+          "type": "markdown",
+          "required_patterns": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "30 \u00d7 22 \u00d7 10 cm"
+          ]
+        }
+      ],
+      "references": [
+        "./references/prompt-builder.md"
+      ],
+      "commands": {
+        "prompt": "python3 scripts/harness.py prompt prompt-builder-specs --input qwen/prompt-builder-specs/evals/smoke.json",
+        "verify": "python3 scripts/harness.py verify prompt-builder-specs --smoke"
+      }
+    },
+    {
+      "id": "google-font-selection",
+      "title": "Multimodal Google Font Selection & Top-5 Recommender",
+      "domain": "typography",
+      "domain_label": "Typography",
+      "path": "typography/google-font-selection",
+      "skill_md": "typography/google-font-selection/SKILL.md",
+      "html_page": "typography/google-font-selection/index.html",
+      "cost_tier": "free",
+      "summary": "Select and rank the Top 5 Google Fonts for any input artifact (image, video, code, or text brief) by classifying its design type, querying the full Google Fonts catalog, and outputting specimen URLs, CSS2 embed tags, variable axes, and 4 download methods.",
+      "inputs": [
+        {
+          "name": "artifact",
+          "type": "string",
+          "required": true,
+          "description": "Any input artifact: image (.png/.jpg/.webp), video (.mp4/.mov/.webm), code file (.tsx/.css), or text brief."
+        },
+        {
+          "name": "design_type",
+          "type": "string",
+          "required": false,
+          "description": "Optional explicit design type override (e.g., warm-editorial-luxury, modern-product-ui, technical-dev-data)."
+        }
+      ],
+      "outputs": [
+        {
+          "path": "font-recommendations.md",
+          "type": "markdown_table",
+          "required_columns": [
+            "Rank",
+            "Google Font Family",
+            "Category",
+            "Match Score",
+            "Variable Axes",
+            "Google Fonts Specimen URL",
+            "Companion Pairing"
+          ]
+        },
+        {
+          "path": "font-recommendations.json",
+          "type": "json",
+          "required_keys": [
+            "status",
+            "catalog_families_indexed",
+            "artifact_analysis",
+            "top_5_recommendations"
+          ]
+        }
+      ],
+      "references": [
+        "./references/google-fonts-taxonomy.md",
+        "./scripts/recommend_google_fonts.py",
+        "./scripts/test_google_font_skill.py"
+      ],
+      "commands": {
+        "prompt": "python3 scripts/harness.py prompt google-font-selection --input typography/google-font-selection/evals/smoke.json",
+        "verify": "python3 scripts/harness.py verify google-font-selection --smoke"
+      }
+    },
+    {
+      "id": "nano-banana-image-gen",
+      "title": "Iterative Image Generation & Cleanup (Nano Banana 2)",
+      "domain": "image-gen",
+      "domain_label": "Image Gen & Comps",
+      "path": "image-gen/nano-banana-image-gen",
+      "skill_md": "image-gen/nano-banana-image-gen/SKILL.md",
+      "html_page": "image-gen/nano-banana-image-gen/index.html",
+      "cost_tier": "paid_api",
+      "summary": "Generate and edit UI screen comps, 4K multi-screen contact grids, targeted cleanup passes (cleanup-brief.md), and clean inpainted photographic background plates (*-clean-photo.png) using Nano Banana 2.",
+      "inputs": [
+        {
+          "name": "spec_path",
+          "type": "string",
+          "required": true,
+          "description": "Path to the structured Markdown spec or defective sheet."
+        },
+        {
+          "name": "execution_mode",
+          "type": "string",
+          "required": false,
+          "default": "4k_grid",
+          "description": "1_by_1 or 4k_grid (5312x3200 web, 4544x3748 mobile, 8192x2048 component)."
+        },
+        {
+          "name": "dry_run",
+          "type": "boolean",
+          "required": false,
+          "default": true,
+          "description": "Emit cleanup-brief.md and inpaint prompts without paid API calls."
+        }
+      ],
+      "outputs": [
+        {
+          "path": "cleanup-brief.md",
+          "type": "markdown",
+          "required_patterns": [
+            "200 ml",
+            "8% ALC/VOL",
+            "subtotal"
+          ]
+        },
+        {
+          "path": "layer-inpaint-prompts.md",
+          "type": "markdown",
+          "required_patterns": [
+            "clean-photo.png",
+            "Preserve"
+          ]
+        }
+      ],
+      "references": [
+        "./references/cleanup-brief.md",
+        "./references/warm-moodboard-build-brief.md"
+      ],
+      "commands": {
+        "prompt": "python3 scripts/harness.py prompt nano-banana-image-gen --input image-gen/nano-banana-image-gen/evals/smoke.json",
+        "verify": "python3 scripts/harness.py verify nano-banana-image-gen --smoke"
+      }
+    },
+    {
+      "id": "grid-comp-qa",
+      "title": "Grid & Comp Visual QA",
+      "domain": "qa-eval",
+      "domain_label": "QA Eval",
+      "path": "qa-eval/grid-comp-qa",
+      "skill_md": "qa-eval/grid-comp-qa/SKILL.md",
+      "html_page": "qa-eval/grid-comp-qa/index.html",
+      "cost_tier": "free",
+      "summary": "Audit generated Nano Banana 2 contact sheets and screen comps for canvas aspect-ratio fidelity (< 0.5% delta), native-pixel typography legibility, cross-screen state continuity, and CSS chapter-spacing overrides.",
+      "inputs": [
+        {
+          "name": "sheets",
+          "type": "array",
+          "required": true,
+          "description": "List of returned sheet dimensions and target aspect ratios."
+        }
+      ],
+      "outputs": [
+        {
+          "path": "review-notes.md",
+          "type": "markdown_table",
+          "required_columns": [
+            "Sheet",
+            "Native output",
+            "Ratio change",
+            "Gate Status",
+            "Review & Required Override"
+          ]
+        },
+        {
+          "path": "visual-review.md",
+          "type": "markdown",
+          "required_patterns": [
+            "144\u2013192",
+            "clean-photo.png"
+          ]
+        }
+      ],
+      "references": [
+        "./references/review-notes.md",
+        "./references/visual-review.md",
+        "./scripts/audit_comp_geometry.py"
+      ],
+      "commands": {
+        "prompt": "python3 scripts/harness.py prompt grid-comp-qa --input qa-eval/grid-comp-qa/evals/smoke.json",
+        "verify": "python3 scripts/harness.py verify grid-comp-qa --smoke"
+      }
+    },
+    {
+      "id": "design-package-handoff",
+      "title": "Complete Design Package Handoff",
+      "domain": "react",
+      "domain_label": "React Engineering",
+      "path": "react/design-package-handoff",
+      "skill_md": "react/design-package-handoff/SKILL.md",
+      "html_page": "react/design-package-handoff/index.html",
+      "cost_tier": "free",
+      "summary": "Consolidate research .md files, live reference registers, desktop and mobile breakpoint specs, normalized image crop coordinates, state/data fixtures, and approved screen comps into design-package.md and react-handoff.md.",
+      "inputs": [
+        {
+          "name": "components",
+          "type": "array",
+          "required": true,
+          "description": "Interactive components and website modules to specify."
+        },
+        {
+          "name": "crops",
+          "type": "object",
+          "required": false,
+          "description": "Normalized [x, y, width, height] image crop coordinates."
+        }
+      ],
+      "outputs": [
+        {
+          "path": "design-package.md",
+          "type": "markdown",
+          "required_patterns": [
+            "Live DOM Layer",
+            "Photographic",
+            "390px",
+            "1440px"
+          ]
+        },
+        {
+          "path": "react-handoff.md",
+          "type": "markdown_table",
+          "required_columns": [
+            "Component",
+            "Authoritative Inputs",
+            "Emitted Events",
+            "Host-Owned Services",
+            "Semantic Primitive"
+          ]
+        }
+      ],
+      "references": [
+        "./references/react-handoff.md",
+        "./references/react-interaction-contract.md",
+        "./references/react-mobile-contract.md"
+      ],
+      "commands": {
+        "prompt": "python3 scripts/harness.py prompt design-package-handoff --input react/design-package-handoff/evals/smoke.json",
+        "verify": "python3 scripts/harness.py verify design-package-handoff --smoke"
+      }
+    },
+    {
+      "id": "image-to-react-translation",
+      "title": "Clean Image-to-React Translation",
+      "domain": "react",
+      "domain_label": "React Engineering",
+      "path": "react/image-to-react-translation",
+      "skill_md": "react/image-to-react-translation/SKILL.md",
+      "html_page": "react/image-to-react-translation/index.html",
+      "cost_tier": "free",
+      "summary": "Translate screen comps, moodboards, or design packages into semantic React, TypeScript, and CSS with live DOM typography and controls, clean inpainted photographic background plates, uniform SVG crops, and on-demand Three.js WebGL scenes.",
+      "inputs": [
+        {
+          "name": "design_package",
+          "type": "string",
+          "required": true,
+          "description": "Path to design-package.md or build brief."
+        },
+        {
+          "name": "clean_plates",
+          "type": "array",
+          "required": false,
+          "default": [
+            "public/assets/website-layers/avela-clean-photo.png"
+          ],
+          "description": "Clean background plates for hero/editorial sections."
+        }
+      ],
+      "outputs": [
+        {
+          "path": "src/App.tsx",
+          "type": "tsx",
+          "required_patterns": [
+            "AreaProps",
+            "avela-clean-photo.png",
+            "SOFT FORM"
+          ]
+        }
+      ],
+      "references": [
+        "./references/original-image-prompt.md",
+        "./references/warm-moodboard-build-brief.md",
+        "./references/BUILD-PROMPT.md"
+      ],
+      "commands": {
+        "prompt": "python3 scripts/harness.py prompt image-to-react-translation --input react/image-to-react-translation/evals/smoke.json",
+        "verify": "python3 scripts/harness.py verify image-to-react-translation --smoke"
+      }
+    },
+    {
+      "id": "code-steering-checkpoints",
+      "title": "Code Steering & Worktree Control",
+      "domain": "react",
+      "domain_label": "React Engineering",
+      "path": "react/code-steering-checkpoints",
+      "skill_md": "react/code-steering-checkpoints/SKILL.md",
+      "html_page": "react/code-steering-checkpoints/index.html",
+      "cost_tier": "free",
+      "summary": "Steer code on foundational React screens before scaling across a multi-page application by classifying divergence from design comps and executing either Path A (Revert Drift to restore strict comp fidelity) or Path B (Freeze & Branch git worktree to capture, analyze, and promote emergent high-craft behavior).",
+      "inputs": [
+        {
+          "name": "divergences",
+          "type": "array",
+          "required": true,
+          "description": "Observed differences on the first 3\u20135 foundational screens."
+        }
+      ],
+      "outputs": [
+        {
+          "path": "steering-report.md",
+          "type": "markdown",
+          "required_patterns": [
+            "Path A (Revert Drift)",
+            "Path B (Freeze & Branch)",
+            "Current direction,"
+          ]
+        }
+      ],
+      "references": [
+        "./references/warm-moodboard-build-brief.md"
+      ],
+      "commands": {
+        "prompt": "python3 scripts/harness.py prompt code-steering-checkpoints --input react/code-steering-checkpoints/evals/smoke.json",
+        "verify": "python3 scripts/harness.py verify code-steering-checkpoints --smoke"
+      }
+    },
+    {
+      "id": "cleanup-evaluation-benchmarking",
+      "title": "Cleanup & Evaluation Benchmarking",
+      "domain": "qa-eval",
+      "domain_label": "QA Eval",
+      "path": "qa-eval/cleanup-evaluation-benchmarking",
+      "skill_md": "qa-eval/cleanup-evaluation-benchmarking/SKILL.md",
+      "html_page": "qa-eval/cleanup-evaluation-benchmarking/index.html",
+      "cost_tier": "free",
+      "summary": "Benchmark a live React implementation side-by-side against source design comps and run automated repository, SHA-256 asset checksum, local link, and state-math validation (validation.json).",
+      "inputs": [
+        {
+          "name": "workspace_dir",
+          "type": "string",
+          "required": true,
+          "description": "Path to the React or study workspace to validate."
+        }
+      ],
+      "outputs": [
+        {
+          "path": "validation.json",
+          "type": "json",
+          "required_keys": [
+            "status",
+            "asset_hashes_checked",
+            "local_links_checked",
+            "broken_local_links",
+            "fixture_totals",
+            "errors"
+          ]
+        }
+      ],
+      "references": [
+        "./references/verification.md",
+        "./references/warm-moodboard-build-brief.md",
+        "./references/react-handoff.md",
+        "./scripts/validate_workspace.py"
+      ],
+      "commands": {
+        "prompt": "python3 scripts/harness.py prompt cleanup-evaluation-benchmarking --input qa-eval/cleanup-evaluation-benchmarking/evals/smoke.json",
+        "verify": "python3 scripts/harness.py verify cleanup-evaluation-benchmarking --smoke"
+      }
+    },
+    {
+      "id": "viewport-performance-qa",
+      "title": "Viewport & Performance QA",
+      "domain": "qa-eval",
+      "domain_label": "QA Eval",
+      "path": "qa-eval/viewport-performance-qa",
+      "skill_md": "qa-eval/viewport-performance-qa/SKILL.md",
+      "html_page": "qa-eval/viewport-performance-qa/index.html",
+      "cost_tier": "browser",
+      "summary": "Verify cross-viewport responsiveness across desktop and mobile breakpoints (1440px, 1280px, 768px, 430px, 390px, 320px, and 200% text zoom) with zero horizontal overflow, 60fps scroll and WebGL lifecycle performance, reduced-motion compliance, and automated browser interaction checks (browser-checks.json and docs/verification.md).",
+      "inputs": [
+        {
+          "name": "preview_url",
+          "type": "string",
+          "required": true,
+          "description": "Localhost preview URL bound with --strictPort."
+        },
+        {
+          "name": "viewports",
+          "type": "array",
+          "required": false,
+          "default": [
+            "1440x1000",
+            "1280x900",
+            "768x1024",
+            "430x932",
+            "390x844",
+            "320x568"
+          ],
+          "description": "Target viewports to test for scrollWidth <= clientWidth."
+        }
+      ],
+      "outputs": [
+        {
+          "path": "browser-checks.json",
+          "type": "json",
+          "required_keys": [
+            "status",
+            "total",
+            "viewports",
+            "checks"
+          ]
+        },
+        {
+          "path": "docs/verification.md",
+          "type": "markdown",
+          "required_patterns": [
+            "npm run build",
+            "strict binding",
+            "390 \u00d7 844"
+          ]
+        }
+      ],
+      "references": [
+        "./references/browser-checks.json",
+        "./references/verification.md",
+        "./references/react-mobile-contract.md"
+      ],
+      "commands": {
+        "prompt": "python3 scripts/harness.py prompt viewport-performance-qa --input qa-eval/viewport-performance-qa/evals/smoke.json",
+        "verify": "python3 scripts/harness.py verify viewport-performance-qa --smoke"
+      }
+    },
+    {
+      "id": "linting-model-safe-packaging",
+      "title": "Linting & Model-Safe Packaging",
+      "domain": "qa-eval",
+      "domain_label": "QA Eval",
+      "path": "qa-eval/linting-model-safe-packaging",
+      "skill_md": "qa-eval/linting-model-safe-packaging/SKILL.md",
+      "html_page": "qa-eval/linting-model-safe-packaging/index.html",
+      "cost_tier": "free",
+      "summary": "Lint and package a React or design-study workspace into a verified single-archive .zip bundle (React Golden Template) with bundle.md and manifest.json, enforcing schema/syntax compliance across routes, .apx files, .js/.ts/.tsx modules, and configs while verifying binary PNG dimensions, SHA-256 hashes, and local links.",
+      "inputs": [
+        {
+          "name": "workspace_dir",
+          "type": "string",
+          "required": true,
+          "description": "Workspace root to lint and bundle."
+        }
+      ],
+      "outputs": [
+        {
+          "path": "bundle.md",
+          "type": "markdown",
+          "required_patterns": [
+            "Golden Template",
+            "SHA-256",
+            ".apx",
+            ".tsx"
+          ]
+        },
+        {
+          "path": "manifest.json",
+          "type": "json",
+          "required_keys": [
+            "title",
+            "status",
+            "validation"
+          ]
+        }
+      ],
+      "references": [
+        "./scripts/package_homepage_study.py",
+        "./scripts/package_app_study.py",
+        "./scripts/package_component_study.py"
+      ],
+      "commands": {
+        "prompt": "python3 scripts/harness.py prompt linting-model-safe-packaging --input qa-eval/linting-model-safe-packaging/evals/smoke.json",
+        "verify": "python3 scripts/harness.py verify linting-model-safe-packaging --smoke"
+      }
+    }
+  ]
+}

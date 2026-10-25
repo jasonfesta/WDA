@@ -1,0 +1,13 @@
+{
+  "skill_id": "nano-banana-image-gen",
+  "cost_tier": "paid_api",
+  "input": {
+    "spec_path": "specs/05-sundrop.md",
+    "execution_mode": "4k_grid",
+    "dry_run": true
+  },
+  "expected_output_files": {
+    "cleanup-brief.md": "## websites / sundrop\nApricot Aperitif is 200 ml, 8% ALC/VOL, never alcohol-free. Four-pack $24, eight-pack $44, twelve-pack $64. One four-pack at quantity 1 has subtotal $24.\n",
+    "layer-inpaint-prompts.md": "## public/assets/website-layers/sundrop-clean-photo.png\nRemove only overlaid website header, headline, and CTA. Preserve the sunlit apricot glass, shadow caustics, and printed SUNDROP can label.\n"
+  }
+}

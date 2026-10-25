@@ -1,0 +1,57 @@
+{
+  "id": "design-package-handoff",
+  "title": "Complete Design Package Handoff",
+  "domain": "react",
+  "domain_label": "React Engineering",
+  "path": "react/design-package-handoff",
+  "skill_md": "react/design-package-handoff/SKILL.md",
+  "html_page": "react/design-package-handoff/index.html",
+  "cost_tier": "free",
+  "summary": "Consolidate research .md files, live reference registers, desktop and mobile breakpoint specs, normalized image crop coordinates, state/data fixtures, and approved screen comps into design-package.md and react-handoff.md.",
+  "inputs": [
+    {
+      "name": "components",
+      "type": "array",
+      "required": true,
+      "description": "Interactive components and website modules to specify."
+    },
+    {
+      "name": "crops",
+      "type": "object",
+      "required": false,
+      "description": "Normalized [x, y, width, height] image crop coordinates."
+    }
+  ],
+  "outputs": [
+    {
+      "path": "design-package.md",
+      "type": "markdown",
+      "required_patterns": [
+        "Live DOM Layer",
+        "Photographic",
+        "390px",
+        "1440px"
+      ]
+    },
+    {
+      "path": "react-handoff.md",
+      "type": "markdown_table",
+      "required_columns": [
+        "Component",
+        "Authoritative Inputs",
+        "Emitted Events",
+        "Host-Owned Services",
+        "Semantic Primitive"
+      ]
+    }
+  ],
+  "references": [
+    "./references/react-handoff.md",
+    "./references/react-interaction-contract.md",
+    "./references/react-mobile-contract.md"
+  ],
+  "commands": {
+    "prompt": "python3 scripts/harness.py prompt design-package-handoff --input react/design-package-handoff/evals/smoke.json",
+    "verify": "python3 scripts/harness.py verify design-package-handoff --smoke"
+  }
+}

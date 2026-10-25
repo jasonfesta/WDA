@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>viewport-performance-qa — Standalone Antigravity Skill</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --bg: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-hover: #F4F4F6;
+  --surface-raised: #F0F0F4;
+  --ink: #18181B;
+  --ink-Strong: #09090B;
+  --muted: #686873;
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --accent: #09090B;
+  --accent-bg: #F4F4F6;
+  --pill-bg: #F1F1F4;
+  --code-bg: #F4F4F7;
+  --success: #059669;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #000000;
+    --surface: #0A0A0C;
+    --surface-hover: #121216;
+    --surface-raised: #141418;
+    --ink: #F4F4F6;
+    --ink-Strong: #FFFFFF;
+    --muted: #8E8E98;
+    --border: #1F1F26;
+    --border-strong: #2E2E38;
+    --accent: #FFFFFF;
+    --accent-bg: #18181F;
+    --pill-bg: #121217;
+    --code-bg: #08080A;
+    --success: #34D399;
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #0A0A0C;
+  --surface-hover: #121216;
+  --surface-raised: #141418;
+  --ink: #F4F4F6;
+  --ink-Strong: #FFFFFF;
+  --muted: #8E8E98;
+  --border: #1F1F26;
+  --border-strong: #2E2E38;
+  --accent: #FFFFFF;
+  --accent-bg: #18181F;
+  --pill-bg: #121217;
+  --code-bg: #08080A;
+  --success: #34D399;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Google Sans Flex", "Google Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+a {
+  color: var(--ink-Strong);
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms ease;
+}
+
+a:hover {
+  text-decoration-color: var(--ink-Strong);
+}
+
+.shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 28px 96px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.brand strong {
+  color: var(--ink-Strong);
+  font-weight: 600;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill-btn, .nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--pill-bg);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease;
+}
+
+.pill-btn:hover, .nav-pill:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+}
+
+.pill-btn:focus-visible, .nav-pill:focus-visible {
+  outline: 2px solid var(--ink-Strong);
+  outline-offset: 3px;
+}
+
+.meta-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.meta-card {
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.meta-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.meta-value {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: var(--ink-Strong);
+  word-break: break-all;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--success);
+  margin-right: 6px;
+}
+
+article h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--ink-Strong);
+  margin: 0 0 20px;
+}
+
+article h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink-Strong);
+  margin: 44px 0 14px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+article h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink-Strong);
+  margin: 28px 0 10px;
+}
+
+article p {
+  margin: 0 0 16px;
+  color: var(--ink);
+  max-width: 78ch;
+}
+
+article ul, article ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+article li {
+  margin-bottom: 8px;
+  max-width: 78ch;
+}
+
+ul.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin-bottom: 8px;
+}
+
+.check-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid var(--success);
+  background: rgba(52, 211, 153, 0.12);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+}
+
+.check-box::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--success);
+}
+
+code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  color: var(--ink-Strong);
+}
+
+pre {
+  margin: 0 0 22px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 0 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface-raised);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.domain-section {
+  margin-top: 48px;
+}
+
+.domain-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.domain-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  text-decoration: none;
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.skill-card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.skill-id {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--ink-Strong);
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.skill-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink-Strong);
+  margin: 0 0 8px;
+}
+
+.skill-card p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.skill-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-Strong);
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+</style>
+  
+<script>
+(function() {
+  const mqlDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  const saved = localStorage.getItem('antigravity-skills-theme');
+  const initial = saved || (mqlDark && mqlDark.matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', initial);
+  window.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function updateLabel(theme) {
+      btn.textContent = theme === 'dark' ? '☀ Light mode' : '☾ Dark mode';
+      btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+    }
+    updateLabel(document.documentElement.getAttribute('data-theme') || initial);
+    btn.addEventListener('click', function() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('antigravity-skills-theme', next);
+      updateLabel(next);
+    });
+    if (mqlDark && mqlDark.addEventListener) {
+      mqlDark.addEventListener('change', function(e) {
+        if (!localStorage.getItem('antigravity-skills-theme')) {
+          const autoNext = e.matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', autoNext);
+          updateLabel(autoNext);
+        }
+      });
+    }
+  });
+})();
+</script>
+
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="../../index.html">
+        <span>← All Skills</span>
+        <span>/</span>
+        <strong>qa-eval</strong>
+        <span>/</span>
+        <strong>viewport-performance-qa</strong>
+      </a>
+      <div class="topbar-actions">
+        <a class="nav-pill" href="SKILL.md">SKILL.md</a>
+        <a class="nav-pill" href="skill.json">skill.json</a>
+        <a class="nav-pill" href="evals/smoke.json">evals/smoke.json</a>
+        <button type="button" id="theme-toggle" class="pill-btn" aria-label="Toggle light or dark mode">☀ Light mode</button>
+      </div>
+    </header>
+
+    <section class="meta-bar" aria-label="Skill harness metadata">
+      <div class="meta-card">
+        <div class="meta-label">Skill ID</div>
+        <div class="meta-value"><span class="status-dot"></span>viewport-performance-qa</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Domain Folder</div>
+        <div class="meta-value">qa-eval/ (QA Eval)</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Harness Cost Tier</div>
+        <div class="meta-value">browser</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Verify Command ($0)</div>
+        <div class="meta-value">python3 scripts/harness.py verify viewport-performance-qa --smoke</div>
+      </div>
+    </section>
+
+    <article>
+      <h1>Viewport &amp; Performance QA</h1>
+<pre data-lang="text"><code>skill / viewport-performance-qa
+────────────────────────────────────────────────────────────────────
+mode      standalone responsive viewport, 60fps scroll &amp; browser QA
+input     running web / React application
+output    browser-checks.json + docs/verification.md + preview captures</code></pre>
+<p>Verify cross-viewport layout fidelity across desktop and mobile breakpoints (<code>1440px</code> down to <code>320px</code> plus <code>200%</code> text zoom), <code>60fps</code> scroll and Three.js WebGL lifecycle discipline, reduced-motion compliance, and the automated browser interaction matrix (<code>browser-checks.json</code> and <code>docs/verification.md</code>).</p>
+<h2>Inputs</h2>
+<ul>
+<li>Running web or React application bound to a local preview port.</li>
+<li>Canonical QA references: <a href="./references/browser-checks.json">browser-checks.json</a>, <a href="./references/verification.md">verification.md</a>, and <a href="./references/react-mobile-contract.md">react-mobile-contract.md</a>.</li>
+</ul>
+<h2>Work</h2>
+<ol>
+<li><strong>Verify cross-viewport geometry and zero horizontal overflow (<code>1440px → 320px</code> + <code>200%</code> text zoom).</strong></li>
+</ol>
+<ul>
+<li>Load every page route, focused study, and open drawer/popover across all target viewports:</li>
+<li><strong>Desktop</strong>: <code>1440 × 1000</code> and <code>1280 × 900</code></li>
+<li><strong>Tablet</strong>: <code>768 × 1024</code></li>
+<li><strong>Mobile</strong>: <code>430 × 932</code>, <code>390 × 844</code> (primary design target), and <code>320 × 568</code></li>
+<li><strong>Accessibility Zoom</strong>: <code>200%</code> text size</li>
+<li>In every viewport and state, assert programmatically in the browser:</li>
+</ul>
+<p>```js</p>
+<p>document.documentElement.scrollWidth &lt;= document.documentElement.clientWidth</p>
+<p>```</p>
+<p>and verify that every visible <code>&lt;img&gt;</code> satisfies <code>img.complete === true &amp;&amp; img.naturalWidth &gt; 0</code>.</p>
+<ul>
+<li>Confirm mobile reflow rules below <code>640px</code>:</li>
+<li>Single main column, <code>24px</code> side gutters (<code>20px</code> at <code>320px</code>), <code>16px</code> body/input text (<code>1.5–1.7</code> line-height), <code>32–40px</code> main headings.</li>
+<li>Chapter pauses: <code>48–72px</code> (<code>72–96px</code> for architectural studies). Secondary 2-product rows at <code>390px</code> stack cleanly to 1 column at <code>320px</code>.</li>
+<li>Mobile navigation opens in a labelled dialog (<code>role=&quot;dialog&quot;</code> / <code>aria-modal=&quot;true&quot;</code>) with explicit close button, <code>Escape</code> handler, focus return to trigger, and working mobile search.</li>
+<li>All interactive hit targets measure at least <code>44 × 44 CSS px</code> (<code>48px</code> for <code>&lt;details&gt;/&lt;summary&gt;</code> rows).</li>
+</ul>
+<ol>
+<li><strong>Audit <code>60fps</code> scroll, GPU-only transitions, and Three.js WebGL lifecycle.</strong></li>
+</ol>
+<ul>
+<li><strong>Native vertical scroll &amp; scroll-kit</strong>: Confirm smooth <code>60fps</code> vertical scrolling with zero scroll hijacking, zero pinned multi-screen traps, and zero cumulative layout shift (<code>CLS = 0</code>) when the sticky/overlay site header transitions after the hero sentinel.</li>
+<li><strong>GPU-safe animations &amp; reduced motion</strong>:</li>
+<li>Animate only <code>transform</code> and <code>opacity</code>; gate fine-pointer hover effects (<code>scale(1.018)</code>, <code>240ms</code> crossfade, <code>4px</code> arrow shift) behind <code>@media (hover: hover) and (pointer: fine)</code> in CSS rather than React state.</li>
+<li>Emulate <code>prefers-reduced-motion: reduce</code> and confirm all entrance translates, scales, parallax, and auto-rotations disable immediately (<code>transition: none !important; transform: none !important</code>).</li>
+<li><strong>WebGL lifecycle</strong>:</li>
+<li>Confirm idle board tiles render static <code>&lt;img&gt;</code> thumbnails (zero active WebGL contexts while idle).</li>
+<li>Hovering/focusing a tile or opening a study mounts a single Three.js renderer, renders on demand when camera/material/theme knobs change, pauses when <code>document.hidden</code> is true, and calls <code>.dispose()</code> on geometries, materials, textures, and the WebGL context upon close/unmount.</li>
+</ul>
+<ol>
+<li><strong>Execute the automated browser interaction matrix (<code>browser-checks.json</code>).</strong></li>
+</ol>
+<ul>
+<li>Run automated headless browser checks across all components, routes, and viewports (<code>1280×900</code> and <code>390×844</code>), covering:</li>
+<li><strong>State transition edges</strong>: Every directed state transition (<code>01 → 02</code>, <code>01 → 03</code>, <code>01 → 04</code>, <code>04 → 05</code>, and return to <code>01</code>) plus image/prompt/reference inspection tabs.</li>
+<li><strong>Interactive control matrix</strong>: Every unit toggle, day/period tab, checkbox row, swatch radio, shuffle/undo button, billing switch, and dock route link.</li>
+<li><strong>Global shell &amp; keyboard checks</strong>: <code>ArrowLeft</code>, <code>ArrowRight</code>, <code>Escape</code> focus return, deep-link URL restoration, and <code>layout 1280x900</code> / <code>layout 390x844</code> overflow checks.</li>
+<li>Assert <strong>zero</strong> <code>console.error</code>, <code>console.warn</code>, or uncaught <code>pageerror</code> events across the entire run.</li>
+<li>Clear any temporary test bag or saved-item state through the UI, then capture <code>desktop-preview.jpg</code> (<code>1440×1000</code>) and <code>mobile-preview.jpg</code> (<code>390×844</code>) and write <code>docs/verification.md</code>.</li>
+</ul>
+<h2>Input → Output Example</h2>
+<p><strong>Sample Input</strong>:</p>
+<pre data-lang="text"><code>&quot;Run the headless browser QA matrix across all 6 components and the global shell at 1280x900 and 390x844, and output browser-checks.json + docs/verification.md.&quot;</code></pre>
+<p><strong>Expected Output (<code>browser-checks.json</code> excerpt)</strong>:</p>
+<pre data-lang="json"><code>{
+  &quot;date&quot;: &quot;2026-10-21&quot;,
+  &quot;status&quot;: &quot;pass&quot;,
+  &quot;total&quot;: 181,
+  &quot;viewports&quot;: [
+    { &quot;width&quot;: 1280, &quot;height&quot;: 900 },
+    { &quot;width&quot;: 390, &quot;height&quot;: 844 }
+  ],
+  &quot;checks&quot;: [
+    { &quot;component&quot;: &quot;sol&quot;, &quot;test&quot;: &quot;01-today → 02-fahrenheit&quot;, &quot;pass&quot;: true },
+    { &quot;component&quot;: &quot;gather&quot;, &quot;test&quot;: &quot;control person-0..3 &amp; avatar sync&quot;, &quot;pass&quot;: true },
+    { &quot;component&quot;: &quot;shell&quot;, &quot;test&quot;: &quot;layout 1280x900&quot;, &quot;pass&quot;: true },
+    { &quot;component&quot;: &quot;shell&quot;, &quot;test&quot;: &quot;layout 390x844&quot;, &quot;pass&quot;: true }
+  ]
+}</code></pre>
+<h2>Result</h2>
+<p>Deliver <code>browser-checks.json</code> (<code>&quot;status&quot;: &quot;pass&quot;</code>), <code>docs/verification.md</code>, <code>desktop-preview.jpg</code>, and <code>mobile-preview.jpg</code>.</p>
+<h3>Verification</h3>
+<ul class="checklist">
+<li><span class="check-box"></span><span><code>scrollWidth &lt;= clientWidth</code> passes at <code>1440px</code>, <code>1280px</code>, <code>768px</code>, <code>430px</code>, <code>390px</code>, <code>320px</code>, and <code>200%</code> text zoom.</span></li>
+<li><span class="check-box"></span><span><code>browser-checks.json</code> records <code>&quot;status&quot;: &quot;pass&quot;</code> across all state transitions, interactive controls, keyboard bindings, and responsive viewports with zero console errors.</span></li>
+<li><span class="check-box"></span><span><code>docs/verification.md</code> documents the build, test, port-isolation, interaction checks, and clean desktop/mobile preview captures.</span></li>
+</ul>
+    </article>
+
+    <footer class="footer-nav">
+      <a class="nav-pill" href="../../qa-eval/cleanup-evaluation-benchmarking/index.html">← cleanup-evaluation-benchmarking</a>
+      <a class="nav-pill" href="../../index.html">All 12 Standalone Skills</a>
+      <a class="nav-pill" href="../../qa-eval/linting-model-safe-packaging/index.html">linting-model-safe-packaging →</a>
+    </footer>
+  </div>
+</body>
+</html>

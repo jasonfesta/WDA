@@ -1,0 +1,39 @@
+{
+  "skill_id": "grid-comp-qa",
+  "cost_tier": "free",
+  "input": {
+    "sheets": [
+      {
+        "name": "websites/stillhaven",
+        "width": 5312,
+        "height": 3200,
+        "target_ratio": [
+          5,
+          3
+        ]
+      },
+      {
+        "name": "websites/virel",
+        "width": 4096,
+        "height": 4096,
+        "target_ratio": [
+          5,
+          3
+        ]
+      },
+      {
+        "name": "components/palette",
+        "width": 3456,
+        "height": 4936,
+        "target_ratio": [
+          700,
+          1000
+        ]
+      }
+    ]
+  },
+  "expected_output_files": {
+    "review-notes.md": "| Sheet | Native output | Ratio change | Gate Status | Review & Required Override |\n| :--- | :--- | :--- | :--- | :--- |\n| `websites/stillhaven` | `5312 \u00d7 3200` | `0.3838%` | **PASS (Geometry)** | Replace malformed body copy with live DOM text; enforce `144\u2013192px` CSS chapter gaps. |\n| `websites/virel` | `4096 \u00d7 4096` | `39.9902%` | **HOLD (Geometry Fail)** | Returned a `1:1` square sheet instead of `5:3`. Do not auto-slice. |\n| `components/palette` | `3456 \u00d7 4936` | `0.0232%` | **PASS** | 5 trays retain natural proportions and selection rings (`2, 3, 2, 1, 3`). |\n",
+    "visual-review.md": "# Visual Review & DOM Overrides\n\nUse approved original headers (`*-clean-photo.png`) and enforce `144\u2013192px` desktop CSS chapter gaps.\n"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "skill_id": "design-range-spectrum",
+  "cost_tier": "free",
+  "input": {
+    "category_brief": "Structure our design range across Minimal (Oriel spatial practice), Structured (Rill & Rye bakery), and Opinionated (Avela leather atelier), and specify the Charm interaction rules.",
+    "poles": [
+      "Minimal",
+      "Structured",
+      "Opinionated"
+    ]
+  },
+  "expected_output_files": {
+    "specs/design-range.md": "# Dynamic Design Range & Charm Specification\n\n| Concept | Pole | Desktop / Mobile Chapter Gap | Semantic Tokens (`--surface` / `--ink` / `--accent`) | Primary Interactive Owner | Fine-Pointer Hover | Touch / Keyboard Contract |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| **Oriel** | Minimal | `192\u2013240px` / `72\u201396px` | `#F6F2EB` / `#1C1917` / `#8C5A3C` | `ProjectIndex` (URL `?category=`) | Photo `scale(1.018)` in `500ms` | `44\u00d744px` filter pills; `prefers-reduced-motion` instant |\n| **Rill & Rye** | Structured | `144\u2013192px` / `48\u201372px` | `#FAF6F0` / `#231F1C` / `#B85D3B` | `ReservationPanel` (`selectedLoafId`) | Link underline in `180ms` | Native `<select>` + `44px` button |\n| **Avela** | Opinionated | `144\u2013192px` / `48\u201372px` | `#F7F3EE` / `#181311` / `#5C1D24` | `ProductRange` (`selectedVariant`) | Alternate bag view in `240ms` | `<fieldset>` radios outside `<a>` card |\n"
+  }
+}

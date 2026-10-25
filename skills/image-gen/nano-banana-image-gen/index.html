@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nano-banana-image-gen — Standalone Antigravity Skill</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --bg: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-hover: #F4F4F6;
+  --surface-raised: #F0F0F4;
+  --ink: #18181B;
+  --ink-Strong: #09090B;
+  --muted: #686873;
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --accent: #09090B;
+  --accent-bg: #F4F4F6;
+  --pill-bg: #F1F1F4;
+  --code-bg: #F4F4F7;
+  --success: #059669;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #000000;
+    --surface: #0A0A0C;
+    --surface-hover: #121216;
+    --surface-raised: #141418;
+    --ink: #F4F4F6;
+    --ink-Strong: #FFFFFF;
+    --muted: #8E8E98;
+    --border: #1F1F26;
+    --border-strong: #2E2E38;
+    --accent: #FFFFFF;
+    --accent-bg: #18181F;
+    --pill-bg: #121217;
+    --code-bg: #08080A;
+    --success: #34D399;
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #0A0A0C;
+  --surface-hover: #121216;
+  --surface-raised: #141418;
+  --ink: #F4F4F6;
+  --ink-Strong: #FFFFFF;
+  --muted: #8E8E98;
+  --border: #1F1F26;
+  --border-strong: #2E2E38;
+  --accent: #FFFFFF;
+  --accent-bg: #18181F;
+  --pill-bg: #121217;
+  --code-bg: #08080A;
+  --success: #34D399;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Google Sans Flex", "Google Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+a {
+  color: var(--ink-Strong);
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms ease;
+}
+
+a:hover {
+  text-decoration-color: var(--ink-Strong);
+}
+
+.shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 28px 96px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.brand strong {
+  color: var(--ink-Strong);
+  font-weight: 600;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill-btn, .nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--pill-bg);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease;
+}
+
+.pill-btn:hover, .nav-pill:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+}
+
+.pill-btn:focus-visible, .nav-pill:focus-visible {
+  outline: 2px solid var(--ink-Strong);
+  outline-offset: 3px;
+}
+
+.meta-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.meta-card {
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.meta-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.meta-value {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: var(--ink-Strong);
+  word-break: break-all;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--success);
+  margin-right: 6px;
+}
+
+article h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--ink-Strong);
+  margin: 0 0 20px;
+}
+
+article h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink-Strong);
+  margin: 44px 0 14px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+article h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink-Strong);
+  margin: 28px 0 10px;
+}
+
+article p {
+  margin: 0 0 16px;
+  color: var(--ink);
+  max-width: 78ch;
+}
+
+article ul, article ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+article li {
+  margin-bottom: 8px;
+  max-width: 78ch;
+}
+
+ul.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin-bottom: 8px;
+}
+
+.check-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid var(--success);
+  background: rgba(52, 211, 153, 0.12);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+}
+
+.check-box::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--success);
+}
+
+code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  color: var(--ink-Strong);
+}
+
+pre {
+  margin: 0 0 22px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 0 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface-raised);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.domain-section {
+  margin-top: 48px;
+}
+
+.domain-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.domain-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  text-decoration: none;
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.skill-card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.skill-id {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--ink-Strong);
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.skill-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink-Strong);
+  margin: 0 0 8px;
+}
+
+.skill-card p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.skill-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-Strong);
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+</style>
+  
+<script>
+(function() {
+  const mqlDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  const saved = localStorage.getItem('antigravity-skills-theme');
+  const initial = saved || (mqlDark && mqlDark.matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', initial);
+  window.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function updateLabel(theme) {
+      btn.textContent = theme === 'dark' ? '☀ Light mode' : '☾ Dark mode';
+      btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+    }
+    updateLabel(document.documentElement.getAttribute('data-theme') || initial);
+    btn.addEventListener('click', function() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('antigravity-skills-theme', next);
+      updateLabel(next);
+    });
+    if (mqlDark && mqlDark.addEventListener) {
+      mqlDark.addEventListener('change', function(e) {
+        if (!localStorage.getItem('antigravity-skills-theme')) {
+          const autoNext = e.matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', autoNext);
+          updateLabel(autoNext);
+        }
+      });
+    }
+  });
+})();
+</script>
+
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="../../index.html">
+        <span>← All Skills</span>
+        <span>/</span>
+        <strong>image-gen</strong>
+        <span>/</span>
+        <strong>nano-banana-image-gen</strong>
+      </a>
+      <div class="topbar-actions">
+        <a class="nav-pill" href="SKILL.md">SKILL.md</a>
+        <a class="nav-pill" href="skill.json">skill.json</a>
+        <a class="nav-pill" href="evals/smoke.json">evals/smoke.json</a>
+        <button type="button" id="theme-toggle" class="pill-btn" aria-label="Toggle light or dark mode">☀ Light mode</button>
+      </div>
+    </header>
+
+    <section class="meta-bar" aria-label="Skill harness metadata">
+      <div class="meta-card">
+        <div class="meta-label">Skill ID</div>
+        <div class="meta-value"><span class="status-dot"></span>nano-banana-image-gen</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Domain Folder</div>
+        <div class="meta-value">image-gen/ (Image Gen &amp; Comps)</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Harness Cost Tier</div>
+        <div class="meta-value">paid_api</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Verify Command ($0)</div>
+        <div class="meta-value">python3 scripts/harness.py verify nano-banana-image-gen --smoke</div>
+      </div>
+    </section>
+
+    <article>
+      <h1>Iterative Image Generation &amp; Cleanup (Nano Banana 2)</h1>
+<pre data-lang="text"><code>skill / nano-banana-image-gen
+────────────────────────────────────────────────────────────────────
+mode      standalone Nano Banana 2 generation, cleanup &amp; layer inpainting
+input     Markdown specs / 10-point prompts / existing comps or sheets
+output    anchor comps + 4K grids / screen sets + *-clean-photo.png plates</code></pre>
+<p>Run <strong>Nano Banana 2</strong> image generation and editing tasks: lock Desktop + Mobile anchor screens, expand multi-page websites, mobile flows, or component state strips (individually or as 4K contact grids), run deterministic cleanup passes (<code>cleanup-brief.md</code>), and inpaint clean photographic background plates (<code>*-clean-photo.png</code>) for DOM layering.</p>
+<h2>Inputs</h2>
+<ul>
+<li>Structured <code>.md</code> specifications, 10-point prompts, or existing generated sheets/comps requiring cleanup or background-plate extraction.</li>
+<li>Canonical cleanup and layer-preparation references: <a href="./references/cleanup-brief.md">cleanup-brief.md</a> and <a href="./references/warm-moodboard-build-brief.md">warm-moodboard-build-brief.md</a>.</li>
+</ul>
+<h2>Work</h2>
+<ol>
+<li><strong>Generate and lock Anchor Screens (Desktop + Mobile breakpoints).</strong></li>
+</ol>
+<ul>
+<li>Render the initial anchor screen (<code>01-homepage</code> at desktop width and <code>mobile-01-homepage</code> at <code>390px</code> width, ~<code>3,200–3,510 CSS px</code> full height; or state <code>01</code> for apps/components) steered by the <code>.md</code> spec.</li>
+<li>Verify palette fidelity, display typography scale, hero crop, and signature product/architectural silhouette before generating secondary screens.</li>
+<li>Record uniform downsampling factors if an input reference is scaled for upload—<strong>never</strong> crop content or apply non-uniform X/Y scaling to input references.</li>
+</ul>
+<ol>
+<li><strong>Clone the locked anchor and expand (<code>1-by-1</code> or <code>4K Composite Grid</code>).</strong></li>
+</ol>
+<ul>
+<li>Pass the approved anchor screen as <strong>Input 1</strong> so downstream pages, tabs, or states inherit identical brand typography, surface tokens, hardware/material details, and navigation chrome:</li>
+<li><strong>Mode A — 1-by-1 Screen Rendering</strong>: Render each screen (<code>01–05</code>, or up to <code>35+</code> screens across a full product study) as an individual native image (<code>~724×2170</code> long desktop homepage, <code>874×1800</code> mobile screen with <code>os_chrome: false</code>, or natural component canvas).</li>
+<li><strong>Mode B — 4K Composite Grid Rendering</strong>: Render a unified multi-screen 4K contact sheet for cost efficiency (<code>~$0.16/sheet</code>) and slice post-generation:</li>
+<li><strong>Websites (5-page sheet)</strong>: <code>5312 × 3200</code> (<code>5:3</code> ratio) or <code>5332 × 3200</code>.</li>
+<li><strong>Mobile Apps (10-screen sheet)</strong>: <code>4544 × 3748</code> (2 rows × 5 screens, edge-to-edge, zero device bezels).</li>
+<li><strong>UI Components (5-state sheet)</strong>: <code>9280 × 1856</code> (wide horizontal strip), <code>8192 × 2048</code> (<code>4:1</code> strip), <code>7104 × 2368</code> (<code>3:1</code> strip), <code>3456 × 4936</code> (vertical stack), or <code>3648 × 4692</code> (vertical stack).</li>
+</ul>
+<ol>
+<li><strong>Execute targeted Cleanup Passes (<code>cleanup-brief.md</code>) — zero automatic paid reruns.</strong></li>
+</ol>
+<ul>
+<li>Never run blind automatic paid retries. Inspect returned sheets first and author a targeted cleanup prompt that locks all approved regions and repairs only specific copy, silhouette, or state-math defects:</li>
+<li><strong>Product &amp; architectural identity</strong>: Keep product silhouettes, colors, hardware clasps, and measurements (<code>30 × 22 × 10 cm</code>) identical across catalog, detail, campaign, and cart thumbnails. Keep architectural openings and materials consistent across views.</li>
+<li><strong>Arithmetic &amp; state consistency</strong>: Enforce exact agreement between quantity and subtotal (<code>1 × $420 = $420</code>), pack counts (<code>4-pack $24</code>, <code>8-pack $44</code>, <code>12-pack $64</code> with matching physical cans), timer progress (<code>05:00 elapsed / 15:00 remaining = 25%</code> with pause icon while playing), puzzle strips (<code>5 of 5 placed = 100%</code> with 5 physical aligned strips), collaborator counts (checked rows = footer count = trigger avatar stack), and segmented capacity bars (used segments + empty remainder = <code>100%</code> total capacity).</li>
+<li><strong>OS chrome removal</strong>: Strip any status-bar clocks, battery icons, notches, or home-indicator bars from mobile screens (<code>os_chrome: false</code>).</li>
+</ul>
+<ol>
+<li><strong>Generate clean photographic background plates (<code>*-clean-photo.png</code>) for React DOM layering.</strong></li>
+</ol>
+<ul>
+<li>Whenever hero or editorial typography/UI cards are baked across a photograph needed in React, run a targeted object-removal/inpainting pass that removes <strong>only</strong> overlaid interface lettering, progress marks, and UI cards while preserving subjects, architecture, lighting, and physical product labels (such as printed text on a can or bottle).</li>
+<li>Save clean derivatives to <code>public/assets/website-layers/&lt;brand&gt;-clean-photo.png</code> and keep the original source PNG untouched.</li>
+</ul>
+<h2>Input → Output Example</h2>
+<p><strong>Sample Input</strong>:</p>
+<pre data-lang="text"><code>&quot;1. Write a targeted cleanup prompt for the Sundrop 5-page website sheet where the 4-pack/8-pack/12-pack can counts and cart subtotal disagree.
+2. Write the inpaint prompt to produce public/assets/website-layers/sundrop-clean-photo.png.&quot;</code></pre>
+<p><strong>Expected Output (<code>cleanup-brief.md</code> + Layer Inpaint Prompt)</strong>:</p>
+<pre data-lang="markdown"><code>## websites / sundrop (Cleanup Brief)
+Apricot Aperitif is 200 ml, 8% ALC/VOL, never alcohol-free.
+Four-pack $24, eight-pack $44, twelve-pack $64. Pack images must contain the matching
+number of cans; catalog counts, product detail and cart must agree. One four-pack at
+quantity 1 has subtotal $24. Long serve uses 100 ml Sundrop plus 100 ml sparkling water.
+Keep orange/apricot ingredients and adult gathering imagery; no unrelated fruit/product.
+
+## website-layers / sundrop-clean-photo.png (Inpaint Prompt)
+Remove only the overlaid website header, &#x27;A SLOWER SIP / A BRIGHTER AFTERNOON&#x27; headline,
+&#x27;Find your first pour&#x27; button, taste profile text, and lower-left series index. Preserve
+the sunlit apricot glass, ice, shadow caustics, terracotta surface, and the physical
+printed SUNDROP label on the can without alteration.</code></pre>
+<h2>Result</h2>
+<p>Return all generated screen/grid PNGs, cleanup derivatives, clean background plates (<code>public/assets/website-layers/*-clean-photo.png</code>), and provenance metadata (input references, uniform scale factors, native pixel dimensions, and SHA-256 hashes).</p>
+<h3>Verification</h3>
+<ul class="checklist">
+<li><span class="check-box"></span><span>Desktop and Mobile anchor screens are locked prior to multi-page or 4K grid expansion.</span></li>
+<li><span class="check-box"></span><span>Original seed images remain untouched; all generated screens, grids, and clean plates are saved to versioned paths with recorded binary PNG dimensions and SHA-256 checksums.</span></li>
+<li><span class="check-box"></span><span>Mobile app screens are full-bleed square-cornered UI exports (<code>874×1800</code>) with <code>os_chrome: false</code>.</span></li>
+<li><span class="check-box"></span><span>Clean photographic background plates have zero baked UI text remaining where live DOM text will sit.</span></li>
+</ul>
+    </article>
+
+    <footer class="footer-nav">
+      <a class="nav-pill" href="../../typography/google-font-selection/index.html">← google-font-selection</a>
+      <a class="nav-pill" href="../../index.html">All 12 Standalone Skills</a>
+      <a class="nav-pill" href="../../qa-eval/grid-comp-qa/index.html">grid-comp-qa →</a>
+    </footer>
+  </div>
+</body>
+</html>

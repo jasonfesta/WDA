@@ -1,0 +1,11 @@
+{
+  "skill_id": "linting-model-safe-packaging",
+  "cost_tier": "free",
+  "input": {
+    "workspace_dir": "."
+  },
+  "expected_output_files": {
+    "bundle.md": "# React Golden Template Bundle Manifest\n\n- Payload verified: routes, `.apx` descriptors, `.ts` / `.tsx` modules, configs, and binary PNG SHA-256 checksums.\n",
+    "manifest.json": "{\n  \"title\": \"React Golden Template\",\n  \"maintainer\": \"Jason Festa\",\n  \"status\": \"verified\",\n  \"validation\": \"validation.json\"\n}\n"
+  }
+}

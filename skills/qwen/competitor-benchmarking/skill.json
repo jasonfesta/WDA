@@ -1,0 +1,68 @@
+{
+  "id": "competitor-benchmarking",
+  "title": "Competitor Research Benchmarking",
+  "domain": "qwen",
+  "domain_label": "Qwen (Research, Specs & Prompting)",
+  "path": "qwen/competitor-benchmarking",
+  "skill_md": "qwen/competitor-benchmarking/SKILL.md",
+  "html_page": "qwen/competitor-benchmarking/index.html",
+  "cost_tier": "browser",
+  "summary": "Benchmark 15\u201325 live category websites and applications by capturing production URLs and full-viewport screenshots and evaluating both Visual Direction and Code/DOM Interactions.",
+  "inputs": [
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": true,
+      "description": "Initial prompt, voice transcript, or seed mood board brief."
+    },
+    {
+      "name": "surface",
+      "type": "string",
+      "required": false,
+      "default": "websites",
+      "description": "Target surface: websites, apps, or components."
+    },
+    {
+      "name": "viewports",
+      "type": "array",
+      "required": false,
+      "default": [
+        "1440x900",
+        "390x844"
+      ],
+      "description": "Desktop and mobile capture viewports."
+    }
+  ],
+  "outputs": [
+    {
+      "path": "research/research.md",
+      "type": "markdown",
+      "required_patterns": [
+        "# ",
+        "Visual Direction",
+        "DOM"
+      ]
+    },
+    {
+      "path": "research/live-reference-register.md",
+      "type": "markdown_table",
+      "required_columns": [
+        "Ref ID",
+        "Brand & Production URL",
+        "Inspected",
+        "Archetype Pole",
+        "Evidence Level",
+        "Observed Visual Direction",
+        "Observed DOM / Interaction Pattern",
+        "Fenced-Off Source Claims"
+      ]
+    }
+  ],
+  "references": [
+    "./references/visual-review.md"
+  ],
+  "commands": {
+    "prompt": "python3 scripts/harness.py prompt competitor-benchmarking --input qwen/competitor-benchmarking/evals/smoke.json",
+    "verify": "python3 scripts/harness.py verify competitor-benchmarking --smoke"
+  }
+}

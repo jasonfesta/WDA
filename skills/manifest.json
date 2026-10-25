@@ -1,0 +1,454 @@
+{
+  "package": "standalone-design-react-skills",
+  "google_antigravity_verified": true,
+  "domains": [
+    "qwen",
+    "typography",
+    "image-gen",
+    "react",
+    "qa-eval"
+  ],
+  "skill_count": 12,
+  "skills": [
+    "qwen/competitor-benchmarking",
+    "qwen/design-range-spectrum",
+    "qwen/prompt-builder-specs",
+    "typography/google-font-selection",
+    "image-gen/nano-banana-image-gen",
+    "qa-eval/grid-comp-qa",
+    "react/design-package-handoff",
+    "react/image-to-react-translation",
+    "react/code-steering-checkpoints",
+    "qa-eval/cleanup-evaluation-benchmarking",
+    "qa-eval/viewport-performance-qa",
+    "qa-eval/linting-model-safe-packaging"
+  ],
+  "file_count": 85,
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 23003,
+      "sha256": "367a946d23303bcb0004bc5664e4de6ad44cc918c67f151fd384b596ffc62490"
+    },
+    {
+      "path": "harness.json",
+      "bytes": 23393,
+      "sha256": "05d61a5781c9d173c0543a8aa6fd4394ed82d2d3add1d037bbc940eaf3fa7156"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8654,
+      "sha256": "3974c46052c7dbb8a19306e64bd28c10a15c73689a5ad2aaa6b94ee40b5fdfae"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 5173,
+      "sha256": "edb99ae0bc26a914f60bad9fb03daa38866767c139d0357776a9b1f12e8eed93"
+    },
+    {
+      "path": ".agents/skills.json",
+      "bytes": 207,
+      "sha256": "b977f34407a86bc5ad59edcb2908aede4a9a3aed029884c36e1a1ed47665164f"
+    },
+    {
+      "path": "qwen/competitor-benchmarking/SKILL.md",
+      "bytes": 7044,
+      "sha256": "a708bcef8ef06a212fb2eae41b1e5b575e71dcf6197f99edbaa8ba12d53f6490"
+    },
+    {
+      "path": "qwen/competitor-benchmarking/evals/smoke.json",
+      "bytes": 1596,
+      "sha256": "0d731139e40b0801e369fc8c98b678c9c9d514c4b2b6746f12a90034517d87ca"
+    },
+    {
+      "path": "qwen/competitor-benchmarking/index.html",
+      "bytes": 20047,
+      "sha256": "f32116de8d0659a5a6b24c2d94549d6c9dc0868409a1f74e18adf06f4d4aea1f"
+    },
+    {
+      "path": "qwen/competitor-benchmarking/references/visual-review.md",
+      "bytes": 3283,
+      "sha256": "ec5420f4280765da9dcb320a73c6cf2b16c6650f69f78639e8082ce93dbdd279"
+    },
+    {
+      "path": "qwen/competitor-benchmarking/skill.json",
+      "bytes": 1986,
+      "sha256": "26dcda65a267f24d2a033d02125864327f5c9e6b6254f5be59c91e8521c9cd33"
+    },
+    {
+      "path": "qwen/design-range-spectrum/SKILL.md",
+      "bytes": 8832,
+      "sha256": "3640cf9b39b88a425ef6e003c2d0c3f5b1536c2335e0f2dec42430d949aff12e"
+    },
+    {
+      "path": "qwen/design-range-spectrum/evals/smoke.json",
+      "bytes": 1368,
+      "sha256": "2690be10cc169c802aeaeb50938c2b2877aec3a5971aba8cb978d2c902b1ed70"
+    },
+    {
+      "path": "qwen/design-range-spectrum/index.html",
+      "bytes": 22669,
+      "sha256": "b5cba98ee543def1359755da197ca3b18801687a357fa602075246cadbf9615f"
+    },
+    {
+      "path": "qwen/design-range-spectrum/references/react-interaction-contract.md",
+      "bytes": 9157,
+      "sha256": "9800a430d100d7affdeda73c8b0dd2947f986526f21c4d4c2b41bef77498afc9"
+    },
+    {
+      "path": "qwen/design-range-spectrum/references/react-mobile-contract.md",
+      "bytes": 4133,
+      "sha256": "e378258bb486f5e75ca8b778be0ddfbf19813d9257ea61768bd59d478954e7fc"
+    },
+    {
+      "path": "qwen/design-range-spectrum/skill.json",
+      "bytes": 1655,
+      "sha256": "cda385df04c29e86f53be3bd305cd33c3a52fd946c4fde35294ebe963c803a3d"
+    },
+    {
+      "path": "qwen/prompt-builder-specs/SKILL.md",
+      "bytes": 8446,
+      "sha256": "6fbc6102c9316389b4cd4a7e2c6bdc29bcd13a1c95eea07443631ed18dfd6efa"
+    },
+    {
+      "path": "qwen/prompt-builder-specs/evals/smoke.json",
+      "bytes": 895,
+      "sha256": "75226734b20ba5c6833872bb76d76c39bc0146b903a54cd2f057fcfd03508c8d"
+    },
+    {
+      "path": "qwen/prompt-builder-specs/index.html",
+      "bytes": 21707,
+      "sha256": "017a9976b964446b37f46df9b94dd751969d59d2080a6eab3fff45f882095645"
+    },
+    {
+      "path": "qwen/prompt-builder-specs/references/prompt-builder.md",
+      "bytes": 23872,
+      "sha256": "f587821a854e17582910cb79b9716516c51805f3da1aaab7ebdc032d896f39d2"
+    },
+    {
+      "path": "qwen/prompt-builder-specs/skill.json",
+      "bytes": 1791,
+      "sha256": "12af89ff26b9b1a95897ff36e3cbdd987c24b02ef828b320444df254a28fbc5c"
+    },
+    {
+      "path": "typography/google-font-selection/SKILL.md",
+      "bytes": 15259,
+      "sha256": "fdafc4bd22674e3133303726a19b921c7b81e0267699345d845a1e47de4feb0a"
+    },
+    {
+      "path": "typography/google-font-selection/evals/smoke.json",
+      "bytes": 2735,
+      "sha256": "3d27691161d4a98bad938511d2955652cb5fb5676a8cb2f08304a69336eb2df4"
+    },
+    {
+      "path": "typography/google-font-selection/index.html",
+      "bytes": 32398,
+      "sha256": "ceea13cca3a60e2b09d9c914275d1725fba0cffeeea2da93482740303d7eedb4"
+    },
+    {
+      "path": "typography/google-font-selection/references/google-fonts-taxonomy.md",
+      "bytes": 8224,
+      "sha256": "ddbb386d9b169970a5fdaceb00e6934acff14f0e2e4501642a3f07ed1b6cb440"
+    },
+    {
+      "path": "typography/google-font-selection/scripts/recommend_google_fonts.py",
+      "bytes": 97575,
+      "sha256": "35130d686dab645438408ce7d8ccf7d3c7b0f12133a2a596781b97f6db55c1bd"
+    },
+    {
+      "path": "typography/google-font-selection/scripts/test_google_font_skill.py",
+      "bytes": 10328,
+      "sha256": "a44f6c2729c4fff44324ec9cf33a4e6b1e5f77d79db82ba2f676a6fcd4f03778"
+    },
+    {
+      "path": "typography/google-font-selection/skill.json",
+      "bytes": 2013,
+      "sha256": "07ca1d8c07577e4e5a55d93299408c54ce2b131e2bd0e3880c0a239bd88daf9a"
+    },
+    {
+      "path": "typography/google-font-selection/specimen.html",
+      "bytes": 48113,
+      "sha256": "9829d2484626ce8943e48206ea1e67e986357fb40c062d416efe79291ff24e83"
+    },
+    {
+      "path": "image-gen/nano-banana-image-gen/SKILL.md",
+      "bytes": 7228,
+      "sha256": "dc8db0e7a4697caa26012fc1b2d96065d0b4205fce8c6dd180108d8620ad5a8b"
+    },
+    {
+      "path": "image-gen/nano-banana-image-gen/evals/smoke.json",
+      "bytes": 652,
+      "sha256": "cb380a4bc052d52d562fd1bd38ac0861366bc827ab74952148b10c9bdece0edb"
+    },
+    {
+      "path": "image-gen/nano-banana-image-gen/index.html",
+      "bytes": 20168,
+      "sha256": "44b295dc31abc9e62b090ca28d81ca4187c6a6a50032261b6f9a137307854f6e"
+    },
+    {
+      "path": "image-gen/nano-banana-image-gen/references/cleanup-brief.md",
+      "bytes": 11282,
+      "sha256": "d4427cfa4181cc7737a8c8e61e2ed43430e079b786a74780a6c8ed8692abad27"
+    },
+    {
+      "path": "image-gen/nano-banana-image-gen/references/warm-moodboard-build-brief.md",
+      "bytes": 64518,
+      "sha256": "e28427aef157acfadfcacf4bcc1da55463e62bf65683b07faa9d9d0d03fa3466"
+    },
+    {
+      "path": "image-gen/nano-banana-image-gen/skill.json",
+      "bytes": 1873,
+      "sha256": "f4da8db853d3ec4445745ae4c2b2b02d7630f4ffcec7f8f17bc614f11ae2c262"
+    },
+    {
+      "path": "react/code-steering-checkpoints/SKILL.md",
+      "bytes": 6906,
+      "sha256": "b7fd3fc5d0c4d0bc91d30b5cbf1ed1f59781d2a7b003a61fa7c8d9d14867cb45"
+    },
+    {
+      "path": "react/code-steering-checkpoints/evals/smoke.json",
+      "bytes": 932,
+      "sha256": "2d7276ff6e4e930e16a5682b01631b69c880f00f30b1013643696b4773e42187"
+    },
+    {
+      "path": "react/code-steering-checkpoints/index.html",
+      "bytes": 19828,
+      "sha256": "6a1edc5cf580d2ba8dc84e59a989c1e8b67db0d7b44bf21bf62733c4a57148d5"
+    },
+    {
+      "path": "react/code-steering-checkpoints/references/warm-moodboard-build-brief.md",
+      "bytes": 64518,
+      "sha256": "e28427aef157acfadfcacf4bcc1da55463e62bf65683b07faa9d9d0d03fa3466"
+    },
+    {
+      "path": "react/code-steering-checkpoints/skill.json",
+      "bytes": 1396,
+      "sha256": "f4bfe82bce79c2f4c49b9b832aa328992447482a701eb66193e735573f9748a6"
+    },
+    {
+      "path": "react/design-package-handoff/SKILL.md",
+      "bytes": 7600,
+      "sha256": "2e708fb39f7a2d92efdb7476130e6417dee9f33e03195ba202ef55aaa6494534"
+    },
+    {
+      "path": "react/design-package-handoff/evals/smoke.json",
+      "bytes": 1164,
+      "sha256": "2193ba0e9827431902177902779017a57e3b2c27d8efe425a2898c0017cca3ee"
+    },
+    {
+      "path": "react/design-package-handoff/index.html",
+      "bytes": 20675,
+      "sha256": "1438ef2141513a8eec41aebc3fbf98eaba4a9941e5e010f53a8813b9c69ca59e"
+    },
+    {
+      "path": "react/design-package-handoff/references/react-handoff.md",
+      "bytes": 5299,
+      "sha256": "065ba068f4627f4b4dcdbb54fb112dc8547f9c6a489e84c7a2812557d5b43878"
+    },
+    {
+      "path": "react/design-package-handoff/references/react-interaction-contract.md",
+      "bytes": 9157,
+      "sha256": "9800a430d100d7affdeda73c8b0dd2947f986526f21c4d4c2b41bef77498afc9"
+    },
+    {
+      "path": "react/design-package-handoff/references/react-mobile-contract.md",
+      "bytes": 4133,
+      "sha256": "e378258bb486f5e75ca8b778be0ddfbf19813d9257ea61768bd59d478954e7fc"
+    },
+    {
+      "path": "react/design-package-handoff/skill.json",
+      "bytes": 1760,
+      "sha256": "db547a6ad9c7f588ac36c56580fb38c287322039d6f61e74b5d38cbb833a0d06"
+    },
+    {
+      "path": "react/image-to-react-translation/SKILL.md",
+      "bytes": 7379,
+      "sha256": "de5ce54b77572fe9647ee8cb79dd15ff448e7891f7ea1229452ea4b0df4d8e24"
+    },
+    {
+      "path": "react/image-to-react-translation/evals/smoke.json",
+      "bytes": 773,
+      "sha256": "2f81a45d3d10fa2556142754fd1f0b019671d9af4ec63b0f448263f7e987c637"
+    },
+    {
+      "path": "react/image-to-react-translation/index.html",
+      "bytes": 20721,
+      "sha256": "d0d656f5a341a54abdc52a715c5f8bed2641e139a5fb0e44d9af6bce1aec997b"
+    },
+    {
+      "path": "react/image-to-react-translation/references/BUILD-PROMPT.md",
+      "bytes": 1403,
+      "sha256": "43e7dbdb198c4f84dce5b39279c29fc27519034e38f9c8da4a0fe740870bb2c5"
+    },
+    {
+      "path": "react/image-to-react-translation/references/original-image-prompt.md",
+      "bytes": 5359,
+      "sha256": "df1d0068eddfe8e426bea40591b16fffed674b10054ce3429a630c2ddbe3991a"
+    },
+    {
+      "path": "react/image-to-react-translation/references/warm-moodboard-build-brief.md",
+      "bytes": 64518,
+      "sha256": "e28427aef157acfadfcacf4bcc1da55463e62bf65683b07faa9d9d0d03fa3466"
+    },
+    {
+      "path": "react/image-to-react-translation/skill.json",
+      "bytes": 1613,
+      "sha256": "a287e5ad0c8b645123685beee9b54862259c647313cc905b8661cd2f407acb29"
+    },
+    {
+      "path": "qa-eval/cleanup-evaluation-benchmarking/SKILL.md",
+      "bytes": 6759,
+      "sha256": "fab2a0b163ca6ba947b2b4cb5cc2035db33d158aa586518ee577ee1c89d59dc1"
+    },
+    {
+      "path": "qa-eval/cleanup-evaluation-benchmarking/evals/smoke.json",
+      "bytes": 433,
+      "sha256": "0cf643b1d1bae7fcacb17478a00e8cb3af8d7d4b509134d214b7b26efeddaf82"
+    },
+    {
+      "path": "qa-eval/cleanup-evaluation-benchmarking/index.html",
+      "bytes": 20123,
+      "sha256": "eaff70efcd2354916a1a1b7bd3d4b7287acbd7489c276cf8daf46ac14ce4d296"
+    },
+    {
+      "path": "qa-eval/cleanup-evaluation-benchmarking/references/react-handoff.md",
+      "bytes": 5299,
+      "sha256": "065ba068f4627f4b4dcdbb54fb112dc8547f9c6a489e84c7a2812557d5b43878"
+    },
+    {
+      "path": "qa-eval/cleanup-evaluation-benchmarking/references/verification.md",
+      "bytes": 1855,
+      "sha256": "c385c2268a12c49109647035b0065ea979606f5358d1e7baa72159aa9163de71"
+    },
+    {
+      "path": "qa-eval/cleanup-evaluation-benchmarking/references/warm-moodboard-build-brief.md",
+      "bytes": 64518,
+      "sha256": "e28427aef157acfadfcacf4bcc1da55463e62bf65683b07faa9d9d0d03fa3466"
+    },
+    {
+      "path": "qa-eval/cleanup-evaluation-benchmarking/scripts/validate_workspace.py",
+      "bytes": 4034,
+      "sha256": "1834125c792c66a13376f3a0c7ce9d608538eced840ae1b0acb70550c7a0300c"
+    },
+    {
+      "path": "qa-eval/cleanup-evaluation-benchmarking/skill.json",
+      "bytes": 1463,
+      "sha256": "657c2517f999d75b2d5511af47e66e6a64b578c77b62ad7c5d660cb686b3dfee"
+    },
+    {
+      "path": "qa-eval/grid-comp-qa/SKILL.md",
+      "bytes": 6179,
+      "sha256": "fb3219e82b0802200d3bae37d9e08894a0e2e4fbba61b7a63ba0d0b386fb0233"
+    },
+    {
+      "path": "qa-eval/grid-comp-qa/evals/smoke.json",
+      "bytes": 1413,
+      "sha256": "9fd20e5b076478d1a40bad6f2a379093a9cef00b9235455ff1f4c19b7ac79de8"
+    },
+    {
+      "path": "qa-eval/grid-comp-qa/index.html",
+      "bytes": 18979,
+      "sha256": "5056340daad002673d8ae7845fcda825f4cdc497299666502545f137a357536f"
+    },
+    {
+      "path": "qa-eval/grid-comp-qa/references/review-notes.md",
+      "bytes": 6256,
+      "sha256": "3d9f0e43c342ec7fb9d8bf21f99bc190d4debf89ac17e30affa85273ca9b5216"
+    },
+    {
+      "path": "qa-eval/grid-comp-qa/references/visual-review.md",
+      "bytes": 3283,
+      "sha256": "ec5420f4280765da9dcb320a73c6cf2b16c6650f69f78639e8082ce93dbdd279"
+    },
+    {
+      "path": "qa-eval/grid-comp-qa/scripts/audit_comp_geometry.py",
+      "bytes": 2648,
+      "sha256": "a48ce431702357f7479dd242d500c0c2e39f8dd282d74272f0e82ecfb2471d77"
+    },
+    {
+      "path": "qa-eval/grid-comp-qa/skill.json",
+      "bytes": 1439,
+      "sha256": "5e4d23c303349b311fbbf7d9cd2be1086c80a74c01da0b8e2815c6d0d00aae4a"
+    },
+    {
+      "path": "qa-eval/linting-model-safe-packaging/SKILL.md",
+      "bytes": 6946,
+      "sha256": "f46699aeecb7dda80da254c740ab6e77e6dc2571150fc937354ecd510c718cf7"
+    },
+    {
+      "path": "qa-eval/linting-model-safe-packaging/evals/smoke.json",
+      "bytes": 504,
+      "sha256": "264df78c051b7721f119cdf5c6876e2c7188324d5bf4a544afe69296d5010942"
+    },
+    {
+      "path": "qa-eval/linting-model-safe-packaging/index.html",
+      "bytes": 20546,
+      "sha256": "f9b14603d5111e6a9532138c226230834a6a854589cbf1b05fda67332a9d5031"
+    },
+    {
+      "path": "qa-eval/linting-model-safe-packaging/scripts/package_app_study.py",
+      "bytes": 5514,
+      "sha256": "8c69b1c7a61a20310a8268d8f591b417438c1680e0bfbc441b3a0e2a216de29c"
+    },
+    {
+      "path": "qa-eval/linting-model-safe-packaging/scripts/package_component_study.py",
+      "bytes": 4938,
+      "sha256": "f342803449daf7439b5173e0acc1b9f856b5bab70fbb98391989460392118b6f"
+    },
+    {
+      "path": "qa-eval/linting-model-safe-packaging/scripts/package_homepage_study.py",
+      "bytes": 2547,
+      "sha256": "19ed4824ee19ccac64cbe4f19e7763dbf0babdd64f111013bab8d70cdaf1bfc8"
+    },
+    {
+      "path": "qa-eval/linting-model-safe-packaging/skill.json",
+      "bytes": 1597,
+      "sha256": "6172910bd39ffda903403648e4c52c3bcdb3018175fde732a2d4719a292832c9"
+    },
+    {
+      "path": "qa-eval/viewport-performance-qa/SKILL.md",
+      "bytes": 6591,
+      "sha256": "dbad5d7910245efdffede9426ba53d1b9985d94a9e0f8637819e7cda75a38b33"
+    },
+    {
+      "path": "qa-eval/viewport-performance-qa/evals/smoke.json",
+      "bytes": 1157,
+      "sha256": "bdd23ec0da2164b6d77ad7e328acb11a8ece4729a881cfb6c1fa1a405bf9724f"
+    },
+    {
+      "path": "qa-eval/viewport-performance-qa/index.html",
+      "bytes": 20329,
+      "sha256": "88e966b51e022fe50ea34a9eeeb3af524834b801434085d94eb482831198bb66"
+    },
+    {
+      "path": "qa-eval/viewport-performance-qa/references/browser-checks.json",
+      "bytes": 20014,
+      "sha256": "3d8351a573f883b2f6d71a88176a138e2cd6d4cba91ded9aea234c3809473db9"
+    },
+    {
+      "path": "qa-eval/viewport-performance-qa/references/react-mobile-contract.md",
+      "bytes": 4133,
+      "sha256": "e378258bb486f5e75ca8b778be0ddfbf19813d9257ea61768bd59d478954e7fc"
+    },
+    {
+      "path": "qa-eval/viewport-performance-qa/references/verification.md",
+      "bytes": 1855,
+      "sha256": "c385c2268a12c49109647035b0065ea979606f5358d1e7baa72159aa9163de71"
+    },
+    {
+      "path": "qa-eval/viewport-performance-qa/skill.json",
+      "bytes": 1925,
+      "sha256": "23eace61b5dd71e6dc66fcc5db1ef48f7346605e5f27e594a90f646a8331abb0"
+    },
+    {
+      "path": "scripts/harness.py",
+      "bytes": 58175,
+      "sha256": "864b2b223d4586151079f3837d2a654e492c2b9903ae308a0024c78ed812c466"
+    },
+    {
+      "path": "scripts/check_skills.py",
+      "bytes": 22453,
+      "sha256": "26209b56823684a117bc31a57b37e792900fb86ec1f420b09585448d6ab1d97f"
+    }
+  ]
+}

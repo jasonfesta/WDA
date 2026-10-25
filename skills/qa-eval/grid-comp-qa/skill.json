@@ -1,0 +1,49 @@
+{
+  "id": "grid-comp-qa",
+  "title": "Grid & Comp Visual QA",
+  "domain": "qa-eval",
+  "domain_label": "QA Eval",
+  "path": "qa-eval/grid-comp-qa",
+  "skill_md": "qa-eval/grid-comp-qa/SKILL.md",
+  "html_page": "qa-eval/grid-comp-qa/index.html",
+  "cost_tier": "free",
+  "summary": "Audit generated Nano Banana 2 contact sheets and screen comps for canvas aspect-ratio fidelity (< 0.5% delta), native-pixel typography legibility, cross-screen state continuity, and CSS chapter-spacing overrides.",
+  "inputs": [
+    {
+      "name": "sheets",
+      "type": "array",
+      "required": true,
+      "description": "List of returned sheet dimensions and target aspect ratios."
+    }
+  ],
+  "outputs": [
+    {
+      "path": "review-notes.md",
+      "type": "markdown_table",
+      "required_columns": [
+        "Sheet",
+        "Native output",
+        "Ratio change",
+        "Gate Status",
+        "Review & Required Override"
+      ]
+    },
+    {
+      "path": "visual-review.md",
+      "type": "markdown",
+      "required_patterns": [
+        "144\u2013192",
+        "clean-photo.png"
+      ]
+    }
+  ],
+  "references": [
+    "./references/review-notes.md",
+    "./references/visual-review.md",
+    "./scripts/audit_comp_geometry.py"
+  ],
+  "commands": {
+    "prompt": "python3 scripts/harness.py prompt grid-comp-qa --input qa-eval/grid-comp-qa/evals/smoke.json",
+    "verify": "python3 scripts/harness.py verify grid-comp-qa --smoke"
+  }
+}

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>design-package-handoff — Standalone Antigravity Skill</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --bg: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-hover: #F4F4F6;
+  --surface-raised: #F0F0F4;
+  --ink: #18181B;
+  --ink-Strong: #09090B;
+  --muted: #686873;
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --accent: #09090B;
+  --accent-bg: #F4F4F6;
+  --pill-bg: #F1F1F4;
+  --code-bg: #F4F4F7;
+  --success: #059669;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #000000;
+    --surface: #0A0A0C;
+    --surface-hover: #121216;
+    --surface-raised: #141418;
+    --ink: #F4F4F6;
+    --ink-Strong: #FFFFFF;
+    --muted: #8E8E98;
+    --border: #1F1F26;
+    --border-strong: #2E2E38;
+    --accent: #FFFFFF;
+    --accent-bg: #18181F;
+    --pill-bg: #121217;
+    --code-bg: #08080A;
+    --success: #34D399;
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #0A0A0C;
+  --surface-hover: #121216;
+  --surface-raised: #141418;
+  --ink: #F4F4F6;
+  --ink-Strong: #FFFFFF;
+  --muted: #8E8E98;
+  --border: #1F1F26;
+  --border-strong: #2E2E38;
+  --accent: #FFFFFF;
+  --accent-bg: #18181F;
+  --pill-bg: #121217;
+  --code-bg: #08080A;
+  --success: #34D399;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Google Sans Flex", "Google Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+a {
+  color: var(--ink-Strong);
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms ease;
+}
+
+a:hover {
+  text-decoration-color: var(--ink-Strong);
+}
+
+.shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 28px 96px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.brand strong {
+  color: var(--ink-Strong);
+  font-weight: 600;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill-btn, .nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--pill-bg);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease;
+}
+
+.pill-btn:hover, .nav-pill:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+}
+
+.pill-btn:focus-visible, .nav-pill:focus-visible {
+  outline: 2px solid var(--ink-Strong);
+  outline-offset: 3px;
+}
+
+.meta-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.meta-card {
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.meta-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.meta-value {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: var(--ink-Strong);
+  word-break: break-all;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--success);
+  margin-right: 6px;
+}
+
+article h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--ink-Strong);
+  margin: 0 0 20px;
+}
+
+article h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink-Strong);
+  margin: 44px 0 14px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+article h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink-Strong);
+  margin: 28px 0 10px;
+}
+
+article p {
+  margin: 0 0 16px;
+  color: var(--ink);
+  max-width: 78ch;
+}
+
+article ul, article ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+article li {
+  margin-bottom: 8px;
+  max-width: 78ch;
+}
+
+ul.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin-bottom: 8px;
+}
+
+.check-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid var(--success);
+  background: rgba(52, 211, 153, 0.12);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+}
+
+.check-box::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--success);
+}
+
+code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  color: var(--ink-Strong);
+}
+
+pre {
+  margin: 0 0 22px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 0 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface-raised);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.domain-section {
+  margin-top: 48px;
+}
+
+.domain-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.domain-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  text-decoration: none;
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.skill-card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.skill-id {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--ink-Strong);
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.skill-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink-Strong);
+  margin: 0 0 8px;
+}
+
+.skill-card p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.skill-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-Strong);
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+</style>
+  
+<script>
+(function() {
+  const mqlDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  const saved = localStorage.getItem('antigravity-skills-theme');
+  const initial = saved || (mqlDark && mqlDark.matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', initial);
+  window.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function updateLabel(theme) {
+      btn.textContent = theme === 'dark' ? '☀ Light mode' : '☾ Dark mode';
+      btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+    }
+    updateLabel(document.documentElement.getAttribute('data-theme') || initial);
+    btn.addEventListener('click', function() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('antigravity-skills-theme', next);
+      updateLabel(next);
+    });
+    if (mqlDark && mqlDark.addEventListener) {
+      mqlDark.addEventListener('change', function(e) {
+        if (!localStorage.getItem('antigravity-skills-theme')) {
+          const autoNext = e.matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', autoNext);
+          updateLabel(autoNext);
+        }
+      });
+    }
+  });
+})();
+</script>
+
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="../../index.html">
+        <span>← All Skills</span>
+        <span>/</span>
+        <strong>react</strong>
+        <span>/</span>
+        <strong>design-package-handoff</strong>
+      </a>
+      <div class="topbar-actions">
+        <a class="nav-pill" href="SKILL.md">SKILL.md</a>
+        <a class="nav-pill" href="skill.json">skill.json</a>
+        <a class="nav-pill" href="evals/smoke.json">evals/smoke.json</a>
+        <button type="button" id="theme-toggle" class="pill-btn" aria-label="Toggle light or dark mode">☀ Light mode</button>
+      </div>
+    </header>
+
+    <section class="meta-bar" aria-label="Skill harness metadata">
+      <div class="meta-card">
+        <div class="meta-label">Skill ID</div>
+        <div class="meta-value"><span class="status-dot"></span>design-package-handoff</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Domain Folder</div>
+        <div class="meta-value">react/ (React Engineering)</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Harness Cost Tier</div>
+        <div class="meta-value">free</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Verify Command ($0)</div>
+        <div class="meta-value">python3 scripts/harness.py verify design-package-handoff --smoke</div>
+      </div>
+    </section>
+
+    <article>
+      <h1>Complete Design Package Handoff</h1>
+<pre data-lang="text"><code>skill / design-package-handoff
+────────────────────────────────────────────────────────────────────
+mode      standalone design-to-React handoff specification
+input     design specs / approved screen comps / QA notes
+output    1× design-package.md + react-handoff.md + JSON data fixtures</code></pre>
+<p>Unify design specifications, desktop and mobile breakpoint contracts, normalized crop coordinates, state architecture, and approved screen comps into a deterministic build package (<code>design-package.md</code> and <code>react-handoff.md</code>) that eliminates visual guesswork during React engineering.</p>
+<h2>Inputs</h2>
+<ul>
+<li>Approved screen comps, clean photographic plates (<code>*-clean-photo.png</code>), and any visual QA notes.</li>
+<li>Canonical handoff contracts: <a href="./references/react-handoff.md">react-handoff.md</a>, <a href="./references/react-interaction-contract.md">react-interaction-contract.md</a>, and <a href="./references/react-mobile-contract.md">react-mobile-contract.md</a>.</li>
+</ul>
+<h2>Work</h2>
+<ol>
+<li><strong>Lock strict DOM vs. Photographic vs. 3D/WebGL layer boundaries.</strong></li>
+</ol>
+<ul>
+<li><strong>Live DOM Layer (100% HTML/CSS/SVG)</strong>: All brand wordmarks, headlines, body copy, captions, prices, navigation links, buttons, tabs, radio groups, checkboxes, counters, <code>&lt;details&gt;/&lt;summary&gt;</code> disclosures, and numeric data charts/tables. Never resize raster text into a tiny touch target or place invisible click regions over a screenshot.</li>
+<li><strong>Photographic &amp; Cutout Asset Layer</strong>:</li>
+<li>Clean inpainted background plates (<code>public/assets/website-layers/&lt;brand&gt;-clean-photo.png</code>).</li>
+<li>Normalized uniform CSS/SVG crop windows (<code>[x, y, width, height]</code> in <code>0..1</code> coordinates) that isolate photography from baked UI.</li>
+<li>Texture specimens (<code>public/assets/textures/</code>) and alpha-bearing 3D object cutouts (<code>public/assets/3d-objects/</code>, upright with preserved transparency).</li>
+<li><strong>WebGL Mesh Layer</strong>: Where geometric 3D studies require interactive camera/material control, specify the Three.js primitives (cube, square pyramid, sphere), finishes (<code>Original</code> seeded procedural texture, <code>Stone</code>, <code>Glaze</code>, <code>Linen</code>), and idle-thumbnail-to-hover-renderer lifecycle rules. Document honestly that creative texture sources are not calibrated seamless PBR scans or recovered 3D meshes.</li>
+</ul>
+<ol>
+<li><strong>Define single-source React state ownership and component data contracts.</strong></li>
+</ol>
+<ul>
+<li>Keep <strong>one authoritative state object</strong> per logical selection; derive all counts, labels, subtotals, and active treatments from that state (never store derived counts or subtotals as independent state).</li>
+<li>Separate <code>idle | loading | success | error</code> states where external operations exist, preserve the last confirmed state on error, expose <code>retry</code> and <code>cancel</code>/<code>revert</code> paths, and document what is owned by the host application vs. the component.</li>
+</ul>
+<ol>
+<li><strong>Specify semantic primitives, input parity, and desktop/mobile breakpoints.</strong></li>
+</ol>
+<ul>
+<li><strong>Semantic HTML</strong>:</li>
+<li><code>&lt;div role=&quot;tablist&quot;&gt;</code> / <code>&lt;button role=&quot;tab&quot;&gt;</code> for day panels, plan previews, and usage periods.</li>
+<li><code>&lt;fieldset&gt;/&lt;legend&gt;</code> radio groups for material swatches and pack selectors.</li>
+<li>Checkboxes inside a controlled popover with <code>Escape</code> and focus return for multi-select pickers.</li>
+<li>Route links (<code>&lt;a aria-current=&quot;page&quot;&gt;</code>) for navigation docks (never an incomplete tab pattern).</li>
+<li><code>aria-pressed</code> buttons for 3-step ritual selectors; native <code>&lt;details&gt;/&lt;summary&gt;</code> for care/help rows.</li>
+<li><strong>Desktop (<code>1440px</code> / <code>1280px</code>) → Mobile (<code>390px</code> design target; verified at <code>320px, 390px, 430px, 768px, 1440px</code> + <code>200%</code> text zoom)</strong>:</li>
+<li>Share the exact same React components, DOM reading order, and data records across desktop and mobile—never branch content with <code>window.innerWidth</code> during SSR.</li>
+<li>Below <code>640px</code>: single main column, <code>24px</code> side gutters (<code>20px</code> at <code>320px</code>), <code>16px</code> body/input text (<code>1.5–1.7</code> line-height), <code>32–40px</code> main headings, <code>48–72px</code> chapter pauses (<code>72–96px</code> for architectural studies), and <code>44 × 44 CSS px</code> minimum hit areas (<code>48px</code> for accordion summaries).</li>
+</ul>
+<ol>
+<li><strong>Package deterministic JSON fixtures alongside <code>design-package.md</code>.</strong></li>
+</ol>
+<ul>
+<li>Emit <code>design-package.md</code>, <code>react-handoff.md</code>, and supporting JSON registries (<code>registry.json</code>, <code>components.json</code>, <code>fixtures.json</code>, <code>flows.json</code>, <code>assets.json</code>) with verified SHA-256 checksums and binary dimensions.</li>
+</ul>
+<h2>Input → Output Example</h2>
+<p><strong>Sample Input</strong>:</p>
+<pre data-lang="text"><code>&quot;Create the React handoff contract for the 6 interactive components (WeatherCard, TeamPicker, MaterialPalette, MembershipPanel, UsagePanel, NavigationDock) and document the normalized photo crops for Rill &amp; Rye and Serein.&quot;</code></pre>
+<p><strong>Expected Output (<code>react-handoff.md</code> excerpt)</strong>:</p>
+<pre data-lang="markdown"><code>### Component Boundaries &amp; State Ownership
+| Component | Authoritative Inputs | Emitted Events | Host-Owned Services | Semantic Primitive |
+| :--- | :--- | :--- | :--- | :--- |
+| `WeatherCard` (*Sol*) | `location`, `forecastByDate`, `selectedDate`, `unit`, `status` | `dateChange`, `unitChange`, `locationChange`, `retry` | Weather provider, cache, location permission | `role=&quot;tablist&quot;` for days; `28°C ↔ 82°F` |
+| `TeamPicker` (*Gather*) | `people`, `selectedIds`, `open`, `saveStatus` | `openChange`, `selectionChange`, `retry`, `revert` | Membership access &amp; persistence | Controlled popover + checkboxes (`0, 1, 3, 4` sync) |
+| `MaterialPalette` (*Courtyard*) | `materials`, `selectedMaterialId`, `previousSnapshot` | `select`, `shuffle`, `undo` | Palette library &amp; project application | `&lt;fieldset&gt;` radios + snapshot undo |
+| `MembershipPanel` (*Roam*) | `plansById`, `selectedPlanId`, `checkoutStatus` | `planChange`, `review`, `checkout`, `cancel` | Verified price catalog &amp; payment session | Plan tabs + `20%` annual discount math |
+| `UsagePanel` (*Kiln*) | `range`, `categories`, `dailySeries`, `resources`, `requestStatus` | `rangeChange`, `inspect`, `retry`, `manage` | Billing periods, totals &amp; account routes | Period tabs + `sum(categories) == used == sum(daily)` |
+| `NavigationDock` (*Folio*) | `items`, `currentPath`, `navigationStatus` | Normal route link navigation | Router, auth &amp; route content | `&lt;a aria-current=&quot;page&quot;&gt;` |
+
+### Normalized Asset Crop Windows
+- `02-rill-and-rye-bakery.png`: Orchard bakery window `[0.466, 0.198, 0.518, 0.718]`.
+- `06-serein-botanical-care.png`: Botanical macro `[0.365, 0.068, 0.164, 0.85]`, portrait `[0.53, 0.068, 0.47, 0.85]`, overlapping bottle inset `[0.243, 0.526, 0.172, 0.354]`.</code></pre>
+<h2>Result</h2>
+<p>Deliver <code>design-package.md</code>, <code>react-handoff.md</code>, and deterministic JSON data fixtures.</p>
+<h3>Verification</h3>
+<ul class="checklist">
+<li><span class="check-box"></span><span>Every visual asset, clean background plate, and normalized crop window (<code>[x, y, w, h]</code>) is documented with exact paths, dimensions, and SHA-256 hashes.</span></li>
+<li><span class="check-box"></span><span>Every interactive module has a single authoritative React state owner, semantic HTML primitive, keyboard/touch contract (<code>44×44px</code>), and explicit demo boundary.</span></li>
+<li><span class="check-box"></span><span>Desktop (<code>1440px</code>) and mobile (<code>390px</code> / <code>320px</code>) share one DOM structure and data model with CSS-only layout adaptation.</span></li>
+</ul>
+    </article>
+
+    <footer class="footer-nav">
+      <a class="nav-pill" href="../../qa-eval/grid-comp-qa/index.html">← grid-comp-qa</a>
+      <a class="nav-pill" href="../../index.html">All 12 Standalone Skills</a>
+      <a class="nav-pill" href="../../react/image-to-react-translation/index.html">image-to-react-translation →</a>
+    </footer>
+  </div>
+</body>
+</html>

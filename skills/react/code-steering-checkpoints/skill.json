@@ -1,0 +1,37 @@
+{
+  "id": "code-steering-checkpoints",
+  "title": "Code Steering & Worktree Control",
+  "domain": "react",
+  "domain_label": "React Engineering",
+  "path": "react/code-steering-checkpoints",
+  "skill_md": "react/code-steering-checkpoints/SKILL.md",
+  "html_page": "react/code-steering-checkpoints/index.html",
+  "cost_tier": "free",
+  "summary": "Steer code on foundational React screens before scaling across a multi-page application by classifying divergence from design comps and executing either Path A (Revert Drift to restore strict comp fidelity) or Path B (Freeze & Branch git worktree to capture, analyze, and promote emergent high-craft behavior).",
+  "inputs": [
+    {
+      "name": "divergences",
+      "type": "array",
+      "required": true,
+      "description": "Observed differences on the first 3\u20135 foundational screens."
+    }
+  ],
+  "outputs": [
+    {
+      "path": "steering-report.md",
+      "type": "markdown",
+      "required_patterns": [
+        "Path A (Revert Drift)",
+        "Path B (Freeze & Branch)",
+        "Current direction,"
+      ]
+    }
+  ],
+  "references": [
+    "./references/warm-moodboard-build-brief.md"
+  ],
+  "commands": {
+    "prompt": "python3 scripts/harness.py prompt code-steering-checkpoints --input react/code-steering-checkpoints/evals/smoke.json",
+    "verify": "python3 scripts/harness.py verify code-steering-checkpoints --smoke"
+  }
+}

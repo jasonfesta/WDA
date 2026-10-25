@@ -1,0 +1,10 @@
+{
+  "skill_id": "cleanup-evaluation-benchmarking",
+  "cost_tier": "free",
+  "input": {
+    "workspace_dir": "."
+  },
+  "expected_output_files": {
+    "validation.json": "{\n  \"status\": \"pass\",\n  \"date\": \"2026-10-21\",\n  \"components\": 6,\n  \"state_images\": 30,\n  \"asset_hashes_checked\": 41,\n  \"local_links_checked\": 142,\n  \"broken_local_links\": [],\n  \"fixture_totals\": \"pass\",\n  \"errors\": []\n}\n"
+  }
+}

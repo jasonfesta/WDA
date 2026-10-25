@@ -1,0 +1,49 @@
+{
+  "id": "linting-model-safe-packaging",
+  "title": "Linting & Model-Safe Packaging",
+  "domain": "qa-eval",
+  "domain_label": "QA Eval",
+  "path": "qa-eval/linting-model-safe-packaging",
+  "skill_md": "qa-eval/linting-model-safe-packaging/SKILL.md",
+  "html_page": "qa-eval/linting-model-safe-packaging/index.html",
+  "cost_tier": "free",
+  "summary": "Lint and package a React or design-study workspace into a verified single-archive .zip bundle (React Golden Template) with bundle.md and manifest.json, enforcing schema/syntax compliance across routes, .apx files, .js/.ts/.tsx modules, and configs while verifying binary PNG dimensions, SHA-256 hashes, and local links.",
+  "inputs": [
+    {
+      "name": "workspace_dir",
+      "type": "string",
+      "required": true,
+      "description": "Workspace root to lint and bundle."
+    }
+  ],
+  "outputs": [
+    {
+      "path": "bundle.md",
+      "type": "markdown",
+      "required_patterns": [
+        "Golden Template",
+        "SHA-256",
+        ".apx",
+        ".tsx"
+      ]
+    },
+    {
+      "path": "manifest.json",
+      "type": "json",
+      "required_keys": [
+        "title",
+        "status",
+        "validation"
+      ]
+    }
+  ],
+  "references": [
+    "./scripts/package_homepage_study.py",
+    "./scripts/package_app_study.py",
+    "./scripts/package_component_study.py"
+  ],
+  "commands": {
+    "prompt": "python3 scripts/harness.py prompt linting-model-safe-packaging --input qa-eval/linting-model-safe-packaging/evals/smoke.json",
+    "verify": "python3 scripts/harness.py verify linting-model-safe-packaging --smoke"
+  }
+}

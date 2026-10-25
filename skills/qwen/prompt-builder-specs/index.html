@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>prompt-builder-specs — Standalone Antigravity Skill</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --bg: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-hover: #F4F4F6;
+  --surface-raised: #F0F0F4;
+  --ink: #18181B;
+  --ink-Strong: #09090B;
+  --muted: #686873;
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --accent: #09090B;
+  --accent-bg: #F4F4F6;
+  --pill-bg: #F1F1F4;
+  --code-bg: #F4F4F7;
+  --success: #059669;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #000000;
+    --surface: #0A0A0C;
+    --surface-hover: #121216;
+    --surface-raised: #141418;
+    --ink: #F4F4F6;
+    --ink-Strong: #FFFFFF;
+    --muted: #8E8E98;
+    --border: #1F1F26;
+    --border-strong: #2E2E38;
+    --accent: #FFFFFF;
+    --accent-bg: #18181F;
+    --pill-bg: #121217;
+    --code-bg: #08080A;
+    --success: #34D399;
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #0A0A0C;
+  --surface-hover: #121216;
+  --surface-raised: #141418;
+  --ink: #F4F4F6;
+  --ink-Strong: #FFFFFF;
+  --muted: #8E8E98;
+  --border: #1F1F26;
+  --border-strong: #2E2E38;
+  --accent: #FFFFFF;
+  --accent-bg: #18181F;
+  --pill-bg: #121217;
+  --code-bg: #08080A;
+  --success: #34D399;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Google Sans Flex", "Google Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+a {
+  color: var(--ink-Strong);
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms ease;
+}
+
+a:hover {
+  text-decoration-color: var(--ink-Strong);
+}
+
+.shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 28px 96px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.brand strong {
+  color: var(--ink-Strong);
+  font-weight: 600;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill-btn, .nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--pill-bg);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease;
+}
+
+.pill-btn:hover, .nav-pill:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+}
+
+.pill-btn:focus-visible, .nav-pill:focus-visible {
+  outline: 2px solid var(--ink-Strong);
+  outline-offset: 3px;
+}
+
+.meta-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.meta-card {
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.meta-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.meta-value {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: var(--ink-Strong);
+  word-break: break-all;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--success);
+  margin-right: 6px;
+}
+
+article h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--ink-Strong);
+  margin: 0 0 20px;
+}
+
+article h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink-Strong);
+  margin: 44px 0 14px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+article h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink-Strong);
+  margin: 28px 0 10px;
+}
+
+article p {
+  margin: 0 0 16px;
+  color: var(--ink);
+  max-width: 78ch;
+}
+
+article ul, article ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+article li {
+  margin-bottom: 8px;
+  max-width: 78ch;
+}
+
+ul.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin-bottom: 8px;
+}
+
+.check-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid var(--success);
+  background: rgba(52, 211, 153, 0.12);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+}
+
+.check-box::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--success);
+}
+
+code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  color: var(--ink-Strong);
+}
+
+pre {
+  margin: 0 0 22px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 0 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface-raised);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.domain-section {
+  margin-top: 48px;
+}
+
+.domain-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.domain-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  text-decoration: none;
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.skill-card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.skill-id {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--ink-Strong);
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.skill-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink-Strong);
+  margin: 0 0 8px;
+}
+
+.skill-card p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.skill-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-Strong);
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+</style>
+  
+<script>
+(function() {
+  const mqlDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  const saved = localStorage.getItem('antigravity-skills-theme');
+  const initial = saved || (mqlDark && mqlDark.matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', initial);
+  window.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function updateLabel(theme) {
+      btn.textContent = theme === 'dark' ? '☀ Light mode' : '☾ Dark mode';
+      btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+    }
+    updateLabel(document.documentElement.getAttribute('data-theme') || initial);
+    btn.addEventListener('click', function() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('antigravity-skills-theme', next);
+      updateLabel(next);
+    });
+    if (mqlDark && mqlDark.addEventListener) {
+      mqlDark.addEventListener('change', function(e) {
+        if (!localStorage.getItem('antigravity-skills-theme')) {
+          const autoNext = e.matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', autoNext);
+          updateLabel(autoNext);
+        }
+      });
+    }
+  });
+})();
+</script>
+
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="../../index.html">
+        <span>← All Skills</span>
+        <span>/</span>
+        <strong>qwen</strong>
+        <span>/</span>
+        <strong>prompt-builder-specs</strong>
+      </a>
+      <div class="topbar-actions">
+        <a class="nav-pill" href="SKILL.md">SKILL.md</a>
+        <a class="nav-pill" href="skill.json">skill.json</a>
+        <a class="nav-pill" href="evals/smoke.json">evals/smoke.json</a>
+        <button type="button" id="theme-toggle" class="pill-btn" aria-label="Toggle light or dark mode">☀ Light mode</button>
+      </div>
+    </header>
+
+    <section class="meta-bar" aria-label="Skill harness metadata">
+      <div class="meta-card">
+        <div class="meta-label">Skill ID</div>
+        <div class="meta-value"><span class="status-dot"></span>prompt-builder-specs</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Domain Folder</div>
+        <div class="meta-value">qwen/ (Qwen (Research, Specs &amp; Prompting))</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Harness Cost Tier</div>
+        <div class="meta-value">free</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Verify Command ($0)</div>
+        <div class="meta-value">python3 scripts/harness.py verify prompt-builder-specs --smoke</div>
+      </div>
+    </section>
+
+    <article>
+      <h1>Structured Markdown Specifications &amp; Nano Banana 2 Prompt Builder</h1>
+<pre data-lang="text"><code>skill / prompt-builder-specs
+────────────────────────────────────────────────────────────────────
+mode      standalone Markdown spec &amp; 10-point prompt authoring
+input     seed reference images / concept brief / category notes
+output    1× Main Agent .md + 5–10× Concept .md + 10-point NB2 prompts</code></pre>
+<p>Author a self-contained Markdown specification package—<strong>1× Main Agent <code>.md</code> file</strong> plus <strong>5–10× Concept <code>.md</code> files</strong>—containing ranked section/tab/state plans, final copy, reference roles, and <strong>10-point Nano Banana 2 (<code>1K</code>) prompts</strong> (<code>5</code> final images per concept across Websites, Mobile Apps, or UI Components).</p>
+<h2>Inputs</h2>
+<ul>
+<li>Seed reference images, concept brief, or category research notes.</li>
+<li>Master prompt-builder reference: <a href="./references/prompt-builder.md">prompt-builder.md</a>.</li>
+</ul>
+<h2>Work</h2>
+<ol>
+<li><strong>Reconcile the canonical concept inventory and style records.</strong></li>
+</ol>
+<ul>
+<li>Inspect every selected seed image individually at readable size (never rely solely on thumbnails or folder names).</li>
+<li>Record each concept&#x27;s stable reference ID, exact source path, native pixel dimensions, category (<code>website</code>, <code>mobile</code>, or <code>component</code>), palette family, typography hierarchy, and tactile materials.</li>
+<li>Keep historical revision folders (e.g., <code>earlier-versions/</code>) and secondary color/texture reference folders (<code>images/colors/</code>) out of the primary concept count; assign color/texture studies strictly as secondary material/lighting references.</li>
+<li>Do not copy global moodboard shell headlines onto individual product concepts.</li>
+</ul>
+<ol>
+<li><strong>Author the <code>1× Main Agent .md</code> file and <code>5–10× Concept .md</code> files.</strong></li>
+</ol>
+<ul>
+<li><strong><code>1× Main Agent .md</code></strong>: Global architecture, reconciled concept inventory, shared art-direction rules, palette families, breakpoint contracts (<code>1440px</code> desktop, <code>390px</code> mobile), and cross-concept state/interaction conventions.</li>
+<li><strong><code>5–10× Concept .md</code> (<code>specs/01-&lt;slug&gt;.md</code>, etc.)</strong>: One dedicated specification per concept containing:</li>
+<li>Source path, reference ID, native dimensions, audience, and primary user task.</li>
+<li>Observed traits vs. researched patterns vs. proposed additions.</li>
+<li>Ranked section table (Websites), primary tab/flow table (Mobile Apps), or complete state matrix (UI Components).</li>
+<li>Complete React interaction and route/state mapping.</li>
+</ul>
+<ol>
+<li><strong>Allocate exactly 5 final images (<code>01–05</code>) per concept.</strong></li>
+</ol>
+<div class="table-wrap"><table>
+<thead><tr><th>Category</th><th>Image <code>01</code></th><th>Image <code>02</code></th><th>Image <code>03</code></th><th>Image <code>04</code></th><th>Image <code>05</code></th></tr></thead>
+<tbody>
+<tr><td><strong>Websites</strong> <em>(full-page browser capture, header to footer)</em></td><td>Complete main homepage (all prioritized chapters + footer)</td><td>First researched secondary page (e.g., Collection / Project Index)</td><td>Second researched secondary page (e.g., Product Detail / Case Study)</td><td>Third researched secondary page (e.g., Story / Practice / Workshop / Care)</td><td>Meaningful interaction/conversion variant of one of the 4 pages (e.g., open Shopping Bag drawer, Pack Builder, or Inquiry state) as a full page</td></tr>
+<tr><td><strong>Mobile Apps</strong> <em>(<code>874×1800</code> / <code>9:16</code> edge-to-edge, zero device bezel or OS status bar)</em></td><td>First primary tab/destination with complete content &amp; bottom nav</td><td>Second primary tab/destination with distinct content</td><td>Third primary tab/destination with distinct content</td><td>Fourth primary tab/destination with distinct content</td><td>Essential onboarding, detail, completion, or action screen connecting the flow</td></tr>
+<tr><td><strong>UI Components</strong> <em>(centered on clean off-white studio surface, zero room props)</em></td><td>Complete default / resting component</td><td>Prioritized interactive state 2 (e.g., <code>°F</code> unit toggle / selection change)</td><td>Prioritized interactive state 3 (e.g., alternate day / period / shuffled order)</td><td>Prioritized interactive state 4 (e.g., open options / keyboard focus / review)</td><td>Prioritized interactive state 5 (e.g., error + retry / confirmed / empty state)</td></tr>
+</tbody>
+</table></div>
+<ol>
+<li><strong>Build every Nano Banana 2 prompt with all 10 mandatory blocks.</strong></li>
+</ol>
+<p>Each prompt (<code>01–05</code>) must be individually runnable on <strong>Nano Banana 2 (<code>1K</code> output setting)</strong> with zero unresolved placeholders:</p>
+<ol>
+<li><strong>Identity &amp; Source</strong>: Stable concept ID, output number (<code>01–05</code>), output name, category, and exact source image path(s).</li>
+<li><strong>Sequence Role</strong>: Role in the 5-image set and relationship to sibling pages, tabs, or component states.</li>
+<li><strong>Reference Roles &amp; Preservation Rules</strong>: Primary layout/brand anchor vs. secondary color/texture reference; locked brand story, typography, palette, materials, and photography style.</li>
+<li><strong>Ordered Structure &amp; Scale</strong>: Exact section-by-section, tab, or component region order from top to bottom with relative proportions.</li>
+<li><strong>Final Visible Copy &amp; Data</strong>: Exact wordmark, nav links, headlines, body copy, CTAs, prices, measurements, volumes, and state math (zero lorem ipsum).</li>
+<li><strong>Canvas &amp; Model Settings</strong>: Orientation, verified Nano Banana 2 <code>1K</code> setting, target aspect ratio/dimensions, and continuous full-page or edge-to-edge screen-capture framing.</li>
+<li><strong>Cross-Set Locks vs. Delta</strong>: What stays locked across <code>01–05</code> (header/footer, outer card dimensions, avatar identities, tab bar) vs. what changes in this specific output.</li>
+<li><strong>Quality Exclusions (Negative Constraints)</strong>: No missing footer, no cropped controls, no illegible micro-type, no duplicated labels, no device frames/bezels/notches, no watermarks, no unintended contact-sheet grids.</li>
+<li><strong>Acceptance Checklist &amp; Targeted Revision Rule</strong>: Pass/fail visual criteria and exact localized edit instruction if a region fails.</li>
+<li><strong>Output Record &amp; React Mapping</strong>: Target output filename, model/provider record, and mapped React route, tab ID, or component state ID.</li>
+</ol>
+<ol>
+<li><strong>Specify long-page <code>1K</code> section assembly where required.</strong></li>
+</ol>
+<ul>
+<li>Never squeeze a 7-chapter desktop website into an unreadable tiny strip. When a long page exceeds a single legible native <code>1K</code> vertical canvas, specify a documented section-by-section <code>1K</code> generation and vertical stitch plan with matched content widths, typography scale, and seam continuity. Count section sub-renders separately from the 5 final deliverables.</li>
+</ul>
+<h2>Input → Output Example</h2>
+<p><strong>Sample Input</strong>:</p>
+<pre data-lang="text"><code>&quot;Write the 5-image expansion plan and Prompt 01 (Homepage) for REF-001 (Avela / The Arc oxblood leather bag, 1681x936).&quot;</code></pre>
+<p><strong>Expected Output (<code>specs/01-avela.md</code> excerpt)</strong>:</p>
+<pre data-lang="markdown"><code>### 5-Image Allocation (REF-001 · Avela)
+- `01-homepage.png`: Full 7-chapter homepage from thin `AVELA` header and `SOFT FORM` hero through unboxed range (`Arc $420`, `Fold $360`, `Day $480`), `30 × 22 × 10 cm` capacity story, calfskin atelier spread, journal, `&lt;details&gt;` care rows, and footer.
+- `02-collection.png`: Complete Collection catalog page with category filters (`All`, `Shoulder`, `Tote`, `Crossbody`) and `&#x27;Make room for Fold&#x27;` editorial callout.
+- `03-arc-detail.png`: Complete `The Arc` product detail page (`$420`, Oxblood / Espresso / Chalk swatches, gallery, hardware zoom, dimensions `30 × 22 × 10 cm`).
+- `04-our-story.png`: Atelier &amp; Saddlery craft page.
+- `05-bag-drawer-open.png`: Homepage with active right-hand Shopping Bag drawer (`1 × The Arc · Oxblood · $420` subtotal).</code></pre>
+<h2>Result</h2>
+<p>Deliver the <code>1× Main Agent .md</code> manifest, the <code>5–10× Concept .md</code> files, and the individual <code>01–05</code> Nano Banana 2 prompt files.</p>
+<h3>Verification</h3>
+<ul class="checklist">
+<li><span class="check-box"></span><span>Reconciled inventory confirms exact concept totals (<code>N concepts × 5 prompts = 5N final-image prompts</code>) with earlier revisions and color studies excluded from concept counts.</span></li>
+<li><span class="check-box"></span><span>Every visible header link, footer link, tab, and CTA maps to a concrete section anchor, planned page route, or defined component state.</span></li>
+<li><span class="check-box"></span><span>Every prompt contains all 10 required blocks, final copy (zero lorem ipsum or <code>[TBD]</code> placeholders), and explicit negative constraints.</span></li>
+</ul>
+    </article>
+
+    <footer class="footer-nav">
+      <a class="nav-pill" href="../../qwen/design-range-spectrum/index.html">← design-range-spectrum</a>
+      <a class="nav-pill" href="../../index.html">All 12 Standalone Skills</a>
+      <a class="nav-pill" href="../../typography/google-font-selection/index.html">google-font-selection →</a>
+    </footer>
+  </div>
+</body>
+</html>

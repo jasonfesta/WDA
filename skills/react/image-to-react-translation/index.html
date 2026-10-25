@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>image-to-react-translation — Standalone Antigravity Skill</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --bg: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-hover: #F4F4F6;
+  --surface-raised: #F0F0F4;
+  --ink: #18181B;
+  --ink-Strong: #09090B;
+  --muted: #686873;
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --accent: #09090B;
+  --accent-bg: #F4F4F6;
+  --pill-bg: #F1F1F4;
+  --code-bg: #F4F4F7;
+  --success: #059669;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #000000;
+    --surface: #0A0A0C;
+    --surface-hover: #121216;
+    --surface-raised: #141418;
+    --ink: #F4F4F6;
+    --ink-Strong: #FFFFFF;
+    --muted: #8E8E98;
+    --border: #1F1F26;
+    --border-strong: #2E2E38;
+    --accent: #FFFFFF;
+    --accent-bg: #18181F;
+    --pill-bg: #121217;
+    --code-bg: #08080A;
+    --success: #34D399;
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #0A0A0C;
+  --surface-hover: #121216;
+  --surface-raised: #141418;
+  --ink: #F4F4F6;
+  --ink-Strong: #FFFFFF;
+  --muted: #8E8E98;
+  --border: #1F1F26;
+  --border-strong: #2E2E38;
+  --accent: #FFFFFF;
+  --accent-bg: #18181F;
+  --pill-bg: #121217;
+  --code-bg: #08080A;
+  --success: #34D399;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Google Sans Flex", "Google Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+a {
+  color: var(--ink-Strong);
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms ease;
+}
+
+a:hover {
+  text-decoration-color: var(--ink-Strong);
+}
+
+.shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 28px 96px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.brand strong {
+  color: var(--ink-Strong);
+  font-weight: 600;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill-btn, .nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--pill-bg);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease;
+}
+
+.pill-btn:hover, .nav-pill:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+}
+
+.pill-btn:focus-visible, .nav-pill:focus-visible {
+  outline: 2px solid var(--ink-Strong);
+  outline-offset: 3px;
+}
+
+.meta-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.meta-card {
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.meta-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.meta-value {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: var(--ink-Strong);
+  word-break: break-all;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--success);
+  margin-right: 6px;
+}
+
+article h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--ink-Strong);
+  margin: 0 0 20px;
+}
+
+article h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink-Strong);
+  margin: 44px 0 14px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+article h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink-Strong);
+  margin: 28px 0 10px;
+}
+
+article p {
+  margin: 0 0 16px;
+  color: var(--ink);
+  max-width: 78ch;
+}
+
+article ul, article ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+article li {
+  margin-bottom: 8px;
+  max-width: 78ch;
+}
+
+ul.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin-bottom: 8px;
+}
+
+.check-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid var(--success);
+  background: rgba(52, 211, 153, 0.12);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+}
+
+.check-box::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--success);
+}
+
+code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  color: var(--ink-Strong);
+}
+
+pre {
+  margin: 0 0 22px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 0 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface-raised);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.domain-section {
+  margin-top: 48px;
+}
+
+.domain-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.domain-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  text-decoration: none;
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.skill-card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.skill-id {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--ink-Strong);
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.skill-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink-Strong);
+  margin: 0 0 8px;
+}
+
+.skill-card p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.skill-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-Strong);
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+</style>
+  
+<script>
+(function() {
+  const mqlDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  const saved = localStorage.getItem('antigravity-skills-theme');
+  const initial = saved || (mqlDark && mqlDark.matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', initial);
+  window.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function updateLabel(theme) {
+      btn.textContent = theme === 'dark' ? '☀ Light mode' : '☾ Dark mode';
+      btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+    }
+    updateLabel(document.documentElement.getAttribute('data-theme') || initial);
+    btn.addEventListener('click', function() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('antigravity-skills-theme', next);
+      updateLabel(next);
+    });
+    if (mqlDark && mqlDark.addEventListener) {
+      mqlDark.addEventListener('change', function(e) {
+        if (!localStorage.getItem('antigravity-skills-theme')) {
+          const autoNext = e.matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', autoNext);
+          updateLabel(autoNext);
+        }
+      });
+    }
+  });
+})();
+</script>
+
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="../../index.html">
+        <span>← All Skills</span>
+        <span>/</span>
+        <strong>react</strong>
+        <span>/</span>
+        <strong>image-to-react-translation</strong>
+      </a>
+      <div class="topbar-actions">
+        <a class="nav-pill" href="SKILL.md">SKILL.md</a>
+        <a class="nav-pill" href="skill.json">skill.json</a>
+        <a class="nav-pill" href="evals/smoke.json">evals/smoke.json</a>
+        <button type="button" id="theme-toggle" class="pill-btn" aria-label="Toggle light or dark mode">☀ Light mode</button>
+      </div>
+    </header>
+
+    <section class="meta-bar" aria-label="Skill harness metadata">
+      <div class="meta-card">
+        <div class="meta-label">Skill ID</div>
+        <div class="meta-value"><span class="status-dot"></span>image-to-react-translation</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Domain Folder</div>
+        <div class="meta-value">react/ (React Engineering)</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Harness Cost Tier</div>
+        <div class="meta-value">free</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">Verify Command ($0)</div>
+        <div class="meta-value">python3 scripts/harness.py verify image-to-react-translation --smoke</div>
+      </div>
+    </section>
+
+    <article>
+      <h1>Clean Image-to-React Translation</h1>
+<pre data-lang="text"><code>skill / image-to-react-translation
+────────────────────────────────────────────────────────────────────
+mode      standalone image-to-React engineering &amp; WebGL reconstruction
+input     screen comps / moodboard images / design-package.md / build brief
+output    compiling React + TypeScript + Vite build + live preview</code></pre>
+<p>Translate screen comps, 4K website grids, or moodboard references into clean, modular React + TypeScript + CSS—rebuilding all typography, navigation, and stateful controls in the live DOM while isolating photography, textures, 3D cutouts, and Three.js scenes into clean asset layers.</p>
+<h2>Inputs</h2>
+<ul>
+<li>Screen comps, 4K grids, moodboard images, or handoff specifications (<code>design-package.md</code>, <code>react-handoff.md</code>).</li>
+<li>Canonical build briefs: <a href="./references/original-image-prompt.md">original-image-prompt.md</a>, <a href="./references/warm-moodboard-build-brief.md">warm-moodboard-build-brief.md</a>, and <a href="./references/BUILD-PROMPT.md">BUILD-PROMPT.md</a>.</li>
+</ul>
+<h2>Work</h2>
+<ol>
+<li><strong>Rebuild all typography, navigation, and controls as semantic React DOM.</strong></li>
+</ol>
+<ul>
+<li>Render all brand wordmarks, display headlines, body copy, prices, navigation links, buttons, tabs, radio groups, checkboxes, counters, and <code>&lt;details&gt;/&lt;summary&gt;</code> accordions as live HTML/CSS/React.</li>
+<li><strong>Never</strong> use a full-page or full-component screenshot as the interactive UI or overlay invisible click targets on raster text.</li>
+<li>Replace any garbled raster micro-copy with clean canonical copy and verified product specs.</li>
+<li>Ensure large gradient or display headlines have generous <code>line-height</code> and <code>padding-bottom</code> so zero letter descenders (<code>g, j, p, q, y</code>) are clipped.</li>
+</ul>
+<ol>
+<li><strong>Isolate photographic plates, normalized SVG crops, 3D cutouts, and Three.js WebGL scenes.</strong></li>
+</ol>
+<ul>
+<li><strong>Clean background plates</strong>: Layer live DOM text over clean inpainted background plates (<code>public/assets/website-layers/&lt;brand&gt;-clean-photo.png</code>) so baked raster lettering never ghosts behind live text.</li>
+<li><strong>Normalized uniform crops</strong>: Use SVG <code>viewBox</code> / <code>&lt;image preserveAspectRatio=&quot;xMidYMid slice&quot;&gt;</code> or CSS crop windows (<code>[x, y, width, height]</code>) to preserve natural source aspect ratios without independent X/Y stretching.</li>
+<li><strong>Proportion &amp; circle guards</strong>: Preserve natural source stages (<code>900×501</code>, <code>900×563</code>, <code>660×660</code>) scaled uniformly for overview cards and rendered at full readable scale in focus view. Add <code>flex-shrink: 0; aspect-ratio: 1 / 1; border-radius: 9999px</code> to all circular swatches, avatars, and icon buttons so they never squash into ovals.</li>
+<li><strong>Texture &amp; 3D cutout specimens</strong>: Keep texture studies in <code>public/assets/textures/</code> and alpha-bearing 3D object PNGs in <code>public/assets/3d-objects/</code> upright with full transparency.</li>
+<li><strong>Three.js WebGL material area (<code>src/areas/MaterialScene.tsx</code>)</strong>:</li>
+<li>Build real cube, square pyramid, and sphere meshes on a softly lit seamless ground with grounding shadows, roughness/bump detail, and physical transmission/thickness for glass.</li>
+<li>Support selectable finishes (<code>Original</code> seeded procedural texture, <code>Stone</code>, <code>Glaze</code>, <code>Linen</code>), pointer/touch/keyboard orbit, zoom, reset, and opt-in rotation.</li>
+<li>Render static reference thumbnails while idle; mount a live WebGL renderer <strong>only</strong> when a tile is hovered/focused or opened in focus view, render on demand, pause when <code>document.hidden</code> is true, and dispose geometries/materials/textures/renderer on close.</li>
+</ul>
+<ol>
+<li><strong>Coordinate parallel subagents with a shared <code>AreaProps</code> contract and semantic tokens.</strong></li>
+</ol>
+<ul>
+<li>When splitting work across subagents (Websites, UI &amp; Mobile Interfaces, Texture/Object Specimens, WebGL), share a minimal contract in <code>src/App.tsx</code>:</li>
+</ul>
+<p>```ts</p>
+<p>export interface AreaProps&lt;T = Record&lt;string, unknown&gt;&gt; {</p>
+<p>id: string;</p>
+<p>focused: boolean;</p>
+<p>state: T;</p>
+<p>onState: (next: T | ((prev: T) =&gt; T)) =&gt; void;</p>
+<p>knobs: {</p>
+<p>hue: number;        // -20 to +20 (clamped to warm families; raster hue shift &lt;= ±7 deg)</p>
+<p>warmth: number;     // -30 to +30</p>
+<p>depth: number;      // -25 to +25</p>
+<p>recolorImages: boolean;</p>
+<p>fontFamily: string;</p>
+<p>direction: string;</p>
+<p>};</p>
+<p>}</p>
+<p>```</p>
+<ul>
+<li>Bind all live surfaces and controls to <code>--surface</code>, <code>--surface-raised</code>, <code>--ink</code>, <code>--muted</code>, <code>--accent</code>, <code>--accent-alt</code>, <code>--on-accent</code>, and <code>--border</code>.</li>
+<li>Apply the optional <code>recolorImages</code> CSS filter <strong>once</strong> to photo/illustration/texture/cutout layers (<code>±7°</code> max hue rotation) without double-filtering native DOM text.</li>
+<li>Persist per-example state, shopping bag items, saved items, and theme knobs in <code>localStorage</code> with an in-memory fallback if storage is blocked.</li>
+</ul>
+<ol>
+<li><strong>Check listening ports and run a clean local production build.</strong></li>
+</ol>
+<ul>
+<li>Before starting any Vite dev or preview server, inspect active TCP listeners (<code>lsof -iTCP -sTCP:LISTEN -P -n</code>), leave all existing localhost servers untouched, and bind to an available port using <code>--strictPort</code> (e.g., <code>vite preview --host 127.0.0.1 --port 5186 --strictPort</code>).</li>
+</ul>
+<h2>Input → Output Example</h2>
+<p><strong>Sample Input (<a href="./references/BUILD-PROMPT.md">BUILD-PROMPT.md</a>)</strong>:</p>
+<pre data-lang="text"><code>&quot;Turn the Avela Nano Banana 2 4K website grid into a complete, responsive 5-page React project (Home, Collection, Arc detail, Our Story, Care) using public/assets/website-layers/avela-clean-photo.png for the hero.&quot;</code></pre>
+<p><strong>Expected Output (Component &amp; Asset Layer Structure)</strong>:</p>
+<pre data-lang="tsx"><code>// Hero uses clean inpainted photo plate + 100% live DOM text &amp; controls
+&lt;section className=&quot;avela-hero&quot; style={{ backgroundImage: &#x27;url(/assets/website-layers/avela-clean-photo.png)&#x27; }}&gt;
+  &lt;header className=&quot;avela-header&quot;&gt;
+    &lt;a href=&quot;#/&quot; className=&quot;avela-wordmark&quot;&gt;AVELA&lt;/a&gt;
+    &lt;nav aria-label=&quot;Primary&quot;&gt;
+      &lt;a href=&quot;#/collection&quot;&gt;Collection&lt;/a&gt;
+      &lt;a href=&quot;#/arc&quot;&gt;The Arc&lt;/a&gt;
+      &lt;a href=&quot;#/story&quot;&gt;Our Story&lt;/a&gt;
+      &lt;a href=&quot;#/care&quot;&gt;Care&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;button type=&quot;button&quot; onClick={onOpenBag} aria-label={`Shopping bag, ${bagCount} items`}&gt;
+      Bag ({bagCount})
+    &lt;/button&gt;
+  &lt;/header&gt;
+  &lt;div className=&quot;avela-hero__story&quot;&gt;
+    &lt;p className=&quot;avela-eyebrow&quot;&gt;OBJECT 01 / THE ARC · 30 × 22 × 10 CM · $420&lt;/p&gt;
+    &lt;h1&gt;A softer shape.&lt;br /&gt;A longer story.&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div className=&quot;avela-hero__display&quot; aria-hidden=&quot;true&quot;&gt;SOFT FORM&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+<h2>Result</h2>
+<p>Deliver the compiling React + TypeScript + Vite implementation and live preview URL.</p>
+<h3>Verification</h3>
+<ul class="checklist">
+<li><span class="check-box"></span><span><code>npm run build</code> (<code>tsc &amp;&amp; vite build</code>) and <code>npm test</code> pass with zero TypeScript, bundler, or unit test errors.</span></li>
+<li><span class="check-box"></span><span>All text, navigation, and controls are live DOM; clean background plates (<code>*-clean-photo.png</code>) and uniform crops show zero ghosted raster text or stretched imagery.</span></li>
+<li><span class="check-box"></span><span>Existing localhost listeners remain untouched and the preview server responds with <code>HTTP 200</code> on its dedicated <code>--strictPort</code>.</span></li>
+</ul>
+    </article>
+
+    <footer class="footer-nav">
+      <a class="nav-pill" href="../../react/design-package-handoff/index.html">← design-package-handoff</a>
+      <a class="nav-pill" href="../../index.html">All 12 Standalone Skills</a>
+      <a class="nav-pill" href="../../react/code-steering-checkpoints/index.html">code-steering-checkpoints →</a>
+    </footer>
+  </div>
+</body>
+</html>

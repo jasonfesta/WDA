@@ -1,0 +1,48 @@
+{
+  "id": "image-to-react-translation",
+  "title": "Clean Image-to-React Translation",
+  "domain": "react",
+  "domain_label": "React Engineering",
+  "path": "react/image-to-react-translation",
+  "skill_md": "react/image-to-react-translation/SKILL.md",
+  "html_page": "react/image-to-react-translation/index.html",
+  "cost_tier": "free",
+  "summary": "Translate screen comps, moodboards, or design packages into semantic React, TypeScript, and CSS with live DOM typography and controls, clean inpainted photographic background plates, uniform SVG crops, and on-demand Three.js WebGL scenes.",
+  "inputs": [
+    {
+      "name": "design_package",
+      "type": "string",
+      "required": true,
+      "description": "Path to design-package.md or build brief."
+    },
+    {
+      "name": "clean_plates",
+      "type": "array",
+      "required": false,
+      "default": [
+        "public/assets/website-layers/avela-clean-photo.png"
+      ],
+      "description": "Clean background plates for hero/editorial sections."
+    }
+  ],
+  "outputs": [
+    {
+      "path": "src/App.tsx",
+      "type": "tsx",
+      "required_patterns": [
+        "AreaProps",
+        "avela-clean-photo.png",
+        "SOFT FORM"
+      ]
+    }
+  ],
+  "references": [
+    "./references/original-image-prompt.md",
+    "./references/warm-moodboard-build-brief.md",
+    "./references/BUILD-PROMPT.md"
+  ],
+  "commands": {
+    "prompt": "python3 scripts/harness.py prompt image-to-react-translation --input react/image-to-react-translation/evals/smoke.json",
+    "verify": "python3 scripts/harness.py verify image-to-react-translation --smoke"
+  }
+}

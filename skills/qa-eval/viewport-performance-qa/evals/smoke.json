@@ -1,0 +1,17 @@
+{
+  "skill_id": "viewport-performance-qa",
+  "cost_tier": "browser",
+  "input": {
+    "preview_url": "http://127.0.0.1:5186/",
+    "viewports": [
+      "1440x1000",
+      "1280x900",
+      "390x844",
+      "320x568"
+    ]
+  },
+  "expected_output_files": {
+    "browser-checks.json": "{\n  \"date\": \"2026-10-21\",\n  \"status\": \"pass\",\n  \"total\": 181,\n  \"viewports\": [\n    {\n      \"width\": 1280,\n      \"height\": 900\n    },\n    {\n      \"width\": 390,\n      \"height\": 844\n    }\n  ],\n  \"checks\": [\n    {\n      \"component\": \"sol\",\n      \"test\": \"01-today \\u2192 02-fahrenheit\",\n      \"pass\": true\n    },\n    {\n      \"component\": \"shell\",\n      \"test\": \"layout 1280x900\",\n      \"pass\": true\n    },\n    {\n      \"component\": \"shell\",\n      \"test\": \"layout 390x844\",\n      \"pass\": true\n    }\n  ]\n}\n",
+    "docs/verification.md": "# Verification\n\n- `npm run build`: passed TypeScript checking and Vite production compilation.\n- Port isolation: Both development and preview use strict binding on 5186.\n- Checked at 1440 \u00d7 1000 and 390 \u00d7 844; no horizontal overflow.\n"
+  }
+}

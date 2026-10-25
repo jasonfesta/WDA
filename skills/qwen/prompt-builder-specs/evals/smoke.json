@@ -1,0 +1,13 @@
+{
+  "skill_id": "prompt-builder-specs",
+  "cost_tier": "free",
+  "input": {
+    "concept_id": "REF-001",
+    "source_image": "images/website/01-avela-arc-bag.png (1681x936)",
+    "category": "website"
+  },
+  "expected_output_files": {
+    "specs/main-agent.md": "# Main Agent Specification\n\nModel: **Nano Banana 2** (`1K` setting). Allocate 5 final deliverables (`01\u201305`) per concept with zero placeholders.\n",
+    "specs/01-concept.md": "# REF-001 \u00b7 Avela / The Arc\n\n- `01-homepage.png`: Complete 7-chapter homepage from `AVELA` header and `SOFT FORM` hero through footer.\n- `02-collection.png`: Collection catalog (`All`, `Shoulder`, `Tote`, `Crossbody`).\n- `03-arc-detail.png`: `The Arc` detail (`$420`, `30 \u00d7 22 \u00d7 10 cm`).\n- `04-our-story.png`: Atelier craft story.\n- `05-bag-drawer-open.png`: Open Shopping Bag drawer (`1 \u00d7 The Arc \u00b7 $420`).\n"
+  }
+}

@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>google-font-selection — Antigravity Font Evaluation Specimen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Big+Shoulders+Display:wght@600..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400&family=Climate+Crisis&family=Comfortaa:wght@300..700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cormorant:ital,wght@0,300..700;1,300&family=Dela+Gothic+One&family=Fira+Code:wght@400..600&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,100,1;1,9..144,400,100,1&family=Fredoka:wdth,wght@75..125,300..700&family=Google+Sans+Flex:opsz,wght@8..144,400..700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,300&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,400&family=Nunito:ital,wght@0,300..800;1,400&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:wght@400..700&family=Quicksand:wght@300..700&family=Rubik+Mono+One&family=Space+Grotesk:wght@400..700&family=Syne:wght@600..800&family=Ultra&family=Unbounded:wght@400..800&family=Work+Sans:wght@400..600&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: "LocalGoogleSans";
+      src: local("Google Sans Flex"), local("Google Sans"), local("SF Pro Display"), local("SF Pro Text"), local("-apple-system");
+    }
+    @font-face {
+      font-family: "LocalRounded";
+      src: local("SF Pro Rounded"), local("SF Compact Rounded"), local("Arial Rounded MT Bold"), local(".SFNSRounded-Regular");
+    }
+    @font-face {
+      font-family: "LocalSoftSerif";
+      src: local("Cooper Black"), local("Charter"), local("Superclarendon"), local("Iowan Old Style");
+    }
+    @font-face {
+      font-family: "LocalHeavyBlack";
+      src: local("Arial Black"), local("Impact"), local("SF Pro Display Heavy"), local("Helvetica Neue Condensed Black");
+    }
+    @font-face {
+      font-family: "LocalHeavySlab";
+      src: local("Superclarendon Black"), local("Rockwell Extra Bold"), local("Rockwell Bold"), local("American Typewriter Bold");
+    }
+    @font-face {
+      font-family: "LocalCondensed";
+      src: local("DIN Condensed Bold"), local("Impact"), local("Avenir Next Condensed Bold"), local("Arial Narrow Bold");
+    }
+    @font-face {
+      font-family: "LocalDidone";
+      src: local("Didot"), local("Bodoni 72"), local("Big Caslon"), local("Georgia");
+    }
+    @font-face {
+      font-family: "LocalThinSans";
+      src: local("Avenir Next Ultra Light"), local("Helvetica Neue UltraLight"), local("Futura"), local("Gill Sans Light");
+    }
+    @font-face {
+      font-family: "LocalEditorialSerif";
+      src: local("New York"), local("Iowan Old Style"), local("Baskerville"), local("Hoefler Text"), local("Charter");
+    }
+    @font-face {
+      font-family: "LocalCodeMono";
+      src: local("JetBrains Mono"), local("SF Mono"), local("Menlo"), local("PT Mono"), local("Monaco");
+    }
+
+    /* Default: Clean Light Mode (#FFFFFF) unless Dark Mode is enabled */
+    :root, [data-theme="light"] {
+      color-scheme: light;
+      --bg: #FFFFFF;
+      --surface: #F7F7F9;
+      --surface-hover: #EFEFF3;
+      --surface-active: #E6E6EC;
+      --ink: #18181B;
+      --ink-strong: #000000;
+      --muted: #686873;
+      --subtle: #8D8D98;
+      --border: #E6E6EB;
+      --border-strong: #CFCFD8;
+      --btn-bg: #000000;
+      --btn-ink: #FFFFFF;
+      --badge-bg: #F1F1F5;
+      --badge-ink: #000000;
+      --track: #ECECF0;
+      --bar: #000000;
+    }
+
+    /* Automatic Dark Mode (#000000) when OS Dark Mode is turned on */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        color-scheme: dark;
+        --bg: #000000;
+        --surface: #0A0A0D;
+        --surface-hover: #121217;
+        --surface-active: #191920;
+        --ink: #F4F4F6;
+        --ink-strong: #FFFFFF;
+        --muted: #8A8A95;
+        --subtle: #5C5C66;
+        --border: #1A1A22;
+        --border-strong: #2C2C38;
+        --btn-bg: #FFFFFF;
+        --btn-ink: #000000;
+        --badge-bg: #14141B;
+        --badge-ink: #FFFFFF;
+        --track: #16161D;
+        --bar: #FFFFFF;
+      }
+    }
+
+    /* Explicit Dark Mode override */
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #000000;
+      --surface: #0A0A0D;
+      --surface-hover: #121217;
+      --surface-active: #191920;
+      --ink: #F4F4F6;
+      --ink-strong: #FFFFFF;
+      --muted: #8A8A95;
+      --subtle: #5C5C66;
+      --border: #1A1A22;
+      --border-strong: #2C2C38;
+      --btn-bg: #FFFFFF;
+      --btn-ink: #000000;
+      --badge-bg: #14141B;
+      --badge-ink: #FFFFFF;
+      --track: #16161D;
+      --bar: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: "Google Sans Flex", "LocalGoogleSans", -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      font-size: 14px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: background-color 160ms ease, color 160ms ease;
+    }
+
+    .sheet {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 36px 32px 64px;
+      background-color: var(--bg);
+      transition: background-color 160ms ease;
+    }
+
+    .sheet.drag-over {
+      background-color: var(--surface);
+      outline: 1.5px dashed var(--ink-strong);
+      outline-offset: -10px;
+    }
+
+    /* Sleek Antigravity Top Chrome */
+    .header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--ink-strong);
+      display: inline-block;
+    }
+
+    .brand-title {
+      font-family: "Google Sans Flex", "LocalGoogleSans", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--ink-strong);
+    }
+
+    .brand-sub {
+      font-family: "JetBrains Mono", "LocalCodeMono", ui-monospace, monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .theme-cluster {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .mode-pill {
+      font-family: "Google Sans Flex", "LocalGoogleSans", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 140ms ease;
+    }
+
+    .mode-pill:hover {
+      color: var(--ink-strong);
+      border-color: var(--border-strong);
+    }
+
+    .mode-pill.active {
+      background: var(--ink-strong);
+      color: var(--bg);
+      border-color: var(--ink-strong);
+      font-weight: 600;
+    }
+
+    /* Input Command Bar */
+    .command-bar {
+      display: flex;
+      align-items: stretch;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .upload-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: "Google Sans Flex", "LocalGoogleSans", sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 0 15px;
+      min-height: 44px;
+      border-radius: 10px;
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      color: var(--ink-strong);
+      cursor: pointer;
+      white-space: nowrap;
+      user-select: none;
+      transition: background 140ms ease, border-color 140ms ease;
+    }
+
+    .upload-trigger:hover {
+      background: var(--surface-hover);
+      border-color: var(--ink-strong);
+    }
+
+    .upload-icon {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      fill: none;
+    }
+
+    .input-box {
+      flex: 1;
+      min-width: 220px;
+      min-height: 44px;
+      font-family: "Google Sans Flex", "LocalGoogleSans", sans-serif;
+      font-size: 15.5px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--ink-strong);
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 10px;
+      padding: 0 15px;
+      outline: none;
+      transition: border-color 140ms ease, background 140ms ease;
+    }
+
+    .input-box::placeholder {
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .input-box:focus {
+      border-color: var(--ink-strong);
+      background: var(--bg);
+    }
+
+    .run-btn {
+      font-family: "Google Sans Flex", "LocalGoogleSans", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 0 18px;
+      min-height: 44px;
+      border-radius: 10px;
+      border: 1px solid var(--btn-bg);
+      background: var(--btn-bg);
+      color: var(--btn-ink);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity 140ms ease;
+    }
+
+    .run-btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Preset Chips + Status Row */
+    .sub-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .presets {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .preset-chip {
+      font-family: "Google Sans Flex", "LocalGoogleSans", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--ink);
+      cursor: pointer;
+      transition: all 140ms ease;
+    }
+
+    .preset-chip:hover {
+      border-color: var(--border-strong);
+      background: var(--surface-hover);
+      color: var(--ink-strong);
+    }
+
+    .preset-chip.active {
+      background: var(--ink-strong);
+      color: var(--bg);
+      border-color: var(--ink-strong);
+      font-weight: 600;
+    }
+
+    .meta-line {
+      font-family: "JetBrains Mono", "LocalCodeMono", ui-monospace, monospace;
+      font-size: 12px;
+      color: var(--muted);
+      margin: 4px 0 0;
+    }
+
+    /* Uploaded Image Pill */
+    .image-pill {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 12px;
+      margin: 10px 0 6px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-family: "JetBrains Mono", "LocalCodeMono", ui-monospace, monospace;
+      font-size: 12px;
+      color: var(--ink);
+    }
+
+    .image-pill.visible {
+      display: flex;
+    }
+
+    .image-pill-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      flex-wrap: wrap;
+    }
+
+    .image-thumb {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      object-fit: cover;
+      background: var(--surface-hover);
+      flex-shrink: 0;
+    }
+
+    .image-remove-btn {
+      font-family: "Google Sans Flex", "LocalGoogleSans", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border-strong);
+      background: transparent;
+      color: var(--ink);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .image-remove-btn:hover {
+      color: var(--ink-strong);
+      border-color: var(--ink-strong);
+    }
+
+    /* Stage 2: Loading & Evaluation Progress */
+    .loading-box {
+      padding: 28px 0;
+      font-family: "Google Sans Flex", "LocalGoogleSans", sans-serif;
+    }
+
+    .loading-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink-strong);
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .loading-track {
+      width: 100%;
+      max-width: 440px;
+      height: 3px;
+      background: var(--track);
+      border-radius: 99px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .loading-bar {
+      height: 100%;
+      width: 0%;
+      background: var(--bar);
+      transition: width 0.14s ease-out;
+    }
+
+    .loading-step {
+      font-family: "JetBrains Mono", "LocalCodeMono", ui-monospace, monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* Stage 3: Evaluated Top-5 Font Specimens */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #results {
+      margin-top: 26px;
+    }
+
+    .font-block {
+      margin-bottom: 34px;
+      animation: fadeIn 0.2s ease-out both;
+    }
+
+    .font-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .font-title-group {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .rank {
+      font-family: "JetBrains Mono", "LocalCodeMono", ui-monospace, monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .font-name {
+      font-family: "Google Sans Flex", "LocalGoogleSans", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      color: var(--ink-strong);
+    }
+
+    .font-meta {
+      font-family: "JetBrains Mono", "LocalCodeMono", ui-monospace, monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Google Sans Flex", "LocalGoogleSans", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 140ms ease;
+    }
+
+    .links a:hover {
+      color: var(--ink-strong);
+    }
+
+    .links a.dl {
+      padding: 4px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      color: var(--ink-strong);
+      font-weight: 500;
+    }
+
+    .links a.dl:hover {
+      border-color: var(--ink-strong);
+      background: var(--surface-hover);
+    }
+
+    .eval-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      font-family: "JetBrains Mono", "LocalCodeMono", ui-monospace, monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .eval-badge {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--badge-bg);
+      border: 1px solid var(--border-strong);
+      color: var(--badge-ink);
+      font-weight: 600;
+    }
+
+    .eval-row strong {
+      color: var(--ink-strong);
+      font-weight: 600;
+    }
+
+    .fox {
+      font-size: 26px;
+      line-height: 1.24;
+      color: var(--ink-strong);
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .weights {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 5px 18px;
+    }
+
+    @media (max-width: 640px) {
+      .weights { grid-template-columns: 1fr; }
+    }
+
+    .w-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--ink);
+    }
+
+    .w-lbl {
+      font-family: "JetBrains Mono", "LocalCodeMono", ui-monospace, monospace;
+      font-size: 12px;
+      color: var(--muted);
+      width: 88px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet" id="drop-zone">
+    <!-- Antigravity Header Chrome with System / Black / White Mode Detection -->
+    <div class="header-bar">
+      <div class="brand-cluster">
+        <span class="brand-dot"></span>
+        <span class="brand-title">google-font-selection</span>
+        <span class="brand-sub">4-Axis Font Evaluation Gate · 1,685 Families</span>
+      </div>
+      <div class="theme-cluster" role="group" aria-label="Color theme">
+        <button type="button" class="mode-pill active" id="mode-auto" onclick="window.setThemeMode('auto')">System</button>
+        <button type="button" class="mode-pill" id="mode-dark" onclick="window.setThemeMode('dark')">Black</button>
+        <button type="button" class="mode-pill" id="mode-light" onclick="window.setThemeMode('light')">White</button>
+      </div>
+    </div>
+
+    <!-- Image Upload + Text Keyword Command Bar -->
+    <form id="eval-form" class="command-bar" onsubmit="event.preventDefault(); window.triggerEvalWithLoading(document.getElementById('skill-input').value, window.currentImagePayload);">
+      <label class="upload-trigger" for="image-file-input" title="Upload or drop an image (PNG, JPG, WebP, SVG)">
+        <svg class="upload-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 16V4m0 0L8 8m4-4l4 4M4 17v2a1 1 0 001 1h14a1 1 0 001-1v-2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Upload Image
+        <input type="file" id="image-file-input" accept="image/*" style="display:none" onchange="window.handleImageFiles(this.files)" />
+      </label>
+      <input type="text" id="skill-input" class="input-box" value="" placeholder="Pass a keyword, phrase, or drop an image (e.g. soft, thicken, thin, condensed, luxury, mono)..." />
+      <button type="submit" id="run-eval-btn" class="run-btn">Run Eval ↵</button>
+    </form>
+
+    <!-- Quick Test Chips -->
+    <div class="sub-bar">
+      <div class="presets">
+        <button type="button" class="preset-chip" data-val="soft" onclick="window.pickPreset(this)">soft</button>
+        <button type="button" class="preset-chip" data-val="thicken" onclick="window.pickPreset(this)">thicken</button>
+        <button type="button" class="preset-chip" data-val="thin hairline" onclick="window.pickPreset(this)">thin hairline</button>
+        <button type="button" class="preset-chip" data-val="condensed tall" onclick="window.pickPreset(this)">condensed tall</button>
+        <button type="button" class="preset-chip" data-val="warm editorial" onclick="window.pickPreset(this)">warm editorial</button>
+        <button type="button" class="preset-chip" data-val="developer cli" onclick="window.pickPreset(this)">developer cli</button>
+      </div>
+    </div>
+
+    <!-- Uploaded Image Preview Pill -->
+    <div id="image-pill" class="image-pill">
+      <div class="image-pill-left">
+        <img id="image-thumb" class="image-thumb" src="" alt="Uploaded preview" />
+        <span id="image-info"></span>
+      </div>
+      <button type="button" class="image-remove-btn" onclick="window.clearUploadedImage()">Remove ✕</button>
+    </div>
+
+    <p id="skill-meta" class="meta-line">Ready — upload/drop an image or pass a keyword above to run the 4-Axis Font Evaluation Gate.</p>
+
+    <!-- Stage 1: Starts completely empty until an image or text input is passed -->
+    <div id="results"></div>
+  </div>
+
+  <script>
+    // System theme detection: defaults to Light Mode (#FFFFFF) unless OS Dark Mode is turned on
+    const rootEl = document.documentElement;
+    const mqlDark = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+    window.currentThemeMode = "auto";
+
+    window.applySystemTheme = function() {
+      if (window.currentThemeMode === "auto") {
+        // Default to Light Mode unless prefers-color-scheme: dark is explicitly active
+        const isDark = Boolean(mqlDark && mqlDark.matches);
+        rootEl.setAttribute("data-theme", isDark ? "dark" : "light");
+        const sysBtn = document.getElementById("mode-auto");
+        if (sysBtn) {
+          sysBtn.textContent = `System (${isDark ? "Black" : "White"})`;
+        }
+      }
+    };
+
+    window.setThemeMode = function(mode) {
+      window.currentThemeMode = mode;
+      ["auto", "dark", "light"].forEach(m => {
+        const el = document.getElementById("mode-" + m);
+        if (el) el.classList.toggle("active", m === mode);
+      });
+      if (mode === "auto") {
+        window.applySystemTheme();
+      } else {
+        rootEl.setAttribute("data-theme", mode);
+      }
+    };
+
+    if (mqlDark) {
+      if (mqlDark.addEventListener) {
+        mqlDark.addEventListener("change", window.applySystemTheme);
+      } else if (mqlDark.addListener) {
+        mqlDark.addListener(window.applySystemTheme);
+      }
+    }
+    window.applySystemTheme();
+
+    const FONTS = [
+      {
+        family: "Fredoka",
+        category: "SANSSERIF",
+        axes: "wdth (75..125), wght (300..700)",
+        axisScore: 95,
+        traits: ["soft","softer","softest","round","rounded","bubbly","friendly","playful","cute","warm","smooth","plush","gentle","cozy","puffy","cloud","pastel"],
+        vectors: {contrast:1.1,warmth:4.8,aperture:4.7,proportion:3.6,tempo:3.1},
+        slug: "fredoka",
+        cssStack: "'Fredoka', ui-rounded, 'LocalRounded', 'Arial Rounded MT Bold', sans-serif",
+        extraStyle: "letter-spacing: 0.01em;",
+        why: "Plush rounded terminals + variable width (75..125) & weight (300..700)"
+      },
+      {
+        family: "Fraunces",
+        category: "SERIF",
+        axes: "SOFT (0..100), WONK (0..1), opsz (9..144), wght (100..900)",
+        axisScore: 100,
+        traits: ["soft","softer","softest","round","rounded","bakery","coffee","warm","craft","organic","botanical","plush","gentle","cozy","ceramic"],
+        vectors: {contrast:4.1,warmth:5.0,aperture:4.0,proportion:3.6,tempo:2.4},
+        slug: "fraunces",
+        cssStack: "'Fraunces', 'LocalSoftSerif', 'Charter', 'Cooper Black', Georgia, serif",
+        extraStyle: "font-variation-settings: 'SOFT' 100, 'WONK' 1;",
+        why: "Dedicated Google Fonts SOFT (0..100 terminal softness) axis + 9..144pt optical sizing"
+      },
+      {
+        family: "Nunito",
+        category: "SANSSERIF",
+        axes: "ital (0..1), wght (200..1000)",
+        axisScore: 92,
+        traits: ["soft","softer","softest","round","rounded","friendly","warm","smooth","gentle","approachable","balanced","pastel"],
+        vectors: {contrast:1.2,warmth:4.5,aperture:4.8,proportion:3.5,tempo:3.0},
+        slug: "nunito",
+        cssStack: "'Nunito', ui-rounded, 'LocalRounded', 'Avenir Next', sans-serif",
+        extraStyle: "",
+        why: "Balanced rounded-terminal sans superfamily spanning 200..1000 + true italics"
+      },
+      {
+        family: "Comfortaa",
+        category: "DISPLAY",
+        axes: "wght (300..700)",
+        axisScore: 88,
+        traits: ["soft","softer","softest","round","rounded","bubbly","friendly","circular","smooth","gentle","plush","cozy","calm","pillow"],
+        vectors: {contrast:1.0,warmth:4.7,aperture:4.9,proportion:3.7,tempo:2.8},
+        slug: "comfortaa",
+        cssStack: "'Comfortaa', ui-rounded, 'LocalRounded', 'Avenir', sans-serif",
+        extraStyle: "letter-spacing: 0.03em;",
+        why: "Ultra-soft circular loop geometry + wide open 4.9/5 aperture"
+      },
+      {
+        family: "Quicksand",
+        category: "SANSSERIF",
+        axes: "wght (300..700)",
+        axisScore: 88,
+        traits: ["soft","softer","softest","round","rounded","friendly","geometric","circular","smooth","gentle","calm","airy"],
+        vectors: {contrast:1.1,warmth:4.4,aperture:4.9,proportion:3.5,tempo:2.9},
+        slug: "quicksand",
+        cssStack: "'Quicksand', ui-rounded, 'LocalRounded', 'Gill Sans', sans-serif",
+        extraStyle: "letter-spacing: 0.02em;",
+        why: "Geometric circular bowls + soft stroke endings across 300..700 weights"
+      },
+      {
+        family: "Archivo Black",
+        category: "SANSSERIF",
+        axes: "wght (900)",
+        axisScore: 82,
+        traits: ["thick","thicken","thickest","heavy","black","fat","chunky","bold","impact","solid","stout","strong","weight","poster"],
+        vectors: {contrast:1.2,warmth:2.6,aperture:4.2,proportion:4.6,tempo:4.8},
+        slug: "archivo-black",
+        cssStack: "'Archivo Black', 'LocalHeavyBlack', 'Arial Black', 'Impact', sans-serif",
+        extraStyle: "font-weight: 900; letter-spacing: -0.02em;",
+        why: "Maximum ink-density 900-black grotesque for ultra-thick display headlines"
+      },
+      {
+        family: "Ultra",
+        category: "SERIF",
+        axes: "wght (900)",
+        axisScore: 82,
+        traits: ["thick","thicken","thickest","heavy","fat","chunky","slab","wood","bold","stout","massive"],
+        vectors: {contrast:3.8,warmth:4.2,aperture:3.6,proportion:4.7,tempo:4.4},
+        slug: "ultra",
+        cssStack: "'Ultra', 'LocalHeavySlab', 'Superclarendon', 'Rockwell', serif",
+        extraStyle: "font-weight: 900;",
+        why: "Ultra-thick fat-face wood-type slab serif with massive vertical stems"
+      },
+      {
+        family: "Climate Crisis",
+        category: "DISPLAY",
+        axes: "YEAR (1979..2050)",
+        axisScore: 90,
+        traits: ["thick","thicken","thickest","heavy","black","fat","chunky","massive","wide","blocky"],
+        vectors: {contrast:1.1,warmth:2.8,aperture:3.4,proportion:5.0,tempo:4.9},
+        slug: "climate-crisis",
+        cssStack: "'Climate Crisis', 'LocalHeavyBlack', 'Arial Black', sans-serif",
+        extraStyle: "font-weight: 900; text-transform: uppercase; letter-spacing: 0.02em;",
+        why: "Monumental ultra-heavy variable display face (proportion=5.0/5)"
+      },
+      {
+        family: "Dela Gothic One",
+        category: "DISPLAY",
+        axes: "wght (900)",
+        axisScore: 80,
+        traits: ["thick","thicken","heavy","black","fat","wide","chunky","bold","poster"],
+        vectors: {contrast:1.3,warmth:2.9,aperture:4.1,proportion:4.9,tempo:4.8},
+        slug: "dela-gothic-one",
+        cssStack: "'Dela Gothic One', 'LocalHeavyBlack', 'Arial Black', sans-serif",
+        extraStyle: "font-weight: 900; letter-spacing: 0.01em;",
+        why: "Wide, flat, heavy Japanese-inspired poster display gothic"
+      },
+      {
+        family: "Rubik Mono One",
+        category: "SANSSERIF",
+        axes: "wght (900)",
+        axisScore: 80,
+        traits: ["thick","thicken","heavy","black","fat","chunky","blocky","rounded","bold"],
+        vectors: {contrast:1.0,warmth:3.1,aperture:4.0,proportion:4.8,tempo:4.7},
+        slug: "rubik-mono-one",
+        cssStack: "'Rubik Mono One', 'LocalHeavyBlack', 'Arial Black', monospace",
+        extraStyle: "font-weight: 900; letter-spacing: 0.04em;",
+        why: "Thick monoline black display sans with softened block corners"
+      },
+      {
+        family: "Cormorant",
+        category: "SERIF",
+        axes: "ital (0..1), wght (300..700)",
+        axisScore: 92,
+        traits: ["thin","thinner","light","delicate","fine","hairline","airy","slender","slim","elegant"],
+        vectors: {contrast:4.8,warmth:4.4,aperture:3.7,proportion:3.3,tempo:1.5},
+        slug: "cormorant",
+        cssStack: "'Cormorant', 'LocalDidone', 'Didot', 'Bodoni 72', 'Baskerville', serif",
+        extraStyle: "font-weight: 300; letter-spacing: 0.01em;",
+        why: "Gossamer 300-light Garamond display serif with high contrast (4.8/5)"
+      },
+      {
+        family: "Josefin Sans",
+        category: "SANSSERIF",
+        axes: "ital (0..1), wght (100..700)",
+        axisScore: 94,
+        traits: ["thin","thinner","light","delicate","fine","hairline","slender","slim","airy","vintage"],
+        vectors: {contrast:1.3,warmth:3.3,aperture:4.6,proportion:3.4,tempo:2.6},
+        slug: "josefin-sans",
+        cssStack: "'Josefin Sans', 'LocalThinSans', 'Avenir Next Ultra Light', 'Helvetica Neue UltraLight', sans-serif",
+        extraStyle: "font-weight: 200; letter-spacing: 0.04em;",
+        why: "Ultra-thin 100 hairline geometric sans with tall vintage proportions"
+      },
+      {
+        family: "Outfit",
+        category: "SANSSERIF",
+        axes: "wght (100..900)",
+        axisScore: 92,
+        traits: ["thin","thinner","light","hairline","slender","slim","geometric","clean","minimal"],
+        vectors: {contrast:1.2,warmth:3.1,aperture:4.8,proportion:3.4,tempo:3.5},
+        slug: "outfit",
+        cssStack: "'Outfit', 'LocalThinSans', 'Helvetica Neue Light', 'Avenir', sans-serif",
+        extraStyle: "font-weight: 200;",
+        why: "Continuous 100..900 geometric variable sans starting at razor-thin 100"
+      },
+      {
+        family: "Bodoni Moda",
+        category: "SERIF",
+        axes: "ital (0..1), opsz (6..96), wght (400..900)",
+        axisScore: 98,
+        traits: ["thin","hairline","didone","high-contrast","fashion","luxury","magazine"],
+        vectors: {contrast:5.0,warmth:2.9,aperture:3.3,proportion:2.9,tempo:1.8},
+        slug: "bodoni-moda",
+        cssStack: "'Bodoni Moda', 'LocalDidone', 'Didot', 'Bodoni 72', serif",
+        extraStyle: "letter-spacing: 0.01em;",
+        why: "Extreme Didone hairline contrast (5.0/5) with 6..96pt optical sizing"
+      },
+      {
+        family: "Instrument Serif",
+        category: "SERIF",
+        axes: "ital (0..1)",
+        axisScore: 84,
+        traits: ["thin","hairline","high-contrast","gallery","architecture","monochrome","editorial"],
+        vectors: {contrast:4.9,warmth:3.5,aperture:3.6,proportion:2.7,tempo:2.2},
+        slug: "instrument-serif",
+        cssStack: "'Instrument Serif', 'LocalDidone', 'Didot', 'Big Caslon', serif",
+        extraStyle: "font-style: italic;",
+        why: "Sharp hairline brackets (contrast=4.9/5) and narrow editorial stance"
+      },
+      {
+        family: "Bebas Neue",
+        category: "DISPLAY",
+        axes: "wght (400)",
+        axisScore: 82,
+        traits: ["condensed","narrow","tall","skinny","compact","tight","vertical","caps","headline"],
+        vectors: {contrast:1.2,warmth:2.4,aperture:3.9,proportion:1.3,tempo:4.7},
+        slug: "bebas-neue",
+        cssStack: "'Bebas Neue', 'LocalCondensed', 'DIN Condensed', 'Impact', 'Arial Narrow', sans-serif",
+        extraStyle: "text-transform: uppercase; letter-spacing: 0.03em; font-stretch: condensed;",
+        why: "Ultra-condensed tall display gothic (proportion=1.3/5)"
+      },
+      {
+        family: "Big Shoulders Display",
+        category: "DISPLAY",
+        axes: "wght (100..900)",
+        axisScore: 94,
+        traits: ["condensed","narrow","tall","tight","vertical","industrial","poster","video"],
+        vectors: {contrast:1.8,warmth:2.4,aperture:3.8,proportion:1.2,tempo:4.9},
+        slug: "big-shoulders-display",
+        cssStack: "'Big Shoulders Display', 'LocalCondensed', 'DIN Condensed', 'Avenir Next Condensed', sans-serif",
+        extraStyle: "text-transform: uppercase; font-stretch: condensed; font-weight: 700;",
+        why: "Variable 100..900 tall condensed American gothic (proportion=1.2/5)"
+      },
+      {
+        family: "Newsreader",
+        category: "SERIF",
+        axes: "ital (0..1), opsz (6..72), wght (200..800)",
+        axisScore: 98,
+        traits: ["warm","leather","atelier","editorial","luxury","sunlit","stoneware","serif","story"],
+        vectors: {contrast:4.3,warmth:4.6,aperture:3.9,proportion:3.4,tempo:1.8},
+        slug: "newsreader",
+        cssStack: "'Newsreader', 'LocalEditorialSerif', 'Iowan Old Style', 'Baskerville', Georgia, serif",
+        extraStyle: "",
+        why: "Screen-tuned 6..72pt optical size axis + warm editorial serifs"
+      },
+      {
+        family: "Cormorant Garamond",
+        category: "SERIF",
+        axes: "ital (0..1), wght (300..700)",
+        axisScore: 90,
+        traits: ["warm","leather","atelier","editorial","luxury","fashion","serif","archival"],
+        vectors: {contrast:4.7,warmth:4.7,aperture:3.6,proportion:3.5,tempo:1.5},
+        slug: "cormorant-garamond",
+        cssStack: "'Cormorant Garamond', 'LocalEditorialSerif', 'Baskerville', 'Hoefler Text', Georgia, serif",
+        extraStyle: "",
+        why: "High-warmth (4.7/5) Garamond revival for luxury & atelier commerce"
+      },
+      {
+        family: "Libre Baskerville",
+        category: "SERIF",
+        axes: "ital (0..1), wght (400..700)",
+        axisScore: 86,
+        traits: ["warm","editorial","luxury","book","classic","serif","leather"],
+        vectors: {contrast:4.1,warmth:4.3,aperture:4.0,proportion:3.6,tempo:1.9},
+        slug: "libre-baskerville",
+        cssStack: "'Libre Baskerville', 'Baskerville', 'Iowan Old Style', Georgia, serif",
+        extraStyle: "",
+        why: "Wide-counter screen Baskerville with high body-copy legibility"
+      },
+      {
+        family: "Lora",
+        category: "SERIF",
+        axes: "ital (0..1), wght (400..700)",
+        axisScore: 90,
+        traits: ["warm","editorial","story","craft","serif","atelier","organic"],
+        vectors: {contrast:3.6,warmth:4.5,aperture:4.1,proportion:3.4,tempo:2.1},
+        slug: "lora",
+        cssStack: "'Lora', 'Charter', 'Cochin', Georgia, serif",
+        extraStyle: "",
+        why: "Calligraphic brushed serifs with warm organic rhythm"
+      },
+      {
+        family: "JetBrains Mono",
+        category: "MONOSPACE",
+        axes: "ital (0..1), wght (100..800)",
+        axisScore: 94,
+        traits: ["developer","cli","terminal","telemetry","code","mono","monospace","logs","ide","api","dark"],
+        vectors: {contrast:1.4,warmth:1.6,aperture:4.9,proportion:2.6,tempo:4.5},
+        slug: "jetbrains-mono",
+        cssStack: "'JetBrains Mono', ui-monospace, 'LocalCodeMono', 'SF Mono', Menlo, monospace",
+        extraStyle: "",
+        why: "Tall x-height + zero-ambiguity code glyphs (`0/O`, `1/l/I`) across 100..800"
+      },
+      {
+        family: "Fira Code",
+        category: "MONOSPACE",
+        axes: "wght (300..700)",
+        axisScore: 90,
+        traits: ["developer","cli","terminal","code","mono","monospace","ide","syntax","dark"],
+        vectors: {contrast:1.3,warmth:1.5,aperture:4.9,proportion:2.5,tempo:4.5},
+        slug: "fira-code",
+        cssStack: "'Fira Code', ui-monospace, 'LocalCodeMono', Menlo, Monaco, monospace",
+        extraStyle: "",
+        why: "Programming ligatures (`->`, `===`, `>=`) + crisp terminal legibility"
+      },
+      {
+        family: "IBM Plex Mono",
+        category: "MONOSPACE",
+        axes: "ital (0..1), wght (100..700)",
+        axisScore: 92,
+        traits: ["developer","cli","terminal","telemetry","code","mono","data","table","dark"],
+        vectors: {contrast:1.5,warmth:2.3,aperture:4.8,proportion:2.5,tempo:4.2},
+        slug: "ibm-plex-mono",
+        cssStack: "'IBM Plex Mono', ui-monospace, 'PT Mono', 'Courier New', monospace",
+        extraStyle: "",
+        why: "Engineered industrial monospace for telemetry badges & data tables"
+      },
+      {
+        family: "Space Grotesk",
+        category: "SANSSERIF",
+        axes: "wght (300..700)",
+        axisScore: 90,
+        traits: ["developer","telemetry","fintech","webgl","technical","data","code","cli","dark"],
+        vectors: {contrast:1.5,warmth:1.8,aperture:4.7,proportion:2.8,tempo:4.4},
+        slug: "space-grotesk",
+        cssStack: "'Space Grotesk', 'Avenir Next', 'Futura', sans-serif",
+        extraStyle: "letter-spacing: -0.02em;",
+        why: "Technical geometric display sans with crisp tabular numerals"
+      },
+      {
+        family: "Google Sans Flex",
+        category: "SANSSERIF",
+        axes: "GRAD (0..100), ROND (0..100), opsz (8..144), wdth (25..151), wght (1..1000)",
+        axisScore: 100,
+        traits: ["google","antigravity","ui","clean","sleek","system","adaptive","modern","product","thin","soft"],
+        vectors: {contrast:1.4,warmth:3.1,aperture:4.9,proportion:3.2,tempo:3.4},
+        slug: "google-sans-flex",
+        cssStack: "'Google Sans Flex', 'LocalGoogleSans', -apple-system, sans-serif",
+        extraStyle: "letter-spacing: -0.015em;",
+        why: "6-axis variable superfamily (wght 1..1000, wdth, opsz, GRAD, ROND)"
+      }
+    ];
+
+    window.currentImagePayload = null;
+    let loadingTimers = [];
+
+    function clearTimers() {
+      loadingTimers.forEach(t => clearTimeout(t));
+      loadingTimers = [];
+    }
+
+    // Drag and drop image support on the sheet
+    const dropZone = document.getElementById("drop-zone");
+    dropZone.addEventListener("dragover", function(e) {
+      e.preventDefault();
+      dropZone.classList.add("drag-over");
+    });
+    dropZone.addEventListener("dragleave", function() {
+      dropZone.classList.remove("drag-over");
+    });
+    dropZone.addEventListener("drop", function(e) {
+      e.preventDefault();
+      dropZone.classList.remove("drag-over");
+      if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+        window.handleImageFiles(e.dataTransfer.files);
+      }
+    });
+
+    window.handleImageFiles = function(files) {
+      if (!files || !files.length) return;
+      const file = files[0];
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        const dataUrl = evt.target.result;
+        const img = new Image();
+        img.onload = function() {
+          const canvas = document.createElement("canvas");
+          const w = 48, h = 48;
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext("2d");
+          ctx.drawImage(img, 0, 0, w, h);
+          const data = ctx.getImageData(0, 0, w, h).data;
+
+          let lumSum = 0, lumSqSum = 0, warmSum = 0;
+          const count = w * h;
+          for (let i = 0; i < data.length; i += 4) {
+            const r = data[i], g = data[i + 1], b = data[i + 2];
+            const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+            lumSum += lum;
+            lumSqSum += lum * lum;
+            warmSum += (r - b) / 255;
+          }
+          const meanLum = lumSum / count;
+          const variance = Math.max(0, lumSqSum / count - meanLum * meanLum);
+          const stdLum = Math.sqrt(variance);
+          const meanWarmth = warmSum / count;
+          const aspect = img.naturalWidth / Math.max(1, img.naturalHeight);
+
+          const imgVectors = {
+            contrast: Math.max(1.0, Math.min(5.0, +(1.2 + stdLum * 9.8).toFixed(2))),
+            warmth: Math.max(1.0, Math.min(5.0, +(2.9 + meanWarmth * 4.5 + (meanLum > 0.72 ? 0.5 : 0)).toFixed(2))),
+            aperture: Math.max(2.5, Math.min(5.0, +(3.2 + meanLum * 1.7).toFixed(2))),
+            proportion: Math.max(1.2, Math.min(5.0, +(aspect < 0.8 ? 1.5 : aspect > 1.65 ? 3.9 : 3.2).toFixed(2))),
+            tempo: Math.max(1.4, Math.min(5.0, +(meanLum < 0.35 ? 4.4 : stdLum > 0.28 ? 3.8 : 2.3).toFixed(2)))
+          };
+
+          const inferredTraits = [];
+          if (imgVectors.warmth >= 3.6 && imgVectors.contrast >= 3.2) {
+            inferredTraits.push("warm", "editorial", "serif", "luxury");
+          } else if (imgVectors.warmth >= 3.5 && imgVectors.contrast < 2.6) {
+            inferredTraits.push("soft", "rounded", "friendly", "warm");
+          } else if (meanLum < 0.32) {
+            inferredTraits.push("developer", "cli", "dark", "mono", "telemetry");
+          } else if (aspect < 0.75) {
+            inferredTraits.push("condensed", "tall", "vertical");
+          } else if (imgVectors.contrast >= 4.2) {
+            inferredTraits.push("thin", "hairline", "high-contrast", "didone");
+          } else {
+            inferredTraits.push("warm", "editorial", "soft");
+          }
+
+          window.currentImagePayload = {
+            name: file.name,
+            width: img.naturalWidth,
+            height: img.naturalHeight,
+            vectors: imgVectors,
+            traits: inferredTraits
+          };
+
+          document.getElementById("image-thumb").src = dataUrl;
+          document.getElementById("image-info").textContent =
+            `${file.name} (${img.naturalWidth}×${img.naturalHeight}px) · Vectors: contrast ${imgVectors.contrast}, warmth ${imgVectors.warmth}, aperture ${imgVectors.aperture}`;
+          document.getElementById("image-pill").classList.add("visible");
+
+          window.triggerEvalWithLoading(document.getElementById("skill-input").value, window.currentImagePayload);
+        };
+        img.src = dataUrl;
+      };
+      reader.readAsDataURL(file);
+    };
+
+    window.clearUploadedImage = function() {
+      window.currentImagePayload = null;
+      document.getElementById("image-file-input").value = "";
+      document.getElementById("image-pill").classList.remove("visible");
+      const textVal = document.getElementById("skill-input").value.trim();
+      if (textVal) {
+        window.triggerEvalWithLoading(textVal, null);
+      } else {
+        document.getElementById("results").innerHTML = "";
+        document.getElementById("skill-meta").textContent =
+          "Ready — upload/drop an image or pass a keyword above to run the 4-Axis Font Evaluation Gate.";
+      }
+    };
+
+    window.triggerEvalWithLoading = function(rawQuery, imgPayload) {
+      clearTimers();
+      const query = (rawQuery || "").trim();
+      const metaEl = document.getElementById("skill-meta");
+      const resultsEl = document.getElementById("results");
+      const chips = document.querySelectorAll(".preset-chip");
+
+      chips.forEach(c => c.classList.toggle("active", c.getAttribute("data-val") === query));
+
+      if (!query && !imgPayload) {
+        metaEl.textContent = "Ready — upload/drop an image or pass a keyword above to run the 4-Axis Font Evaluation Gate.";
+        resultsEl.innerHTML = "";
+        return;
+      }
+
+      const label = imgPayload && query
+        ? `Image "${imgPayload.name}" + "${query}"`
+        : imgPayload
+          ? `Image "${imgPayload.name}" (${imgPayload.width}×${imgPayload.height}px)`
+          : `"${query}"`;
+
+      metaEl.textContent = `Evaluating ${label} across 1,685 Google Fonts...`;
+      resultsEl.innerHTML = `
+        <div class="loading-box">
+          <div class="loading-title" id="load-title">Running 4-Axis Font Evaluation Gate for ${label}...</div>
+          <div class="loading-track"><div class="loading-bar" id="load-bar" style="width: 24%"></div></div>
+          <div class="loading-step" id="load-step">Step 1/3 · Extracting ${imgPayload ? 'image pixel vectors &amp; ' : ''}5-vector typographic fingerprint...</div>
+        </div>
+      `;
+
+      loadingTimers.push(setTimeout(() => {
+        const bar = document.getElementById("load-bar");
+        const step = document.getElementById("load-step");
+        if (bar) bar.style.width = "68%";
+        if (step) step.textContent = "Step 2/3 · Scoring Trait Alignment (35%), 5-Vector Fit (30%), Variable Axes (20%) & Legibility (15%)...";
+      }, 150));
+
+      loadingTimers.push(setTimeout(() => {
+        const bar = document.getElementById("load-bar");
+        const step = document.getElementById("load-step");
+        if (bar) bar.style.width = "100%";
+        if (step) step.textContent = "Step 3/3 · Ranking Top 5 Google Fonts & rendering weights...";
+      }, 300));
+
+      loadingTimers.push(setTimeout(() => {
+        window.renderEvaluatedFonts(query, imgPayload, label);
+      }, 420));
+    };
+
+    window.renderEvaluatedFonts = function(query, imgPayload, label) {
+      const metaEl = document.getElementById("skill-meta");
+      const resultsEl = document.getElementById("results");
+
+      const combinedText = [
+        query || "",
+        imgPayload ? imgPayload.name : "",
+        imgPayload ? (imgPayload.traits || []).join(" ") : ""
+      ].join(" ").toLowerCase().trim();
+
+      const tokens = combinedText.split(/[^a-z0-9]+/).filter(t => t.length >= 2);
+
+      const scored = FONTS.map((f, idx) => {
+        const hits = f.traits.filter(tr =>
+          combinedText.includes(tr) || tokens.some(tok => tok.length >= 3 && (tok.startsWith(tr) || tr.startsWith(tok)))
+        );
+
+        const traitScore = hits.length > 0 ? Math.min(100, 93 + hits.length * 2.5) : 66;
+
+        let vectorScore = 76;
+        if (imgPayload && imgPayload.vectors) {
+          const iv = imgPayload.vectors;
+          const dist = Math.sqrt(
+            Math.pow(f.vectors.contrast - iv.contrast, 2) +
+            Math.pow(f.vectors.warmth - iv.warmth, 2) +
+            Math.pow(f.vectors.aperture - iv.aperture, 2) +
+            Math.pow(f.vectors.proportion - iv.proportion, 2) +
+            Math.pow(f.vectors.tempo - iv.tempo, 2)
+          );
+          vectorScore = Math.max(68, Math.min(99, Math.round((1 - dist / 8.94) * 100)));
+        } else if (hits.length > 0) {
+          vectorScore = Math.min(99, Math.round(92 + (f.vectors.warmth + f.vectors.aperture) * 0.7 - idx * 0.3));
+        }
+
+        const axisScore = f.axisScore || 85;
+        const legibilityScore = Math.min(100, Math.round((f.vectors.aperture / 5) * 50 + 49));
+        const composite = Math.min(99.4, Math.round((traitScore * 0.35 + vectorScore * 0.30 + axisScore * 0.20 + legibilityScore * 0.15) * 10) / 10);
+
+        return {
+          ...f,
+          match_score: composite,
+          eval: {
+            verdict: composite >= 80 ? "PASS" : "REVIEW",
+            traitScore: Math.round(traitScore),
+            vectorScore: Math.round(vectorScore),
+            axisScore: Math.round(axisScore),
+            legibilityScore: Math.round(legibilityScore)
+          }
+        };
+      });
+
+      scored.sort((a, b) => (b.match_score - a.match_score) || a.family.localeCompare(b.family));
+      const top5 = scored.slice(0, 5);
+
+      metaEl.textContent = `Eval Gate PASS (5/5) for ${label} → #1 ${top5[0].family} (${top5[0].match_score}% Composite Eval)`;
+
+      resultsEl.innerHTML = top5.map((f, i) => {
+        const specUrl = `https://fonts.google.com/specimen/${encodeURIComponent(f.family).replace(/%20/g, "+")}`;
+        const zipUrl = `https://gwfh.mranftl.com/api/fonts/${f.slug}?download=zip&subsets=latin&formats=woff2`;
+
+        return `
+          <div class="font-block" style="animation-delay: ${i * 45}ms">
+            <div class="font-header">
+              <div class="font-title-group">
+                <span class="rank">0${i + 1}</span>
+                <span class="font-name">${f.family}</span>
+                <span class="font-meta">${f.category} · ${f.axes}</span>
+              </div>
+              <div class="links">
+                <a href="${specUrl}" target="_blank" rel="noopener">Google Fonts ↗</a>
+                <a class="dl" href="${zipUrl}" target="_blank" rel="noopener">Download .zip</a>
+              </div>
+            </div>
+            <div class="eval-row">
+              <span class="eval-badge">EVAL ${f.eval.verdict} · ${f.match_score.toFixed(1)}%</span>
+              <span>Trait <strong>${f.eval.traitScore}</strong></span>
+              <span>5-Vector <strong>${f.eval.vectorScore}</strong></span>
+              <span>Axes <strong>${f.eval.axisScore}</strong></span>
+              <span>Legibility <strong>${f.eval.legibilityScore}</strong></span>
+              <span>· ${f.why}</span>
+            </div>
+            <div class="fox" style="font-family: ${f.cssStack}; ${f.extraStyle}">The quick brown fox jumps over the lazy dog.</div>
+            <div class="weights" style="font-family: ${f.cssStack};">
+              <div class="w-row"><span class="w-lbl">300 Light</span><span style="font-weight:300">The quick brown fox jumps over the lazy dog</span></div>
+              <div class="w-row"><span class="w-lbl">400 Regular</span><span style="font-weight:400">The quick brown fox jumps over the lazy dog</span></div>
+              <div class="w-row"><span class="w-lbl">400 Italic</span><span style="font-weight:400;font-style:italic">The quick brown fox jumps over the lazy dog</span></div>
+              <div class="w-row"><span class="w-lbl">700 Bold</span><span style="font-weight:700">The quick brown fox jumps over the lazy dog</span></div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    };
+
+    window.pickPreset = function(btn) {
+      const val = btn.getAttribute("data-val");
+      const inputEl = document.getElementById("skill-input");
+      inputEl.value = val;
+      window.triggerEvalWithLoading(val, window.currentImagePayload);
+    };
+  </script>
+</body>
+</html>

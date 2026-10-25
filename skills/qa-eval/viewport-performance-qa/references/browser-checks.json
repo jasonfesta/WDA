@@ -1,0 +1,988 @@
+{
+  "date": "2026-10-21",
+  "status": "pass",
+  "total": 181,
+  "viewports": [
+    {
+      "width": 1280,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "checks": [
+    {
+      "component": "sol",
+      "test": "01-today image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "01-today → 02-fahrenheit",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "01-today → 03-friday",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "01-today → 04-options",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "02-fahrenheit image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "02-fahrenheit → 01-today",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "03-friday image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "03-friday → 01-today",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "04-options image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "04-options → 01-today",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "04-options → 05-retry",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "05-retry image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "05-retry → 01-today",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "05-retry → 05-retry",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "control more",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "control unit-c",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "control unit-f",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "control days",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "control location",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "control retry",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "control close",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "desktop geometry and loaded images",
+      "pass": true,
+      "details": {
+        "images": [],
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "component": "gather",
+      "test": "01-three-selected image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "01-three-selected → 02-closed",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "01-three-selected → 03-four-selected",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "02-closed image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "02-closed → 01-three-selected",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "03-four-selected image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "03-four-selected → 01-three-selected",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "03-four-selected → 04-empty",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "03-four-selected → 05-save-error",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "04-empty image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "04-empty → 01-three-selected",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "05-save-error image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "05-save-error → 03-four-selected",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "05-save-error → 01-three-selected",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "05-save-error → 05-save-error",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "control trigger",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "control person-lena",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "control person-noah",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "control person-amara",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "control person-eli",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "control retry",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "control revert",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "desktop geometry and loaded images",
+      "pass": true,
+      "details": {
+        "images": [],
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "component": "courtyard",
+      "test": "01-apricot image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "01-apricot → 02-moss",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "01-apricot → 03-focus",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "02-moss image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "02-moss → 04-shuffled",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "03-focus image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "03-focus → 01-apricot",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "03-focus → 02-moss",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "04-shuffled image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "04-shuffled → 05-restored",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "05-restored image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "05-restored → 04-shuffled",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "control swatch-rose",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "control swatch-apricot",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "control swatch-citron",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "control swatch-moss",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "control swatch-burgundy",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "control shuffle",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "control undo",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "control new-materials",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "desktop geometry and loaded images",
+      "pass": true,
+      "details": {
+        "images": [],
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "component": "roam",
+      "test": "01-everyday image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "01-everyday → 02-weekender",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "01-everyday → 03-worldwide",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "01-everyday → 04-review",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "02-weekender image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "02-weekender → 01-everyday",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "02-weekender → 03-worldwide",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "03-worldwide image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "03-worldwide → 01-everyday",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "03-worldwide → 02-weekender",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "04-review image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "04-review → 01-everyday",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "04-review → 05-confirmed",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "05-confirmed image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "05-confirmed → 01-everyday",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "control plans",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "control choose",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "control features",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "control continue",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "control cancel",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "control retry",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "control manage-membership",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "control close",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "desktop geometry and loaded images",
+      "pass": true,
+      "details": {
+        "images": [],
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "component": "kiln",
+      "test": "01-cycle image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "01-cycle → 02-previous",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "01-cycle → 03-week",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "01-cycle → 04-detail",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "01-cycle → 05-manage",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "02-previous image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "02-previous → 01-cycle",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "02-previous → 03-week",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "03-week image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "03-week → 01-cycle",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "03-week → 02-previous",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "04-detail image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "04-detail → 01-cycle",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "05-manage image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "05-manage → 01-cycle",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "control periods",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "control categories",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "control daily",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "control collaborators",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "control library",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "control collections",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "control manage",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "control table",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "control retry",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "control close",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "control compare",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "control activity",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "desktop geometry and loaded images",
+      "pass": true,
+      "details": {
+        "images": [],
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "component": "folio",
+      "test": "01-studio image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "01-studio → 02-explore",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "01-studio → 03-saved",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "01-studio → 04-profile",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "01-studio → 05-keyboard-focus",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "02-explore image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "02-explore → 01-studio",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "02-explore → 03-saved",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "02-explore → 04-profile",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "03-saved image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "03-saved → 01-studio",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "03-saved → 02-explore",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "03-saved → 04-profile",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "04-profile image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "04-profile → 01-studio",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "04-profile → 02-explore",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "04-profile → 03-saved",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "05-keyboard-focus image/prompt/reference",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "05-keyboard-focus → 04-profile",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "05-keyboard-focus → 01-studio",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "control studio",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "control explore",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "control saved",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "control profile",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "control browse",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "control signin",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "control retry",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "desktop geometry and loaded images",
+      "pass": true,
+      "details": {
+        "images": [],
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "component": "sol",
+      "test": "deep link selects fifth image",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "keyboard previous",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "keyboard next",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "control links to actual image",
+      "pass": true
+    },
+    {
+      "component": "sol",
+      "test": "390px responsive layout",
+      "pass": true,
+      "details": {
+        "imageWidth": 346,
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "component": "gather",
+      "test": "deep link selects fifth image",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "keyboard previous",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "keyboard next",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "control links to actual image",
+      "pass": true
+    },
+    {
+      "component": "gather",
+      "test": "390px responsive layout",
+      "pass": true,
+      "details": {
+        "imageWidth": 346,
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "component": "courtyard",
+      "test": "deep link selects fifth image",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "keyboard previous",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "keyboard next",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "control links to actual image",
+      "pass": true
+    },
+    {
+      "component": "courtyard",
+      "test": "390px responsive layout",
+      "pass": true,
+      "details": {
+        "imageWidth": 346,
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "component": "roam",
+      "test": "deep link selects fifth image",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "keyboard previous",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "keyboard next",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "control links to actual image",
+      "pass": true
+    },
+    {
+      "component": "roam",
+      "test": "390px responsive layout",
+      "pass": true,
+      "details": {
+        "imageWidth": 346,
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "component": "kiln",
+      "test": "deep link selects fifth image",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "keyboard previous",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "keyboard next",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "control links to actual image",
+      "pass": true
+    },
+    {
+      "component": "kiln",
+      "test": "390px responsive layout",
+      "pass": true,
+      "details": {
+        "imageWidth": 346,
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "component": "folio",
+      "test": "deep link selects fifth image",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "keyboard previous",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "keyboard next",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "control links to actual image",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "390px responsive layout",
+      "pass": true,
+      "details": {
+        "imageWidth": 346,
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "component": "index.html",
+      "test": "390px responsive layout",
+      "pass": true
+    },
+    {
+      "component": "research.html",
+      "test": "390px responsive layout",
+      "pass": true
+    },
+    {
+      "component": "index.html",
+      "test": "1280px responsive layout",
+      "pass": true
+    },
+    {
+      "component": "research.html",
+      "test": "1280px responsive layout",
+      "pass": true
+    },
+    {
+      "component": "folio",
+      "test": "mobile active thumbnail scrolls into view",
+      "pass": true,
+      "details": {
+        "left": 238,
+        "right": 368,
+        "stripLeft": 22,
+        "stripRight": 368
+      }
+    }
+  ]
+}

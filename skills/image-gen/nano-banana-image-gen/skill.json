@@ -1,0 +1,60 @@
+{
+  "id": "nano-banana-image-gen",
+  "title": "Iterative Image Generation & Cleanup (Nano Banana 2)",
+  "domain": "image-gen",
+  "domain_label": "Image Gen & Comps",
+  "path": "image-gen/nano-banana-image-gen",
+  "skill_md": "image-gen/nano-banana-image-gen/SKILL.md",
+  "html_page": "image-gen/nano-banana-image-gen/index.html",
+  "cost_tier": "paid_api",
+  "summary": "Generate and edit UI screen comps, 4K multi-screen contact grids, targeted cleanup passes (cleanup-brief.md), and clean inpainted photographic background plates (*-clean-photo.png) using Nano Banana 2.",
+  "inputs": [
+    {
+      "name": "spec_path",
+      "type": "string",
+      "required": true,
+      "description": "Path to the structured Markdown spec or defective sheet."
+    },
+    {
+      "name": "execution_mode",
+      "type": "string",
+      "required": false,
+      "default": "4k_grid",
+      "description": "1_by_1 or 4k_grid (5312x3200 web, 4544x3748 mobile, 8192x2048 component)."
+    },
+    {
+      "name": "dry_run",
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "description": "Emit cleanup-brief.md and inpaint prompts without paid API calls."
+    }
+  ],
+  "outputs": [
+    {
+      "path": "cleanup-brief.md",
+      "type": "markdown",
+      "required_patterns": [
+        "200 ml",
+        "8% ALC/VOL",
+        "subtotal"
+      ]
+    },
+    {
+      "path": "layer-inpaint-prompts.md",
+      "type": "markdown",
+      "required_patterns": [
+        "clean-photo.png",
+        "Preserve"
+      ]
+    }
+  ],
+  "references": [
+    "./references/cleanup-brief.md",
+    "./references/warm-moodboard-build-brief.md"
+  ],
+  "commands": {
+    "prompt": "python3 scripts/harness.py prompt nano-banana-image-gen --input image-gen/nano-banana-image-gen/evals/smoke.json",
+    "verify": "python3 scripts/harness.py verify nano-banana-image-gen --smoke"
+  }
+}

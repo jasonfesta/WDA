@@ -1,0 +1,43 @@
+{
+  "id": "cleanup-evaluation-benchmarking",
+  "title": "Cleanup & Evaluation Benchmarking",
+  "domain": "qa-eval",
+  "domain_label": "QA Eval",
+  "path": "qa-eval/cleanup-evaluation-benchmarking",
+  "skill_md": "qa-eval/cleanup-evaluation-benchmarking/SKILL.md",
+  "html_page": "qa-eval/cleanup-evaluation-benchmarking/index.html",
+  "cost_tier": "free",
+  "summary": "Benchmark a live React implementation side-by-side against source design comps and run automated repository, SHA-256 asset checksum, local link, and state-math validation (validation.json).",
+  "inputs": [
+    {
+      "name": "workspace_dir",
+      "type": "string",
+      "required": true,
+      "description": "Path to the React or study workspace to validate."
+    }
+  ],
+  "outputs": [
+    {
+      "path": "validation.json",
+      "type": "json",
+      "required_keys": [
+        "status",
+        "asset_hashes_checked",
+        "local_links_checked",
+        "broken_local_links",
+        "fixture_totals",
+        "errors"
+      ]
+    }
+  ],
+  "references": [
+    "./references/verification.md",
+    "./references/warm-moodboard-build-brief.md",
+    "./references/react-handoff.md",
+    "./scripts/validate_workspace.py"
+  ],
+  "commands": {
+    "prompt": "python3 scripts/harness.py prompt cleanup-evaluation-benchmarking --input qa-eval/cleanup-evaluation-benchmarking/evals/smoke.json",
+    "verify": "python3 scripts/harness.py verify cleanup-evaluation-benchmarking --smoke"
+  }
+}

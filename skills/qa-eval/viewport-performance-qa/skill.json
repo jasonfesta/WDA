@@ -1,0 +1,63 @@
+{
+  "id": "viewport-performance-qa",
+  "title": "Viewport & Performance QA",
+  "domain": "qa-eval",
+  "domain_label": "QA Eval",
+  "path": "qa-eval/viewport-performance-qa",
+  "skill_md": "qa-eval/viewport-performance-qa/SKILL.md",
+  "html_page": "qa-eval/viewport-performance-qa/index.html",
+  "cost_tier": "browser",
+  "summary": "Verify cross-viewport responsiveness across desktop and mobile breakpoints (1440px, 1280px, 768px, 430px, 390px, 320px, and 200% text zoom) with zero horizontal overflow, 60fps scroll and WebGL lifecycle performance, reduced-motion compliance, and automated browser interaction checks (browser-checks.json and docs/verification.md).",
+  "inputs": [
+    {
+      "name": "preview_url",
+      "type": "string",
+      "required": true,
+      "description": "Localhost preview URL bound with --strictPort."
+    },
+    {
+      "name": "viewports",
+      "type": "array",
+      "required": false,
+      "default": [
+        "1440x1000",
+        "1280x900",
+        "768x1024",
+        "430x932",
+        "390x844",
+        "320x568"
+      ],
+      "description": "Target viewports to test for scrollWidth <= clientWidth."
+    }
+  ],
+  "outputs": [
+    {
+      "path": "browser-checks.json",
+      "type": "json",
+      "required_keys": [
+        "status",
+        "total",
+        "viewports",
+        "checks"
+      ]
+    },
+    {
+      "path": "docs/verification.md",
+      "type": "markdown",
+      "required_patterns": [
+        "npm run build",
+        "strict binding",
+        "390 \u00d7 844"
+      ]
+    }
+  ],
+  "references": [
+    "./references/browser-checks.json",
+    "./references/verification.md",
+    "./references/react-mobile-contract.md"
+  ],
+  "commands": {
+    "prompt": "python3 scripts/harness.py prompt viewport-performance-qa --input qa-eval/viewport-performance-qa/evals/smoke.json",
+    "verify": "python3 scripts/harness.py verify viewport-performance-qa --smoke"
+  }
+}

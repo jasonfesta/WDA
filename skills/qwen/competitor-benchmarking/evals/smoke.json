@@ -1,0 +1,16 @@
+{
+  "skill_id": "competitor-benchmarking",
+  "cost_tier": "browser",
+  "input": {
+    "prompt": "Give me 15\u201325 live category benchmarks for a warm tactile leather goods and editorial bakery landing study. Evaluate both visual direction and live DOM interactions.",
+    "surface": "websites",
+    "viewports": [
+      "1440x900",
+      "390x844"
+    ]
+  },
+  "expected_output_files": {
+    "research/research.md": "# Category Research Synthesis\n\n## Visual Direction\nUnboxed silhouettes on warm cream and paper surfaces.\n\n## Code & DOM Interactions\nSemantic `<details>/<summary>` accordions, `<fieldset>` radio swatches, and URL-synced filters.\n",
+    "research/live-reference-register.md": "| Ref ID | Brand & Production URL | Inspected | Archetype Pole | Evidence Level | Observed Visual Direction | Observed DOM / Interaction Pattern | Fenced-Off Source Claims |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| CAT-01 | [Pol\u00e8ne](https://eng.polene-paris.com) | 2026-10-21 | Opinionated / Tactile | Browser scroll + DOM | Full-bleed sunlit campaign hero; unboxed leather silhouettes on warm cream | `<fieldset>` leather swatch radios; alternate angle crossfade on fine pointer | Certified leather tannery provenance (do not reuse) |\n| CAT-02 | [Tartine](https://tartinebakery.com) | 2026-10-21 | Structured / Editorial | Browser click + URL + DOM | Two-column split masthead; expressive roman/italic serif + tracked bake schedule | `<details>/<summary>` FAQ rows; location filter syncs with URL query params | Organic grain certification (do not reuse) |\n"
+  }
+}
