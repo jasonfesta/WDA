@@ -2,7 +2,7 @@
   "collection": "WDA premium tech concepts",
   "version": 6,
   "date": "2026-10-25",
-  "scope": "Selected V6 images and exact prompt text only. Earlier concepts, references, native segment drafts and source attachments remain in the separate local study archive.",
+  "scope": "Only the 48 selected V6 images, their exact prompts, reference research and coverage records.",
   "localStudyArchive": "tech/moodboard-v6/",
   "assets": [
     {
@@ -566,7 +566,7 @@
         "entry": "upd_072",
         "title": "A faster way to find your work",
         "status": "Scheduled",
-        "scheduledAt": "28 Oct 2026 · 09:00 UTC",
+        "scheduledAt": "28 Oct 2026 \u00b7 09:00 UTC",
         "destination": "Public changelog",
         "author": "Nina Cole",
         "reviewer": "Sam Lee",
@@ -633,7 +633,7 @@
         "entry": "upd_072",
         "title": "A faster way to find your work",
         "status": "Scheduled",
-        "scheduledAt": "28 Oct 2026 · 09:00 UTC",
+        "scheduledAt": "28 Oct 2026 \u00b7 09:00 UTC",
         "destination": "Public changelog",
         "author": "Nina Cole",
         "reviewer": "Sam Lee",
@@ -700,7 +700,7 @@
         "entry": "upd_072",
         "title": "A faster way to find your work",
         "status": "Scheduled",
-        "scheduledAt": "28 Oct 2026 · 09:00 UTC",
+        "scheduledAt": "28 Oct 2026 \u00b7 09:00 UTC",
         "destination": "Public changelog",
         "author": "Nina Cole",
         "reviewer": "Sam Lee",
@@ -767,7 +767,7 @@
         "entry": "upd_072",
         "title": "A faster way to find your work",
         "status": "Scheduled",
-        "scheduledAt": "28 Oct 2026 · 09:00 UTC",
+        "scheduledAt": "28 Oct 2026 \u00b7 09:00 UTC",
         "destination": "Public changelog",
         "author": "Nina Cole",
         "reviewer": "Sam Lee",
@@ -784,6 +784,2321 @@
         ],
         "componentPurpose": "Review the scheduled publication and choose Edit schedule or View preview; not published yet"
       }
+    },
+    {
+      "id": "rillset-workflow-desktop",
+      "version": 6,
+      "company": "Rillset",
+      "companySlug": "rillset",
+      "product": "Dataset publication workspace",
+      "view": "workflow-desktop",
+      "label": "Workflow \u00b7 desktop",
+      "category": "website",
+      "viewport": "desktop",
+      "imagePath": "rillset/website/workflow-desktop.png",
+      "promptPath": "rillset/prompts/workflow-desktop.txt",
+      "width": 964,
+      "height": 1632,
+      "sha256": "c8170bee4ea49f0ef0343ea4bd0a8df4080b876db775fc60b2b012742bb4b57f",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/Geist",
+          "fallback": "Arial, Helvetica, sans-serif"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "\"Courier New\", monospace"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.firecrawl.dev/scrape",
+        "https://docs.firecrawl.dev/introduction"
+      ],
+      "uxPurpose": "Explain the product workflow before signing up",
+      "state": {
+        "id": "workflow-desktop",
+        "label": "Workflow \u00b7 desktop",
+        "category": "website",
+        "viewport": "desktop",
+        "entry": "Workflow navigation",
+        "selected": "Workflow",
+        "content": "Preparation, review, publication and preserved history",
+        "purpose": "Explain the product workflow before signing up"
+      },
+      "review": {
+        "status": "passed",
+        "visual": "Complete raster reviewed at overview and native resolution; correct brand and required content.",
+        "state": "Checked against state-table.json.",
+        "geometry": "Native output; no crop or nonuniform scaling.",
+        "limits": [
+          "Raster lettering approximates specified fonts."
+        ]
+      },
+      "researchPath": "rillset/research.json",
+      "coveragePath": "rillset/coverage.json",
+      "statePath": "rillset/states.json"
+    },
+    {
+      "id": "rillset-workflow-mobile",
+      "version": 6,
+      "company": "Rillset",
+      "companySlug": "rillset",
+      "product": "Dataset publication workspace",
+      "view": "workflow-mobile",
+      "label": "Workflow \u00b7 mobile",
+      "category": "website",
+      "viewport": "mobile",
+      "imagePath": "rillset/website/workflow-mobile.png",
+      "promptPath": "rillset/prompts/workflow-mobile.txt",
+      "width": 725,
+      "height": 2170,
+      "sha256": "ef3f784a36950f227fcab29b6f2aa7658958737b77c90e07be378229f7ea9b07",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/Geist",
+          "fallback": "Arial, Helvetica, sans-serif"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "\"Courier New\", monospace"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.firecrawl.dev/scrape",
+        "https://docs.firecrawl.dev/introduction"
+      ],
+      "uxPurpose": "Explain the same workflow on a phone",
+      "state": {
+        "id": "workflow-mobile",
+        "label": "Workflow \u00b7 mobile",
+        "category": "website",
+        "viewport": "mobile",
+        "entry": "Mobile menu \u2192 Workflow",
+        "selected": "Workflow",
+        "content": "Same complete workflow, responsive stack",
+        "purpose": "Explain the same workflow on a phone"
+      },
+      "review": {
+        "status": "passed",
+        "visual": "Complete raster reviewed at overview and native resolution; correct brand and required content.",
+        "state": "Checked against state-table.json.",
+        "geometry": "Native output; no crop or nonuniform scaling.",
+        "limits": [
+          "Raster lettering approximates specified fonts."
+        ]
+      },
+      "researchPath": "rillset/research.json",
+      "coveragePath": "rillset/coverage.json",
+      "statePath": "rillset/states.json"
+    },
+    {
+      "id": "rillset-pricing-desktop",
+      "version": 6,
+      "company": "Rillset",
+      "companySlug": "rillset",
+      "product": "Dataset publication workspace",
+      "view": "pricing-desktop",
+      "label": "Pricing \u00b7 desktop",
+      "category": "website",
+      "viewport": "desktop",
+      "imagePath": "rillset/website/pricing-desktop.png",
+      "promptPath": "rillset/prompts/pricing-desktop.txt",
+      "width": 965,
+      "height": 1629,
+      "sha256": "1025bebabaf6ae32a5f65290dc8d729edbfc5c6f394352358466012bb23eaa2a",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/Geist",
+          "fallback": "Arial, Helvetica, sans-serif"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "\"Courier New\", monospace"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.firecrawl.dev/pricing"
+      ],
+      "uxPurpose": "Choose a plan with transparent limits",
+      "state": {
+        "id": "pricing-desktop",
+        "label": "Pricing \u00b7 desktop",
+        "category": "website",
+        "viewport": "desktop",
+        "entry": "Pricing navigation",
+        "selected": "Monthly",
+        "content": "Free $0; Team $48 per month; Organization custom",
+        "purpose": "Choose a plan with transparent limits"
+      },
+      "review": {
+        "status": "passed",
+        "visual": "Complete raster reviewed at overview and native resolution; correct brand and required content.",
+        "state": "Checked against state-table.json.",
+        "geometry": "Native output; no crop or nonuniform scaling.",
+        "limits": [
+          "Raster lettering approximates specified fonts."
+        ]
+      },
+      "researchPath": "rillset/research.json",
+      "coveragePath": "rillset/coverage.json",
+      "statePath": "rillset/states.json"
+    },
+    {
+      "id": "rillset-pricing-mobile",
+      "version": 6,
+      "company": "Rillset",
+      "companySlug": "rillset",
+      "product": "Dataset publication workspace",
+      "view": "pricing-mobile",
+      "label": "Pricing \u00b7 mobile",
+      "category": "website",
+      "viewport": "mobile",
+      "imagePath": "rillset/website/pricing-mobile.png",
+      "promptPath": "rillset/prompts/pricing-mobile.txt",
+      "width": 953,
+      "height": 4874,
+      "sha256": "c09ddea1e0a07955398a05d1cb998a325a2fe4b9093a6977dd697ae058fa75bd",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/Geist",
+          "fallback": "Arial, Helvetica, sans-serif"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "\"Courier New\", monospace"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.firecrawl.dev/pricing"
+      ],
+      "uxPurpose": "Compare and choose a plan on a phone",
+      "state": {
+        "id": "pricing-mobile",
+        "label": "Pricing \u00b7 mobile",
+        "category": "website",
+        "viewport": "mobile",
+        "entry": "Mobile menu \u2192 Pricing",
+        "selected": "Monthly",
+        "content": "Same three plans, stacked comparison and FAQ",
+        "purpose": "Compare and choose a plan on a phone"
+      },
+      "review": {
+        "status": "passed",
+        "visual": "Comparison and FAQ use large readable mobile type; footer links in two columns with separate copyright/legal rows. Complete cards and footer, all plan and comparison values verified.",
+        "geometry": "Three complete native segments with uniform downsampling only. Compact regenerated top removes excessive blank join gap; no UI cropped.",
+        "state": "Monthly selected; Free $0, Team $48, Organization Custom; all 12 comparison values preserved.",
+        "limits": [
+          "Raster lettering approximates specified fonts."
+        ]
+      },
+      "researchPath": "rillset/research.json",
+      "coveragePath": "rillset/coverage.json",
+      "statePath": "rillset/states.json"
+    },
+    {
+      "id": "rillset-app-library",
+      "version": 6,
+      "company": "Rillset",
+      "companySlug": "rillset",
+      "product": "Dataset publication workspace",
+      "view": "app-library",
+      "label": "Dataset library",
+      "category": "app",
+      "viewport": "desktop",
+      "imagePath": "rillset/app/app-library.png",
+      "promptPath": "rillset/prompts/app-library.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "10dce2a2cbcc391174d69dededd37feb57fd7c3c2a6a88ea8153def53e522e69",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/Geist",
+          "fallback": "Arial, Helvetica, sans-serif"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "\"Courier New\", monospace"
+        }
+      ],
+      "sourceUrls": [
+        "https://docs.firecrawl.dev/introduction",
+        "https://docs.firecrawl.dev/features/scrape"
+      ],
+      "uxPurpose": "Find a dataset and begin or resume preparation",
+      "state": {
+        "id": "app-library",
+        "label": "Dataset library",
+        "category": "app",
+        "viewport": "desktop",
+        "entry": "Select Datasets",
+        "selected": "Datasets",
+        "content": "Harbor routes ready v1.4; Service calendar draft v0.9; Stop inventory published v2.1",
+        "purpose": "Find a dataset and begin or resume preparation"
+      },
+      "review": {
+        "status": "passed",
+        "visual": "Complete raster reviewed at overview and native resolution; correct brand and required content.",
+        "state": "Checked against state-table.json.",
+        "geometry": "Native output; no crop or nonuniform scaling.",
+        "limits": [
+          "Raster lettering approximates specified fonts."
+        ]
+      },
+      "researchPath": "rillset/research.json",
+      "coveragePath": "rillset/coverage.json",
+      "statePath": "rillset/states.json"
+    },
+    {
+      "id": "rillset-app-schema",
+      "version": 6,
+      "company": "Rillset",
+      "companySlug": "rillset",
+      "product": "Dataset publication workspace",
+      "view": "app-schema",
+      "label": "Schema detail",
+      "category": "app",
+      "viewport": "desktop",
+      "imagePath": "rillset/app/app-schema.png",
+      "promptPath": "rillset/prompts/app-schema.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "7b115e75126ac13c9d0996d9a37bb1a089f9002968bed50f37a4b573977aab99",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/Geist",
+          "fallback": "Arial, Helvetica, sans-serif"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "\"Courier New\", monospace"
+        }
+      ],
+      "sourceUrls": [
+        "https://docs.firecrawl.dev/introduction",
+        "https://docs.firecrawl.dev/features/scrape"
+      ],
+      "uxPurpose": "Inspect field definitions and sample values before publication",
+      "state": {
+        "id": "app-schema",
+        "label": "Schema detail",
+        "category": "app",
+        "viewport": "desktop",
+        "entry": "Harbor routes \u2192 Schema",
+        "selected": "Schema",
+        "content": "Four of 13 fields with service_region selected, type text and required",
+        "purpose": "Inspect field definitions and sample values before publication"
+      },
+      "review": {
+        "status": "passed",
+        "visual": "Complete raster reviewed at overview and native resolution; correct brand and required content.",
+        "state": "Checked against state-table.json.",
+        "geometry": "Native output; no crop or nonuniform scaling.",
+        "limits": [
+          "Raster lettering approximates specified fonts."
+        ]
+      },
+      "researchPath": "rillset/research.json",
+      "coveragePath": "rillset/coverage.json",
+      "statePath": "rillset/states.json"
+    },
+    {
+      "id": "rillset-app-settings",
+      "version": 6,
+      "company": "Rillset",
+      "companySlug": "rillset",
+      "product": "Dataset publication workspace",
+      "view": "app-settings",
+      "label": "Workspace settings",
+      "category": "app",
+      "viewport": "desktop",
+      "imagePath": "rillset/app/app-settings.png",
+      "promptPath": "rillset/prompts/app-settings.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "c949ea337694e540d42e697d1af16b0547c1ab7ac586eb6ef126525e39cd2dc5",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/Geist",
+          "fallback": "Arial, Helvetica, sans-serif"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "\"Courier New\", monospace"
+        }
+      ],
+      "sourceUrls": [
+        "https://docs.firecrawl.dev/introduction",
+        "https://docs.firecrawl.dev/features/scrape"
+      ],
+      "uxPurpose": "Set stable workspace defaults and review safeguards",
+      "state": {
+        "id": "app-settings",
+        "label": "Workspace settings",
+        "category": "app",
+        "viewport": "desktop",
+        "entry": "Settings \u2192 General",
+        "selected": "Settings / General",
+        "content": "Fieldworks, team-only default, two required reviewers, keep prior versions",
+        "purpose": "Set stable workspace defaults and review safeguards"
+      },
+      "review": {
+        "status": "passed",
+        "visual": "Complete raster reviewed at overview and native resolution; correct brand and required content.",
+        "state": "Checked against state-table.json.",
+        "geometry": "Native output; no crop or nonuniform scaling.",
+        "limits": [
+          "Raster lettering approximates specified fonts."
+        ]
+      },
+      "researchPath": "rillset/research.json",
+      "coveragePath": "rillset/coverage.json",
+      "statePath": "rillset/states.json"
+    },
+    {
+      "id": "rillset-component-published",
+      "version": 6,
+      "company": "Rillset",
+      "companySlug": "rillset",
+      "product": "Dataset publication workspace",
+      "view": "component-published",
+      "label": "Published confirmation",
+      "category": "component",
+      "viewport": "component",
+      "imagePath": "rillset/components/component-published.png",
+      "promptPath": "rillset/prompts/component-published.txt",
+      "width": 1073,
+      "height": 1466,
+      "sha256": "d7c94a2d241dc004fe401f5386a9254abf5b668572286082e7c887eebb9d481a",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/Geist",
+          "fallback": "Arial, Helvetica, sans-serif"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "style": "normal",
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "\"Courier New\", monospace"
+        }
+      ],
+      "sourceUrls": [
+        "https://docs.firecrawl.dev/introduction",
+        "https://docs.firecrawl.dev/features/scrape"
+      ],
+      "uxPurpose": "Confirm success and offer the published version or copied link",
+      "state": {
+        "id": "component-published",
+        "label": "Published confirmation",
+        "category": "component",
+        "viewport": "component",
+        "entry": "Publish v1.4 from approved confirmation",
+        "selected": "Published",
+        "content": "v1.4 current, v1.3 retained, team-only audience, 25 Oct 2026 14:30 UTC",
+        "purpose": "Confirm success and offer the published version or copied link"
+      },
+      "review": {
+        "status": "passed",
+        "visual": "Complete raster reviewed at overview and native resolution; correct brand and required content.",
+        "state": "Checked against state-table.json.",
+        "geometry": "Native output; no crop or nonuniform scaling.",
+        "limits": [
+          "Raster lettering approximates specified fonts."
+        ]
+      },
+      "researchPath": "rillset/research.json",
+      "coveragePath": "rillset/coverage.json",
+      "statePath": "rillset/states.json"
+    },
+    {
+      "id": "avenor-product-desktop",
+      "version": 6,
+      "company": "Avenor",
+      "companySlug": "avenor",
+      "product": "Release coordination for infrastructure teams",
+      "view": "product-desktop",
+      "label": "Product \u00b7 Release planning \u00b7 desktop",
+      "category": "website",
+      "viewport": "desktop",
+      "imagePath": "avenor/website/product-desktop.png",
+      "promptPath": "avenor/prompts/product-desktop.txt",
+      "width": 971,
+      "height": 1619,
+      "sha256": "ffccf78d7613b6a06f3a5e13e1e96d67146a6bd618081130343380a30b44eba6",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500,
+            700
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "style": "normal"
+        },
+        {
+          "family": "Geist Mono",
+          "weights": [
+            400,
+            500
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "\"Courier New\", monospace",
+          "style": "normal"
+        }
+      ],
+      "sourceUrls": [
+        "https://factory.com/product/missions",
+        "https://docs.factory.com/factory-app/quickstart"
+      ],
+      "uxPurpose": "Understand reserve, verify and decide before entering the workspace",
+      "state": {
+        "release": "REL-214",
+        "service": "Edge gateway 2.8.1",
+        "window": "05 Nov 2026, 14:00\u201314:30 UTC",
+        "checks": "6 of 6 passed",
+        "approvals": "1 of 2",
+        "pending": "Rowan Park",
+        "execution": "Rollout not started"
+      },
+      "review": {
+        "status": "accepted",
+        "footer": "complete",
+        "geometry": "Broad multi-column desktop layout",
+        "palette": "All surfaces light; no source logos or certification badges",
+        "content": "Original fictional release-coordination story"
+      },
+      "researchPath": "avenor/research.json",
+      "coveragePath": "avenor/coverage.json",
+      "statePath": "avenor/states.json"
+    },
+    {
+      "id": "avenor-product-mobile",
+      "version": 6,
+      "company": "Avenor",
+      "companySlug": "avenor",
+      "product": "Release coordination for infrastructure teams",
+      "view": "product-mobile",
+      "label": "Product \u00b7 Release planning \u00b7 mobile",
+      "category": "website",
+      "viewport": "mobile",
+      "imagePath": "avenor/website/product-mobile.png",
+      "promptPath": "avenor/prompts/product-mobile.txt",
+      "width": 887,
+      "height": 3548,
+      "sha256": "0e745ff022a9d5bc36f15c8cdfca619502497aa8a3edc2c9df5471f768fbb941",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500,
+            700
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "style": "normal"
+        },
+        {
+          "family": "Geist Mono",
+          "weights": [
+            400,
+            500
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "\"Courier New\", monospace",
+          "style": "normal"
+        }
+      ],
+      "sourceUrls": [
+        "https://factory.com/product/missions",
+        "https://docs.factory.com/factory-app/quickstart"
+      ],
+      "uxPurpose": "Understand reserve, verify and decide before entering the workspace",
+      "state": {
+        "release": "REL-214",
+        "service": "Edge gateway 2.8.1",
+        "window": "05 Nov 2026, 14:00\u201314:30 UTC",
+        "checks": "6 of 6 passed",
+        "approvals": "1 of 2",
+        "pending": "Rowan Park",
+        "execution": "Rollout not started"
+      },
+      "review": {
+        "status": "accepted",
+        "footer": "complete",
+        "geometry": "Full page, uncut; mobile single-column responsive reflow",
+        "palette": "All surfaces light; no source logos or certification badges",
+        "content": "Original fictional release-coordination story"
+      },
+      "researchPath": "avenor/research.json",
+      "coveragePath": "avenor/coverage.json",
+      "statePath": "avenor/states.json"
+    },
+    {
+      "id": "avenor-security-desktop",
+      "version": 6,
+      "company": "Avenor",
+      "companySlug": "avenor",
+      "product": "Release coordination for infrastructure teams",
+      "view": "security-desktop",
+      "label": "Security \u00b7 Access and audit \u00b7 desktop",
+      "category": "website",
+      "viewport": "desktop",
+      "imagePath": "avenor/website/security-desktop.png",
+      "promptPath": "avenor/prompts/security-desktop.txt",
+      "width": 971,
+      "height": 1619,
+      "sha256": "3717a0389f7f702f66f4e0f4b51d70df16cfe75ca6904459384559c8816bcd81",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500,
+            700
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "style": "normal"
+        },
+        {
+          "family": "Geist Mono",
+          "weights": [
+            400,
+            500
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "\"Courier New\", monospace",
+          "style": "normal"
+        }
+      ],
+      "sourceUrls": [
+        "https://factory.com/security",
+        "https://docs.factory.com/enterprise/network-and-deployment"
+      ],
+      "uxPurpose": "Evaluate permission boundaries and inspect a decision trail before contact",
+      "state": {
+        "release": "REL-214",
+        "service": "Edge gateway 2.8.1",
+        "window": "05 Nov 2026, 14:00\u201314:30 UTC",
+        "checks": "6 of 6 passed",
+        "approvals": "1 of 2",
+        "pending": "Rowan Park",
+        "execution": "Rollout not started"
+      },
+      "review": {
+        "status": "accepted",
+        "footer": "complete",
+        "geometry": "Broad multi-column desktop layout",
+        "palette": "All surfaces light; no source logos or certification badges",
+        "content": "Original fictional release-coordination story"
+      },
+      "researchPath": "avenor/research.json",
+      "coveragePath": "avenor/coverage.json",
+      "statePath": "avenor/states.json"
+    },
+    {
+      "id": "avenor-security-mobile",
+      "version": 6,
+      "company": "Avenor",
+      "companySlug": "avenor",
+      "product": "Release coordination for infrastructure teams",
+      "view": "security-mobile",
+      "label": "Security \u00b7 Access and audit \u00b7 mobile",
+      "category": "website",
+      "viewport": "mobile",
+      "imagePath": "avenor/website/security-mobile.png",
+      "promptPath": "avenor/prompts/security-mobile.txt",
+      "width": 856,
+      "height": 5374,
+      "sha256": "64f511e524c7d98bd21095f51ca4af0f55c8161c02b4c9592d57b929e449bd11",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500,
+            700
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "style": "normal"
+        },
+        {
+          "family": "Geist Mono",
+          "weights": [
+            400,
+            500
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "\"Courier New\", monospace",
+          "style": "normal"
+        }
+      ],
+      "sourceUrls": [
+        "https://factory.com/security",
+        "https://docs.factory.com/enterprise/network-and-deployment"
+      ],
+      "uxPurpose": "Evaluate permission boundaries and inspect a decision trail before contact",
+      "state": {
+        "release": "REL-214",
+        "service": "Edge gateway 2.8.1",
+        "window": "05 Nov 2026, 14:00\u201314:30 UTC",
+        "checks": "6 of 6 passed",
+        "approvals": "1 of 2",
+        "pending": "Rowan Park",
+        "execution": "Rollout not started"
+      },
+      "review": {
+        "status": "accepted",
+        "footer": "complete",
+        "geometry": "Full page, uncut; mobile single-column responsive reflow",
+        "palette": "All surfaces light; no source logos or certification badges",
+        "content": "Original fictional release-coordination story",
+        "readability": "Lower-page text and controls enlarged to match upper-page proportions; footer uses two link columns and clearly readable legal row. Added natural page height rather than compressing content."
+      },
+      "researchPath": "avenor/research.json",
+      "coveragePath": "avenor/coverage.json",
+      "statePath": "avenor/states.json"
+    },
+    {
+      "id": "avenor-app-schedule",
+      "version": 6,
+      "company": "Avenor",
+      "companySlug": "avenor",
+      "product": "Release coordination for infrastructure teams",
+      "view": "app-schedule",
+      "label": "Release schedule",
+      "category": "app",
+      "viewport": "desktop",
+      "imagePath": "avenor/app/app-schedule.png",
+      "promptPath": "avenor/prompts/app-schedule.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "0407262cbb34076a89e7666cdc2f14a30557b2b3339b55fe3fd234da41d306da",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500,
+            700
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "style": "normal"
+        },
+        {
+          "family": "Geist Mono",
+          "weights": [
+            400,
+            500
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "\"Courier New\", monospace",
+          "style": "normal"
+        }
+      ],
+      "sourceUrls": [
+        "https://factory.com/product/missions",
+        "https://docs.factory.com/factory-app/quickstart",
+        "https://factory.com/security",
+        "https://docs.factory.com/enterprise/network-and-deployment"
+      ],
+      "uxPurpose": "Locate the reserved window and enter release review",
+      "state": {
+        "release": "REL-214",
+        "service": "Edge gateway 2.8.1",
+        "window": "05 Nov 2026, 14:00\u201314:30 UTC",
+        "checks": "6 of 6 passed",
+        "approvals": "1 of 2",
+        "pending": "Rowan Park",
+        "execution": "Rollout not started",
+        "selectedNavigation": "Schedule"
+      },
+      "review": {
+        "status": "accepted",
+        "navigation": "Selected section matches content; shell order matches approved V6",
+        "geometry": "1536\u00d71024 native; complete screen",
+        "counts": "Three schedule rows; six verification rows; four members; one of two approvals",
+        "palette": "All surfaces light; selected states pale sage; corrected blue status and tinted avatars"
+      },
+      "researchPath": "avenor/research.json",
+      "coveragePath": "avenor/coverage.json",
+      "statePath": "avenor/states.json"
+    },
+    {
+      "id": "avenor-app-checks",
+      "version": 6,
+      "company": "Avenor",
+      "companySlug": "avenor",
+      "product": "Release coordination for infrastructure teams",
+      "view": "app-checks",
+      "label": "Verification checks",
+      "category": "app",
+      "viewport": "desktop",
+      "imagePath": "avenor/app/app-checks.png",
+      "promptPath": "avenor/prompts/app-checks.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "f0a0e9cc9acd6b04dc58450b86126027e6863e13b5bcb333e4dcdfc4a58a22c6",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500,
+            700
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "style": "normal"
+        },
+        {
+          "family": "Geist Mono",
+          "weights": [
+            400,
+            500
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "\"Courier New\", monospace",
+          "style": "normal"
+        }
+      ],
+      "sourceUrls": [
+        "https://factory.com/product/missions",
+        "https://docs.factory.com/factory-app/quickstart",
+        "https://factory.com/security",
+        "https://docs.factory.com/enterprise/network-and-deployment"
+      ],
+      "uxPurpose": "Inspect six required checks and their selected evidence",
+      "state": {
+        "release": "REL-214",
+        "service": "Edge gateway 2.8.1",
+        "window": "05 Nov 2026, 14:00\u201314:30 UTC",
+        "checks": "6 of 6 passed",
+        "approvals": "1 of 2",
+        "pending": "Rowan Park",
+        "execution": "Rollout not started",
+        "selectedNavigation": "Checks"
+      },
+      "review": {
+        "status": "accepted",
+        "navigation": "Selected section matches content; shell order matches approved V6",
+        "geometry": "1536\u00d71024 native; complete screen",
+        "counts": "Three schedule rows; six verification rows; four members; one of two approvals",
+        "palette": "All surfaces light; selected states pale sage; corrected blue status and tinted avatars"
+      },
+      "researchPath": "avenor/research.json",
+      "coveragePath": "avenor/coverage.json",
+      "statePath": "avenor/states.json"
+    },
+    {
+      "id": "avenor-app-people",
+      "version": 6,
+      "company": "Avenor",
+      "companySlug": "avenor",
+      "product": "Release coordination for infrastructure teams",
+      "view": "app-people",
+      "label": "People & permissions",
+      "category": "app",
+      "viewport": "desktop",
+      "imagePath": "avenor/app/app-people.png",
+      "promptPath": "avenor/prompts/app-people.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "c2c3000392fce451d6fe851baa3a147ccd5e41d0c3aaf553e15828bf334bcefc",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500,
+            700
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "style": "normal"
+        },
+        {
+          "family": "Geist Mono",
+          "weights": [
+            400,
+            500
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "\"Courier New\", monospace",
+          "style": "normal"
+        }
+      ],
+      "sourceUrls": [
+        "https://factory.com/product/missions",
+        "https://docs.factory.com/factory-app/quickstart",
+        "https://factory.com/security",
+        "https://docs.factory.com/enterprise/network-and-deployment"
+      ],
+      "uxPurpose": "Inspect scoped roles and assigned approval authority",
+      "state": {
+        "release": "REL-214",
+        "service": "Edge gateway 2.8.1",
+        "window": "05 Nov 2026, 14:00\u201314:30 UTC",
+        "checks": "6 of 6 passed",
+        "approvals": "1 of 2",
+        "pending": "Rowan Park",
+        "execution": "Rollout not started",
+        "selectedNavigation": "People"
+      },
+      "review": {
+        "status": "accepted",
+        "navigation": "Selected section matches content; shell order matches approved V6",
+        "geometry": "1536\u00d71024 native; complete screen",
+        "counts": "Three schedule rows; six verification rows; four members; one of two approvals",
+        "palette": "All surfaces light; selected states pale sage; corrected blue status and tinted avatars"
+      },
+      "researchPath": "avenor/research.json",
+      "coveragePath": "avenor/coverage.json",
+      "statePath": "avenor/states.json"
+    },
+    {
+      "id": "avenor-component-change-request",
+      "version": 6,
+      "company": "Avenor",
+      "companySlug": "avenor",
+      "product": "Release coordination for infrastructure teams",
+      "view": "component-change-request",
+      "label": "Request change \u00b7 Draft",
+      "category": "component",
+      "viewport": "component",
+      "imagePath": "avenor/components/component-change-request.png",
+      "promptPath": "avenor/prompts/component-change-request.txt",
+      "width": 1161,
+      "height": 1355,
+      "sha256": "bd0bd949c8af1dff7bf0b5e059ae87380d90e4df6fc91474ca26b680de7fd981",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Geist",
+          "weights": [
+            400,
+            500,
+            700
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "style": "normal"
+        },
+        {
+          "family": "Geist Mono",
+          "weights": [
+            400,
+            500
+          ],
+          "specimen": "https://vercel.com/font",
+          "fallback": "\"Courier New\", monospace",
+          "style": "normal"
+        }
+      ],
+      "sourceUrls": [
+        "https://factory.com/product/missions",
+        "https://docs.factory.com/factory-app/quickstart"
+      ],
+      "uxPurpose": "Draft an alternative window request without applying it or starting a rollout",
+      "state": {
+        "release": "REL-214",
+        "service": "Edge gateway 2.8.1",
+        "window": "05 Nov 2026, 14:00\u201314:30 UTC",
+        "checks": "6 of 6 passed",
+        "approvals": "1 of 2",
+        "pending": "Rowan Park",
+        "execution": "Rollout not started",
+        "draftRequest": "Move the window to 14:30",
+        "notify": [
+          "Maya Chen",
+          "Nadia Bell"
+        ],
+        "selectedCount": 2,
+        "submission": "Not sent"
+      },
+      "review": {
+        "status": "accepted",
+        "geometry": "Complete standalone component, all bounds visible",
+        "state": "Original reserved time unchanged; two selected people and count agree; Send request remains available",
+        "palette": "Light surfaces and pale sage primary action"
+      },
+      "researchPath": "avenor/research.json",
+      "coveragePath": "avenor/coverage.json",
+      "statePath": "avenor/states.json"
+    },
+    {
+      "id": "neral-method-desktop",
+      "version": 6,
+      "company": "Neral",
+      "companySlug": "neral",
+      "product": "Model evaluation review workspace",
+      "view": "method-desktop",
+      "label": "Method \u2014 full desktop page",
+      "category": "website",
+      "viewport": "desktop",
+      "imagePath": "neral/website/method-desktop.png",
+      "promptPath": "neral/prompts/method-desktop.txt",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "8325629d45698c20c1d909e5c315bba4ec16c1b1ae12113bee818f514e6cf4c9",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Restrained regular sans wordmark, headings, navigation and readable product interface."
+        },
+        {
+          "family": "Source Serif 4",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Source+Serif+4",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Short explanatory reading prose and evaluation response excerpts."
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "Courier New, monospace",
+          "role": "Small experiment IDs, case identifiers and metadata."
+        }
+      ],
+      "sourceUrls": [
+        "https://docs.devin.ai/essential-guidelines/when-to-use-devin"
+      ],
+      "uxPurpose": "Define criteria, compare same cases, inspect exceptions, record review; complete footer",
+      "state": {
+        "id": "method-desktop",
+        "entry": "Website Method navigation",
+        "selected": "Method",
+        "content": "Define criteria, compare same cases, inspect exceptions, record review; complete footer",
+        "changed": "New supporting page",
+        "persistent": "EV-024 sample pending"
+      },
+      "review": {
+        "status": "accepted",
+        "visualInspection": true,
+        "fullBoundsVisible": true,
+        "footerComplete": true,
+        "selectedNavigationCorrect": true,
+        "countsVerified": true,
+        "transform": "none \u2014 exact native output copied",
+        "limits": [
+          "Raster typography approximates the recorded font families.",
+          "All product state and policy values are fictional sample content."
+        ]
+      },
+      "researchPath": "neral/research.json",
+      "coveragePath": "neral/coverage.json",
+      "statePath": "neral/states.json"
+    },
+    {
+      "id": "neral-method-mobile",
+      "version": 6,
+      "company": "Neral",
+      "companySlug": "neral",
+      "product": "Model evaluation review workspace",
+      "view": "method-mobile",
+      "label": "Method \u2014 full mobile page",
+      "category": "website",
+      "viewport": "mobile",
+      "imagePath": "neral/website/method-mobile.png",
+      "promptPath": "neral/prompts/method-mobile.txt",
+      "width": 724,
+      "height": 2171,
+      "sha256": "d75bb4d043c792cbe2bd9b3dc7f57c1ea5e9d2cf12812e62df3838aaf0ac9cbf",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Restrained regular sans wordmark, headings, navigation and readable product interface."
+        },
+        {
+          "family": "Source Serif 4",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Source+Serif+4",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Short explanatory reading prose and evaluation response excerpts."
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "Courier New, monospace",
+          "role": "Small experiment IDs, case identifiers and metadata."
+        }
+      ],
+      "sourceUrls": [
+        "https://docs.devin.ai/essential-guidelines/when-to-use-devin"
+      ],
+      "uxPurpose": "Same method sequence in responsive stack",
+      "state": {
+        "id": "method-mobile",
+        "entry": "Mobile menu > Method",
+        "selected": "Method",
+        "content": "Same method sequence in responsive stack",
+        "changed": "Mobile layout",
+        "persistent": "Same content and sample data"
+      },
+      "review": {
+        "status": "accepted",
+        "visualInspection": true,
+        "fullBoundsVisible": true,
+        "footerComplete": true,
+        "selectedNavigationCorrect": true,
+        "countsVerified": true,
+        "transform": "none \u2014 exact native output copied",
+        "limits": [
+          "Raster typography approximates the recorded font families.",
+          "All product state and policy values are fictional sample content."
+        ]
+      },
+      "researchPath": "neral/research.json",
+      "coveragePath": "neral/coverage.json",
+      "statePath": "neral/states.json"
+    },
+    {
+      "id": "neral-security-desktop",
+      "version": 6,
+      "company": "Neral",
+      "companySlug": "neral",
+      "product": "Model evaluation review workspace",
+      "view": "security-desktop",
+      "label": "Security \u2014 full desktop page",
+      "category": "website",
+      "viewport": "desktop",
+      "imagePath": "neral/website/security-desktop.png",
+      "promptPath": "neral/prompts/security-desktop.txt",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "e55fced226257bf9d68922f99eaf3d597d5ea0f8cce23e7d8fec02d55181bcab",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Restrained regular sans wordmark, headings, navigation and readable product interface."
+        },
+        {
+          "family": "Source Serif 4",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Source+Serif+4",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Short explanatory reading prose and evaluation response excerpts."
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "Courier New, monospace",
+          "role": "Small experiment IDs, case identifiers and metadata."
+        }
+      ],
+      "sourceUrls": [
+        "https://devin.ai/enterprise"
+      ],
+      "uxPurpose": "Evidence ownership, role matrix, retention and traceable review",
+      "state": {
+        "id": "security-desktop",
+        "entry": "Website Security navigation",
+        "selected": "Security",
+        "content": "Evidence ownership, role matrix, retention and traceable review",
+        "changed": "New supporting page",
+        "persistent": "Support lab and three reviewers"
+      },
+      "review": {
+        "status": "accepted",
+        "visualInspection": true,
+        "fullBoundsVisible": true,
+        "footerComplete": true,
+        "selectedNavigationCorrect": true,
+        "countsVerified": true,
+        "transform": "none \u2014 exact native output copied",
+        "limits": [
+          "Raster typography approximates the recorded font families.",
+          "All product state and policy values are fictional sample content."
+        ]
+      },
+      "researchPath": "neral/research.json",
+      "coveragePath": "neral/coverage.json",
+      "statePath": "neral/states.json"
+    },
+    {
+      "id": "neral-security-mobile",
+      "version": 6,
+      "company": "Neral",
+      "companySlug": "neral",
+      "product": "Model evaluation review workspace",
+      "view": "security-mobile",
+      "label": "Security \u2014 full mobile page",
+      "category": "website",
+      "viewport": "mobile",
+      "imagePath": "neral/website/security-mobile.png",
+      "promptPath": "neral/prompts/security-mobile.txt",
+      "width": 724,
+      "height": 2172,
+      "sha256": "7c069b5481bad25234cf94a29dd041ed668755d1ce425d7e0f9a65fea8d380c7",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Restrained regular sans wordmark, headings, navigation and readable product interface."
+        },
+        {
+          "family": "Source Serif 4",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Source+Serif+4",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Short explanatory reading prose and evaluation response excerpts."
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "Courier New, monospace",
+          "role": "Small experiment IDs, case identifiers and metadata."
+        }
+      ],
+      "sourceUrls": [
+        "https://devin.ai/enterprise"
+      ],
+      "uxPurpose": "Same governance story as stacked roles",
+      "state": {
+        "id": "security-mobile",
+        "entry": "Mobile menu > Security",
+        "selected": "Security",
+        "content": "Same governance story as stacked roles",
+        "changed": "Mobile layout",
+        "persistent": "Same roles and settings"
+      },
+      "review": {
+        "status": "accepted",
+        "visualInspection": true,
+        "fullBoundsVisible": true,
+        "footerComplete": true,
+        "selectedNavigationCorrect": true,
+        "countsVerified": true,
+        "transform": "none \u2014 exact native output copied",
+        "limits": [
+          "Raster typography approximates the recorded font families.",
+          "All product state and policy values are fictional sample content."
+        ]
+      },
+      "researchPath": "neral/research.json",
+      "coveragePath": "neral/coverage.json",
+      "statePath": "neral/states.json"
+    },
+    {
+      "id": "neral-app-evaluations",
+      "version": 6,
+      "company": "Neral",
+      "companySlug": "neral",
+      "product": "Model evaluation review workspace",
+      "view": "app-evaluations",
+      "label": "App \u2014 evaluations library",
+      "category": "app",
+      "viewport": "desktop",
+      "imagePath": "neral/app/app-evaluations.png",
+      "promptPath": "neral/prompts/app-evaluations.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "98263877703c943454dedef4e0c230ecae7d20152cdf2bf5f95ffc9cca60ab77",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Restrained regular sans wordmark, headings, navigation and readable product interface."
+        },
+        {
+          "family": "Source Serif 4",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Source+Serif+4",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Short explanatory reading prose and evaluation response excerpts."
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "Courier New, monospace",
+          "role": "Small experiment IDs, case identifiers and metadata."
+        }
+      ],
+      "sourceUrls": [
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ],
+      "uxPurpose": "Three evaluations; EV-024 in review, EV-023 signed, EV-025 draft",
+      "state": {
+        "id": "app-evaluations",
+        "entry": "Evaluations nav",
+        "selected": "Evaluations",
+        "content": "Three evaluations; EV-024 in review, EV-023 signed, EV-025 draft",
+        "changed": "Index view",
+        "persistent": "EV-024 pending Mina; 120 cases"
+      },
+      "review": {
+        "status": "accepted",
+        "visualInspection": true,
+        "fullBoundsVisible": true,
+        "footerComplete": false,
+        "selectedNavigationCorrect": true,
+        "countsVerified": true,
+        "transform": "none \u2014 exact native output copied",
+        "limits": [
+          "Raster typography approximates the recorded font families.",
+          "All product state and policy values are fictional sample content."
+        ]
+      },
+      "researchPath": "neral/research.json",
+      "coveragePath": "neral/coverage.json",
+      "statePath": "neral/states.json"
+    },
+    {
+      "id": "neral-app-dataset",
+      "version": 6,
+      "company": "Neral",
+      "companySlug": "neral",
+      "product": "Model evaluation review workspace",
+      "view": "app-dataset",
+      "label": "App \u2014 dataset and criteria",
+      "category": "app",
+      "viewport": "desktop",
+      "imagePath": "neral/app/app-dataset.png",
+      "promptPath": "neral/prompts/app-dataset.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "77e4c4b4eedd742714126b4bab03cc029af4ee75af1718a2403f7f8a27b98d70",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Restrained regular sans wordmark, headings, navigation and readable product interface."
+        },
+        {
+          "family": "Source Serif 4",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Source+Serif+4",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Short explanatory reading prose and evaluation response excerpts."
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "Courier New, monospace",
+          "role": "Small experiment IDs, case identifiers and metadata."
+        }
+      ],
+      "sourceUrls": [
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ],
+      "uxPurpose": "Dataset details and case preview;120 cases,6 regression flags",
+      "state": {
+        "id": "app-dataset",
+        "entry": "Datasets > Support questions",
+        "selected": "Datasets",
+        "content": "Dataset details and case preview;120 cases,6 regression flags",
+        "changed": "Dataset view",
+        "persistent": "EV-024 uses this case set"
+      },
+      "review": {
+        "status": "accepted",
+        "visualInspection": true,
+        "fullBoundsVisible": true,
+        "footerComplete": false,
+        "selectedNavigationCorrect": true,
+        "countsVerified": true,
+        "transform": "none \u2014 exact native output copied",
+        "limits": [
+          "Raster typography approximates the recorded font families.",
+          "All product state and policy values are fictional sample content."
+        ]
+      },
+      "researchPath": "neral/research.json",
+      "coveragePath": "neral/coverage.json",
+      "statePath": "neral/states.json"
+    },
+    {
+      "id": "neral-app-review-queue",
+      "version": 6,
+      "company": "Neral",
+      "companySlug": "neral",
+      "product": "Model evaluation review workspace",
+      "view": "app-review-queue",
+      "label": "App \u2014 assigned review queue",
+      "category": "app",
+      "viewport": "desktop",
+      "imagePath": "neral/app/app-review-queue.png",
+      "promptPath": "neral/prompts/app-review-queue.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "b30dc9b69f8fdadf6b2a63c56469a5cfd79f5d8b227e6c9af876183122dab732",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Restrained regular sans wordmark, headings, navigation and readable product interface."
+        },
+        {
+          "family": "Source Serif 4",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Source+Serif+4",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Short explanatory reading prose and evaluation response excerpts."
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "Courier New, monospace",
+          "role": "Small experiment IDs, case identifiers and metadata."
+        }
+      ],
+      "sourceUrls": [
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ],
+      "uxPurpose": "My review filter returns one pending EV-024;Asha and Leo signed;Mina pending",
+      "state": {
+        "id": "app-review-queue",
+        "entry": "Review queue nav",
+        "selected": "Review queue",
+        "content": "My review filter returns one pending EV-024;Asha and Leo signed;Mina pending",
+        "changed": "Queue view",
+        "persistent": "2 of 3 signed, six regression cases"
+      },
+      "review": {
+        "status": "accepted",
+        "visualInspection": true,
+        "fullBoundsVisible": true,
+        "footerComplete": false,
+        "selectedNavigationCorrect": true,
+        "countsVerified": true,
+        "transform": "none \u2014 exact native output copied",
+        "limits": [
+          "Raster typography approximates the recorded font families.",
+          "All product state and policy values are fictional sample content."
+        ],
+        "scoreGeometry": "Both decorative bars removed; exact text scores only."
+      },
+      "researchPath": "neral/research.json",
+      "coveragePath": "neral/coverage.json",
+      "statePath": "neral/states.json"
+    },
+    {
+      "id": "neral-component-signed",
+      "version": 6,
+      "company": "Neral",
+      "companySlug": "neral",
+      "product": "Model evaluation review workspace",
+      "view": "component-signed",
+      "label": "Component \u2014 signed evidence confirmation",
+      "category": "component",
+      "viewport": "component",
+      "imagePath": "neral/components/component-signed.png",
+      "promptPath": "neral/prompts/component-signed.txt",
+      "width": 1376,
+      "height": 1143,
+      "sha256": "bcf0a520a4fc418ad96e4d1b9d55212097cca2f9d8acfadbd312f0f79b74667b",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Restrained regular sans wordmark, headings, navigation and readable product interface."
+        },
+        {
+          "family": "Source Serif 4",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Source+Serif+4",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Short explanatory reading prose and evaluation response excerpts."
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+          "fallback": "Courier New, monospace",
+          "role": "Small experiment IDs, case identifiers and metadata."
+        }
+      ],
+      "sourceUrls": [
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ],
+      "uxPurpose": "Evidence sign-off complete; all three signed; export evidence",
+      "state": {
+        "id": "component-signed",
+        "entry": "Submit signature from approved component",
+        "selected": "None",
+        "content": "Evidence sign-off complete; all three signed; export evidence",
+        "changed": "Mina signs;3 of3;new timeline entry",
+        "persistent": "120 cases;6 regressions;signing does not release a model"
+      },
+      "review": {
+        "status": "accepted",
+        "visualInspection": true,
+        "fullBoundsVisible": true,
+        "footerComplete": false,
+        "selectedNavigationCorrect": true,
+        "countsVerified": true,
+        "transform": "none \u2014 exact native output copied",
+        "limits": [
+          "Raster typography approximates the recorded font families.",
+          "All product state and policy values are fictional sample content."
+        ]
+      },
+      "researchPath": "neral/research.json",
+      "coveragePath": "neral/coverage.json",
+      "statePath": "neral/states.json"
+    },
+    {
+      "id": "oriel-publishing-desktop",
+      "version": 6,
+      "company": "Oriel",
+      "companySlug": "oriel",
+      "product": "Product update publishing workspace",
+      "view": "publishing-desktop",
+      "label": "Publishing \u2014 desktop",
+      "category": "website",
+      "viewport": "desktop",
+      "imagePath": "oriel/website/publishing-desktop.png",
+      "promptPath": "oriel/prompts/publishing-desktop.txt",
+      "width": 971,
+      "height": 1619,
+      "sha256": "29025ee4f3690a6cde46cf74e0df050e936db34fd0cfc7059a9d50c8c8c3e507",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Instrument Serif",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Instrument+Serif",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Restrained marketing headings only"
+        },
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500,
+            600
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Body, controls, app and component"
+        }
+      ],
+      "sourceUrls": [
+        "https://resend.com/features/broadcasts",
+        "https://resend.com/docs/dashboard/broadcasts/editor",
+        "https://resend.com/docs/dashboard/broadcasts/manage-broadcasts",
+        "https://linear.app/docs/initiative-and-project-updates"
+      ],
+      "uxPurpose": "Publishing \u2014 desktop",
+      "state": "Website header: Oriel left; Workspace, Publishing, Plans centered; Sign in and Start writing right. Header height restrained and same style as reference. Footer: two shallow rows, first Oriel / Help center / Contact / Privacy, second \u00a9 2026 Oriel / Thoughtfully shipped. / Terms. Full footer always visible, no repetition of the homepage giant hero.\nPrimary secondary destination: Publishing. Eyebrow PUBLISHING. Heading \u201cA considered path to published.\u201d Short supporting copy \u201cWrite clearly. Review together. Choose the right moment.\u201d Action \u201cStart writing\u201d. One large horizontal product demonstration: pale publication preview on the left \u201cMica \u00b7 Product updates\u201d, \u201cA faster way to find your work\u201d, \u201cSearch across saved views and recent projects in one place.\u201d Right is three spacious metadata rows \u201cReview \u00b7 Approved by Sam Lee\u201d, \u201cPublication \u00b7 28 Oct 2026 \u00b7 09:00 UTC\u201d, \u201cDestination \u00b7 Public changelog\u201d. This is a scheduled preview, not a published confirmation. Next section \u201cEvery step has a clear next action.\u201d Three short horizontal stages: \u201c01 Draft / Gather context in one calm editor.\u201d \u201c02 Review / Resolve the details with your team.\u201d \u201c03 Publish / Share on your own schedule.\u201d Next asymmetric feature section heading \u201cOne story. The right audience.\u201d Copy \u201cPreview your public page before it goes live. Keep internal comments inside your workspace.\u201d Two simple text links \u201cExplore the editor \u2192\u201d and \u201cSee plans \u2192\u201d. Last invitation \u201cMake room for your next update.\u201d Button \u201cCreate a publication\u201d. Broad negative space between sections, no extra feature cards or analytics.\nFull long desktop page approximately 1536\u00d72560. Preserve broad desktop proportions, multi-column sections, and full footer. Publishing active in header. Do not turn the whole page into a narrow mobile column.",
+      "review": {
+        "status": "approved",
+        "checks": [
+          "Full image visually inspected",
+          "Approved V6 visual language retained",
+          "Navigation selection agrees with content",
+          "Fictional state and numbers internally consistent",
+          "Full footer present on website pages",
+          "No clipping or nonuniform scaling",
+          "Neutral black surfaces and generous spacing"
+        ],
+        "limitations": [
+          "Raster typography approximates recorded Google Fonts."
+        ]
+      },
+      "researchPath": "oriel/research.json",
+      "coveragePath": "oriel/coverage.json",
+      "statePath": "oriel/states.json"
+    },
+    {
+      "id": "oriel-plans-desktop",
+      "version": 6,
+      "company": "Oriel",
+      "companySlug": "oriel",
+      "product": "Product update publishing workspace",
+      "view": "plans-desktop",
+      "label": "Plans \u2014 desktop",
+      "category": "website",
+      "viewport": "desktop",
+      "imagePath": "oriel/website/plans-desktop.png",
+      "promptPath": "oriel/prompts/plans-desktop.txt",
+      "width": 1004,
+      "height": 1567,
+      "sha256": "68e73dd7a81ee77dc7ce06f0d32105639ad4bfeafc5257a5ee1ecb0143ea5ddd",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Instrument Serif",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Instrument+Serif",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Restrained marketing headings only"
+        },
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500,
+            600
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Body, controls, app and component"
+        }
+      ],
+      "sourceUrls": [
+        "https://resend.com/pricing"
+      ],
+      "uxPurpose": "Plans \u2014 desktop",
+      "state": "Website header: Oriel left; Workspace, Publishing, Plans centered; Sign in and Start writing right. Header height restrained and same style as reference. Footer: two shallow rows, first Oriel / Help center / Contact / Privacy, second \u00a9 2026 Oriel / Thoughtfully shipped. / Terms. Full footer always visible, no repetition of the homepage giant hero.\nPrimary secondary destination: Plans. Heading \u201cA place for every stage.\u201d Subtitle \u201cSimple monthly plans for a considered product story.\u201d Billing label \u201cMonthly billing \u00b7 USD\u201d. Three equally weighted spacious columns with thin dividers and NO highlighted recommended badge: \u201cStart\u201d / \u201c$0 / month\u201d / \u201cFor your first publication.\u201d / \u201c1 publication\u201d / \u201c1 editor\u201d / \u201cPublic changelog\u201d / button \u201cStart free\u201d; \u201cTeam\u201d / \u201c$24 / month\u201d / \u201cFor a shared writing rhythm.\u201d / \u201c3 publications\u201d / \u201c5 editors\u201d / \u201cReviews and scheduling\u201d / button \u201cChoose Team\u201d; \u201cStudio\u201d / \u201c$79 / month\u201d / \u201cFor several product teams.\u201d / \u201c10 publications\u201d / \u201c20 editors\u201d / \u201cRoles and activity history\u201d / button \u201cChoose Studio\u201d. Under cards: \u201cAll plans include drafts, previews and unlimited published updates.\u201d Next section \u201cCompare the essentials.\u201d A simple three-row table with columns Start, Team, Studio: Publications 1/3/10; Editors 1/5/20; Review and scheduling \u2014/Included/Included. No invented percentages. Next FAQ section two open question-answer pairs: \u201cCan I change plans?\u201d / \u201cYes. Change your plan from workspace settings.\u201d; \u201cIs there a yearly commitment?\u201d / \u201cNo. These plans are billed monthly.\u201d Closing CTA \u201cStart with your next update.\u201d / \u201cCreate a publication\u201d. Footer. Fictional concept prices, coherent features. Lots of open space, small readable practical sans.\nComplete long desktop page approximately 1536\u00d72400. Plans active in header. Three actual desktop pricing columns, generous margins. Final full footer visible.",
+      "review": {
+        "status": "approved",
+        "checks": [
+          "Full image visually inspected",
+          "Approved V6 visual language retained",
+          "Navigation selection agrees with content",
+          "Fictional state and numbers internally consistent",
+          "Full footer present on website pages",
+          "No clipping or nonuniform scaling",
+          "Neutral black surfaces and generous spacing"
+        ],
+        "limitations": [
+          "Raster typography approximates recorded Google Fonts."
+        ]
+      },
+      "researchPath": "oriel/research.json",
+      "coveragePath": "oriel/coverage.json",
+      "statePath": "oriel/states.json"
+    },
+    {
+      "id": "oriel-publishing-mobile",
+      "version": 6,
+      "company": "Oriel",
+      "companySlug": "oriel",
+      "product": "Product update publishing workspace",
+      "view": "publishing-mobile",
+      "label": "Publishing \u2014 mobile",
+      "category": "website",
+      "viewport": "mobile",
+      "imagePath": "oriel/website/publishing-mobile.png",
+      "promptPath": "oriel/prompts/publishing-mobile.txt",
+      "width": 713,
+      "height": 2206,
+      "sha256": "44cc9af59bcdbf6f5a3429e43736e1c40b6b84d6f32cdde8e7cb660da02294af",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Instrument Serif",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Instrument+Serif",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Restrained marketing headings only"
+        },
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500,
+            600
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Body, controls, app and component"
+        }
+      ],
+      "sourceUrls": [
+        "https://resend.com/features/broadcasts",
+        "https://resend.com/docs/dashboard/broadcasts/editor",
+        "https://resend.com/docs/dashboard/broadcasts/manage-broadcasts",
+        "https://linear.app/docs/initiative-and-project-updates"
+      ],
+      "uxPurpose": "Publishing \u2014 mobile",
+      "state": "Primary secondary destination: Publishing. Eyebrow PUBLISHING. Heading \u201cA considered path to published.\u201d Short supporting copy \u201cWrite clearly. Review together. Choose the right moment.\u201d Action \u201cStart writing\u201d. One large horizontal product demonstration: pale publication preview on the left \u201cMica \u00b7 Product updates\u201d, \u201cA faster way to find your work\u201d, \u201cSearch across saved views and recent projects in one place.\u201d Right is three spacious metadata rows \u201cReview \u00b7 Approved by Sam Lee\u201d, \u201cPublication \u00b7 28 Oct 2026 \u00b7 09:00 UTC\u201d, \u201cDestination \u00b7 Public changelog\u201d. This is a scheduled preview, not a published confirmation. Next section \u201cEvery step has a clear next action.\u201d Three short horizontal stages: \u201c01 Draft / Gather context in one calm editor.\u201d \u201c02 Review / Resolve the details with your team.\u201d \u201c03 Publish / Share on your own schedule.\u201d Next asymmetric feature section heading \u201cOne story. The right audience.\u201d Copy \u201cPreview your public page before it goes live. Keep internal comments inside your workspace.\u201d Two simple text links \u201cExplore the editor \u2192\u201d and \u201cSee plans \u2192\u201d. Last invitation \u201cMake room for your next update.\u201d Button \u201cCreate a publication\u201d. Broad negative space between sections, no extra feature cards or analytics.\nComplete mobile web page approximately 900\u00d73200. Header Oriel and compact menu. Same full content order as desktop, all panels stack gracefully. Product preview first then metadata. Three stages become vertical open rows. Two CTA links stacked. Footer groups stack with generous spacing. Keep all text readable; no whole-desktop miniature, no device shell. Footer content: Oriel, Help center, Contact, Privacy; \u00a9 2026 Oriel, Thoughtfully shipped., Terms.",
+      "review": {
+        "status": "approved",
+        "checks": [
+          "Full image visually inspected",
+          "Approved V6 visual language retained",
+          "Navigation selection agrees with content",
+          "Fictional state and numbers internally consistent",
+          "Full footer present on website pages",
+          "No clipping or nonuniform scaling",
+          "Neutral black surfaces and generous spacing"
+        ],
+        "limitations": [
+          "Raster typography approximates recorded Google Fonts."
+        ]
+      },
+      "researchPath": "oriel/research.json",
+      "coveragePath": "oriel/coverage.json",
+      "statePath": "oriel/states.json"
+    },
+    {
+      "id": "oriel-plans-mobile",
+      "version": 6,
+      "company": "Oriel",
+      "companySlug": "oriel",
+      "product": "Product update publishing workspace",
+      "view": "plans-mobile",
+      "label": "Plans \u2014 mobile",
+      "category": "website",
+      "viewport": "mobile",
+      "imagePath": "oriel/website/plans-mobile.png",
+      "promptPath": "oriel/prompts/plans-mobile.txt",
+      "width": 740,
+      "height": 2124,
+      "sha256": "bb29ccba06ea3f701efdc581470855039b1f6b5f16a538cf2ca7e1a50cc3f619",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Instrument Serif",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Instrument+Serif",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Restrained marketing headings only"
+        },
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500,
+            600
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Body, controls, app and component"
+        }
+      ],
+      "sourceUrls": [
+        "https://resend.com/pricing"
+      ],
+      "uxPurpose": "Plans \u2014 mobile",
+      "state": "Primary secondary destination: Plans. Heading \u201cA place for every stage.\u201d Subtitle \u201cSimple monthly plans for a considered product story.\u201d Billing label \u201cMonthly billing \u00b7 USD\u201d. Three equally weighted spacious columns with thin dividers and NO highlighted recommended badge: \u201cStart\u201d / \u201c$0 / month\u201d / \u201cFor your first publication.\u201d / \u201c1 publication\u201d / \u201c1 editor\u201d / \u201cPublic changelog\u201d / button \u201cStart free\u201d; \u201cTeam\u201d / \u201c$24 / month\u201d / \u201cFor a shared writing rhythm.\u201d / \u201c3 publications\u201d / \u201c5 editors\u201d / \u201cReviews and scheduling\u201d / button \u201cChoose Team\u201d; \u201cStudio\u201d / \u201c$79 / month\u201d / \u201cFor several product teams.\u201d / \u201c10 publications\u201d / \u201c20 editors\u201d / \u201cRoles and activity history\u201d / button \u201cChoose Studio\u201d. Under cards: \u201cAll plans include drafts, previews and unlimited published updates.\u201d Next section \u201cCompare the essentials.\u201d A simple three-row table with columns Start, Team, Studio: Publications 1/3/10; Editors 1/5/20; Review and scheduling \u2014/Included/Included. No invented percentages. Next FAQ section two open question-answer pairs: \u201cCan I change plans?\u201d / \u201cYes. Change your plan from workspace settings.\u201d; \u201cIs there a yearly commitment?\u201d / \u201cNo. These plans are billed monthly.\u201d Closing CTA \u201cStart with your next update.\u201d / \u201cCreate a publication\u201d. Footer. Fictional concept prices, coherent features. Lots of open space, small readable practical sans.\nComplete mobile page approximately 900\u00d73600. Header Oriel and compact menu. Three plan blocks stack with thin dividers and real breathing room. Comparison table becomes three stacked labeled comparisons with matching values, no overflowing table. FAQs and complete footer stacked. Nothing clipped. Footer content: Oriel, Help center, Contact, Privacy; \u00a9 2026 Oriel, Thoughtfully shipped., Terms.",
+      "review": {
+        "status": "approved",
+        "checks": [
+          "Full image visually inspected",
+          "Approved V6 visual language retained",
+          "Navigation selection agrees with content",
+          "Fictional state and numbers internally consistent",
+          "Full footer present on website pages",
+          "No clipping or nonuniform scaling",
+          "Neutral black surfaces and generous spacing"
+        ],
+        "limitations": [
+          "Raster typography approximates recorded Google Fonts."
+        ]
+      },
+      "researchPath": "oriel/research.json",
+      "coveragePath": "oriel/coverage.json",
+      "statePath": "oriel/states.json"
+    },
+    {
+      "id": "oriel-app-editor",
+      "version": 6,
+      "company": "Oriel",
+      "companySlug": "oriel",
+      "product": "Product update publishing workspace",
+      "view": "app-editor",
+      "label": "Draft editor",
+      "category": "app",
+      "viewport": "desktop",
+      "imagePath": "oriel/app/app-editor.png",
+      "promptPath": "oriel/prompts/app-editor.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "e429a63c0274374c9983d878aa05bf5bad98b9085537f39010c638f5ef842da4",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Instrument Serif",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Instrument+Serif",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Restrained marketing headings only"
+        },
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500,
+            600
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Body, controls, app and component"
+        }
+      ],
+      "sourceUrls": [
+        "https://resend.com/features/broadcasts",
+        "https://resend.com/docs/dashboard/broadcasts/editor",
+        "https://resend.com/docs/dashboard/broadcasts/manage-broadcasts",
+        "https://linear.app/docs/initiative-and-project-updates"
+      ],
+      "uxPurpose": "Draft editor",
+      "state": "App canvas 1536\u00d71024 landscape. Match the attached approved APP shell: full-width top navigation Oriel, Mica, Updates, Review, Settings; Nina Cole avatar NC at far right. Positions, type and margins follow the reference. Keep large negative space and calm density; no dashboard metric tiles, no sidebar, no charts. App title is Inter not a giant serif. Primary actions small and restrained, all controls readable.\nUpdates remains the selected top tab. Breadcrumb \u201cWorkspace / Updates / Draft\u201d. Open draft upd_073 \u201cShared views for every team\u201d. Status \u201cDraft \u00b7 Saved just now\u201d. Top-right actions \u201cPreview\u201d and white \u201cRequest review\u201d. Main region a broad centered editor, title \u201cShared views for every team\u201d, subtitle \u201cKeep the views your team uses close at hand.\u201d Thin small formatting toolbar with Text, B, I, Link. Body two concise paragraphs: \u201cSave a filtered view once and share it with your team.\u201d \u201cEveryone opens the same starting point, with their own work still in view.\u201d One separated metadata rail on the right, not a nested card: Author Nina Cole; Destination Public changelog; Review Not requested. Bottom left \u201cupd_073\u201d. No scheduled date because this is a different unscheduled draft. Large blank area below the short writing. No fake text cursor or copy duplicated elsewhere.",
+      "review": {
+        "status": "approved",
+        "checks": [
+          "Full image visually inspected",
+          "Approved V6 visual language retained",
+          "Navigation selection agrees with content",
+          "Fictional state and numbers internally consistent",
+          "Full footer present on website pages",
+          "No clipping or nonuniform scaling",
+          "Neutral black surfaces and generous spacing"
+        ],
+        "limitations": [
+          "Raster typography approximates recorded Google Fonts."
+        ]
+      },
+      "researchPath": "oriel/research.json",
+      "coveragePath": "oriel/coverage.json",
+      "statePath": "oriel/states.json"
+    },
+    {
+      "id": "oriel-app-review",
+      "version": 6,
+      "company": "Oriel",
+      "companySlug": "oriel",
+      "product": "Product update publishing workspace",
+      "view": "app-review",
+      "label": "Review detail",
+      "category": "app",
+      "viewport": "desktop",
+      "imagePath": "oriel/app/app-review.png",
+      "promptPath": "oriel/prompts/app-review.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "6962b1318dce1519626f9a752124473e83cb9a69a5fe2f0a8f81d1df85fb7b4b",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Instrument Serif",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Instrument+Serif",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Restrained marketing headings only"
+        },
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500,
+            600
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Body, controls, app and component"
+        }
+      ],
+      "sourceUrls": [
+        "https://resend.com/features/broadcasts",
+        "https://resend.com/docs/dashboard/broadcasts/editor",
+        "https://resend.com/docs/dashboard/broadcasts/manage-broadcasts",
+        "https://linear.app/docs/initiative-and-project-updates"
+      ],
+      "uxPurpose": "Review detail",
+      "state": "App canvas 1536\u00d71024 landscape. Match the attached approved APP shell: full-width top navigation Oriel, Mica, Updates, Review, Settings; Nina Cole avatar NC at far right. Positions, type and margins follow the reference. Keep large negative space and calm density; no dashboard metric tiles, no sidebar, no charts. App title is Inter not a giant serif. Primary actions small and restrained, all controls readable.\nReview is the ONLY selected top tab. Breadcrumb \u201cWorkspace / Review / upd_074\u201d. Page title \u201cMore control over exports\u201d. Status \u201cIn review\u201d. Left broad quiet reading column: \u201cChoose what leaves your workspace.\u201d followed by \u201cSelect the fields you need before creating an export. Your saved preferences stay with the next file.\u201d Right separated review rail: heading \u201cReview requested\u201d; author Nina Cole; reviewer Sam Lee; \u201c1 comment\u201d. One comment from Sam Lee: \u201cPlease clarify whether saved preferences apply to everyone.\u201d Under it a small \u201cReply\u2026\u201d field. Bottom rail actions \u201cRequest changes\u201d outlined and \u201cApprove\u201d white. No approved or scheduled status; review still pending. No activity feed beyond this one comment, no charts. Large open area below the article.",
+      "review": {
+        "status": "approved",
+        "checks": [
+          "Full image visually inspected",
+          "Approved V6 visual language retained",
+          "Navigation selection agrees with content",
+          "Fictional state and numbers internally consistent",
+          "Full footer present on website pages",
+          "No clipping or nonuniform scaling",
+          "Neutral black surfaces and generous spacing"
+        ],
+        "limitations": [
+          "Raster typography approximates recorded Google Fonts."
+        ]
+      },
+      "researchPath": "oriel/research.json",
+      "coveragePath": "oriel/coverage.json",
+      "statePath": "oriel/states.json"
+    },
+    {
+      "id": "oriel-app-settings",
+      "version": 6,
+      "company": "Oriel",
+      "companySlug": "oriel",
+      "product": "Product update publishing workspace",
+      "view": "app-settings",
+      "label": "Publication settings",
+      "category": "app",
+      "viewport": "desktop",
+      "imagePath": "oriel/app/app-settings.png",
+      "promptPath": "oriel/prompts/app-settings.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "1ccffd31c9e5e72722ca757c22bf76be19a0fb89b54b2b7575886508638f96a0",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Instrument Serif",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Instrument+Serif",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Restrained marketing headings only"
+        },
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500,
+            600
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Body, controls, app and component"
+        }
+      ],
+      "sourceUrls": [
+        "https://resend.com/features/broadcasts",
+        "https://resend.com/docs/dashboard/broadcasts/editor",
+        "https://resend.com/docs/dashboard/broadcasts/manage-broadcasts",
+        "https://linear.app/docs/initiative-and-project-updates"
+      ],
+      "uxPurpose": "Publication settings",
+      "state": "App canvas 1536\u00d71024 landscape. Match the attached approved APP shell: full-width top navigation Oriel, Mica, Updates, Review, Settings; Nina Cole avatar NC at far right. Positions, type and margins follow the reference. Keep large negative space and calm density; no dashboard metric tiles, no sidebar, no charts. App title is Inter not a giant serif. Primary actions small and restrained, all controls readable.\nSettings is the ONLY selected top tab. Breadcrumb \u201cWorkspace / Settings\u201d. Heading \u201cPublication settings\u201d. Small secondary tabs \u201cGeneral\u201d selected, \u201cPeople\u201d, \u201cBilling\u201d. A calm single form approximately 850px wide with labels above well spaced fields: \u201cWorkspace name\u201d value \u201cMica\u201d; \u201cPublication name\u201d value \u201cMica product updates\u201d; \u201cPublic address\u201d value \u201cmica.oriel.example\u201d; \u201cDefault timezone\u201d value \u201cUTC\u201d. Explanation \u201cNew schedules use this timezone. Existing scheduled updates keep their saved time.\u201d Thin divider then \u201cReview before publishing\u201d, switch ON, text \u201cRequire one approval before an update can be scheduled.\u201d Bottom-right form action \u201cSave changes\u201d and left \u201cNo unsaved changes\u201d. No filledbusysettingsgrid. No fake verificationbadge; .example is a fictional public preview address.",
+      "review": {
+        "status": "approved",
+        "checks": [
+          "Full image visually inspected",
+          "Approved V6 visual language retained",
+          "Navigation selection agrees with content",
+          "Fictional state and numbers internally consistent",
+          "Full footer present on website pages",
+          "No clipping or nonuniform scaling",
+          "Neutral black surfaces and generous spacing"
+        ],
+        "limitations": [
+          "Raster typography approximates recorded Google Fonts."
+        ]
+      },
+      "researchPath": "oriel/research.json",
+      "coveragePath": "oriel/coverage.json",
+      "statePath": "oriel/states.json"
+    },
+    {
+      "id": "oriel-component-reschedule",
+      "version": 6,
+      "company": "Oriel",
+      "companySlug": "oriel",
+      "product": "Product update publishing workspace",
+      "view": "component-reschedule",
+      "label": "Edit publication schedule",
+      "category": "component",
+      "viewport": "component",
+      "imagePath": "oriel/components/component-reschedule.png",
+      "promptPath": "oriel/prompts/component-reschedule.txt",
+      "width": 1295,
+      "height": 1214,
+      "sha256": "23a43cfb92e6b251882c11971bc578a3a9b69d9059dc8054b004ea426f424b0d",
+      "source": "Built-in ImageGen",
+      "fictionalConcept": true,
+      "fonts": [
+        {
+          "family": "Instrument Serif",
+          "weights": [
+            400
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Instrument+Serif",
+          "fallback": "Georgia, Times New Roman, serif",
+          "role": "Restrained marketing headings only"
+        },
+        {
+          "family": "Inter",
+          "weights": [
+            400,
+            500,
+            600
+          ],
+          "styles": [
+            "normal"
+          ],
+          "specimen": "https://fonts.google.com/specimen/Inter",
+          "fallback": "Arial, Helvetica, sans-serif",
+          "role": "Body, controls, app and component"
+        }
+      ],
+      "sourceUrls": [
+        "https://resend.com/features/broadcasts",
+        "https://resend.com/docs/dashboard/broadcasts/editor",
+        "https://resend.com/docs/dashboard/broadcasts/manage-broadcasts",
+        "https://linear.app/docs/initiative-and-project-updates"
+      ],
+      "uxPurpose": "Edit publication schedule",
+      "state": "One complete airy scheduling dialog on neutral black canvas, approximately 1295\u00d71214, preserving attached panel proportions and 100px insets. Oriel | Publication top left, close \u00d7 top right. Small label \u201cEDIT SCHEDULE\u201d. Heading \u201cChoose a new moment.\u201d Title beneath \u201cA faster way to find your work\u201d. Compact muted row \u201cCurrently scheduled \u00b7 28 Oct 2026 \u00b7 09:00 UTC\u201d. Clear labeled form fields: Date \u201c29 Oct 2026\u201d; Time \u201c10:00\u201d; Timezone \u201cUTC\u201d. Show the filled date field, no complex calendar widget. Supporting line \u201cThis change is not saved yet.\u201d Thin separator then summary \u201cNew publication time\u201d / \u201c29 Oct 2026 \u00b7 10:00 UTC\u201d. Destination Public changelog. Two actions at bottom: outlined \u201cKeep current\u201d and white \u201cSave new time\u201d. Tiny upd_072. No confirmationcheckmark orpublishedstatus. Largeopenverticalspacing, noextraexplanatorycards. The proposed time must remain distinctfromcurrenttime.",
+      "review": {
+        "status": "approved",
+        "checks": [
+          "Full image visually inspected",
+          "Approved V6 visual language retained",
+          "Navigation selection agrees with content",
+          "Fictional state and numbers internally consistent",
+          "Full footer present on website pages",
+          "No clipping or nonuniform scaling",
+          "Neutral black surfaces and generous spacing"
+        ],
+        "limitations": [
+          "Raster typography approximates recorded Google Fonts."
+        ]
+      },
+      "researchPath": "oriel/research.json",
+      "coveragePath": "oriel/coverage.json",
+      "statePath": "oriel/states.json"
     }
-  ]
+  ],
+  "imageCount": 48,
+  "imagesPerConcept": 12
 }

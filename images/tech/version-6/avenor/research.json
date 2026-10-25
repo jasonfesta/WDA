@@ -1,0 +1,37 @@
+{
+  "company": "Avenor",
+  "reviewed": "2026-10-25",
+  "method": "Official public website and documentation review; authenticated application was not inspected. Approved V6 images control appearance.",
+  "sources": [
+    {
+      "url": "https://factory.com/product/missions",
+      "observed": "A dedicated product page explains the central capability, demonstrates the workflow, groups practical uses and ends with conversion and a full footer.",
+      "adaptation": "Avenor Product page explains reserve, verify and decide using release planning rather than autonomous coding."
+    },
+    {
+      "url": "https://factory.com/security",
+      "observed": "Security has a dedicated destination covering data handling, auditability and access enforcement, with a path to further assessment.",
+      "adaptation": "Avenor Security focuses on scoped roles, review gates and an audit-event example. No real certification claims or badges are borrowed."
+    },
+    {
+      "url": "https://docs.factory.com/enterprise/network-and-deployment",
+      "observed": "Enterprise documentation makes deployment boundaries and responsibility choices explicit before technical configuration.",
+      "adaptation": "Show how Avenor keeps environment access separate from approval authority and presents a practical security review request."
+    },
+    {
+      "url": "https://docs.factory.com/factory-app/quickstart",
+      "observed": "The documented first session is context gathering followed by review of a bounded proposed change. It then expands to connected systems and repeatable workflows.",
+      "adaptation": "The app sequence opens the release schedule, reviews six verification results, then inspects owners. The component requests a change without falsely approving or starting a rollout."
+    }
+  ],
+  "originality": "All product copy, sample people, service data and composition are original fictional Avenor content; source sites provide UX purposes, not designs to duplicate.",
+  "captures": [
+    {
+      "url": "https://factory.com/security",
+      "desktop": "references/factory-security-desktop.png",
+      "mobile": "references/factory-security-mobile.png",
+      "observedVisualUX": "The page uses a dedicated security title, concise opening CTA, grouped trust topics, related content and a full multi-column footer; mobile stacks the subjects and condenses navigation. Avenor replaces the source branding, certification marks, dark sections and AI claims with a light permissions and audit narrative."
+    }
+  ],
+  "localResearchArchive": "tech/moodboard-v6/expanded/avenor/"
+}

@@ -1,0 +1,47 @@
+{
+  "company": "neral",
+  "source": "research.json navigationCoverage",
+  "steps": [
+    {
+      "step": "Discover",
+      "view": "Approved desktop and mobile homepage",
+      "purpose": "Understand the model evaluation proposition"
+    },
+    {
+      "step": "Understand method",
+      "view": "method-desktop, method-mobile",
+      "purpose": "Define criteria, compare cases, inspect regressions and record a decision"
+    },
+    {
+      "step": "Establish trust",
+      "view": "security-desktop, security-mobile",
+      "purpose": "Understand roles, evidence access, retention and audit history"
+    },
+    {
+      "step": "Find work",
+      "view": "app-evaluations",
+      "purpose": "Browse evaluations and continue the pending review"
+    },
+    {
+      "step": "Verify inputs",
+      "view": "app-dataset",
+      "purpose": "Inspect the locked cases and acceptance criteria"
+    },
+    {
+      "step": "Prioritize review",
+      "view": "app-review-queue",
+      "purpose": "Show only work assigned to Mina and its decision checklist"
+    },
+    {
+      "step": "Inspect evidence",
+      "view": "Approved app screen",
+      "purpose": "Compare case043 responses and regressions"
+    },
+    {
+      "step": "Sign",
+      "view": "Approved component \u2192 component-signed",
+      "purpose": "Move from2of3 to3of3 signatures while leaving model release separate"
+    }
+  ],
+  "localResearchArchive": "tech/moodboard-v6/expanded/neral/"
+}

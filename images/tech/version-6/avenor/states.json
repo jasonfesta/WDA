@@ -1,0 +1,63 @@
+{
+  "company": "Avenor",
+  "workspace": "North region",
+  "reviewer": "Rowan Park",
+  "release": "REL-214",
+  "service": "Edge gateway 2.8.1",
+  "window": "Thu 05 Nov 2026 \u00b7 14:00\u201314:30 UTC",
+  "time": "13:46 UTC",
+  "checks": "6 of 6 passed",
+  "approvals": "1 of 2",
+  "approved": "Maya Chen \u00b7 13:42 UTC",
+  "pending": "Rowan Park",
+  "execution": "Rollout not started",
+  "navigation": [
+    "Schedule",
+    "Environments",
+    "Checks",
+    "People",
+    "Audit"
+  ],
+  "screens": [
+    {
+      "id": "product-desktop",
+      "type": "website",
+      "purpose": "Explain reserve, verify and decide"
+    },
+    {
+      "id": "product-mobile",
+      "type": "website",
+      "purpose": "Same Product story responsively reflowed"
+    },
+    {
+      "id": "security-desktop",
+      "type": "website",
+      "purpose": "Evaluate permission and audit boundaries"
+    },
+    {
+      "id": "security-mobile",
+      "type": "website",
+      "purpose": "Same Security content in single column"
+    },
+    {
+      "id": "app-schedule",
+      "selected": "Schedule",
+      "purpose": "Find reserved release window and open review"
+    },
+    {
+      "id": "app-checks",
+      "selected": "Checks",
+      "purpose": "Inspect six passed checks and attached evidence"
+    },
+    {
+      "id": "app-people",
+      "selected": "People",
+      "purpose": "Review role scopes and approval authority"
+    },
+    {
+      "id": "component-change-request",
+      "purpose": "Draft a change request; not submitted; release remains awaiting approval"
+    }
+  ],
+  "localResearchArchive": "tech/moodboard-v6/expanded/avenor/"
+}

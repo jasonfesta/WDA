@@ -1,0 +1,83 @@
+{
+  "reviewedAt": "2026-10-25",
+  "referenceFamily": "Firecrawl",
+  "sources": [
+    {
+      "url": "https://www.firecrawl.dev/scrape",
+      "observedUX": "Focused product proposition, concrete output preview, feature explanations, FAQ and next-step actions.",
+      "adaptation": "Workflow destination explains file preparation, schema review and publication, using Rillset data rather than extraction."
+    },
+    {
+      "url": "https://www.firecrawl.dev/pricing",
+      "observedUX": "Plan choice precedes detailed limits and comparison; billing cadence, inclusions and FAQ are explicit.",
+      "adaptation": "Three fictional dataset plans with simple monthly prices, publication limits and governance comparison."
+    },
+    {
+      "url": "https://docs.firecrawl.dev/introduction",
+      "observedUX": "Entry points separate getting started, browser testing and documentation; task navigation and examples expose the next action.",
+      "adaptation": "Dataset library is a clear entry point with one primary import action and meaningful existing states."
+    },
+    {
+      "url": "https://docs.firecrawl.dev/features/scrape",
+      "observedUX": "Output formats, structured schema, response preview and error status are distinct inspectable concepts.",
+      "adaptation": "Schema tab shows types, required values and an example alongside validity status; published confirmation distinguishes completed action from readiness."
+    }
+  ],
+  "limits": [
+    "Public pages and documentation reviewed. Authenticated source application was not accessed. App navigation and settings are original inferred adaptations, not claims about the source application.",
+    "Source logos, marketing copy and page compositions are not reproduced.",
+    "Prices and names in the concept are fictional."
+  ],
+  "visualObservations": [
+    "Source pricing desktop uses a prominent credit quantity control followed by multiple plan columns, expansive comparisons and FAQ; mobile stacks plans but retains a compact multi-column comparison.",
+    "Rillset adopts clear cadence, limits and decision support while reducing to three plans, removing quantity sliders, source claims and logo proof. Mobile comparison becomes readable label/value groups.",
+    "Source product page uses a centered output preview and feature demonstrations. Rillset chooses a left-aligned workflow hero, practical CSV preview, schema review and history handoff."
+  ],
+  "captures": [
+    {
+      "path": "references/scrape-desktop.png",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "fullPage": true,
+      "url": "https://www.firecrawl.dev/scrape",
+      "sha256": "4c090d9aeb39189d65b96428a4c032ade9bca4448d8a7f634475f1ae290c1269",
+      "actualGenerationInput": false
+    },
+    {
+      "path": "references/scrape-mobile.png",
+      "viewport": [
+        390,
+        844
+      ],
+      "fullPage": true,
+      "url": "https://www.firecrawl.dev/scrape",
+      "sha256": "f094e650b2298b7f10e2a1a2d5682bd57cbf77769ab63c3d5409192e49484b2f",
+      "actualGenerationInput": false
+    },
+    {
+      "path": "references/pricing-desktop.png",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "fullPage": true,
+      "url": "https://www.firecrawl.dev/pricing",
+      "sha256": "0e3fd89d429878ff406230d2edab81c9bc5dbe7ef92b3195434588bd0bfaca41",
+      "actualGenerationInput": false
+    },
+    {
+      "path": "references/pricing-mobile.png",
+      "viewport": [
+        390,
+        844
+      ],
+      "fullPage": true,
+      "url": "https://www.firecrawl.dev/pricing",
+      "sha256": "04d535f78ccadbd96cfbbf63dba80f4cb17c92f460334a7245092babac59e370",
+      "actualGenerationInput": false
+    }
+  ],
+  "localResearchArchive": "tech/moodboard-v6/expanded/rillset/"
+}

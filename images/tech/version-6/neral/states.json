@@ -1,0 +1,109 @@
+{
+  "persistent": {
+    "workspace": "Support lab",
+    "evaluation": "EV-024",
+    "title": "Support answers",
+    "cases": 120,
+    "baselineAccepted": 96,
+    "candidateAccepted": 108,
+    "baselinePercent": 80,
+    "candidatePercent": 90,
+    "deltaPercentagePoints": 10,
+    "bothAccepted": 90,
+    "improved": 18,
+    "regressed": 6,
+    "bothFlagged": 6,
+    "reviewers": [
+      "Asha Ng",
+      "Leo Ruiz",
+      "Mina Shah"
+    ],
+    "nav": [
+      "Evaluations",
+      "Datasets",
+      "Review queue"
+    ],
+    "signed": [
+      "Asha Ng",
+      "Leo Ruiz"
+    ],
+    "pending": [
+      "Mina Shah"
+    ],
+    "regressionCases": [
+      "043",
+      "058",
+      "072",
+      "088",
+      "101",
+      "114"
+    ]
+  },
+  "screens": [
+    {
+      "id": "method-desktop",
+      "entry": "Website Method navigation",
+      "selected": "Method",
+      "content": "Define criteria, compare same cases, inspect exceptions, record review; complete footer",
+      "changed": "New supporting page",
+      "persistent": "EV-024 sample pending"
+    },
+    {
+      "id": "method-mobile",
+      "entry": "Mobile menu > Method",
+      "selected": "Method",
+      "content": "Same method sequence in responsive stack",
+      "changed": "Mobile layout",
+      "persistent": "Same content and sample data"
+    },
+    {
+      "id": "security-desktop",
+      "entry": "Website Security navigation",
+      "selected": "Security",
+      "content": "Evidence ownership, role matrix, retention and traceable review",
+      "changed": "New supporting page",
+      "persistent": "Support lab and three reviewers"
+    },
+    {
+      "id": "security-mobile",
+      "entry": "Mobile menu > Security",
+      "selected": "Security",
+      "content": "Same governance story as stacked roles",
+      "changed": "Mobile layout",
+      "persistent": "Same roles and settings"
+    },
+    {
+      "id": "app-evaluations",
+      "entry": "Evaluations nav",
+      "selected": "Evaluations",
+      "content": "Three evaluations; EV-024 in review, EV-023 signed, EV-025 draft",
+      "changed": "Index view",
+      "persistent": "EV-024 pending Mina; 120 cases"
+    },
+    {
+      "id": "app-dataset",
+      "entry": "Datasets > Support questions",
+      "selected": "Datasets",
+      "content": "Dataset details and case preview;120 cases,6 regression flags",
+      "changed": "Dataset view",
+      "persistent": "EV-024 uses this case set"
+    },
+    {
+      "id": "app-review-queue",
+      "entry": "Review queue nav",
+      "selected": "Review queue",
+      "content": "My review filter returns one pending EV-024;Asha and Leo signed;Mina pending",
+      "changed": "Queue view",
+      "persistent": "2 of 3 signed, six regression cases"
+    },
+    {
+      "id": "component-signed",
+      "entry": "Submit signature from approved component",
+      "selected": "None",
+      "content": "Evidence sign-off complete; all three signed; export evidence",
+      "changed": "Mina signs;3 of3;new timeline entry",
+      "persistent": "120 cases;6 regressions;signing does not release a model"
+    }
+  ],
+  "localResearchArchive": "tech/moodboard-v6/expanded/neral/"
+}

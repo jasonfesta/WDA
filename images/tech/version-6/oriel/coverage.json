@@ -1,0 +1,17 @@
+{
+  "company": "Oriel",
+  "imageCount": 12,
+  "websitePrimaryNavigation": {
+    "Workspace": "Approved homepage + app overview",
+    "Publishing": "Publishing desktop and mobile",
+    "Plans": "Plans desktop and mobile"
+  },
+  "appPrimaryNavigation": {
+    "Updates": "Approved overview + new draft editor",
+    "Review": "New pending review detail",
+    "Settings": "New publication settings"
+  },
+  "keyStateTransition": "Approved scheduled component \u2192 edit schedule component with explicit unsaved proposal",
+  "secondaryUtilities": "Help, contact, legal and all people/billing subpanels remain navigation context, not separate image deliverables.",
+  "localResearchArchive": "tech/moodboard-v6/expanded/oriel/"
+}

@@ -1,0 +1,72 @@
+{
+  "company": "Rillset",
+  "totalImages": 12,
+  "approvedImagesPreserved": 4,
+  "newImages": 8,
+  "journey": [
+    {
+      "stage": "Discover",
+      "views": [
+        "approved desktop homepage",
+        "approved mobile homepage"
+      ],
+      "purpose": "Understand dataset publication and value."
+    },
+    {
+      "stage": "Evaluate workflow",
+      "views": [
+        "workflow-desktop",
+        "workflow-mobile"
+      ],
+      "purpose": "Understand preparation, review and publication."
+    },
+    {
+      "stage": "Choose a plan",
+      "views": [
+        "pricing-desktop",
+        "pricing-mobile"
+      ],
+      "purpose": "Compare fictional plans, limits and governance."
+    },
+    {
+      "stage": "Find and prepare",
+      "views": [
+        "app-library"
+      ],
+      "purpose": "Open existing datasets or start an import."
+    },
+    {
+      "stage": "Review changes",
+      "views": [
+        "approved app",
+        "app-schema"
+      ],
+      "purpose": "Compare versions and inspect typed field definitions."
+    },
+    {
+      "stage": "Configure the team",
+      "views": [
+        "app-settings"
+      ],
+      "purpose": "Set workspace identity, audience, reviewer count and retention."
+    },
+    {
+      "stage": "Publish and verify",
+      "views": [
+        "approved component",
+        "component-published"
+      ],
+      "purpose": "Review the publish confirmation, then see the completed publication state."
+    }
+  ],
+  "navigationCoverage": {
+    "Workflow": "Standalone desktop and mobile pages",
+    "Pricing": "Standalone desktop and mobile pages",
+    "Teams": "Homepage ownership section and workspace settings; no separate page within the 12-image cap",
+    "Sign in and utility links": "Navigation context only; not separate screens"
+  },
+  "researchMethod": "Live primary product, pricing and documentation pages reviewed before generation; desktop and mobile source screenshots retained separately. App structure is an original inferred adaptation, not a copied authenticated app.",
+  "originality": "Only Rillset and fictional workspace data appear in final images. No reference-company logos, customer logos or vendor strips. Source screenshots remain research-only.",
+  "stateBoundaries": "Library, schema and workflow precede publication; component-published is explicitly after Publish v1.4. v1.3 stays in history. Imported table row examples may contain historical departure dates; version event timestamps are 2026.",
+  "localResearchArchive": "tech/moodboard-v6/expanded/rillset/"
+}

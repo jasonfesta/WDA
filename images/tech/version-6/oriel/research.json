@@ -1,0 +1,35 @@
+{
+  "company": "Oriel",
+  "researchedAt": "2026-10-25",
+  "sources": [
+    {
+      "url": "https://resend.com/features/broadcasts",
+      "observed": "Dedicated feature page demonstrates creation, preview and scheduling, then conversion.",
+      "adaptation": "Publishing page explains draft, review and public changelog release with one large preview and quieter supporting sections."
+    },
+    {
+      "url": "https://resend.com/pricing",
+      "observed": "Plans are compared by limits and included capabilities; questions explain billing and changing plans.",
+      "adaptation": "Three fictional monthly tiers for publications and editors, short clear comparison and two questions. No copied rates or email quotas."
+    },
+    {
+      "url": "https://resend.com/docs/dashboard/broadcasts/editor",
+      "observed": "Draft editing includes preview, automatic saving and a review gate before sending.",
+      "adaptation": "An update editor preserves a draft and allows Request review; app review is a separate explicit decision."
+    },
+    {
+      "url": "https://resend.com/docs/dashboard/broadcasts/manage-broadcasts",
+      "observed": "The dashboard changes detail actions according to draft or scheduled state; schedule cancellation returns an item to draft.",
+      "adaptation": "The existing list remains the entry. A schedule edit component shows current and proposed values before saving."
+    },
+    {
+      "url": "https://linear.app/docs/initiative-and-project-updates",
+      "observed": "Structured updates have owner, description, history and comments; notifications and schedules live in workspace settings.",
+      "adaptation": "A compact contextual review panel and a publication-settings destination, without transplanting the source sidebar or density."
+    }
+  ],
+  "visualEvidence": "reference-captures.json",
+  "scope": "Public primary pages and public documentation; no private signed-in product screens accessed.",
+  "originality": "Source UX informs actions and decision order. Approved Oriel art direction, fictional copy, section architecture and data remain original.",
+  "localResearchArchive": "tech/moodboard-v6/expanded/oriel/"
+}

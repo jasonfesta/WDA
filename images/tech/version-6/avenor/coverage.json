@@ -1,0 +1,31 @@
+{
+  "company": "Avenor",
+  "approvedBasePreserved": 4,
+  "newImages": 8,
+  "totalImages": 12,
+  "journey": [
+    "Discover through approved homepage",
+    "Understand Product and Workflow on Product secondary page",
+    "Evaluate trust on Security secondary page",
+    "Locate a release in Schedule",
+    "Review the existing release detail",
+    "Inspect verification evidence in Checks",
+    "Review ownership and permissions in People",
+    "Approve using existing component or draft a change request using new component"
+  ],
+  "homepageNavigation": {
+    "Product": "Product secondary page desktop/mobile",
+    "Workflow": "Covered in Product reserve/verify/decide sequence; not a separate screenshot",
+    "Security": "Security secondary page desktop/mobile",
+    "Resources": "Related explanatory content in Product FAQs and Security Q&A; a complete resource library is outside the selected 12-image study",
+    "Sign in": "App entry is represented by signed-in workspace; authentication not expanded",
+    "Talk to us": "Complete contact sections on secondary pages"
+  },
+  "limits": [
+    "Raster design study rather than functioning software",
+    "Fonts are approximations of recorded Google Fonts",
+    "No private application UI was accessed; public documentation informs the adapted app flow",
+    "Up to12 images focuses the primary journey; not every auxiliary nav destination is rendered"
+  ],
+  "localResearchArchive": "tech/moodboard-v6/expanded/avenor/"
+}

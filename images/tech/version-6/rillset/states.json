@@ -1,0 +1,103 @@
+{
+  "persistent": {
+    "company": "Rillset",
+    "workspace": "Fieldworks",
+    "dataset": "Harbor routes",
+    "version": "v1.4",
+    "rows": 8540,
+    "fields": 13,
+    "previousVersion": "v1.3",
+    "previousRows": 8420,
+    "previousFields": 12,
+    "reviewers": [
+      "Maya Chen",
+      "Theo Park"
+    ],
+    "reviews": "2 of 2 approved",
+    "checks": "3 of 3 passed",
+    "access": "Team only"
+  },
+  "screens": [
+    {
+      "id": "workflow-desktop",
+      "label": "Workflow \u00b7 desktop",
+      "category": "website",
+      "viewport": "desktop",
+      "entry": "Workflow navigation",
+      "selected": "Workflow",
+      "content": "Preparation, review, publication and preserved history",
+      "purpose": "Explain the product workflow before signing up"
+    },
+    {
+      "id": "workflow-mobile",
+      "label": "Workflow \u00b7 mobile",
+      "category": "website",
+      "viewport": "mobile",
+      "entry": "Mobile menu \u2192 Workflow",
+      "selected": "Workflow",
+      "content": "Same complete workflow, responsive stack",
+      "purpose": "Explain the same workflow on a phone"
+    },
+    {
+      "id": "pricing-desktop",
+      "label": "Pricing \u00b7 desktop",
+      "category": "website",
+      "viewport": "desktop",
+      "entry": "Pricing navigation",
+      "selected": "Monthly",
+      "content": "Free $0; Team $48 per month; Organization custom",
+      "purpose": "Choose a plan with transparent limits"
+    },
+    {
+      "id": "pricing-mobile",
+      "label": "Pricing \u00b7 mobile",
+      "category": "website",
+      "viewport": "mobile",
+      "entry": "Mobile menu \u2192 Pricing",
+      "selected": "Monthly",
+      "content": "Same three plans, stacked comparison and FAQ",
+      "purpose": "Compare and choose a plan on a phone"
+    },
+    {
+      "id": "app-library",
+      "label": "Dataset library",
+      "category": "app",
+      "viewport": "desktop",
+      "entry": "Select Datasets",
+      "selected": "Datasets",
+      "content": "Harbor routes ready v1.4; Service calendar draft v0.9; Stop inventory published v2.1",
+      "purpose": "Find a dataset and begin or resume preparation"
+    },
+    {
+      "id": "app-schema",
+      "label": "Schema detail",
+      "category": "app",
+      "viewport": "desktop",
+      "entry": "Harbor routes \u2192 Schema",
+      "selected": "Schema",
+      "content": "Four of 13 fields with service_region selected, type text and required",
+      "purpose": "Inspect field definitions and sample values before publication"
+    },
+    {
+      "id": "app-settings",
+      "label": "Workspace settings",
+      "category": "app",
+      "viewport": "desktop",
+      "entry": "Settings \u2192 General",
+      "selected": "Settings / General",
+      "content": "Fieldworks, team-only default, two required reviewers, keep prior versions",
+      "purpose": "Set stable workspace defaults and review safeguards"
+    },
+    {
+      "id": "component-published",
+      "label": "Published confirmation",
+      "category": "component",
+      "viewport": "component",
+      "entry": "Publish v1.4 from approved confirmation",
+      "selected": "Published",
+      "content": "v1.4 current, v1.3 retained, team-only audience, 25 Oct 2026 14:30 UTC",
+      "purpose": "Confirm success and offer the published version or copied link"
+    }
+  ],
+  "localResearchArchive": "tech/moodboard-v6/expanded/rillset/"
+}

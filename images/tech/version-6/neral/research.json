@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-25",
+  "company": "Neral",
+  "scope": "Observed public UX patterns inform original Neral routes and controls; no source visual design is copied.",
+  "sources": [
+    {
+      "url": "https://devin.ai/enterprise",
+      "observed": "Enterprise destination groups governance, permissions, audit logging and contact capture.",
+      "adaptation": "Security page explains evidence ownership, workspace roles, retention and review trail; no certification claims."
+    },
+    {
+      "url": "https://docs.devin.ai/essential-guidelines/when-to-use-devin",
+      "observed": "Task guidance makes scope and success criteria explicit before work begins.",
+      "adaptation": "Method page starts with criteria and case selection before comparison and evidence review."
+    },
+    {
+      "url": "https://docs.devin.ai/work-with-devin/devin-review",
+      "observed": "A dedicated review workflow supports inspecting findings and returning to work requiring attention.",
+      "adaptation": "Neral review queue and case evidence retain owner, decision status and an explicit next action."
+    },
+    {
+      "url": "https://docs.devin.ai/product-guides/invite-team",
+      "observed": "Team invitation is a distinct administration task.",
+      "adaptation": "Security page describes reviewer versus workspace-admin roles; public app screens keep reviewer ownership visible."
+    }
+  ],
+  "inference": "Neral is a fictional model-evaluation product. Evaluation IDs, cases, controls and every sentence in the new designs are original scenario content, not features claimed for the referenced products.",
+  "inputImages": "Only the four approved Neral V6 raster images are actual visual inputs. Public pages are text research, not attached visual references.",
+  "captureReview": {
+    "files": "research/captures.json",
+    "detailViews": [
+      "research/devin-review-docs-detail.png",
+      "research/devin-enterprise-mobile-governance.png"
+    ],
+    "observedVisually": "Enterprise page separates product examples, governance, contact form and footer. Mobile collapses governance to ruled single-column rows. Review docs have persistent subject navigation and article-local navigation; categorized assigned review entry is explicit.",
+    "adaptation": "NERAL keeps its approved top navigation instead of adopting the source sidebar. Method and Security finish existing marketing navigation destinations, followed by evaluation, dataset and review workspace contexts."
+  },
+  "navigationCoverage": [
+    {
+      "step": "Discover",
+      "view": "Approved desktop and mobile homepage",
+      "purpose": "Understand the model evaluation proposition"
+    },
+    {
+      "step": "Understand method",
+      "view": "method-desktop, method-mobile",
+      "purpose": "Define criteria, compare cases, inspect regressions and record a decision"
+    },
+    {
+      "step": "Establish trust",
+      "view": "security-desktop, security-mobile",
+      "purpose": "Understand roles, evidence access, retention and audit history"
+    },
+    {
+      "step": "Find work",
+      "view": "app-evaluations",
+      "purpose": "Browse evaluations and continue the pending review"
+    },
+    {
+      "step": "Verify inputs",
+      "view": "app-dataset",
+      "purpose": "Inspect the locked cases and acceptance criteria"
+    },
+    {
+      "step": "Prioritize review",
+      "view": "app-review-queue",
+      "purpose": "Show only work assigned to Mina and its decision checklist"
+    },
+    {
+      "step": "Inspect evidence",
+      "view": "Approved app screen",
+      "purpose": "Compare case043 responses and regressions"
+    },
+    {
+      "step": "Sign",
+      "view": "Approved component \u2192 component-signed",
+      "purpose": "Move from2of3 to3of3 signatures while leaving model release separate"
+    }
+  ],
+  "localResearchArchive": "tech/moodboard-v6/expanded/neral/"
+}

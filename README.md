@@ -2,9 +2,10 @@
 
 ## Premium tech concepts — Version 6
 
-[Browse the 16 selected V6 images](images/tech/version-6/README.md): Rillset, Avenor,
-Neral and Oriel. Each company includes a full desktop homepage, full mobile homepage,
-app screen and component, with exact prompt text and an image manifest.
+[Browse the 48 selected V6 images](images/tech/version-6/README.md): Rillset, Avenor,
+Neral and Oriel, with 12 images per company. Each set covers three full website pages
+in desktop and mobile, four app screens and two component states. Exact prompts,
+reference research, UX coverage and checksums are included.
 
 ## Website image selections — 24 October 2026
 
