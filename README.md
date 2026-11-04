@@ -1,5 +1,11 @@
 # WDA
 
+## Website captures — November 2026
+
+[Browse 71 full-page screenshots](screen%20grabs/website-captures.md) · [All sources and capture status](screen%20grabs/capture-status.md)
+
+34 desktop/mobile pairs and three mobile-only pages. Every entry has an easy-to-find live website URL, screenshot links, and a domain-named source note.
+
 ## Premium tech concepts — Version 6
 
 [Browse the 48 selected V6 images](images/tech/version-6/README.md): Rillset, Avenor,
