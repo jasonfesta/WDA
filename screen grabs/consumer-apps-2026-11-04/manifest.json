@@ -2,7 +2,7 @@
   "captured_at": "2026-11-04",
   "browser": "Google Chrome",
   "mobile_format": "responsive web",
-  "image_count": 26,
+  "image_count": 24,
   "captures": [
     {
       "app": "X",
@@ -57,24 +57,24 @@
       "category": "Social",
       "device": "desktop",
       "file": "instagram/desktop.png",
-      "source_url": "https://www.instagram.com/",
-      "width": 787,
-      "height": 1998,
-      "sha256": "e2fd92363cf7af66a7ce8bc08954f3e1d533bd1328e641d45f2601ca6a90654c",
+      "source_url": "https://www.instagram.com/instagram/",
+      "width": 903,
+      "height": 1741,
+      "sha256": "c329e271ed7d1013b5857dbd96db8ab19ae5a970a75e4c5a6974758d4009a77b",
       "ai_edited": true,
-      "notes": "Home feed. Both images are AI-edited to replace account branding with Studio / joinstudio and an S avatar. The AI output changes resolution and retains extra framing, including white side margins on mobile."
+      "notes": "Desktop shows a long scrolling Instagram public-profile grid; mobile shows Explore. Both are AI-edited to replace the account avatar with a neutral S. AI editing can change unrelated image details."
     },
     {
       "app": "Instagram",
       "category": "Social",
       "device": "mobile",
       "file": "instagram/mobile.png",
-      "source_url": "https://www.instagram.com/",
-      "width": 724,
-      "height": 2172,
-      "sha256": "f8d47c95faa0fcb8182d8ca5f4d40d6276e1ce8891167d1f3e6742a93376a939",
+      "source_url": "https://www.instagram.com/explore/",
+      "width": 853,
+      "height": 1844,
+      "sha256": "f070d6ed37b8c64ccb6b1a4f1494f0224f5591e412401515d75cc4d9c09edc5e",
       "ai_edited": true,
-      "notes": "Home feed. Both images are AI-edited to replace account branding with Studio / joinstudio and an S avatar. The AI output changes resolution and retains extra framing, including white side margins on mobile."
+      "notes": "Desktop shows a long scrolling Instagram public-profile grid; mobile shows Explore. Both are AI-edited to replace the account avatar with a neutral S. AI editing can change unrelated image details."
     },
     {
       "app": "TikTok",
@@ -176,13 +176,13 @@
       "app": "Google Maps",
       "category": "Maps",
       "device": "desktop",
-      "file": "google-maps/desktop.jpg",
+      "file": "google-maps/desktop.png",
       "source_url": "https://www.google.com/maps/search/Paris+France",
-      "width": 1440,
-      "height": 1000,
-      "sha256": "aad1aca4d34b68ea44a0e83993429c9c1d1cad7d9d55b513a02f3667e9bc8f1b",
+      "width": 3600,
+      "height": 1896,
+      "sha256": "9b9ad898df52a77f61b5e935a4e118f8c02247461906d5b73adc84ba589557c2",
       "ai_edited": false,
-      "notes": "Paris map workspace. Desktop includes the place panel; mobile shows the map."
+      "notes": "Paris map workspace. Desktop and mobile show the expanded map without the place panel."
     },
     {
       "app": "Google Maps",
@@ -194,7 +194,7 @@
       "height": 844,
       "sha256": "876652892dd4c2ae492883bb6a926f68ad3da09702805f4249c92639d50184b1",
       "ai_edited": false,
-      "notes": "Paris map workspace. Desktop includes the place panel; mobile shows the map."
+      "notes": "Paris map workspace. Desktop and mobile show the expanded map without the place panel."
     },
     {
       "app": "Airbnb",
@@ -202,11 +202,11 @@
       "device": "desktop",
       "file": "airbnb/desktop.jpg",
       "source_url": "https://www.airbnb.com/s/Paris--France/homes",
-      "width": 1440,
-      "height": 1000,
-      "sha256": "326e96103a45cb48d72bf1bd2b7c37da5e0c728745abc4c2fce9828b6702fceb",
+      "width": 1800,
+      "height": 1004,
+      "sha256": "bc8277d4c5cebf87aab882c893aad8bf7cfef75cf776d3b3106e5412264fa197",
       "ai_edited": false,
-      "notes": "Paris accommodation search in map view. Fixed-height desktop split view and mobile map with listing sheet."
+      "notes": "Paris accommodation search in map view. Desktop uses the expanded map control at normal browser height; mobile shows the map with a listing sheet."
     },
     {
       "app": "Airbnb",
@@ -216,9 +216,9 @@
       "source_url": "https://www.airbnb.com/s/Paris--France/homes",
       "width": 390,
       "height": 844,
-      "sha256": "a9a911b88330910f37a42675b145880800d44896556d57354a3e56c53c1b4d8c",
+      "sha256": "b7727ea916499ba6d616592d7222b163147b0d3c8ce4a8aeacef039ba7eed37e",
       "ai_edited": false,
-      "notes": "Paris accommodation search in map view. Fixed-height desktop split view and mobile map with listing sheet."
+      "notes": "Paris accommodation search in map view. Desktop uses the expanded map control at normal browser height; mobile shows the map with a listing sheet."
     },
     {
       "app": "Redfin",
@@ -226,11 +226,11 @@
       "device": "desktop",
       "file": "redfin/desktop.jpg",
       "source_url": "https://www.redfin.com/city/18142/FL/Tampa/newest-listings",
-      "width": 1440,
-      "height": 1000,
-      "sha256": "e10825b0a14ed86c0fa89008cb06498fcf586623160f3edb335c71f282be8bfa",
+      "width": 1800,
+      "height": 1004,
+      "sha256": "49046b3023a2203c6f3fd0cc014f8c53175c260f34a4f63924f875ef50f3c4fb",
       "ai_edited": false,
-      "notes": "Tampa listings in map view on desktop and mobile; complete fixed-height map workspace."
+      "notes": "Tampa listings in map view on desktop and mobile; desktop retains the full navigation header at normal browser height."
     },
     {
       "app": "Redfin",
@@ -242,31 +242,31 @@
       "height": 844,
       "sha256": "5a154c8322c44a8eadc2c6abe535ca0512eb2f681a390bb2e78f38ae8a2b5325",
       "ai_edited": false,
-      "notes": "Tampa listings in map view on desktop and mobile; complete fixed-height map workspace."
+      "notes": "Tampa listings in map view on desktop and mobile; desktop retains the full navigation header at normal browser height."
     },
     {
-      "app": "MapQuest",
+      "app": "Mapbox",
       "category": "Maps",
       "device": "desktop",
-      "file": "mapquest/desktop.jpg",
-      "source_url": "https://www.mapquest.com/us/california/san-francisco-ca-282039201",
-      "width": 1440,
-      "height": 1000,
-      "sha256": "d712b00de93cdc8c82ec63e54e2e5ee595b7deb3db1624230811dd96d2bae67d",
+      "file": "mapbox/desktop.png",
+      "source_url": "https://www.mapbox.com/gallery#mapbox-default",
+      "width": 3600,
+      "height": 1896,
+      "sha256": "2664aa48534e5abaa421366df635daf6b4cdbfe9e6a95af1358be83bbf052ddb",
       "ai_edited": false,
-      "notes": "San Francisco map workspace on desktop and mobile."
+      "notes": "Official interactive Default basemap demo, showing San Francisco. Desktop and mobile responsive map views."
     },
     {
-      "app": "MapQuest",
+      "app": "Mapbox",
       "category": "Maps",
       "device": "mobile",
-      "file": "mapquest/mobile.jpg",
-      "source_url": "https://www.mapquest.com/us/california/san-francisco-ca-282039201",
-      "width": 390,
-      "height": 844,
-      "sha256": "df05a17d784820151109406cc90475b03a99e8e1fdbee0a26b3e703a3ee4179d",
+      "file": "mapbox/mobile.png",
+      "source_url": "https://www.mapbox.com/gallery#mapbox-default",
+      "width": 1179,
+      "height": 2556,
+      "sha256": "1b65404fc57fb71c97f7eb0804df0b49596c6bbbc1bf575139faa6b1b6602b6f",
       "ai_edited": false,
-      "notes": "San Francisco map workspace on desktop and mobile."
+      "notes": "Official interactive Default basemap demo, showing San Francisco. Desktop and mobile responsive map views."
     },
     {
       "app": "Wanderlog",
@@ -291,30 +291,6 @@
       "sha256": "a066e88a29d2d3a568b2e4b12f52cae70683ce9c44aef65ec14820966c93efc5",
       "ai_edited": false,
       "notes": "Full-page guest sample itinerary for Paris, November 14\u201315, 2026, with Eiffel Tower and Louvre Museum. Desktop includes a map; mobile shows the planning column. Sample content only."
-    },
-    {
-      "app": "Furkot",
-      "category": "Trip planning",
-      "device": "desktop",
-      "file": "furkot/desktop.jpg",
-      "source_url": "https://trips.furkot.com/ui",
-      "width": 1440,
-      "height": 1000,
-      "sha256": "7377c0a1ec23f0b9f01deca9def928bc8f7461809b108fd8f2399be1b5d66468",
-      "ai_edited": false,
-      "notes": "Guest sample California trip. Desktop shows route map and plan; mobile shows the plan. The sample endpoint is Car Care Los Angeles, as displayed. This is an interface reference, not a recommended itinerary."
-    },
-    {
-      "app": "Furkot",
-      "category": "Trip planning",
-      "device": "mobile",
-      "file": "furkot/mobile.jpg",
-      "source_url": "https://trips.furkot.com/ui",
-      "width": 390,
-      "height": 844,
-      "sha256": "2557e40f6c19e91714314233b8d8beb6c8961f1e9285d28757110a8d9bf09685",
-      "ai_edited": false,
-      "notes": "Guest sample California trip. Desktop shows route map and plan; mobile shows the plan. The sample endpoint is Car Care Los Angeles, as displayed. This is an interface reference, not a recommended itinerary."
     }
   ]
 }

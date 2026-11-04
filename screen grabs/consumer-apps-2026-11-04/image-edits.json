@@ -1,0 +1,13 @@
+{
+  "tool": "built-in image_gen",
+  "edits": [
+    {
+      "file": "instagram/desktop.png",
+      "prompt": "Use case: precise-object-edit. Edit target: this real long scrolling Instagram desktop screenshot. Preserve its tall full-page aspect ratio, complete header, ALL eight rows of photos in the exact same order, dark background, icons, typography, spacing and footer. Change only the small blue diamond profile avatar in the far-left navigation rail (near the upper fifth of the image) to a neutral round gray avatar bearing a white S. If any Darwin or joindarwin text is visible replace it with Studio or joinstudio. Do not add any branding. Do not crop, shorten, rearrange, omit, duplicate or invent posts; do not add margins. This must remain a long desktop scrolling reference, approximately 1800 pixels wide by 3470 pixels high. Preserve all other pixels and text as closely as possible."
+    },
+    {
+      "file": "instagram/mobile.png",
+      "prompt": "Edit target: the supplied 390 by 844 pixel Instagram mobile Explore screenshot. Use case: precise-object-edit. Change ONLY the small blue circular account avatar containing a white diamond at the far right of the bottom navigation bar near x359 y819. Replace that one avatar with a neutral medium-gray circular avatar containing a crisp white capital S, at the identical location and size. Preserve every other photo, face, caption, icon, the three-column grid, search bar, navigation bar, colors and spacing exactly as in the input. This is a surgical screenshot cleanup, not a UI redesign. Keep the complete narrow portrait screenshot in the exact 390:844 aspect ratio. The screenshot must fill the entire output from edge to edge. ABSOLUTELY NO white margins, letterboxing, blank side padding, frame, device mockup, extra UI or crop. There must be no Darwin name, handle, or blue diamond account branding. Render at high resolution preserving the original screen proportions."
+    }
+  ]
+}

@@ -5,17 +5,17 @@
     "darvvin"
   ],
   "matched_files": 0,
-  "capture_files_checked": 26,
+  "capture_files_checked": 24,
   "limitations": "OCR can miss small text and stylized logos. AI-edited images may change unrelated details. See README for capture-specific limitations.",
   "results": [
     {
       "file": "airbnb/desktop.jpg",
-      "linesRecognized": 97,
+      "linesRecognized": 78,
       "matches": []
     },
     {
       "file": "airbnb/mobile.jpg",
-      "linesRecognized": 28,
+      "linesRecognized": 27,
       "matches": []
     },
     {
@@ -29,18 +29,8 @@
       "matches": []
     },
     {
-      "file": "furkot/desktop.jpg",
-      "linesRecognized": 33,
-      "matches": []
-    },
-    {
-      "file": "furkot/mobile.jpg",
-      "linesRecognized": 23,
-      "matches": []
-    },
-    {
-      "file": "google-maps/desktop.jpg",
-      "linesRecognized": 145,
+      "file": "google-maps/desktop.png",
+      "linesRecognized": 188,
       "matches": []
     },
     {
@@ -50,12 +40,12 @@
     },
     {
       "file": "instagram/desktop.png",
-      "linesRecognized": 37,
+      "linesRecognized": 13,
       "matches": []
     },
     {
       "file": "instagram/mobile.png",
-      "linesRecognized": 37,
+      "linesRecognized": 29,
       "matches": []
     },
     {
@@ -69,13 +59,13 @@
       "matches": []
     },
     {
-      "file": "mapquest/desktop.jpg",
-      "linesRecognized": 39,
+      "file": "mapbox/desktop.png",
+      "linesRecognized": 44,
       "matches": []
     },
     {
-      "file": "mapquest/mobile.jpg",
-      "linesRecognized": 19,
+      "file": "mapbox/mobile.png",
+      "linesRecognized": 24,
       "matches": []
     },
     {
@@ -90,7 +80,7 @@
     },
     {
       "file": "redfin/desktop.jpg",
-      "linesRecognized": 133,
+      "linesRecognized": 77,
       "matches": []
     },
     {
