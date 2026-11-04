@@ -2,13 +2,21 @@
 
 A website screenshot reference collection by Jason Festa. Captured November 4, 2026.
 
-**71 PNGs · 34 desktop/mobile pairs · 3 mobile-only pages · 37 captured pages across 36 domains.**
+## Advanced 3D
 
-Each website URL opens the live source. **View** opens the screenshot in this repository; **Direct PNG** is a shareable image URL. Source notes beside the images record exact URLs, dimensions, and capture methods.
+**[Open the Advanced 3D gallery](consumer%20apps/Advanced%203D/README.md)** — desktop and mobile hero goldens plus ordered viewport scene sequences from eight interactive websites. The captures preserve loaded 3D objects and complete viewports. Scenes remain separate images; they are not presented as stitched full-page screenshots.
+
+15 hero goldens and 218 scene PNGs are saved. 14 sequences are complete; Ciao Energy mobile is partial and Corn Revolution mobile is unavailable. Their notes explain the limits.
 
 [All 60 requested pages and capture status](capture-status.md) · [Repository home](../README.md)
 
-The three mobile-only pages are Diana Lu, Heist, and Resend. Another 23 pages could not be captured cleanly after retry; their reasons are recorded in the status list.
+## Prior full-page collection
+
+**71 PNGs · 34 desktop/mobile pairs · 3 mobile-only pages · 37 captured pages across 36 domains.** These counts describe the earlier full-page collection below and exclude the Advanced 3D scene set.
+
+Each website URL opens the live source. **View** opens the screenshot in this repository; **Direct PNG** is a shareable image URL. Source notes beside the images record exact URLs, dimensions, and capture methods.
+
+The three mobile-only pages in this collection are Diana Lu, Heist, and Resend. Of the 23 pages omitted from that earlier pass, 8 now have separate Advanced 3D viewport captures; 15 still have no approved capture.
 
 | Website URL | Collection | Desktop | Mobile | Details |
 | --- | --- | --- | --- | --- |

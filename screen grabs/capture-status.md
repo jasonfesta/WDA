@@ -1,21 +1,23 @@
 # Capture status
 
-34 pages have both desktop and mobile captures; 3 have one approved variant; 23 have no approved capture. 71 PNG files are saved. All initially skipped or incomplete pages were retried individually.
+**[Advanced 3D gallery](consumer%20apps/Advanced%203D/README.md)** — 15 desktop/mobile hero goldens and 218 intact viewport scene PNGs. These are ordered scene captures, not stitched full-page exports. 14 sequences are complete, 1 is partial, and 1 mobile variant is unavailable. Individual notes explain the limits.
 
-Only variants that passed visual inspection were saved. A missing variant is not represented by an error page, loader, blank export, or an incomplete composite. Domain Markdown files beside saved images record source URLs, image links, dimensions, and capture-method notes.
+The prior full-page collection contains 71 PNGs: 34 pages have both desktop and mobile captures, and 3 have one approved variant. Separately, 8 of the eight Advanced 3D pages now have viewport captures. Across the 60 requested pages, 45 have saved images and 15 have no approved capture. All initially skipped or incomplete pages were retried individually.
 
-Full-page files show a static capture of the rendered page. Some use real overlapping viewport strips to retain lazy-loaded imagery; animation frames can differ between sections. No generated artwork was added. Approved edge crops and Mucho’s section-spacing reconstruction are disclosed beside their captures.
+Only images that passed visual inspection were saved. A missing variant is not represented by an error page, loader, blank export, or an incomplete composite. Domain Markdown files record source URLs, image links, dimensions, and capture-method notes.
+
+Prior full-page files show a static capture of the rendered page. Some use real overlapping viewport strips to retain lazy-loaded imagery; animation frames can differ between sections. No generated artwork was added. Approved edge crops and Mucho’s section-spacing reconstruction are disclosed beside their captures.
 
 | # | Source | Desktop | Mobile | Status / uncaptured variant reason |
 | --- | --- | --- | --- | --- |
-| 1 | [everswap.com](https://everswap.com) | Not saved | Not saved | Skipped after retry. WebGL context creation fails; remains at the 0% loader. |
-| 2 | [oryzo.ai](https://oryzo.ai) | Not saved | Not saved | Skipped after retry. Graphics engine fails with a null getExtension error; page remains blank. |
-| 3 | [ecologie.fr](https://ecologie.fr/en) | Not saved | Not saved | Skipped after retry. Native export omits the moving forest story; scroll-frame assembly repeats pinned text and cuts the animated landscape. |
-| 4 | [a24.raviklaassens.com](https://a24.raviklaassens.com/) | Not saved | Not saved | Skipped after retry. WebGL initialization fails; the disc gallery remains at its loader. |
-| 5 | [cerebrium.ai](https://cerebrium.ai) | Not saved | Not saved | Skipped after retry. WebGL renderer is disabled; hero artwork stays blank. |
-| 6 | [ciaoenergy.com](https://ciaoenergy.com) | Not saved | Not saved | Skipped after retry. WebGL initialization fails; remains at the 32% loader. |
-| 7 | [thewatch.60fps.fr](https://thewatch.60fps.fr) | Not saved | Not saved | Skipped after retry. WebGL initialization fails; remains on Now loading. |
-| 8 | [cornrevolution.resn.global](https://cornrevolution.resn.global) | Not saved | Not saved | Skipped after retry. The site explicitly reports that this browser is unsupported. |
+| 1 | [everswap.com](https://everswap.com) · [Scene notes](consumer%20apps/Advanced%203D/everswap.com/everswap.com.md) | [Hero: 1440×900](consumer%20apps/Advanced%203D/everswap.com/desktop.png) · 10 scenes | [Hero: 390×844](consumer%20apps/Advanced%203D/everswap.com/mobile.png) · 10 scenes | Available as loaded 3D viewport scenes. Both scene sequences complete. |
+| 2 | [oryzo.ai](https://oryzo.ai) · [Scene notes](consumer%20apps/Advanced%203D/oryzo.ai/oryzo.ai.md) | [Hero: 1440×900](consumer%20apps/Advanced%203D/oryzo.ai/desktop.png) · 32 scenes | [Hero: 390×844](consumer%20apps/Advanced%203D/oryzo.ai/mobile.png) · 32 scenes | Available as loaded 3D viewport scenes. Both scene sequences complete. |
+| 3 | [ecologie.fr](https://ecologie.fr/en) · [Scene notes](consumer%20apps/Advanced%203D/ecologie.fr/ecologie.fr.md) | [Hero: 1440×900](consumer%20apps/Advanced%203D/ecologie.fr/desktop.png) · 10 scenes | [Hero: 390×844](consumer%20apps/Advanced%203D/ecologie.fr/mobile.png) · 12 scenes | Available as loaded 3D viewport scenes. Both scene sequences complete. |
+| 4 | [a24.raviklaassens.com](https://a24.raviklaassens.com/) · [Scene notes](consumer%20apps/Advanced%203D/a24.raviklaassens.com/a24.raviklaassens.com.md) | [Hero: 1440×900](consumer%20apps/Advanced%203D/a24.raviklaassens.com/desktop.png) · 12 scenes | [Hero: 390×844](consumer%20apps/Advanced%203D/a24.raviklaassens.com/mobile.png) · 12 scenes | Available as loaded 3D viewport scenes. Both scene sequences complete. |
+| 5 | [cerebrium.ai](https://cerebrium.ai) · [Scene notes](consumer%20apps/Advanced%203D/cerebrium.ai/cerebrium.ai.md) | [Hero: 1440×900](consumer%20apps/Advanced%203D/cerebrium.ai/desktop.png) · 13 scenes | [Hero: 390×844](consumer%20apps/Advanced%203D/cerebrium.ai/mobile.png) · 13 scenes | Available as loaded 3D viewport scenes. Both scene sequences complete. |
+| 6 | [ciaoenergy.com](https://ciaoenergy.com) · [Scene notes](consumer%20apps/Advanced%203D/ciaoenergy.com/ciaoenergy.com.md) | [Hero: 1440×900](consumer%20apps/Advanced%203D/ciaoenergy.com/desktop.png) · 10 scenes | [Hero: 390×844](consumer%20apps/Advanced%203D/ciaoenergy.com/mobile.png) · 6 scenes | Available as loaded 3D viewport scenes. Partial sequence. Final mobile framing check could not be completed; only approved views are included. The sugar, natural-flavor, and stevia descriptions and FAQ framing are incomplete. |
+| 7 | [thewatch.60fps.fr](https://thewatch.60fps.fr) · [Scene notes](consumer%20apps/Advanced%203D/thewatch.60fps.fr/thewatch.60fps.fr.md) | [Hero: 1440×900](consumer%20apps/Advanced%203D/thewatch.60fps.fr/desktop.png) · 20 scenes | [Hero: 390×844](consumer%20apps/Advanced%203D/thewatch.60fps.fr/mobile.png) · 20 scenes | Available as loaded 3D viewport scenes. Both scene sequences complete. |
+| 8 | [cornrevolution.resn.global](https://cornrevolution.resn.global) · [Scene notes](consumer%20apps/Advanced%203D/cornrevolution.resn.global/cornrevolution.resn.global.md) | [Hero: 1440×900](consumer%20apps/Advanced%203D/cornrevolution.resn.global/desktop.png) · 6 scenes | Not saved — narrow layout crops text | Available as loaded 3D viewport scenes. Mobile unavailable: narrow layout crops text. |
 | 9 | [rameerez.com](https://rameerez.com) · [Notes](consumer%20apps/landing%20page%20portfolio/rameerez.com/rameerez.com.md) | [Saved: 1440×4833](consumer%20apps/landing%20page%20portfolio/rameerez.com/rameerez.com-desktop-full.png) | [Saved: 390×5911](consumer%20apps/landing%20page%20portfolio/rameerez.com/rameerez.com-mobile-full.png) | Complete. |
 | 10 | [evebouffard.com](https://www.evebouffard.com/home/wallpaper) | Not saved | Not saved | Skipped after retry. Wallpaper shader thumbnails are blank; Paper Shaders reports unsupported WebGL. |
 | 11 | [pixelwrld.co](https://pixelwrld.co) · [Notes](consumer%20apps/landing%20page%20portfolio/pixelwrld.co/pixelwrld.co.md) | [Saved: 1440×900](consumer%20apps/landing%20page%20portfolio/pixelwrld.co/pixelwrld.co-desktop-full.png) | [Saved: 390×844](consumer%20apps/landing%20page%20portfolio/pixelwrld.co/pixelwrld.co-mobile-full.png) | Complete. |
@@ -73,6 +75,7 @@ Full-page files show a static capture of the rendered page. Some use real overla
 
 These spellings or domains were resolved before capture:
 
+- #3: The later `.ie` clarification was confirmed as [ecologie.fr/en](https://ecologie.fr/en).
 - #4: `https://a24raviklaassens.com` → [https://a24.raviklaassens.com/](https://a24.raviklaassens.com/).
 - #5: `cerebrium.ia` → [https://cerebrium.ai](https://cerebrium.ai).
 - #10: `https://evebuffard.com/home/wallpaper` → [https://www.evebouffard.com/home/wallpaper](https://www.evebouffard.com/home/wallpaper).
