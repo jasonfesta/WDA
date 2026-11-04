@@ -1,0 +1,142 @@
+{
+  "method": "Apple Vision accurate OCR on overlapping vertical image tiles, plus visual review",
+  "searched_text": [
+    "darwin",
+    "darvvin"
+  ],
+  "matched_files": 0,
+  "capture_files_checked": 26,
+  "limitations": "OCR can miss small text and stylized logos. AI-edited images may change unrelated details. See README for capture-specific limitations.",
+  "results": [
+    {
+      "file": "airbnb/desktop.jpg",
+      "linesRecognized": 97,
+      "matches": []
+    },
+    {
+      "file": "airbnb/mobile.jpg",
+      "linesRecognized": 28,
+      "matches": []
+    },
+    {
+      "file": "facebook/desktop.png",
+      "linesRecognized": 27,
+      "matches": []
+    },
+    {
+      "file": "facebook/mobile.jpg",
+      "linesRecognized": 38,
+      "matches": []
+    },
+    {
+      "file": "furkot/desktop.jpg",
+      "linesRecognized": 33,
+      "matches": []
+    },
+    {
+      "file": "furkot/mobile.jpg",
+      "linesRecognized": 23,
+      "matches": []
+    },
+    {
+      "file": "google-maps/desktop.jpg",
+      "linesRecognized": 145,
+      "matches": []
+    },
+    {
+      "file": "google-maps/mobile.jpg",
+      "linesRecognized": 67,
+      "matches": []
+    },
+    {
+      "file": "instagram/desktop.png",
+      "linesRecognized": 37,
+      "matches": []
+    },
+    {
+      "file": "instagram/mobile.png",
+      "linesRecognized": 37,
+      "matches": []
+    },
+    {
+      "file": "manus/desktop.jpg",
+      "linesRecognized": 24,
+      "matches": []
+    },
+    {
+      "file": "manus/mobile.jpg",
+      "linesRecognized": 32,
+      "matches": []
+    },
+    {
+      "file": "mapquest/desktop.jpg",
+      "linesRecognized": 39,
+      "matches": []
+    },
+    {
+      "file": "mapquest/mobile.jpg",
+      "linesRecognized": 19,
+      "matches": []
+    },
+    {
+      "file": "meta-ai/desktop.jpg",
+      "linesRecognized": 17,
+      "matches": []
+    },
+    {
+      "file": "meta-ai/mobile.jpg",
+      "linesRecognized": 7,
+      "matches": []
+    },
+    {
+      "file": "redfin/desktop.jpg",
+      "linesRecognized": 133,
+      "matches": []
+    },
+    {
+      "file": "redfin/mobile.jpg",
+      "linesRecognized": 50,
+      "matches": []
+    },
+    {
+      "file": "tiktok/desktop.jpg",
+      "linesRecognized": 139,
+      "matches": []
+    },
+    {
+      "file": "tiktok/mobile.jpg",
+      "linesRecognized": 90,
+      "matches": []
+    },
+    {
+      "file": "wanderlog/desktop.jpg",
+      "linesRecognized": 166,
+      "matches": []
+    },
+    {
+      "file": "wanderlog/mobile.jpg",
+      "linesRecognized": 92,
+      "matches": []
+    },
+    {
+      "file": "x/desktop.jpg",
+      "linesRecognized": 109,
+      "matches": []
+    },
+    {
+      "file": "x/mobile.jpg",
+      "linesRecognized": 35,
+      "matches": []
+    },
+    {
+      "file": "youtube/desktop.jpg",
+      "linesRecognized": 112,
+      "matches": []
+    },
+    {
+      "file": "youtube/mobile.jpg",
+      "linesRecognized": 64,
+      "matches": []
+    }
+  ]
+}
