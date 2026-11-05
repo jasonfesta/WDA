@@ -1,0 +1,42 @@
+{
+  "app": "VEED",
+  "scope": "Primary editor sections only.",
+  "desktop": {
+    "status": "complete",
+    "capture_count": 10,
+    "primary_navigation": [
+      "AI Tools",
+      "Video",
+      "Audio",
+      "Image",
+      "Subtitles",
+      "Text",
+      "Elements",
+      "Script",
+      "Brand Kit",
+      "Settings"
+    ]
+  },
+  "mobile": {
+    "status": "complete",
+    "capture_count": 10,
+    "viewport": "390x844",
+    "primary_navigation": [
+      "AI Tools",
+      "Video",
+      "Audio",
+      "Image",
+      "Subtitles",
+      "Text",
+      "Elements",
+      "Script",
+      "Brand Kit",
+      "Settings"
+    ],
+    "notes": "Mobile panels use bottom-sheet drawers; AI Tools shows a tool navigation strip."
+  },
+  "limitations": [
+    "Subtitles and Script show no-audio states for this existing source clip."
+  ],
+  "actions": "No timeline, content or settings changed; no upload, generation, export or publication."
+}

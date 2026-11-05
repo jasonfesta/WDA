@@ -1,0 +1,9 @@
+{
+  "tool": "built-in image_gen",
+  "edits": [
+    {
+      "file": "youtube/desktop/05-your-channel.png",
+      "prompt": "Use case: text-localization. Edit target: real YouTube desktop channel screenshot. Change only every visible Darwin/DARWIN reference to Studio/STUDIO. In the blue channel URL replace ads.darwin.so/r/ytethan with ads.studio.example/r/ytethan. In the fifth video thumbnail change Comment ‘DARWIN’ for the link to Comment ‘STUDIO’ for the link, preserving the text style. Replace any other Darwin in a title if visible with Studio. Preserve complete screenshot dimensions/aspect ratio, all photos/people, layouts, sidebar, other wording, colors and UI. Do not crop or add borders. Output remains an authentic-looking UI reference; only requested branding cleanup."
+    }
+  ]
+}

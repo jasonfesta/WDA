@@ -1,0 +1,52 @@
+{
+  "app": "Instagram",
+  "desktop": {
+    "status": "captured-and-reviewed",
+    "primary_navigation": [
+      "Home",
+      "Reels",
+      "Messages",
+      "Search / Explore",
+      "Notifications",
+      "Professional dashboard",
+      "Profile"
+    ],
+    "compose_flow": [
+      "Media selection",
+      "Photo caption and pre-share review"
+    ],
+    "not_performed": [
+      "Share/publication",
+      "Live broadcast",
+      "Ad purchase",
+      "Changes to existing content or account settings"
+    ],
+    "notes": "Captured at 1800x1004 CSS viewport; Home and Explore use finite full-page captures. AI-anonymized images may differ in incidental detail. Authorized sample image draft was discarded without sharing.",
+    "capture_count": 9
+  },
+  "mobile": {
+    "status": "captured-and-reviewed",
+    "capture_count": 9,
+    "viewport": "390x844",
+    "primary_navigation": [
+      "Home",
+      "Reels",
+      "Search / Explore",
+      "Messages",
+      "Notifications",
+      "Professional dashboard",
+      "Profile"
+    ],
+    "compose_flow": [
+      "Create menu",
+      "Media selection"
+    ],
+    "limitations": [
+      "Messages, Professional dashboard and Profile render with clipped or awkwardly wrapped content at390px in Chrome responsive web. Captures preserve the actual behavior.",
+      "Some Explore video cells remained unloaded.",
+      "Mobile compose limited to menu and picker per final reduced scope; desktop includes authorized sample image pre-share review."
+    ],
+    "notes": "No mobile media uploaded; no publication."
+  },
+  "scope": "Primary sections and up to two compose images per device, per final user instruction."
+}

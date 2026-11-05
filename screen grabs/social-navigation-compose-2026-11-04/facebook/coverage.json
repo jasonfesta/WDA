@@ -1,0 +1,221 @@
+{
+  "app": "Facebook",
+  "desktop": {
+    "status": "captured",
+    "sections": [
+      {
+        "name": "Home",
+        "file": "facebook/desktop/01-home.png",
+        "status": "captured",
+        "notes": "AI cleanup replaced account shortcut with Studio Page and a neutral S avatar; unrelated details may differ."
+      },
+      {
+        "name": "Friends",
+        "file": "facebook/desktop/03-friends.jpg",
+        "status": "captured",
+        "notes": ""
+      },
+      {
+        "name": "Reels",
+        "file": "facebook/desktop/04-reels.jpg",
+        "status": "captured",
+        "notes": ""
+      },
+      {
+        "name": "Marketplace",
+        "file": "facebook/desktop/05-marketplace.jpg",
+        "status": "captured",
+        "notes": ""
+      },
+      {
+        "name": "Gaming",
+        "file": "facebook/desktop/06-gaming.jpg",
+        "status": "captured",
+        "notes": ""
+      },
+      {
+        "name": "Memories",
+        "file": "facebook/desktop/07-memories.jpg",
+        "status": "captured",
+        "notes": ""
+      },
+      {
+        "name": "Saved",
+        "file": "facebook/desktop/08-saved.jpg",
+        "status": "captured",
+        "notes": ""
+      },
+      {
+        "name": "Groups",
+        "file": "facebook/desktop/09-groups.jpg",
+        "status": "captured",
+        "notes": ""
+      },
+      {
+        "name": "Feeds",
+        "file": "facebook/desktop/10-feeds.jpg",
+        "status": "captured",
+        "notes": ""
+      },
+      {
+        "name": "Events",
+        "file": "facebook/desktop/11-events.jpg",
+        "status": "captured",
+        "notes": ""
+      },
+      {
+        "name": "Profile",
+        "file": "facebook/desktop/18-profile.jpg",
+        "status": "captured",
+        "notes": ""
+      }
+    ],
+    "compose": {
+      "post": "Two requested states: empty and sample image prepublish review. Nothing published; test draft discarded."
+    },
+    "primary_navigation": [
+      "Home",
+      "Friends",
+      "Reels",
+      "Marketplace",
+      "Gaming",
+      "Memories",
+      "Saved",
+      "Groups",
+      "Feeds",
+      "Events",
+      "Profile"
+    ]
+  },
+  "mobile": {
+    "status": "captured-with-responsive-web-limitations",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "sections": [
+      {
+        "name": "Home",
+        "file": "facebook/mobile/01-home.jpg",
+        "status": "captured",
+        "notes": ""
+      },
+      {
+        "name": "Friends \u00b7 responsive navigation",
+        "file": "facebook/mobile/03-friends.jpg",
+        "status": "captured-limited-layout",
+        "notes": "Facebook desktop web at390px presents its Friends navigation; recommendation pane remains outside narrow layout."
+      },
+      {
+        "name": "Reels",
+        "file": "facebook/mobile/04-reels.jpg",
+        "status": "captured",
+        "notes": "Actual Chrome narrow web layout; video scales within desktop web player."
+      },
+      {
+        "name": "Marketplace",
+        "file": "facebook/mobile/05-marketplace.jpg",
+        "status": "captured",
+        "notes": ""
+      },
+      {
+        "name": "Gaming",
+        "file": "facebook/mobile/06-gaming.jpg",
+        "status": "captured",
+        "notes": ""
+      },
+      {
+        "name": "Memories \u00b7 responsive navigation",
+        "file": "facebook/mobile/07-memories.jpg",
+        "status": "captured-limited-layout",
+        "notes": "At390px Facebook displays the section sidebar; empty-state content remains outside narrow layout."
+      },
+      {
+        "name": "Saved \u00b7 responsive navigation",
+        "file": "facebook/mobile/08-saved.jpg",
+        "status": "captured-limited-layout",
+        "notes": "At390px Facebook displays the section sidebar; empty-state content remains outside narrow layout."
+      },
+      {
+        "name": "Groups \u00b7 responsive navigation",
+        "file": "facebook/mobile/09-groups.jpg",
+        "status": "captured-limited-layout",
+        "notes": "At390px Facebook displays the section sidebar; content pane extends beyond viewport."
+      },
+      {
+        "name": "Feeds \u00b7 responsive navigation",
+        "file": "facebook/mobile/10-feeds.jpg",
+        "status": "captured-limited-layout",
+        "notes": "At390px Facebook displays the section sidebar; empty-state content remains outside narrow layout."
+      },
+      {
+        "name": "Events \u00b7 responsive navigation",
+        "file": "facebook/mobile/11-events.jpg",
+        "status": "captured-limited-layout",
+        "notes": "At390px Facebook displays the section sidebar; event listings remain outside narrow layout."
+      },
+      {
+        "name": "Profile",
+        "file": "facebook/mobile/18-profile.jpg",
+        "status": "captured",
+        "notes": ""
+      }
+    ],
+    "compose": {
+      "post": "Two states: empty composer and synthetic sample text prepublish review. Nothing published; new test draft discarded. Desktop includes authorized sample image."
+    },
+    "limitations": "Chrome narrow responsive web. m.facebook.com redirected to www.facebook.com. Several section layouts show their sidebar while content extends beyond viewport; captured honestly and labeled.",
+    "primary_navigation": [
+      "Home",
+      "Friends",
+      "Reels",
+      "Marketplace",
+      "Gaming",
+      "Memories",
+      "Saved",
+      "Groups",
+      "Feeds",
+      "Events",
+      "Profile"
+    ]
+  },
+  "excluded_destinations": [
+    {
+      "name": "Meta AI",
+      "status": "outside-social-scope",
+      "notes": "Shown in captured menu. Separate product, advertising, payment/account service, or personalized shortcut; not followed."
+    },
+    {
+      "name": "Ads Manager",
+      "status": "outside-social-scope",
+      "notes": "Shown in captured menu. Separate product, advertising, payment/account service, or personalized shortcut; not followed."
+    },
+    {
+      "name": "Orders and payments",
+      "status": "outside-social-scope",
+      "notes": "Shown in captured menu. Separate product, advertising, payment/account service, or personalized shortcut; not followed."
+    },
+    {
+      "name": "Meta Quest 3S",
+      "status": "outside-social-scope",
+      "notes": "Shown in captured menu. Separate product, advertising, payment/account service, or personalized shortcut; not followed."
+    },
+    {
+      "name": "Ray-Ban Meta",
+      "status": "outside-social-scope",
+      "notes": "Shown in captured menu. Separate product, advertising, payment/account service, or personalized shortcut; not followed."
+    },
+    {
+      "name": "WhatsApp",
+      "status": "outside-social-scope",
+      "notes": "Shown in captured menu. Separate product, advertising, payment/account service, or personalized shortcut; not followed."
+    },
+    {
+      "name": "Darwin Page shortcut",
+      "status": "outside-social-scope",
+      "notes": "Shown in captured menu. Separate product, advertising, payment/account service, or personalized shortcut; not followed."
+    }
+  ],
+  "format": "Chrome desktop and390x844responsive web captures; not native mobile apps.",
+  "scope": "User reduced request to primary sections and one or two compose images per device. Expanded menus and secondary flow states archived outside deliverables."
+}

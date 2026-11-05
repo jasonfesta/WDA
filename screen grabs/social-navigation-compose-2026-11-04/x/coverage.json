@@ -1,0 +1,63 @@
+{
+  "app": "X",
+  "total_captures": 28,
+  "scope": "Primary navigation and at most two compose images per device, per final user request.",
+  "format": "Chrome desktop and 390 \u00d7 844 responsive web; mobile uses the web layout, not the native mobile app.",
+  "excluded": [
+    "Ads",
+    "Business",
+    "Creator Studio",
+    "Settings and privacy",
+    "Secondary Lists and Communities destinations",
+    "Space creation"
+  ],
+  "publication": "No posts sent. Newly created sample text and photo drafts discarded. No existing draft edited.",
+  "notes": [
+    "Chat captures initial inbox shell only; no conversations opened.",
+    "Money captures availability/app handoff only; no financial action.",
+    "Desktop Grok may show initial consent; mobile landing rendered without accepting new terms."
+  ],
+  "desktop": {
+    "capture_count": 14,
+    "primary_sections": [
+      "More menu",
+      "Explore",
+      "Notifications",
+      "Chat",
+      "Calls",
+      "Grok",
+      "Premium",
+      "Money",
+      "History",
+      "Articles",
+      "Profile",
+      "Home"
+    ],
+    "section_count": 12,
+    "compose_count": 2
+  },
+  "mobile": {
+    "capture_count": 14,
+    "primary_sections": [
+      "Home",
+      "Explore",
+      "Notifications",
+      "Chat",
+      "Calls",
+      "Grok",
+      "Premium",
+      "Money",
+      "History",
+      "Articles",
+      "Profile",
+      "More menu"
+    ],
+    "section_count": 12,
+    "compose_count": 2,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "qa": "All 14 captures checked at 390 \u00d7 844 before AI cleanup. Chat and Profile account references removed with the AI image editor."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "tool": "image_gen.imagegen",
+  "cleanup": "Use case: precise-object-edit. Edit target: the supplied real Instagram screenshot. Anonymize ONLY this account's branding. Replace every visible Darwin name with Studio, joindarwin with joinstudio, and joindarwin.ai with studio.example. Replace the small blue circular avatar containing a white diamond (in the left navigation and, if present, account profile or note avatar) with a gray circle containing a white S. Preserve screenshot width-to-height ratio, all navigation, text, content, photos, columns, and page length exactly. No added margins, framing, borders, cropping, omitted content or invented UI. Do not change any other account name or brand. This is a screenshot cleanup, not a redesign.",
+  "section_cleanup": "Use case: precise-object-edit. Edit target: the supplied real Instagram screenshot. Anonymize ONLY this account's branding. Replace every visible Darwin name with Studio, joindarwin with joinstudio, and joindarwin.ai with studio.example. Replace the small blue circular avatar containing a white diamond (in the left navigation and, if present, account profile or note avatar) with a gray circle containing a white S. Preserve screenshot width-to-height ratio, all navigation, text, content, photos, columns, and page length exactly. No added margins, framing, borders, cropping, omitted content or invented UI. Do not change any other account name or brand. This is a screenshot cleanup, not a redesign. Keep all Meta, Instagram, AI Studio, and third-party brand names unchanged. Only Darwin account branding should change, never the product UI brand names.",
+  "compose_cleanup": "undefined Preserve the compose modal and sample media exactly, including 'SAMPLE DRAFT', 'UI capture reference', 'Not for publication', and all step titles, button labels, inputs, switches, filter names and controls. Also remove the account's dim blue diamond avatar behind the modal by substituting a dim gray S avatar in the same place.",
+  "notes": "AI edits anonymize account branding. Original raw screenshots kept outside repository. Generated outputs are visually reviewed and OCR-checked, but AI may alter incidental detail.",
+  "delivered_files": [
+    "instagram/desktop/01-home.png",
+    "instagram/desktop/02-reels.png",
+    "instagram/desktop/03-explore.png",
+    "instagram/desktop/05-messages.png",
+    "instagram/desktop/07-dashboard.png",
+    "instagram/desktop/08-profile.png",
+    "instagram/desktop/compose-02-media-picker.png",
+    "instagram/desktop/compose-07-caption.png",
+    "instagram/mobile/01-home.png",
+    "instagram/mobile/02-reels.png",
+    "instagram/mobile/03-explore.png",
+    "instagram/mobile/05-messages.png",
+    "instagram/mobile/06-notifications.png",
+    "instagram/mobile/07-dashboard.png",
+    "instagram/mobile/08-profile.png",
+    "instagram/mobile/compose-01-create-menu.png",
+    "instagram/mobile/compose-02-media-picker.png"
+  ]
+}

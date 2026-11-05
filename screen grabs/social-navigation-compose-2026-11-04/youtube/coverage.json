@@ -1,0 +1,165 @@
+{
+  "app": "YouTube",
+  "desktop": [
+    {
+      "section": "Home",
+      "status": "captured",
+      "files": [
+        "youtube/desktop/01-home.jpg"
+      ]
+    },
+    {
+      "section": "Shorts",
+      "status": "captured",
+      "files": [
+        "youtube/desktop/02-shorts.jpg"
+      ]
+    },
+    {
+      "section": "Subscriptions",
+      "status": "captured",
+      "files": [
+        "youtube/desktop/03-subscriptions.jpg"
+      ]
+    },
+    {
+      "section": "You",
+      "status": "captured",
+      "files": [
+        "youtube/desktop/04-you.jpg"
+      ]
+    },
+    {
+      "section": "Your channel",
+      "status": "captured",
+      "files": [
+        "youtube/desktop/05-your-channel.png"
+      ]
+    },
+    {
+      "section": "History",
+      "status": "captured",
+      "files": [
+        "youtube/desktop/06-history.jpg"
+      ]
+    },
+    {
+      "section": "Playlists",
+      "status": "captured",
+      "files": [
+        "youtube/desktop/07-playlists.jpg"
+      ]
+    },
+    {
+      "section": "Watch later",
+      "status": "captured",
+      "files": [
+        "youtube/desktop/08-watch-later.jpg"
+      ]
+    },
+    {
+      "section": "Liked videos",
+      "status": "captured",
+      "files": [
+        "youtube/desktop/09-liked-videos.jpg"
+      ]
+    },
+    {
+      "section": "Downloads",
+      "status": "captured",
+      "files": [
+        "youtube/desktop/11-downloads.jpg"
+      ]
+    },
+    {
+      "section": "Create",
+      "status": "captured",
+      "files": [
+        "youtube/desktop/compose-01-create-menu.jpg",
+        "youtube/desktop/compose-09-final-review.jpg"
+      ]
+    }
+  ],
+  "mobile": [
+    {
+      "section": "Home",
+      "status": "captured",
+      "files": [
+        "youtube/mobile/01-home.jpg"
+      ]
+    },
+    {
+      "section": "Shorts",
+      "status": "captured",
+      "files": [
+        "youtube/mobile/02-shorts.jpg"
+      ]
+    },
+    {
+      "section": "Subscriptions",
+      "status": "captured",
+      "files": [
+        "youtube/mobile/03-subscriptions.jpg"
+      ]
+    },
+    {
+      "section": "You",
+      "status": "captured",
+      "files": [
+        "youtube/mobile/04-you.jpg"
+      ]
+    },
+    {
+      "section": "History",
+      "status": "captured",
+      "files": [
+        "youtube/mobile/06-history.jpg"
+      ]
+    },
+    {
+      "section": "Playlists",
+      "status": "captured",
+      "files": [
+        "youtube/mobile/07-playlists.jpg"
+      ]
+    },
+    {
+      "section": "Watch later",
+      "status": "captured",
+      "files": [
+        "youtube/mobile/08-watch-later.jpg"
+      ]
+    },
+    {
+      "section": "Liked videos",
+      "status": "captured",
+      "files": [
+        "youtube/mobile/09-liked-videos.jpg"
+      ]
+    },
+    {
+      "section": "Downloads",
+      "status": "captured",
+      "files": [
+        "youtube/mobile/11-downloads.jpg"
+      ]
+    },
+    {
+      "section": "Create",
+      "status": "captured",
+      "files": [
+        "youtube/mobile/compose-01-create-menu.jpg",
+        "youtube/mobile/compose-02-text-draft.jpg"
+      ]
+    }
+  ],
+  "notes": [
+    "Subscription channel shortcuts and links to separate YouTube TV/Music/Kids products are not primary sections of the YouTube application.",
+    "Image community post demonstrated with user-authorized sample, without Post or Schedule. Video upload stops at Select files because only image sample was authorized.",
+    "Scope reduced by user: primary navigation sections and at most two compose images per device. Extra exploratory captures archived outside collection.",
+    "Mobile captures are responsive Chrome web views, not native apps. Media draft demonstrated on desktop only after user reduced scope. Sample drafts canceled/discarded without publishing.",
+    "Mobile uses narrow responsive viewport; existing YouTube 90% site zoom yields 433x938 CSS pixels. Core mobile sections and library destinations captured; channel profile omitted from reduced mobile scope.",
+    "Screenshot export dimensions reflect Chrome site zoom: YouTube mobile481x1042, with433x938 CSS viewport."
+  ],
+  "draft_cleanup": "New sample drafts canceled/discarded through normal UI. No publishing, scheduling, or saved draft action."
+}

@@ -1,0 +1,198 @@
+{
+  "app": "TikTok",
+  "desktop": [
+    {
+      "section": "For You",
+      "status": "captured",
+      "files": [
+        "tiktok/desktop/01-for-you.jpg"
+      ]
+    },
+    {
+      "section": "Shop",
+      "status": "captured",
+      "files": [
+        "tiktok/desktop/02-shop.jpg"
+      ]
+    },
+    {
+      "section": "Explore",
+      "status": "captured",
+      "files": [
+        "tiktok/desktop/03-explore.jpg"
+      ]
+    },
+    {
+      "section": "Following",
+      "status": "captured",
+      "files": [
+        "tiktok/desktop/04-following.jpg"
+      ]
+    },
+    {
+      "section": "Friends",
+      "status": "captured",
+      "files": [
+        "tiktok/desktop/05-friends.jpg"
+      ]
+    },
+    {
+      "section": "Short dramas",
+      "status": "captured",
+      "files": [
+        "tiktok/desktop/06-short-dramas.jpg"
+      ]
+    },
+    {
+      "section": "LIVE",
+      "status": "captured",
+      "files": [
+        "tiktok/desktop/07-live.jpg"
+      ]
+    },
+    {
+      "section": "Messages",
+      "status": "captured",
+      "files": [
+        "tiktok/desktop/08-messages.jpg"
+      ]
+    },
+    {
+      "section": "Activity",
+      "status": "captured",
+      "files": [
+        "tiktok/desktop/09-activity.jpg"
+      ]
+    },
+    {
+      "section": "Upload",
+      "status": "captured",
+      "files": [
+        "tiktok/desktop/compose-01-video-upload.jpg",
+        "tiktok/desktop/compose-08-final-review.jpg"
+      ]
+    },
+    {
+      "section": "Profile",
+      "status": "captured",
+      "files": [
+        "tiktok/desktop/11-profile.jpg"
+      ]
+    },
+    {
+      "section": "More",
+      "status": "captured",
+      "files": [
+        "tiktok/desktop/12-more.jpg"
+      ]
+    },
+    {
+      "section": "Search",
+      "status": "captured",
+      "files": [
+        "tiktok/desktop/13-search.jpg"
+      ]
+    }
+  ],
+  "mobile": [
+    {
+      "section": "For You",
+      "status": "captured",
+      "files": [
+        "tiktok/mobile/01-for-you.jpg"
+      ]
+    },
+    {
+      "section": "Explore",
+      "status": "captured",
+      "files": [
+        "tiktok/mobile/03-explore.jpg"
+      ]
+    },
+    {
+      "section": "Following",
+      "status": "captured",
+      "files": [
+        "tiktok/mobile/04-following.jpg"
+      ]
+    },
+    {
+      "section": "Friends",
+      "status": "captured",
+      "files": [
+        "tiktok/mobile/05-friends.jpg"
+      ]
+    },
+    {
+      "section": "Short dramas",
+      "status": "captured",
+      "files": [
+        "tiktok/mobile/06-short-dramas.jpg"
+      ]
+    },
+    {
+      "section": "LIVE",
+      "status": "captured",
+      "files": [
+        "tiktok/mobile/07-live.jpg"
+      ]
+    },
+    {
+      "section": "Profile",
+      "status": "captured",
+      "files": [
+        "tiktok/mobile/11-profile.jpg"
+      ]
+    },
+    {
+      "section": "Messages",
+      "status": "captured",
+      "files": [
+        "tiktok/mobile/08-messages.jpg"
+      ]
+    },
+    {
+      "section": "Activity",
+      "status": "captured",
+      "files": [
+        "tiktok/mobile/09-activity.jpg"
+      ]
+    },
+    {
+      "section": "More",
+      "status": "captured",
+      "files": [
+        "tiktok/mobile/12-more.jpg"
+      ]
+    },
+    {
+      "section": "Search",
+      "status": "captured",
+      "files": [
+        "tiktok/mobile/13-search.jpg"
+      ]
+    },
+    {
+      "section": "Shop",
+      "status": "captured",
+      "files": [
+        "tiktok/mobile/02-shop.jpg"
+      ]
+    },
+    {
+      "section": "Upload",
+      "status": "captured-with-layout-limitation",
+      "files": [
+        "tiktok/mobile/compose-01-photo-upload.jpg"
+      ],
+      "reason": "TikTok Studio upload layout overflows the390px viewport; photo editing not repeated."
+    }
+  ],
+  "notes": [
+    "Photo compose uses user-authorized sample-draft.jpg. Video upload stops before media selection. Never posted.",
+    "Scope reduced by user: primary navigation sections and at most two compose images per device. Extra exploratory captures archived outside collection.",
+    "Mobile captures are responsive Chrome web views, not native apps. Media draft demonstrated on desktop only after user reduced scope. Sample drafts canceled/discarded without publishing.",
+    "Screenshot export dimensions reflect Chrome site zoom: TikTok main views382x827; Shop and Studio390x844."
+  ],
+  "draft_cleanup": "New sample drafts canceled/discarded through normal UI. No publishing, scheduling, or saved draft action."
+}

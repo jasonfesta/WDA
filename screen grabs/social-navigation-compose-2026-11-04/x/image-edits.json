@@ -1,0 +1,21 @@
+{
+  "tool": "built-in image_gen",
+  "edits": [
+    {
+      "file": "x/desktop/04-chat.png",
+      "prompt": "Edit target: this real X desktop inbox screenshot. Change ONLY the word 'darwin' in the preview of the conversation 'Quantradin | Learn Agentic Trading' to 'studio'. Keep the preview reading 'thanks, I'll read the studio docs this ...'. Preserve every other pixel, all names, icons, layout, text, colors and dimensions. No cropping, no new margins, no unrelated changes. Screenshot reference, precise text replacement."
+    },
+    {
+      "file": "x/desktop/11-profile.png",
+      "prompt": "Edit target: this real X desktop profile screenshot. Change ONLY the white word 'Darwin' in the upper-left tile of the pinned video thumbnail, around x640 y650, to 'Studio', matching white type and size. Preserve the entire desktop screenshot and all other pixels, photos, names, icons, text, layout and proportions. Keep every section and exact framing, no extra margins, no crop. No Darwin reference must remain."
+    },
+    {
+      "file": "x/mobile/04-chat.png",
+      "prompt": "Edit target: this exact narrow mobile X chat screenshot, 390 by 844 aspect ratio. Change ONLY the lowercase word 'darwin' in the Quantradin conversation preview near y680 to 'studio'. Keep the rest of that preview exactly as shown: 'thanks, I'll read the studio docs th...' with truncation at the right edge. Preserve all other text, names, profile photos, icons, colors, spacings and exact narrow mobile framing. No cropping, no extra margins, no layout changes, no added content."
+    },
+    {
+      "file": "x/mobile/11-profile.png",
+      "prompt": "Precise screenshot text edit. Edit target: this real mobile X profile screenshot, exactly 390:844 portrait aspect ratio. Replace ONLY the word 'Darwin' in white on the upper-left tile of the pinned video thumbnail (near x148 y520) with 'Studio', matching its type style and size. Preserve every other text, name, icon, photo, thumbnail tile, content, color and the exact narrow mobile framing. No extra margin, no crop, no invented content. No Darwin brand word must remain."
+    }
+  ]
+}

@@ -1,0 +1,866 @@
+{
+  "checked_at": "2026-11-04",
+  "image_count": 142,
+  "checks": [
+    "All manifest files open as images",
+    "SHA-256 recorded",
+    "At most two compose captures per application and device",
+    "Every application has desktop and mobile coverage",
+    "OCR found no Darwin or Darvvin text in final images"
+  ],
+  "notes": "Mobile means responsive web, not native apps. Per-image notes describe site limitations. AI edits are labeled. OCR can miss small or stylized text; agent visual checks supplement OCR.",
+  "images": [
+    {
+      "file": "x/desktop/12-more-menu.jpg",
+      "linesRecognized": 39,
+      "matches": [],
+      "sha256": "aab73469670d037dbe136c283d18c561b37a884ac0eb684bed0631f5dbee177b"
+    },
+    {
+      "file": "x/desktop/02-explore.jpg",
+      "linesRecognized": 70,
+      "matches": [],
+      "sha256": "1ee8b7f55c11b3d3802d753d1aef0e683d15a6065e9283896014a6beb07486de"
+    },
+    {
+      "file": "x/desktop/03-notifications.jpg",
+      "linesRecognized": 58,
+      "matches": [],
+      "sha256": "064d06c1af31bf2271608219b965d3e3200acc140b234f062a3171d1a5e26e44"
+    },
+    {
+      "file": "x/desktop/04-chat.png",
+      "linesRecognized": 31,
+      "matches": [],
+      "sha256": "bd56a02dc5069d150e303c5301574eb46cca4f022b0bc376d69b1b02d7c10a15"
+    },
+    {
+      "file": "x/desktop/05-calls.jpg",
+      "linesRecognized": 26,
+      "matches": [],
+      "sha256": "2a2a217c0079e08a84b4a35a7661c8ae8b90989e10b2ccd354f32eeab65322ce"
+    },
+    {
+      "file": "x/desktop/06-grok.jpg",
+      "linesRecognized": 32,
+      "matches": [],
+      "sha256": "c2210b96ff18b3c8ad1e9d19f932fc9008a91012c81a3cd2a97bb756e961cd59"
+    },
+    {
+      "file": "x/desktop/07-premium.jpg",
+      "linesRecognized": 53,
+      "matches": [],
+      "sha256": "ef3bad93e39f0e9f29d3ef64264e1ea371e6d41e59ba6eaddcc806dfdecf865c"
+    },
+    {
+      "file": "x/desktop/08-money.jpg",
+      "linesRecognized": 22,
+      "matches": [],
+      "sha256": "a00195cd9a6066d4200b8a6a85c2a2de362d0b9531070af3ea426d0be6090b5e"
+    },
+    {
+      "file": "x/desktop/09-history.jpg",
+      "linesRecognized": 60,
+      "matches": [],
+      "sha256": "4106f327893161c1ea04a99f781ba7dc959f2cd163dac383a114d3a13ba3a940"
+    },
+    {
+      "file": "x/desktop/10-articles.jpg",
+      "linesRecognized": 29,
+      "matches": [],
+      "sha256": "6ab1482455788df38f690ac7313237315384f838b5f1a71ba9c82f347af198e8"
+    },
+    {
+      "file": "x/desktop/11-profile.png",
+      "linesRecognized": 65,
+      "matches": [],
+      "sha256": "ad7b6533a963d307198e441822f78bb55d6676703ded9fade3ee5f0b6ab61b5a"
+    },
+    {
+      "file": "x/desktop/compose-01-empty.jpg",
+      "linesRecognized": 66,
+      "matches": [],
+      "sha256": "7be66e0cf2675622ad136737bd2e85975fb52fe75034352398e59938b7b93603"
+    },
+    {
+      "file": "x/desktop/compose-10-review.jpg",
+      "linesRecognized": 61,
+      "matches": [],
+      "sha256": "d5125ebbeeba75e18a9f69e7eab4bccb1b1eeb77b7622417ca18bcebb1385f65"
+    },
+    {
+      "file": "x/desktop/01-home.jpg",
+      "linesRecognized": 73,
+      "matches": [],
+      "sha256": "3b2be72e92ccb122d526bc5e53885fd0449f29c67c5f01818bacc25b85aacd4c"
+    },
+    {
+      "file": "x/mobile/01-home.jpg",
+      "linesRecognized": 33,
+      "matches": [],
+      "sha256": "77b101abe5df73c0be7950c4c44343b78f018591c3ca0d24e64f166de1e18963"
+    },
+    {
+      "file": "x/mobile/compose-01-empty.jpg",
+      "linesRecognized": 6,
+      "matches": [],
+      "sha256": "19cd8984a60b8fbfcb9e23296d532c1b1e8d146c5f5ca27a633ac20ff3b0db7f"
+    },
+    {
+      "file": "x/mobile/compose-02-review.jpg",
+      "linesRecognized": 8,
+      "matches": [],
+      "sha256": "985eb3716c0ae8274d812c2249231ec8160111c1b633546a1f0ac262bc0801e9"
+    },
+    {
+      "file": "x/mobile/02-explore.jpg",
+      "linesRecognized": 39,
+      "matches": [],
+      "sha256": "7c7166db6358cc1d4ce7a750a4d50be69ac5270b3efb585cf9df4ce2e127e706"
+    },
+    {
+      "file": "x/mobile/03-notifications.jpg",
+      "linesRecognized": 22,
+      "matches": [],
+      "sha256": "61a85c0bc1e6a329cb4b1a3039084fbffb8d06072f9c2a4b88133dca516dce69"
+    },
+    {
+      "file": "x/mobile/04-chat.png",
+      "linesRecognized": 26,
+      "matches": [],
+      "sha256": "fd5b6fdc77e0f1f991b38329cf11a9b23b386630bd6b7f89a1e645961b9a3718"
+    },
+    {
+      "file": "x/mobile/05-calls.jpg",
+      "linesRecognized": 12,
+      "matches": [],
+      "sha256": "158d390aefa7305fadadcb9ce923dfffef1252f7642fd477cd0940f545a2deb4"
+    },
+    {
+      "file": "x/mobile/06-grok.jpg",
+      "linesRecognized": 14,
+      "matches": [],
+      "sha256": "b9d0f2e5bb5261c14c9e0eeb45c8ecc820328ba66b46a1b104355f6c0bb7204f"
+    },
+    {
+      "file": "x/mobile/07-premium.jpg",
+      "linesRecognized": 21,
+      "matches": [],
+      "sha256": "935dbaba8b22a37067c420a7b68d56f3457db631da0afee1b7ee17178c87fbf0"
+    },
+    {
+      "file": "x/mobile/08-money.jpg",
+      "linesRecognized": 6,
+      "matches": [],
+      "sha256": "2276b529e92f76035b7e8dc8d103051c522e809fcc9b7f4e3e432e041fce5b13"
+    },
+    {
+      "file": "x/mobile/09-history.jpg",
+      "linesRecognized": 22,
+      "matches": [],
+      "sha256": "23987f189c01627481f87e8bda36cd65770c18b467eb6c2091b1f6f74ff142d5"
+    },
+    {
+      "file": "x/mobile/10-articles.jpg",
+      "linesRecognized": 12,
+      "matches": [],
+      "sha256": "a0b6cf1d3c28e198f2995d080133a0ad7fa31ae42037a27094998c5b7815d04b"
+    },
+    {
+      "file": "x/mobile/11-profile.png",
+      "linesRecognized": 38,
+      "matches": [],
+      "sha256": "385d9d14d4c7fc98d5fe8ae7b389ffd624dc048f2206909b8b804d75e23b34c2"
+    },
+    {
+      "file": "x/mobile/12-more-menu.jpg",
+      "linesRecognized": 15,
+      "matches": [],
+      "sha256": "3de7f57d4aa1f04f93d7009be36517d2c99765ad73a94f082d05aee3d15fc45a"
+    },
+    {
+      "file": "facebook/desktop/01-home.png",
+      "linesRecognized": 37,
+      "matches": [],
+      "sha256": "4f28b063a79666ee16931a4870ffc5be6d584bf98acc76e2654842247a4f3077"
+    },
+    {
+      "file": "facebook/desktop/03-friends.jpg",
+      "linesRecognized": 52,
+      "matches": [],
+      "sha256": "a5844ca3d356a0a9031c8a1fc20db33928f349a2e239964659f65daa5e311ff9"
+    },
+    {
+      "file": "facebook/desktop/04-reels.jpg",
+      "linesRecognized": 9,
+      "matches": [],
+      "sha256": "d97111a20e58bf81768ad3f124205d1bd00bccfab49099cc1ae21432a0287b8e"
+    },
+    {
+      "file": "facebook/desktop/05-marketplace.jpg",
+      "linesRecognized": 57,
+      "matches": [],
+      "sha256": "262b7c6cd92f0a91c1d47b50602dd7e91d210e3514930dcd188e7d65e2a05f2e"
+    },
+    {
+      "file": "facebook/desktop/06-gaming.jpg",
+      "linesRecognized": 61,
+      "matches": [],
+      "sha256": "580e6c8b61be59078c021441103d40de2c5f4ce8dd6d54c1bd4748ed46809a4f"
+    },
+    {
+      "file": "facebook/desktop/07-memories.jpg",
+      "linesRecognized": 12,
+      "matches": [],
+      "sha256": "81fe81044aa62722b4bb82f9f6c4bf4f0ebadc72987f4428e07126bef1d0caaf"
+    },
+    {
+      "file": "facebook/desktop/08-saved.jpg",
+      "linesRecognized": 7,
+      "matches": [],
+      "sha256": "bd4f76b0d1283027044f6b4e02aec2de968a3be5f5c6d2130e6d4a28b27f4c87"
+    },
+    {
+      "file": "facebook/desktop/09-groups.jpg",
+      "linesRecognized": 12,
+      "matches": [],
+      "sha256": "e084e7843f9dabaadc9808c29308adf81d843ac72827a6e3db959d093d90597a"
+    },
+    {
+      "file": "facebook/desktop/10-feeds.jpg",
+      "linesRecognized": 8,
+      "matches": [],
+      "sha256": "4d02c42aa31982d68441b0020ac8cfeb9372391e86f546a34a676edff5878a3a"
+    },
+    {
+      "file": "facebook/desktop/11-events.jpg",
+      "linesRecognized": 93,
+      "matches": [],
+      "sha256": "97045e25f78ff52883096dceab0811fadcab3a11b71e341143ccfdc2ea33a9c1"
+    },
+    {
+      "file": "facebook/desktop/18-profile.jpg",
+      "linesRecognized": 25,
+      "matches": [],
+      "sha256": "33ca63620b1f465004ba43cf40026cddb1ac79979b479ae92aff3cba12dcd231"
+    },
+    {
+      "file": "facebook/desktop/30-compose-empty.jpg",
+      "linesRecognized": 75,
+      "matches": [],
+      "sha256": "2d16adf6d19b34248bc8a8674315961facc0de87ceca3b36e6b0e21732a98191"
+    },
+    {
+      "file": "facebook/desktop/37-compose-ready.jpg",
+      "linesRecognized": 80,
+      "matches": [],
+      "sha256": "76407c48712c081767a978a4d90fbd3f10649e15781ea588bc710fc4460c5184"
+    },
+    {
+      "file": "facebook/mobile/01-home.jpg",
+      "linesRecognized": 8,
+      "matches": [],
+      "sha256": "eaedd455cd5903a4a54f116b8a45d19f01c2e300d37e04329e6f14d619d49b0b"
+    },
+    {
+      "file": "facebook/mobile/03-friends.jpg",
+      "linesRecognized": 7,
+      "matches": [],
+      "sha256": "1bd423b25db5102882e11e6e9eb77ef8dc61a3639232312e9db64c9d97364828"
+    },
+    {
+      "file": "facebook/mobile/04-reels.jpg",
+      "linesRecognized": 11,
+      "matches": [],
+      "sha256": "3bcc0224911b0b3cdbd59067739d3fb5f510f99fe0ba32d6af39c2e9edacdd9e"
+    },
+    {
+      "file": "facebook/mobile/05-marketplace.jpg",
+      "linesRecognized": 10,
+      "matches": [],
+      "sha256": "84604302194d989ba623e07c037a4d0b35bfe9fefd0548fa220eea9e8c3fb666"
+    },
+    {
+      "file": "facebook/mobile/06-gaming.jpg",
+      "linesRecognized": 28,
+      "matches": [],
+      "sha256": "58136e693fe80560406f7d3d994a843736ed7af06eba1d6e87382cd5c53106a5"
+    },
+    {
+      "file": "facebook/mobile/07-memories.jpg",
+      "linesRecognized": 8,
+      "matches": [],
+      "sha256": "d872c5e39f2b1376b226c00059282e806f60d1b029f4b7baa4c24788883356c1"
+    },
+    {
+      "file": "facebook/mobile/08-saved.jpg",
+      "linesRecognized": 4,
+      "matches": [],
+      "sha256": "526066fbae131c26834842c59c389b003f8784f93e364e354453036020abfbf6"
+    },
+    {
+      "file": "facebook/mobile/09-groups.jpg",
+      "linesRecognized": 9,
+      "matches": [],
+      "sha256": "77e281b54ada679b61922476c56000fe149462ab297ced69fa48514794d149bc"
+    },
+    {
+      "file": "facebook/mobile/10-feeds.jpg",
+      "linesRecognized": 7,
+      "matches": [],
+      "sha256": "f27956c1e49fa9b5b7c29e66c0f4fb977e8c6b0706a1a564b3e3986f7b3e0355"
+    },
+    {
+      "file": "facebook/mobile/11-events.jpg",
+      "linesRecognized": 16,
+      "matches": [],
+      "sha256": "3575021b25a5d1c02d650548c0e26f79d4105790cfeba155273638b6147acaf2"
+    },
+    {
+      "file": "facebook/mobile/18-profile.jpg",
+      "linesRecognized": 9,
+      "matches": [],
+      "sha256": "acdab1101080517cf9051df86213b634f9448e08d8ae8d0c40f2dbf79d3e2d69"
+    },
+    {
+      "file": "facebook/mobile/30-compose-empty.jpg",
+      "linesRecognized": 12,
+      "matches": [],
+      "sha256": "3a182b165a2eb7a10e25e283940e2d281d81686cf6518ae42abb1778fc68f38f"
+    },
+    {
+      "file": "facebook/mobile/37-compose-ready.jpg",
+      "linesRecognized": 14,
+      "matches": [],
+      "sha256": "867efd50290372850ed4d3f723b55830ea875249b222722cec1e5484fc608274"
+    },
+    {
+      "file": "instagram/desktop/01-home.png",
+      "linesRecognized": 27,
+      "matches": [],
+      "sha256": "e8f8997f7258c94c50b6cc413772997a11a8723085e454c526df83390b2660a6"
+    },
+    {
+      "file": "instagram/desktop/02-reels.png",
+      "linesRecognized": 6,
+      "matches": [],
+      "sha256": "b4066698e9b23b65ae19023d422466157bd7068ac83f6608b4ad986b78147c9e"
+    },
+    {
+      "file": "instagram/desktop/03-explore.png",
+      "linesRecognized": 41,
+      "matches": [],
+      "sha256": "a0eb465111223242d58a51c294394763f2e453e72dec3105d363b62f795e7ed4"
+    },
+    {
+      "file": "instagram/desktop/05-messages.png",
+      "linesRecognized": 13,
+      "matches": [],
+      "sha256": "42b2be1efd0fc7345a60b12e77b73b3c634fabbc6613e38899e1f0c919404d93"
+    },
+    {
+      "file": "instagram/desktop/06-notifications.jpg",
+      "linesRecognized": 38,
+      "matches": [],
+      "sha256": "78790e1984e37e5da64d465f0d53dc32d5f6562157b6e3dcc3db03d6b4b4b53f"
+    },
+    {
+      "file": "instagram/desktop/07-dashboard.png",
+      "linesRecognized": 21,
+      "matches": [],
+      "sha256": "edf731f5c2ef1deb6206d595dd14454b5daad98f64a45253cfeae2cf90bb878e"
+    },
+    {
+      "file": "instagram/desktop/08-profile.png",
+      "linesRecognized": 19,
+      "matches": [],
+      "sha256": "cf84917815a6f62e862a21366022abdee2f06f182b785e448ff7745924f0eacc"
+    },
+    {
+      "file": "instagram/desktop/compose-02-media-picker.png",
+      "linesRecognized": 39,
+      "matches": [],
+      "sha256": "ae353a23153caae55ea87d005d220f182b97a00fa74c5463ca0bc076ca2da1d0"
+    },
+    {
+      "file": "instagram/desktop/compose-07-caption.png",
+      "linesRecognized": 48,
+      "matches": [],
+      "sha256": "40047c0d880098b16514a8598b958985b0bbad6b1402c0e1f6ab1d7d88a40491"
+    },
+    {
+      "file": "instagram/mobile/01-home.png",
+      "linesRecognized": 12,
+      "matches": [],
+      "sha256": "a0b727d9a7e1cba21bd79e464af9f2cc4c628a5c83eee28c82642ff5ccb241bf"
+    },
+    {
+      "file": "instagram/mobile/02-reels.png",
+      "linesRecognized": 16,
+      "matches": [],
+      "sha256": "426f62b5f6dd153b89af37cac0fc5d4e555ef7453972478766e04e1a7ed12b19"
+    },
+    {
+      "file": "instagram/mobile/03-explore.png",
+      "linesRecognized": 11,
+      "matches": [],
+      "sha256": "864a1e16fa2ab3f39c9fc866fb344f9c7fd5e465b114ce162344d654db2ffa46"
+    },
+    {
+      "file": "instagram/mobile/05-messages.png",
+      "linesRecognized": 29,
+      "matches": [],
+      "sha256": "8b7262512c4858039cda86bbf32593922dd80fb039791ed23536f88ace7323ed"
+    },
+    {
+      "file": "instagram/mobile/06-notifications.png",
+      "linesRecognized": 31,
+      "matches": [],
+      "sha256": "2df88ed1e97c559287343b436dc4cd29a1200161e1defdbeb6800c52d4f1f94a"
+    },
+    {
+      "file": "instagram/mobile/07-dashboard.png",
+      "linesRecognized": 9,
+      "matches": [],
+      "sha256": "cdfe8279b26ecd7f4532859645f6945052af15f82e52295e51d08a1e6ccf386f"
+    },
+    {
+      "file": "instagram/mobile/08-profile.png",
+      "linesRecognized": 24,
+      "matches": [],
+      "sha256": "d1bcf548899cb11ad9c787448b6725b594790436cdbc9544ab1a2c0d190c4b58"
+    },
+    {
+      "file": "instagram/mobile/compose-01-create-menu.png",
+      "linesRecognized": 30,
+      "matches": [],
+      "sha256": "825ebc04b28088c4d5eef713323174745d63932a5bb9e18955915b1031cb2b97"
+    },
+    {
+      "file": "instagram/mobile/compose-02-media-picker.png",
+      "linesRecognized": 21,
+      "matches": [],
+      "sha256": "2559316760754244429bc83c6162d36178d8724296c1779f999fb2fe0a48f372"
+    },
+    {
+      "file": "tiktok/desktop/03-explore.jpg",
+      "linesRecognized": 67,
+      "matches": [],
+      "sha256": "83993795c540896e78ab80a1a7945db285b5744a55b133ddd1ff9e38b5044d40"
+    },
+    {
+      "file": "tiktok/desktop/01-for-you.jpg",
+      "linesRecognized": 25,
+      "matches": [],
+      "sha256": "2325a21a53d1452d7f50df768591e31a174e37569ac805aa442fd512676e9bc7"
+    },
+    {
+      "file": "tiktok/desktop/04-following.jpg",
+      "linesRecognized": 41,
+      "matches": [],
+      "sha256": "20adb910d3238e94dfef2f6b19bf29a44443cb0f12e716c983fe8c530bcfca36"
+    },
+    {
+      "file": "tiktok/desktop/05-friends.jpg",
+      "linesRecognized": 41,
+      "matches": [],
+      "sha256": "b3e99c1c9e2e081f2ce04752bc730f56ce7a51c5495d80c5b71bce5a55a450e8"
+    },
+    {
+      "file": "tiktok/desktop/06-short-dramas.jpg",
+      "linesRecognized": 103,
+      "matches": [],
+      "sha256": "00a4a12cbdb57d91dbc7770216e56d7ae8ab4f78682871aeb3658fd42f8c30d5"
+    },
+    {
+      "file": "tiktok/desktop/07-live.jpg",
+      "linesRecognized": 51,
+      "matches": [],
+      "sha256": "2b55c5e09021e3493f9c56affa6a75f3af351d7da29e194906925fc8074c2cef"
+    },
+    {
+      "file": "tiktok/desktop/08-messages.jpg",
+      "linesRecognized": 47,
+      "matches": [],
+      "sha256": "358424b5d84282279374195b3eab61663eee5b20f06607a75ae7b28b09259c53"
+    },
+    {
+      "file": "tiktok/desktop/09-activity.jpg",
+      "linesRecognized": 51,
+      "matches": [],
+      "sha256": "6e0ca72365f36f70a728c3b8eecd8ffb735db30e70e5b5fc165e72dce5f5b17e"
+    },
+    {
+      "file": "tiktok/desktop/11-profile.jpg",
+      "linesRecognized": 34,
+      "matches": [],
+      "sha256": "deb0fea0123b65636bf7a5eb523172b663df50df8f3a37cb03bef5daa5609b43"
+    },
+    {
+      "file": "tiktok/desktop/12-more.jpg",
+      "linesRecognized": 28,
+      "matches": [],
+      "sha256": "d3a42b2dc7700c6ed6393118a1f672ac145c00c4fba85bb164bb05128437e593"
+    },
+    {
+      "file": "tiktok/desktop/13-search.jpg",
+      "linesRecognized": 25,
+      "matches": [],
+      "sha256": "01310f3b76dcff20c91146c50d6b615529d85a2b59d58d205e8fc1083e8f488b"
+    },
+    {
+      "file": "tiktok/desktop/02-shop.jpg",
+      "linesRecognized": 53,
+      "matches": [],
+      "sha256": "5416d46476e4387aff4946f4e1b8779b36391067351d6b6be24140566b65900f"
+    },
+    {
+      "file": "tiktok/desktop/compose-01-video-upload.jpg",
+      "linesRecognized": 31,
+      "matches": [],
+      "sha256": "6852623477901f358bc4327cff7515c0ee1e9d337e6edaef7062e65b16cd982f"
+    },
+    {
+      "file": "tiktok/desktop/compose-08-final-review.jpg",
+      "linesRecognized": 43,
+      "matches": [],
+      "sha256": "28932884f77906984647d4e1d37a1d31ff0fc8e9711150d60a3797b43490ce9c"
+    },
+    {
+      "file": "tiktok/mobile/01-for-you.jpg",
+      "linesRecognized": 6,
+      "matches": [],
+      "sha256": "d32cc73391eba38c68ff4274a5661ccbdaae4dc9f3682809451501268fa14a5c"
+    },
+    {
+      "file": "tiktok/mobile/03-explore.jpg",
+      "linesRecognized": 24,
+      "matches": [],
+      "sha256": "474749d9d6495b03e7486aa55c1cd12a8a78ac90b8e7f079d7e9e2a54ef37c72"
+    },
+    {
+      "file": "tiktok/mobile/04-following.jpg",
+      "linesRecognized": 6,
+      "matches": [],
+      "sha256": "6bf651b4a480aec3afd5969a2bb0b148556ccd0df5ab3555703e7e77d466e72d"
+    },
+    {
+      "file": "tiktok/mobile/05-friends.jpg",
+      "linesRecognized": 7,
+      "matches": [],
+      "sha256": "2348bb6c3f7d5d92df0e1a7bbd115c6bd79640f2cb748b47b0f9f0209c7aa035"
+    },
+    {
+      "file": "tiktok/mobile/06-short-dramas.jpg",
+      "linesRecognized": 33,
+      "matches": [],
+      "sha256": "608f27248a2197367dd061c05c142803252210a760d9e4c712e013636ce729e2"
+    },
+    {
+      "file": "tiktok/mobile/07-live.jpg",
+      "linesRecognized": 14,
+      "matches": [],
+      "sha256": "cf5d1268f6ea22682aeba4e83063d4622cf2cc98327eb3500044fbb29ef7d050"
+    },
+    {
+      "file": "tiktok/mobile/11-profile.jpg",
+      "linesRecognized": 15,
+      "matches": [],
+      "sha256": "de39139605c7e994f4270b02741168e6032583a167260ec5ea585b8231a5f822"
+    },
+    {
+      "file": "tiktok/mobile/08-messages.jpg",
+      "linesRecognized": 2,
+      "matches": [],
+      "sha256": "d0a66f77334aa6d500ff32564d31fc362ae5c7784ca5ed96aebe2156077bac37"
+    },
+    {
+      "file": "tiktok/mobile/09-activity.jpg",
+      "linesRecognized": 10,
+      "matches": [],
+      "sha256": "7191db6ac2c22cc5e66ff9da8720a4aa3ced3f5c2bd7b6badefe7682442d9cdf"
+    },
+    {
+      "file": "tiktok/mobile/12-more.jpg",
+      "linesRecognized": 16,
+      "matches": [],
+      "sha256": "0859ce749b14da73ab2a594f1b748b2ca4030bac416e0fc088e7e5f4aeb02b9a"
+    },
+    {
+      "file": "tiktok/mobile/13-search.jpg",
+      "linesRecognized": 16,
+      "matches": [],
+      "sha256": "6bbe393f3f8f73f799364708f336fad18fa2cee55905d9606d0a49540b24bd5c"
+    },
+    {
+      "file": "tiktok/mobile/02-shop.jpg",
+      "linesRecognized": 28,
+      "matches": [],
+      "sha256": "9d39f7f38e4a0e30af95429828c8bedf240f0e97b637946bff629596944aacaf"
+    },
+    {
+      "file": "tiktok/mobile/compose-01-photo-upload.jpg",
+      "linesRecognized": 6,
+      "matches": [],
+      "sha256": "3fd791de6bb521601a3239fea8889cd09f35022cb2349ec0cb86e3f89954aed3"
+    },
+    {
+      "file": "youtube/desktop/01-home.jpg",
+      "linesRecognized": 67,
+      "matches": [],
+      "sha256": "69d75e3259de4e5f7fece4c77ec8c34c2e2ea8063b9fc161616d0e4f5d65c6d4"
+    },
+    {
+      "file": "youtube/desktop/02-shorts.jpg",
+      "linesRecognized": 35,
+      "matches": [],
+      "sha256": "e760fca8d0889c174171909c745f345918ec661bda419d252b5cab6fb47f90da"
+    },
+    {
+      "file": "youtube/desktop/03-subscriptions.jpg",
+      "linesRecognized": 71,
+      "matches": [],
+      "sha256": "daba5f640923ad341be4024f28f6cb3bc153814414cb2921970c9b35e0a39060"
+    },
+    {
+      "file": "youtube/desktop/04-you.jpg",
+      "linesRecognized": 61,
+      "matches": [],
+      "sha256": "e927d7322fec2896494f6b93fbf772c88f299982957cf04ab6bdb97e669470b8"
+    },
+    {
+      "file": "youtube/desktop/06-history.jpg",
+      "linesRecognized": 60,
+      "matches": [],
+      "sha256": "6021ee3e87fed540159388d8d8043eac51c8610e10aba6a9c3904c16a44d42d1"
+    },
+    {
+      "file": "youtube/desktop/07-playlists.jpg",
+      "linesRecognized": 40,
+      "matches": [],
+      "sha256": "49b88d06ca8b44e488c0136e8a8bf05401b5f40495e6a1ecd297faf69f976704"
+    },
+    {
+      "file": "youtube/desktop/08-watch-later.jpg",
+      "linesRecognized": 33,
+      "matches": [],
+      "sha256": "703d20c9c87ed5492dfba34861438a2d2cfc7396ffcf06a8fa0d5e53cbc3b25a"
+    },
+    {
+      "file": "youtube/desktop/09-liked-videos.jpg",
+      "linesRecognized": 61,
+      "matches": [],
+      "sha256": "e3e56506befa211e058e5e44fb8958aef058d6cbd0a524e51fd5772ba426f0fe"
+    },
+    {
+      "file": "youtube/desktop/11-downloads.jpg",
+      "linesRecognized": 28,
+      "matches": [],
+      "sha256": "7e543e10e1e02298b9de7e6f3ecb146661a109ecfb669170935c58eaecec2289"
+    },
+    {
+      "file": "youtube/desktop/compose-01-create-menu.jpg",
+      "linesRecognized": 40,
+      "matches": [],
+      "sha256": "368deb9e860471cf19110ee9bedbdb85ae8aa4734266c3ac43ac30377cfd30dd"
+    },
+    {
+      "file": "youtube/desktop/05-your-channel.png",
+      "linesRecognized": 52,
+      "matches": [],
+      "sha256": "a848eb9b9c7c78cd9089e1125dec81edd48b9c237af2687dde0e08d5c2185637"
+    },
+    {
+      "file": "youtube/desktop/compose-09-final-review.jpg",
+      "linesRecognized": 42,
+      "matches": [],
+      "sha256": "383a735bddfe25fcd1a81fc1cb92ff230bbce948538357f9136ca6fab0f92b8d"
+    },
+    {
+      "file": "youtube/mobile/01-home.jpg",
+      "linesRecognized": 20,
+      "matches": [],
+      "sha256": "afddb4865ed6c5222120a20567d153609917dd8a205a581cfbe2dcc35eb81ae7"
+    },
+    {
+      "file": "youtube/mobile/02-shorts.jpg",
+      "linesRecognized": 12,
+      "matches": [],
+      "sha256": "f58d5869d1e8058d0d7b9f3ea2e9dfc5cac61dd4c48c233afc3923be9e9b9e31"
+    },
+    {
+      "file": "youtube/mobile/03-subscriptions.jpg",
+      "linesRecognized": 20,
+      "matches": [],
+      "sha256": "53ef4dcd3bc155f996860ee41b6743ba67fcf58d07b364d814c3210cba730cbe"
+    },
+    {
+      "file": "youtube/mobile/04-you.jpg",
+      "linesRecognized": 24,
+      "matches": [],
+      "sha256": "34cbe11311dd0cf2a6803ff7a669389a40ab1b009bb60afc15ba7c98259ac86b"
+    },
+    {
+      "file": "youtube/mobile/06-history.jpg",
+      "linesRecognized": 15,
+      "matches": [],
+      "sha256": "f7b3caf9bbc8f1472b21265a805eca900dbff1573713de0f28e05d418bfd625c"
+    },
+    {
+      "file": "youtube/mobile/07-playlists.jpg",
+      "linesRecognized": 16,
+      "matches": [],
+      "sha256": "56863b351a3e40b9fd8d2acb68ff4199bafab58d8194e4bbea60bf02de6088fe"
+    },
+    {
+      "file": "youtube/mobile/08-watch-later.jpg",
+      "linesRecognized": 7,
+      "matches": [],
+      "sha256": "0a0b55593883169fe5f2ed9649e2c83d0c4afb9aefadae28d34f2642a275e3ce"
+    },
+    {
+      "file": "youtube/mobile/09-liked-videos.jpg",
+      "linesRecognized": 29,
+      "matches": [],
+      "sha256": "a68b6b80261f6fc1580dafae95f4c531eee429cd9e3107241baa35b33ebaa4a9"
+    },
+    {
+      "file": "youtube/mobile/11-downloads.jpg",
+      "linesRecognized": 5,
+      "matches": [],
+      "sha256": "1a46a17866b16943abf3f3042141000711e97b5795d278571100cbd2929e332f"
+    },
+    {
+      "file": "youtube/mobile/compose-01-create-menu.jpg",
+      "linesRecognized": 9,
+      "matches": [],
+      "sha256": "2914a75dc2bdc664733c7b426cacb656c7f6fd267fbe81a89ca43a59be87a26a"
+    },
+    {
+      "file": "youtube/mobile/compose-02-text-draft.jpg",
+      "linesRecognized": 23,
+      "matches": [],
+      "sha256": "370f4bfc200689000e7c7b6373c115cf0e303bd8224d75187a82345750ab425d"
+    },
+    {
+      "file": "veed/desktop/02-video.jpg",
+      "linesRecognized": 36,
+      "matches": [],
+      "sha256": "8949bc895361a678bb38af83d5189464b4ef44292e1917d36b5cf5db6907d88f"
+    },
+    {
+      "file": "veed/desktop/01-ai-tools.jpg",
+      "linesRecognized": 44,
+      "matches": [],
+      "sha256": "d88cc456ec09ba6aeb8510dd721a3fe8e16240e2d0317241ced60a4f15c7fb13"
+    },
+    {
+      "file": "veed/desktop/03-audio.jpg",
+      "linesRecognized": 43,
+      "matches": [],
+      "sha256": "69b6d5481b3b47823835b90ee9d914648d41dbce93bf9e498733beb7f5aeb43a"
+    },
+    {
+      "file": "veed/desktop/04-image.jpg",
+      "linesRecognized": 34,
+      "matches": [],
+      "sha256": "8342688624041409dab5bd6a44453632092eefb910c9dcecd7a73906bdeec45b"
+    },
+    {
+      "file": "veed/desktop/05-subtitles.jpg",
+      "linesRecognized": 28,
+      "matches": [],
+      "sha256": "eda844cb0c7f10ba1f3b96f49eb4d9d57d1cd2ef37b308d4f64ff2d940a90c0a"
+    },
+    {
+      "file": "veed/desktop/06-text.jpg",
+      "linesRecognized": 48,
+      "matches": [],
+      "sha256": "a5f98f5dc3860d55079de200b7be4a9ce6832caa311a378a8730c981dd8da3eb"
+    },
+    {
+      "file": "veed/desktop/07-elements.jpg",
+      "linesRecognized": 40,
+      "matches": [],
+      "sha256": "b744c8569203efd2eb615a9f862ff726147ecf4db16f85651969cd43ea9e175f"
+    },
+    {
+      "file": "veed/desktop/08-script.jpg",
+      "linesRecognized": 34,
+      "matches": [],
+      "sha256": "434d616b3ecf4f1d12057fbfce7597e76653d5a5e495fc64ae15f431e882e4e7"
+    },
+    {
+      "file": "veed/desktop/09-brand-kit.jpg",
+      "linesRecognized": 45,
+      "matches": [],
+      "sha256": "77ce49b4c795780225ece1e50f4b829b7682f1df056dda9ff7eb47d59186a703"
+    },
+    {
+      "file": "veed/desktop/10-settings.jpg",
+      "linesRecognized": 42,
+      "matches": [],
+      "sha256": "709407e37fb07c97e0996d1ac5f0b70d2e5f45a3a4da609c59b1ac2036e59c7c"
+    },
+    {
+      "file": "veed/mobile/02-video.jpg",
+      "linesRecognized": 14,
+      "matches": [],
+      "sha256": "f8e73c3a4c338bae0a63de526af8c10a7376a3c08dba923ff9d736fa68ae3b16"
+    },
+    {
+      "file": "veed/mobile/01-ai-tools.jpg",
+      "linesRecognized": 10,
+      "matches": [],
+      "sha256": "c50d3b713beb4050cd1d366121c130802fd6252b0905ed10135cf829109f57a4"
+    },
+    {
+      "file": "veed/mobile/03-audio.jpg",
+      "linesRecognized": 19,
+      "matches": [],
+      "sha256": "0268d71ad5414cbc3cb921d9d00aa46ac761b44f1cf12729bda95ec9ead786ba"
+    },
+    {
+      "file": "veed/mobile/04-image.jpg",
+      "linesRecognized": 13,
+      "matches": [],
+      "sha256": "86f9f491a6c012931f6cddd9357bbc058220e842d406af2608e40cf8152f0e66"
+    },
+    {
+      "file": "veed/mobile/05-subtitles.jpg",
+      "linesRecognized": 8,
+      "matches": [],
+      "sha256": "b3d049d86d286956ad97ba9cae5c677867268158b1b45e1f92328ecbd3cdd760"
+    },
+    {
+      "file": "veed/mobile/06-text.jpg",
+      "linesRecognized": 24,
+      "matches": [],
+      "sha256": "4dbb9547407491a7259bdf797db27856279b9c807e3ea70728c4aaa554e8afdd"
+    },
+    {
+      "file": "veed/mobile/07-elements.jpg",
+      "linesRecognized": 12,
+      "matches": [],
+      "sha256": "1fcc93e84b8a67d1e96b087b37a89f36be7e2893b251bcca1d2cde54ff0a26ef"
+    },
+    {
+      "file": "veed/mobile/08-script.jpg",
+      "linesRecognized": 14,
+      "matches": [],
+      "sha256": "28264e6ab75695d68bdc97048c7a8ad3c7b8829215c6013429aa1d0426c4757a"
+    },
+    {
+      "file": "veed/mobile/09-brand-kit.jpg",
+      "linesRecognized": 21,
+      "matches": [],
+      "sha256": "8d4e5eafa0abcfef10250e542687b5183c8a6117912482a5285a3689406b2741"
+    },
+    {
+      "file": "veed/mobile/10-settings.jpg",
+      "linesRecognized": 18,
+      "matches": [],
+      "sha256": "4e945e7d1ef4010dc99cd412c08451b6fa627809c6497bce4f3a568f17e3067a"
+    }
+  ]
+}

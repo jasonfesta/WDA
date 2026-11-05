@@ -1,0 +1,9 @@
+{
+  "tool": "built-in image_gen",
+  "edits": [
+    {
+      "file": "desktop/01-home.png",
+      "prompt": "Use case: precise-object-edit. Edit target: this real Facebook desktop screenshot. Change ONLY the lower-left shortcut label 'Darwin Page' to 'Studio Page' and its blue circle/white diamond avatar to a neutral gray circular S avatar. Preserve the exact entire desktop layout, all photos, people, text, icons, typography, colors, spacing, navigation and aspect ratio. No cropping, rearranging, additions, padding or omitted elements. No Darwin branding remains. Keep screenshot fidelity, edge-to-edge, all original UI sharp."
+    }
+  ]
+}
